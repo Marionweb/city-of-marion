@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="102px" height="100px" viewBox="0 0 102 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>logo-com-mark-color</title>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="logo-com-mark-color" fill-rule="nonzero">
+            <path d="M25.9,50 L51,24.9 L51,24.9 L51,24.9 L26.3,0.2 C26.1,7.21644966e-16 25.7,7.21644966e-16 25.5,0.2 L0.8,24.9 L25.9,50 Z" id="Shape" fill="#096095"></path>
+            <path d="M76.1,50 L101.2,24.9 L101.2,24.9 L76.5,0.2 C76.3,7.21644966e-16 75.9,7.21644966e-16 75.7,0.2 L51,24.9 L76.1,50 Z" id="Shape" fill="#00BBF4"></path>
+            <rect id="Rectangle-path" fill="#0091C4" transform="translate(50.928690, 50.000000) rotate(-45.000000) translate(-50.928690, -50.000000) " x="33.1788602" y="32.2501702" width="35.4996596" height="35.4996596"></rect>
+            <path d="M25.9,100 L25.9,50 L0.8,24.9 L0.8,75.1 L25.5,99.8 C25.6,99.9 25.7,100 25.9,100 Z" id="Shape" fill="#033762"></path>
+            <path d="M76.1,100 L76.1,50 L51,75.1 L75.7,99.8 C75.8,99.9 76,100 76.1,100 Z" id="Shape" fill="#033762"></path>
+            <path d="M25.9,50 L25.9,100 C26.1,100 26.2,99.9 26.3,99.8 L51,75.1 L51,75.1 L51,75.1 L25.9,50 Z" id="Shape" fill="#2AAFC2"></path>
+            <path d="M76.1,100 C76.3,100 76.4,99.9 76.5,99.8 L101.2,75.1 L101.2,24.9 L76.1,50 L76.1,100 Z" id="Shape" fill="#2AAFC2"></path>
+        </g>
+    </g>
+</svg>

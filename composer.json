@@ -1,0 +1,62 @@
+{
+  "name": "craftcms/craft",
+  "description": "Craft CMS",
+  "keywords": [
+    "craft",
+    "cms",
+    "craftcms",
+    "project"
+  ],
+  "license": "MIT",
+  "homepage": "https://craftcms.com/",
+  "type": "project",
+  "support": {
+    "email": "support@craftcms.com",
+    "issues": "https://github.com/craftcms/cms/issues",
+    "forum": "https://craftcms.stackexchange.com/",
+    "source": "https://github.com/craftcms/cms",
+    "docs": "https://craftcms.com/docs",
+    "rss": "https://craftcms.com/changelog.rss"
+  },
+  "minimum-stability": "beta",
+  "require": {
+    "php": ">=7.0.0",
+    "craftcms/cms": "dev-develop as 3.0.0-beta.99",
+    "craftcms/plugin-installer": "^1.0.0",
+    "vlucas/phpdotenv": "^2.4.0",
+    "roave/security-advisories": "dev-master",
+    "craftcms/aws-s3": "^1.0",
+    "craftcms/anchors": "^2.0",
+    "nystudio107/craft3-cookies": "^1.1",
+    "misterbk/mix": "^1.1",
+    "nystudio107/craft3-imageoptimize": "^1.0",
+    "craftcms/mailgun": "1.0.0.1",
+    "nystudio107/craft3-minify": "^1.2",
+    "newism/craft3-fields": "^0.0.1",
+    "selvinortiz/patrol": "^3.0",
+    "craftcms/query": "^2.0",
+    "nystudio107/craft3-richvariables": "^1.0",
+    "dukt/twitter": "~2.0",
+    "dukt/facebook": "~2.0",
+    "ext-mbstring": "^7.0",
+    "ext-imagick": "^3.4",
+    "ext-mcrypt": "^7.0"
+  },
+  "require-dev": {
+    "heroku/heroku-buildpack-php": "^83.0"
+  },
+  "config": {
+    "optimize-autoloader": true
+  },
+  "scripts": {
+    "post-root-package-install": [
+      "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+    ]
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  ]
+}
