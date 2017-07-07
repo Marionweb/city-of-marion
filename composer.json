@@ -40,7 +40,8 @@
     "dukt/facebook": "~2.0",
     "ext-mbstring": "^7.0",
     "ext-imagick": "^3.4",
-    "ext-mcrypt": "^7.0"
+    "ext-mcrypt": "^7.0",
+    "craftcms/element-api": "^2.4"
   },
   "require-dev": {
     "heroku/heroku-buildpack-php": "^83.0"
