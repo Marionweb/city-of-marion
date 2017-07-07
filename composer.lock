@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "befca493b47b140eee37141e33fa6e31",
+    "content-hash": "b0874b5626d1158d99ceb2c119c9cd66",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -970,26 +970,26 @@
         },
         {
             "name": "craftcms/aws-s3",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/aws-s3.git",
-                "reference": "15f389a428e909270c69af14d74398d14d7052bc"
+                "reference": "6c4ab6f2040a491906d3a9fba99fe8e1159fea32"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/aws-s3/zipball/15f389a428e909270c69af14d74398d14d7052bc",
-                "reference": "15f389a428e909270c69af14d74398d14d7052bc",
+                "url": "https://api.github.com/repos/craftcms/aws-s3/zipball/6c4ab6f2040a491906d3a9fba99fe8e1159fea32",
+                "reference": "6c4ab6f2040a491906d3a9fba99fe8e1159fea32",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "~3.0.0-beta.1",
+                "craftcms/cms": "~3.0.0-beta.20",
                 "league/flysystem-aws-s3-v3": "1.0.13"
             },
             "type": "craft-plugin",
             "extra": {
                 "name": "Amazon S3",
-                "handle": "awsS3",
+                "handle": "aws-s3",
                 "changelogUrl": "https://raw.githubusercontent.com/craftcms/aws-s3/master/CHANGELOG.md",
                 "downloadUrl": "https://github.com/craftcms/aws-s3/archive/master.zip"
             },
@@ -1017,20 +1017,20 @@
                 "s3",
                 "yii2"
             ],
-            "time": "2017-02-17T23:14:16+00:00"
+            "time": "2017-07-07T16:53:22+00:00"
         },
         {
             "name": "craftcms/cms",
-            "version": "dev-develop",
+            "version": "3.0.0-beta.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "28d897212188987be9bb3e1bc4320307b9217cce"
+                "reference": "b2990f9226f0ed5f484e84983542e553c47fb20c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/28d897212188987be9bb3e1bc4320307b9217cce",
-                "reference": "28d897212188987be9bb3e1bc4320307b9217cce",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/b2990f9226f0ed5f484e84983542e553c47fb20c",
+                "reference": "b2990f9226f0ed5f484e84983542e553c47fb20c",
                 "shasum": ""
             },
             "require": {
@@ -1046,7 +1046,7 @@
                 "bower-asset/timepicker": "~1.11.11",
                 "bower-asset/velocity": "~1.5.0",
                 "composer/composer": "~1.4.2",
-                "craftcms/plugin-installer": "~1.4.0",
+                "craftcms/plugin-installer": "~1.5.0",
                 "craftcms/server-check": "~1.0.17",
                 "creocoder/yii2-nested-sets": "~0.9.0",
                 "danielstjules/stringy": "~3.0.0",
@@ -1089,7 +1089,7 @@
                 "craftcms",
                 "yii2"
             ],
-            "time": "2017-07-07 14:23:14"
+            "time": "2017-07-07T17:02:05+00:00"
         },
         {
             "name": "craftcms/mailgun",
@@ -1144,16 +1144,16 @@
         },
         {
             "name": "craftcms/plugin-installer",
-            "version": "1.4.0",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/plugin-installer.git",
-                "reference": "d7acf13656e37082696c5d44c748fa7074e7f57b"
+                "reference": "76b2d26c8d5c42158c274151372d773b650b62d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/plugin-installer/zipball/d7acf13656e37082696c5d44c748fa7074e7f57b",
-                "reference": "d7acf13656e37082696c5d44c748fa7074e7f57b",
+                "url": "https://api.github.com/repos/craftcms/plugin-installer/zipball/76b2d26c8d5c42158c274151372d773b650b62d2",
+                "reference": "76b2d26c8d5c42158c274151372d773b650b62d2",
                 "shasum": ""
             },
             "require": {
@@ -1181,7 +1181,7 @@
                 "installer",
                 "plugin"
             ],
-            "time": "2017-06-19T17:28:38+00:00"
+            "time": "2017-07-07T16:48:18+00:00"
         },
         {
             "name": "craftcms/query",
@@ -5391,16 +5391,16 @@
         },
         {
             "name": "yiisoft/yii2-debug",
-            "version": "2.0.8",
+            "version": "2.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-debug.git",
-                "reference": "0c4d7a1085bf3aacfad9bcba48e053d36c2c498a"
+                "reference": "647be6c9d48dc2f3c2e2f33b9eba0a4ca78abde9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/0c4d7a1085bf3aacfad9bcba48e053d36c2c498a",
-                "reference": "0c4d7a1085bf3aacfad9bcba48e053d36c2c498a",
+                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/647be6c9d48dc2f3c2e2f33b9eba0a4ca78abde9",
+                "reference": "647be6c9d48dc2f3c2e2f33b9eba0a4ca78abde9",
                 "shasum": ""
             },
             "require": {
@@ -5434,7 +5434,7 @@
                 "debugger",
                 "yii2"
             ],
-            "time": "2017-02-19T16:48:01+00:00"
+            "time": "2017-02-21T10:30:50+00:00"
         },
         {
             "name": "yiisoft/yii2-swiftmailer",
@@ -5683,17 +5683,10 @@
             "time": "2015-11-16T16:11:11+00:00"
         }
     ],
-    "aliases": [
-        {
-            "alias": "3.0.0-beta.99",
-            "alias_normalized": "3.0.0.0-beta99",
-            "version": "dev-develop",
-            "package": "craftcms/cms"
-        }
-    ],
+    "aliases": [],
     "minimum-stability": "beta",
     "stability-flags": {
-        "craftcms/cms": 20,
+        "craftcms/cms": 10,
         "roave/security-advisories": 20
     },
     "prefer-stable": false,
