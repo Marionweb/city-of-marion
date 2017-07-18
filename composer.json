@@ -32,7 +32,7 @@
     "nystudio107/craft3-imageoptimize": "^1.0",
     "craftcms/mailgun": "1.0.0.1",
     "nystudio107/craft3-minify": "^1.2",
-    "newism/craft3-fields": "^0.0.1",
+    "newism/craft3-fields": "^0.0.3",
     "selvinortiz/patrol": "^3.0",
     "craftcms/query": "^2.0",
     "nystudio107/craft3-richvariables": "^1.0",
@@ -41,7 +41,12 @@
     "ext-mbstring": "^7.0",
     "ext-imagick": "^3.4",
     "ext-mcrypt": "^7.0",
-    "craftcms/element-api": "^2.4"
+    "craftcms/element-api": "^2.4",
+    "craftcms/simple-text": "^2.0",
+    "craftcms/hexdec": "^2.0",
+    "nystudio107/craft3-fastcgicachebust": "^1.0",
+    "nystudio107/craft3-pathtools": "^1.0",
+    "nystudio107/craft3-transcoder": "^1.0"
   },
   "require-dev": {
     "heroku/heroku-buildpack-php": "^83.0"

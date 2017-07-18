@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5716f8cef0a421d1d36574d98b8159bb",
+    "content-hash": "f5de8d89db6a6300b65c9694eae19ceb",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.31.2",
+            "version": "3.31.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "582e7764e0fa389c3248450cd6db2564dd656d99"
+                "reference": "4e066559063683aa4574aee3ed54fcb90b2b10b2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/582e7764e0fa389c3248450cd6db2564dd656d99",
-                "reference": "582e7764e0fa389c3248450cd6db2564dd656d99",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/4e066559063683aa4574aee3ed54fcb90b2b10b2",
+                "reference": "4e066559063683aa4574aee3ed54fcb90b2b10b2",
                 "shasum": ""
             },
             "require": {
@@ -84,7 +84,26 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2017-07-06T21:11:49+00:00"
+            "time": "2017-07-17T21:18:04+00:00"
+        },
+        {
+            "name": "bower-asset/behave.js",
+            "version": "1.7.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/iamso/Behave.js.git",
+                "reference": "adfb4dcae9758da0cb4e5adbd77d126eb4c99c24"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/iamso/Behave.js/zipball/adfb4dcae9758da0cb4e5adbd77d126eb4c99c24",
+                "reference": "adfb4dcae9758da0cb4e5adbd77d126eb4c99c24",
+                "shasum": null
+            },
+            "type": "bower-asset",
+            "license": [
+                "MIT"
+            ]
         },
         {
             "name": "bower-asset/bootstrap",
@@ -171,19 +190,22 @@
         },
         {
             "name": "bower-asset/fabric",
-            "version": "v1.7.14",
+            "version": "v1.7.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kangax/fabric.js.git",
-                "reference": "f8b4ab15281a8d3fcce4aceabed0c693904448bb"
+                "reference": "3d022bc4a009ae076458b628f15023c30afda6f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kangax/fabric.js/zipball/f8b4ab15281a8d3fcce4aceabed0c693904448bb",
-                "reference": "f8b4ab15281a8d3fcce4aceabed0c693904448bb",
+                "url": "https://api.github.com/repos/kangax/fabric.js/zipball/3d022bc4a009ae076458b628f15023c30afda6f0",
+                "reference": "3d022bc4a009ae076458b628f15023c30afda6f0",
                 "shasum": null
             },
-            "type": "bower-asset"
+            "type": "bower-asset",
+            "license": [
+                "MIT"
+            ]
         },
         {
             "name": "bower-asset/garnishjs",
@@ -420,16 +442,16 @@
         },
         {
             "name": "cebe/markdown",
-            "version": "1.1.1",
+            "version": "1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cebe/markdown.git",
-                "reference": "c30eb5e01fe021cc5bba2f9ee0eeef96d4931166"
+                "reference": "25b28bae8a6f185b5030673af77b32e1163d5c6e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cebe/markdown/zipball/c30eb5e01fe021cc5bba2f9ee0eeef96d4931166",
-                "reference": "c30eb5e01fe021cc5bba2f9ee0eeef96d4931166",
+                "url": "https://api.github.com/repos/cebe/markdown/zipball/25b28bae8a6f185b5030673af77b32e1163d5c6e",
+                "reference": "25b28bae8a6f185b5030673af77b32e1163d5c6e",
                 "shasum": ""
             },
             "require": {
@@ -476,7 +498,7 @@
                 "markdown",
                 "markdown-extra"
             ],
-            "time": "2016-09-14T20:40:20+00:00"
+            "time": "2017-07-16T21:13:23+00:00"
         },
         {
             "name": "clue/stream-filter",
@@ -1021,16 +1043,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.0.0-beta.20",
+            "version": "3.0.0-beta.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "b2990f9226f0ed5f484e84983542e553c47fb20c"
+                "reference": "762c9121063518d85755f2f04c56548a67dcba35"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/b2990f9226f0ed5f484e84983542e553c47fb20c",
-                "reference": "b2990f9226f0ed5f484e84983542e553c47fb20c",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/762c9121063518d85755f2f04c56548a67dcba35",
+                "reference": "762c9121063518d85755f2f04c56548a67dcba35",
                 "shasum": ""
             },
             "require": {
@@ -1057,12 +1079,12 @@
                 "pixelandtonic/imagine": "0.7.1.1",
                 "twig/twig": "~2.3.0",
                 "yiisoft/yii2": "~2.0.12.0",
-                "yiisoft/yii2-debug": "~2.0.8",
+                "yiisoft/yii2-debug": "2.0.8",
                 "yiisoft/yii2-swiftmailer": "~2.0.6",
                 "zendframework/zend-feed": "~2.8.0"
             },
             "require-dev": {
-                "codeception/codeception": "~2.2.9",
+                "codeception/codeception": "~2.3.3",
                 "codeception/mockery-module": "~0.2.2",
                 "codeception/specify": "~0.4.6",
                 "codeception/verify": "~0.3.3"
@@ -1089,7 +1111,7 @@
                 "craftcms",
                 "yii2"
             ],
-            "time": "2017-07-07T17:02:05+00:00"
+            "time": "2017-07-14T21:15:25+00:00"
         },
         {
             "name": "craftcms/element-api",
@@ -1140,6 +1162,53 @@
                 "yii2"
             ],
             "time": "2017-07-07T16:58:37+00:00"
+        },
+        {
+            "name": "craftcms/hexdec",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/craftcms/hexdec.git",
+                "reference": "a4b3250c7375266aa17afee15e73318a282e8f23"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/craftcms/hexdec/zipball/a4b3250c7375266aa17afee15e73318a282e8f23",
+                "reference": "a4b3250c7375266aa17afee15e73318a282e8f23",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "~3.0.0-beta.20"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Hexdec",
+                "handle": "hexdec",
+                "changelogUrl": "https://raw.githubusercontent.com/craftcms/hexdec/v2/CHANGELOG.md",
+                "downloadUrl": "https://github.com/craftcms/hexdec/archive/v2.zip"
+            },
+            "autoload": {
+                "psr-4": {
+                    "craft\\hexdec\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pixel & Tonic",
+                    "homepage": "https://pixelandtonic.com/"
+                }
+            ],
+            "description": "Adds a new hexdec filter to Craft, which will convert a hexadecimal value to a decimal.",
+            "keywords": [
+                "cms",
+                "craftcms",
+                "yii2"
+            ],
+            "time": "2017-07-14T21:23:00+00:00"
         },
         {
             "name": "craftcms/mailgun",
@@ -1194,16 +1263,16 @@
         },
         {
             "name": "craftcms/plugin-installer",
-            "version": "1.5.0",
+            "version": "1.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/plugin-installer.git",
-                "reference": "76b2d26c8d5c42158c274151372d773b650b62d2"
+                "reference": "74937b6049740cd99a6f56fcbf2a519a2a285478"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/plugin-installer/zipball/76b2d26c8d5c42158c274151372d773b650b62d2",
-                "reference": "76b2d26c8d5c42158c274151372d773b650b62d2",
+                "url": "https://api.github.com/repos/craftcms/plugin-installer/zipball/74937b6049740cd99a6f56fcbf2a519a2a285478",
+                "reference": "74937b6049740cd99a6f56fcbf2a519a2a285478",
                 "shasum": ""
             },
             "require": {
@@ -1231,7 +1300,7 @@
                 "installer",
                 "plugin"
             ],
-            "time": "2017-07-07T16:48:18+00:00"
+            "time": "2017-07-12T13:56:16+00:00"
         },
         {
             "name": "craftcms/query",
@@ -1315,6 +1384,56 @@
                 "yii2"
             ],
             "time": "2017-06-29T20:23:11+00:00"
+        },
+        {
+            "name": "craftcms/simple-text",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/craftcms/simple-text.git",
+                "reference": "8a63f8a633b7972dcaf9b483e6add939cd401990"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/craftcms/simple-text/zipball/8a63f8a633b7972dcaf9b483e6add939cd401990",
+                "reference": "8a63f8a633b7972dcaf9b483e6add939cd401990",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/behave.js": "1.7.1",
+                "craftcms/cms": "~3.0.0-beta.20"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Simple Text",
+                "handle": "simple-text",
+                "schemaVersion": "1.0.2",
+                "changelogUrl": "https://raw.githubusercontent.com/craftcms/simple-text/v2/CHANGELOG.md",
+                "downloadUrl": "https://github.com/craftcms/simple-text/archive/v2.zip"
+            },
+            "autoload": {
+                "psr-4": {
+                    "craft\\simpletext\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pixel & Tonic",
+                    "homepage": "https://pixelandtonic.com/"
+                }
+            ],
+            "description": "This plugin adds a new “Simple Text” field type to Craft, which provides a textarea that’s optimized for entering documentation.",
+            "keywords": [
+                "cms",
+                "craftcms",
+                "html",
+                "yii2"
+            ],
+            "time": "2017-07-14T21:26:25+00:00"
         },
         {
             "name": "creocoder/yii2-nested-sets",
@@ -1586,20 +1705,20 @@
         },
         {
             "name": "dukt/twitter",
-            "version": "2.0.0-beta.2",
+            "version": "2.0.0-beta.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dukt/twitter.git",
-                "reference": "a04f5562c828e1a7e401237f52dcad1b670da468"
+                "reference": "474c82ea9b1f9ffb63c8d5a8b91bfc90cd302285"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dukt/twitter/zipball/a04f5562c828e1a7e401237f52dcad1b670da468",
-                "reference": "a04f5562c828e1a7e401237f52dcad1b670da468",
+                "url": "https://api.github.com/repos/dukt/twitter/zipball/474c82ea9b1f9ffb63c8d5a8b91bfc90cd302285",
+                "reference": "474c82ea9b1f9ffb63c8d5a8b91bfc90cd302285",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "~3.0.0-beta.8",
+                "craftcms/cms": "^3.0.0-beta.20",
                 "guzzlehttp/oauth-subscriber": "0.3.*",
                 "league/oauth1-client": "1.7.0@dev",
                 "nojimage/twitter-text-php": "^1.1"
@@ -1633,7 +1752,60 @@
                 "craftcms",
                 "twitter"
             ],
-            "time": "2017-04-05T10:15:05+00:00"
+            "time": "2017-07-18T15:25:14+00:00"
+        },
+        {
+            "name": "embed/embed",
+            "version": "v3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oscarotero/Embed.git",
+                "reference": "8d9e862f46eebbf75454358c18822154e6e2b0ca"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oscarotero/Embed/zipball/8d9e862f46eebbf75454358c18822154e6e2b0ca",
+                "reference": "8d9e862f46eebbf75454358c18822154e6e2b0ca",
+                "shasum": ""
+            },
+            "require": {
+                "composer/ca-bundle": "^1.0",
+                "ext-curl": "*",
+                "ext-mbstring": "*",
+                "php": "^5.5|^7.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.0",
+                "phpunit/phpunit": "^4.8|^5.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Embed\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Oscar Otero",
+                    "email": "oom@oscarotero.com",
+                    "homepage": "http://oscarotero.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP library to retrieve page info using oembed, opengraph, etc",
+            "homepage": "https://github.com/oscarotero/Embed",
+            "keywords": [
+                "embed",
+                "embedly",
+                "oembed",
+                "opengraph",
+                "twitter cards"
+            ],
+            "time": "2017-07-08T09:47:22+00:00"
         },
         {
             "name": "enshrined/svg-sanitize",
@@ -1721,16 +1893,16 @@
         },
         {
             "name": "giggsey/libphonenumber-for-php",
-            "version": "8.6.0",
+            "version": "8.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/giggsey/libphonenumber-for-php.git",
-                "reference": "0aba3105c1896412a8c6454a5c7843115c1dce7b"
+                "reference": "dd9cf2a10a8671d3934a7a315e927df46548bcc9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/0aba3105c1896412a8c6454a5c7843115c1dce7b",
-                "reference": "0aba3105c1896412a8c6454a5c7843115c1dce7b",
+                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/dd9cf2a10a8671d3934a7a315e927df46548bcc9",
+                "reference": "dd9cf2a10a8671d3934a7a315e927df46548bcc9",
                 "shasum": ""
             },
             "require": {
@@ -1785,7 +1957,7 @@
                 "phonenumber",
                 "validation"
             ],
-            "time": "2017-07-04T16:24:53+00:00"
+            "time": "2017-07-18T13:07:45+00:00"
         },
         {
             "name": "giggsey/locale",
@@ -3002,28 +3174,30 @@
         },
         {
             "name": "newism/craft3-fields",
-            "version": "0.0.1",
+            "version": "0.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newism/craft3-fields.git",
-                "reference": "baa235d137bfec7e7aba533d897ab0e5b992b96b"
+                "reference": "ecc1b8e860d79ab254f88547fdbc70d0ada06e41"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newism/craft3-fields/zipball/baa235d137bfec7e7aba533d897ab0e5b992b96b",
-                "reference": "baa235d137bfec7e7aba533d897ab0e5b992b96b",
+                "url": "https://api.github.com/repos/newism/craft3-fields/zipball/ecc1b8e860d79ab254f88547fdbc70d0ada06e41",
+                "reference": "ecc1b8e860d79ab254f88547fdbc70d0ada06e41",
                 "shasum": ""
             },
             "require": {
                 "commerceguys/addressing": "^0.8.4",
                 "craftcms/plugin-installer": "^1.0.0",
+                "embed/embed": "^3.0",
                 "giggsey/libphonenumber-for-php": "^8.3",
+                "roave/security-advisories": "dev-master",
                 "symfony/intl": "^3.3"
             },
             "type": "craft-plugin",
             "extra": {
                 "name": "NSM Fields",
-                "handle": "nsmFields",
+                "handle": "nsm-fields",
                 "schemaVersion": "1.0.0",
                 "hasCpSettings": true,
                 "hasCpSection": false,
@@ -3057,7 +3231,7 @@
                 "craftcms",
                 "nsm-fields"
             ],
-            "time": "2017-06-04T23:35:38+00:00"
+            "time": "2017-07-12T07:24:26+00:00"
         },
         {
             "name": "nojimage/twitter-text-php",
@@ -3124,16 +3298,16 @@
         },
         {
             "name": "nystudio107/craft3-cookies",
-            "version": "1.1.4",
+            "version": "1.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft3-cookies.git",
-                "reference": "9758e7c61681f07d93c3f17590815ab06c64da0e"
+                "reference": "e9e9cdd2a0899cbfc2c5b7b6b5603122fc788e64"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft3-cookies/zipball/9758e7c61681f07d93c3f17590815ab06c64da0e",
-                "reference": "9758e7c61681f07d93c3f17590815ab06c64da0e",
+                "url": "https://api.github.com/repos/nystudio107/craft3-cookies/zipball/e9e9cdd2a0899cbfc2c5b7b6b5603122fc788e64",
+                "reference": "e9e9cdd2a0899cbfc2c5b7b6b5603122fc788e64",
                 "shasum": ""
             },
             "require": {
@@ -3175,30 +3349,85 @@
                 "craft-plugin",
                 "craftcms"
             ],
-            "time": "2017-03-25T05:29:43+00:00"
+            "time": "2017-07-09T12:22:16+00:00"
         },
         {
-            "name": "nystudio107/craft3-imageoptimize",
-            "version": "1.0.8",
+            "name": "nystudio107/craft3-fastcgicachebust",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/nystudio107/craft3-imageoptimize.git",
-                "reference": "cf9ae15a05f2e09cd40a710ebac36e261617964a"
+                "url": "https://github.com/nystudio107/craft3-fastcgicachebust.git",
+                "reference": "f167ba816d7cbe1044da4553eef42d1053288522"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft3-imageoptimize/zipball/cf9ae15a05f2e09cd40a710ebac36e261617964a",
-                "reference": "cf9ae15a05f2e09cd40a710ebac36e261617964a",
+                "url": "https://api.github.com/repos/nystudio107/craft3-fastcgicachebust/zipball/f167ba816d7cbe1044da4553eef42d1053288522",
+                "reference": "f167ba816d7cbe1044da4553eef42d1053288522",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "~3.0.0-beta.1",
+                "craftcms/cms": "~3.0.0-beta.1"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "FastCGI Cache Bust",
+                "handle": "fastcgi-cache-bust",
+                "schemaVersion": "1.0.0",
+                "hasCpSettings": true,
+                "hasCpSection": false,
+                "changelogUrl": "https://raw.githubusercontent.com/nystudio107/craft3-fastcgicachebust/master/CHANGELOG.md",
+                "components": {
+                    "cache": "nystudio107\\fastcgicachebust\\services\\Cache"
+                },
+                "class": "nystudio107\\fastcgicachebust\\FastcgiCacheBust"
+            },
+            "autoload": {
+                "psr-4": {
+                    "nystudio107\\fastcgicachebust\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "nystudio107",
+                    "homepage": "https://nystudio107.com"
+                }
+            ],
+            "description": "Bust the Nginx FastCGI Cache when entries are saved or created.",
+            "keywords": [
+                "Craft",
+                "cms",
+                "craft-plugin",
+                "craftcms",
+                "fastcgi cache bust"
+            ],
+            "time": "2017-07-15T10:07:58+00:00"
+        },
+        {
+            "name": "nystudio107/craft3-imageoptimize",
+            "version": "1.0.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nystudio107/craft3-imageoptimize.git",
+                "reference": "7b2b5bed399a618ce9448182363900f0332c5794"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nystudio107/craft3-imageoptimize/zipball/7b2b5bed399a618ce9448182363900f0332c5794",
+                "reference": "7b2b5bed399a618ce9448182363900f0332c5794",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "~3.0.0-beta.20",
                 "mikehaertl/php-shellcommand": "~1.2"
             },
             "type": "craft-plugin",
             "extra": {
                 "name": "ImageOptimize",
-                "handle": "imageOptimize",
+                "handle": "image-optimize",
                 "schemaVersion": "1.0.0",
                 "hasCpSettings": false,
                 "hasCpSection": false,
@@ -3232,7 +3461,7 @@
                 "image",
                 "optimize"
             ],
-            "time": "2017-04-20T23:21:02+00:00"
+            "time": "2017-07-15T10:34:24+00:00"
         },
         {
             "name": "nystudio107/craft3-minify",
@@ -3291,26 +3520,78 @@
             "time": "2017-04-12T04:02:33+00:00"
         },
         {
-            "name": "nystudio107/craft3-richvariables",
-            "version": "1.0.11",
+            "name": "nystudio107/craft3-pathtools",
+            "version": "1.0.5",
             "source": {
                 "type": "git",
-                "url": "https://github.com/nystudio107/craft3-richvariables.git",
-                "reference": "0bca8af5bacbb10cc7872e8e9a6530a2e150d4fa"
+                "url": "https://github.com/nystudio107/craft3-pathtools.git",
+                "reference": "16722f7dd50c96bae0bcb4a31112632a63098259"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft3-richvariables/zipball/0bca8af5bacbb10cc7872e8e9a6530a2e150d4fa",
-                "reference": "0bca8af5bacbb10cc7872e8e9a6530a2e150d4fa",
+                "url": "https://api.github.com/repos/nystudio107/craft3-pathtools/zipball/16722f7dd50c96bae0bcb4a31112632a63098259",
+                "reference": "16722f7dd50c96bae0bcb4a31112632a63098259",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "~3.0.0-beta.14"
+                "craftcms/cms": "~3.0.0-beta.20"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "PathTools",
+                "handle": "path-tools",
+                "schemaVersion": "1.0.0",
+                "hasCpSettings": false,
+                "hasCpSection": false,
+                "changelogUrl": "https://raw.githubusercontent.com/nystudio107/craft3-pathtools/master/CHANGELOG.md",
+                "class": "nystudio107\\pathtools\\PathTools"
+            },
+            "autoload": {
+                "psr-4": {
+                    "nystudio107\\pathtools\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "nystudio107",
+                    "homepage": "https://nystudio107.com"
+                }
+            ],
+            "description": "This twig plugin for the Craft CMS brings convenient path & url manipulation functions & filters to your Twig templates.",
+            "keywords": [
+                "Craft",
+                "cms",
+                "craft-plugin",
+                "craftcms",
+                "pathtools"
+            ],
+            "time": "2017-07-15T11:01:38+00:00"
+        },
+        {
+            "name": "nystudio107/craft3-richvariables",
+            "version": "1.0.12",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nystudio107/craft3-richvariables.git",
+                "reference": "eaca572f470d366a135b3f4fe5f52f15fd8ef8cb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nystudio107/craft3-richvariables/zipball/eaca572f470d366a135b3f4fe5f52f15fd8ef8cb",
+                "reference": "eaca572f470d366a135b3f4fe5f52f15fd8ef8cb",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "~3.0.0-beta.20"
             },
             "type": "craft-plugin",
             "extra": {
                 "name": "Rich Variables",
-                "handle": "richVariables",
+                "handle": "rich-variables",
                 "schemaVersion": "1.0.0",
                 "hasCpSettings": true,
                 "hasCpSection": false,
@@ -3340,7 +3621,63 @@
                 "craftcms",
                 "richvariables"
             ],
-            "time": "2017-04-20T16:58:00+00:00"
+            "time": "2017-07-15T11:51:39+00:00"
+        },
+        {
+            "name": "nystudio107/craft3-transcoder",
+            "version": "1.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nystudio107/craft3-transcoder.git",
+                "reference": "b673e6fa56a7c9100c1e162fb4de1233853815df"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nystudio107/craft3-transcoder/zipball/b673e6fa56a7c9100c1e162fb4de1233853815df",
+                "reference": "b673e6fa56a7c9100c1e162fb4de1233853815df",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "~3.0.0-beta.1",
+                "mikehaertl/php-shellcommand": "~1.2"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Transcoder",
+                "handle": "transcoder",
+                "schemaVersion": "1.0.0",
+                "hasCpSettings": false,
+                "hasCpSection": false,
+                "changelogUrl": "https://raw.githubusercontent.com/nystudio107/craft3-transcoder/master/CHANGELOG.md",
+                "components": {
+                    "transcode": "nystudio107\\transcoder\\services\\Transcode"
+                },
+                "class": "nystudio107\\transcoder\\Transcoder"
+            },
+            "autoload": {
+                "psr-4": {
+                    "nystudio107\\transcoder\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "nystudio107",
+                    "homepage": "https://nystudio107.com"
+                }
+            ],
+            "description": "Transcode video & audio files to various formats, and provide video thumbnails",
+            "keywords": [
+                "Craft",
+                "cms",
+                "craft-plugin",
+                "craftcms",
+                "transcoder"
+            ],
+            "time": "2017-07-15T12:13:44+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -3860,16 +4197,16 @@
         },
         {
             "name": "pimple/pimple",
-            "version": "v3.1.0",
+            "version": "v3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silexphp/Pimple.git",
-                "reference": "279b56046fb368deacf77e2f8f3bdcea45cc367a"
+                "reference": "729436408ef52f9845f9b60d60b2563f314bf1a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silexphp/Pimple/zipball/279b56046fb368deacf77e2f8f3bdcea45cc367a",
-                "reference": "279b56046fb368deacf77e2f8f3bdcea45cc367a",
+                "url": "https://api.github.com/repos/silexphp/Pimple/zipball/729436408ef52f9845f9b60d60b2563f314bf1a9",
+                "reference": "729436408ef52f9845f9b60d60b2563f314bf1a9",
                 "shasum": ""
             },
             "require": {
@@ -3882,7 +4219,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.1.x-dev"
+                    "dev-master": "3.2.x-dev"
                 }
             },
             "autoload": {
@@ -3906,7 +4243,7 @@
                 "container",
                 "dependency injection"
             ],
-            "time": "2017-07-03T14:06:46+00:00"
+            "time": "2017-07-17T17:05:21+00:00"
         },
         {
             "name": "pixelandtonic/imagine",
@@ -4118,12 +4455,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "0b18b6bbeed070fb900ad78e81ffa1182a57a752"
+                "reference": "fa53c38b02d1ec883f4ea2b2c05492da0c7611cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/0b18b6bbeed070fb900ad78e81ffa1182a57a752",
-                "reference": "0b18b6bbeed070fb900ad78e81ffa1182a57a752",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/fa53c38b02d1ec883f4ea2b2c05492da0c7611cf",
+                "reference": "fa53c38b02d1ec883f4ea2b2c05492da0c7611cf",
                 "shasum": ""
             },
             "conflict": {
@@ -4137,7 +4474,8 @@
                 "codeigniter/framework": "<=3.0.6",
                 "composer/composer": "<=1.0.0-alpha11",
                 "contao-components/mediaelement": ">=2.14.2,<2.21.1",
-                "contao/core": ">=2.11,<3.5.15",
+                "contao/core": ">=2,<3.5.28",
+                "contao/core-bundle": ">=4,<4.4.1",
                 "doctrine/annotations": ">=1,<1.2.7",
                 "doctrine/cache": ">=1,<1.3.2|>=1.4,<1.4.2",
                 "doctrine/common": ">=2,<2.4.3|>=2.5,<2.5.1",
@@ -4188,11 +4526,11 @@
                 "symfony/http-foundation": ">=2,<2.3.27|>=2.4,<2.5.11|>=2.6,<2.6.6",
                 "symfony/http-kernel": ">=2,<2.3.29|>=2.4,<2.5.12|>=2.6,<2.6.8",
                 "symfony/routing": ">=2,<2.0.19",
-                "symfony/security": ">=2.3,<2.3.37|>=2.4,<2.6.13|>=2.7,<2.7.9|>=2,<2.0.25|>=2.1,<2.1.13|>=2.2,<2.2.9",
-                "symfony/security-core": ">=2.8,<2.8.6|>=3,<3.0.6|>=2.4,<2.6.13|>=2.7,<2.7.9",
+                "symfony/security": ">=2.7.30,<2.7.32|>=2.8.23,<2.8.25|>=3.2.10,<3.2.12|>=3.3.3,<3.3.5|>=2.3,<2.3.37|>=2.4,<2.6.13|>=2.7,<2.7.9|>=2,<2.0.25|>=2.1,<2.1.13|>=2.2,<2.2.9",
+                "symfony/security-core": ">=2.7.30,<2.7.32|>=2.8.23,<2.8.25|>=3.2.10,<3.2.12|>=3.3.3,<3.3.5|>=2.8,<2.8.6|>=3,<3.0.6|>=2.4,<2.6.13|>=2.7,<2.7.9",
                 "symfony/security-http": ">=2.4,<2.7.13|>=2.3,<2.3.41|>=2.8,<2.8.6|>=3,<3.0.6",
                 "symfony/serializer": ">=2,<2.0.11",
-                "symfony/symfony": ">=2,<2.3.41|>=2.4,<2.7.13|>=2.8,<2.8.6|>=3,<3.0.6",
+                "symfony/symfony": ">=2,<2.3.41|>=2.4,<2.7.13|>=2.7.30,<2.7.32|>=2.8.23,<2.8.25|>=3.2.10,<3.2.12|>=3.3.3,<3.3.5|>=2.8,<2.8.6|>=3,<3.0.6",
                 "symfony/translation": ">=2,<2.0.17",
                 "symfony/validator": ">=2,<2.0.24|>=2.1,<2.1.12|>=2.2,<2.2.5|>=2.3,<2.3.3",
                 "symfony/web-profiler-bundle": ">=2,<2.3.19|>=2.4,<2.4.9|>=2.5,<2.5.4",
@@ -4246,7 +4584,7 @@
                 }
             ],
             "description": "Prevents installation of composer packages with known security vulnerabilities: no API, simply require it",
-            "time": "2017-06-22T16:43:17+00:00"
+            "time": "2017-07-18T08:09:10+00:00"
         },
         {
             "name": "seld/cli-prompt",
@@ -4501,7 +4839,7 @@
         },
         {
             "name": "symfony/console",
-            "version": "v3.3.4",
+            "version": "v3.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
@@ -4570,7 +4908,7 @@
         },
         {
             "name": "symfony/debug",
-            "version": "v3.3.4",
+            "version": "v3.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
@@ -4626,16 +4964,16 @@
         },
         {
             "name": "symfony/dependency-injection",
-            "version": "v3.3.4",
+            "version": "v3.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dependency-injection.git",
-                "reference": "986a633c92220ecb22ad06820a1df126c7a4f9eb"
+                "reference": "761e51a86f35f5b3e213e9b7f554fd91f9bffae4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/986a633c92220ecb22ad06820a1df126c7a4f9eb",
-                "reference": "986a633c92220ecb22ad06820a1df126c7a4f9eb",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/761e51a86f35f5b3e213e9b7f554fd91f9bffae4",
+                "reference": "761e51a86f35f5b3e213e9b7f554fd91f9bffae4",
                 "shasum": ""
             },
             "require": {
@@ -4692,20 +5030,20 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
-            "time": "2017-06-20T14:01:46+00:00"
+            "time": "2017-07-17T14:07:10+00:00"
         },
         {
             "name": "symfony/filesystem",
-            "version": "v3.3.4",
+            "version": "v3.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
-                "reference": "311fa718389efbd8b627c272b9324a62437018cc"
+                "reference": "427987eb4eed764c3b6e38d52a0f87989e010676"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/311fa718389efbd8b627c272b9324a62437018cc",
-                "reference": "311fa718389efbd8b627c272b9324a62437018cc",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/427987eb4eed764c3b6e38d52a0f87989e010676",
+                "reference": "427987eb4eed764c3b6e38d52a0f87989e010676",
                 "shasum": ""
             },
             "require": {
@@ -4741,11 +5079,11 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "https://symfony.com",
-            "time": "2017-06-24T09:29:48+00:00"
+            "time": "2017-07-11T07:17:58+00:00"
         },
         {
             "name": "symfony/finder",
-            "version": "v3.3.4",
+            "version": "v3.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
@@ -4794,7 +5132,7 @@
         },
         {
             "name": "symfony/intl",
-            "version": "v3.3.4",
+            "version": "v3.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/intl.git",
@@ -4869,7 +5207,7 @@
         },
         {
             "name": "symfony/options-resolver",
-            "version": "v3.3.4",
+            "version": "v3.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/options-resolver.git",
@@ -5040,16 +5378,16 @@
         },
         {
             "name": "symfony/process",
-            "version": "v3.3.4",
+            "version": "v3.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "5ab8949b682b1bf9d4511a228b5e045c96758c30"
+                "reference": "07432804942b9f6dd7b7377faf9920af5f95d70a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/5ab8949b682b1bf9d4511a228b5e045c96758c30",
-                "reference": "5ab8949b682b1bf9d4511a228b5e045c96758c30",
+                "url": "https://api.github.com/repos/symfony/process/zipball/07432804942b9f6dd7b7377faf9920af5f95d70a",
+                "reference": "07432804942b9f6dd7b7377faf9920af5f95d70a",
                 "shasum": ""
             },
             "require": {
@@ -5085,7 +5423,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2017-07-03T08:12:02+00:00"
+            "time": "2017-07-13T13:05:09+00:00"
         },
         {
             "name": "tubalmartin/cssmin",
@@ -5505,16 +5843,16 @@
         },
         {
             "name": "yiisoft/yii2-debug",
-            "version": "2.0.9",
+            "version": "2.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-debug.git",
-                "reference": "647be6c9d48dc2f3c2e2f33b9eba0a4ca78abde9"
+                "reference": "0c4d7a1085bf3aacfad9bcba48e053d36c2c498a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/647be6c9d48dc2f3c2e2f33b9eba0a4ca78abde9",
-                "reference": "647be6c9d48dc2f3c2e2f33b9eba0a4ca78abde9",
+                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/0c4d7a1085bf3aacfad9bcba48e053d36c2c498a",
+                "reference": "0c4d7a1085bf3aacfad9bcba48e053d36c2c498a",
                 "shasum": ""
             },
             "require": {
@@ -5548,7 +5886,7 @@
                 "debugger",
                 "yii2"
             ],
-            "time": "2017-02-21T10:30:50+00:00"
+            "time": "2017-02-19T16:48:01+00:00"
         },
         {
             "name": "yiisoft/yii2-swiftmailer",
