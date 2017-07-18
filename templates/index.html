@@ -1,11 +1,14 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>City of Marion</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
-</html>
+{#
+    Homepage
+#}
+
+{% extends "layouts/base/_base" %}
+
+{# HTML #}
+{% block content %}
+
+{% cache for 4 weeks %}
+  <p>Hello, world!</p>
+{% endcache %}
+
+{% endblock %}

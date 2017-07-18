@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+
+    {# Base #}
+    {% includeCssFile 'assets/css/master.css' %}
+    {% includeJsFile 'assets/css/master.js' %}
+
+    {{ getHeadHtml() }}
+
+</head>
+<body>
+    <div id="app"></div>
+
+{% cache for 4 weeks %}
+    {% include 'modules/header/_header' %}
+{% endcache %}
+
+{% block content %}{% endblock %}
+
+{% cache for 4 weeks %}
+    {% include 'modules/footer/_footer' %}
+{% endcache %}
+
+    {{ getFootHtml() }}
+
+</body>
