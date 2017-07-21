@@ -145,15 +145,15 @@ gulp.task('stylus:build', function () {
 // Concat, rename and uglify all JS
 
 var jsFiles = [
-  'assets/js/jquery.js',
-  'assets/js/master.js'
+  pkg.paths.src.js + 'modules/ready.js',
+  'src/js/master.js'
 ];
 
 gulp.task('js:watch', function() {
   return gulp.src(jsFiles)
     .pipe($.plumber())
     .pipe($.concat('scripts.js'))
-    .pipe(gulp.dest('build/js'))
+    .pipe(gulp.dest(pkg.paths.dist.js))
     .pipe(browserSync.stream());
 });
 
@@ -161,7 +161,11 @@ gulp.task('js:build', function() {
   return gulp.src(jsFiles)
     .pipe($.concat('scripts.js'))
     .pipe($.uglify())
-    .pipe(gulp.dest('build/js'));
+    .pipe(gulp.dest(pkg.paths.build.js));
+});
+
+
+
 
 
 
