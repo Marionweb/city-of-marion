@@ -1,0 +1,133 @@
+#menu--top
+  position: relative
+  top: 0
+  right: 0
+  left: 0
+  z-index: 98
+  display: block
+  margin: 0
+  width: 100%
+  min-width: rem(320px)
+  height: rem(80px)
+  max-height: rem(80px)
+  +above(desktop-min)
+    height: rem(94px)
+    max-height: rem(94px)
+
+  background: $top-menu-background-color
+  background: rgba($top-menu-background-color,0.8)
+  user-select: none
+  backdrop-filter: saturate(180%) blur(20px)
+
+  &::before
+    background-image: embedurl("../images/banner.svg", "utf8")
+    background-size: cover
+    background-position: 50% 50%
+    content: ''
+    display: block
+    height: rem(6px)
+    position:relative
+    width: 100%
+
+  ul
+    list-style: none
+    margin: 0
+    padding: 0
+    text-align: right
+    li
+      display inline-block
+      margin: 0
+      vertical-align: top
+
+
+
+#menu--side .menu--item-top-logo,
+#menu--side .menu--item-top-toggleicon
+  display none
+
+#menu--top-mobile
+  li
+    height: rem(80px)
+  +above(tablet-min)
+    display none
+
+.menu--item-top-logo
+  position: absolute
+  left: 0
+.menu--item-top-logo a
+  display: block
+  padding: rem(22.5px) rem(20px) rem(22px)
+  +between(tablet-min, tablet-max)
+    padding: rem(21.5px) rem(30px) rem(20.5px) rem(30px)
+  +above(desktop-min)
+    padding: rem(21px) rem(30px) rem(18.5px) rem(30px)
+.menu--top-logo
+  background-repeat: no-repeat
+  background-size: cover
+  display: block
+  height: rem(35px)
+  width: rem(210px)
+  +between(tablet-min, tablet-max)
+    height: rem(38px)
+    width: rem(242px)
+  +above(desktop-min)
+    height: rem(54.5px)
+    width: rem(342px)
+  strong
+    @extend .hide-text
+
+#menu--top .nav--main
+  display none
+  +above(tablet-min)
+    display block
+  li
+    height: rem(80px)
+    +above(desktop-min)
+      height: rem(94px)
+  li.menu--item-text
+    font-family: $top-menu-font-family
+    font-size: ($top-menu-main-font-size * .9)
+    font-weight: $top-menu-main-font-weight
+    line-height: rem(80px)
+    +above(desktop-min)
+      font-size: $top-menu-main-font-size
+      line-height: rem(94px)
+
+  li.menu--item-text a
+    display block
+    color: $top-menu-link-color
+    padding: 0 1em
+    text-decoration: none
+    text-transform: uppercase
+    +above(desktop-min)
+      padding: 0 1.92857em
+    &:hover
+      color: $top-menu-link-hover-color
+
+
+.menu--side--toggleicon-label
+  padding: rem(29px) rem(30px) rem(24px)
+  cursor: pointer
+  display: block
+  +above(desktop-min)
+    padding: rem(32px) rem(47.5px) rem(29.5px) rem(25px)
+  svg
+    width: rem(24px)
+    +above(desktop-min)
+      width: rem(32.5px)
+  .menuicon-bread
+    fill: $top-menu-toggle-icon-color
+
+.menu--side--toggleanchor
+  left: 0
+  color: $white
+  position: absolute
+  top: 0
+  width: 1px
+  height: 1px
+  z-index: 10
+.menuanchor-label
+  @extend .hide-text
+
+.menu--side--toggle-close
+  display: none

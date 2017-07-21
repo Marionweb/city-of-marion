@@ -1,5 +1,9 @@
   <nav id="menu--top">
-    <h1>{{ siteName }}</h1>
-    <button id="menu--side--toggle">Open Menu</button>
+    {% set logo = logo.logo.one() %}<style>.menu--top-logo { background-image: url({{logo.url}}); }</style>
+    <ul id="menu--top-mobile">
+      {% include 'modules/header/_logo' %}
+      {% include 'modules/header/_toggle-icon' %}
+    </ul>
     {% include 'modules/nav/_nav-main' %}
+
   </nav>

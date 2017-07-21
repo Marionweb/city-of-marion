@@ -7,6 +7,7 @@ rupture = {
   // mobile-cutoff: 400px
   mobile-cutoff: 480px
   // desktop-cutoff: 1050px
+  tablet-cutoff: 980px
   desktop-cutoff: 1280px
   // hd-cutoff: 1800px
   hd-cutoff: 1690px
@@ -18,10 +19,13 @@ rupture = {
   use-device-width: false
 }
 // rupture.scale = 0 (rupture.mobile-cutoff) 600px 800px (rupture.desktop-cutoff) (rupture.hd-cutoff)
-rupture.scale = 0 (rupture.mobile-cutoff) 736px 980px (rupture.desktop-cutoff) (rupture.hd-cutoff)
+rupture.scale = 0 (rupture.mobile-cutoff) 736px (rupture.tablet-cutoff) (rupture.desktop-cutoff) (rupture.hd-cutoff)
 rupture.scale-names = 'xs' 's' 'm' 'l' 'xl' 'hd'
 
 mobile = (rupture.mobile-cutoff)
+tablet-min = 736px
+tablet-max = (rupture.tablet-cutoff) - 1px
+desktop-min = (rupture.tablet-cutoff)
 
 
 // $sans-serif = -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif
@@ -199,6 +203,16 @@ $background-gray = $snow
 $body-font-family = $sans-serif
 $body-background-color = $white
 
+
+
+
+$top-menu-background-color = $white
+$top-menu-toggle-icon-color = $light-blue
+$top-menu-font-family = $sans-serif-headline
+$top-menu-main-font-size = rem(14px)
+$top-menu-main-font-weight = 700
+$top-menu-link-color = $navy
+$top-menu-link-hover-color = $light-blue
 
 
 
