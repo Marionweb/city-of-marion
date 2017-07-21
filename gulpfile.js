@@ -69,17 +69,6 @@ function processCriticalCSS(element, i, callback) {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
 //critical css task
 gulp.task('criticalcss', ['css'], (callback) => {
     doSynchronousLoop(pkg.globs.critical, processCriticalCSS, () => {
@@ -173,7 +162,51 @@ gulp.task('js:build', function() {
     .pipe($.concat('scripts.js'))
     .pipe($.uglify())
     .pipe(gulp.dest('build/js'));
+
+
+
+// SVG Sprites
+// Optimize all images
+//
+// More complex configuration example
+config = {
+  shape: {
+    dimension: {     // Set maximum dimensions
+      maxWidth: 32,
+      maxHeight: 32
+    },
+    spacing: {     // Add padding
+      padding: 10
+    },
+    // dest: pkg.paths.dist.sprites + '/intermediate-svg'  // Keep the intermediate files
+  },
+  dest: pkg.paths.build.sprites,
+  mode: {
+    css: {     // Activate the css mode
+      bust: false,
+      sprite: '../img/sprites.svg',
+      render: {
+        styl: true    // Activate Stylus output (with default options)
+      }
+    }
+  }
+};
+
+gulp.task('svgSprites:compile', function() {
+  return gulp.src(pkg.paths.src.sprites + '**/*.svg')
+    .pipe($.plumber())
+    .pipe($.svgSprite(config))
+    .pipe(gulp.dest(pkg.paths.build.sprites))
+    .pipe(browserSync.stream());
 });
+
+gulp.task('svgSprites:copy', function() {
+  return gulp.src(pkg.paths.build.sprites + 'img/*.svg')
+    .pipe($.plumber())
+    .pipe(gulp.dest(pkg.paths.dist.img))
+});
+
+
 
 
 
@@ -238,6 +271,6 @@ gulp.task('clean-build', function() {
 
 // Run Tasks
 
-gulp.task('watch', ['stylus:watch', 'js:watch', 'imagemin', 'copy-fonts', 'browser-sync', 'watch-tasks']);
+gulp.task('watch', ['svgSprites:compile', 'svgSprites:copy', 'stylus:watch', 'js:watch', 'imagemin', 'copy-fonts', 'browser-sync', 'watch-tasks']);
 gulp.task('build', ['stylus:build', 'js:build', 'imagemin', 'copy-fonts']);
 // gulp.task('clean', ['clean-build']);
