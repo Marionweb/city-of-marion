@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 2880 20" style="enable-background:new 0 0 2880 20;" xml:space="preserve">
+<style type="text/css">
+	.st0{clip-path:url(#SVGID_1_);}
+	.st1{fill:#096095;}
+	.st2{fill:#00BBF4;}
+	.st3{fill:#0091C4;}
+	.st4{fill:#033762;}
+	.st5{fill:#2AAFC2;}
+</style>
+<g>
+	<defs>
+		<rect id="SVGID_3_" x="0" width="2880" height="20"/>
+	</defs>
+	<clipPath id="SVGID_1_">
+		<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
+	</clipPath>
+	<g class="st0">
+		<g>
+			<path class="st1" d="M360,142l360-360v0v0L366-572c-3.3-3.3-8.7-3.3-12,0L0-218L360,142z"/>
+			<path class="st2" d="M1080,142l360-360v0l-354-354c-3.3-3.3-8.7-3.3-12,0L720-218L1080,142z"/>
+			
+				<rect x="465.4" y="-112.5" transform="matrix(0.7071 -0.7071 0.7071 0.7071 110.4653 550.7117)" class="st3" width="509.1" height="509.1"/>
+			<path class="st4" d="M360,858.5V142L0-218v720l354,354C355.7,857.7,357.8,858.5,360,858.5z"/>
+			<path class="st4" d="M1080,858.5V142L720,502l354,354C1075.7,857.7,1077.8,858.5,1080,858.5z"/>
+			<path class="st5" d="M360,142v716.5c2.2,0,4.3-0.8,6-2.5l354-354v0v0L360,142z"/>
+			<path class="st5" d="M1080,858.5c2.2,0,4.3-0.8,6-2.5l354-354v-720l-360,360V858.5z"/>
+		</g>
+		<g>
+			<path class="st1" d="M1800,142l360-360v0v0l-354-354c-3.3-3.3-8.7-3.3-12,0l-354,354L1800,142z"/>
+			<path class="st2" d="M2520,142l360-360v0l-354-354c-3.3-3.3-8.7-3.3-12,0l-354,354L2520,142z"/>
+			
+				<rect x="1905.4" y="-112.5" transform="matrix(0.7071 -0.7071 0.7071 0.7071 532.2312 1568.9448)" class="st3" width="509.1" height="509.1"/>
+			<path class="st4" d="M1800,858.5V142l-360-360v720l354,354C1795.7,857.7,1797.8,858.5,1800,858.5z"/>
+			<path class="st4" d="M2520,858.5V142l-360,360l354,354C2515.7,857.7,2517.8,858.5,2520,858.5z"/>
+			<path class="st5" d="M1800,142v716.5c2.2,0,4.3-0.8,6-2.5l354-354v0v0L1800,142z"/>
+			<path class="st5" d="M2520,858.5c2.2,0,4.3-0.8,6-2.5l354-354v-720l-360,360V858.5z"/>
+		</g>
+	</g>
+</g>
+</svg>
