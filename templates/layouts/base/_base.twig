@@ -1,26 +1,37 @@
 <!DOCTYPE html>
-<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    {# Base #}
-    {% includeCssFile 'assets/css/master.css' %}
-    {% includeJsFile 'assets/css/master.js' %}
+<title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
 
-    {{ getHeadHtml() }}
+{# Base #}
+{% do view.registerCssFile("/assets/css/master.css") %}
+{% do view.registerJsFile("/assets/js/scripts.js") %}
 
-</head>
-<body>
-    <div id="app"></div>
+{{ head() }}
 
-{% cache for 4 weeks %}
-    {% include 'modules/header/_header' %}
-{% endcache %}
+<div id="container">
+  {# {% cache for 4 weeks %} #}
+    {% include 'modules/side-menu/_side-menu' %}
+  {# {% endcache %} #}
 
-{% block content %}{% endblock %}
+  {# content push wrapper #}
+  <div id="wrapper">
 
-{% cache for 4 weeks %}
-    {% include 'modules/footer/_footer' %}
-{% endcache %}
+    <div id="page">{# this is the wrapper for the content #}
+      <div id="page--inner">{# extra div for emulating position:fixed of the menu #}
+        {# {% cache for 4 weeks %} #}
+          {% include 'modules/header/_header' %}
+        {# {% endcache %} #}
 
-    {{ getFootHtml() }}
+        {% block content %}{% endblock %}
 
-</body>
+        {# {% cache for 4 weeks %} #}
+          {% include 'modules/footer/_footer' %}
+        {# {% endcache %} #}
+      </div><!-- /#page--inner -->
+    </div><!-- /#page -->
+
+  </div><!-- /#wrapper -->
+</div><!-- /#container -->
+
+{{ endBody() }}

@@ -1,0 +1,156 @@
+*,
+*:after,
+*::before
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+html,
+body,
+#container,
+#wrapper,
+#page
+  height: 100%
+
+#page
+  overflow-y: scroll
+  background: #f3efe0
+
+#page,
+#page--inner
+  position: relative
+
+#container
+  position: relative
+  overflow: hidden
+
+#wrapper
+  position: relative
+  left: 0
+  z-index: 99
+  height: 100%
+  transition: transform 0.5s
+  &::after
+    position: absolute
+    top: 0
+    right: 0
+    width: 0
+    height: 0
+    background: rgba(0, 0, 0, 0.2)
+    content: ''
+    opacity: 0
+    transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s
+
+.menu--open #wrapper
+  transform: translate3d(-($side-menu-width-mobile), 0, 0)
+  +above(mobile)
+    transform: translate3d(-($side-menu-width-desktop), 0, 0)
+  &::after
+    width: 100%
+    height: 100%
+    opacity: 1
+    transition: opacity 0.5s
+
+#menu--side
+  position: absolute
+  top: 0
+  right: 0
+  z-index: 100
+  visibility: hidden
+  width: $side-menu-width-mobile
+  height: 100%
+  background: $side-menu-background
+  transition: all 0.5s
+  +above(mobile)
+    width: $side-menu-width-desktop
+  &::after
+    position: absolute
+    top: 0
+    right: 0
+    width: 100%
+    height: 100%
+    background: rgba(0, 0, 0, 0.2)
+    content: ''
+    opacity: 1
+    transition: opacity 0.5s
+
+.menu--open #menu--side::after
+  width: 0
+  height: 0
+  opacity: 0
+  transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s
+
+
+/* Slide effect */
+#menu--side
+  z-index: 1
+  transform: translate3d(50%, 0, 0)
+  &::after
+    display: none
+
+.menu--open #menu--side
+  overflow-y: scroll
+  visibility: visible
+  transition: transform 0.5s
+  transform: translate3d(0, 0, 0)
+
+/* Fallback example for browsers that don't support 3D transforms (and no JS fallback) */
+.no-csstransforms3d #wrapper,
+.no-js #wrapper
+  padding-left: $side-menu-width-mobile
+  +above(mobile)
+    padding-left: $side-menu-width-desktop
+
+/* side menu style */
+#menu--side--close
+  background $transparent
+  border 0 none
+  height rem(24px)
+  position absolute
+  right 1.9em
+  top 2.2em
+  width rem(24px)
+  &:hover
+    cursor: pointer
+  .icon--close
+    fill $side-menu-close-icon-color
+#menu--side
+  padding-top 5.4em
+  ul
+    margin: 0
+    padding: 0 2em 1em
+    list-style: none
+    +above(mobile)
+      padding: 0 4em 1em
+
+    li
+      font-family: $side-menu-font-family
+      a
+        display: block
+        padding: 1em 0
+        outline: none
+        // box-shadow: inset 0 -1px rgba(0, 0, 0, 0.2)
+        color: $side-menu-link-color
+        text-transform: uppercase
+        text-shadow: 0 0 1px rgba(255, 255, 255, 0.1)
+        letter-spacing: 1px
+        text-decoration: none
+        transition: background 0.3s, box-shadow 0.3s
+        &:hover
+          // background: rgba(0, 0, 0, 0.2)
+          // box-shadow: inset 0 -1px rgba(0, 0, 0, 0)
+          color: $side-menu-link-hover-color
+      // &:first-child a
+      //   box-shadow: inset 0 -1px rgba(0, 0, 0, 0.2), inset 0 1px rgba(0, 0, 0, 0.2)
+
+#nav--main
+  li
+    font-size: $side-menu-main-font-size
+    font-weight: $side-menu-main-font-weight
+#nav--sub
+  li
+    font-size: $side-menu-sub-font-size
+    font-weight: $side-menu-sub-font-weight
+    &:first-child
+      box-shadow: 0px -2px $side-menu-sub-line-color
+      a
+        padding-top 2em
