@@ -1,2 +1,41 @@
+*,
+*:after,
+*::before
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
 body
-  font-family $sans-serif
+  font-family: $body-font-family
+
+html,
+body,
+#container,
+#wrapper,
+#page
+  height: 100%
+
+#page
+  overflow-y: scroll
+  background: $body-background-color
+
+#container
+  position: relative
+  overflow: hidden
+
+#wrapper
+  position: relative
+  left: 0
+  z-index: 99
+  height: 100%
+  box-shadow: 0 0 30px rgba(0,0,0,.5)
+  transition: transform 0.5s
+  &::after
+    position: absolute
+    top: 0
+    right: 0
+    width: 0
+    height: 0
+    background: rgba(0, 0, 0, 0.2)
+    content: ''
+    opacity: 0
+    transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s
