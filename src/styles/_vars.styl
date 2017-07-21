@@ -24,8 +24,11 @@ rupture.scale-names = 'xs' 's' 'm' 'l' 'xl' 'hd'
 mobile = (rupture.mobile-cutoff)
 
 
-$sans-serif = -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif
-$serif = georgia, serif
+// $sans-serif = -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif
+$sans-serif = 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif
+$sans-serif-headline = 'Montserrat', sans-serif
+// $serif = georgia, serif
+$serif = 'Playfair Display', georgia, serif
 $code = consolas, monaco, monospace
 
 $font-size-headline = 6rem
@@ -36,6 +39,7 @@ $font-size-3 = 1.5rem
 $font-size-4 = 1.25rem
 $font-size-5 = 1rem
 $font-size-6 = .875rem
+$font-size-7 = .75rem
 
 $letter-spacing-tight = -.05em
 $letter-spacing-1 = .1em
@@ -99,13 +103,13 @@ $box-shadow-5 = 4px 4px 8px 0px rgba( 0, 0, 0, 0.2 )
 
 $black = #000
 $near-black = #111
-$dark-gray = #333
-$mid-gray = #555
+// $dark-gray = #333
+// $mid-gray = #555
 $gray = #777
 $silver = #999
 $light-silver = #aaa
 $moon-gray = #ccc
-$light-gray = #eee
+// $light-gray = #eee
 $near-white = #f4f4f4
 $white = #fff
 
@@ -156,9 +160,34 @@ $light-green = #9eebcf
 $navy = #001b44
 $dark-blue = #00449e
 $blue = #357edd
-$light-blue = #96ccff
+// $light-blue = #96ccff
 $lightest-blue = #cdecff
 $washed-blue = #f6fffe
 $washed-green = #e8fdf5
 $washed-yellow = #fffceb
 $washed-red = #ffdfdf
+
+
+
+
+// CITY COLORS:
+$deep-sky-blue = rgb(0, 187, 244) // #00BBF4
+$prussian-blue = rgb(3, 55, 98) // #033762
+$pacific-blue = rgb(0, 145, 196) // #0091C4
+$cerulean = rgb(9, 96, 149) // #096095
+$pelorous = rgb(42, 175, 194) // #2AAFC2
+$snow = rgb(249, 249, 249) // #F9F9F9
+$white-smoke = rgb(239, 239, 239) // #EFEFEF
+$cod-grey = rgb(48, 50, 51) // #303233
+$light-grey = rgb(209, 209, 209) // #D1D1D1
+
+// OTHER COLOR NAMES FOR ABOVE:
+$light-blue = $deep-sky-blue
+$medium-blue = $pacific-blue
+$dark-blue = $cerulean
+$navy = $prussian-blue
+$teal = $pelorous
+$dark-gray = $cod-grey
+$medium-gray = $light-grey
+$light-gray = $white-smoke
+$background-gray = $snow
