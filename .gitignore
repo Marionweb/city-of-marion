@@ -3,8 +3,9 @@
 /vendor
 yarn.lock
 node_modules
+generated
 web/vendor
-web/images/*
+web/assets/img
 web/assets/css
 web/assets/js
 .DS_Store
