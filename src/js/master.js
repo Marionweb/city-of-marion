@@ -1,10 +1,12 @@
 docReady(function() {
-  var toggleBtn = document.getElementById('menu--side--toggle'),
-   closeBtn = document.getElementById('menu--side--close'),
+  var mainMenuOpenBtn = document.getElementById('menu--side--toggle-open'),
+   mainMenuCloseBtn = document.getElementById('menu--side--toggle-close'),
+   sideMenuCloseBtn = document.getElementById('menu--side--close'),
    container = document.querySelector('#container');
 
-  toggleBtn.addEventListener("click", toggleNav);
-  closeBtn.addEventListener("click", toggleNav);
+  mainMenuOpenBtn.addEventListener("click", toggleNav);
+  mainMenuCloseBtn.addEventListener("click", toggleNav);
+  sideMenuCloseBtn.addEventListener("click", toggleNav);
 
   function toggleNav(event) {
     if(!container.hasClass('menu--open')) {
