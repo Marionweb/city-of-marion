@@ -1,5 +1,5 @@
-var gulp = require('gulp'),
-    jeet        = require('jeet'),
+var gulp        = require('gulp'),
+    sGrid       = require('s-grid'),
     nib         = require('nib'),
     rupture     = require('rupture'),
     poststylus  = require('poststylus'),
@@ -97,7 +97,7 @@ gulp.task('stylus:watch', function () {
     .pipe($.stylus({
       compress: false,
       use: [
-        jeet(),
+        sGrid(),
         nib(),
         rupture(),
         poststylus(postCSSPlugins)
