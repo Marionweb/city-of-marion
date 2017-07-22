@@ -1,0 +1,162 @@
+footer
+  background-color: $footer-background-color
+  border-top: $footer-top-border-height solid $footer-top-border-color
+
+  ul
+    margin: 0
+    padding: 0
+    li
+      list-style-type: none
+      display: block
+      +above(tablet-min)
+        display: inline-block
+
+#footer--container
+  padding: rem(72px) rem(15px) rem(30px)
+  +above(tablet-min)
+    grid()
+  +between(m, l)
+    padding: rem(72px) rem(30px) rem(68px)
+    #footer--logo-container
+      stack()
+      margin-bottom: rem(42px)
+    > nav
+      cell(2, 3, g: 0)
+    #footer--social
+      cell(1, 3, g: 0)
+  +above(xl)
+    padding: rem(106px) rem(80px) rem(97px)
+    #footer--logo-container
+      cell(10, 32, g: 0)
+      text-align: left
+    > nav
+      cell(14, 32, g: 0)
+      ul
+        text-align: center
+    #footer--social
+      cell(8, 32, g: 0)
+      text-align: right
+
+  > nav
+    margin 1em 0
+    +above(tablet-min)
+      margin-top 0
+      margin-bottom 0
+    +between(m, l)
+      margin 0 0 0 -1em
+      ul
+        text-align: left
+
+    li
+      font-family: $footer-link-font-family
+      font-size: $footer-link-font-size
+      font-weight: $footer-link-font-weight
+      text-transform: uppercase
+      margin: 0.66em 0
+      a
+        color: $footer-text-color
+        display block
+        padding: 1em 1em
+        text-align: center
+        text-decoration: none
+        &:hover
+          color: $footer-link-hover-color
+        +above(tablet-min)
+          padding: 0.5em 1em
+
+#footer--logo-container
+  text-align center
+  a
+    display: inline-block
+.footer--logo
+  background-repeat: no-repeat
+  background-size: cover
+  display: block
+  height: rem(43px)
+  width: rem(287px)
+  // +between(tablet-min, tablet-max)
+  //   height: rem(38px)
+  //   width: rem(254.6px)
+  // +above(desktop-min)
+  //   height: rem(54.5px)
+  //   width: rem(365.15px)
+  strong
+    @extend .hide-text
+
+#footer--social
+  text-align center
+  +above(tablet-min)
+    position relative
+    right: -(rem(25px))
+    text-align: right
+  li
+    display: inline-block
+    a
+      background-color: $footer-link-color
+      background-repeat: no-repeat
+      background-size: cover
+      display block
+      height rem(45px)
+      width rem(45px)
+      span
+        @extend .hide-text
+      &:hover
+        background-color: $footer-link-hover-color
+
+    &.footer--social--facebook
+      mask: embedurl("../sprites/social-facebook.svg", "utf8") no-repeat 50% 50%/30px 30px
+    &.footer--social--twitter
+      mask: embedurl("../sprites/social-twitter.svg", "utf8") no-repeat 50% 50%/30px 30px
+    &.footer--social--instagram
+      mask: embedurl("../sprites/social-instagram.svg", "utf8") no-repeat 50% 50%/30px 30px
+    &.footer--social--linkedin
+      mask: embedurl("../sprites/social-linkedin.svg", "utf8") no-repeat 50% 50%/30px 30px
+    &.footer--social--youtube
+      mask: embedurl("../sprites/social-youtube.svg", "utf8") no-repeat 50% 50%/30px 30px
+
+
+#footer--copyright
+  background-color: $footer-copyright-background-color
+  color: $footer-copyright-text-color
+  font-family: $footer-copyright-font-family
+  font-size: $footer-copyright-font-size
+  font-weight: $footer-copyright-font-weight
+  padding: rem(32px) rem(15px) rem(27px)
+  text-align: center
+  +above(tablet-min)
+    grid()
+  +between(m, l)
+    padding: rem(32px) rem(30px) rem(27px)
+  +above(l)
+    padding: rem(32px) rem(80px) rem(26px)
+
+  p
+    margin 0
+
+  a
+    color: $footer-copyright-link-color
+    &:hover
+      color: $footer-copyright-link-hover-color
+  > nav
+    margin-bottom 1em
+
+    li
+      display: inline-block
+      &:not(:first-child):before
+        content: " | "
+
+  +above(tablet-min)
+    & > p,
+    & > nav
+      cell(1, 2, g: 0)
+      text-align: left
+      vertical-align: top
+
+    & > p
+      cell-offset(-2, 2, g: 0)
+    & > nav
+      cell-offset(1, 2, g: 0)
+      margin 0
+      text-align right
+
+

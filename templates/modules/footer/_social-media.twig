@@ -1,0 +1,18 @@
+<ul id="footer--social">
+  {% for block in footer.socialMedia %}
+
+    <li class="footer--social--{{block.type}}">
+    {% if block.type == "facebook" %}
+      <a href="http://facebook.com/{{ block.pageUrl }}" target="_blank"><span>Like Us On Facebook</span></a>
+    {% elseif block.type == "twitter" %}
+      <a href="https://twitter.com/{{ block.twitterName }}" target="_blank"><span>Follow Us On Twitter</span></a>
+    {% elseif block.type == "instagram" %}
+      <a href="https://instagram.com/{{ block.instagramName }}" target="_blank"><span>Follow Us On Instagram</span></a>
+    {% elseif block.type == "linkedin" %}
+      <a href="{{ block.pageUrl }}" target="_blank"><span>Follow Us On LinkedIn</span></a>
+    {% elseif block.type == "youtube" %}
+      <a href="{{ block.pageUrl }}" target="_blank"><span>Subscribe to our YouTube Channel</span></a>
+    {% endif %}
+    </li>
+  {% endfor %}
+</ul>

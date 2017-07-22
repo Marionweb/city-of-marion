@@ -1,0 +1,13 @@
+<nav>
+  <ul>
+    {% set nav = footer.footerMenu %}
+    {% nav item in nav %}
+      {% if item.type == "customMenuItem" %}
+        <li class="footer--nav--item footer--nav--item-text"><a href="{{item.menuItemUrl}}"{% if item.newWindow %} target="_blank"{% endif %}>{{item.menuItemTitle}}</a></li>
+      {% elseif item.type == "entryMenuItem" %}
+        {% set entry = item.entry.one() %}
+        <li class="footer--nav--item"><a href="#">{% if item.titleOverride %}{{item.titleOverride}}{% else %}{{entry.title}}{% endif %}</a></li>
+      {% endif %}
+    {% endnav %}
+  </ul>
+</nav>
