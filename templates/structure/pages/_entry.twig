@@ -1,0 +1,14 @@
+{#
+    Page Structure Template
+#}
+
+{% extends "layouts/base/_base" %}
+
+{% set title = entry.title %}
+
+{# HTML #}
+{% block content %}
+
+{% include "structure/pages/_types/_" ~ entry.type %}
+
+{% endblock %}

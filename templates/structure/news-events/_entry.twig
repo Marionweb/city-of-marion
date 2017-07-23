@@ -1,5 +1,5 @@
 {#
-    About Landing Template
+    News Channel Entry Template
 #}
 
 {% extends "layouts/base/_base" %}
@@ -9,6 +9,6 @@
 {# HTML #}
 {% block content %}
 
-<h1>{{ entry.title }}</h1>
+{% include "structure/news/_types/_" ~ entry.type %}
 
 {% endblock %}
