@@ -1,7 +1,10 @@
+{% header "x-author: Mike Stecker (@mikestecker)" %}
 <!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
+
+<link type="text/plain" rel="author" href="/humans.txt" />
 
 {# Base #}
 {% do view.registerCssFile("/assets/css/master.css") %}

@@ -1,0 +1,24 @@
+/* TEAM */
+  Chef: Luke Anspach
+  Contact: hi [at] lukeanspach.com
+  Twitter: @lukeanspach
+  From: Marion, Indiana, United States
+
+  UI developer: Mike Stecker
+  Contact: hello [at] mikestecker.com
+  Twitter: @mikestecker
+  From: Menifee, California, United States
+
+/* THANKS */
+
+  [title here]: Name Here
+  Twitter: @username
+  From: City, State, Spain
+
+  Pixel & Tonic - https://pixelandtonic.com
+
+/* SITE */
+
+  Last update: [date]
+  Standards: HTML5, CSS3
+  Components: Craft CMS, Yii2, PHP, Javascript, SEOmatic
