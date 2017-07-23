@@ -7,7 +7,7 @@
       <li class="menu--item menu--item-text"><a href="{{item.menuItemUrl}}"{% if item.newWindow %} target="_blank"{% endif %}>{{item.menuItemTitle}}</a></li>
     {% elseif item.type == "entryMenuItem" %}
       {% set entry = item.entry.one() %}
-      <li class="menu--item"><a href="#">{% if item.titleOverride %}{{item.titleOverride}}{% else %}{{entry.title}}{% endif %}</a></li>
+      <li class="menu--item menu--item-text"><a href="{{entry.url}}">{% if item.titleOverride %}{{item.titleOverride}}{% else %}{{entry.title}}{% endif %}</a></li>
     {% endif %}
   {% endnav %}
   {% include 'modules/header/_toggle-icon' %}
