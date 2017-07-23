@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.31.6",
+            "version": "3.31.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "4e066559063683aa4574aee3ed54fcb90b2b10b2"
+                "reference": "9829a8183016df800110148b467179d67c434f90"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/4e066559063683aa4574aee3ed54fcb90b2b10b2",
-                "reference": "4e066559063683aa4574aee3ed54fcb90b2b10b2",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/9829a8183016df800110148b467179d67c434f90",
+                "reference": "9829a8183016df800110148b467179d67c434f90",
                 "shasum": ""
             },
             "require": {
@@ -84,7 +84,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2017-07-17T21:18:04+00:00"
+            "time": "2017-07-20T22:22:05+00:00"
         },
         {
             "name": "bower-asset/behave.js",
@@ -209,16 +209,16 @@
         },
         {
             "name": "bower-asset/garnishjs",
-            "version": "0.1.18",
+            "version": "0.1.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pixelandtonic/garnishjs.git",
-                "reference": "ce4973fa4c9e001194a79bc1108b3082bfa010a0"
+                "reference": "c358df35c9776de347ee8fd5399146c2356cd859"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pixelandtonic/garnishjs/zipball/ce4973fa4c9e001194a79bc1108b3082bfa010a0",
-                "reference": "ce4973fa4c9e001194a79bc1108b3082bfa010a0",
+                "url": "https://api.github.com/repos/pixelandtonic/garnishjs/zipball/c358df35c9776de347ee8fd5399146c2356cd859",
+                "reference": "c358df35c9776de347ee8fd5399146c2356cd859",
                 "shasum": null
             },
             "require": {
@@ -226,7 +226,10 @@
                 "bower-asset/jquery-touch-events": ">=1.0.5,<2.0.0",
                 "bower-asset/velocity": ">=1.2.3,<2.0.0"
             },
-            "type": "bower-asset"
+            "type": "bower-asset",
+            "license": [
+                "MIT"
+            ]
         },
         {
             "name": "bower-asset/jquery",
@@ -2683,16 +2686,16 @@
         },
         {
             "name": "league/oauth2-facebook",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/oauth2-facebook.git",
-                "reference": "3843204ccd856eed7d726afc2ef5afa12122d572"
+                "reference": "bcbcd540fb66ae16b4f82671c8ae7752b6a89556"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/oauth2-facebook/zipball/3843204ccd856eed7d726afc2ef5afa12122d572",
-                "reference": "3843204ccd856eed7d726afc2ef5afa12122d572",
+                "url": "https://api.github.com/repos/thephpleague/oauth2-facebook/zipball/bcbcd540fb66ae16b4f82671c8ae7752b6a89556",
+                "reference": "bcbcd540fb66ae16b4f82671c8ae7752b6a89556",
                 "shasum": ""
             },
             "require": {
@@ -2730,7 +2733,7 @@
                 "oauth",
                 "oauth2"
             ],
-            "time": "2017-01-25T14:36:10+00:00"
+            "time": "2017-07-22T01:25:00+00:00"
         },
         {
             "name": "mailgun/mailgun-php",
