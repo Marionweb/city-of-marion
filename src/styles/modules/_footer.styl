@@ -1,4 +1,4 @@
-footer
+#page--inner > footer
   background-color: $footer-background-color
   border-top: $footer-top-border-height solid $footer-top-border-color
 
@@ -14,27 +14,27 @@ footer
 #footer--container
   padding: rem(72px) rem(15px) rem(30px)
   +above(tablet-min)
-    grid()
+    lost-flex-container: row
   +between(m, l)
     padding: rem(72px) rem(30px) rem(68px)
     #footer--logo-container
-      stack()
+      lost-column: 1/1
       margin-bottom: rem(42px)
     > nav
-      cell(2, 3, g: 0)
+      lost-column: 2/3 0 0px
     #footer--social
-      cell(1, 3, g: 0)
+      lost-column: 1/3 0 0px
   +above(xl)
     padding: rem(106px) rem(80px) rem(97px)
     #footer--logo-container
-      cell(10, 32, g: 0)
+      lost-column: 10/32 0 0px
       text-align: left
     > nav
-      cell(14, 32, g: 0)
+      lost-column: 14/32 0 0px
       ul
         text-align: center
     #footer--social
-      cell(8, 32, g: 0)
+      lost-column: 8/32 0 0px
       text-align: right
 
   > nav
@@ -43,7 +43,7 @@ footer
       margin-top 0
       margin-bottom 0
     +between(m, l)
-      margin 0 0 0 -1em
+      margin 0 0 0 -1em !important
       ul
         text-align: left
 
@@ -124,7 +124,7 @@ footer
   padding: rem(32px) rem(15px) rem(27px)
   text-align: center
   +above(tablet-min)
-    grid()
+    lost-flex-container: row
     font-size: $footer-copyright-font-size-desktop
   +between(m, l)
     padding: rem(32px) rem(30px) rem(27px)
@@ -149,14 +149,14 @@ footer
   +above(tablet-min)
     & > p,
     & > nav
-      cell(1, 2, g: 0)
+      lost-column: 1/2
       text-align: left
       vertical-align: top
 
     & > p
-      cell-offset(-2, 2, g: 0)
+      lost-move: -1/2
     & > nav
-      cell-offset(1, 2, g: 0)
+      lost-move: 1/2
       margin 0
       text-align right
 

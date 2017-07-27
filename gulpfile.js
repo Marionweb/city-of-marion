@@ -1,8 +1,8 @@
 var gulp        = require('gulp'),
-    sGrid       = require('s-grid'),
     nib         = require('nib'),
     rupture     = require('rupture'),
     poststylus  = require('poststylus'),
+    lost        = require('lost'),
     cssnano     = require('cssnano'),
     mqpacker    = require('css-mqpacker'),
     cssnext     = require('postcss-cssnext'),
@@ -86,6 +86,7 @@ gulp.task('criticalcss', ['css'], (callback) => {
 
 gulp.task('stylus:watch', function () {
   var postCSSPlugins = [
+    lost,
     cssnext({browsers: ['last 2 version','> 1%']}),
     mqpacker,
     brandColors,
@@ -97,7 +98,6 @@ gulp.task('stylus:watch', function () {
     .pipe($.stylus({
       compress: false,
       use: [
-        sGrid(),
         nib(),
         rupture(),
         poststylus(postCSSPlugins)
