@@ -1,5 +1,7 @@
 .page-content
   color $content-text-color
+  &:not(.block--image)
+    margin-bottom: 1em
 
   h1, h2, h3, h4, h5, h6, p, li, dt, dd
     line-height $content-text-line-height
@@ -50,3 +52,91 @@
           content: " | "
           padding-left: 2px
           padding-right: 2px
+
+
+.image-grid
+  // our flexbox container
+  margin: .5em -1em .5em -1.5em
+  +above(m)
+    display: flex
+    margin: .5em 0 .5em -.5em
+    // setting the left margin at -.5em and the right at 0 offsets the grid to account for the gutters
+.image-grid + .image-grid
+  margin-top: -.5em
+$grid-image
+  margin: 0 auto
+  padding: .5em 0 0 1em
+  width: 100%
+  img
+    filter: blur(5px)
+    transition: filter 400ms
+    &.lazyloaded
+      filter: blur(0)
+    &[data-sizes="auto"]
+      display: block
+
+  +above(m)
+    flex: 1 auto
+    flex: 1
+    // flex-basis set at 0 rather than 100%
+// register all possible ratios
+.grid-image,
+.grid-image--aspect3x2,
+.grid-image--aspect4x3,
+.grid-image--aspect2x3,
+.grid-image--aspect3x4,
+.grid-image--aspect3x1,
+.grid-image--aspect1x1,
+.grid-image--aspect16x9
+  @extend $grid-image
+.grid-image--aspect3x2
+  +above(m)
+    flex: (3/2) 0%
+.grid-image--aspect4x3
+  +above(m)
+    flex: (4/3) 0%
+.grid-image--aspect2x3
+  +above(m)
+    flex: (2/3) 0%
+.grid-image--aspect3x4
+  +above(m)
+    flex: (3/4) 0%
+.grid-image--aspect3x1
+  +above(m)
+    flex: (3/1) 0%
+.grid-image--aspect1x1
+  +above(m)
+    flex: (1/1) 0%
+.grid-image--aspect16x9
+  +above(m)
+    flex: (16/9) 0%
+
+
+.embed-container:not(.type-rich)
+  position: relative
+  height: 0
+  overflow: hidden
+
+  iframe,
+  object,
+  embed
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+  &.type-video
+    padding-bottom: 56.25%
+    &.youtube
+      padding-bottom: 53.25%
+      padding-top: 30px
+
+  &.type-video,
+  &.type-video iframe
+    max-width: 1280px
+    max-height: 720px
+
+  &.instagram
+    padding-bottom: 120%
+

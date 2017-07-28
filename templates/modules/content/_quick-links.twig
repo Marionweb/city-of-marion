@@ -1,5 +1,11 @@
-<div id="aside--quick-links">
-  <h3>Quick Links</h3>
-  <ul>
-  </ul>
-</div>
+<ul>
+  {% set nav = entry.quickLinks %}
+  {% nav item in nav %}
+    {% if item.type == "customMenuItem" %}
+      <li class="quick-links--item"><a href="{{item.menuItemUrl}}"{% if item.newWindow %} target="_blank"{% endif %}>{{item.menuItemTitle}}</a></li>
+    {% elseif item.type == "entryMenuItem" %}
+      {% set entry = item.entry.one() %}
+      <li class="quick-links--item"><a href="{{entry.url}}" title="{{ entry.Title }}">{{ entry.Title }}</a></li>
+    {% endif %}
+  {% endnav %}
+</ul>

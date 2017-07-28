@@ -150,7 +150,7 @@ var jsFiles = [
 ];
 
 gulp.task('js:watch', function() {
-  return gulp.src(jsFiles)
+  return gulp.src(pkg.globs.distJs, jsFiles)
     .pipe($.plumber())
     .pipe($.concat('scripts.js'))
     .pipe(gulp.dest(pkg.paths.dist.js))
@@ -158,7 +158,7 @@ gulp.task('js:watch', function() {
 });
 
 gulp.task('js:build', function() {
-  return gulp.src(jsFiles)
+  return gulp.src(pkg.globs.distJs, jsFiles)
     .pipe($.concat('scripts.js'))
     .pipe($.uglify())
     .pipe(gulp.dest(pkg.paths.build.js));
