@@ -1,4 +1,4 @@
-/.env
+/.env*
 /.idea
 /vendor
 yarn.lock
@@ -16,6 +16,7 @@ npm-debug.log
 storage/runtime
 storage/backups
 *.hot-update.*
+web/volumes
 
 
 dist/

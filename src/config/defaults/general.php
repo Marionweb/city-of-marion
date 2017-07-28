@@ -19,15 +19,6 @@ return [
         'generateTransformsBeforePageLoad' => true,
         'siteUrl' => getenv('CRAFTENV_SITE_URL'),
         'craftEnv' => CRAFT_ENVIRONMENT,
-
-        // Control Panel trigger word
-        'cpTrigger' => 'admin',
-
-        // Default Week Start Day (0 = Sunday, 1 = Monday...)
-        'defaultWeekStartDay' => 0,
-
-        // Enable CSRF Protection (recommended, will be enabled by default in Craft 3)
-        'enableCsrfProtection' => true,
     ],
 
     // Live (production) environment
