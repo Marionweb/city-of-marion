@@ -36,6 +36,7 @@
   a
     color $module-quick-links-link-color
     text-decoration $module-quick-links-link-decoration
+    transition: color .15s ease-in
     &:after
       background-color: $module-quick-links-arrow-color
       background-repeat: no-repeat
@@ -46,8 +47,10 @@
       width rem(16px)
       mask: embedurl("../sprites/arrow-right.svg", "utf8") no-repeat 50% 50%/12px 12px
       margin-left: 0.15em
-      transition: background-color .1s ease-in
+      transition: background-color .1s ease-in, margin-left .15s ease-in
       vertical-align middle
 
     &:hover
-      color $module-quick-links-link-color
+      color $module-quick-links-link-hover-color
+      &:after
+        margin-left: 0.35em
