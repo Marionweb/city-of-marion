@@ -59,6 +59,7 @@
         padding: 1em 1em
         text-align: center
         text-decoration: none
+        transition: color .15s ease-in
         &:hover
           color: $footer-link-hover-color
         +above(tablet-min)
@@ -98,6 +99,7 @@
       display block
       height rem(45px)
       width rem(45px)
+      transition: background-color .1s ease-in
       span
         @extend .hide-text
       &:hover
@@ -136,6 +138,7 @@
 
   a
     color: $footer-copyright-link-color
+    transition: color .15s ease-in
     &:hover
       color: $footer-copyright-link-hover-color
   > nav
@@ -145,6 +148,8 @@
       display: inline-block
       &:not(:first-child):before
         content: " | "
+        padding-left: 2px
+        padding-right: 2px
 
   +above(tablet-min)
     & > p,

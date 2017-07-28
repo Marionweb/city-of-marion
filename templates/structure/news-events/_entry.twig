@@ -2,13 +2,20 @@
     News Channel Entry Template
 #}
 
-{% extends "layouts/base/_base" %}
+{% extends "layouts/columns/_two" %}
 
 {% set title = entry.title %}
 
-{# HTML #}
-{% block content %}
+{# MAIN #}
+{% block main %}
 
-{% include "structure/news/_types/_" ~ entry.type %}
+<article class="news-events-article news-events-article--{{ entry.type }}">
+  {% include "structure/news-events/_types/_" ~ entry.type %}
+</article>
 
+{% endblock %}
+
+{# ASIDE #}
+{% block aside %}
+  {% include "modules/content/_quick-links" %}
 {% endblock %}

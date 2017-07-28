@@ -1,0 +1,23 @@
+{% for block in entry.pageContent %}
+<section class="page-content page-content--block">
+  {% if block.type == "richText" %}
+
+    {{ block.text }}
+
+  {% elseif block.type == "image" %}
+
+    {% set image = block.image.first() %}
+    {% if image %}
+      <img src="{{ image.getUrl('thumb') }}" width="{{ image.getWidth('thumb') }}" height="{{ image.getHeight('thumb') }}" alt="{{ image.title }}">
+  {% endif %}
+
+  {% elseif block.type == "quote" %}
+    <blockquote>
+      <p>{{ block.quote }}</p>
+      <footer>
+        <cite>{% if block.citeUrl %}<a href="{{ block.citeUrl }}" target="_blank">{% endif %}{{ block.cite }}{% if block.citeUrl %}</a>{% endif %}{% if block.citeSecondary %} <em>{{ block.citeSecondary }}</em>{% endif %}</cite>
+    </blockquote>
+
+  {% endif %}
+</section>
+{% endfor %}

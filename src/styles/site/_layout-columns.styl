@@ -1,0 +1,34 @@
+#page--inner--columns
+  +between(m, l)
+    padding: rem(40px) rem(30px)
+  +above(xl)
+    padding rem(90px) rem(160px)
+
+
+  &.one
+    & > main
+      // placeholder:
+      background-color $white
+
+
+
+
+  &.two
+    +above(tablet-min)
+      lost-flex-container: row
+    & > main
+      padding rem(30px)
+      +above(tablet-min)
+        padding 0
+      +between(m, l)
+        lost-column 16/28
+      +above(xl)
+        padding 0
+        lost-column 14/28
+    & > aside
+      +between(m, l)
+        lost-column 11/28
+        lost-offset: 1/28
+      +above(xl)
+        lost-column 10/28
+        lost-offset: 4/28

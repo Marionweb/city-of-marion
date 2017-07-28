@@ -1,0 +1,52 @@
+.page-content
+  color $content-text-color
+
+  h1, h2, h3, h4, h5, h6, p, li, dt, dd
+    line-height $content-text-line-height
+
+  p
+    font-size $content-text-size
+    margin 1em 0
+
+  a
+    color: $content-link-color
+    font-weight: $content-link-weight
+    text-decoration: $content-link-decoration
+    transition: color .15s ease-in
+    &:link,
+    &:visited
+      transition: color .15s ease-in
+    &:hover
+      color: $content-link-hover-color
+      text-decoration: $content-link-hover-decoration
+      transition: all .15s ease-in
+    &:active
+      transition: color .15s ease-in
+    &:focus
+      transition: color .15s ease-in
+      outline: 1px dotted currentColor
+
+
+  blockquote
+    color $content-blockquote-quote-color
+    font-size $content-blockquote-quote-size
+    line-height $content-blockquote-quote-line-height
+    margin $content-blockquote-margin
+    p
+      margin 0.5em 0
+
+    cite
+      color $content-blockquote-cite-color
+      font-size $content-blockquote-cite-size
+      font-style $content-blockquote-cite-style
+      font-weight $content-blockquote-cite-weight
+      margin-top $content-blockquote-cite-margin-top
+      > em
+        color $content-blockquote-cite2-color
+        font-size $content-blockquote-cite2-size
+        font-style $content-blockquote-cite2-style
+        font-weight $content-blockquote-cite2-weight
+        &:before
+          content: " | "
+          padding-left: 2px
+          padding-right: 2px
