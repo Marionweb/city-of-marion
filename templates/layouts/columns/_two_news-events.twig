@@ -1,0 +1,32 @@
+{#
+    Two Column Layout
+    News & Events Layout
+#}
+
+{% extends "layouts/base/_base" %}
+
+
+
+{% block content %}
+<div id="page--inner--columns" class="two news-events parallax">
+
+  <div class="parallax__layer parallax__layer--back">
+    {% block headerImage %}{% endblock %}
+  </div>
+
+  <div class="parallax__layer parallax__layer--base">
+
+    {# MAIN #}
+    <main id="content">
+      {% block main %}{% endblock %}
+    </main>
+
+    {# ASIDE #}
+    <aside>
+      {% block aside %}{% endblock %}
+    </aside>
+
+  </div>
+
+</div>
+{% endblock %}

@@ -53,6 +53,27 @@
           padding-left: 2px
           padding-right: 2px
 
+  code, kbd, pre, samp
+    font-family $code
+    font-size: 1em
+    line-height: 1.42857143
+  code
+    color $red
+    padding: rem(2px) rem(4px)
+    font-size: 90%
+    color: $red
+    background-color: lighten($red, 50%)
+    border-radius: $border-radius-3
+  pre
+    padding: rem(10px)
+    margin: 0 0 1em
+    color: $dark
+    word-break: break-all
+    word-wrap: break-word
+    background-color: $light-gray
+    border: $border-width-1 solid $medium-gray
+    border-radius: $border-radius-3
+    overflow-x scroll
 
 .image-grid
   // our flexbox container
@@ -77,7 +98,6 @@ $grid-image
 
   +above(m)
     flex: 1 auto
-    flex: 1
     // flex-basis set at 0 rather than 100%
 // register all possible ratios
 .grid-image,

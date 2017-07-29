@@ -2,9 +2,20 @@
     News Channel Entry Template
 #}
 
-{% extends "layouts/columns/_two" %}
+{% extends "layouts/columns/_two_news-events" %}
 
 {% set title = entry.title %}
+
+
+{# HEADER IMAGE #}
+{% block headerImage %}
+
+  {% if entry.type == 'article' %}
+    {% include "structure/news-events/_header-image" %}
+  {% endif %}
+
+{% endblock %}
+
 
 {# MAIN #}
 {% block main %}

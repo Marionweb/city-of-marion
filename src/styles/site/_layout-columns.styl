@@ -1,8 +1,8 @@
 #page--inner--columns
-  +between(m, l)
-    padding: rem(40px) rem(30px)
-  +above(xl)
-    padding rem(90px) rem(160px)
+  +above(m)
+    lost-flex-container: row
+  // +above(xl)
+  //   padding rem(90px) rem(160px)
 
 
   &.one
@@ -14,21 +14,35 @@
 
 
   &.two
-    +above(tablet-min)
+    +above(m)
       lost-flex-container: row
-    & > main
-      padding rem(30px)
-      +above(tablet-min)
+    main
+      padding 0 rem(30px)
+      +above(m)
         padding 0
       +between(m, l)
-        lost-column 16/28
+        lost-column 16/36
+        lost-offset: 2/36
       +above(xl)
-        padding 0
-        lost-column 14/28
-    & > aside
+        lost-column 14/36
+        lost-offset: 4/36
+    aside
       +between(m, l)
-        lost-column 11/28
-        lost-offset: 1/28
+        lost-column 13/36
+        lost-offset: 3/36
       +above(xl)
-        lost-column 10/28
-        lost-offset: 4/28
+        lost-column 10/36
+        lost-offset: 4/36
+
+
+    &.news-events
+      main
+        margin: rem(40px) 0
+
+      &:not(.parallax)
+        #header-image.news-events-article
+          margin: 0 0 rem(30px) 0
+        +above(m)
+          margin: rem(40px) 0 0
+          aside
+            margin-top -(rem(40px))
