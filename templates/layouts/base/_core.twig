@@ -29,7 +29,7 @@
   <div id="wrapper">
 
     <div id="page">{# this is the wrapper for the content #}
-      <div id="page--inner">{# extra div for emulating position:fixed of the menu #}
+      <div id="page--inner" class="page-section--{{ craft.app.request.segments | first }}">{# extra div for emulating position:fixed of the menu #}
 
         {# {% cache for 4 weeks %} #}
           {% include 'modules/header/_header' %}
