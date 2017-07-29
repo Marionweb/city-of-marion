@@ -3,18 +3,16 @@
     News & Events Layout
 #}
 
-{% extends "layouts/base/_base" %}
+{% extends "layouts/base/_base_parallax" %}
 
+{% block parallaxBack %}
+  {% block headerImage %}{% endblock %}
+{% endblock %}
 
 
 {% block content %}
-<div id="page--inner--columns" class="two news-events parallax">
 
-  <div class="parallax__layer parallax__layer--back">
-    {% block headerImage %}{% endblock %}
-  </div>
-
-  <div class="parallax__layer parallax__layer--base">
+  <div id="page--inner--columns" class="two">
 
     {# MAIN #}
     <main id="content">
@@ -28,5 +26,4 @@
 
   </div>
 
-</div>
 {% endblock %}

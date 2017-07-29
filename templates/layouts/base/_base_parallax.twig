@@ -1,0 +1,26 @@
+{#
+    Base Layout - Parallax
+#}
+
+{% extends "layouts/base/_core" %}
+
+{% block core %}
+<div class="parallax">
+
+  <div class="parallax__layer parallax__layer--back">
+    {% block parallaxBack %}{% endblock %}
+  </div>
+
+  <div class="parallax__layer parallax__layer--base">
+
+    {% block content %}{% endblock %}
+
+    {# {% cache for 4 weeks %} #}
+      {% include 'modules/footer/_footer' %}
+    {# {% endcache %} #}
+
+  </div>
+
+</div>
+
+{% endblock %}
