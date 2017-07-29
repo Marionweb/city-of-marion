@@ -15,16 +15,23 @@
       transform: translateZ(-1px) scale(2)
     .parallax__layer--base
       background-color $white
-      position: relative
       height: 100vh
       padding: rem(40px) 0
       transform-style: preserve-3d
       transform: translate3d(0)
-      top: 'calc(%s - %s)' % ($imageRatio 1rem)
+      top: $imageRatio
       lost-flex-container: row
 
       main
         margin: 0 0 rem(40px) 0
+
+      aside
+          margin-top -(rem(120px))
+
++above(m)
+  .page-section--news-events
+    .parallax .parallax__layer--base
+      top: 'calc(%s - %s)' % ($imageRatio 1rem)
 
       aside
           margin-top -(rem(80px))

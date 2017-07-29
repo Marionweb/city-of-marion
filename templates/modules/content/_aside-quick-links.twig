@@ -1,4 +1,6 @@
+{% if entry.quickLinks.count() %}
 <div id="aside--quick-links">
   <h3>Quick Links</h3>
   {% include "modules/content/_quick-links" %}
 </div>
+{% endif %}

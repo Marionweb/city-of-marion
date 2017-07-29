@@ -1,0 +1,22 @@
+{#
+    Single Column Layout
+    Parallax Header
+#}
+
+{% extends "layouts/base/_base_parallax" %}
+
+{% block parallaxBack %}
+  {% block headerBlock %}{% endblock %}
+{% endblock %}
+
+
+{% block content %}
+
+  <div id="page--inner--columns" class="one">
+    {# MAIN #}
+    <main id="content">
+    {% block main %}{% endblock %}
+    </main>
+  </div>
+
+{% endblock %}

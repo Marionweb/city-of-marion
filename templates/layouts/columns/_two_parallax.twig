@@ -1,19 +1,18 @@
 {#
     Two Column Layout
-    News & Events Layout
+    Parallax Header Layout
 #}
 
 {% extends "layouts/base/_base_parallax" %}
 
 {% block parallaxBack %}
-  {% block headerImage %}{% endblock %}
+  {% block headerBlock %}{% endblock %}
 {% endblock %}
 
 
 {% block content %}
 
   <div id="page--inner--columns" class="two">
-
     {# MAIN #}
     <main id="content">
       {% block main %}{% endblock %}
@@ -23,7 +22,6 @@
     <aside>
       {% block aside %}{% endblock %}
     </aside>
-
   </div>
 
 {% endblock %}

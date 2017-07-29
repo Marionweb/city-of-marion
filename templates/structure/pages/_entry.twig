@@ -1,14 +1,33 @@
 {#
     Page Structure Template
 #}
+{# {% if entry.type == 'standard' %}
+  {% extends "layouts/columns/_two" %}
+{% else %}
+  {% extends "layouts/columns/_one" %}
+{% endif %} #}
 
-{% extends "layouts/base/_base" %}
+{% extends entry.type == 'standard'
+    ? 'layouts/columns/_two_parallax'
+    : 'layouts/columns/_one_parallax' %}
 
 {% set title = entry.title %}
 
+
+{# HEADER IMAGE #}
+{% block headerBlock %}
+  {% include "modules/content/_header-block" %}
+{% endblock %}
+
+
+
 {# HTML #}
-{% block content %}
+{% block main %}
+  {% include "structure/pages/_types/_" ~ entry.type %}
+{% endblock %}
 
-{% include "structure/pages/_types/_" ~ entry.type %}
 
+{# ASIDE #}
+{% block aside %}
+  {% include "modules/content/_aside-quick-links" %}
 {% endblock %}

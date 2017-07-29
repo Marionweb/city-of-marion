@@ -1,3 +1,6 @@
-<h1>{{ entry.title }}</h1>
-<h2>Standard</h2>
+<header>
+  <h1>{{ entry.title }}</h1>
+  <p class="lead">{{ entry.leadIn }}</p>
+</header>
 
+{% include "modules/content/_page-content" %}
