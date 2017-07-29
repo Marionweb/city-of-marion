@@ -89,10 +89,7 @@ $grid-image
   padding: .5em 0 0 1em
   width: 100%
   img
-    filter: blur(5px)
-    transition: filter 400ms
-    &.lazyloaded
-      filter: blur(0)
+    @extend $lazy-load
     &[data-sizes="auto"]
       display: block
 
