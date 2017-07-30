@@ -1,9 +1,13 @@
-<div id="header-image">
+<div id="header-image" class="{{entry.section}}">
   {%- import "macros/_images" as imageFunctions -%}
   {%- set image = entry.primaryImage.one() -%}
   {% set outputWidths = [480, 640, 1024, 1600] %}
   {%- set initialQuality = 20 -%}
-  {%- set aspectRatio = (3/1) -%}
+  {% if (entry.section | lower) == 'pages' %}
+    {%- set aspectRatio = (12/5) -%}
+  {% else %}
+    {%- set aspectRatio = (3/1) -%}
+  {% endif %}
   {%- set small = { width: 40, height: 40 / aspectRatio, quality: initialQuality } -%}
   {%- set medium = { width: 100, height: 100 / aspectRatio, quality: initialQuality } -%}
 

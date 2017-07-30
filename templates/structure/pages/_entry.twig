@@ -1,24 +1,19 @@
 {#
     Page Structure Template
 #}
-{# {% if entry.type == 'standard' %}
-  {% extends "layouts/columns/_two" %}
-{% else %}
-  {% extends "layouts/columns/_one" %}
-{% endif %} #}
 
 {% extends entry.type == 'standard'
     ? 'layouts/columns/_two_parallax'
     : 'layouts/columns/_one_parallax' %}
 
 {% set title = entry.title %}
+{% set type = entry.type %}
 
 
 {# HEADER IMAGE #}
 {% block headerBlock %}
   {% include "modules/content/_header-block" %}
 {% endblock %}
-
 
 
 {# HTML #}
@@ -29,5 +24,5 @@
 
 {# ASIDE #}
 {% block aside %}
-  {% include "modules/content/_aside-quick-links" %}
+  {% include "modules/content/_block-quick-links" %}
 {% endblock %}

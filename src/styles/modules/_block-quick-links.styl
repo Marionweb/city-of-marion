@@ -1,4 +1,4 @@
-#aside--quick-links
+#block--quick-links
   background-color $module-quick-links-background-color
   box-shadow $module-quick-links-box-shadow
   padding rem(60px) rem(30px)
@@ -34,6 +34,35 @@
     margin 1em 0
     &:last-child
       margin-bottom 0
+
+
+// STYLES FOR WHEN USED IN MAIN COLUMN
+#content #block--quick-links
+  > h3
+    text-align left
+
+  ul
+    width: 100%
+    +above(m)
+      display: flex
+      flex-flow: row wrap
+      align-items: stretch
+
+  li
+    display block
+    +above(m)
+      flex-grow: 1
+      display inline-block
+      min-width 'calc(%s - %s)' % (((1/4)*100)% rem(7.5px))
+      margin rem(3.75px) 0 rem(3.75px) rem(7.5px)
+
+  a
+    @extend $button
+    display block
+
+
+// STYLES FOR WHEN USED IN ASIDE COLUMN
+aside #block--quick-links
   a
     color $module-quick-links-link-color
     text-decoration $module-quick-links-link-decoration

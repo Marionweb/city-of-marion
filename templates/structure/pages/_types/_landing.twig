@@ -1,2 +1,28 @@
-<h1>{{ entry.title }}</h1>
-<h2>Landing</h2>
+<section id="landing--intro">
+  <div class="inside">
+    <h1>{% if entry.headline %}{{ entry.headline }}{% else %}{{ entry.title }}{% endif %}</h1>
+    <p>{{ entry.leadIn }}</p>
+  </div>
+</section>
+
+{% if entry.quickLinks.count() %}
+<section id="landing--quick-links">
+  <div class="inside">
+    {% include "modules/content/_block-quick-links" %}
+  </div>
+</section>
+{% endif %}
+
+<section id="landing--subpages">
+  <div class="inside">
+    {% set pages = craft.entries({
+        'section' : 'pages',
+        'level' : 2,
+        'descendantOf' : entry.id
+    }) %}
+    {% for entry in pages %}
+      {% include 'modules/nav/_block_subpage' %}
+    {% endfor %}
+  </div>
+</section>
+

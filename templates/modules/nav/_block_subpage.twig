@@ -1,0 +1,27 @@
+<section id="{{ entry.id }}-{{ entry.slug }}" class="block--subpage">
+  <a href="{{ entry.url }}" title="{{ entry.title }}">
+  {% if entry.primaryImage.count() %}
+    {%- import "macros/_images" as imageFunctions -%}
+    {%- set image = entry.primaryImage.one() -%}
+    {% set outputWidths = [480, 640, 1024, 1600] %}
+    {%- set initialQuality = 20 -%}
+    {%- set aspectRatio = (80/45) -%}
+    {%- set small = { width: 40, height: 40 / aspectRatio, quality: initialQuality } -%}
+    {%- set medium = { width: 100, height: 100 / aspectRatio, quality: initialQuality } -%}
+
+    <figure>
+        <img class="lazyload"
+          src="{{ image.getUrl(small) }}"
+          data-src="{{ image.getUrl(medium) }}"
+          data-sizes="auto"
+          data-srcset="{{ imageFunctions.srcset(image, outputWidths, aspectRatio) }}"
+          {% if image.alt %}alt="{{ image.alt }}"{% endif %}>
+      {% if image.caption %}
+      <figcaption>{{ image.caption }}</figcaption>
+      {% endif %}
+    </figure>
+  {% endif %}
+
+    <h3>{{ entry.title }}</h3>
+  </a>
+</section>

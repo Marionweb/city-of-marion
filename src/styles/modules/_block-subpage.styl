@@ -1,0 +1,42 @@
+.block--subpage
+  background-color $module-subpages-background-color
+  box-shadow $module-subpages-box-shadow
+  margin-bottom 2em
+
+  figure
+    margin 0
+    z-index 0
+    img
+      @extend $lazy-load
+
+  a
+    text-decoration $module-subpages-link-decoration
+    transition: color .15s ease-in
+
+  h3
+    color $module-subpages-link-color
+    font-family $module-subpages-link-font
+    font-size $module-subpages-link-size
+    font-weight $module-subpages-link-weight
+    margin 0
+    padding 1em
+    text-transform $module-subpages-link-transform
+    &:after
+      background-color: $module-subpages-arrow-color
+      background-repeat: no-repeat
+      background-size: cover
+      content: " "
+      display inline-block
+      height rem(16px)
+      width rem(16px)
+      mask: embedurl("../sprites/arrow-right.svg", "utf8") no-repeat 50% 50%/12px 12px
+      margin-left: 0.15em
+      transition: background-color .1s ease-in, margin-left .15s ease-in
+      vertical-align middle
+
+  a:hover
+    h3
+      color $module-subpages-link-hover-color
+      &:after
+        margin-left: 0.35em
+

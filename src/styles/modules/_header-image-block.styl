@@ -1,5 +1,3 @@
-$imageRatio = ((1/3) * 100)%
-
 #header-image
   position: relative
 
@@ -22,6 +20,38 @@ $imageRatio = ((1/3) * 100)%
     z-index 0
     img
       @extend $lazy-load
+
+
+.page-type--landing
+  figure
+    position relative
+    z-index 0
+    &::before
+      position absolute
+      background-color $white
+      bottom rem(50px)
+      left 50%
+      margin-left -(rem((45/2)px))
+      content: ''
+      background-repeat: no-repeat
+      background-size: cover
+      display block
+      height rem(45px)
+      width rem(45px)
+      transition: background-color .1s ease-in
+      mask: embedurl("../sprites/arrow-down.svg", "utf8") no-repeat 50% 50%/30px 30px
+      z-index 5
+    &::after
+      display: block
+      position: absolute
+      background-image: linear-gradient(to bottom, transparent 0%, rgba($black, .6) 100%)
+      top 0
+      right 0
+      left 0
+      bottom 0
+      content: ''
+      z-index 1
+
 
 +above(m)
   .page-section--news-events
