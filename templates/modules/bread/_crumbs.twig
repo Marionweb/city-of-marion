@@ -1,5 +1,7 @@
 {%- import "macros/_crumbs" as bread -%}
 
+{#- ---------------------- STANDARD PAGES ---------------------- -#}
+
 {% if (entry.level > 1) and (entry.section.handle == 'pages') %}
   {% set ancestors = entry.getAncestors() %}
   {% set current = entry %}
@@ -13,6 +15,7 @@
   {{ bread.breadcrumbs(allCrumbs) }}
 {% endif %}
 
+{#- ---------------------- NEWS/EVENTS ARTICLES ---------------------- -#}
 
 {% if (entry.section.handle == 'newsEvents') %}
   {% set landing = craft.entries.section('newsEventsLanding') %}
@@ -30,36 +33,98 @@
   {{ bread.breadcrumbs(allCrumbs) }}
 {% endif %}
 
+{#- ---------------------- EVENTS LANDING ---------------------- -#}
 
-{% if (entry.section.handle == 'minutesAgendas') %}
-  {% set landing = craft.entries.section('minutesAgendasLanding') %}
-  {% set ancestors = entry.getAncestors() %}
+{% if (entry.section.handle == 'eventsLanding') %}
+  {% set landing = craft.entries.section('newsEventsLanding') %}
   {% set current = entry %}
 
   {% set allCrumbs = landing %}
-  {# {% set allCrumbs = allCrumbs|merge([ancestors]) %} #}
+  {% set allCrumbs = allCrumbs|merge([current]) %}
 
-  {# Don't merge duplicates #}
-  {% if entry.id not in ancestors %}
-    {% set allCrumbs = allCrumbs|merge([current]) %}
-  {% endif %}
-  {# <pre>{{ dump(allCrumbs) }}</pre> #}
+  {{ bread.breadcrumbs(allCrumbs) }}
+{% endif %}
+
+{#- ---------------------- MINUTES/AGENDAS ---------------------- -#}
+
+{% if (entry.section.handle == 'minutesAgendas') %}
+  {% set firstSegment = craft.app.request.segments|first %}
+  {% set topLevel = craft.entries.slug(firstSegment) %}
+  {% set landing = craft.entries.section('minutesAgendasLanding') %}
+  {% set current = entry %}
+
+  {% set allCrumbs = topLevel %}
+  {% set allCrumbs = allCrumbs|merge([landing]) %}
+
+  {% set allCrumbs = allCrumbs|merge([current]) %}
+
   {{ bread.breadcrumbs(allCrumbs) }}
 {% endif %}
 
 
-{% if (entry.section.handle == 'departments') %}
-  {% set landing = craft.entries.section('departmentsLanding') %}
-  {% set ancestors = entry.getAncestors() %}
+{% if (entry.section.handle == 'minutesAgendasLanding') %}
+  {% set firstSegment = craft.app.request.segments|first %}
+  {% set topLevel = craft.entries.slug(firstSegment) %}
   {% set current = entry %}
 
-  {% set allCrumbs = landing %}
-  {# {% set allCrumbs = allCrumbs|merge([ancestors]) %} #}
+  {% set allCrumbs = topLevel %}
+  {% set allCrumbs = allCrumbs|merge([current]) %}
 
-  {# Don't merge duplicates #}
-  {% if entry.id not in ancestors %}
-    {% set allCrumbs = allCrumbs|merge([current]) %}
-  {% endif %}
-  {# <pre>{{ dump(allCrumbs) }}</pre> #}
+  {{ bread.breadcrumbs(allCrumbs) }}
+{% endif %}
+
+{#- ---------------------- DEPARTMENTS ---------------------- -#}
+
+{% if (entry.section.handle == 'departments') %}
+  {% set firstSegment = craft.app.request.segments|first %}
+  {% set topLevel = craft.entries.slug(firstSegment) %}
+  {% set landing = craft.entries.section('departmentsLanding') %}
+  {% set current = entry %}
+
+  {% set allCrumbs = topLevel %}
+  {% set allCrumbs = allCrumbs|merge([landing]) %}
+
+  {% set allCrumbs = allCrumbs|merge([current]) %}
+
+  {{ bread.breadcrumbs(allCrumbs) }}
+{% endif %}
+
+
+{% if (entry.section.handle == 'departmentsLanding') %}
+  {% set firstSegment = craft.app.request.segments|first %}
+  {% set topLevel = craft.entries.slug(firstSegment) %}
+  {% set current = entry %}
+
+  {% set allCrumbs = topLevel %}
+  {% set allCrumbs = allCrumbs|merge([current]) %}
+
+  {{ bread.breadcrumbs(allCrumbs) }}
+{% endif %}
+
+{#- ---------------------- BOARDS ---------------------- -#}
+
+{% if (entry.section.handle == 'boards') %}
+  {% set firstSegment = craft.app.request.segments|first %}
+  {% set topLevel = craft.entries.slug(firstSegment) %}
+  {% set landing = craft.entries.section('boardsLanding') %}
+  {% set current = entry %}
+
+  {% set allCrumbs = topLevel %}
+  {% set allCrumbs = allCrumbs|merge([landing]) %}
+
+  {% set allCrumbs = allCrumbs|merge([current]) %}
+
+  {{ bread.breadcrumbs(allCrumbs) }}
+{% endif %}
+
+
+{% if (entry.section.handle == 'boardsLanding') %}
+  {% set firstSegment = craft.app.request.segments|first %}
+  {% set topLevel = craft.entries.slug(firstSegment) %}
+  {% set current = entry %}
+
+  {% set allCrumbs = topLevel %}
+  {% set allCrumbs = allCrumbs|merge([current]) %}
+
   {{ bread.breadcrumbs(allCrumbs) }}
 {% endif %}
