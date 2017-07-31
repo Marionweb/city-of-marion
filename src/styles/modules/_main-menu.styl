@@ -21,9 +21,7 @@
   backdrop-filter: saturate(180%) blur(20px)
 
   &::before
-    background-image: embedurl("../images/banner.svg", "utf8")
-    background-size: cover
-    background-position: 50% 50%
+    background: embedurl("../images/banner.svg", "utf8") no-repeat 50% 50%/101% auto
     content: ''
     display: block
     height: rem(6px)
