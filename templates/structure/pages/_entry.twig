@@ -1,10 +1,11 @@
 {#
     Page Structure Template
 #}
+{% set parallax = entry.primaryImage.count() ? '_parallax' : '' %}
 
 {% extends entry.type == 'standard'
-    ? 'layouts/columns/_two_parallax'
-    : 'layouts/columns/_one_parallax' %}
+    ? 'layouts/columns/_two' ~ parallax
+    : 'layouts/columns/_one' ~ parallax %}
 
 {% set title = entry.title %}
 {% set type = entry.type %}
@@ -12,7 +13,7 @@
 
 {# HEADER IMAGE #}
 {% block headerBlock %}
-  {% include "modules/content/_header-block" %}
+  {% if entry.primaryImage.count() %}{% include "modules/content/_header-block" %}{% endif %}
 {% endblock %}
 
 

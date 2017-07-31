@@ -24,21 +24,21 @@
     img
       @extend $lazy-load
 
+  &.pages
+    figure.desktop
+      display none
+      visibility hidden
+    +above(m)
+      figure.mobile
+        display none
+        visibility none
+      figure.desktop
+        display block
+        visibility visible
+
 
 .page-type--landing
   #header-image
-    &.pages
-      figure.desktop
-        display none
-        visibility hidden
-      +above(m)
-        figure.mobile
-          display none
-          visibility none
-        figure.desktop
-          display block
-          visibility visible
-
     figure
       line-height: 0
       position relative
