@@ -1,27 +1,63 @@
-<div id="header-image" class="{{entry.section}}">
+<div id="header-image" class="{{entry.section | lower}}">
   {%- import "macros/_images" as imageFunctions -%}
   {%- set image = entry.primaryImage.one() -%}
   {% set outputWidths = [480, 640, 1024, 1600] %}
   {%- set initialQuality = 20 -%}
   {% if (entry.section | lower) == 'pages' %}
-    {%- set aspectRatio = (12/5) -%}
+    {%- set mobileAspectRatio = (15/12) -%}
+    {%- set mobileSmall = { width: 40, height: 40 / mobileAspectRatio, quality: initialQuality } -%}
+    {%- set mobileMedium = { width: 100, height: 100 / mobileAspectRatio, quality: initialQuality } -%}
+
+    {%- set desktopAspectRatio = (12/5) -%}
+    {%- set desktopSmall = { width: 40, height: 40 / desktopAspectRatio, quality: initialQuality } -%}
+    {%- set desktopMedium = { width: 100, height: 100 / desktopAspectRatio, quality: initialQuality } -%}
   {% else %}
     {%- set aspectRatio = (3/1) -%}
+    {%- set small = { width: 40, height: 40 / aspectRatio, quality: initialQuality } -%}
+    {%- set medium = { width: 100, height: 100 / aspectRatio, quality: initialQuality } -%}
   {% endif %}
-  {%- set small = { width: 40, height: 40 / aspectRatio, quality: initialQuality } -%}
-  {%- set medium = { width: 100, height: 100 / aspectRatio, quality: initialQuality } -%}
 
-  <figure>
+  {% if (entry.section | lower) == 'pages' %}
+
+    <figure class="mobile">
+      <img class="lazyload"
+        src="{{ image.getUrl(mobileSmall) }}"
+        data-src="{{ image.getUrl(mobileMedium) }}"
+        data-sizes="auto"
+        data-srcset="{{ imageFunctions.srcset(image, outputWidths, mobileAspectRatio) }}"
+        {% if image.alt %}alt="{{ image.alt }}"{% endif %}>
+      {% if image.caption %}
+      <figcaption>{{ image.caption }}</figcaption>
+      {% endif %}
+    </figure>
+
+    <figure class="desktop">
+      <img class="lazyload"
+        src="{{ image.getUrl(desktopSmall) }}"
+        data-src="{{ image.getUrl(desktopMedium) }}"
+        data-sizes="auto"
+        data-srcset="{{ imageFunctions.srcset(image, outputWidths, desktopAspectRatio) }}"
+        {% if image.alt %}alt="{{ image.alt }}"{% endif %}>
+      {% if image.caption %}
+      <figcaption>{{ image.caption }}</figcaption>
+      {% endif %}
+    </figure>
+
+  {% else %}
+
+    <figure>
       <img class="lazyload"
         src="{{ image.getUrl(small) }}"
         data-src="{{ image.getUrl(medium) }}"
         data-sizes="auto"
         data-srcset="{{ imageFunctions.srcset(image, outputWidths, aspectRatio) }}"
         {% if image.alt %}alt="{{ image.alt }}"{% endif %}>
-    {% if image.caption %}
-    <figcaption>{{ image.caption }}</figcaption>
-    {% endif %}
-  </figure>
+      {% if image.caption %}
+      <figcaption>{{ image.caption }}</figcaption>
+      {% endif %}
+    </figure>
+
+  {% endif %}
 
   <h1>{{ entry.title }}</h1>
 </div>

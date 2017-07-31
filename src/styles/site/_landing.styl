@@ -13,6 +13,8 @@
 
     &#landing--intro
       .inside
+        padding-left rem(30px)
+        padding-right rem(30px)
         h1
           font-family: $sans-serif-headline
           font-size rem(36px)
@@ -28,6 +30,8 @@
         +above(m)
           lost-column 14/36
           lost-offset 11/36
+          padding-left 0
+          padding-right 0
 
     &#landing--quick-links
       background: linear-gradient(0deg, $background-gray 50%, transparent 50%)
@@ -42,7 +46,8 @@
       position: relative
       background: $background-gray
       overflow: hidden
-      &:before
+      z-index: 0
+      &:after
         content: ' '
         display: block
         position: absolute
@@ -50,16 +55,17 @@
         top: 0
         width: 100%
         height: 100%
-        z-index: 0
+        z-index: -1
         opacity: 0.05
         background-image: embedurl("../images/logo-com-mark-black.svg", "utf8")
         background-repeat: no-repeat
         background-position: 50% 0
-        background-size: 90% 90%
+        background-size: cover
+        +above(m)
+          background-size: 90% 90%
 
 
       .inside
-        z-index: 1
         +above(m)
           lost-column 32/36
           lost-offset 2/36
