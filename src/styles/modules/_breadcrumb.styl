@@ -1,0 +1,62 @@
+#breadcrumbs
+  padding: 0 (rem(30px) - $bread-divider-width)
+  margin: 0
+  list-style: none
+
+  display: flex
+  flex-wrap: wrap
+  width 100%
+  background-color $bread-background-color
+  font-family $bread-font-family
+  font-size $bread-font-size-mobile
+  font-weight $bread-font-weight
+  line-height 1
+  text-transform $bread-text-transform
+
+  +above(m)
+    font-size $bread-font-size-desktop
+    padding: 0 (rem(40px) - $bread-divider-width)
+
+
+  li
+    display: inline-block
+    position: relative
+    padding-right: ($bread-divider-width / 2)
+    &:after
+      content: $bread-divider-character
+      line-height: 1
+      text-align: center
+      color: $bread-divider-color
+      position: absolute
+      top: 50%
+      right: 0
+      transform: translateY(-50%)
+      margin-top: 2px
+    &:last-child
+      padding-right 0
+      &:after
+        content: ''
+
+    a
+      display block
+      padding $bread-item-pad-top-mobile $bread-item-pad-side-mobile $bread-item-pad-bottom-mobile $bread-item-pad-side-mobile
+      text-decoration none
+
+      +above(m)
+        padding $bread-item-pad-top-desktop $bread-item-pad-side-desktop $bread-item-pad-bottom-desktop $bread-item-pad-side-desktop
+
+      &,
+      &:visited,
+      &:active
+        color: $bread-link-color
+
+    &.active
+      margin-right: 0
+      padding-right: 0
+      &, a
+        color: $bread-current-page-color
+      &:after
+        display: none
+
+    > span
+      color: inherit

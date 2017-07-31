@@ -1,0 +1,12 @@
+{% macro breadcrumbs(crumbs) %}
+  <ol id="breadcrumbs" vocab="http://schema.org/" typeof="BreadcrumbList">
+  {% for crumb in crumbs %}
+    <li{% if loop.last %} class="active"{% endif %} property="itemListElement" typeof="ListItem">
+      <a property="item" typeof="WebPage" href="{{ crumb.url }}">
+        <span property="name">{{ crumb.title }}</span>
+      </a>
+      <meta property="position" content="{{ loop.index }}">
+    </li>
+  {% endfor %}
+  </ol>
+{% endmacro %}

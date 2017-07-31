@@ -1,0 +1,65 @@
+{%- import "macros/_crumbs" as bread -%}
+
+{% if (entry.level > 1) and (entry.section.handle == 'pages') %}
+  {% set ancestors = entry.getAncestors() %}
+  {% set current = entry %}
+  {% set allCrumbs = ancestors %}
+
+  {# Don't merge duplicates #}
+  {% if entry.id not in ancestors %}
+    {% set allCrumbs = allCrumbs|merge([current]) %}
+  {% endif %}
+
+  {{ bread.breadcrumbs(allCrumbs) }}
+{% endif %}
+
+
+{% if (entry.section.handle == 'newsEvents') %}
+  {% set landing = craft.entries.section('newsEventsLanding') %}
+  {% set ancestors = entry.getAncestors() %}
+  {% set current = entry %}
+
+  {% set allCrumbs = landing %}
+  {# {% set allCrumbs = allCrumbs|merge([ancestors]) %} #}
+
+  {# Don't merge duplicates #}
+  {% if entry.id not in ancestors %}
+    {% set allCrumbs = allCrumbs|merge([current]) %}
+  {% endif %}
+  {# <pre>{{ dump(allCrumbs) }}</pre> #}
+  {{ bread.breadcrumbs(allCrumbs) }}
+{% endif %}
+
+
+{% if (entry.section.handle == 'minutesAgendas') %}
+  {% set landing = craft.entries.section('minutesAgendasLanding') %}
+  {% set ancestors = entry.getAncestors() %}
+  {% set current = entry %}
+
+  {% set allCrumbs = landing %}
+  {# {% set allCrumbs = allCrumbs|merge([ancestors]) %} #}
+
+  {# Don't merge duplicates #}
+  {% if entry.id not in ancestors %}
+    {% set allCrumbs = allCrumbs|merge([current]) %}
+  {% endif %}
+  {# <pre>{{ dump(allCrumbs) }}</pre> #}
+  {{ bread.breadcrumbs(allCrumbs) }}
+{% endif %}
+
+
+{% if (entry.section.handle == 'departments') %}
+  {% set landing = craft.entries.section('departmentsLanding') %}
+  {% set ancestors = entry.getAncestors() %}
+  {% set current = entry %}
+
+  {% set allCrumbs = landing %}
+  {# {% set allCrumbs = allCrumbs|merge([ancestors]) %} #}
+
+  {# Don't merge duplicates #}
+  {% if entry.id not in ancestors %}
+    {% set allCrumbs = allCrumbs|merge([current]) %}
+  {% endif %}
+  {# <pre>{{ dump(allCrumbs) }}</pre> #}
+  {{ bread.breadcrumbs(allCrumbs) }}
+{% endif %}
