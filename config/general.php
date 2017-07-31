@@ -35,6 +35,8 @@ return [
         'devMode' => false,
         'enableTemplateCaching' => true,
         'allowAutoUpdates' => false,
+        'appId' => 'cerulean',
+        'cacheDuration' => '0',
     ],
 
     // Staging (pre-production) environment
@@ -49,5 +51,8 @@ return [
         'devMode' => true,
         'enableTemplateCaching' => false,
         'allowAutoUpdates' => true,
+        'rememberUsernameDuration' => 'P101Y',
+        'rememberedUserSessionDuration' => 'P101Y',
+        'userSessionDuration' => 'P101Y',
     ],
 ];
