@@ -7,6 +7,7 @@ var gulp        = require('gulp'),
     mqpacker    = require('css-mqpacker'),
     cssnext     = require('postcss-cssnext'),
     brandColors = require('postcss-brand-colors'),
+    fontAwesome = require('font-awesome-stylus'),
     browserSync = require('browser-sync').create(),
     del         = require('del');
 
@@ -100,6 +101,7 @@ gulp.task('stylus:watch', function () {
       use: [
         nib(),
         rupture(),
+        fontAwesome(),
         poststylus(postCSSPlugins)
       ],
       paths: [
