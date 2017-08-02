@@ -13,9 +13,14 @@
   line-height 1
   text-transform $bread-text-transform
 
+  height $breadcrumb-total-height-mobile
+  max-height $breadcrumb-total-height-mobile
+
   +above(m)
     font-size $bread-font-size-desktop
     padding: 0 (rem(40px) - $bread-divider-width)
+    height $breadcrumb-total-height-desktop
+    max-height $breadcrumb-total-height-desktop
 
 
   li

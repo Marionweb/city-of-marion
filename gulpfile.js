@@ -88,7 +88,12 @@ gulp.task('criticalcss', ['css'], (callback) => {
 gulp.task('stylus:watch', function () {
   var postCSSPlugins = [
     lost,
-    cssnext({browsers: ['last 2 version','> 1%']}),
+    cssnext({
+      browsers: ['last 2 version','> 1%'],
+      features: {
+        calc: false
+      }
+    }),
     mqpacker,
     brandColors,
   ];

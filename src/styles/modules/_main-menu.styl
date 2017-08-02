@@ -8,12 +8,12 @@
   margin: 0
   width: 100%
   min-width: rem(320px)
-  height: rem(80px)
-  max-height: rem(80px)
+  height: $top-menu-height-mobile
+  max-height: $top-menu-height-mobile
   box-shadow $top-menu-bottom-shadow
-  +above(desktop-min)
-    height: rem(94px)
-    max-height: rem(94px)
+  +above(l)
+    height: $top-menu-height-desktop
+    max-height: $top-menu-height-desktop
 
   background: $top-menu-background-color
   background: rgba($top-menu-background-color,0.8)
