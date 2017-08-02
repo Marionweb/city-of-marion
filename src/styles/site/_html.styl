@@ -10,25 +10,22 @@ body
 html,
 body,
 #container,
-#wrapper,
 #page
   height: 100%
-
-#page
-  overflow-y: scroll
-  background: $body-background-color
 
 #container
   position: relative
   overflow: hidden
 
-#wrapper
+#page
   position: relative
   left: 0
   z-index: 99
   height: 100%
   box-shadow: 0 0 30px rgba(0,0,0,.5)
   transition: transform 0.5s
+  overflow-y: scroll
+  background: $body-background-color
   &::after
     position: absolute
     top: 0

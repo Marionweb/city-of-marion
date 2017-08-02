@@ -26,10 +26,10 @@
   {# {% endcache %} #}
 
   {# content push wrapper #}
-  <div id="wrapper">
+  <div id="page" class="page-section--{{ craft.app.request.segments | first }}{% if type is defined %} page-type--{{ type }}{% endif %}">
 
-    <div id="page">{# this is the wrapper for the content #}
-      <div id="page--inner" class="page-section--{{ craft.app.request.segments | first }}{% if type is defined %} page-type--{{ type }}{% endif %}">{# extra div for emulating position:fixed of the menu #}
+    {# <div id="page"> #}{# this is the wrapper for the content #}
+      {# <div id="page--inner" class="page-section--{{ craft.app.request.segments | first }}{% if type is defined %} page-type--{{ type }}{% endif %}"> #}{# extra div for emulating position:fixed of the menu #}
 
         {# {% cache for 4 weeks %} #}
           {% include 'modules/header/_header' %}
@@ -37,8 +37,8 @@
 
         {% block core %}{% endblock %}
 
-      </div><!-- /#page--inner -->
-    </div><!-- /#page -->
+      {# </div><!-- /#page--inner --> #}
+    {# </div><!-- /#page --> #}
 
   </div><!-- /#wrapper -->
 </div><!-- /#container -->
