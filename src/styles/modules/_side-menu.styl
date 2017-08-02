@@ -1,4 +1,4 @@
-.menu--open #wrapper
+.menu--open #page
   transform: translate3d(-($side-menu-width-mobile), 0, 0)
   +above(mobile)
     transform: translate3d(-($side-menu-width-desktop), 0, 0)
@@ -52,8 +52,8 @@
   transform: translate3d(0, 0, 0)
 
 /* Fallback example for browsers that don't support 3D transforms (and no JS fallback) */
-.no-csstransforms3d #wrapper,
-.no-js #wrapper
+.no-csstransforms3d #page,
+.no-js #page
   padding-left: $side-menu-width-mobile
   +above(mobile)
     padding-left: $side-menu-width-desktop
