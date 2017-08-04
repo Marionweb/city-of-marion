@@ -47,7 +47,8 @@
         "nystudio107/craft3-fastcgicachebust": "^1.0",
         "nystudio107/craft3-pathtools": "^1.0",
         "nystudio107/craft3-transcoder": "^1.0",
-        "dolphiq/titleentriesfield": "^1.0"
+        "dolphiq/titleentriesfield": "^1.0",
+        "luwes/craft3-inline": "^1.0"
     },
     "require-dev": {
         "heroku/heroku-buildpack-php": "^83.0"

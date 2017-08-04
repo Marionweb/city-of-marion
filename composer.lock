@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "aa6561275c10b1398191d849de6cca34",
+    "content-hash": "fdd081ec675002d428650557cc617c48",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.32.1",
+            "version": "3.32.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "ca8791495696a1620fe2275df4983d063627aba7"
+                "reference": "d34a5779803ae7bc3efd3c6cab6e4e6f3b7409dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/ca8791495696a1620fe2275df4983d063627aba7",
-                "reference": "ca8791495696a1620fe2275df4983d063627aba7",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/d34a5779803ae7bc3efd3c6cab6e4e6f3b7409dd",
+                "reference": "d34a5779803ae7bc3efd3c6cab6e4e6f3b7409dd",
                 "shasum": ""
             },
             "require": {
@@ -84,7 +84,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2017-07-27T19:46:08+00:00"
+            "time": "2017-08-01T21:51:56+00:00"
         },
         {
             "name": "bower-asset/behave.js",
@@ -746,16 +746,16 @@
         },
         {
             "name": "craftcms/aws-s3",
-            "version": "1.0.4",
+            "version": "1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/aws-s3.git",
-                "reference": "6c4ab6f2040a491906d3a9fba99fe8e1159fea32"
+                "reference": "c31d7e92d0a2e60f3db8a80273ae5496f922a475"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/aws-s3/zipball/6c4ab6f2040a491906d3a9fba99fe8e1159fea32",
-                "reference": "6c4ab6f2040a491906d3a9fba99fe8e1159fea32",
+                "url": "https://api.github.com/repos/craftcms/aws-s3/zipball/c31d7e92d0a2e60f3db8a80273ae5496f922a475",
+                "reference": "c31d7e92d0a2e60f3db8a80273ae5496f922a475",
                 "shasum": ""
             },
             "require": {
@@ -793,7 +793,7 @@
                 "s3",
                 "yii2"
             ],
-            "time": "2017-07-07T16:53:22+00:00"
+            "time": "2017-07-31T21:11:04+00:00"
         },
         {
             "name": "craftcms/cms",
@@ -1565,16 +1565,16 @@
         },
         {
             "name": "embed/embed",
-            "version": "v3.1.0",
+            "version": "v3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oscarotero/Embed.git",
-                "reference": "8d9e862f46eebbf75454358c18822154e6e2b0ca"
+                "reference": "5f518153df7735726b9f43838bb59be27df76fe7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oscarotero/Embed/zipball/8d9e862f46eebbf75454358c18822154e6e2b0ca",
-                "reference": "8d9e862f46eebbf75454358c18822154e6e2b0ca",
+                "url": "https://api.github.com/repos/oscarotero/Embed/zipball/5f518153df7735726b9f43838bb59be27df76fe7",
+                "reference": "5f518153df7735726b9f43838bb59be27df76fe7",
                 "shasum": ""
             },
             "require": {
@@ -1614,7 +1614,7 @@
                 "opengraph",
                 "twitter cards"
             ],
-            "time": "2017-07-08T09:47:22+00:00"
+            "time": "2017-08-01T18:23:02+00:00"
         },
         {
             "name": "enshrined/svg-sanitize",
@@ -1702,16 +1702,16 @@
         },
         {
             "name": "giggsey/libphonenumber-for-php",
-            "version": "8.7.0",
+            "version": "8.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/giggsey/libphonenumber-for-php.git",
-                "reference": "dd9cf2a10a8671d3934a7a315e927df46548bcc9"
+                "reference": "9395508cb66af96a07453df073195e6e3767b42d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/dd9cf2a10a8671d3934a7a315e927df46548bcc9",
-                "reference": "dd9cf2a10a8671d3934a7a315e927df46548bcc9",
+                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/9395508cb66af96a07453df073195e6e3767b42d",
+                "reference": "9395508cb66af96a07453df073195e6e3767b42d",
                 "shasum": ""
             },
             "require": {
@@ -1766,7 +1766,7 @@
                 "phonenumber",
                 "validation"
             ],
-            "time": "2017-07-18T13:07:45+00:00"
+            "time": "2017-08-03T09:07:02+00:00"
         },
         {
             "name": "giggsey/locale",
@@ -2540,6 +2540,59 @@
                 "oauth2"
             ],
             "time": "2017-07-22T01:25:00+00:00"
+        },
+        {
+            "name": "luwes/craft3-inline",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/luwes/craft3-inline.git",
+                "reference": "862e4ad98a61ed7a039fa97586b817b63b53d4c1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/luwes/craft3-inline/zipball/862e4ad98a61ed7a039fa97586b817b63b53d4c1",
+                "reference": "862e4ad98a61ed7a039fa97586b817b63b53d4c1",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "~3.0.0-beta.1"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Inline",
+                "handle": "inline",
+                "schemaVersion": "1.0.0",
+                "changelogUrl": "https://raw.githubusercontent.com/luwes/craft3-inline/master/CHANGELOG.md",
+                "components": {
+                    "inlineService": "luwes\\inline\\services\\InlineService"
+                },
+                "class": "luwes\\inline\\Inline"
+            },
+            "autoload": {
+                "psr-4": {
+                    "luwes\\inline\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Wesley Luyten",
+                    "homepage": "https://wesleyluyten.com"
+                }
+            ],
+            "description": "Inline the contents of a file in a twig template.",
+            "keywords": [
+                "Craft",
+                "cms",
+                "craft-plugin",
+                "craftcms",
+                "inline"
+            ],
+            "time": "2017-03-27T01:40:26+00:00"
         },
         {
             "name": "mailgun/mailgun-php",
@@ -3599,16 +3652,16 @@
         },
         {
             "name": "php-http/discovery",
-            "version": "1.2.1",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-http/discovery.git",
-                "reference": "6b33475a3239439bc7ced287d0de0bb82e04d2f0"
+                "reference": "7b50ab4d6c9fdaa1ed53ae310c955900af6e3372"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-http/discovery/zipball/6b33475a3239439bc7ced287d0de0bb82e04d2f0",
-                "reference": "6b33475a3239439bc7ced287d0de0bb82e04d2f0",
+                "url": "https://api.github.com/repos/php-http/discovery/zipball/7b50ab4d6c9fdaa1ed53ae310c955900af6e3372",
+                "reference": "7b50ab4d6c9fdaa1ed53ae310c955900af6e3372",
                 "shasum": ""
             },
             "require": {
@@ -3657,7 +3710,7 @@
                 "message",
                 "psr7"
             ],
-            "time": "2017-03-02T06:56:00+00:00"
+            "time": "2017-08-03T10:12:53+00:00"
         },
         {
             "name": "php-http/guzzle6-adapter",
@@ -4648,16 +4701,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v3.3.5",
+            "version": "v3.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "a97e45d98c59510f085fa05225a1acb74dfe0546"
+                "reference": "b0878233cb5c4391347e5495089c7af11b8e6201"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/a97e45d98c59510f085fa05225a1acb74dfe0546",
-                "reference": "a97e45d98c59510f085fa05225a1acb74dfe0546",
+                "url": "https://api.github.com/repos/symfony/console/zipball/b0878233cb5c4391347e5495089c7af11b8e6201",
+                "reference": "b0878233cb5c4391347e5495089c7af11b8e6201",
                 "shasum": ""
             },
             "require": {
@@ -4713,20 +4766,20 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2017-07-03T13:19:36+00:00"
+            "time": "2017-07-29T21:27:59+00:00"
         },
         {
             "name": "symfony/debug",
-            "version": "v3.3.5",
+            "version": "v3.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
-                "reference": "63b85a968486d95ff9542228dc2e4247f16f9743"
+                "reference": "7c13ae8ce1e2adbbd574fc39de7be498e1284e13"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/debug/zipball/63b85a968486d95ff9542228dc2e4247f16f9743",
-                "reference": "63b85a968486d95ff9542228dc2e4247f16f9743",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/7c13ae8ce1e2adbbd574fc39de7be498e1284e13",
+                "reference": "7c13ae8ce1e2adbbd574fc39de7be498e1284e13",
                 "shasum": ""
             },
             "require": {
@@ -4769,20 +4822,20 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2017-07-05T13:02:37+00:00"
+            "time": "2017-07-28T15:27:31+00:00"
         },
         {
             "name": "symfony/dependency-injection",
-            "version": "v3.3.5",
+            "version": "v3.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dependency-injection.git",
-                "reference": "761e51a86f35f5b3e213e9b7f554fd91f9bffae4"
+                "reference": "8d70987f991481e809c63681ffe8ce3f3fde68a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/761e51a86f35f5b3e213e9b7f554fd91f9bffae4",
-                "reference": "761e51a86f35f5b3e213e9b7f554fd91f9bffae4",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/8d70987f991481e809c63681ffe8ce3f3fde68a0",
+                "reference": "8d70987f991481e809c63681ffe8ce3f3fde68a0",
                 "shasum": ""
             },
             "require": {
@@ -4839,11 +4892,11 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
-            "time": "2017-07-17T14:07:10+00:00"
+            "time": "2017-07-28T15:27:31+00:00"
         },
         {
             "name": "symfony/filesystem",
-            "version": "v3.3.5",
+            "version": "v3.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
@@ -4892,7 +4945,7 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v3.3.5",
+            "version": "v3.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
@@ -4941,7 +4994,7 @@
         },
         {
             "name": "symfony/intl",
-            "version": "v3.3.5",
+            "version": "v3.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/intl.git",
@@ -5016,7 +5069,7 @@
         },
         {
             "name": "symfony/options-resolver",
-            "version": "v3.3.5",
+            "version": "v3.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/options-resolver.git",
@@ -5187,7 +5240,7 @@
         },
         {
             "name": "symfony/process",
-            "version": "v3.3.5",
+            "version": "v3.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",

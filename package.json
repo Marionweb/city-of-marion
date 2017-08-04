@@ -51,12 +51,12 @@
     "urls": {
         "live": "https://cityofmarion.in.gov/",
         "local": "https://cityofmarion.in.dev/",
-        "critical": "https://cityofmarion.in.gov/"
+        "critical": "http://cityofmarion.in.dev/"
     },
     "vars": {
         "siteCssName": "site.combined.min.css",
         "styleName": "master.styl",
-        "cssName": "style.css"
+        "cssName": "master.css"
     },
     "globs": {
         "distCss": [
@@ -180,6 +180,7 @@
         "css-loader": "^0.28.0",
         "css-mqpacker": "^6.0.1",
         "cssnano": "^3.10.0",
+        "csso-stylus": "0.0.3",
         "del": "^3.0.0",
         "eslint": "^3.19.0",
         "eslint-config-standard": "^6.2.1",

@@ -1,6 +1,7 @@
 var gulp        = require('gulp'),
     nib         = require('nib'),
     rupture     = require('rupture'),
+    csso        = require('csso-stylus'),
     poststylus  = require('poststylus'),
     lost        = require('lost'),
     cssnano     = require('cssnano'),
@@ -8,6 +9,7 @@ var gulp        = require('gulp'),
     cssnext     = require('postcss-cssnext'),
     brandColors = require('postcss-brand-colors'),
     fontAwesome = require('font-awesome-stylus'),
+    critical    = require('critical'),
     browserSync = require('browser-sync').create(),
     del         = require('del');
 
@@ -46,6 +48,57 @@ function doSynchronousLoop(data, processData, done) {
   }
 }
 
+
+
+
+
+// CSS
+// Compile Stylus CSS
+// build the scss to the build folder, including the required paths, and writing out a sourcemap
+
+gulp.task('stylus:watch', function () {
+  var postCSSPlugins = [
+    lost,
+    cssnext({
+      browsers: ['last 2 version','> 1%','not ie < 9'],
+      features: {
+        calc: false
+      }
+    }),
+    mqpacker,
+    brandColors,
+  ];
+  $.fancyLog("-> Compiling stylus: " + pkg.paths.src.styles + pkg.vars.styleName);
+  gulp.src(pkg.paths.src.styles + pkg.vars.styleName)
+    .pipe($.plumber())
+    .pipe($.sourcemaps.init())
+    .pipe($.stylus({
+      compress: false,
+      use: [
+        nib(),
+        rupture(),
+        fontAwesome(),
+        poststylus(postCSSPlugins)
+      ],
+      paths: [
+        'node_modules'      // Shortcut references possible everywhere, e.g. @import 'node_modules/bla'
+      ],
+      options: {
+        compress: false,
+      },
+      'include css': true
+    }))
+    .pipe($.cached('styl_compile'))
+    .pipe($.sourcemaps.write('./'))
+    .pipe($.size({ gzip: true, showFiles: true }))
+    // .pipe(gulp.dest(pkg.paths.build.css));
+    .pipe(gulp.dest(pkg.paths.dist.css));
+    // .pipe(browserSync.stream());
+});
+
+
+
+
 // Process the critical path CSS one at a time
 function processCriticalCSS(element, i, callback) {
   const criticalSrc = pkg.urls.critical + element.url;
@@ -71,7 +124,7 @@ function processCriticalCSS(element, i, callback) {
 
 
 //critical css task
-gulp.task('criticalcss', ['css'], (callback) => {
+gulp.task('criticalcss', ['stylus:build'], (callback) => {
     doSynchronousLoop(pkg.globs.critical, processCriticalCSS, () => {
         // all done
         callback();
@@ -79,17 +132,11 @@ gulp.task('criticalcss', ['css'], (callback) => {
 });
 
 
-
-
-// CSS
-// Compile Stylus CSS
-// build the scss to the build folder, including the required paths, and writing out a sourcemap
-
-gulp.task('stylus:watch', function () {
+gulp.task('stylus:build', function () {
   var postCSSPlugins = [
     lost,
     cssnext({
-      browsers: ['last 2 version','> 1%'],
+      browsers: ['last 2 version','> 1%','not ie < 9'],
       features: {
         calc: false
       }
@@ -97,53 +144,29 @@ gulp.task('stylus:watch', function () {
     mqpacker,
     brandColors,
   ];
-  $.fancyLog("-> Compiling stylus: " + pkg.paths.src.styles + pkg.vars.styleName);
-  return gulp.src(pkg.paths.src.styles + pkg.vars.styleName)
+
+  $.fancyLog("-> Building stylus: " + pkg.paths.src.styles + pkg.vars.styleName);
+  gulp.src(pkg.paths.src.styles + pkg.vars.styleName)
     .pipe($.plumber())
-    .pipe($.sourcemaps.init())
     .pipe($.stylus({
-      compress: false,
+      'include css': true,
       use: [
         nib(),
         rupture(),
         fontAwesome(),
-        poststylus(postCSSPlugins)
+        poststylus(postCSSPlugins),
+        csso()
       ],
       paths: [
         'node_modules'      // Shortcut references possible everywhere, e.g. @import 'node_modules/bla'
-      ],
-      options: {
-        compress: false,
-      },
-      'include css': true
-    }))
-    .pipe($.cached('styl_compile'))
-    // .pipe($.postcss(postCSSPlugins))
-    .pipe($.sourcemaps.write('./'))
-    .pipe($.size({ gzip: true, showFiles: true }))
-    .pipe(gulp.dest(pkg.paths.dist.css))
-    // .pipe(gulp.dest(pkg.paths.build.css))
-    // .pipe(browserSync.stream());
-});
-
-gulp.task('stylus:build', function () {
-  var postCSSPlugins = [
-    cssnext({browsers: ['last 2 version','> 1%']}),
-    mqpacker,
-    brandColors,
-    cssnano,
-  ];
-  return gulp.src(pkg.paths.src.styles + pkg.vars.styleName)
-    .pipe($.stylus({
-      compress: true,
-      use: [
-        jeet(),
-        nib(),
-        rupture(),
-        poststylus(postCSSPlugins)
       ]
     }))
     .pipe(gulp.dest(pkg.paths.build.css));
+
+  $.fancyLog("-> Rename CSS: " + $.chalk.cyan(pkg.paths.build.css + pkg.vars.cssName) + " --> " + $.chalk.magenta(pkg.vars.siteCssName) );
+  return gulp.src(pkg.paths.build.css + pkg.vars.cssName)
+      .pipe($.rename(pkg.vars.siteCssName))
+      .pipe(gulp.dest(pkg.paths.dist.css));
 });
 
 
