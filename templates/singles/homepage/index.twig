@@ -2,13 +2,63 @@
     Homepage
 #}
 
-{% extends "layouts/base/_base_parallax" %}
+{% extends "layouts/columns/_two_parallax" %}
 
-{# HTML #}
-{% block content %}
+{# PARALLAX HEADER #}
+{% block parallaxBack %}
 
-{% cache for 4 weeks %}
-  <p>Hello, world!</p>
-{% endcache %}
+<div id="header-image" class="{{entry.section.handle}}">
+  {%- import "macros/_images" as imageFunctions -%}
+  {%- set image = entry.primaryImage.one() -%}
+  {% set outputWidths = [480, 640, 1024, 1600] %}
+  {%- set initialQuality = 20 -%}
+
+  {%- set mobileAspectRatio = (15/12) -%}
+  {%- set mobileSmall = { width: 40, height: 40 / mobileAspectRatio, quality: initialQuality } -%}
+  {%- set mobileMedium = { width: 100, height: 100 / mobileAspectRatio, quality: initialQuality } -%}
+
+  {%- set desktopAspectRatio = (12/5) -%}
+  {%- set desktopSmall = { width: 40, height: 40 / desktopAspectRatio, quality: initialQuality } -%}
+  {%- set desktopMedium = { width: 100, height: 100 / desktopAspectRatio, quality: initialQuality } -%}
+
+  <figure class="mobile">
+    <img class="lazyload"
+      src="{{ image.getUrl(mobileSmall) }}"
+      data-src="{{ image.getUrl(mobileMedium) }}"
+      data-sizes="auto"
+      data-srcset="{{ imageFunctions.srcset(image, outputWidths, mobileAspectRatio) }}"
+      {% if image.alt %}alt="{{ image.alt }}"{% endif %}>
+    {% if image.caption %}
+    <figcaption>{{ image.caption }}</figcaption>
+    {% endif %}
+  </figure>
+
+  <figure class="desktop">
+    <img class="lazyload"
+      src="{{ image.getUrl(desktopSmall) }}"
+      data-src="{{ image.getUrl(desktopMedium) }}"
+      data-sizes="auto"
+      data-srcset="{{ imageFunctions.srcset(image, outputWidths, desktopAspectRatio) }}"
+      {% if image.alt %}alt="{{ image.alt }}"{% endif %}>
+    {% if image.caption %}
+    <figcaption>{{ image.caption }}</figcaption>
+    {% endif %}
+  </figure>
+
+  <h1>Welcome to <span><strong>{{siteName}}</strong></span></h1>
+</div>
+
+{% endblock %}
+
+
+
+{# MAIN CONTENT #}
+{% block main %}
+
+
+
+
+
+
 
 {% endblock %}
