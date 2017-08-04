@@ -24,17 +24,16 @@
     img
       @extend $lazy-load
 
-  &.pages
-    figure.desktop
+  figure.desktop
+    display none
+    visibility hidden
+  +above(m)
+    figure.mobile
       display none
-      visibility hidden
-    +above(m)
-      figure.mobile
-        display none
-        visibility none
-      figure.desktop
-        display block
-        visibility visible
+      visibility none
+    figure.desktop
+      display block
+      visibility visible
 
 
 .page-type--landing

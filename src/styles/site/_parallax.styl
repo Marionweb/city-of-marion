@@ -34,6 +34,11 @@ $newsImageRatio = ((1/3) * 100)%
   .page-section--newsEvents
     .parallax .parallax__layer--base
       topMarginNews = $header-image-top-margin-news-desktop + $breadcrumb-total-height-desktop
+      @media (orientation: landscape)
+        top: 'calc(((100vw * (32/36)) / 3) + %s)' % topMarginNews
+      @media (orientation: portrait)
+        top: 'calc(((100vh * (32/36)) / 3) + %s)' % topMarginNews
+
       min-height: 'calc(((100vmin * (32/36)) / 3) + %s)' % topMarginNews
       top: 'calc(((100vmax * (32/36)) / 3) + %s)' % topMarginNews
 
