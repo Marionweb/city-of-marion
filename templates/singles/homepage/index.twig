@@ -52,13 +52,42 @@
 
 
 
-{# MAIN CONTENT #}
+{# MAIN COLUMN CONTENT #}
 {% block main %}
 
+  {{ include('modules/content/_block-mayor-welcome') }}
 
+  {{ include('modules/content/_block-quick-links') }}
+
+  {{ include('modules/content/_block-spotlight', {spotlightType: 'champions'}) }}
 
 
 
 
 
 {% endblock %}
+
+
+{# ASIDE #}
+{% block aside %}
+  <p>Aside</p>
+
+{% endblock %}
+
+
+
+{# SECONDARY CONTENT #}
+{% block content_two %}
+
+
+
+  <section id="block--spotlights-two">
+    {{ include('modules/content/_block-spotlight', {spotlightType: 'business-spotlight'}) }}
+    {{ include('modules/content/_block-spotlight', {spotlightType: 'employee-spotlight'}) }}
+  </section>
+
+  {{ include('modules/content/_block-process') }}
+
+{% endblock %}
+
+

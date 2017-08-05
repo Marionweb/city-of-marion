@@ -19,6 +19,7 @@
       transform: 'translate(%s, calc(%s - %s))' % (-50% -50% rem(((53.5+33)/2)px))
 
   figure
+    line-height 0
     margin 0
     z-index 0
     img
@@ -64,6 +65,12 @@
           width rem(33px)
           mask: embedurl("../sprites/arrow-down.svg", "utf8") no-repeat 50% 50%/33px 33px
 
+.page-section--homepage
+.page-type--landing
+  #header-image
+    figure
+      line-height: 0
+      position relative
       &::after
         display: block
         position: absolute

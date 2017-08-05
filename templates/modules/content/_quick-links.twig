@@ -4,8 +4,8 @@
     {% if item.type == "external" %}
       <li class="quick-links--item"><a href="{{item.linkUrl}}"{% if item.newWindow %} target="_blank"{% endif %}>{{item.linkTitle}}</a></li>
     {% elseif item.type == "internal" %}
-      {% set entry = item.entry.one() %}
-      <li class="quick-links--item"><a href="{{entry.url}}" title="{{ entry.Title }}">{{ entry.Title }}</a></li>
+      {%- set entry = item.entry.one() -%}
+      <li class="quick-links--item"><a href="{{entry.url}}" title="{{ entry.title }}">{{ entry.title }}</a></li>
     {% endif %}
   {% endnav %}
 </ul>

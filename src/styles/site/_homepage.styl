@@ -6,7 +6,7 @@
       position: absolute
       top: auto
       left: rem(30px)
-      bottom: rem(30px)
+      bottom: rem(26.5px)
       transform none
       margin 0
       z-index 5
@@ -18,6 +18,9 @@
       line-height 2
       text-transform: $homepage-header-block-title-transform
       +above(m)
+        left: 0
+        bottom: rem(62px)
+        lost-offset: 2/36
         font-size: $homepage-header-block-title-size-desktop
 
       > span
@@ -36,13 +39,34 @@
           width rem(424px)
 
 
+  .parallax__layer--base
+    #page--inner--columns
+    > section
+      background-color $snow
+  #page--inner--columns.two
+    main
+      padding 0
+      +between(m, l)
+        lost-column 18/36
+        lost-offset: 2/36
+      +above(xl)
+        lost-column 18/36
+        lost-offset: 2/36
+    aside
+      +between(m, l)
+        lost-column 12/36
+        lost-offset: 2/36
+      +above(xl)
+        lost-column 12/36
+        lost-offset: 2/36
+
+
   #content
     position: relative
 
-    &::before
-      background: embedurl("../images/banner.svg", "utf8") no-repeat 50% 50%/101% auto
-      content: ''
-      display: block
-      height: rem(6px)
-      position:relative
-      width: 100%
+    #block--quick-links
+      background-color transparent
+      box-shadow none
+      padding 0 rem(30px)
+      +above(m)
+        padding 0

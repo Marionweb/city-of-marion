@@ -1,0 +1,44 @@
+<section id="block--mayor-welcome">
+{%- set welcomeBlock = entry.welcome.one() -%}
+
+{% if welcomeBlock.welcomePhoto.count() %}
+  {%- import "macros/_images" as imageFunctions -%}
+  {%- set image = welcomeBlock.welcomePhoto.one() -%}
+  {% set outputWidths = [230, 400, 800] %}
+  {%- set initialQuality = 20 -%}
+
+  {%- set aspectRatio = (1/1) -%}
+  {%- set small = { width: 40, height: 40 / aspectRatio, quality: initialQuality } -%}
+  {%- set medium = { width: 100, height: 100 / aspectRatio, quality: initialQuality } -%}
+
+  <figure>
+    <img class="lazyload"
+      src="{{ image.getUrl(small) }}"
+      data-src="{{ image.getUrl(medium) }}"
+      data-sizes="auto"
+      data-srcset="{{ imageFunctions.srcset(image, outputWidths, aspectRatio) }}"
+      {% if image.alt %}alt="{{ image.alt }}"{% endif %}>
+    {% if image.caption %}
+    <figcaption>{{ image.caption }}</figcaption>
+    {% endif %}
+  </figure>
+{% endif %}
+
+{% if welcomeBlock.welcomeName %}
+  <h3>From {{ welcomeBlock.welcomeName }}</h3>
+{% endif %}
+
+{% if welcomeBlock.welcomeHeadline %}
+  <h2>{{ welcomeBlock.welcomeHeadline|nl2br|raw }}</h2>
+{% endif %}
+
+{% if welcomeBlock.welcomeText %}
+  <p>{{ welcomeBlock.welcomeText|nl2br|raw }}</p>
+{% endif %}
+
+{% if welcomeBlock.learnMoreLink.count() %}
+  {%- set learnMore = welcomeBlock.learnMoreLink.one() -%}
+  <a href="{{learnMore.url}}" title="{{ learnMore.title }}">Learn More</a>
+{% endif %}
+
+</section>
