@@ -17,6 +17,7 @@
       font-weight: $homepage-header-block-title-weight
       line-height 2
       text-transform: $homepage-header-block-title-transform
+
       +above(m)
         left: 0
         bottom: rem(62px)
@@ -70,3 +71,19 @@
       padding 0 rem(30px)
       +above(m)
         padding 0
+
+    .block--story-share
+      display block
+      visibility visible
+      margin-bottom rem(12px)
+      +above(m)
+        display none
+        visibility hidden
+
+  aside
+    .block--story-share
+      display none
+      visibility hidden
+      +above(m)
+        display block
+        visibility visible

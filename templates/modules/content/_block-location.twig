@@ -1,0 +1,10 @@
+<section id="block--location">
+  <div class="block--text">
+    <h3>Our Location</h3>
+    <h2>{{ entry.locationHeadline|nl2br|raw }}</h2>
+    <p>{{ entry.locationText|nl2br|raw }}</p>
+  </div>
+  <figure>
+    {{ source('svg/indiana_map.svg') }}
+  </figure>
+</section>

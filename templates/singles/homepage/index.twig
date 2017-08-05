@@ -61,16 +61,19 @@
 
   {{ include('modules/content/_block-spotlight', {spotlightType: 'champions'}) }}
 
-
-
-
+  {{ include('modules/content/_block-story-share') }}
 
 {% endblock %}
 
 
 {# ASIDE #}
 {% block aside %}
-  <p>Aside</p>
+
+  {{ include('modules/content/_block-weather-tip') }}
+
+  {{ include('modules/content/_block-news-events-home') }}
+
+  {{ include('modules/content/_block-story-share') }}
 
 {% endblock %}
 
@@ -79,12 +82,14 @@
 {# SECONDARY CONTENT #}
 {% block content_two %}
 
-
+  {{ include('modules/content/_block-home-featured-video') }}
 
   <section id="block--spotlights-two">
     {{ include('modules/content/_block-spotlight', {spotlightType: 'business-spotlight'}) }}
     {{ include('modules/content/_block-spotlight', {spotlightType: 'employee-spotlight'}) }}
   </section>
+
+  {{ include('modules/content/_block-location') }}
 
   {{ include('modules/content/_block-process') }}
 

@@ -1,0 +1,45 @@
+.block--story-share
+  background-color $module-story-share-background-color
+  box-shadow $module-story-share-box-shadow
+  text-align center
+  padding-top rem(52px)
+  padding-bottom rem(42px)
+  +above(m)
+    padding-top rem(81px)
+    padding-bottom rem(68px)
+
+  > span
+    background-color: $homepage-header-block-title-color
+    background-repeat: no-repeat
+    background-size: cover
+    display block
+    height 0
+    width 63%
+    margin 0 auto
+    padding-bottom 10.5%
+    mask: embedurl("../images/logo-com-champions-v2.svg", "utf8") no-repeat 50% 50%/100% 100%
+    strong
+      @extend .hide-text
+
+    +above(m)
+      width 61.5%
+
+  p
+    font-family $module-story-share-font
+    color $module-story-share-color
+    font-weight $module-story-share-weight
+    font-size $module-story-share-size-mobile
+    padding 0 rem(15px)
+    +above(m)
+      font-size $module-story-share-size-desktop
+
+  > a
+    @extend $button
+    display block
+    margin rem(32px) auto 0
+    width 65%
+
+    +above(m)
+      margin rem(41.5px) auto 0
+      width 50%
+
