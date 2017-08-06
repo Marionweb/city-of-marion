@@ -9,7 +9,7 @@
     {% include 'modules/nav/_block-news-events-entry' %}
   {% endfor %}
 
-  {%- set newsEventsLanding = craft.entries.section('newsEventsLanding').first() -%}
+  {%- set newsEventsLanding = craft.entries.section('newsEventsLanding').one() -%}
   <a href="{{ newsEventsLanding.url }}" title="View all news articles">
     View All
   </a>
@@ -27,7 +27,7 @@
     {% include 'modules/nav/_block-news-events-entry' %}
   {% endfor %}
 
-  {%- set singleSectionEntry = craft.entries.section('eventsLanding').first() -%}
+  {%- set singleSectionEntry = craft.entries.section('eventsLanding').one() -%}
   <a href="{{ singleSectionEntry.url }}" title="View all upcoming events">
     View All
   </a>

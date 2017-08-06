@@ -1,3 +1,10 @@
 <section id="block--process">
+  <p>Website Created in Collaboration with: <a href="{{ entry.collaboration.one().processLink.one().url }}" title="Read More About the Process">Read More About the Process</a></p>
+  {%- set logos = entry.collaboration.one().logos -%}
 
+  {% for logo in logos %}
+  <figure class="logo">
+    {{ craft.inlin.er(logo.url, true) | raw }}
+  </figure>
+  {% endfor %}
 </section>

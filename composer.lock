@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "fdd081ec675002d428650557cc617c48",
+    "content-hash": "22d87c05424232f9d5649f9a2661478b",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -2678,6 +2678,61 @@
             "time": "2017-06-30T06:21:01+00:00"
         },
         {
+            "name": "mikestecker/craft3-inlin",
+            "version": "1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mikestecker/craft3-inlin.git",
+                "reference": "f93b90a9f07f06eafe9b66f6d11611592f45a227"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mikestecker/craft3-inlin/zipball/f93b90a9f07f06eafe9b66f6d11611592f45a227",
+                "reference": "f93b90a9f07f06eafe9b66f6d11611592f45a227",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "~3.0.0-beta.23"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Inlin",
+                "handle": "inlin",
+                "schemaVersion": "1.2.1",
+                "hasCpSettings": false,
+                "hasCpSection": false,
+                "changelogUrl": "https://raw.githubusercontent.com/mikestecker/craft3-inlin/master/CHANGELOG.md",
+                "components": {
+                    "inlin": "mikestecker\\inlin\\services\\Inlin"
+                },
+                "class": "mikestecker\\inlin\\Inlin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "mikestecker\\inlin\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mike Stecker",
+                    "homepage": "http://github.com/mikestecker"
+                }
+            ],
+            "description": "A tiny plugin for inlining files in Craft templates. Ported from https://github.com/aelvan/Inlin-Craft/",
+            "keywords": [
+                "Craft",
+                "cms",
+                "craft-plugin",
+                "craftcms",
+                "inlin"
+            ],
+            "time": "2017-08-05T23:43:56+00:00"
+        },
+        {
             "name": "misterbk/mix",
             "version": "1.3.0",
             "source": {
@@ -3160,20 +3215,20 @@
         },
         {
             "name": "nystudio107/craft3-cookies",
-            "version": "1.1.5",
+            "version": "1.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft3-cookies.git",
-                "reference": "e9e9cdd2a0899cbfc2c5b7b6b5603122fc788e64"
+                "reference": "3cb42a38b670b0180390bf9d75fb5b4c667a7996"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft3-cookies/zipball/e9e9cdd2a0899cbfc2c5b7b6b5603122fc788e64",
-                "reference": "e9e9cdd2a0899cbfc2c5b7b6b5603122fc788e64",
+                "url": "https://api.github.com/repos/nystudio107/craft3-cookies/zipball/3cb42a38b670b0180390bf9d75fb5b4c667a7996",
+                "reference": "3cb42a38b670b0180390bf9d75fb5b4c667a7996",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "~3.0.0-beta.1"
+                "craftcms/cms": "~3.0.0-beta.23"
             },
             "type": "craft-plugin",
             "extra": {
@@ -3211,7 +3266,7 @@
                 "craft-plugin",
                 "craftcms"
             ],
-            "time": "2017-07-09T12:22:16+00:00"
+            "time": "2017-08-05T12:15:14+00:00"
         },
         {
             "name": "nystudio107/craft3-fastcgicachebust",
@@ -3487,20 +3542,20 @@
         },
         {
             "name": "nystudio107/craft3-transcoder",
-            "version": "1.0.6",
+            "version": "1.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft3-transcoder.git",
-                "reference": "b673e6fa56a7c9100c1e162fb4de1233853815df"
+                "reference": "bec5f87a4752877be7f9d5d4c366905d536b48a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft3-transcoder/zipball/b673e6fa56a7c9100c1e162fb4de1233853815df",
-                "reference": "b673e6fa56a7c9100c1e162fb4de1233853815df",
+                "url": "https://api.github.com/repos/nystudio107/craft3-transcoder/zipball/bec5f87a4752877be7f9d5d4c366905d536b48a6",
+                "reference": "bec5f87a4752877be7f9d5d4c366905d536b48a6",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "~3.0.0-beta.1",
+                "craftcms/cms": "~3.0.0-beta.23",
                 "mikehaertl/php-shellcommand": "~1.2"
             },
             "type": "craft-plugin",
@@ -3539,7 +3594,7 @@
                 "craftcms",
                 "transcoder"
             ],
-            "time": "2017-07-15T12:13:44+00:00"
+            "time": "2017-08-05T17:34:53+00:00"
         },
         {
             "name": "paragonie/random_compat",
