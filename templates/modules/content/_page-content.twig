@@ -42,7 +42,7 @@
 
       <div class="embed-container type-video {{block.embedUrl.embedData.providerName|lower|kebab}}">
         {% set videoId = (block.embedUrl.embedData.url|replace('https://www.youtube.com/watch?v=', '') | raw) %}
-        <iframe class="lazyload" width="1280" height="720" src="//youtube.com/embed/{{videoId}}?VQ=HD720" frameborder="0" allowfullscreen></iframe>
+        <iframe class="lazyload" width="1280" height="720" src="{{ craft.videoEmbedder.getEmbedUrl(block.embedUrl.embedData.url) }}?VQ=HD720" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       </div>
 
     {% elseif block.embedUrl.embedData.type == "rich" %}

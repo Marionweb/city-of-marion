@@ -1,0 +1,52 @@
+{% if entry.videoFeatureBlock.count() %}
+  {% set videoBlock = entry.videoFeatureBlock.one() %}
+
+  <section id="block--featured-video">
+    {% if videoBlock.backgroundImage.count() %}
+
+      {%- import "macros/_images" as imageFunctions -%}
+      {% set image = videoBlock.backgroundImage.one() %}
+      {% set outputWidths = [480, 640, 1024, 1600] %}
+      {%- set initialQuality = 20 -%}
+      {%- set mobileAspectRatio = (16/15) -%}
+      {%- set mobileSmall = { width: 40, height: 40 / mobileAspectRatio, quality: initialQuality } -%}
+      {%- set mobileMedium = { width: 100, height: 100 / mobileAspectRatio, quality: initialQuality } -%}
+
+      {%- set desktopAspectRatio = (12/5) -%}
+      {%- set desktopSmall = { width: 40, height: 40 / desktopAspectRatio, quality: initialQuality } -%}
+      {%- set desktopMedium = { width: 100, height: 100 / desktopAspectRatio, quality: initialQuality } -%}
+
+      <figure class="mobile">
+        <img class="lazyload"
+          src="{{ image.getUrl(mobileSmall) }}"
+          data-src="{{ image.getUrl(mobileMedium) }}"
+          data-sizes="auto"
+          data-srcset="{{ imageFunctions.srcset(image, outputWidths, mobileAspectRatio) }}"
+          {% if image.alt %}alt="{{ image.alt }}"{% endif %}>
+        {% if image.caption %}
+        <figcaption>{{ image.caption }}</figcaption>
+        {% endif %}
+      </figure>
+
+      <figure class="desktop">
+        <img class="lazyload"
+          src="{{ image.getUrl(desktopSmall) }}"
+          data-src="{{ image.getUrl(desktopMedium) }}"
+          data-sizes="auto"
+          data-srcset="{{ imageFunctions.srcset(image, outputWidths, desktopAspectRatio) }}"
+          {% if image.alt %}alt="{{ image.alt }}"{% endif %}>
+        {% if image.caption %}
+        <figcaption>{{ image.caption }}</figcaption>
+        {% endif %}
+      </figure>
+    {% endif %}
+
+    <div id="block--featured-video--content">
+      <div id="block--featured-video--title">
+        <h2>{{ videoBlock.headline }}</h2>
+        {% if videoBlock.subHeadline %}<h3>{{ videoBlock.subHeadline }}</h3>{% endif %}
+      </div>
+      <a id="block--featured-video--play" data-fancybox href="{{ videoBlock.video }}"><span>Play Video</span></a>
+    </div>
+  </section>
+{% endif %}

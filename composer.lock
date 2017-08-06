@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "22d87c05424232f9d5649f9a2661478b",
+    "content-hash": "570ae88da02fe32a3974a1bcc554a5c5",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -2731,6 +2731,55 @@
                 "inlin"
             ],
             "time": "2017-08-05T23:43:56+00:00"
+        },
+        {
+            "name": "mikestecker/craft3-videoembedder",
+            "version": "1.0.0",
+            "dist": {
+                "type": "path",
+                "url": "../../../other/craft3-videoembedder",
+                "reference": "ea87b251615117f2d292e94cf4e94817ec69862c",
+                "shasum": null
+            },
+            "require": {
+                "craftcms/cms": "~3.0.0-beta.23"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Video Embedder",
+                "handle": "video-embedder",
+                "schemaVersion": "1.0.0",
+                "hasCpSettings": false,
+                "hasCpSection": false,
+                "changelogUrl": "https://raw.githubusercontent.com/mikestecker/craft3-videoembedder/master/CHANGELOG.md",
+                "class": "mikestecker\\videoembedder\\VideoEmbedder"
+            },
+            "autoload": {
+                "psr-4": {
+                    "mikestecker\\videoembedder\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mike Stecker",
+                    "homepage": "http://github.com/mikestecker"
+                }
+            ],
+            "description": "Craft plugin to generate an embed URL from a YouTube or Vimeo URL.",
+            "keywords": [
+                "cms",
+                "craft",
+                "craft-plugin",
+                "craftcms",
+                "video embedder"
+            ],
+            "support": {
+                "docs": "https://github.com/mikestecker/craft3-videoembedder/blob/master/README.md",
+                "issues": "https://github.com/mikestecker/craft3-videoembedder/issues"
+            }
         },
         {
             "name": "misterbk/mix",

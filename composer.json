@@ -49,7 +49,8 @@
         "nystudio107/craft3-transcoder": "^1.0",
         "dolphiq/titleentriesfield": "^1.0",
         "luwes/craft3-inline": "^1.0",
-        "mikestecker/craft3-inlin": "^1.2.0"
+        "mikestecker/craft3-inlin": "^1.2.0",
+        "mikestecker/craft3-videoembedder": "^1.0.0"
     },
     "require-dev": {
         "heroku/heroku-buildpack-php": "^83.0"
@@ -62,5 +63,10 @@
             "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ]
     },
-    "repositories": []
+    "repositories": [
+      {
+        "type": "path",
+        "url": "../../../other/craft3-videoembedder/"
+      }
+    ]
 }

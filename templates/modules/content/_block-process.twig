@@ -1,10 +1,14 @@
 <section id="block--process">
-  <p>Website Created in Collaboration with: <a href="{{ entry.collaboration.one().processLink.one().url }}" title="Read More About the Process">Read More About the Process</a></p>
-  {%- set logos = entry.collaboration.one().logos -%}
+  <p>Website Created in Collaboration with: <a href="{{ entry.collaborationLearnMore.one().url }}" title="Read More About the Process">Read More About the Process</a></p>
 
-  {% for logo in logos %}
-  <figure class="logo">
-    {{ craft.inlin.er(logo.url, true) | raw }}
+  {%- set collaborations = entry.collaboration.limit(3) -%}
+
+  {% for collaboration in collaborations %}
+  {%- set logo = collaboration.collaborationLogo.one() -%}
+  <figure class="collaboration">
+    <a href="{{ collaboration.collaborationUrl }}" target="_blank" title="{{ collaboration.collaborationName }}">
+      {{ craft.inlin.er(logo.url, true) | raw }}
+    </a>
   </figure>
   {% endfor %}
 </section>
