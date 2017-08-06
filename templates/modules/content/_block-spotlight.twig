@@ -3,9 +3,21 @@
 {% if craft.entries.section('newsEvents').relatedTo(cat).count() %}
 <section class="block--spotlight">
   <a href="{{ spotlight.url }}" title="Champion of the Month: {{ spotlight.title }}">
-    {% if spotlight.primaryImage.count() %}
+    {% set employeePhotoExists = false %}
+    {% if spotlight.employee.count() %}
+      {% if spotlight.employee.one().staffPhoto.count() %}
+        {% set employeePhotoExists = true %}
+      {% endif %}
+    {% endif %}
+
+    {% if spotlight.primaryImage.count() or employeePhotoExists %}
       {%- import "macros/_images" as imageFunctions -%}
-      {%- set image = spotlight.primaryImage.one() -%}
+      {% if spotlight.primaryImage.count() %}
+        {%- set image = spotlight.primaryImage.one() -%}
+      {% else %}
+        {%- set image = spotlight.employee.one().staffPhoto.one() -%}
+      {% endif %}
+
       {% set outputWidths = [480, 640, 1024, 1600] %}
       {%- set initialQuality = 20 -%}
 
