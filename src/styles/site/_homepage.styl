@@ -44,22 +44,24 @@
     #page--inner--columns
     > section
       background-color $snow
-  #page--inner--columns.two
-    main
-      padding 0
-      +between(m, l)
-        lost-column 18/36
-        lost-offset: 2/36
-      +above(xl)
-        lost-column 18/36
-        lost-offset: 2/36
-    aside
-      +between(m, l)
-        lost-column 12/36
-        lost-offset: 2/36
-      +above(xl)
-        lost-column 12/36
-        lost-offset: 2/36
+  #page--inner--columns
+    padding rem(74px) 0 0
+    &.two
+      main
+        padding 0
+        +between(m, l)
+          lost-column 18/36
+          lost-offset: 2/36
+        +above(xl)
+          lost-column 18/36
+          lost-offset: 2/36
+      aside
+        +between(m, l)
+          lost-column 12/36
+          lost-offset: 2/36
+        +above(xl)
+          lost-column 12/36
+          lost-offset: 2/36
 
 
   #content
