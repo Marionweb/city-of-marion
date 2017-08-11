@@ -3,21 +3,39 @@
   {%- set image = entry.primaryImage.one() -%}
   {% set outputWidths = [480, 640, 1024, 1600] %}
   {%- set initialQuality = 20 -%}
-  {% if (entry.section | lower) == 'pages' %}
-    {%- set mobileAspectRatio = (15/12) -%}
+
+  {% if (entry.section | lower) == 'newsEvents' %}
+
+    {# NEWS/EVENTS ARTICLES: 3:1 (2880x1000 in PSD's) #}
+    {%- set aspectRatio = (3/1) -%}
+    {%- set small = { width: 40, height: 40 / aspectRatio, quality: initialQuality } -%}
+    {%- set medium = { width: 100, height: 100 / aspectRatio, quality: initialQuality } -%}
+
+  {% elseif (entry.section | lower) == 'pages' and (entry.type | lower) == 'standard' %}
+
+    {# STANDARD PAGES: 72:25 (2880x1000 in PSD's) #}
+    {%- set mobileAspectRatio = (5/4) -%}
+    {%- set mobileSmall = { width: 40, height: 40 / mobileAspectRatio, quality: initialQuality } -%}
+    {%- set mobileMedium = { width: 100, height: 100 / mobileAspectRatio, quality: initialQuality } -%}
+
+    {%- set desktopAspectRatio = (72/25) -%}
+    {%- set desktopSmall = { width: 40, height: 40 / desktopAspectRatio, quality: initialQuality } -%}
+    {%- set desktopMedium = { width: 100, height: 100 / desktopAspectRatio, quality: initialQuality } -%}
+
+  {% else %}
+
+    {# LANDING/HOME/ABOUT/CONTACT: 12:5 (2880x1200 in PSD's) #}
+    {%- set mobileAspectRatio = (5/4) -%}
     {%- set mobileSmall = { width: 40, height: 40 / mobileAspectRatio, quality: initialQuality } -%}
     {%- set mobileMedium = { width: 100, height: 100 / mobileAspectRatio, quality: initialQuality } -%}
 
     {%- set desktopAspectRatio = (12/5) -%}
     {%- set desktopSmall = { width: 40, height: 40 / desktopAspectRatio, quality: initialQuality } -%}
     {%- set desktopMedium = { width: 100, height: 100 / desktopAspectRatio, quality: initialQuality } -%}
-  {% else %}
-    {%- set aspectRatio = (3/1) -%}
-    {%- set small = { width: 40, height: 40 / aspectRatio, quality: initialQuality } -%}
-    {%- set medium = { width: 100, height: 100 / aspectRatio, quality: initialQuality } -%}
+
   {% endif %}
 
-  {% if (entry.section | lower) == 'pages' %}
+  {% if (entry.section | lower) != 'newsEvents' %}
 
     <figure class="mobile">
       <img class="lazyload"
@@ -43,7 +61,7 @@
       {% endif %}
     </figure>
 
-  {% else %}
+  {% elseif (entry.section | lower) == 'newsEvents' %}
 
     <figure>
       <img class="lazyload"
