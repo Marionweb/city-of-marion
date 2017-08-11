@@ -27,5 +27,5 @@ return array(
      *
      * @see: See the [official documentation](https://developers.google.com/places/web-service/get-api-key).
      */
-    'googleApiKey' => '',
+    'googleApiKey' => 'AIzaSyCFs0PxQy4A3nyUL6jTwPpYoKxNzdWs79k',
 );
