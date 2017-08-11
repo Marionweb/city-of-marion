@@ -1,14 +1,14 @@
 .block--spotlight
-  background-color $module-spotlight-background-color
-  box-shadow $module-spotlight-box-shadow
-  padding-bottom rem(28px)
-
-  +above(m)
-    padding-bottom rem(30px)
-
   a
     display block
+    background-color $module-spotlight-background-color
+    box-shadow $module-spotlight-box-shadow
     text-decoration none
+    transition: box-shadow .15s ease-in
+    padding-bottom rem(28px)
+
+    +above(m)
+      padding-bottom rem(30px)
 
     > figure
       margin 0
@@ -61,7 +61,7 @@
         font-size $module-spotlight-title-size-desktop
 
       &:after
-        background-color: $module-spotlight-title-color
+        background-color: $module-spotlight-title-arrow-color
         background-repeat: no-repeat
         background-size: cover
         content: " "
@@ -74,6 +74,7 @@
         vertical-align middle
 
     &:hover
+      box-shadow $module-spotlight-box-shadow-hover
       > h3:after
         margin-left: 0.35em
 
