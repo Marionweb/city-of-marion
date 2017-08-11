@@ -39,9 +39,24 @@ $line-height-solid = 1
 $line-height-title = 1.25
 $line-height-copy = 1.5
 
-$font-weight-normal = 400
-$font-weight-semibold = 600
-$font-weight-bold = 700
+$font-weight = {
+  thin: 100,
+  extralight: 200,
+  ultralight: 200,
+  light: 300,
+  book: 400,
+  normal: 400,
+  regular: 400,
+  roman: 400,
+  medium: 500,
+  semibold: 600,
+  demibold: 600,
+  bold: 700,
+  extrabold: 800,
+  ultrabold: 800,
+  black: 900,
+  heavy: 900
+}
 
 $black = #000
 $near-black = #111
@@ -155,7 +170,7 @@ $top-menu-background-color = $white
 $top-menu-toggle-icon-color = $light-blue
 $top-menu-font-family = $sans-serif-headline
 $top-menu-main-font-size = rem(14px)
-$top-menu-main-font-weight = $font-weight-bold
+$top-menu-main-font-weight = $font-weight.bold
 $top-menu-link-color = $navy
 $top-menu-link-hover-color = $light-blue
 $top-menu-bottom-shadow = 0 rem(2px) rem(10px) $black-10
@@ -173,7 +188,7 @@ $footer-link-color = $footer-text-color
 $footer-link-hover-color = $light-blue
 $footer-link-font-family = $sans-serif-headline
 $footer-link-font-size = rem(14px)
-$footer-link-font-weight = $font-weight-bold
+$footer-link-font-weight = $font-weight.bold
 
 $footer-copyright-background-color = $background-gray
 $footer-copyright-text-color = $footer-text-color
@@ -182,7 +197,7 @@ $footer-copyright-link-hover-color = $footer-link-hover-color
 $footer-copyright-font-family = $sans-serif
 $footer-copyright-font-size = rem(10px)
 $footer-copyright-font-size-desktop = rem(14px)
-$footer-copyright-font-weight = $font-weight-normal
+$footer-copyright-font-weight = $font-weight.normal
 
 // ------------------------------------------------------
 // ------ SIDE MENU
@@ -195,9 +210,9 @@ $side-menu-link-hover-color = $light-blue
 $side-menu-close-icon-color = $light-blue
 $side-menu-font-family = $sans-serif-headline
 $side-menu-main-font-size = rem(24px)
-$side-menu-main-font-weight = $font-weight-bold
+$side-menu-main-font-weight = $font-weight.bold
 $side-menu-sub-font-size = rem(14px)
-$side-menu-sub-font-weight = $font-weight-bold
+$side-menu-sub-font-weight = $font-weight.bold
 $side-menu-sub-line-color = $dark-blue
 
 // ------------------------------------------------------
@@ -207,7 +222,7 @@ $bread-background-color = $background-gray
 $bread-font-family = $sans-serif-headline
 $bread-font-size-mobile = rem(10px)
 $bread-font-size-desktop = rem(12px)
-$bread-font-weight = $font-weight-bold
+$bread-font-weight = $font-weight.bold
 $bread-text-transform = uppercase
 $bread-link-color = $navy
 $bread-current-page-color = $light-blue
@@ -236,7 +251,7 @@ $content-text-line-height = $line-height-copy
 
 $content-link-color = $light-blue
 $content-link-decoration = none
-$content-link-weight = $font-weight-bold
+$content-link-weight = $font-weight.bold
 $content-link-hover-color = $medium-blue
 $content-link-hover-decoration = underline
 
@@ -249,11 +264,11 @@ $content-blockquote-cite-margin-top = 1em
 
 $content-blockquote-cite-color = $navy
 $content-blockquote-cite-size = rem(18px)
-$content-blockquote-cite-weight = $font-weight-bold
+$content-blockquote-cite-weight = $font-weight.bold
 $content-blockquote-cite-style = normal
 $content-blockquote-cite2-color = $navy
 $content-blockquote-cite2-style = italic
-$content-blockquote-cite2-weight = $font-weight-bold
+$content-blockquote-cite2-weight = $font-weight.bold
 
 // ------------------------------------------------------
 // ------ HEADERS
@@ -262,14 +277,14 @@ $header-text-color = $navy
 $header-text-font = $sans-serif
 $header-text-size = rem(40)
 $header-text-style = normal
-$header-text-weight = $font-weight-bold
+$header-text-weight = $font-weight.bold
 $header-text-line-height = $line-height-title
 
 $header-block-title-color = $white
 $header-block-title-font = $sans-serif-headline
 $header-block-title-size-mobile = rem(36)
 $header-block-title-size-desktop = rem(60)
-$header-block-title-weight = $font-weight-bold
+$header-block-title-weight = $font-weight.bold
 $header-block-title-transform = uppercase
 
 $header-image-top-margin-news-desktop = rem(40px)
@@ -282,7 +297,7 @@ $module-lead-in-color = $light-blue
 $module-lead-in-size = rem(21px)
 $module-lead-in-line-height = $line-height-title
 $module-lead-in-style = italic
-$module-lead-in-weight = $font-weight-bold
+$module-lead-in-weight = $font-weight.bold
 
 // ------------------------------------------------------
 // ------ PAGE META
@@ -293,7 +308,7 @@ $module-meta-size = rem(14px)
 $module-meta-line-height = $line-height-title
 $module-meta-style = normal
 $module-meta-transform = uppercase
-$module-meta-weight = $font-weight-bold
+$module-meta-weight = $font-weight.bold
 
 // ------------------------------------------------------
 // ------ SUB-PAGE BLOCKS (FOR LANDING PAGES)
@@ -306,7 +321,7 @@ $module-subpages-link-transform = uppercase
 $module-subpages-link-color = $light-blue
 $module-subpages-link-size = rem(18px)
 $module-subpages-link-decoration = none
-$module-subpages-link-weight = $font-weight-bold
+$module-subpages-link-weight = $font-weight.bold
 $module-subpages-arrow-color = $light-blue
 
 // ------------------------------------------------------
@@ -321,7 +336,7 @@ $module-quick-links-title-transform = uppercase
 $module-quick-links-link-color = $light-blue
 $module-quick-links-link-size = rem(16px)
 $module-quick-links-link-decoration = none
-$module-quick-links-link-weight = $font-weight-bold
+$module-quick-links-link-weight = $font-weight.bold
 $module-quick-links-arrow-color = $light-blue
 
 // ------------------------------------------------------
@@ -333,7 +348,7 @@ $button-hover-box-shadow = 0 0 rem(15px) $black-20
 $button-text-color = $white
 $button-font = $sans-serif-headline
 $button-font-size = rem(14px)
-$button-font-weight = $font-weight-bold
+$button-font-weight = $font-weight.bold
 $button-line-height = $line-height-solid
 $button-transform = uppercase
 $button-padding = rem(28.5px)
@@ -346,7 +361,7 @@ $homepage-header-block-title-color = $white
 $homepage-header-block-title-font = $sans-serif-headline
 $homepage-header-block-title-size-mobile = rem(14)
 $homepage-header-block-title-size-desktop = rem(18)
-$homepage-header-block-title-weight = $font-weight-bold
+$homepage-header-block-title-weight = $font-weight.bold
 $homepage-header-block-title-transform = uppercase
 
 
@@ -401,7 +416,7 @@ $module-story-share-background-color = $navy
 
 $module-story-share-font = $sans-serif
 $module-story-share-color = $white
-$module-story-share-weight = $font-weight-bold
+$module-story-share-weight = $font-weight.bold
 $module-story-share-size-mobile = rem(18px)
 $module-story-share-size-desktop = rem(21px)
 
@@ -476,7 +491,7 @@ $module-video-feature-subheadline-size-desktop = rem(24px)
 
 $module-video-feature-video-font = $sans-serif-headline
 $module-video-feature-video-transform = uppercase
-$module-video-feature-video-font-weight = $font-weight-bold
+$module-video-feature-video-font-weight = $font-weight.bold
 $module-video-feature-video-color = $white
 $module-video-feature-video-hover-color = $light-blue
 $module-video-feature-video-font-size = rem(18px)
@@ -515,7 +530,7 @@ $module-process-link-hover-color = $medium-blue
 $module-process-link-decoration = underline
 
 $module-process-text-font = $sans-serif
-$module-process-text-font-weight = $font-weight-semibold
+$module-process-text-font-weight = $font-weight.semibold
 $module-process-text-size-mobile = rem(14px)
 $module-process-text-size-desktop = rem(14px)
 
