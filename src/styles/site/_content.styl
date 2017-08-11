@@ -3,29 +3,47 @@
   &:not(.block--image)
     margin-bottom: 1em
 
-  h1, h2, h3, h4, h5, h6, p, li, dt, dd
-    line-height $content-text-line-height
+  h1
+  h2
+  h3
+  h4
+  h5
+  h6
+    line-height $content-text-title-line-height
+
+  p
+  ul
+  ol
+    line-height: $content-text-line-height
+
+  ul
+  ol
+    padding-left: 0
+    margin-left: 0
+    list-style-type: none
 
   p
     font-size $content-text-size
     margin 1em 0
+    & + p
+      // text-indent: 1em
+      margin-top: 1.5em
+      margin-bottom: 0
 
   a
     color: $content-link-color
     font-weight: $content-link-weight
     text-decoration: $content-link-decoration
-    transition: color .15s ease-in
-    &:link,
+    transition: $link-transition, text-decoration .15s ease-in
+    &:active
+    &:focus
+    &:link
     &:visited
-      transition: color .15s ease-in
+      transition: $link-transition
     &:hover
       color: $content-link-hover-color
       text-decoration: $content-link-hover-decoration
-      transition: all .15s ease-in
-    &:active
-      transition: color .15s ease-in
     &:focus
-      transition: color .15s ease-in
       outline: 1px dotted currentColor
 
 

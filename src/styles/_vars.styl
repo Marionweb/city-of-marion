@@ -35,75 +35,9 @@ $sans-serif-headline = 'Montserrat', sans-serif
 $serif = 'Playfair Display', georgia, serif
 $code = consolas, monaco, monospace
 
-$font-size-headline = 6rem
-$font-size-subheadline = 5rem
-$font-size-1 = 3rem
-$font-size-2 = 2.25rem
-$font-size-3 = 1.5rem
-$font-size-4 = 1.25rem
-$font-size-5 = 1rem
-$font-size-6 = .875rem
-$font-size-7 = .75rem
-
-$letter-spacing-tight = -.05em
-$letter-spacing-1 = .1em
-$letter-spacing-2 = .25em
-
 $line-height-solid = 1
 $line-height-title = 1.25
 $line-height-copy = 1.5
-
-$spacing-none = 0
-$spacing-extra-small = .25rem
-$spacing-small = .5rem
-$spacing-medium = 1rem
-$spacing-large = 2rem
-$spacing-extra-large = 4rem
-$spacing-extra-extra-large = 8rem
-$spacing-extra-extra-extra-large = 16rem
-
-$height-1 = 1rem
-$height-2 = 2rem
-$height-3 = 4rem
-$height-4 = 8rem
-$height-5 = 16rem
-
-$width-1 = 1rem
-$width-2 = 2rem
-$width-3 = 4rem
-$width-4 = 8rem
-$width-5 = 16rem
-
-$max-width-1 = 1rem
-$max-width-2 = 2rem
-$max-width-3 = 4rem
-$max-width-4 = 8rem
-$max-width-5 = 16rem
-$max-width-6 = 32rem
-$max-width-7 = 48rem
-$max-width-8 = 64rem
-$max-width-9 = 96rem
-
-$border-radius-none = 0
-$border-radius-1 = .125rem
-$border-radius-2 = .25rem
-$border-radius-3 = .5rem
-$border-radius-4 = 1rem
-$border-radius-circle = 100%
-$border-radius-pill = 9999px
-
-$border-width-none = 0
-$border-width-1 = .125rem
-$border-width-2 = .25rem
-$border-width-3 = .5rem
-$border-width-4 = 1rem
-$border-width-5 = 2rem
-
-$box-shadow-1 = 0px 0px 4px 2px rgba( 0, 0, 0, 0.2 )
-$box-shadow-2 = 0px 0px 8px 2px rgba( 0, 0, 0, 0.2 )
-$box-shadow-3 = 2px 2px 4px 2px rgba( 0, 0, 0, 0.2 )
-$box-shadow-4 = 2px 2px 8px 0px rgba( 0, 0, 0, 0.2 )
-$box-shadow-5 = 4px 4px 8px 0px rgba( 0, 0, 0, 0.2 )
 
 $black = #000
 $near-black = #111
@@ -204,6 +138,9 @@ $background-gray = $snow
 $body-font-family = $sans-serif
 $body-background-color = $white
 
+$global-block-box-shadow = 0 0 rem(15px) rgba($black,.1)
+$global-block-box-shadow-hover = 0 0 rem(30px) rgba($black,.15)
+$link-transition = color .15s ease-in
 
 // ------------------------------------------------------
 // ------ TOP MENU
@@ -288,7 +225,8 @@ $breadcrumb-total-height-desktop = rem(27px + 12px + 25px)
 
 $content-text-color = $navy
 $content-text-size = rem(18px)
-$content-text-line-height = 1.3em
+$content-text-title-line-height = $line-height-title
+$content-text-line-height = $line-height-copy
 
 $content-link-color = $light-blue
 $content-link-decoration = none
@@ -297,7 +235,7 @@ $content-link-hover-color = $medium-blue
 $content-link-hover-decoration = underline
 
 $content-blockquote-quote-color = $light-blue
-$content-blockquote-quote-line-height = 1.3em
+$content-blockquote-quote-line-height = $line-height-copy
 $content-blockquote-quote-size = rem(24px)
 
 $content-blockquote-margin = 1em 0 1em rem(30px)
@@ -319,7 +257,7 @@ $header-text-font = $sans-serif
 $header-text-size = rem(40)
 $header-text-style = normal
 $header-text-weight = 700
-$header-text-line-height = 1.3em
+$header-text-line-height = $line-height-title
 
 $header-block-title-color = $white
 $header-block-title-font = $sans-serif-headline
@@ -336,7 +274,7 @@ $header-image-top-margin-news-desktop = rem(40px)
 $module-lead-in-font = $serif
 $module-lead-in-color = $light-blue
 $module-lead-in-size = rem(21px)
-$module-lead-in-line-height = 1.3em
+$module-lead-in-line-height = $line-height-title
 $module-lead-in-style = italic
 $module-lead-in-weight = 700
 
@@ -346,7 +284,7 @@ $module-lead-in-weight = 700
 $module-meta-font = $sans-serif-headline
 $module-meta-color = $light-blue
 $module-meta-size = rem(14px)
-$module-meta-line-height = 1.3em
+$module-meta-line-height = $line-height-title
 $module-meta-style = normal
 $module-meta-transform = uppercase
 $module-meta-weight = 700
@@ -354,8 +292,8 @@ $module-meta-weight = 700
 // ------------------------------------------------------
 // ------ SUB-PAGE BLOCKS (FOR LANDING PAGES)
 
-$module-subpages-box-shadow = 0 0 rem(15px) rgba($black,.1)
-$module-subpages-box-shadow-hover = 0 0 rem(30px) rgba($black,.2)
+$module-subpages-box-shadow = $global-block-box-shadow
+$module-subpages-box-shadow-hover = $global-block-box-shadow-hover
 $module-subpages-background-color = $white
 $module-subpages-link-font = $sans-serif-headline
 $module-subpages-link-transform = uppercase
@@ -369,7 +307,7 @@ $module-subpages-arrow-color = $light-blue
 // ------ BLOCK
 // ------ QUICK LINKS
 
-$module-quick-links-box-shadow = 0 0 rem(15px) rgba($black,.1)
+$module-quick-links-box-shadow = $global-block-box-shadow
 $module-quick-links-background-color = $white
 $module-quick-links-title-font = $sans-serif-headline
 $module-quick-links-title-size = rem(24px)
@@ -390,7 +328,7 @@ $button-text-color = $white
 $button-font = $sans-serif-headline
 $button-font-size = rem(14px)
 $button-font-weight = 700
-$button-line-height = 1
+$button-line-height = $line-height-solid
 $button-transform = uppercase
 $button-padding = rem(28.5px)
 $button-hover-background = $medium-blue
@@ -410,7 +348,7 @@ $homepage-header-block-title-transform = uppercase
 // ------ BLOCK
 // ------ MAYOR'S WELCOME
 
-$module-mayors-welcome-box-shadow = 0 0 rem(15px) rgba($black,.1)
+$module-mayors-welcome-box-shadow = $global-block-box-shadow
 $module-mayors-welcome-background-color = $white
 $module-mayors-welcome-title-font = $sans-serif-headline
 $module-mayors-welcome-title-transform = uppercase
@@ -430,8 +368,8 @@ $module-mayors-welcome-text-size-desktop = rem(18px)
 // ------ BLOCK
 // ------ SPOTLIGHT
 
-$module-spotlight-box-shadow = 0 0 rem(15px) rgba($black,.1)
-$module-spotlight-box-shadow-hover = 0 0 rem(15px) rgba($black,.2)
+$module-spotlight-box-shadow = $global-block-box-shadow
+$module-spotlight-box-shadow-hover = $global-block-box-shadow-hover
 $module-spotlight-background-color = $white
 
 $module-spotlight-name-font = $sans-serif-headline
@@ -452,7 +390,7 @@ $module-spotlight-title-size-desktop = rem(24px)
 // ------ BLOCK
 // ------ STORY SHARE
 
-$module-story-share-box-shadow = 0 0 rem(15px) rgba($black,.1)
+$module-story-share-box-shadow = $global-block-box-shadow
 $module-story-share-background-color = $navy
 
 $module-story-share-font = $sans-serif
@@ -484,8 +422,8 @@ $module-weather-tip-text-size-desktop = rem(12px)
 // ------ BLOCK
 // ------ NEWS/EVENTS ON HOMEPAGE
 
-$module-news-events-home-box-shadow = 0 0 rem(15px) rgba($black,.1)
-$module-news-events-home-hover-box-shadow = inset 0 0 rem(30px) 0 rgba($black,.15)
+$module-news-events-home-box-shadow = $global-block-box-shadow
+$module-news-events-home-hover-box-shadow = inset $global-block-box-shadow-hover
 $module-news-events-home-background-color = $white
 $module-news-events-home-background-hover-color = $light-blue
 $module-news-events-home-border-width = rem(2px)
