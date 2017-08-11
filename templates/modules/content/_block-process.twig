@@ -7,7 +7,8 @@
   {%- set logo = collaboration.collaborationLogo.one() -%}
   <figure class="collaboration">
     <a href="{{ collaboration.collaborationUrl }}" target="_blank" title="{{ collaboration.collaborationName }}">
-      {{ craft.inlin.er(logo.url, true) | raw }}
+      {% set path = logo.volume.path ~ '/' ~ logo.filename %}
+      {{ craft.inlin.er(path, true) | raw }}
     </a>
   </figure>
   {% endfor %}

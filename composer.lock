@@ -4,20 +4,128 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "570ae88da02fe32a3974a1bcc554a5c5",
+    "content-hash": "1123c4f3449a934eb577d0d4ace03f8e",
     "packages": [
         {
-            "name": "aws/aws-sdk-php",
-            "version": "3.32.3",
+            "name": "aelvan/inlin",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "d34a5779803ae7bc3efd3c6cab6e4e6f3b7409dd"
+                "url": "https://github.com/aelvan/Inlin-Craft.git",
+                "reference": "0887d3c77b36b74002fba00e8261f1134dbe862b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/d34a5779803ae7bc3efd3c6cab6e4e6f3b7409dd",
-                "reference": "d34a5779803ae7bc3efd3c6cab6e4e6f3b7409dd",
+                "url": "https://api.github.com/repos/aelvan/Inlin-Craft/zipball/0887d3c77b36b74002fba00e8261f1134dbe862b",
+                "reference": "0887d3c77b36b74002fba00e8261f1134dbe862b",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "~3.0.0-beta.23"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Inlin",
+                "handle": "inlin",
+                "schemaVersion": "2.0.0",
+                "hasCpSettings": false,
+                "hasCpSection": false,
+                "changelogUrl": "https://github.com/aelvan/Inlin-Craft/blob/craft3/CHANGELOG.md",
+                "class": "aelvan\\inlin\\Inlin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "aelvan\\inlin\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "André Elvan",
+                    "homepage": "https://www.vaersaagod.no"
+                }
+            ],
+            "description": "A simple plugin for inlining stuff in your templates.",
+            "keywords": [
+                "Craft",
+                "cms",
+                "craft-plugin",
+                "craftcms",
+                "criticalcss",
+                "inline",
+                "inlining",
+                "svg"
+            ],
+            "time": "2017-08-09T22:00:10+00:00"
+        },
+        {
+            "name": "aelvan/stamp",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aelvan/Stamp-Craft.git",
+                "reference": "eb32216a4b8bb0e971b8b96bc88638d04dad22ea"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aelvan/Stamp-Craft/zipball/eb32216a4b8bb0e971b8b96bc88638d04dad22ea",
+                "reference": "eb32216a4b8bb0e971b8b96bc88638d04dad22ea",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "~3.0.0-beta.23"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Stamp",
+                "handle": "stamp",
+                "schemaVersion": "2.0.0",
+                "hasCpSettings": false,
+                "hasCpSection": false,
+                "changelogUrl": "https://github.com/aelvan/Stamp-Craft/blob/craft3/CHANGELOG.md",
+                "class": "aelvan\\stamp\\Stamp"
+            },
+            "autoload": {
+                "psr-4": {
+                    "aelvan\\stamp\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "André Elvan",
+                    "homepage": "https://www.vaersaagod.no"
+                }
+            ],
+            "description": "A simple plugin for adding timestamps to filenames.",
+            "keywords": [
+                "Craft",
+                "asset-rev",
+                "cms",
+                "craft-plugin",
+                "craftcms",
+                "timestamp"
+            ],
+            "time": "2017-08-11T19:08:58+00:00"
+        },
+        {
+            "name": "aws/aws-sdk-php",
+            "version": "3.32.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aws/aws-sdk-php.git",
+                "reference": "6d9a29bd750c50e491a4f458bf5e24f2adb35a5f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/6d9a29bd750c50e491a4f458bf5e24f2adb35a5f",
+                "reference": "6d9a29bd750c50e491a4f458bf5e24f2adb35a5f",
                 "shasum": ""
             },
             "require": {
@@ -84,7 +192,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2017-08-01T21:51:56+00:00"
+            "time": "2017-08-09T18:19:19+00:00"
         },
         {
             "name": "bower-asset/behave.js",
@@ -466,16 +574,16 @@
         },
         {
             "name": "composer/composer",
-            "version": "1.4.2",
+            "version": "1.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "489e09ee6c3ba431fbeeef9147afdaeb6f91b647"
+                "reference": "62c17fdf79a1f7f42778aed376da9c8cb03e5f62"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/489e09ee6c3ba431fbeeef9147afdaeb6f91b647",
-                "reference": "489e09ee6c3ba431fbeeef9147afdaeb6f91b647",
+                "url": "https://api.github.com/repos/composer/composer/zipball/62c17fdf79a1f7f42778aed376da9c8cb03e5f62",
+                "reference": "62c17fdf79a1f7f42778aed376da9c8cb03e5f62",
                 "shasum": ""
             },
             "require": {
@@ -539,7 +647,7 @@
                 "dependency",
                 "package"
             ],
-            "time": "2017-05-17T06:17:53+00:00"
+            "time": "2017-08-06T13:00:25+00:00"
         },
         {
             "name": "composer/semver",
@@ -1184,6 +1292,58 @@
                 "yii2"
             ],
             "time": "2017-07-14T21:26:25+00:00"
+        },
+        {
+            "name": "craftcms/store-hours",
+            "version": "2.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/craftcms/store-hours.git",
+                "reference": "35a074a30f74d109bb3c1a76273446994576c05a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/craftcms/store-hours/zipball/35a074a30f74d109bb3c1a76273446994576c05a",
+                "reference": "35a074a30f74d109bb3c1a76273446994576c05a",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "~3.0.0-beta.20"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Store Hours",
+                "handle": "store-hours",
+                "schemaVersion": "1.0.2",
+                "changelogUrl": "https://raw.githubusercontent.com/craftcms/store-hours/v2/CHANGELOG.md",
+                "downloadUrl": "https://github.com/craftcms/store-hours/archive/v2.zip"
+            },
+            "autoload": {
+                "psr-4": {
+                    "craft\\storehours\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pixel & Tonic",
+                    "homepage": "https://pixelandtonic.com/"
+                }
+            ],
+            "description": "This plugin adds a new “Store Hours” field type to Craft, for collecting the opening and closing hours of a business for each day of the week.",
+            "keywords": [
+                "cms",
+                "craftcms",
+                "hours",
+                "html",
+                "json",
+                "store",
+                "yii2"
+            ],
+            "time": "2017-07-07T17:01:00+00:00"
         },
         {
             "name": "creocoder/yii2-nested-sets",
@@ -2168,16 +2328,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "1.0.40",
+            "version": "1.0.41",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "3828f0b24e2c1918bb362d57a53205d6dc8fde61"
+                "reference": "f400aa98912c561ba625ea4065031b7a41e5a155"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/3828f0b24e2c1918bb362d57a53205d6dc8fde61",
-                "reference": "3828f0b24e2c1918bb362d57a53205d6dc8fde61",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/f400aa98912c561ba625ea4065031b7a41e5a155",
+                "reference": "f400aa98912c561ba625ea4065031b7a41e5a155",
                 "shasum": ""
             },
             "require": {
@@ -2198,13 +2358,13 @@
                 "league/flysystem-aws-s3-v3": "Allows you to use S3 storage with AWS SDK v3",
                 "league/flysystem-azure": "Allows you to use Windows Azure Blob storage",
                 "league/flysystem-cached-adapter": "Flysystem adapter decorator for metadata caching",
-                "league/flysystem-copy": "Allows you to use Copy.com storage",
                 "league/flysystem-eventable-filesystem": "Allows you to use EventableFilesystem",
                 "league/flysystem-rackspace": "Allows you to use Rackspace Cloud Files",
                 "league/flysystem-sftp": "Allows you to use SFTP server storage via phpseclib",
                 "league/flysystem-webdav": "Allows you to use WebDAV storage",
                 "league/flysystem-ziparchive": "Allows you to use ZipArchive adapter",
-                "spatie/flysystem-dropbox": "Allows you to use Dropbox storage"
+                "spatie/flysystem-dropbox": "Allows you to use Dropbox storage",
+                "srmklive/flysystem-dropbox-v2": "Allows you to use Dropbox storage for PHP 5 applications"
             },
             "type": "library",
             "extra": {
@@ -2247,7 +2407,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2017-04-28T10:15:08+00:00"
+            "time": "2017-08-06T17:41:04+00:00"
         },
         {
             "name": "league/flysystem-aws-s3-v3",
@@ -2678,68 +2838,18 @@
             "time": "2017-06-30T06:21:01+00:00"
         },
         {
-            "name": "mikestecker/craft3-inlin",
-            "version": "1.2.1",
+            "name": "mikestecker/craft3-videoembedder",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mikestecker/craft3-inlin.git",
-                "reference": "f93b90a9f07f06eafe9b66f6d11611592f45a227"
+                "url": "https://github.com/mikestecker/craft3-videoembedder.git",
+                "reference": "efa4a934c8f27ee6cf7e9996b88649c8d0d3aae9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mikestecker/craft3-inlin/zipball/f93b90a9f07f06eafe9b66f6d11611592f45a227",
-                "reference": "f93b90a9f07f06eafe9b66f6d11611592f45a227",
+                "url": "https://api.github.com/repos/mikestecker/craft3-videoembedder/zipball/efa4a934c8f27ee6cf7e9996b88649c8d0d3aae9",
+                "reference": "efa4a934c8f27ee6cf7e9996b88649c8d0d3aae9",
                 "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "~3.0.0-beta.23"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "name": "Inlin",
-                "handle": "inlin",
-                "schemaVersion": "1.2.1",
-                "hasCpSettings": false,
-                "hasCpSection": false,
-                "changelogUrl": "https://raw.githubusercontent.com/mikestecker/craft3-inlin/master/CHANGELOG.md",
-                "components": {
-                    "inlin": "mikestecker\\inlin\\services\\Inlin"
-                },
-                "class": "mikestecker\\inlin\\Inlin"
-            },
-            "autoload": {
-                "psr-4": {
-                    "mikestecker\\inlin\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Mike Stecker",
-                    "homepage": "http://github.com/mikestecker"
-                }
-            ],
-            "description": "A tiny plugin for inlining files in Craft templates. Ported from https://github.com/aelvan/Inlin-Craft/",
-            "keywords": [
-                "Craft",
-                "cms",
-                "craft-plugin",
-                "craftcms",
-                "inlin"
-            ],
-            "time": "2017-08-05T23:43:56+00:00"
-        },
-        {
-            "name": "mikestecker/craft3-videoembedder",
-            "version": "1.0.0",
-            "dist": {
-                "type": "path",
-                "url": "../../../other/craft3-videoembedder",
-                "reference": "ea87b251615117f2d292e94cf4e94817ec69862c",
-                "shasum": null
             },
             "require": {
                 "craftcms/cms": "~3.0.0-beta.23"
@@ -2759,6 +2869,7 @@
                     "mikestecker\\videoembedder\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2770,16 +2881,13 @@
             ],
             "description": "Craft plugin to generate an embed URL from a YouTube or Vimeo URL.",
             "keywords": [
+                "Craft",
                 "cms",
-                "craft",
                 "craft-plugin",
                 "craftcms",
                 "video embedder"
             ],
-            "support": {
-                "docs": "https://github.com/mikestecker/craft3-videoembedder/blob/master/README.md",
-                "issues": "https://github.com/mikestecker/craft3-videoembedder/issues"
-            }
+            "time": "2017-08-07T15:24:52+00:00"
         },
         {
             "name": "misterbk/mix",
@@ -3374,16 +3482,16 @@
         },
         {
             "name": "nystudio107/craft3-imageoptimize",
-            "version": "1.0.9",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft3-imageoptimize.git",
-                "reference": "7b2b5bed399a618ce9448182363900f0332c5794"
+                "reference": "365521fca8caea1bb7fa06916ef364d3689c77e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft3-imageoptimize/zipball/7b2b5bed399a618ce9448182363900f0332c5794",
-                "reference": "7b2b5bed399a618ce9448182363900f0332c5794",
+                "url": "https://api.github.com/repos/nystudio107/craft3-imageoptimize/zipball/365521fca8caea1bb7fa06916ef364d3689c77e2",
+                "reference": "365521fca8caea1bb7fa06916ef364d3689c77e2",
                 "shasum": ""
             },
             "require": {
@@ -3427,7 +3535,7 @@
                 "image",
                 "optimize"
             ],
-            "time": "2017-07-15T10:34:24+00:00"
+            "time": "2017-08-07T05:37:02+00:00"
         },
         {
             "name": "nystudio107/craft3-minify",
@@ -4421,12 +4529,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "626c97bd5b45a08db902a0fb0b13f58f3785b439"
+                "reference": "9df1a9e73fc7caa573adaf98d159623048a7feed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/626c97bd5b45a08db902a0fb0b13f58f3785b439",
-                "reference": "626c97bd5b45a08db902a0fb0b13f58f3785b439",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/9df1a9e73fc7caa573adaf98d159623048a7feed",
+                "reference": "9df1a9e73fc7caa573adaf98d159623048a7feed",
                 "shasum": ""
             },
             "conflict": {
@@ -4481,7 +4589,7 @@
                 "silverstripe/framework": ">=3,<3.3",
                 "silverstripe/userforms": "<3",
                 "simplesamlphp/saml2": "<1.8.1|>=1.9,<1.9.1|>=1.10,<1.10.3|>=2,<2.3.3",
-                "simplesamlphp/simplesamlphp": "<1.14.12",
+                "simplesamlphp/simplesamlphp": "<1.14.15",
                 "simplesamlphp/simplesamlphp-module-infocard": "<1.0.1",
                 "socalnick/scn-social-auth": "<1.15.2",
                 "squizlabs/php_codesniffer": ">=1,<2.8.1",
@@ -4550,7 +4658,7 @@
                 }
             ],
             "description": "Prevents installation of composer packages with known security vulnerabilities: no API, simply require it",
-            "time": "2017-07-28T07:54:11+00:00"
+            "time": "2017-08-08T18:44:50+00:00"
         },
         {
             "name": "seld/cli-prompt",
