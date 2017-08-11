@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1123c4f3449a934eb577d0d4ace03f8e",
+    "content-hash": "e829a1ada5ceb2ef55ed8606c7d4c5c2",
     "packages": [
         {
             "name": "aelvan/inlin",
@@ -116,16 +116,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.32.5",
+            "version": "3.32.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "6d9a29bd750c50e491a4f458bf5e24f2adb35a5f"
+                "reference": "db5bd8d617012d4afb3e5e1f3e8f4b9899242b62"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/6d9a29bd750c50e491a4f458bf5e24f2adb35a5f",
-                "reference": "6d9a29bd750c50e491a4f458bf5e24f2adb35a5f",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/db5bd8d617012d4afb3e5e1f3e8f4b9899242b62",
+                "reference": "db5bd8d617012d4afb3e5e1f3e8f4b9899242b62",
                 "shasum": ""
             },
             "require": {
@@ -192,7 +192,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2017-08-09T18:19:19+00:00"
+            "time": "2017-08-10T20:29:21+00:00"
         },
         {
             "name": "bower-asset/behave.js",
@@ -3248,16 +3248,16 @@
         },
         {
             "name": "newism/craft3-fields",
-            "version": "0.0.3",
+            "version": "0.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newism/craft3-fields.git",
-                "reference": "ecc1b8e860d79ab254f88547fdbc70d0ada06e41"
+                "reference": "eb1265452e6c2cc53884a5fdfd005169d6edc491"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newism/craft3-fields/zipball/ecc1b8e860d79ab254f88547fdbc70d0ada06e41",
-                "reference": "ecc1b8e860d79ab254f88547fdbc70d0ada06e41",
+                "url": "https://api.github.com/repos/newism/craft3-fields/zipball/eb1265452e6c2cc53884a5fdfd005169d6edc491",
+                "reference": "eb1265452e6c2cc53884a5fdfd005169d6edc491",
                 "shasum": ""
             },
             "require": {
@@ -3305,7 +3305,7 @@
                 "craftcms",
                 "nsm-fields"
             ],
-            "time": "2017-07-12T07:24:26+00:00"
+            "time": "2017-08-01T03:53:54+00:00"
         },
         {
             "name": "nojimage/twitter-text-php",

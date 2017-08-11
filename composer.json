@@ -32,7 +32,7 @@
         "nystudio107/craft3-imageoptimize": "^1.0",
         "craftcms/mailgun": "1.0.0.1",
         "nystudio107/craft3-minify": "^1.2",
-        "newism/craft3-fields": "^0.0.3",
+        "newism/craft3-fields": "0.0.4",
         "selvinortiz/patrol": "^3.0",
         "craftcms/query": "^2.0",
         "nystudio107/craft3-richvariables": "^1.0",
