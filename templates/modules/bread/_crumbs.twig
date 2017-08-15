@@ -3,7 +3,7 @@
 {#- ---------------------- STANDARD PAGES ---------------------- -#}
 
 {% if (entry.level > 1) and (entry.section.handle == 'pages') %}
-  {% set ancestors = entry.getAncestors() %}
+  {% set ancestors = entry.getAncestors().all() %}
   {% set current = entry %}
   {% set allCrumbs = ancestors %}
 
@@ -18,8 +18,8 @@
 {#- ---------------------- NEWS/EVENTS ARTICLES ---------------------- -#}
 
 {% if (entry.section.handle == 'newsEvents') %}
-  {% set landing = craft.entries.section('newsEventsLanding') %}
-  {% set ancestors = entry.getAncestors() %}
+  {% set landing = craft.entries.section('newsEventsLanding').all() %}
+  {% set ancestors = entry.getAncestors().all() %}
   {% set current = entry %}
 
   {% set allCrumbs = landing %}
@@ -36,7 +36,7 @@
 {#- ---------------------- EVENTS LANDING ---------------------- -#}
 
 {% if (entry.section.handle == 'eventsLanding') %}
-  {% set landing = craft.entries.section('newsEventsLanding') %}
+  {% set landing = craft.entries.section('newsEventsLanding').all() %}
   {% set current = entry %}
 
   {% set allCrumbs = landing %}
@@ -49,8 +49,8 @@
 
 {% if (entry.section.handle == 'minutesAgendas') %}
   {% set firstSegment = craft.app.request.segments|first %}
-  {% set topLevel = craft.entries.slug(firstSegment) %}
-  {% set landing = craft.entries.section('minutesAgendasLanding') %}
+  {% set topLevel = craft.entries.slug(firstSegment).all() %}
+  {% set landing = craft.entries.section('minutesAgendasLanding').all() %}
   {% set current = entry %}
 
   {% set allCrumbs = topLevel %}
@@ -64,7 +64,7 @@
 
 {% if (entry.section.handle == 'minutesAgendasLanding') %}
   {% set firstSegment = craft.app.request.segments|first %}
-  {% set topLevel = craft.entries.slug(firstSegment) %}
+  {% set topLevel = craft.entries.slug(firstSegment).all() %}
   {% set current = entry %}
 
   {% set allCrumbs = topLevel %}
@@ -77,8 +77,8 @@
 
 {% if (entry.section.handle == 'departments') %}
   {% set firstSegment = craft.app.request.segments|first %}
-  {% set topLevel = craft.entries.slug(firstSegment) %}
-  {% set landing = craft.entries.section('departmentsLanding') %}
+  {% set topLevel = craft.entries.slug(firstSegment).all() %}
+  {% set landing = craft.entries.section('departmentsLanding').all() %}
   {% set current = entry %}
 
   {% set allCrumbs = topLevel %}
@@ -92,7 +92,7 @@
 
 {% if (entry.section.handle == 'departmentsLanding') %}
   {% set firstSegment = craft.app.request.segments|first %}
-  {% set topLevel = craft.entries.slug(firstSegment) %}
+  {% set topLevel = craft.entries.slug(firstSegment).all() %}
   {% set current = entry %}
 
   {% set allCrumbs = topLevel %}
@@ -105,8 +105,8 @@
 
 {% if (entry.section.handle == 'boards') %}
   {% set firstSegment = craft.app.request.segments|first %}
-  {% set topLevel = craft.entries.slug(firstSegment) %}
-  {% set landing = craft.entries.section('boardsLanding') %}
+  {% set topLevel = craft.entries.slug(firstSegment).all() %}
+  {% set landing = craft.entries.section('boardsLanding').all() %}
   {% set current = entry %}
 
   {% set allCrumbs = topLevel %}
@@ -120,7 +120,7 @@
 
 {% if (entry.section.handle == 'boardsLanding') %}
   {% set firstSegment = craft.app.request.segments|first %}
-  {% set topLevel = craft.entries.slug(firstSegment) %}
+  {% set topLevel = craft.entries.slug(firstSegment).all() %}
   {% set current = entry %}
 
   {% set allCrumbs = topLevel %}
