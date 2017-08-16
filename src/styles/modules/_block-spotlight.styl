@@ -4,7 +4,7 @@
     background-color $module-spotlight-background-color
     box-shadow $module-spotlight-box-shadow
     text-decoration none
-    transition: box-shadow .15s ease-in
+    transition: box-shadow 200ms ease-out
     padding-bottom rem(28px)
 
     +above(m)
@@ -13,6 +13,10 @@
     > figure
       margin 0
       line-height 0
+      overflow hidden
+
+      img
+        transition: transform 0.8s ease
 
       &.desktop
         display none
@@ -70,13 +74,15 @@
         width rem(16px)
         mask: embedurl("../sprites/arrow-right.svg", "utf8") no-repeat 50% 50%/12px 12px
         margin-left: 0.15em
-        transition: background-color .1s ease-in, margin-left .15s ease-in
+        transition: background-color 200ms ease-out, margin-left 200ms ease-out
         vertical-align middle
 
     &:hover
       box-shadow $module-spotlight-box-shadow-hover
       > h3:after
         margin-left: 0.35em
+      figure img
+        transform scale(1.08)
 
 
 #content
