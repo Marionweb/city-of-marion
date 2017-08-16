@@ -46,7 +46,7 @@
         <h2>{{ videoBlock.headline }}</h2>
         {% if videoBlock.subHeadline %}<h3>{{ videoBlock.subHeadline }}</h3>{% endif %}
       </div>
-      <a id="block--featured-video--play" data-fancybox href="{{ videoBlock.video }}"><span>Play Video</span></a>
+      <a id="block--featured-video--play" data-fancybox href="{{ videoBlock.video }}" data-options='{"toolbar" : false, "smallBtn" : true}'><span>Play Video</span></a>
     </div>
   </section>
 {% endif %}
