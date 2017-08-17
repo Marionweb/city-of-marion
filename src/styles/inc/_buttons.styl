@@ -28,3 +28,10 @@ input[type=reset]
 button
   button()
   min-width rem(220px)
+
+  &[disabled], fieldset[disabled] &
+    opacity .5
+    &:hover
+      background-color $button-background
+      box-shadow $button-box-shadow
+      cursor not-allowed
