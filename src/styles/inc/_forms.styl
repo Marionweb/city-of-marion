@@ -249,14 +249,6 @@ input[type="radio"]
     width $line-height-computed
     vertical-align text-top
 
-  // the fill
-  // & + label::after
-  //     background-color $input-border-color-active
-  //     box-sizing border-box
-  //     content ''
-  //     position absolute
-  //     opacity 0
-
   &:focus
     & + label::before
       outline 0
@@ -265,14 +257,10 @@ input[type="radio"]
   &:hover
     & + label::before
       border 2px solid $input-border-color-hover
-  &:active
   &:checked
     & + label::before
       border 2px solid $input-border-color-active
       background-color: $input-border-color-active
-  &:checked
-    & + label::after
-      opacity 1
 
 // Circular radios
 input[type="radio"]
@@ -280,7 +268,6 @@ input[type="radio"]
   & + label::before
     border-radius 50%
     padding: 4px
-  &:active
   &:checked
     & + label::before
       background-clip: content-box
@@ -301,43 +288,33 @@ input[type="checkbox"]
       background-color: $white
       transition: opacity 200ms ease-out
       vertical-align middle
-  &:active
   &:checked
     & + label::after
       opacity 1
 
 
-
-
-
-// .radio input[type="radio"], .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"]
-//   float left
-//   margin-left -20px
-
-// .radio + .radio, .checkbox + .checkbox
-//   margin-top -5px
-//   // Move up sibling radios or checkboxes for tighter spacing
-
-// // Radios and checkboxes on same line
-// .radio-inline, .checkbox-inline
-//   display inline-block
-//   padding-left rem(20px)
-//   margin-bottom 0
-//   vertical-align middle
-//   font-weight normal
-//   cursor pointer
-
-// .radio-inline + .radio-inline, .checkbox-inline + .checkbox-inline
-//   margin-top 0
-//   margin-left rem(10px)
-//   // space out consecutive inline controls
-
 // Apply same disabled cursor tweak as for inputs
 //
 // Note: Neither radios nor checkboxes can be readonly.
-input[type="radio"], input[type="checkbox"]
+input[type="radio"]
+input[type="checkbox"]
   &[disabled], fieldset[disabled] &
-    cursor not-allowed
+    & + label
+      &
+      &::before
+      &::after
+        cursor not-allowed
+        opacity .5
+    &:hover + label::before
+        border-color $input-border
+    &:checked:hover + label::before
+        border-color $input-border-color-active
+
+
+
+
+
+
 
 // Form control feedback states
 //
