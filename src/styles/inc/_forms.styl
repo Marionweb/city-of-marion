@@ -315,6 +315,113 @@ input[type="checkbox"]
 
 
 
+// Checkboxes and radios
+//
+
+
+
+input[type=file]
+  width: 0.1px
+  height: 0.1px
+  opacity: 0
+  overflow: hidden
+  position: absolute
+  z-index: -1
+
+  & + label
+    text-overflow: ellipsis
+    white-space: nowrap
+    cursor: pointer
+    overflow: hidden
+    position relative
+
+    display block
+    width 100%
+    height $input-height-base
+    padding 0
+    font-family $input-font
+    font-size $base-font-size
+    font-weight normal
+    line-height $line-height-base
+    color $input-color
+    background-color $input-bg
+    background-image none
+    // Reset unusual Firefox-on-Android default style see https://github.com/necolas/normalize.css/issues/214
+    // border-right $input-border-width solid $input-border-color
+    border-radius $input-border-radius
+    box-shadow none
+    border-right $input-border-width solid $input-border-color
+
+    transition border-color ease-in-out .15s, box-shadow ease-in-out .15s
+
+    strong
+      padding: $padding-base-vertical $padding-base-horizontal
+      font-weight: normal
+      display: inline-block
+      width 30%
+      color $white
+      background-color $button-background
+      color $button-text-color
+      font-family $button-font
+      font-size $button-font-size
+      font-weight $button-font-weight
+      line-height $line-height-base
+      height $input-height-base
+      text-align center
+      text-decoration none
+      text-transform $button-transform
+      vertical-align: middle
+
+    span
+      border-top $input-border-width solid $input-border-color
+      border-bottom $input-border-width solid $input-border-color
+      padding: $padding-base-vertical ($padding-base-horizontal * 2) $padding-base-vertical $padding-base-horizontal
+      width: 70%
+      display: inline-block
+      font-size $button-font-size
+      font-style italic
+      line-height $line-height-base
+      height $input-height-base
+      text-overflow: ellipsis
+      white-space: nowrap
+      overflow: hidden
+      vertical-align: top
+
+    i
+      closeSize = $line-height-computed / 2
+      closeOffset = $padding-base-horizontal / 3
+      position absolute
+      right 0
+      top 0
+      content: ' '
+      display none
+      mask: embedurl("../sprites/close-small.svg", "utf8") no-repeat closeOffset 50%/closeSize closeSize
+      height $input-height-base
+      width ($padding-base-horizontal * 2)
+      background-color: $medium-gray
+      transition: all 200ms ease-out
+      vertical-align middle
+      z-index: 1
+
+input[type=file]:focus + label,
+input[type=file].has-focus + label
+  outline: 1px dotted #000
+  outline: -webkit-focus-ring-color auto 5px
+  & + label:hover
+    border-color: $input-border-color-active
+
+
+
+
+
+.no-js
+  input[type=file]
+    & + label
+      display: none
+
+
+
+
 
 // Form control feedback states
 //
