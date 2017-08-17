@@ -53,11 +53,11 @@
     +above(m)
       flex-grow: 1
       display inline-block
-      min-width 'calc(%s - %s)' % (((1/4)*100)% rem(7.5px))
+      min-width 'calc(%s - %s)' % (percentage(1/4) rem(7.5px))
       margin rem(3.75px) 0 rem(3.75px) rem(7.5px)
 
   a
-    @extend $button
+    button()
     display block
 
 

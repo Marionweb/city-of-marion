@@ -8,13 +8,13 @@
 <div class="parallax">
 
   <div class="parallax__layer parallax__layer--back">
-    {% if entry.section.handle != 'pages' %}{% include 'modules/bread/_crumbs' %}{% endif %}
+    {% if entry is defined and entry.section.handle != 'pages' %}{% include 'modules/bread/_crumbs' %}{% endif %}
     {% block parallaxBack %}{% endblock %}
   </div>
 
   <div class="parallax__layer parallax__layer--base">
 
-    {% if entry.section.handle == 'pages' %}{% include 'modules/bread/_crumbs' %}{% endif %}
+    {% if entry is defined and entry.section.handle == 'pages' %}{% include 'modules/bread/_crumbs' %}{% endif %}
 
     {% block content %}{% endblock %}
 

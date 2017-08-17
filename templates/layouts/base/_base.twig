@@ -6,7 +6,7 @@
 
 {% block core %}
 
-  {% include 'modules/bread/_crumbs' %}
+  {% if entry is defined %}{% include 'modules/bread/_crumbs' %}{% endif %}
 
   {% block content %}{% endblock %}
 

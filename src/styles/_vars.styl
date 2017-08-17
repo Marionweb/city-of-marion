@@ -1,4 +1,7 @@
-base-font-size ?= 16px
+$base-font-size = 16px
+$line-height-base = 1.428571429
+$line-height-computed = floor(($base-font-size * $line-height-base))
+
 rasterise-media-queries ?= false
 rupture-no-conflict ?= false
 
@@ -12,7 +15,7 @@ rupture = {
   // hd-cutoff: 1800px
   hd-cutoff: 1690px
   enable-em-breakpoints: false
-  base-font-size: base-font-size
+  base-font-size: $base-font-size
   anti-overlap: false
   density-queries: 'dppx' 'webkit' 'moz' 'dpi'
   retina-density: 1.5
@@ -163,6 +166,27 @@ $global-block-box-shadow = 0 0 rem(15px) $black-10
 $global-block-box-shadow-hover = 0 0 rem(30px) $black-15
 $link-transition = color 200ms ease-out
 $button-transition = all 200ms ease-out
+
+$text-color = $navy
+
+$font-size-large = ceil(($base-font-size * 1.25))
+// ~18px
+$font-size-small = ceil(($base-font-size * 0.85))
+
+$padding-base-vertical = 16px
+$padding-base-horizontal = 22px
+$padding-large-vertical = 10px
+$padding-large-horizontal = 16px
+$padding-small-vertical = 5px
+$padding-small-horizontal = 10px
+$padding-xs-vertical = 1px
+$padding-xs-horizontal = 5px
+$line-height-large = 1.33
+$line-height-small = 1.5
+$border-radius-base = 0
+$border-radius-large = 0
+$border-radius-small = 0
+$border-width-base = rem(2px)
 
 // ------------------------------------------------------
 // ------ TOP MENU
@@ -448,7 +472,7 @@ $module-news-events-home-box-shadow = $global-block-box-shadow
 $module-news-events-home-hover-box-shadow = inset $global-block-box-shadow-hover
 $module-news-events-home-background-color = $white
 $module-news-events-home-background-hover-color = $light-blue
-$module-news-events-home-border-width = rem(2px)
+$module-news-events-home-border-width = $border-width-base
 $module-news-events-home-border-color = $gray94
 
 $module-news-events-home-headline-font = $sans-serif-headline
@@ -536,3 +560,85 @@ $module-process-text-size-mobile = rem(14px)
 $module-process-text-size-desktop = rem(14px)
 
 
+// ------------------------------------------------------
+// ------ FORMS
+
+$input-border-width = $border-width-base
+$input-border-color = $medium-gray
+$input-border-color-hover = $navy
+$input-border-color-active = $light-blue
+$input-border-color-outline = $input-border-color-active
+
+//== Forms
+//
+//##
+//** `<input>` background color
+$input-bg = rgb(255, 255, 255, 1)
+//** `<input disabled>` background color
+$input-bg-disabled = $background-gray
+//** Text color for `<input>`s
+$input-color = $navy
+$input-font = $sans-serif
+//** `<input>` border color
+$input-border = rgb(204, 204, 204, 1)
+//** `<input>` border radius
+$input-border-radius = $border-radius-base
+//** Border color for inputs on focus
+$input-border-focus = rgb(102, 175, 233, 1)
+//** Placeholder text color
+$input-color-placeholder = $light-silver
+//** Default `.form-control` height
+$input-height-base = (($line-height-computed + ($padding-base-vertical * 2)) + 2)
+//** Large `.form-control` height
+$input-height-large = ((ceil(($font-size-large * $line-height-large)) + ($padding-large-vertical * 2)) + 2)
+//** Small `.form-control` height
+$input-height-small = ((floor(($font-size-small * $line-height-small)) + ($padding-small-vertical * 2)) + 2)
+$legend-color = $dark-gray
+$legend-border-color = rgb(229, 229, 229, 1)
+//** Background color for textual input addons
+$input-group-addon-bg = $background-gray
+//** Border color for textual input addons
+$input-group-addon-border-color = input-border
+//== Dropdowns
+//
+//## Dropdown menu container and contents.
+//** Background for the dropdown menu.
+$dropdown-bg = rgb(255, 255, 255, 1)
+//** Dropdown menu `border-color`.
+$dropdown-border = rgba(0, 0, 0, 0.15)
+//** Dropdown menu `border-color` **for IE8**.
+$dropdown-fallback-border = rgb(204, 204, 204, 1)
+//** Divider color for between dropdown items.
+$dropdown-divider-bg = rgb(229, 229, 229, 1)
+//** Dropdown link text color.
+$dropdown-link-color = $dark-gray
+//** Hover color for dropdown links.
+$dropdown-link-hover-color = darken($dark-gray, 5%)
+//** Hover background for dropdown links.
+$dropdown-link-hover-bg = rgb(245, 245, 245, 1)
+//** Active dropdown menu item text color.
+$dropdown-link-active-color = $white
+//** Active dropdown menu item background color.
+$dropdown-link-active-bg = $light-blue
+//** Disabled dropdown menu item background color.
+$dropdown-link-disabled-color = $light-gray
+//** Text color for headers within dropdown menus.
+$dropdown-header-color = $light-gray
+// Note: Deprecated @dropdown-caret-color as of v3.1.0
+$dropdown-caret-color = rgb(0, 0, 0, 1)
+
+//== Form states and alerts
+//
+//## Define colors for form feedback states and, by default, alerts.
+$state-success-text = rgb(60, 118, 61, 1)
+$state-success-bg = rgb(223, 240, 216, 1)
+$state-success-border = darken(spin($state-success-bg, -10), 5%)
+$state-info-text = rgb(49, 112, 143, 1)
+$state-info-bg = rgb(217, 237, 247, 1)
+$state-info-border = darken(spin($state-info-bg, -10), 7%)
+$state-warning-text = rgb(138, 109, 59, 1)
+$state-warning-bg = rgb(252, 248, 227, 1)
+$state-warning-border = darken(spin($state-warning-bg, -10), 5%)
+$state-danger-text = rgb(169, 68, 66, 1)
+$state-danger-bg = rgb(242, 222, 222, 1)
+$state-danger-border = darken(spin($state-danger-bg, -10), 5%)
