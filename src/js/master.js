@@ -139,4 +139,11 @@ docReady(function() {
     }
   }
 
+
+  // INITIALIZE CHOICES.JS FOR FORM SELECTS
+  var genericSelects = new Choices('[data-choices]', {
+    searchEnabled: false,
+    itemSelectText: ''
+  });
+
 }( document, window, 0 ));
