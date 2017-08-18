@@ -670,14 +670,14 @@ $choices-button-offset = 8px
 
     closeSize = $line-height-computed / 2
     position absolute
-    right 0
-    top 0
+    right $border-width-base
+    top $border-width-base
     content: ' '
     mask: embedurl("../sprites/arrow-small-down.svg", "utf8") no-repeat 50% 50%/closeSize closeSize
     height $input-height-base
     width ($padding-base-horizontal * 3)
     background-color: $navy
-    transition: all 200ms ease-out
+    transition: all 150ms ease
     vertical-align middle
     z-index: 1
 
