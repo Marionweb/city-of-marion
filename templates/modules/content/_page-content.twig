@@ -1,4 +1,4 @@
-{% for block in entry.pageContent %}
+{% for block in entry.pageContent.all() %}
 <section class="page-content page-content--block block--{{ block.type }}">
 
   {% if block.type == "richText" %}
@@ -24,7 +24,7 @@
     {% elseif images | length > "1" %}
       {# ROW OF IMAGES #}
 
-      {% for image in images %}
+      {% for image in images.all() %}
         {% if craft.app.request.isLivePreview and image.width < 1600 %}
           <p>Please assign an image that is at least 1600px wide.</p>
         {% endif %}

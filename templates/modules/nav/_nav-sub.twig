@@ -1,4 +1,4 @@
-{% set nav = menus.subMenu %}
+{% set nav = menus.subMenu.all() %}
 
 <ul class="nav--sub">
   {% nav item in nav %}

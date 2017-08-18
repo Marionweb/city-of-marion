@@ -1,4 +1,4 @@
-{%- set nav = entry.quickLinks -%}
+{%- set nav = entry.quickLinks.all() -%}
 <ul>
   {% nav item in nav %}
     {% if item.type == "external" %}

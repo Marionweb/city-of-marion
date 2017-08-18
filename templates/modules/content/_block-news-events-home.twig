@@ -4,7 +4,7 @@
       'section' : 'newsEvents',
       'type' : 'and, not event, not story',
       'limit' : 3
-  }) %}
+  }).all() %}
   {% for entry in recentNews %}
     {% include 'modules/nav/_block-news-events-entry' %}
   {% endfor %}
@@ -22,7 +22,7 @@
       'section' : 'newsEvents',
       'type' : 'event',
       'limit' : 3
-  }) %}
+  }).all() %}
   {% for entry in upcomingEvents %}
     {% include 'modules/nav/_block-news-events-entry' %}
   {% endfor %}

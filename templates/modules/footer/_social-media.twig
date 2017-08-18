@@ -1,5 +1,5 @@
 <ul id="footer--social">
-  {% for block in footer.socialMedia %}
+  {% for block in footer.socialMedia.all() %}
 
     <li class="footer--social--{{block.type}}">
     {% if block.type == "facebook" %}

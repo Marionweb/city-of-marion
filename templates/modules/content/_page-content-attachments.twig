@@ -2,7 +2,7 @@
 <section class="page-content page-content--block block--attachments">
   <h5>Files Attached:</h5>
   <ul>
-    {% for file in entry.attachedFiles %}
+    {% for file in entry.attachedFiles.all() %}
     <li>
       {# getSignedUrl(file.id) #}
       <a href="{{ file.url }}" id="file-{{file.id}}">
