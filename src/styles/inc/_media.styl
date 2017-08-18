@@ -1,0 +1,41 @@
+/*
+
+   MEDIA
+
+*/
+
+/* Responsive images and video! */
+
+img
+video
+  max-width: 100%
+  width: 100%
+  height auto
+
+.embed-container:not(.type-rich)
+  position: relative
+  height: 0
+  overflow: hidden
+
+  iframe,
+  object,
+  embed
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+  &.type-video
+    padding-bottom: percentage(9/16)
+    &.youtube
+      padding-bottom: 'calc(%s - %s)' % (percentage(9/16) 30px) // 53.25%
+      padding-top: 30px
+
+  &.type-video,
+  &.type-video iframe
+    max-width: 1280px
+    max-height: 720px
+
+  &.instagram
+    padding-bottom: 120%
