@@ -128,3 +128,30 @@
 
   {{ bread.breadcrumbs(allCrumbs) }}
 {% endif %}
+
+{#- ---------------------- EMPLOYMENT/JOBS ---------------------- -#}
+
+{% if (entry.section.handle == 'jobs') %}
+  {% set firstSegment = craft.app.request.segments|first %}
+  {% set topLevel = craft.entries.slug(firstSegment).all() %}
+  {% set landing = craft.entries.section('jobsLanding').all() %}
+  {% set current = entry %}
+
+  {% set allCrumbs = topLevel %}
+  {% set allCrumbs = allCrumbs|merge([landing]) %}
+
+  {% set allCrumbs = allCrumbs|merge([current]) %}
+
+  {{ bread.breadcrumbs(allCrumbs) }}
+{% endif %}
+
+
+{% if (entry.section.handle == 'jobsLanding') %}
+  {% set topLevel = craft.entries.section('homepage').all() %}
+  {% set current = entry %}
+
+  {% set allCrumbs = topLevel %}
+  {% set allCrumbs = allCrumbs|merge([current]) %}
+
+  {{ bread.breadcrumbs(allCrumbs) }}
+{% endif %}
