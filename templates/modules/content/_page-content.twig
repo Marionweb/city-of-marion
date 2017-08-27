@@ -34,6 +34,14 @@
     {% endif %}
     </div>
 
+  {% elseif block.type == "video" %}
+    <div class="embed-container type-video">
+      {% set video = craft.videos.getVideoByUrl(block.video) %}
+
+      {{video.embed({ width: 1280, height: 720, autoplay: false, default_size: false, iframeClass: 'lazyload', theme: 'light', rel: false })}}
+
+    </div>
+
   {% elseif block.type == "embed" %}
     {# EMBEDDED CONTENT #}
 
@@ -41,8 +49,10 @@
       {# VIDEO #}
 
       <div class="embed-container type-video {{block.embedUrl.embedData.providerName|lower|kebab}}">
-        {% set videoId = (block.embedUrl.embedData.url|replace('https://www.youtube.com/watch?v=', '') | raw) %}
-        <iframe class="lazyload" width="1280" height="720" src="{{ craft.videoEmbedder.getEmbedUrl(block.embedUrl.embedData.url) }}?VQ=HD720" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        {% set videoEmbed = craft.videos.getVideoByUrl(block.embedUrl.embedData.url) %}
+
+        {{videoEmbed.embed({ width: 1280, height: 720, autoplay: false, default_size: false, iframeClass: 'lazyload', theme: 'light', rel: false })}}
+
       </div>
 
     {% elseif block.embedUrl.embedData.type == "rich" %}

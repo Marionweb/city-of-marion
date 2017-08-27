@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "e829a1ada5ceb2ef55ed8606c7d4c5c2",
+    "content-hash": "3008cfa61379d1c998e652a77b41b93e",
     "packages": [
         {
             "name": "aelvan/inlin",
@@ -116,19 +116,23 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.33.3",
+            "version": "3.35.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "2820644f411fa261f126727c1c00de15227b9520"
+                "reference": "e9691180888d2679b24cbad1f805e48aadd1a346"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/2820644f411fa261f126727c1c00de15227b9520",
-                "reference": "2820644f411fa261f126727c1c00de15227b9520",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/e9691180888d2679b24cbad1f805e48aadd1a346",
+                "reference": "e9691180888d2679b24cbad1f805e48aadd1a346",
                 "shasum": ""
             },
             "require": {
+                "ext-json": "*",
+                "ext-pcre": "*",
+                "ext-simplexml": "*",
+                "ext-spl": "*",
                 "guzzlehttp/guzzle": "^5.3.1|^6.2.1",
                 "guzzlehttp/promises": "~1.0",
                 "guzzlehttp/psr7": "^1.4.1",
@@ -141,11 +145,7 @@
                 "behat/behat": "~3.0",
                 "doctrine/cache": "~1.4",
                 "ext-dom": "*",
-                "ext-json": "*",
                 "ext-openssl": "*",
-                "ext-pcre": "*",
-                "ext-simplexml": "*",
-                "ext-spl": "*",
                 "nette/neon": "^2.3",
                 "phpunit/phpunit": "^4.8.35|^5.4.0",
                 "psr/cache": "^1.0"
@@ -192,7 +192,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2017-08-18T18:04:40+00:00"
+            "time": "2017-08-25T23:24:46+00:00"
         },
         {
             "name": "bower-asset/behave.js",
@@ -908,16 +908,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.0.0-beta.24",
+            "version": "3.0.0-beta.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "7584d6e897e21108063541c8d3df5e5b91c689ac"
+                "reference": "83f8349b2997aa33672bf9ae36149ce221477378"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/7584d6e897e21108063541c8d3df5e5b91c689ac",
-                "reference": "7584d6e897e21108063541c8d3df5e5b91c689ac",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/83f8349b2997aa33672bf9ae36149ce221477378",
+                "reference": "83f8349b2997aa33672bf9ae36149ce221477378",
                 "shasum": ""
             },
             "require": {
@@ -974,7 +974,7 @@
                 "craftcms",
                 "yii2"
             ],
-            "time": "2017-08-15T19:15:44+00:00"
+            "time": "2017-08-22T19:43:58+00:00"
         },
         {
             "name": "craftcms/element-api",
@@ -1678,6 +1678,96 @@
             "time": "2017-04-05T10:20:08+00:00"
         },
         {
+            "name": "dukt/oauth2-google",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dukt/oauth2-google.git",
+                "reference": "610ea5e1f7e5197778cb80ea4942c20dfdc1bc79"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dukt/oauth2-google/zipball/610ea5e1f7e5197778cb80ea4942c20dfdc1bc79",
+                "reference": "610ea5e1f7e5197778cb80ea4942c20dfdc1bc79",
+                "shasum": ""
+            },
+            "require": {
+                "league/oauth2-google": "^2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Dukt\\OAuth2\\Client\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Benjamin David",
+                    "email": "ben@dukt.net",
+                    "homepage": "https://dukt.net"
+                }
+            ],
+            "description": "Google OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
+            "keywords": [
+                "Authentication",
+                "authorization",
+                "client",
+                "google",
+                "oauth",
+                "oauth2"
+            ],
+            "time": "2017-03-24T14:45:00+00:00"
+        },
+        {
+            "name": "dukt/oauth2-vimeo",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dukt/oauth2-vimeo.git",
+                "reference": "fb9bbbfe546a082edef508a04e881f732b18f530"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dukt/oauth2-vimeo/zipball/fb9bbbfe546a082edef508a04e881f732b18f530",
+                "reference": "fb9bbbfe546a082edef508a04e881f732b18f530",
+                "shasum": ""
+            },
+            "require": {
+                "league/oauth2-client": "^2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Dukt\\OAuth2\\Client\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Benjamin David",
+                    "email": "ben@dukt.net",
+                    "homepage": "https://github.com/benjamindavid"
+                }
+            ],
+            "description": "Vimeo OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
+            "keywords": [
+                "authorisation",
+                "authorization",
+                "client",
+                "oauth",
+                "oauth2",
+                "vimeo"
+            ],
+            "time": "2017-04-06T13:13:14+00:00"
+        },
+        {
             "name": "dukt/twitter",
             "version": "2.0.0-beta.3",
             "source": {
@@ -1727,6 +1817,56 @@
                 "twitter"
             ],
             "time": "2017-07-18T15:25:14+00:00"
+        },
+        {
+            "name": "dukt/videos",
+            "version": "2.0.0-beta.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dukt/videos.git",
+                "reference": "0cc280badea7ca7c303338a9344db54a1c319913"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dukt/videos/zipball/0cc280badea7ca7c303338a9344db54a1c319913",
+                "reference": "0cc280badea7ca7c303338a9344db54a1c319913",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0-beta.20",
+                "dukt/oauth2-google": "^2.0",
+                "dukt/oauth2-vimeo": "^2.0",
+                "league/oauth2-client": "^2.2"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Videos",
+                "handle": "videos",
+                "schemaVersion": "1.0.0",
+                "documentationUrl": "https://github.com/dukt/videos-docs",
+                "changelogUrl": "https://raw.githubusercontent.com/dukt/videos/develop/CHANGELOG.md"
+            },
+            "autoload": {
+                "psr-4": {
+                    "dukt\\videos\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Dukt",
+                    "homepage": "https://dukt.net/"
+                }
+            ],
+            "description": "Connect to YouTube & Vimeo and publish social videos on your website.",
+            "keywords": [
+                "cms",
+                "craftcms",
+                "videos",
+                "vimeo",
+                "youtube"
+            ],
+            "time": "2017-08-25T15:24:58+00:00"
         },
         {
             "name": "embed/embed",
@@ -1867,16 +2007,16 @@
         },
         {
             "name": "giggsey/libphonenumber-for-php",
-            "version": "8.7.1",
+            "version": "8.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/giggsey/libphonenumber-for-php.git",
-                "reference": "9395508cb66af96a07453df073195e6e3767b42d"
+                "reference": "54c69fcb45c3a39d9a206398f57fe18809401eda"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/9395508cb66af96a07453df073195e6e3767b42d",
-                "reference": "9395508cb66af96a07453df073195e6e3767b42d",
+                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/54c69fcb45c3a39d9a206398f57fe18809401eda",
+                "reference": "54c69fcb45c3a39d9a206398f57fe18809401eda",
                 "shasum": ""
             },
             "require": {
@@ -1931,7 +2071,7 @@
                 "phonenumber",
                 "validation"
             ],
-            "time": "2017-08-03T09:07:02+00:00"
+            "time": "2017-08-22T10:35:52+00:00"
         },
         {
             "name": "giggsey/locale",
@@ -2705,6 +2845,57 @@
                 "oauth2"
             ],
             "time": "2017-07-22T01:25:00+00:00"
+        },
+        {
+            "name": "league/oauth2-google",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/oauth2-google.git",
+                "reference": "1001ecf1f00d657cc12e70e7a7a647e623194fd2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/oauth2-google/zipball/1001ecf1f00d657cc12e70e7a7a647e623194fd2",
+                "reference": "1001ecf1f00d657cc12e70e7a7a647e623194fd2",
+                "shasum": ""
+            },
+            "require": {
+                "league/oauth2-client": "^2.0"
+            },
+            "require-dev": {
+                "eloquent/phony": "^0.14.6",
+                "phpunit/phpunit": "^5.7",
+                "satooshi/php-coveralls": "dev-master as 2.0.0",
+                "squizlabs/php_codesniffer": "^2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "League\\OAuth2\\Client\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Woody Gilk",
+                    "email": "woody.gilk@gmail.com",
+                    "homepage": "http://shadowhand.me"
+                }
+            ],
+            "description": "Google OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
+            "keywords": [
+                "Authentication",
+                "authorization",
+                "client",
+                "google",
+                "oauth",
+                "oauth2"
+            ],
+            "time": "2017-06-14T14:06:56+00:00"
         },
         {
             "name": "luwes/craft3-inline",

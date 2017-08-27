@@ -52,7 +52,8 @@
         "mikestecker/craft3-videoembedder": "^1.0",
         "craftcms/store-hours": "^2.0",
         "aelvan/inlin": "^2.0",
-        "aelvan/stamp": "^2.0"
+        "aelvan/stamp": "^2.0",
+        "dukt/videos": "^2.0"
     },
     "require-dev": {
         "heroku/heroku-buildpack-php": "^83.0"
