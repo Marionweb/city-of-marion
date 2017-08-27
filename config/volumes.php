@@ -18,9 +18,13 @@ return [
         'url' => getenv('CRAFTENV_BASE_URL') . 'img/site',
         'path' => getenv('CRAFTENV_BASE_PATH') . 'img/site',
       ],
-      'articleImages' => [
+      'newsEventsAssets' => [
         'url' => getenv('CRAFTENV_BASE_URL') . 'img/news-events',
         'path' => getenv('CRAFTENV_BASE_PATH') . 'img/news-events',
+      ],
+      'fileAttachments' => [
+        'url' => getenv('CRAFTENV_BASE_URL') . 'downloads',
+        'path' => getenv('CRAFTENV_BASE_PATH') . 'downloads',
       ],
     ],
 
@@ -41,6 +45,10 @@ return [
       'newsEventsAssets' => [
         'url' => getenv('CRAFTENV_BASE_URL') . 'volumes/news-events',
         'path' => getenv('CRAFTENV_BASE_PATH') . 'volumes/news-events',
+      ],
+      'fileAttachments' => [
+        'url' => getenv('CRAFTENV_BASE_URL') . 'volumes/downloads',
+        'path' => getenv('CRAFTENV_BASE_PATH') . 'volumes/downloads',
       ],
     ],
 ];
