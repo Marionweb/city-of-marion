@@ -1,0 +1,121 @@
+#list--intro
+  padding rem(40px) rem(30px)
+  +above(m)
+    lost-flex-container: row
+    padding rem(40px) 0
+  figure
+    margin 0
+    +between(m, l)
+      lost-column 13/36
+      lost-offset: 4/36
+    +above(xl)
+      lost-column 11/36
+      lost-offset: 6/36
+
+    img
+      width 100%
+
+#list--intro-text
+  +between(m, l)
+    lost-column 15/36
+    lost-offset: 2/36
+  +above(xl)
+    lost-column 15/36
+    lost-offset: 2/36
+
+  h1
+    color $list-intro-headline-color
+    font-family $list-intro-headline-font
+    font-size $list-intro-headline-size-mobile
+    line-height 1
+    margin 0
+    text-transform $list-intro-headline-transform
+    +above(m)
+      font-size $list-intro-headline-size-desktop
+
+  h2
+    color $list-intro-subheadline-color
+    font-family $list-intro-subheadline-font
+    font-size $list-intro-subheadline-size-mobile
+    margin rem(10px) 0 0
+    text-transform $list-intro-subheadline-transform
+    +above(m)
+      font-size $list-intro-subheadline-size-desktop
+
+  p
+    color $list-intro-text-color
+    font-size $list-intro-text-size-mobile
+    line-height 1.5
+    margin-top rem(24px)
+    +above(m)
+      font-size $list-intro-text-size-desktop
+
+
+#list--content
+  +above(m)
+    lost-column 32/36
+    lost-offset: 2/36
+  ul
+    list-style none
+    padding 0
+
+    li
+      background-color $list-content-row-bg-color
+      color $list-content-row-text-color
+      font-size $list-content-row-text-size-mobile
+      font-weight $list-content-row-text-weight
+      padding $list-content-row-padding-mobile
+
+      +above(l)
+        font-size $list-content-row-text-size-desktop
+        padding $list-content-row-padding-desktop
+        // clearfix()
+        lost-flex-container: row
+
+      &:nth-child(even)
+        background-color $list-content-row-bg-color-alt
+
+      span
+        display block
+        margin-bottom .5em
+        text-align center
+
+        +above(l)
+          display flex
+          align-items center
+          margin 0
+          justify-content left
+
+        &.title
+          +above(l)
+            lost-column 14/36
+
+        &.date
+          font-size $list-content-row-text-size-desktop-alt
+          font-weight $list-content-row-text-weight-alt
+          +above(l)
+            lost-column 8/36
+            justify-content center
+
+        &.actions
+          +above(l)
+            lost-column 14/36
+            lost-flex-container: row
+            align-items: center
+            justify-content: space-between
+
+      a
+        button()
+        font-size rem(9.875px)
+        padding-top rem(19px)
+        padding-bottom rem(19.5px)
+        min-width rem(155px)
+
+        +above(l)
+          flex 0 0 47.5%
+          margin-left: auto
+          min-width auto
+
+
+
+

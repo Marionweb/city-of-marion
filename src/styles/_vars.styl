@@ -561,6 +561,43 @@ $module-process-text-size-desktop = rem(14px)
 
 
 // ------------------------------------------------------
+// ------ LAYOUT
+// ------ LIST
+
+$list-intro-headline-font = $sans-serif-headline
+$list-intro-headline-transform = uppercase
+$list-intro-headline-color = $navy
+$list-intro-headline-size-mobile = rem(36px)
+$list-intro-headline-size-desktop = rem(60px)
+
+$list-intro-subheadline-font = $sans-serif
+$list-intro-subheadline-transform = normal
+$list-intro-subheadline-color = $light-blue
+$list-intro-subheadline-size-mobile = rem(21px)
+$list-intro-subheadline-size-desktop = rem(32px)
+
+
+$list-intro-text-size-mobile = rem(18px)
+$list-intro-text-size-desktop = rem(18px)
+$list-intro-text-color = $navy
+
+$list-content-row-bg-color = $light-gray
+$list-content-row-bg-color-alt = $background-gray
+$list-content-row-text-color = $navy
+$list-content-row-text-weight = 700
+$list-content-row-text-weight-alt = 400
+$list-content-row-text-size-mobile = rem(24px)
+$list-content-row-text-size-mobile-alt = rem(18px)
+$list-content-row-text-size-desktop = rem(24px)
+$list-content-row-text-size-desktop-alt = rem(18px)
+
+$list-content-row-padding-mobile = rem(31px) rem(15px) rem(30px)
+$list-content-row-padding-desktop-sides = 'calc(%s * (-%s/%s * -%s) - (%s - %s * (-%s/%s * -%s)) + %s)' % (99.9% 1 36 1 30px 30px 1 36 1 30px)
+$list-content-row-padding-desktop = rem(14.5px) $list-content-row-padding-desktop-sides
+// calc(99.9% * (-2/36 * -1) - (30px - 30px * (-2/36 * -1)) + 30px)
+
+
+// ------------------------------------------------------
 // ------ FORMS
 
 $input-border-width = $border-width-base

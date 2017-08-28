@@ -1,4 +1,42 @@
-{% set category = craft.app.request.getSegment(3) %}
+{#
+    Minutes & Agendas Year List
+#}
+
+{% extends "layouts/type/_list" %}
+
+{% block listContent %}
+
+{% set slug = craft.app.request.getSegment(3) %}
+{% set landing = craft.entries.section('minutesAgendasLanding').one() %}
+{% set board = craft.entries.section('boards').slug(slug).one() %}
+
 {% set year = craft.app.request.getSegment(4) %}
 
-{{ category }} // {{ year }}
+{% set params = {
+  section : 'minutesAgendas',
+  orderBy : 'meetingDate desc',
+  meetingDate : 'and, >= ' ~ year ~ '-01-01, < ' ~ (year + 1) ~ '-01-01',
+  relatedTo: board
+} %}
+
+{% for meeting in craft.entries(params).all() %}
+
+{% set minutes = meeting.minutesPdf.one() %}
+{% set agenda = meeting.agendaPdf.one() %}
+<li{% if meeting.minutesPdf | length %} data-minutes="true"{% endif %}{% if meeting.agendaPdf | length %} data-agenda="true"{% endif %}>
+  <span class="title">{{ meeting.title }}</span>
+  <span class="date">{{ meeting.meetingDate | date('m/d/Y') }}</span>
+  <span class="actions">
+    {% if meeting.agendaPdf | length %}<a href="{{ agenda.url }}" title="Download the meeting agenda for {{ meeting.title }}" target="_blank">View Agenda</a>{% endif %}
+    {% if meeting.minutesPdf | length %}<a href="{{ minutes.url }}" title="Download the meeting minutes for {{ meeting.title }}" target="_blank">View Minutes</a>{% endif %}
+  </span>
+</li>
+
+{% endfor %}
+
+{% endblock %}
+
+
+
+
+
