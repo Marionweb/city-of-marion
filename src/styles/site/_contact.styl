@@ -7,7 +7,8 @@
 
   #contact--address-data
   #contact--address-map
-    lost-column 18/36 2 0
+    +above(m)
+      lost-column 18/36 2 0
 
 #contact--address-data
 
@@ -48,6 +49,12 @@
 
 #contact--address-map
   position relative
+  height 0
+  padding-bottom 100%
+
+  +above(m)
+    height auto
+    padding-bottom 0
 
   > #map
     position absolute
