@@ -28,6 +28,8 @@ return [
 
         // Enable CSRF Protection (recommended, will be enabled by default in Craft 3)
         'enableCsrfProtection' => true,
+
+        'googleApiKey' => getenv('CRAFTENV_GOOGLE_API_KEY'),
     ],
 
     // Live (production) environment

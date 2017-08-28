@@ -1,0 +1,68 @@
+.page-section--contact.page-type--landing .parallax__layer--base
+  background-color $white
+
+#contact--address
+  +above(m)
+    lost-flex-container: row
+
+  #contact--address-data
+  #contact--address-map
+    lost-column 18/36 2 0
+
+#contact--address-data
+
+  font-size $contact-page-address-section-size
+  color $contact-page-address-section-color
+  font-family $contact-page-address-section-font
+  text-transform $contact-page-address-section-transform
+  text-align center
+  padding-top rem(88.5px)
+  padding-bottom rem(108.5px)
+
+  +above(m)
+    padding-top rem(94px)
+    padding-bottom rem(115px)
+
+  figure
+    display block
+    margin 0 auto
+    width rem(100px)
+
+  > h4
+    font-size $contact-page-address-section-title-size
+    color $contact-page-address-section-title-color
+    font-family $contact-page-address-section-title-font
+    font-weight $contact-page-address-section-title-weight
+    text-transform $contact-page-address-section-title-transform
+
+  > span[itemprop="name"]
+    font-weight $contact-page-address-section-title-weight
+
+  .phone ~ a
+    margin-top rem(43.5px)
+
+.phone ~ a
+#contact--address-map > a
+  button()
+  min-width rem(220px)
+
+#contact--address-map
+  position relative
+
+  > #map
+    position absolute
+    top 0
+    bottom 0
+    left 0
+    right 0
+    z-index 0
+
+  > a
+    position absolute
+    z-index 1
+    bottom rem(52.5px)
+    left 50%
+    transform translateX(-110px)
+
+    +above(m)
+      bottom rem(115px)

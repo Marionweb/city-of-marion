@@ -2,13 +2,532 @@
     Contact Landing Template
 #}
 
-{% extends "layouts/base/_base" %}
+{% extends "layouts/base/_base_parallax" %}
 
 {% set title = entry.title %}
+{% set type = 'landing' %}
 
-{# HTML #}
+{# Get building #}
+{% set building = entry.building.one() %}
+
+{# Get hours from entry #}
+{% set hoursOfOperation = entry.hoursOfOperation %}
+
+{# Set up our array of weekdays #}
+{% set days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'] %}
+{% set daysShort = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'] %}
+{% set daysInitial = ['S', 'M', 'T', 'W', 'T', 'F', 'S'] %}
+
+{# Setup a new array operationHours to hold all you hashes
+   and prev variables to compare things to in the loop
+ #}
+{% set operationHours, prevDays, prevDaysShort, prevOpen, prevClose = [],[],[],"","" %}
+
+{# Check to see if a preference has been set to change the default week start day from Sunday to Monday #}
+{% set startDay = currentUser.getPreference('weekStartDay') ?? craft.app.config.general.defaultWeekStartDay %}
+{% if startDay != 0 %}
+  {% set days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'] %}
+  {% set daysShort = ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'] %}
+  {% set daysInitial = ['M', 'T', 'W', 'T', 'F', 'S', 'S'] %}
+  {% set hoursOfOperation = entry.hoursOfOperation|slice(1,entry.hoursOfOperation|length)|merge(entry.hoursOfOperation|slice(0,1)) %}
+{% endif %}
+
+{# Loop thru the Hours of Operation field and build the operationHours array #}
+{% for item in hoursOfOperation %}
+
+  {# in the first loop, setup the prevOpen and prevClose variables  #}
+  {% if loop.first %}
+    {% set prevOpen, prevClose = item.open, item.close %}
+  {% endif %}
+
+  {# If the prev hours match the current item's hours,
+     add that day's name to the array of prev days, ["Monday","Tuesday"] etc.
+   #}
+  {% if prevOpen == item.open and prevClose == item.close %}
+    {% set prevDays = prevDays|merge([days[loop.index0]]) %}
+    {% set prevDaysShort = prevDaysShort|merge([daysShort[loop.index0]]) %}
+
+  {# If it doesn't match, add prev variables as a hash to the operationHours array,
+     Then set all prev variables with current item
+   #}
+  {% else %}
+
+    {% set operationHours = operationHours|merge([{
+      "days" : prevDays,
+      "daysShort" : prevDaysShort,
+      "open" : prevOpen,
+      "close" : prevClose
+    }]) %}
+
+    {% set prevDays = [days[loop.index0]] %}
+    {% set prevDaysShort = [daysShort[loop.index0]] %}
+    {% set prevOpen = item.open %}
+    {% set prevClose = item.close %}
+
+  {% endif %}
+
+  {# If last loop, add prev variables as a hash to the operationHours array
+     because there won't be another loop to compare it to.
+   #}
+  {% if loop.last %}
+    {% set operationHours = operationHours|merge([{
+      "days" : prevDays,
+      "daysShort" : prevDaysShort,
+      "open" : prevOpen,
+      "close" : prevClose
+    }]) %}
+  {% endif %}
+
+{% endfor %}
+
+
+
+
+
+
+
+
+{# HEADER IMAGE #}
+{% block parallaxBack %}
+  {% if entry.primaryImage.count() %}{% include "modules/content/_header-block" %}{% endif %}
+{% endblock %}
+
+
+{# MAIN COLUMN CONTENT #}
 {% block content %}
 
-<h1>{{ entry.title }}</h1>
+<section id="contact--address">
+
+  <div id="contact--address-data" itemscope itemtype="http://schema.org/GovernmentBuilding">
+
+    {% if logo.logoIcon.count() %}
+    <figure id="contact--logo-icon">
+      {% set logo = logo.logoIcon.one() %}
+      {% set path = logo.volume.path ~ '/' ~ logo.filename %}
+      {{ craft.inlin.er(path, true) | raw }}
+    </figure>
+    {% endif %}
+
+    <h4>Address</h4>
+    <span itemprop="name">{{ building.title }}</span>
+    <div class="address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+      <span itemprop="streetAddress">{{ building.buildingAddress.addressLine2 }}</span><br>
+      <span itemprop="addressLocality">{{ building.buildingAddress.locality }}</span>,
+      <span itemprop="addressRegion">{{ building.buildingAddress.administrativeArea }}</span>
+      <span itemprop="postalCode">{{ building.buildingAddress.postalCode }}</span>
+    </div>
+
+    <h4>Office Hours</h4>
+    {% for item in operationHours %}
+    <div class="hours">
+      {% if item.open|length and item.close|length %}
+        <meta itemprop="openingHours"
+          content="{{ item.daysShort|join(',') }} {{ item.open.time|date('H:i') }}-{{ item.close.time|date('H:i') }}">
+          {{ item.daysShort|first }}{% if item.daysShort|length > 1 %}-{{ item.daysShort|last }}{% endif %}<br>
+          {{ item.open.time|date('g:ia') }}-{{ item.close.time|date('g:ia') }}
+      {% else %}
+        <meta class="hours__hours" itemprop="openingHours"
+          content="{{ item.daysShort|join(',') }} Closed">
+          Closed {{ item.daysShort|first }}{% if item.daysShort|length > 1 %}-{{ item.daysShort|last }}{% endif %}
+      {% endif %}
+    </div>
+    {% endfor %}
+
+    {% if entry.phone %}
+    <h4>Phone</h4>
+    <div class="phone">
+      {% set phoneLength = entry.phone.phoneNumber|length %}
+      {% set newLength = phoneLength - 10 %}
+      {% set unformattedNumber = entry.phone.phoneNumber|slice(newLength, phoneLength) %}
+      {% set areaCode = unformattedNumber|slice(0, 3) %}
+      {% set phoneSliceA = unformattedNumber|slice(3, 3) %}
+      {% set phoneSliceB = unformattedNumber|slice(6, 4) %}
+      <span itemprop="telephone">{{ '(' ~ areaCode ~ ') ' ~ phoneSliceA ~ '-' ~ phoneSliceB }}</span>
+    </div>
+    {% endif %}
+
+    <a href="craft.entries.section('directoryLanding').one().url" title="Staff Directory">Staff Directory</a>
+
+  </div>
+
+  <div id="contact--address-map">
+    <div id="map"></div>
+    <a href="{{building.buildingAddress.mapUrl}}" target="_blank" title="Get Directions to {{ building.title }}">Directions</a>
+  </div>
+
+</section>
+
+<section id="contact--info-request">
+
+</section>
+
+<section id="contact--form">
+
+</section>
+
+
+
+
+{% set mapsJs %}
+{% minify js %}
+'use strict';
+
+//Google Maps JS
+//Set Map
+function initialize() {
+    var myLatlng = new google.maps.LatLng({{building.buildingAddress.latitude}},{{building.buildingAddress.longitude}});
+    var imagePath = 'http://m.schuepfen.ch/icons/helveticons/black/60/Pin-location.png';
+
+    var icon = {
+        path: "M37,53 C28.6,53 21.7,46.2 21.7,37.7 C21.7,29.3 28.5,22.4 37,22.4 C45.4,22.4 52.3,29.2 52.3,37.7 C52.3,46.1 45.4,53 37,53 M37,0 L37,0 C16.6,0 0,16.8 0,37.4 C0,55.9 37,100 37,100 C37,100 74,58.5 74,37.4 C74,16.8 57.4,0 37,0",
+        fillColor: '#033762',
+        fillOpacity: 1,
+        {# anchor: new google.maps.Point({{building.buildingAddress.latitude}},{{building.buildingAddress.longitude}}), #}
+        strokeWeight: 0,
+        scale: .6,
+        size: new google.maps.Size(49, 65.5),
+        origin: new google.maps.Point(0, 0),
+        anchor: new google.maps.Point(49, 106),
+    }
+
+    var mapOptions = {
+      zoom: 13,
+      center: myLatlng,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+
+      {# lets mimic an image #}
+      disableDefaultUI: true,
+      scrollwheel: false,
+      navigationControl: false,
+      mapTypeControl: false,
+      scaleControl: false,
+      draggable: false,
+
+      styles: [
+        {
+          "featureType": "administrative.country",
+          "stylers": [
+            {
+              "visibility": "off"
+            }
+          ]
+        },
+        {
+          "featureType": "administrative.land_parcel",
+          "stylers": [
+            {
+              "visibility": "off"
+            }
+          ]
+        },
+        {
+          "featureType": "administrative.land_parcel",
+          "elementType": "labels",
+          "stylers": [
+            {
+              "visibility": "off"
+            }
+          ]
+        },
+        {
+          "featureType": "administrative.locality",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#063c68"
+            },
+            {
+              "visibility": "on"
+            }
+          ]
+        },
+        {
+          "featureType": "administrative.locality",
+          "elementType": "labels.text.stroke",
+          "stylers": [
+            {
+              "color": "#ffffff"
+            },
+            {
+              "visibility": "on"
+            },
+            {
+              "weight": 3
+            }
+          ]
+        },
+        {
+          "featureType": "administrative.neighborhood",
+          "stylers": [
+            {
+              "visibility": "off"
+            }
+          ]
+        },
+        {
+          "featureType": "administrative.province",
+          "stylers": [
+            {
+              "visibility": "off"
+            }
+          ]
+        },
+        {
+          "featureType": "landscape.man_made",
+          "elementType": "geometry.fill",
+          "stylers": [
+            {
+              "color": "#d6ecff"
+            }
+          ]
+        },
+        {
+          "featureType": "landscape.natural",
+          "elementType": "geometry.fill",
+          "stylers": [
+            {
+              "color": "#ddefff"
+            }
+          ]
+        },
+        {
+          "featureType": "poi",
+          "elementType": "geometry.fill",
+          "stylers": [
+            {
+              "color": "#b1dbff"
+            }
+          ]
+        },
+        {
+          "featureType": "poi",
+          "elementType": "labels.text",
+          "stylers": [
+            {
+              "visibility": "off"
+            }
+          ]
+        },
+        {
+          "featureType": "poi.attraction",
+          "stylers": [
+            {
+              "visibility": "off"
+            }
+          ]
+        },
+        {
+          "featureType": "poi.business",
+          "stylers": [
+            {
+              "visibility": "off"
+            }
+          ]
+        },
+        {
+          "featureType": "poi.government",
+          "stylers": [
+            {
+              "visibility": "off"
+            }
+          ]
+        },
+        {
+          "featureType": "poi.medical",
+          "stylers": [
+            {
+              "visibility": "off"
+            }
+          ]
+        },
+        {
+          "featureType": "poi.park",
+          "elementType": "geometry.fill",
+          "stylers": [
+            {
+              "color": "#9dd1fc"
+            }
+          ]
+        },
+        {
+          "featureType": "poi.park",
+          "elementType": "labels.text",
+          "stylers": [
+            {
+              "visibility": "off"
+            }
+          ]
+        },
+        {
+          "featureType": "poi.place_of_worship",
+          "stylers": [
+            {
+              "visibility": "off"
+            }
+          ]
+        },
+        {
+          "featureType": "poi.school",
+          "stylers": [
+            {
+              "visibility": "off"
+            }
+          ]
+        },
+        {
+          "featureType": "poi.sports_complex",
+          "stylers": [
+            {
+              "visibility": "off"
+            }
+          ]
+        },
+        {
+          "featureType": "road.arterial",
+          "elementType": "labels",
+          "stylers": [
+            {
+              "visibility": "off"
+            }
+          ]
+        },
+        {
+          "featureType": "road.highway",
+          "elementType": "geometry.fill",
+          "stylers": [
+            {
+              "color": "#cae6ff"
+            },
+            {
+              "visibility": "on"
+            }
+          ]
+        },
+        {
+          "featureType": "road.highway",
+          "elementType": "geometry.stroke",
+          "stylers": [
+            {
+              "color": "#a2d3fb"
+            },
+            {
+              "visibility": "on"
+            }
+          ]
+        },
+        {
+          "featureType": "road.highway",
+          "elementType": "labels",
+          "stylers": [
+            {
+              "visibility": "simplified"
+            }
+          ]
+        },
+        {
+          "featureType": "road.highway",
+          "elementType": "labels.text",
+          "stylers": [
+            {
+              "visibility": "off"
+            }
+          ]
+        },
+        {
+          "featureType": "road.highway.controlled_access",
+          "stylers": [
+            {
+              "visibility": "off"
+            }
+          ]
+        },
+        {
+          "featureType": "road.local",
+          "stylers": [
+            {
+              "visibility": "off"
+            }
+          ]
+        },
+        {
+          "featureType": "road.local",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "visibility": "off"
+            }
+          ]
+        },
+        {
+          "featureType": "road.local",
+          "elementType": "labels",
+          "stylers": [
+            {
+              "visibility": "off"
+            }
+          ]
+        },
+        {
+          "featureType": "transit",
+          "stylers": [
+            {
+              "color": "#bfe2ff"
+            },
+            {
+              "visibility": "simplified"
+            }
+          ]
+        },
+        {
+          "featureType": "water",
+          "elementType": "geometry.fill",
+          "stylers": [
+            {
+              "color": "#b1dbff"
+            }
+          ]
+        }
+      ]
+    }
+
+  var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+  {# //Callout Content
+  var contentString = 'Some address here..';
+
+  //Set window width + content
+  var infowindow = new google.maps.InfoWindow({
+    content: contentString,
+    maxWidth: 500
+  }); #}
+
+  //Add Marker
+  var marker = new google.maps.Marker({
+    position: myLatlng,
+    map: map,
+    icon: icon,
+    title: 'City of Marion',
+    zIndex : -20
+  });
+
+  {# google.maps.event.addListener(marker, 'click', function() {
+    infowindow.open(map,marker);
+  }); #}
+
+  //Resize Function
+  google.maps.event.addDomListener(window, "resize", function() {
+    var center = map.getCenter();
+    google.maps.event.trigger(map, "resize");
+    map.setCenter(center);
+  });
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+{% endminify %}
+{% endset %}
+
+{% do view.registerJsFile('//maps.googleapis.com/maps/api/js?key=' ~ craft.app.config.general.googleApiKey ~ '&v=3.exp') %}
+
+{% js mapsJs %}
 
 {% endblock %}

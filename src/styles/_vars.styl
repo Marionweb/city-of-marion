@@ -379,6 +379,91 @@ $button-transform = uppercase
 $button-padding = rem(28.5px)
 $button-hover-background = $medium-blue
 
+
+// ------------------------------------------------------
+// ------ FORMS
+
+$input-border-width = $border-width-base
+$input-border-color = $medium-gray
+$input-border-color-hover = $navy
+$input-border-color-active = $light-blue
+$input-border-color-outline = $input-border-color-active
+
+//== Forms
+//
+//##
+//** `<input>` background color
+$input-bg = rgb(255, 255, 255, 1)
+//** `<input disabled>` background color
+$input-bg-disabled = $background-gray
+//** Text color for `<input>`s
+$input-color = $navy
+$input-font = $sans-serif
+//** `<input>` border color
+$input-border = rgb(204, 204, 204, 1)
+//** `<input>` border radius
+$input-border-radius = $border-radius-base
+//** Border color for inputs on focus
+$input-border-focus = rgb(102, 175, 233, 1)
+//** Placeholder text color
+$input-color-placeholder = $light-silver
+//** Default `.form-control` height
+$input-height-base = (($line-height-computed + ($padding-base-vertical * 2)) + 2)
+//** Large `.form-control` height
+$input-height-large = ((ceil(($font-size-large * $line-height-large)) + ($padding-large-vertical * 2)) + 2)
+//** Small `.form-control` height
+$input-height-small = ((floor(($font-size-small * $line-height-small)) + ($padding-small-vertical * 2)) + 2)
+$legend-color = $dark-gray
+$legend-border-color = rgb(229, 229, 229, 1)
+//** Background color for textual input addons
+$input-group-addon-bg = $background-gray
+//** Border color for textual input addons
+$input-group-addon-border-color = input-border
+//== Dropdowns
+//
+//## Dropdown menu container and contents.
+//** Background for the dropdown menu.
+$dropdown-bg = rgb(255, 255, 255, 1)
+//** Dropdown menu `border-color`.
+$dropdown-border = rgba(0, 0, 0, 0.15)
+//** Dropdown menu `border-color` **for IE8**.
+$dropdown-fallback-border = rgb(204, 204, 204, 1)
+//** Divider color for between dropdown items.
+$dropdown-divider-bg = rgb(229, 229, 229, 1)
+//** Dropdown link text color.
+$dropdown-link-color = $dark-gray
+//** Hover color for dropdown links.
+$dropdown-link-hover-color = darken($dark-gray, 5%)
+//** Hover background for dropdown links.
+$dropdown-link-hover-bg = rgb(245, 245, 245, 1)
+//** Active dropdown menu item text color.
+$dropdown-link-active-color = $white
+//** Active dropdown menu item background color.
+$dropdown-link-active-bg = $light-blue
+//** Disabled dropdown menu item background color.
+$dropdown-link-disabled-color = $light-gray
+//** Text color for headers within dropdown menus.
+$dropdown-header-color = $light-gray
+// Note: Deprecated @dropdown-caret-color as of v3.1.0
+$dropdown-caret-color = rgb(0, 0, 0, 1)
+
+//== Form states and alerts
+//
+//## Define colors for form feedback states and, by default, alerts.
+$state-success-text = rgb(60, 118, 61, 1)
+$state-success-bg = rgb(223, 240, 216, 1)
+$state-success-border = darken(spin($state-success-bg, -10), 5%)
+$state-info-text = rgb(49, 112, 143, 1)
+$state-info-bg = rgb(217, 237, 247, 1)
+$state-info-border = darken(spin($state-info-bg, -10), 7%)
+$state-warning-text = rgb(138, 109, 59, 1)
+$state-warning-bg = rgb(252, 248, 227, 1)
+$state-warning-border = darken(spin($state-warning-bg, -10), 5%)
+$state-danger-text = rgb(169, 68, 66, 1)
+$state-danger-bg = rgb(242, 222, 222, 1)
+$state-danger-border = darken(spin($state-danger-bg, -10), 5%)
+
+
 // ------------------------------------------------------
 // ------ HOMEPAGE
 
@@ -584,8 +669,8 @@ $list-intro-text-color = $navy
 $list-content-row-bg-color = $background-gray
 $list-content-row-bg-color-alt = $white
 $list-content-row-text-color = $navy
-$list-content-row-text-weight = 700
-$list-content-row-text-weight-alt = 400
+$list-content-row-text-weight = $font-weight.bold
+$list-content-row-text-weight-alt = $font-weight.normal
 $list-content-row-text-size-mobile = rem(24px)
 $list-content-row-text-size-mobile-alt = rem(18px)
 $list-content-row-text-size-desktop = rem(24px)
@@ -598,84 +683,16 @@ $list-content-row-padding-desktop = rem(14.5px) $list-content-row-padding-deskto
 
 
 // ------------------------------------------------------
-// ------ FORMS
+// ------ CONTACT PAGE
 
-$input-border-width = $border-width-base
-$input-border-color = $medium-gray
-$input-border-color-hover = $navy
-$input-border-color-active = $light-blue
-$input-border-color-outline = $input-border-color-active
+$contact-page-address-section-title-size = rem(18px)
+$contact-page-address-section-title-color = $light-blue
+$contact-page-address-section-title-font = $sans-serif-headline
+$contact-page-address-section-title-weight = $font-weight.bold
+$contact-page-address-section-title-transform = uppercase
 
-//== Forms
-//
-//##
-//** `<input>` background color
-$input-bg = rgb(255, 255, 255, 1)
-//** `<input disabled>` background color
-$input-bg-disabled = $background-gray
-//** Text color for `<input>`s
-$input-color = $navy
-$input-font = $sans-serif
-//** `<input>` border color
-$input-border = rgb(204, 204, 204, 1)
-//** `<input>` border radius
-$input-border-radius = $border-radius-base
-//** Border color for inputs on focus
-$input-border-focus = rgb(102, 175, 233, 1)
-//** Placeholder text color
-$input-color-placeholder = $light-silver
-//** Default `.form-control` height
-$input-height-base = (($line-height-computed + ($padding-base-vertical * 2)) + 2)
-//** Large `.form-control` height
-$input-height-large = ((ceil(($font-size-large * $line-height-large)) + ($padding-large-vertical * 2)) + 2)
-//** Small `.form-control` height
-$input-height-small = ((floor(($font-size-small * $line-height-small)) + ($padding-small-vertical * 2)) + 2)
-$legend-color = $dark-gray
-$legend-border-color = rgb(229, 229, 229, 1)
-//** Background color for textual input addons
-$input-group-addon-bg = $background-gray
-//** Border color for textual input addons
-$input-group-addon-border-color = input-border
-//== Dropdowns
-//
-//## Dropdown menu container and contents.
-//** Background for the dropdown menu.
-$dropdown-bg = rgb(255, 255, 255, 1)
-//** Dropdown menu `border-color`.
-$dropdown-border = rgba(0, 0, 0, 0.15)
-//** Dropdown menu `border-color` **for IE8**.
-$dropdown-fallback-border = rgb(204, 204, 204, 1)
-//** Divider color for between dropdown items.
-$dropdown-divider-bg = rgb(229, 229, 229, 1)
-//** Dropdown link text color.
-$dropdown-link-color = $dark-gray
-//** Hover color for dropdown links.
-$dropdown-link-hover-color = darken($dark-gray, 5%)
-//** Hover background for dropdown links.
-$dropdown-link-hover-bg = rgb(245, 245, 245, 1)
-//** Active dropdown menu item text color.
-$dropdown-link-active-color = $white
-//** Active dropdown menu item background color.
-$dropdown-link-active-bg = $light-blue
-//** Disabled dropdown menu item background color.
-$dropdown-link-disabled-color = $light-gray
-//** Text color for headers within dropdown menus.
-$dropdown-header-color = $light-gray
-// Note: Deprecated @dropdown-caret-color as of v3.1.0
-$dropdown-caret-color = rgb(0, 0, 0, 1)
+$contact-page-address-section-size = rem(18px)
+$contact-page-address-section-color = $navy
+$contact-page-address-section-font = $sans-serif
+$contact-page-address-section-transform = normal
 
-//== Form states and alerts
-//
-//## Define colors for form feedback states and, by default, alerts.
-$state-success-text = rgb(60, 118, 61, 1)
-$state-success-bg = rgb(223, 240, 216, 1)
-$state-success-border = darken(spin($state-success-bg, -10), 5%)
-$state-info-text = rgb(49, 112, 143, 1)
-$state-info-bg = rgb(217, 237, 247, 1)
-$state-info-border = darken(spin($state-info-bg, -10), 7%)
-$state-warning-text = rgb(138, 109, 59, 1)
-$state-warning-bg = rgb(252, 248, 227, 1)
-$state-warning-border = darken(spin($state-warning-bg, -10), 5%)
-$state-danger-text = rgb(169, 68, 66, 1)
-$state-danger-bg = rgb(242, 222, 222, 1)
-$state-danger-border = darken(spin($state-danger-bg, -10), 5%)
