@@ -1820,16 +1820,16 @@
         },
         {
             "name": "dukt/videos",
-            "version": "2.0.0-beta.1",
+            "version": "2.0.0-beta.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dukt/videos.git",
-                "reference": "0cc280badea7ca7c303338a9344db54a1c319913"
+                "reference": "fa8ebd16576109f6986cce7bae35f92efcb337ea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dukt/videos/zipball/0cc280badea7ca7c303338a9344db54a1c319913",
-                "reference": "0cc280badea7ca7c303338a9344db54a1c319913",
+                "url": "https://api.github.com/repos/dukt/videos/zipball/fa8ebd16576109f6986cce7bae35f92efcb337ea",
+                "reference": "fa8ebd16576109f6986cce7bae35f92efcb337ea",
                 "shasum": ""
             },
             "require": {
@@ -1866,7 +1866,7 @@
                 "vimeo",
                 "youtube"
             ],
-            "time": "2017-08-25T15:24:58+00:00"
+            "time": "2017-08-27T22:50:48+00:00"
         },
         {
             "name": "embed/embed",
