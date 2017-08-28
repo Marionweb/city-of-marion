@@ -36,7 +36,7 @@
 
   {% elseif block.type == "video" %}
     <div class="embed-container type-video">
-      {% set video = craft.videos.getVideoByUrl(block.video) %}
+      {% set video = block.video %}
 
       {{video.embed({ width: 1280, height: 720, autoplay: false, default_size: false, iframeClass: 'lazyload', theme: 'light', rel: false })}}
 
@@ -49,9 +49,8 @@
       {# VIDEO #}
 
       <div class="embed-container type-video {{block.embedUrl.embedData.providerName|lower|kebab}}">
-        {% set videoEmbed = craft.videos.getVideoByUrl(block.embedUrl.embedData.url) %}
-
-        {{videoEmbed.embed({ width: 1280, height: 720, autoplay: false, default_size: false, iframeClass: 'lazyload', theme: 'light', rel: false })}}
+        {% set videoUrl = block.embedUrl.embedData.url %}
+        {{craft.videos.embed(videoUrl, { width: 1280, height: 720, autoplay: false, default_size: false, iframeClass: 'lazyload', theme: 'light', rel: false })}}
 
       </div>
 
