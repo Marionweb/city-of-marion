@@ -116,16 +116,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.35.0",
+            "version": "3.35.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "e9691180888d2679b24cbad1f805e48aadd1a346"
+                "reference": "47856d436ad8eb172c43c88b1861cd645882de56"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/e9691180888d2679b24cbad1f805e48aadd1a346",
-                "reference": "e9691180888d2679b24cbad1f805e48aadd1a346",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/47856d436ad8eb172c43c88b1861cd645882de56",
+                "reference": "47856d436ad8eb172c43c88b1861cd645882de56",
                 "shasum": ""
             },
             "require": {
@@ -192,7 +192,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2017-08-25T23:24:46+00:00"
+            "time": "2017-08-31T21:23:59+00:00"
         },
         {
             "name": "bower-asset/behave.js",
@@ -1629,20 +1629,20 @@
         },
         {
             "name": "dukt/facebook",
-            "version": "2.0.0-beta.2",
+            "version": "2.0.0-beta.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dukt/facebook.git",
-                "reference": "cbf0828604420f63ec3b13beefff941019dca427"
+                "reference": "ce5688b56367a29a940a514ff0cd562ad205c162"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dukt/facebook/zipball/cbf0828604420f63ec3b13beefff941019dca427",
-                "reference": "cbf0828604420f63ec3b13beefff941019dca427",
+                "url": "https://api.github.com/repos/dukt/facebook/zipball/ce5688b56367a29a940a514ff0cd562ad205c162",
+                "reference": "ce5688b56367a29a940a514ff0cd562ad205c162",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "~3.0.0-beta.1",
+                "craftcms/cms": "^3.0.0-beta.20",
                 "league/oauth2-client": "~2.2",
                 "league/oauth2-facebook": "~2.0"
             },
@@ -1651,8 +1651,8 @@
                 "name": "Facebook",
                 "handle": "facebook",
                 "schemaVersion": "1.0.0",
-                "documentationUrl": "https://dukt.net/facebook/docs",
-                "changelogUrl": "https://dukt.net/facebook/changelog.md?craft=3"
+                "documentationUrl": "https://github.com/dukt/facebook/tree/docs",
+                "changelogUrl": "https://raw.githubusercontent.com/dukt/facebook/master/CHANGELOG.md"
             },
             "autoload": {
                 "psr-4": {
@@ -1675,7 +1675,7 @@
                 "craftcms",
                 "facebook"
             ],
-            "time": "2017-04-05T10:20:08+00:00"
+            "time": "2017-09-01T12:31:53+00:00"
         },
         {
             "name": "dukt/oauth2-google",
@@ -1769,16 +1769,16 @@
         },
         {
             "name": "dukt/twitter",
-            "version": "2.0.0-beta.3",
+            "version": "2.0.0-beta.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dukt/twitter.git",
-                "reference": "474c82ea9b1f9ffb63c8d5a8b91bfc90cd302285"
+                "reference": "c492ad978928c3b54a211b7a68c24c793c1e01ce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dukt/twitter/zipball/474c82ea9b1f9ffb63c8d5a8b91bfc90cd302285",
-                "reference": "474c82ea9b1f9ffb63c8d5a8b91bfc90cd302285",
+                "url": "https://api.github.com/repos/dukt/twitter/zipball/c492ad978928c3b54a211b7a68c24c793c1e01ce",
+                "reference": "c492ad978928c3b54a211b7a68c24c793c1e01ce",
                 "shasum": ""
             },
             "require": {
@@ -1792,8 +1792,8 @@
                 "name": "Twitter",
                 "handle": "twitter",
                 "schemaVersion": "1.0.0",
-                "documentationUrl": "https://dukt.net/twitter/docs",
-                "changelogUrl": "https://dukt.net/twitter/changelog.md?craft=3"
+                "documentationUrl": "https://github.com/dukt/twitter/tree/docs",
+                "changelogUrl": "https://raw.githubusercontent.com/dukt/twitter/master/CHANGELOG.md"
             },
             "autoload": {
                 "psr-4": {
@@ -1816,7 +1816,7 @@
                 "craftcms",
                 "twitter"
             ],
-            "time": "2017-07-18T15:25:14+00:00"
+            "time": "2017-09-01T11:09:51+00:00"
         },
         {
             "name": "dukt/videos",
@@ -5109,20 +5109,20 @@
         },
         {
             "name": "symfony/console",
-            "version": "v3.3.6",
+            "version": "v3.3.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "b0878233cb5c4391347e5495089c7af11b8e6201"
+                "reference": "d6596cb5022b6a0bd940eae54a1de78646a5fda6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/b0878233cb5c4391347e5495089c7af11b8e6201",
-                "reference": "b0878233cb5c4391347e5495089c7af11b8e6201",
+                "url": "https://api.github.com/repos/symfony/console/zipball/d6596cb5022b6a0bd940eae54a1de78646a5fda6",
+                "reference": "d6596cb5022b6a0bd940eae54a1de78646a5fda6",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.5.9",
+                "php": "^5.5.9|>=7.0.8",
                 "symfony/debug": "~2.8|~3.0",
                 "symfony/polyfill-mbstring": "~1.0"
             },
@@ -5135,7 +5135,6 @@
                 "symfony/dependency-injection": "~3.3",
                 "symfony/event-dispatcher": "~2.8|~3.0",
                 "symfony/filesystem": "~2.8|~3.0",
-                "symfony/http-kernel": "~2.8|~3.0",
                 "symfony/process": "~2.8|~3.0"
             },
             "suggest": {
@@ -5174,24 +5173,24 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2017-07-29T21:27:59+00:00"
+            "time": "2017-08-27T14:52:21+00:00"
         },
         {
             "name": "symfony/debug",
-            "version": "v3.3.6",
+            "version": "v3.3.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
-                "reference": "7c13ae8ce1e2adbbd574fc39de7be498e1284e13"
+                "reference": "084d804fe35808eb2ef596ec83d85d9768aa6c9d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/debug/zipball/7c13ae8ce1e2adbbd574fc39de7be498e1284e13",
-                "reference": "7c13ae8ce1e2adbbd574fc39de7be498e1284e13",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/084d804fe35808eb2ef596ec83d85d9768aa6c9d",
+                "reference": "084d804fe35808eb2ef596ec83d85d9768aa6c9d",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.5.9",
+                "php": "^5.5.9|>=7.0.8",
                 "psr/log": "~1.0"
             },
             "conflict": {
@@ -5230,24 +5229,24 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2017-07-28T15:27:31+00:00"
+            "time": "2017-08-27T14:52:21+00:00"
         },
         {
             "name": "symfony/dependency-injection",
-            "version": "v3.3.6",
+            "version": "v3.3.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dependency-injection.git",
-                "reference": "8d70987f991481e809c63681ffe8ce3f3fde68a0"
+                "reference": "2ac658972626c75cbde7b0067c84b988170a6907"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/8d70987f991481e809c63681ffe8ce3f3fde68a0",
-                "reference": "8d70987f991481e809c63681ffe8ce3f3fde68a0",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/2ac658972626c75cbde7b0067c84b988170a6907",
+                "reference": "2ac658972626c75cbde7b0067c84b988170a6907",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.5.9",
+                "php": "^5.5.9|>=7.0.8",
                 "psr/container": "^1.0"
             },
             "conflict": {
@@ -5300,24 +5299,24 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
-            "time": "2017-07-28T15:27:31+00:00"
+            "time": "2017-08-28T22:20:37+00:00"
         },
         {
             "name": "symfony/filesystem",
-            "version": "v3.3.6",
+            "version": "v3.3.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
-                "reference": "427987eb4eed764c3b6e38d52a0f87989e010676"
+                "reference": "b32a0e5f928d0fa3d1dd03c78d020777e50c10cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/427987eb4eed764c3b6e38d52a0f87989e010676",
-                "reference": "427987eb4eed764c3b6e38d52a0f87989e010676",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/b32a0e5f928d0fa3d1dd03c78d020777e50c10cb",
+                "reference": "b32a0e5f928d0fa3d1dd03c78d020777e50c10cb",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.5.9"
+                "php": "^5.5.9|>=7.0.8"
             },
             "type": "library",
             "extra": {
@@ -5349,24 +5348,24 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "https://symfony.com",
-            "time": "2017-07-11T07:17:58+00:00"
+            "time": "2017-07-29T21:54:42+00:00"
         },
         {
             "name": "symfony/finder",
-            "version": "v3.3.6",
+            "version": "v3.3.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "baea7f66d30854ad32988c11a09d7ffd485810c4"
+                "reference": "b2260dbc80f3c4198f903215f91a1ac7fe9fe09e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/baea7f66d30854ad32988c11a09d7ffd485810c4",
-                "reference": "baea7f66d30854ad32988c11a09d7ffd485810c4",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/b2260dbc80f3c4198f903215f91a1ac7fe9fe09e",
+                "reference": "b2260dbc80f3c4198f903215f91a1ac7fe9fe09e",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.5.9"
+                "php": "^5.5.9|>=7.0.8"
             },
             "type": "library",
             "extra": {
@@ -5398,24 +5397,24 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2017-06-01T21:01:25+00:00"
+            "time": "2017-07-29T21:54:42+00:00"
         },
         {
             "name": "symfony/intl",
-            "version": "v3.3.6",
+            "version": "v3.3.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/intl.git",
-                "reference": "a310b29a794578f544305f4f48e3f6c7981b606c"
+                "reference": "431a020d3e7061e3d9c90e2279ba47ee44962820"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/intl/zipball/a310b29a794578f544305f4f48e3f6c7981b606c",
-                "reference": "a310b29a794578f544305f4f48e3f6c7981b606c",
+                "url": "https://api.github.com/repos/symfony/intl/zipball/431a020d3e7061e3d9c90e2279ba47ee44962820",
+                "reference": "431a020d3e7061e3d9c90e2279ba47ee44962820",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.5.9",
+                "php": "^5.5.9|>=7.0.8",
                 "symfony/polyfill-intl-icu": "~1.0"
             },
             "require-dev": {
@@ -5473,24 +5472,24 @@
                 "l10n",
                 "localization"
             ],
-            "time": "2017-06-01T21:01:25+00:00"
+            "time": "2017-08-27T14:52:21+00:00"
         },
         {
             "name": "symfony/options-resolver",
-            "version": "v3.3.6",
+            "version": "v3.3.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/options-resolver.git",
-                "reference": "ff48982d295bcac1fd861f934f041ebc73ae40f0"
+                "reference": "ee4e22978fe885b54ee5da8c7964f0a5301abfb6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/options-resolver/zipball/ff48982d295bcac1fd861f934f041ebc73ae40f0",
-                "reference": "ff48982d295bcac1fd861f934f041ebc73ae40f0",
+                "url": "https://api.github.com/repos/symfony/options-resolver/zipball/ee4e22978fe885b54ee5da8c7964f0a5301abfb6",
+                "reference": "ee4e22978fe885b54ee5da8c7964f0a5301abfb6",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.5.9"
+                "php": "^5.5.9|>=7.0.8"
             },
             "type": "library",
             "extra": {
@@ -5527,7 +5526,7 @@
                 "configuration",
                 "options"
             ],
-            "time": "2017-04-12T14:14:56+00:00"
+            "time": "2017-07-29T21:54:42+00:00"
         },
         {
             "name": "symfony/polyfill-intl-icu",
@@ -5648,20 +5647,20 @@
         },
         {
             "name": "symfony/process",
-            "version": "v3.3.6",
+            "version": "v3.3.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "07432804942b9f6dd7b7377faf9920af5f95d70a"
+                "reference": "b7666e9b438027a1ea0e1ee813ec5042d5d7f6f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/07432804942b9f6dd7b7377faf9920af5f95d70a",
-                "reference": "07432804942b9f6dd7b7377faf9920af5f95d70a",
+                "url": "https://api.github.com/repos/symfony/process/zipball/b7666e9b438027a1ea0e1ee813ec5042d5d7f6f0",
+                "reference": "b7666e9b438027a1ea0e1ee813ec5042d5d7f6f0",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.5.9"
+                "php": "^5.5.9|>=7.0.8"
             },
             "type": "library",
             "extra": {
@@ -5693,7 +5692,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2017-07-13T13:05:09+00:00"
+            "time": "2017-07-29T21:54:42+00:00"
         },
         {
             "name": "tubalmartin/cssmin",
