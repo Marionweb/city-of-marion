@@ -62,6 +62,10 @@ docReady(function() {
   // END REMOVING FOCUS OUTLINE
 
 
+  // AUTOSIZE TEXTAREA FORM ELEMENTS
+  autosize(document.querySelectorAll('textarea'));
+
+
 });
 
 
