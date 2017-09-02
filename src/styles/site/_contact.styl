@@ -120,29 +120,27 @@
 
 
 
-    #contact--form--content
-      h1
-        font-size $contact-page-form-section-h1-size-mobile
-        +above(m)
-          font-size $contact-page-form-section-h1-size-desktop
-      p
-        font-size $contact-page-form-section-description-size-mobile
-        +above(m)
-          font-size $contact-page-form-section-description-size-desktop
-
-      form
-        margin-top rem(47.5px)
-        +above(m)
-          margin-top rem(58.5px)
-        label
-          font-size $contact-page-form-section-form-labels-size-mobile
-          +above(m)
-            font-size $contact-page-form-section-form-labels-size-mobile
-      .center
-        text-align center
-      textarea
-        resize: vertical
-
+  #contact--form--content
+    h1
+      font-size $contact-page-form-section-h1-size-mobile
       +above(m)
-        lost-column 14/36
-        lost-offset: 11/36
+        font-size $contact-page-form-section-h1-size-desktop
+    p
+      font-size $contact-page-form-section-description-size-mobile
+      +above(m)
+        font-size $contact-page-form-section-description-size-desktop
+
+    form
+      margin-top rem(47.5px)
+      +above(m)
+        margin-top rem(58.5px)
+      label
+        font-size $contact-page-form-section-form-labels-size-mobile
+        +above(m)
+          font-size $contact-page-form-section-form-labels-size-mobile
+    .center
+      text-align center
+
+    +above(m)
+      lost-column 14/36
+      lost-offset: 11/36
