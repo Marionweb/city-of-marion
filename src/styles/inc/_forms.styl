@@ -65,7 +65,7 @@ fieldset
   min-width 0
 
   > div
-    margin-bottom 2em
+    margin-bottom rem(27.5px)
 
 legend
   display block
@@ -186,6 +186,7 @@ input[type="color"]
 // Reset height for `textarea`s
 textarea
   height auto
+  resize none
 
 
 // Search inputs in iOS
@@ -209,7 +210,13 @@ input[type="date"]
 // Designed to help with the organization and spacing of vertical forms. For
 // horizontal forms, use the predefined grid classes.
 .form-group
-  margin-bottom rem(15px)
+  +above(m)
+    lost-flex-container: row
+  > div
+    margin-bottom rem(27.5px)
+    +above(m)
+      lost-column 1/2
+      margin-bottom 0
 
 // Checkboxes and radios
 //
@@ -252,11 +259,6 @@ input[type="radio"]
     height $line-height-computed
     width $line-height-computed
     vertical-align text-top
-
-  &:focus
-    & + label::before
-      outline 0
-      box-shadow 0 0 8px $input-border-focus
 
   &:hover
     & + label::before
@@ -483,101 +485,100 @@ input[type=file].has-focus + label
   color lighten($text-color, 25%)
   // lighten the text some for contrast
 
-// Inline forms
-//
-// Make forms appear inline(-block) by adding the `.form-inline` class. Inline
-// forms begin stacked on extra small (mobile) devices and then go inline when
-// viewports reach <768px.
-//
-// Requires wrapping inputs and labels with `.form-group` for proper display of
-// default HTML form controls and our custom form controls (e.g., input groups).
-//
-form-inline()
-  // Kick in the inline
-  +above(m)
-    // Inline-block all the things for "inline"
-    .form-group
-      display inline-block
-      margin-bottom 0
-      vertical-align middle
+// // Inline forms
+// //
+// // Make forms appear inline(-block) by adding the `.form-inline` class. Inline
+// // forms begin stacked on extra small (mobile) devices and then go inline when
+// // viewports reach <768px.
+// //
+// // Requires wrapping inputs and labels with `.form-group` for proper display of
+// // default HTML form controls and our custom form controls (e.g., input groups).
+// //
+// form-inline()
+//   // Kick in the inline
+//   +above(m)
+//     // Inline-block all the things for "inline"
+//     .form-group
+//       display inline-block
+//       margin-bottom 0
+//       vertical-align middle
 
-    // In navbar-form, allow folks to *not* use `.form-group`
-    .form-control
-      display inline-block
-      width auto
-      // Prevent labels from stacking above inputs in `.form-group`
-      vertical-align middle
+//     // In navbar-form, allow folks to *not* use `.form-group`
+//     .form-control
+//       display inline-block
+//       width auto
+//       // Prevent labels from stacking above inputs in `.form-group`
+//       vertical-align middle
 
-    // Input groups need that 100% width though
-    .input-group > .form-control
-      width 100%
+//     // Input groups need that 100% width though
+//     .input-group > .form-control
+//       width 100%
 
-    .control-label
-      margin-bottom 0
-      vertical-align middle
+//     .control-label
+//       margin-bottom 0
+//       vertical-align middle
 
-    // Remove default margin on radios/checkboxes that were used for stacking, and
-    // then undo the floating of radios and checkboxes to match (which also avoids
-    // a bug in WebKit: https://github.com/twbs/bootstrap/issues/1969).
-    .radio, .checkbox
-      display inline-block
-      margin-top 0
-      margin-bottom 0
-      padding-left 0
-      vertical-align middle
+//     // Remove default margin on radios/checkboxes that were used for stacking, and
+//     // then undo the floating of radios and checkboxes to match (which also avoids
+//     // a bug in WebKit: https://github.com/twbs/bootstrap/issues/1969).
+//     .radio, .checkbox
+//       display inline-block
+//       margin-top 0
+//       margin-bottom 0
+//       padding-left 0
+//       vertical-align middle
 
-    .radio input[type="radio"], .checkbox input[type="checkbox"]
-      float none
-      margin-left 0
+//     .radio input[type="radio"], .checkbox input[type="checkbox"]
+//       float none
+//       margin-left 0
 
-    // Validation states
-    //
-    // Reposition the icon because it's now within a grid column and columns have
-    // `position: relative;` on them. Also accounts for the grid gutter padding.
-    .has-feedback .form-control-feedback
-      top 0
+//     // Validation states
+//     //
+//     // Reposition the icon because it's now within a grid column and columns have
+//     // `position: relative;` on them. Also accounts for the grid gutter padding.
+//     .has-feedback .form-control-feedback
+//       top 0
 
-.form-inline
-  form-inline()
+// .form-inline
+//   form-inline()
 
-// Horizontal forms
-//
-// Horizontal forms are built on grid classes and allow you to create forms with
-// labels on the left and inputs on the right.
-.form-horizontal
-  // Consistent vertical alignment of labels, radios, and checkboxes
-  .control-label, .radio, .checkbox, .radio-inline, .checkbox-inline
-    margin-top 0
-    margin-bottom 0
-    padding-top ($padding-base-vertical + 1)
-    // Default padding plus a border
+// // Horizontal forms
+// //
+// // Horizontal forms are built on grid classes and allow you to create forms with
+// // labels on the left and inputs on the right.
+// .form-horizontal
+//   // Consistent vertical alignment of labels, radios, and checkboxes
+//   .control-label, .radio, .checkbox, .radio-inline, .checkbox-inline
+//     margin-top 0
+//     margin-bottom 0
+//     padding-top ($padding-base-vertical + 1)
+//     // Default padding plus a border
 
-  // Account for padding we're adding to ensure the alignment and of help text
-  // and other content below items
-  .radio, .checkbox
-    min-height ($line-height-computed + ($padding-base-vertical + 1))
+//   // Account for padding we're adding to ensure the alignment and of help text
+//   // and other content below items
+//   .radio, .checkbox
+//     min-height ($line-height-computed + ($padding-base-vertical + 1))
 
-  // Make form groups behave like rows
-  // .form-group
-    // make-row()
+//   // Make form groups behave like rows
+//   // .form-group
+//     // make-row()
 
 
-  .form-control-static
-    padding-top ($padding-base-vertical + 1)
+//   .form-control-static
+//     padding-top ($padding-base-vertical + 1)
 
-  // Only right align form labels here when the columns stop stacking
-  +above(m)
-    .control-label
-      text-align right
+//   // Only right align form labels here when the columns stop stacking
+//   +above(m)
+//     .control-label
+//       text-align right
 
-  // Validation states
-  //
-  // Reposition the icon because it's now within a grid column and columns have
-  // `position: relative;` on them. Also accounts for the grid gutter padding.
-  .has-feedback .form-control-feedback
-    top 0
-    // right (grid-gutter-width / 2)
-
+//   // Validation states
+//   //
+//   // Reposition the icon because it's now within a grid column and columns have
+//   // `position: relative;` on them. Also accounts for the grid gutter padding.
+//   .has-feedback .form-control-feedback
+//     top 0
+//     // right (grid-gutter-width / 2)
 
 
 
@@ -724,7 +725,7 @@ $choices-button-offset = 8px
   min-height: 44px
   overflow: hidden
   .is-focused &, .is-open &
-    border-color: darken($choices-keyline-color, 15%)
+    border-color: $input-border-focus
   .is-open &
     border-color: $input-border-color-active
     border-radius: $choices-border-radius $choices-border-radius 0 0

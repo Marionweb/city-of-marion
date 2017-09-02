@@ -73,3 +73,76 @@
 
     +above(m)
       bottom rem(115px)
+
+
+#contact--info-request
+  background-color $contact-page-info-request-section-background
+  color $contact-page-info-request-section-color
+  padding rem(82.5px) rem(30px) rem(77px)
+  text-align center
+  +above(m)
+    lost-flex-container: row
+    padding rem(136.5px) rem(30px) rem(122px)
+    h1, p
+      display inline-block
+
+  h1
+    font-family $contact-page-info-request-section-h1-font
+    font-size $contact-page-info-request-section-h1-size-mobile
+    text-transform uppercase
+    +above(m)
+      font-size $contact-page-info-request-section-h1-size-desktop
+      line-height $contact-page-info-request-section-h1-size-desktop
+      lost-column 12/36
+      lost-offset: 5/36
+      margin 0
+      text-align right
+
+  p
+    font-size $contact-page-info-request-section-description-size-mobile
+    +above(m)
+      font-size $contact-page-info-request-section-description-size-desktop
+      line-height $contact-page-info-request-section-h1-size-desktop
+
+      lost-column 12/36
+      lost-offset: 2/36
+      margin 0
+      text-align left
+
+
+#contact--form
+  background-color $contact-page-form-section-background
+  padding rem(52px) rem(30px) rem(87.5px)
+  color $navy
+  +above(m)
+    lost-flex-container: row
+    padding rem(114px) 0 rem(103px)
+
+
+
+    #contact--form--content
+      h1
+        font-size $contact-page-form-section-h1-size-mobile
+        +above(m)
+          font-size $contact-page-form-section-h1-size-desktop
+      p
+        font-size $contact-page-form-section-description-size-mobile
+        +above(m)
+          font-size $contact-page-form-section-description-size-desktop
+
+      form
+        margin-top rem(47.5px)
+        +above(m)
+          margin-top rem(58.5px)
+        label
+          font-size $contact-page-form-section-form-labels-size-mobile
+          +above(m)
+            font-size $contact-page-form-section-form-labels-size-mobile
+      .center
+        text-align center
+      textarea
+        resize: vertical
+
+      +above(m)
+        lost-column 14/36
+        lost-offset: 11/36
