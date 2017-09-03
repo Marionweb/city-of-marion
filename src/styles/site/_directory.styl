@@ -1,0 +1,261 @@
+.page-section--directoryLanding main
+  padding rem(57px) 0 rem(35px)
+  +above(m)
+    padding rem(77.5px) 0 rem(81px)
+
+#staff-department-blocks
+  perspective: 900
+
+  +above(m)
+    lost-flex-container: row
+    > section
+      lost-column 32/36
+      lost-offset: 2/36
+
+
+
+
+.transition
+  transition: all 0.25s ease-out
+.flipIn
+  animation: flipdown 0.5s ease both
+.no-select
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+  -webkit-touch-callout: none
+  user-select: none
+
+
+.staff-department
+  position: relative
+  border-top: 2px solid $light-gray
+
+  @extend .flipIn
+  +above(m)
+    animation none
+
+  &:nth-of-type(1)
+    animation-delay: 0.5s
+  &:nth-of-type(2)
+    animation-delay: 0.75s
+  &:nth-of-type(3)
+    animation-delay: 1s
+  &:last-of-type
+    padding-bottom: 0
+
+  > i
+    position: absolute
+    transform: translate(-6px, 0)
+    top: rem(27px)
+    right: rem(30px)
+    +above(m)
+      display none
+      visibility hidden
+    &:before , &:after
+      content: ""
+      @extend .transition
+      position: absolute
+      background-color: $directory-department-title-toggle-color
+      width: 4px
+      height: 14px
+    &:before
+      transform: translate(4px, 0) rotate(45deg)
+    &:after
+      transform: translate(-4px, 0) rotate(-45deg)
+
+  input[type=checkbox]
+    position absolute
+    cursor pointer
+    margin 0
+    width 100%
+    height rem(24px) + $directory-department-title-size-mobile + rem(18.5px)
+    z-index 1
+    opacity 0
+    +above(m)
+      display none
+      visibility hidden
+      height 0
+  & > input[type=checkbox]:checked
+      &~h2 > span.controls
+      &~ul
+        max-height initial
+        opacity 1
+        transform translate(0, 0)
+        overflow visible
+      &~h2 > span.controls
+        margin-top rem(34px)
+      &~ul
+        margin-top rem(36px)
+      &~i
+        &:before
+          transform: translate(-4px, 0) rotate(45deg)
+        &:after
+          transform: translate(4px, 0) rotate(-45deg)
+
+  h2 > span.controls input[type=checkbox]:checked
+      &~p
+        margin-top 1em
+        max-height initial
+        opacity 1
+        transform translate(0, 0)
+        overflow visible
+
+      &~span i
+        &:before
+          transform: rotate(90deg)
+        &:after
+          transform: rotate(180deg)
+
+
+
+  h2
+    margin 0
+    color $directory-department-title-color
+    font-size $directory-department-title-size-mobile
+    line-height 1
+    padding rem(24px) rem(30px) rem(18.5px)
+    @extend .no-select
+    +above(m)
+      cursor default
+      font-size $directory-department-title-size-desktop
+
+    > span.controls
+      color $directory-department-title-controls-color
+      display block
+      font-size $directory-department-title-controls-size-mobile
+      line-height $directory-department-title-controls-size-mobile + rem(20px)
+      position relative
+      text-transform $directory-department-title-controls-transform
+
+      input
+        height $directory-department-title-controls-size-mobile + rem(20px)
+        width 50%
+
+      +above(m)
+        display inline-block
+        font-size $directory-department-title-controls-size-desktop
+        margin 0
+
+      > span
+        display inline-block
+        position relative
+        i
+          display inline-block
+          position: relative
+          width: $directory-department-title-controls-size-mobile
+          height: $directory-department-title-controls-size-mobile
+          margin-top rem(1px)
+          +above(m)
+            width: $directory-department-title-controls-size-desktop
+            height: $directory-department-title-controls-size-desktop
+          &:before , &:after
+            content: ""
+            @extend .transition
+            position: absolute
+            background-color: $directory-department-title-controls-color
+          &:before
+            top: 'calc(%s + %s)' % (25% 1px)
+            left: 'calc(%s - %s)' % (50% 1px)
+            width: rem(2px)
+            height: 60%
+          &:after
+            top: 'calc(%s + %s)' % (50% 1px)
+            left: 'calc(%s - %s)' % (25% 1px)
+            width: 60%
+            height: rem(2px)
+
+      > a
+        display inline-block
+        position absolute
+        right 0
+        top 0
+        > span
+          display none
+          visibility hidden
+          +above(m)
+            display inline
+            visibility visible
+      > p
+        color $directory-department-description-color
+        font-size $directory-department-description-size-mobile = rem(18px)
+        font-weight $directory-department-description-weight
+        line-height $line-height-base
+        margin-bottom 0
+        text-transform $directory-department-description-transform
+        +above(m)
+          font-size $directory-department-description-size-desktop = rem(18px)
+
+
+  h2 > span.controls
+  h2 > span.controls > p
+  ul
+    @extend .transition
+    margin-top 0
+    max-height 0
+    opacity 0
+    overflow hidden
+    transform translate(0, 10%)
+    z-index 2
+  ul
+    list-style none
+    padding 0 rem(30px)
+    margin 0
+    +above(m)
+      max-height initial
+      opacity: 1
+      transform: translate(0, 0)
+      margin-top: 14px
+
+    li
+      padding 0
+      margin 0 0 rem(9.5px) 0
+
+      a
+        box-shadow $directory-block-shadow
+        display block
+        height $directory-block-image-size-mobile
+        padding rem(22px) rem(22px) rem(10px) $directory-block-image-size-mobile
+        position: relative
+        text-align right
+        text-decoration none
+
+        figure
+          margin 0
+          position absolute
+          left 0
+          top 0
+          height $directory-block-image-size-mobile
+          width $directory-block-image-size-mobile
+
+        h3
+          color $directory-block-name-color
+          font-size $directory-block-name-size-mobile
+          margin 0 0 rem(8px) 0
+          +above(m)
+            font-size $directory-block-name-size-desktop
+        h4
+          color $directory-block-title-color
+          font-family $directory-block-title-font
+          font-size $directory-block-title-size-mobile
+          font-style $directory-block-title-style
+          line-height 1
+          margin 0
+          +above(m)
+            font-size $directory-block-title-size-desktop
+
+
+@keyframes flipdown
+  0%
+    opacity: 0
+    transform-origin: top center
+    transform: rotateX(-90deg)
+  5%
+    opacity: 1
+  80%
+    transform: rotateX(8deg)
+  83%
+    transform: rotateX(6deg)
+  92%
+    transform: rotateX(-3deg)
+  100%
+    transform-origin: top center
+    transform: rotateX(0deg)

@@ -1,0 +1,80 @@
+{#
+    Directory Landing Template
+#}
+
+{% extends "layouts/columns/_one" %}
+
+{% set title = entry.title %}
+
+{# HTML #}
+{% block main %}
+
+
+
+<section id="staff-department-blocks">
+  {% set staffIds = craft.entries.section('staff').ids() %}
+  {% set params = {
+      section : 'departments',
+      orderBy : 'title asc',
+      relatedTo: staffIds
+    } %}
+  {% set departments = craft.entries(params).all() %}
+
+  {% for department in departments %}
+    {% set params = {
+      section : 'staff',
+      orderBy : 'title asc',
+      relatedTo: department
+    } %}
+    {% set departmentStaffMembers = craft.entries(params).all() %}
+    <section id="department--{{ department.slug }}" class="staff-department">
+      <input type="checkbox">
+      <i></i>
+      <h2>
+        {{ department.title }}
+        {% if department.description or department.email %}
+        <span class="controls">
+          {% if department.description %}<input type="checkbox"><span class="toggle-description">Description <i></i></span>{% endif %}
+          <a class="contact-department-modal">Contact<span>Department</span></a>
+          {% if department.email %}<a class="contact-department-modal">Contact <span>Department</span></a>{% endif %}
+          {% if department.description %}<p>{{ department.description }}</p>{% endif %}
+        </span>
+        {% endif %}
+      </h2>
+      <ul>
+      {% for member in departmentStaffMembers %}
+        <li id="staff-member-{{ member.id }}">
+          <a href="{{ member.url }}" title="View contact details for {{ member.personName|trim|replace({'  ': ' '}) }}">
+            {% if member.staffPhoto.count() %}
+              {%- import "macros/_images" as imageFunctions -%}
+              {%- set image = member.staffPhoto.one() -%}
+              {% set outputWidths = [230, 400, 800] %}
+              {%- set initialQuality = 20 -%}
+
+              {%- set aspectRatio = (1/1) -%}
+              {%- set small = { width: 40, height: 40 / aspectRatio, quality: initialQuality } -%}
+              {%- set medium = { width: 100, height: 100 / aspectRatio, quality: initialQuality } -%}
+              <figure>
+                <img class="lazyload"
+                  src="{{ image.getUrl(small) }}"
+                  data-src="{{ image.getUrl(medium) }}"
+                  data-sizes="auto"
+                  data-srcset="{{ imageFunctions.srcset(image, outputWidths, aspectRatio) }}"
+                  {% if image.alt %}alt="{{ image.alt }}"{% endif %}>
+                {% if image.caption %}
+                <figcaption>{{ member.personName|trim|replace({'  ': ' '}) }}</figcaption>
+                {% endif %}
+              </figure>
+            {% endif %}
+            <h3>{{ member.personName|trim|replace({'  ': ' '}) }}</h3>
+            {% if member.positionTitle %}<h4>{{ member.positionTitle }}</h4>{% endif %}
+          </a>
+        </li>
+      {% endfor %}﻿
+      </ul>
+    </section>
+  {% endfor %}﻿
+</section>
+
+
+{% endblock %}
