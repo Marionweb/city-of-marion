@@ -2,11 +2,19 @@
     About Landing Template
 #}
 
-{% extends "layouts/base/_base" %}
+{% extends "layouts/base/_base_parallax" %}
 
 {% set title = entry.title %}
+{% set type = 'landing' %}
 
-{# HTML #}
+
+{# HEADER IMAGE #}
+{% block parallaxBack %}
+  {% if entry.primaryImage.count() %}{% include "modules/content/_header-block" %}{% endif %}
+{% endblock %}
+
+
+{# MAIN COLUMN CONTENT #}
 {% block content %}
 
 <h1>{{ entry.title }}</h1>
