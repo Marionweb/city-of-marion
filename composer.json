@@ -29,7 +29,7 @@
         "craftcms/anchors": "^2.0",
         "nystudio107/craft3-cookies": "^1.1",
         "misterbk/mix": "^1.1",
-        "nystudio107/craft3-imageoptimize": "^1.0",
+        "nystudio107/craft3-imageoptimize": "^1.2",
         "craftcms/mailgun": "1.0.0.1",
         "nystudio107/craft3-minify": "^1.2",
         "newism/craft3-fields": "0.0.4",
@@ -53,7 +53,8 @@
         "craftcms/store-hours": "^2.0",
         "aelvan/inlin": "^2.0",
         "aelvan/stamp": "^2.0",
-        "dukt/videos": "^2.0"
+        "mblode/svgplaceholder": "^1.0",
+        "dukt/videos": "^2.0@beta"
     },
     "require-dev": {
         "heroku/heroku-buildpack-php": "^83.0"
