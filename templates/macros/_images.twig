@@ -1,8 +1,8 @@
 {% macro srcset(image, outputWidths, aspectRatio) %}
   {# setup #}
-  {%- set outputWidths = outputWidths | default([480, 640, 1024, 1600]) -%}
+  {%- set outputWidths = outputWidths | default([480, 736, 980, 1280, 1690]) -%}
   {%- set srcset = [] -%}
-  {%- set qual = 75 -%}
+  {%- set qual = 82 -%}
 
   {# if output width is smaller than or equal to the original image width #}
   {%- for outputWidth in outputWidths -%}
