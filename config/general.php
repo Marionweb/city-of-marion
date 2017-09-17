@@ -19,6 +19,7 @@ return [
         'generateTransformsBeforePageLoad' => true,
         'siteUrl' => getenv('CRAFTENV_SITE_URL'),
         'craftEnv' => CRAFT_ENVIRONMENT,
+        'securityKey' => CRAFT_SECURITY_KEY,
 
         // Control Panel trigger word
         'cpTrigger' => 'admin',
