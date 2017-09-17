@@ -1,0 +1,18 @@
+{% set memberName = member.personName|trim|replace({'  ': ' '}) %}
+<li id="staff-member-{{ member.id }}">
+  <a href="{{ member.url }}" title="View contact details for {{ memberName }}">
+    {% if member.staffPhoto.count() %}
+      {%- set thumb = { width: 40, height: 40, quality: 20 } -%}
+      <picture>
+        <sources data-srcset="{{ member.staffPhoto.one().optimizedImagesSquare.srcsetWebP() }}"
+                 data-sizes="50vw"
+                 type="image/webp" />
+        <img class="lazyload" src="{{ member.staffPhoto.one().getUrl(thumb) }}"
+             data-srcset="{{ member.staffPhoto.one().optimizedImagesSquare.srcset() }}"
+             data-sizes="50vw" alt="{{ memberName }}" />
+      </picture>
+    {% endif %}
+    <h3>{{ memberName }}</h3>
+    {% if member.positionTitle %}<h4>{{ member.positionTitle }}</h4>{% endif %}
+  </a>
+</li>

@@ -43,33 +43,7 @@
       </h2>
       <ul>
       {% for member in departmentStaffMembers %}
-        <li id="staff-member-{{ member.id }}">
-          <a href="{{ member.url }}" title="View contact details for {{ member.personName|trim|replace({'  ': ' '}) }}">
-            {% if member.staffPhoto.count() %}
-              {%- import "macros/_images" as imageFunctions -%}
-              {%- set image = member.staffPhoto.one() -%}
-              {% set outputWidths = [230, 400, 800] %}
-              {%- set initialQuality = 20 -%}
-
-              {%- set aspectRatio = (1/1) -%}
-              {%- set small = { width: 40, height: 40 / aspectRatio, quality: initialQuality } -%}
-              {%- set medium = { width: 100, height: 100 / aspectRatio, quality: initialQuality } -%}
-              <figure>
-                <img class="lazyload"
-                  src="{{ image.getUrl(small) }}"
-                  data-src="{{ image.getUrl(medium) }}"
-                  data-sizes="auto"
-                  data-srcset="{{ imageFunctions.srcset(image, outputWidths, aspectRatio) }}"
-                  {% if image.alt %}alt="{{ image.alt }}"{% endif %}>
-                {% if image.caption %}
-                <figcaption>{{ member.personName|trim|replace({'  ': ' '}) }}</figcaption>
-                {% endif %}
-              </figure>
-            {% endif %}
-            <h3>{{ member.personName|trim|replace({'  ': ' '}) }}</h3>
-            {% if member.positionTitle %}<h4>{{ member.positionTitle }}</h4>{% endif %}
-          </a>
-        </li>
+        {% include "singles/directory/_member" %}
       {% endfor %}﻿
       </ul>
     </section>
