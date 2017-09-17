@@ -14,18 +14,6 @@ return [
 
     // All environments
     '*' => [
-      'siteAssets' => [
-        'url' => getenv('CRAFTENV_BASE_URL') . 'img/site',
-        'path' => getenv('CRAFTENV_BASE_PATH') . 'img/site',
-      ],
-      'newsEventsAssets' => [
-        'url' => getenv('CRAFTENV_BASE_URL') . 'img/news-events',
-        'path' => getenv('CRAFTENV_BASE_PATH') . 'img/news-events',
-      ],
-      'fileAttachments' => [
-        'url' => getenv('CRAFTENV_BASE_URL') . 'downloads',
-        'path' => getenv('CRAFTENV_BASE_PATH') . 'downloads',
-      ],
     ],
 
     // Live (production) environment
@@ -42,9 +30,25 @@ return [
         'url' => getenv('CRAFTENV_BASE_URL') . 'volumes/site',
         'path' => getenv('CRAFTENV_BASE_PATH') . 'volumes/site',
       ],
+      'pageHeaderImages' => [
+        'url' => getenv('CRAFTENV_BASE_URL') . 'volumes/site/headers',
+        'path' => getenv('CRAFTENV_BASE_PATH') . 'volumes/site/headers',
+      ],
       'newsEventsAssets' => [
         'url' => getenv('CRAFTENV_BASE_URL') . 'volumes/news-events',
         'path' => getenv('CRAFTENV_BASE_PATH') . 'volumes/news-events',
+      ],
+      'staffPhotos' => [
+        'url' => getenv('CRAFTENV_BASE_URL') . 'volumes/site/staff',
+        'path' => getenv('CRAFTENV_BASE_PATH') . 'volumes/site/staff',
+      ],
+      'logos' => [
+        'url' => getenv('CRAFTENV_BASE_URL') . 'volumes/site/logos',
+        'path' => getenv('CRAFTENV_BASE_PATH') . 'volumes/site/logos',
+      ],
+      'icons' => [
+        'url' => getenv('CRAFTENV_BASE_URL') . 'volumes/site/icons',
+        'path' => getenv('CRAFTENV_BASE_PATH') . 'volumes/site/icons',
       ],
       'fileAttachments' => [
         'url' => getenv('CRAFTENV_BASE_URL') . 'volumes/downloads',
