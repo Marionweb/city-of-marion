@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "55736fa744f6e4cbf3c3a96db399c2ff",
+    "content-hash": "ee5e7ffd38382dfec37c083354a27c00",
     "packages": [
         {
             "name": "aelvan/inlin",
@@ -1863,6 +1863,57 @@
                 "vimeo"
             ],
             "time": "2017-04-06T13:13:14+00:00"
+        },
+        {
+            "name": "dukt/social",
+            "version": "2.0.0-beta.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dukt/social.git",
+                "reference": "50d7cfa445ce8c9fcc8dd92c9d3749abd3a8e213"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dukt/social/zipball/50d7cfa445ce8c9fcc8dd92c9d3749abd3a8e213",
+                "reference": "50d7cfa445ce8c9fcc8dd92c9d3749abd3a8e213",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0-beta.20",
+                "dukt/oauth2-google": "^2.0",
+                "league/oauth1-client": "1.7.0@dev",
+                "league/oauth2-client": "^2.2",
+                "league/oauth2-facebook": "^2.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Social",
+                "handle": "social",
+                "schemaVersion": "1.0.2",
+                "documentationUrl": "https://github.com/dukt/social-docs",
+                "changelogUrl": "https://raw.githubusercontent.com/dukt/social/develop/CHANGELOG.md"
+            },
+            "autoload": {
+                "psr-4": {
+                    "dukt\\social\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Dukt",
+                    "homepage": "https://dukt.net/"
+                }
+            ],
+            "description": "Let your visitors log into Craft with web services like Facebook, Google, Twitter…",
+            "keywords": [
+                "Social Login",
+                "craftcms",
+                "facebook",
+                "google",
+                "twitter"
+            ],
+            "time": "2017-09-05T22:48:39+00:00"
         },
         {
             "name": "dukt/twitter",
