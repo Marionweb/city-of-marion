@@ -4,11 +4,87 @@
 
 {% extends "layouts/columns/_one" %}
 
-{% set title = entry.title %}
+{% set fullName = entry.personName|trim|replace({'  ': ' '}) %}
+
+{% set title = fullName ~ ', ' ~ entry.positionTitle %}
+
+{# Get department & building #}
+{% set department = entry.department.one() %}
+{% set building = department.building.one() %}
 
 {# HTML #}
 {% block main %}
 
-<h1>{{ entry.title }}</h1>
+<section id="staff-profile" itemscope itemtype="http://schema.org/Person">
+  {% if entry.staffPhoto.count() %}
+    {%- set thumb = { width: 40, height: 40, quality: 20 } -%}
+    <picture itemprop="image">
+      <sources data-srcset="{{ entry.staffPhoto.one().optimizedImagesSquare.srcsetWebP() }}"
+               data-sizes="50vw"
+               type="image/webp" />
+      <img class="lazyload" src="{{ entry.staffPhoto.one().getUrl(thumb) }}"
+           data-srcset="{{ entry.staffPhoto.one().optimizedImagesSquare.srcset() }}"
+           data-sizes="50vw" alt="{{ fullName }}" />
+    </picture>
+  {% endif %}
+
+  <h1 itemprop="name" class="fn">{{ fullName }}</h1>
+  <h2 itemprop="jobTitle">{{ entry.positionTitle }}</h2>
+
+  <h4>{{ department.title }}</h4>
+
+  <div id="staff-profile--address-data" itemscope itemtype="http://schema.org/GovernmentBuilding">
+    <div id="staff-profile--address" itemscope itemtype="http://schema.org/GovernmentBuilding">
+      <span itemprop="name">{{ building.title }}</span>
+      <div class="address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+        <span itemprop="streetAddress">{{ building.buildingAddress.addressLine2 }}</span><br>
+        <span itemprop="addressLocality">{{ building.buildingAddress.locality }}</span>,
+        <span itemprop="addressRegion">{{ building.buildingAddress.administrativeArea }}</span>
+        <span itemprop="postalCode">{{ building.buildingAddress.postalCode }}</span>
+      </div>
+    </div>
+    <div id="staff-profile--phone-other">
+      {% if entry.phone %}
+        {% set directPhoneLength = entry.phone.phoneNumber|length %}
+        {% set directPhoneNewLength = directPhoneLength - 10 %}
+        {% set directPhoneUnformattedNumber = entry.phone.phoneNumber|slice(directPhoneNewLength, directPhoneLength) %}
+        {% set directPhoneAreaCode = directPhoneUnformattedNumber|slice(0, 3) %}
+        {% set directPhoneSliceA = directPhoneUnformattedNumber|slice(3, 3) %}
+        {% set directPhoneSliceB = directPhoneUnformattedNumber|slice(6, 4) %}
+        <p><strong>Phone</strong> <span itemprop="telephone">{{ '(' ~ directPhoneAreaCode ~ ') ' ~ directPhoneSliceA ~ '-' ~ directPhoneSliceB }}</span></p>
+      {% endif %}
+
+      {% if department.phone %}
+        {% set deptPhoneLength = department.phone.phoneNumber|length %}
+        {% set deptPhoneNewLength = deptPhoneLength - 10 %}
+        {% set deptPhoneUnformattedNumber = department.phone.phoneNumber|slice(deptPhoneNewLength, deptPhoneLength) %}
+        {% set deptPhoneAreaCode = deptPhoneUnformattedNumber|slice(0, 3) %}
+        {% set deptPhoneSliceA = deptPhoneUnformattedNumber|slice(3, 3) %}
+        {% set deptPhoneSliceB = deptPhoneUnformattedNumber|slice(6, 4) %}
+        <p><strong>Department Phone</strong> <span itemprop="telephone">{{ '(' ~ deptPhoneAreaCode ~ ') ' ~ deptPhoneSliceA ~ '-' ~ deptPhoneSliceB }}</span></p>
+      {% endif %}
+
+      {% if department.fax %}
+        {% set deptFaxLength = department.fax.phoneNumber|length %}
+        {% set deptFaxNewLength = deptFaxLength - 10 %}
+        {% set deptFaxUnformattedNumber = department.fax.phoneNumber|slice(deptFaxNewLength, deptFaxLength) %}
+        {% set deptFaxAreaCode = deptFaxUnformattedNumber|slice(0, 3) %}
+        {% set deptFaxSliceA = deptFaxUnformattedNumber|slice(3, 3) %}
+        {% set deptFaxSliceB = deptFaxUnformattedNumber|slice(6, 4) %}
+        <p><strong>Department Fax</strong> <span itemprop="faxNumber">{{ '(' ~ deptFaxAreaCode ~ ') ' ~ deptFaxSliceA ~ '-' ~ deptFaxSliceB }}</span></p>
+      {% endif %}
+
+      {% if entry.email %}
+      {% set email = "<a href='mailto:" ~ entry.email ~ "' itemprop='email'>" ~ entry.email ~ "</a>" %}
+      <p><strong>Email</strong> {{ email | encode }}</p>
+      {# <a itemprop="email" href="mailto:{{ entry.email }}" target="_blank">{{ entry.email | encode }}</a> #}
+      {% endif %}
+
+    </div>
+  </div>
+
+  {% if entry.bio %}<p>{{ entry.bio }}</p>{% endif %}
+
+</section>
 
 {% endblock %}
