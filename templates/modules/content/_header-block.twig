@@ -1,37 +1,32 @@
 <div id="header-image" class="{{entry.section | lower}}">
   {%- import "macros/_images" as imageFunctions -%}
   {%- set image = entry.primaryImage.one() -%}
-  {% set outputWidths = [480, 640, 1024, 1600] %}
-  {%- set initialQuality = 20 -%}
+  {% set outputWidths = [480, 736, 980, 1280, 1690] %}
+  {%- set lowQuality = 20 -%}
 
   {% if (entry.section | lower) == 'newsEvents' %}
 
     {# NEWS/EVENTS ARTICLES: 3:1 (2880x1000 in PSD's) #}
     {%- set aspectRatio = (3/1) -%}
-    {%- set small = { width: 40, height: 40 / aspectRatio, quality: initialQuality } -%}
-    {%- set medium = { width: 100, height: 100 / aspectRatio, quality: initialQuality } -%}
+    {%- set small = { width: 40, height: 40 / aspectRatio, quality: lowQuality } -%}
 
   {% elseif (entry.section | lower) == 'pages' and (entry.type | lower) == 'standard' %}
 
     {# STANDARD PAGES: 72:25 (2880x1000 in PSD's) #}
     {%- set mobileAspectRatio = (5/4) -%}
-    {%- set mobileSmall = { width: 40, height: 40 / mobileAspectRatio, quality: initialQuality } -%}
-    {%- set mobileMedium = { width: 100, height: 100 / mobileAspectRatio, quality: initialQuality } -%}
+    {%- set mobileSmall = { width: 40, height: 40 / mobileAspectRatio, quality: lowQuality } -%}
 
     {%- set desktopAspectRatio = (72/25) -%}
-    {%- set desktopSmall = { width: 40, height: 40 / desktopAspectRatio, quality: initialQuality } -%}
-    {%- set desktopMedium = { width: 100, height: 100 / desktopAspectRatio, quality: initialQuality } -%}
+    {%- set desktopSmall = { width: 40, height: 40 / desktopAspectRatio, quality: lowQuality } -%}
 
   {% else %}
 
     {# LANDING/HOME/ABOUT/CONTACT: 12:5 (2880x1200 in PSD's) #}
     {%- set mobileAspectRatio = (5/4) -%}
-    {%- set mobileSmall = { width: 40, height: 40 / mobileAspectRatio, quality: initialQuality } -%}
-    {%- set mobileMedium = { width: 100, height: 100 / mobileAspectRatio, quality: initialQuality } -%}
+    {%- set mobileSmall = { width: 40, height: 40 / mobileAspectRatio, quality: lowQuality } -%}
 
     {%- set desktopAspectRatio = (12/5) -%}
-    {%- set desktopSmall = { width: 40, height: 40 / desktopAspectRatio, quality: initialQuality } -%}
-    {%- set desktopMedium = { width: 100, height: 100 / desktopAspectRatio, quality: initialQuality } -%}
+    {%- set desktopSmall = { width: 40, height: 40 / desktopAspectRatio, quality: lowQuality } -%}
 
   {% endif %}
 
@@ -40,8 +35,7 @@
     <figure class="mobile">
       <img class="lazyload"
         src="{{ image.getUrl(mobileSmall) }}"
-        data-src="{{ image.getUrl(mobileMedium) }}"
-        data-sizes="auto"
+        data-sizes="100vw"
         data-srcset="{{ imageFunctions.srcset(image, outputWidths, mobileAspectRatio) }}"
         {% if image.alt %}alt="{{ image.alt }}"{% endif %}>
       {% if image.caption %}
@@ -52,8 +46,7 @@
     <figure class="desktop">
       <img class="lazyload"
         src="{{ image.getUrl(desktopSmall) }}"
-        data-src="{{ image.getUrl(desktopMedium) }}"
-        data-sizes="auto"
+        data-sizes="100vw"
         data-srcset="{{ imageFunctions.srcset(image, outputWidths, desktopAspectRatio) }}"
         {% if image.alt %}alt="{{ image.alt }}"{% endif %}>
       {% if image.caption %}
@@ -66,8 +59,7 @@
     <figure>
       <img class="lazyload"
         src="{{ image.getUrl(small) }}"
-        data-src="{{ image.getUrl(medium) }}"
-        data-sizes="auto"
+        data-sizes="100vw"
         data-srcset="{{ imageFunctions.srcset(image, outputWidths, aspectRatio) }}"
         {% if image.alt %}alt="{{ image.alt }}"{% endif %}>
       {% if image.caption %}
