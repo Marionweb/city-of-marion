@@ -155,10 +155,20 @@ docReady(function() {
 
 
 // MASK PHONE INPUT
-document.getElementById('phone').addEventListener('input', function (e) {
-  var x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
-  e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
+const inputs = Array.from(document.querySelectorAll('input'))
+inputs.forEach(function (input) {
+  if(input.getAttribute('type')=='tel'){
+    input.addEventListener('input', function (e) {
+        var x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+        e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
+    }, false)
+  };
 });
+
+// document.getElementById('phone').addEventListener('input', function (e) {
+//   var x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+//   e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
+// });
 
 
 //Google Maps JS
