@@ -167,10 +167,12 @@
               left: 'calc(%s - %s)' % (25% rem(0.5px))
 
       > a
+        color $directory-department-title-controls-color
         display inline-block
         position absolute
         right 0
         top 0
+        text-decoration none
         > span
           display none
           visibility hidden
@@ -284,6 +286,22 @@
           margin 0
           +above(m)
             font-size $directory-block-title-size-desktop
+
+.contact-department-modal-pop
+  &, .thank-you-message
+    display none
+
+.fancybox-slide--inline
+  .contact-department-modal-pop
+    width: 800px
+    height: 600px
+    max-width: 80%
+    max-height: 80%
+    margin: 0
+
+
+
+
 
 #staff-profile
   color $navy

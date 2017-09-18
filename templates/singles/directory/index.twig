@@ -35,8 +35,7 @@
         {% if department.description or department.email %}
         <span class="controls">
           {% if department.description %}<input type="checkbox"><span class="toggle-description">Description <i></i></span>{% endif %}
-          <a class="contact-department-modal">Contact<span>Department</span></a>
-          {% if department.email %}<a class="contact-department-modal">Contact <span>Department</span></a>{% endif %}
+          {% if department.email %}<a data-fancybox data-src="#department--{{ department.slug }}--modal" href="javascript:;" class="contact-department-modal">Contact <span>Department</span></a>{% endif %}
           {% if department.description %}<p>{{ department.description }}</p>{% endif %}
         </span>
         {% endif %}
@@ -46,6 +45,7 @@
         {% include "singles/directory/_member" %}
       {% endfor %}﻿
       </ul>
+      {% if department.email %}{% include "singles/directory/_form" %}{% endif %}
     </section>
   {% endfor %}﻿
 </section>

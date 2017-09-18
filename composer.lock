@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f23c356a3c3acc0d4155150f90aca6df",
+    "content-hash": "55736fa744f6e4cbf3c3a96db399c2ff",
     "packages": [
         {
             "name": "aelvan/inlin",
@@ -975,6 +975,103 @@
                 "yii2"
             ],
             "time": "2017-09-15T22:21:31+00:00"
+        },
+        {
+            "name": "craftcms/contact-form",
+            "version": "2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/craftcms/contact-form.git",
+                "reference": "455487e3b094d0d3b5bb658cc9544e83a1ca1d67"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/craftcms/contact-form/zipball/455487e3b094d0d3b5bb658cc9544e83a1ca1d67",
+                "reference": "455487e3b094d0d3b5bb658cc9544e83a1ca1d67",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "~3.0.0-beta.27"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Contact Form",
+                "handle": "contact-form",
+                "changelogUrl": "https://raw.githubusercontent.com/craftcms/contact-form/v2/CHANGELOG.md",
+                "downloadUrl": "https://github.com/craftcms/contact-form/archive/v2.zip",
+                "components": {
+                    "mailer": "craft\\contactform\\Mailer"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "craft\\contactform\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pixel & Tonic",
+                    "homepage": "https://pixelandtonic.com/"
+                }
+            ],
+            "description": "Add a simple contact form to your Craft CMS site",
+            "keywords": [
+                "cms",
+                "craftcms",
+                "yii2"
+            ],
+            "time": "2017-09-15T18:09:54+00:00"
+        },
+        {
+            "name": "craftcms/contact-form-honeypot",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/craftcms/contact-form-honeypot.git",
+                "reference": "35315ef861f73fd2856e2bb2c504a9eb668bd315"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/craftcms/contact-form-honeypot/zipball/35315ef861f73fd2856e2bb2c504a9eb668bd315",
+                "reference": "35315ef861f73fd2856e2bb2c504a9eb668bd315",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "~3.0.0-beta.20"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Contact Form Honeypot",
+                "handle": "contact-form-honeypot",
+                "changelogUrl": "https://raw.githubusercontent.com/craftcms/contact-form-honeypot/master/CHANGELOG.md",
+                "downloadUrl": "https://github.com/craftcms/contact-form-honeypot/archive/master.zip"
+            },
+            "autoload": {
+                "psr-4": {
+                    "craft\\contactform\\honeypot\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pixel & Tonic",
+                    "homepage": "https://pixelandtonic.com/"
+                }
+            ],
+            "description": "Add a honeypot captcha to your Craft CMS contact form",
+            "keywords": [
+                "cms",
+                "craftcms",
+                "yii2"
+            ],
+            "time": "2017-07-07T16:57:25+00:00"
         },
         {
             "name": "craftcms/element-api",
