@@ -1,0 +1,50 @@
+<article id="preview-{{ entry.type.handle }}-{{ entry.id }}" class="block--news-events--preview">
+  <a href="{{ entry.url }}" title="Champion of the Month: {{ entry.title }}">
+    {% set employeePhotoExists = false %}
+    {% if entry.employee.count() %}
+      {% if entry.employee.one().staffPhoto.count() %}
+        {% set employeePhotoExists = true %}
+      {% endif %}
+    {% endif %}
+
+    {% if entry.primaryImage.count() or employeePhotoExists %}
+      {% if entry.primaryImage.count() %}
+        {%- set image = entry.primaryImage.one() -%}
+      {% else %}
+        {%- set image = entry.employee.one().staffPhoto.one() -%}
+      {% endif %}
+
+      {%- set mobileAspectRatio = (15/8) -%}
+      {%- set mobileSmall = { width: 40, height: 40 / mobileAspectRatio, quality: 20 } -%}
+
+      {%- set desktopAspectRatio = (9/5) -%}
+      {%- set desktopSmall = { width: 40, height: 40 / desktopAspectRatio, quality: 20 } -%}
+
+        <figure class="mobile">
+          <img class="lazyload"
+            src="{{ image.getUrl(mobileSmall) }}"
+            data-sizes="100vw"
+            data-srcset="{{ image.optimizedImagesSquare.srcset() }}"
+            {% if image.alt %}alt="{{ image.alt }}"{% endif %}>
+          {% if image.caption %}
+          <figcaption>{{ image.caption }}</figcaption>
+          {% endif %}
+        </figure>
+
+        <figure class="desktop">
+          <img class="lazyload"
+            src="{{ image.getUrl(desktopSmall) }}"
+            data-sizes="100vw"
+            data-srcset="{{ image.optimizedImagesSquare.srcset() }}"
+            {% if image.alt %}alt="{{ image.alt }}"{% endif %}>
+          {% if image.caption %}
+          <figcaption>{{ image.caption }}</figcaption>
+          {% endif %}
+        </figure>
+    {% endif %}
+
+    {% if entry.storyType %}<h3>{{ entry.storyType.one().slug == 'champions' ? 'Champion of the Month' : entry.storyType.one().title }}</h3>{% endif %}
+    <h2>{{ entry.title }}</h2>
+
+  </a>
+</article>

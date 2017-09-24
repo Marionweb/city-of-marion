@@ -20,6 +20,13 @@
   &.two
     +above(m)
       lost-flex-container: row
+
+    main
+    aside
+      margin-bottom rem(30px)
+      +above(m)
+        margin-bottom 0
+
     main
       padding 0 rem(30px)
       +above(m)
@@ -30,6 +37,7 @@
       +above(xl)
         lost-column 14/36
         lost-offset: 4/36
+
     aside
       +between(m, l)
         lost-column 12/36

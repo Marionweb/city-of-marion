@@ -1,7 +1,8 @@
 .page-content
   color $content-text-color
-  &:not(.block--image)
-    margin-bottom: 1em
+  margin-bottom: 1em
+  &:last-child
+    margin-bottom 0
 
   h1
   h2
@@ -112,24 +113,25 @@
 
 .image-grid
   // our flexbox container
-  margin: .5em -1em .5em -1.5em
+
   +above(m)
-    display: flex
-    margin: .5em 0 .5em -.5em
+    display flex
+    margin 0 0 0 -.5em
     // setting the left margin at -.5em and the right at 0 offsets the grid to account for the gutters
-.image-grid + .image-grid
-  margin-top: -.5em
+// .image-grid + .image-grid
+//   margin-top: -.5em
 $grid-image
-  margin: 0 auto
-  padding: .5em 0 0 1em
-  width: 100%
+  margin 0 auto 1em
+  width 100%
   img
     @extend $lazy-load
     &[data-sizes="auto"]
-      display: block
+      display block
 
   +above(m)
-    flex: 1 auto
+    margin 0 auto
+    flex 1 auto
+    padding 0 0 0 1em
     // flex-basis set at 0 rather than 100%
 // register all possible ratios
 .grid-image,
