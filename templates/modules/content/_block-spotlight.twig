@@ -1,18 +1,18 @@
 {%- set cat = craft.categories.group('storyType').slug(spotlightType).one() -%}
 {%- set spotlight = craft.entries.section('newsEvents').relatedTo(cat).one() -%}
-{% if craft.entries.section('newsEvents').relatedTo(cat).count() %}
+{% if craft.entries.section('newsEvents').relatedTo(cat) | length %}
 <section class="block--spotlight">
   <a href="{{ spotlight.url }}" title="Champion of the Month: {{ spotlight.title }}">
     {% set employeePhotoExists = false %}
-    {% if spotlight.employee.count() %}
-      {% if spotlight.employee.one().staffPhoto.count() %}
+    {% if spotlight.employee | length %}
+      {% if spotlight.employee.one().staffPhoto | length %}
         {% set employeePhotoExists = true %}
       {% endif %}
     {% endif %}
 
-    {% if spotlight.primaryImage.count() or employeePhotoExists %}
+    {% if (spotlight.primaryImage | length) or employeePhotoExists %}
       {%- import "macros/_images" as imageFunctions -%}
-      {% if spotlight.primaryImage.count() %}
+      {% if spotlight.primaryImage | length %}
         {%- set image = spotlight.primaryImage.one() -%}
       {% else %}
         {%- set image = spotlight.employee.one().staffPhoto.one() -%}
@@ -69,7 +69,7 @@
   <p>{{ welcomeBlock.welcomeText|nl2br|raw }}</p>
 {% endif %}
 
-{% if welcomeBlock.learnMoreLink.count() %}
+{% if welcomeBlock.learnMoreLink | length %}
   {%- set learnMore = welcomeBlock.learnMoreLink.one() -%}
   <a href="{{learnMore.url}}" title="{{ learnMore.title }}">Learn More</a>
 {% endif %} #}

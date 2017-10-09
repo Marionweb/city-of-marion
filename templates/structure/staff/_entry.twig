@@ -16,7 +16,7 @@
 {% block main %}
 
 <section id="staff-profile" itemscope itemtype="http://schema.org/Person">
-  {% if entry.staffPhoto.count() %}
+  {% if entry.staffPhoto | length %}
     {%- set thumb = { width: 40, height: 40, quality: 20 } -%}
     <picture itemprop="image">
       <sources data-srcset="{{ entry.staffPhoto.one().optimizedImagesSquare.srcsetWebP() }}"

@@ -1,14 +1,14 @@
 <article id="preview-{{ entry.type.handle }}-{{ entry.id }}" class="block--news-events--preview">
   <a href="{{ entry.url }}" title="Champion of the Month: {{ entry.title }}">
     {% set employeePhotoExists = false %}
-    {% if entry.employee.count() %}
-      {% if entry.employee.one().staffPhoto.count() %}
+    {% if entry.employee | length %}
+      {% if entry.employee.one().staffPhoto | length %}
         {% set employeePhotoExists = true %}
       {% endif %}
     {% endif %}
 
-    {% if entry.primaryImage.count() or employeePhotoExists %}
-      {% if entry.primaryImage.count() %}
+    {% if (entry.primaryImage | length) or employeePhotoExists %}
+      {% if entry.primaryImage | length %}
         {%- set image = entry.primaryImage.one() -%}
       {% else %}
         {%- set image = entry.employee.one().staffPhoto.one() -%}

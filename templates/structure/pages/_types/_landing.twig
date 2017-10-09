@@ -5,7 +5,7 @@
   </div>
 </section>
 
-{% if entry.quickLinks.count() %}
+{% if entry.quickLinks | length %}
 <section id="landing--quick-links">
   <div class="inside">
     {% include "modules/content/_block-quick-links" %}

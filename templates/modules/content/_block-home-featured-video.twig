@@ -1,8 +1,8 @@
-{% if entry.videoFeatureBlock.count() %}
+{% if entry.videoFeatureBlock | length %}
   {% set videoBlock = entry.videoFeatureBlock.one() %}
 
   <section id="block--featured-video">
-    {% if videoBlock.backgroundImage.count() %}
+    {% if videoBlock.backgroundImage | length %}
 
       {%- import "macros/_images" as imageFunctions -%}
       {% set image = videoBlock.backgroundImage.one() %}

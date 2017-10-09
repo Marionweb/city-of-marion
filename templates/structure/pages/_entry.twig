@@ -1,7 +1,7 @@
 {#
     Page Structure Template
 #}
-{% set parallax = entry.primaryImage.count() ? '_parallax' : '' %}
+{% set parallax = (entry.primaryImage | length) ? '_parallax' : '' %}
 
 {% extends entry.type == 'standard'
     ? 'layouts/columns/_two' ~ parallax
@@ -13,7 +13,7 @@
 
 {# HEADER IMAGE #}
 {% block headerBlock %}
-  {% if entry.primaryImage.count() %}{% include "modules/content/_header-block" %}{% endif %}
+  {% if entry.primaryImage | length %}{% include "modules/content/_header-block" %}{% endif %}
 {% endblock %}
 
 

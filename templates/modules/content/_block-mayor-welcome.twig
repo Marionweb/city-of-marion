@@ -1,7 +1,7 @@
 <section id="block--mayor-welcome">
 {%- set welcomeBlock = entry.welcome.one() -%}
 
-{% if welcomeBlock.welcomePhoto.count() %}
+{% if welcomeBlock.welcomePhoto | length %}
   {%- import "macros/_images" as imageFunctions -%}
   {%- set image = welcomeBlock.welcomePhoto.one() -%}
   {% set outputWidths = [230, 400, 800] %}
@@ -35,7 +35,7 @@
   <p>{{ welcomeBlock.welcomeText|nl2br|raw }}</p>
 {% endif %}
 
-{% if welcomeBlock.learnMoreLink.count() %}
+{% if welcomeBlock.learnMoreLink | length %}
   {%- set learnMore = welcomeBlock.learnMoreLink.one() -%}
   <a href="{{learnMore.url}}" title="{{ learnMore.title }}">Learn More</a>
 {% endif %}

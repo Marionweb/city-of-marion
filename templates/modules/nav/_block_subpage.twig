@@ -1,6 +1,6 @@
 <section id="{{ entry.id }}-{{ entry.slug }}" class="block--subpage">
   <a href="{{ entry.url }}" title="{{ entry.title }}">
-  {% if entry.primaryImage.count() %}
+  {% if entry.primaryImage | length %}
     {%- import "macros/_images" as imageFunctions -%}
     {%- set image = entry.primaryImage.one() -%}
     {% set outputWidths = [480, 640, 1024, 1600] %}

@@ -10,7 +10,7 @@
 
 {# HEADER IMAGE #}
 {% block parallaxBack %}
-  {% if entry.primaryImage.count() %}{% include "modules/content/_header-block" %}{% endif %}
+  {% if entry.primaryImage | length %}{% include "modules/content/_header-block" %}{% endif %}
 {% endblock %}
 
 

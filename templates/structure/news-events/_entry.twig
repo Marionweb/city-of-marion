@@ -54,8 +54,8 @@
   }],
   id: 'not ' ~ entry.id,
   limit: 3
-}) %}
-{% if relatedEntries.count() %}
+}).all() %}
+{% if relatedEntries | length %}
 <section id="news-events-article-related">
   <h2>Related Posts</h2>
   <ul>

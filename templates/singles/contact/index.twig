@@ -89,7 +89,7 @@
 
 {# HEADER IMAGE #}
 {% block parallaxBack %}
-  {% if entry.primaryImage.count() %}{% include "modules/content/_header-block" %}{% endif %}
+  {% if entry.primaryImage | length %}{% include "modules/content/_header-block" %}{% endif %}
 {% endblock %}
 
 
@@ -100,7 +100,7 @@
 
   <div id="contact--address-data" itemscope itemtype="http://schema.org/GovernmentBuilding">
 
-    {% if logo.logoIcon.count() %}
+    {% if logo.logoIcon | length %}
     <figure id="contact--logo-icon">
       {% set logo = logo.logoIcon.one() %}
       {% set path = logo.volume.path ~ '/' ~ logo.filename %}
