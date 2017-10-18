@@ -2,7 +2,7 @@
   <div class="block--text">
     <h3>Our Location</h3>
     <h2>{{ entry.locationHeadline|nl2br|raw }}</h2>
-    <p>{{ entry.locationText|nl2br|raw }}</p>
+    <p>{{ entry.locationText |typogrify|nl2br|raw }}</p>
   </div>
   <figure>
     {{ craft.inlin.er('../src/images/indiana_map.svg') | raw }}

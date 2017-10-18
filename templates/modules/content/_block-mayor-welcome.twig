@@ -28,11 +28,11 @@
 {% endif %}
 
 {% if welcomeBlock.welcomeHeadline %}
-  <h2>{{ welcomeBlock.welcomeHeadline|nl2br|raw }}</h2>
+  <h2>{{ welcomeBlock.welcomeHeadline |typogrify|nl2br|raw }}</h2>
 {% endif %}
 
 {% if welcomeBlock.welcomeText %}
-  <p>{{ welcomeBlock.welcomeText|nl2br|raw }}</p>
+  <p>{{ welcomeBlock.welcomeText |typogrify|nl2br|raw }}</p>
 {% endif %}
 
 {% if welcomeBlock.learnMoreLink | length %}
