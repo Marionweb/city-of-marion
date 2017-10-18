@@ -1,3 +1,12 @@
+<IfModule mod_php71.c>
+  php_value post_max_size 1G
+  php_value upload_max_filesize 20M
+  php_value memory_limit 256M
+  php_value max_execution_time 300
+  php_value max_input_time 300
+  php_value session.gc_maxlifetime 1200
+</IfModule>
+
 <IfModule mod_rewrite.c>
 	RewriteEngine On
 
