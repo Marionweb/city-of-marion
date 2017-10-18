@@ -140,14 +140,17 @@ docReady(function() {
       // clear text
       while (labelVal.firstChild) labelVal.removeChild(labelVal.firstChild);
     }
+
+    // INITIALIZE CHOICES.JS FOR FORM SELECTS
+    if (input.hasAttribute('data-choices')) {
+      var genericSelects = new Choices('[data-choices]', {
+        searchEnabled: false,
+        itemSelectText: ''
+      });
+    }
+
   }
 
-
-  // INITIALIZE CHOICES.JS FOR FORM SELECTS
-  var genericSelects = new Choices('[data-choices]', {
-    searchEnabled: false,
-    itemSelectText: ''
-  });
 
 }( document, window, 0 ));
 
