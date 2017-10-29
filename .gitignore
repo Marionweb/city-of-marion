@@ -1,35 +1,54 @@
-/.env*
-/.idea
+# Craft 3 .gitignore
+#
+# Example .gitignore file for Craft 3 CMS projects
+#
+# @author    nystudio107
+# @copyright Copyright (c) 2017 nystudio107
+# @link      https://nystudio107.com/
+# @package   nystudio107/craft
+# @since     1.0.0
+# @license   MIT
+
+# This file should be renamed to '.gitignore' and placed in your
+# Craft 3 CMS project root directory
+
+# CRAFT ENVIRONMENT
+.env.php
+.env.sh
+.env
+
+# COMPOSER
 /vendor
-yarn.lock
-node_modules
-generated
-web/vendor
-web/assets/img
-web/assets/css
-web/assets/js
+
+# CRAFT STORAGE
+/storage/*
+
+# ASSETS
+/web/assets/*
+
+# BUILD FILES
+/bower_components/*
+/node_modules/*
+/build/*
+/yarn-error.log
+/npm-debug.log
+/generated/*
+
+# MISC FILES
+.cache
 .DS_Store
-npm-debug.log
-.sass-cache
-.scssc
-*.bak
-storage/runtime
-storage/backups
-*.hot-update.*
-web/volumes
-
-
-dist/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-test/unit/coverage
-test/e2e/reports
-selenium-debug.log
-
-# Editor directories and files
 .idea
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
+.project
+.settings
+*.esproj
+*.sublime-workspace
+*.sublime-project
+*.tmproj
+*.tmproject
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+config.codekit3
+prepros-6.config
