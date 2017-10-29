@@ -14,45 +14,85 @@ return [
 
     // All environments
     '*' => [
-    ],
 
-    // Live (production) environment
-    'live'  => [
-    ],
+      'downloads' => [
+        'hasUrls' => true,
+        'url' => '//s3.' . getenv('CRAFTENV_AWS_REGION') . '.amazonaws.com/' . getenv('CRAFTENV_AWS_BUCKET') . '/',
+        'subfolder' => 'downloads',
+        'keyId' => getenv('CRAFTENV_AWS_KEY'),
+        'secret' => getenv('CRAFTENV_AWS_SECRET'),
+        'bucket' => getenv('CRAFTENV_AWS_BUCKET'),
+        'region' => getenv('CRAFTENV_AWS_REGION'),
+      ],
 
-    // Staging (pre-production) environment
-    'staging'  => [
-    ],
+      'assetsArticles' => [
+        'hasUrls' => true,
+        'url' => '//s3.' . getenv('CRAFTENV_AWS_REGION') . '.amazonaws.com/' . getenv('CRAFTENV_AWS_BUCKET') . '/',
+        'subfolder' => 'assets/articles',
+        'keyId' => getenv('CRAFTENV_AWS_KEY'),
+        'secret' => getenv('CRAFTENV_AWS_SECRET'),
+        'bucket' => getenv('CRAFTENV_AWS_BUCKET'),
+        'region' => getenv('CRAFTENV_AWS_REGION'),
+      ],
 
-    // Local (development) environment
-    'local'  => [
-      'siteAssets' => [
-        'url' => getenv('CRAFTENV_BASE_URL') . 'volumes/site',
-        'path' => getenv('CRAFTENV_BASE_PATH') . 'volumes/site',
+      'assetsGeneral' => [
+        'hasUrls' => true,
+        'url' => '//s3.' . getenv('CRAFTENV_AWS_REGION') . '.amazonaws.com/' . getenv('CRAFTENV_AWS_BUCKET') . '/',
+        'subfolder' => 'assets/general',
+        'keyId' => getenv('CRAFTENV_AWS_KEY'),
+        'secret' => getenv('CRAFTENV_AWS_SECRET'),
+        'bucket' => getenv('CRAFTENV_AWS_BUCKET'),
+        'region' => getenv('CRAFTENV_AWS_REGION'),
       ],
-      'pageHeaderImages' => [
-        'url' => getenv('CRAFTENV_BASE_URL') . 'volumes/site/headers',
-        'path' => getenv('CRAFTENV_BASE_PATH') . 'volumes/site/headers',
+
+      'imagesPageHeaders' => [
+        'hasUrls' => true,
+        'url' => '//s3.' . getenv('CRAFTENV_AWS_REGION') . '.amazonaws.com/' . getenv('CRAFTENV_AWS_BUCKET') . '/',
+        'subfolder' => 'images/page-headers',
+        'keyId' => getenv('CRAFTENV_AWS_KEY'),
+        'secret' => getenv('CRAFTENV_AWS_SECRET'),
+        'bucket' => getenv('CRAFTENV_AWS_BUCKET'),
+        'region' => getenv('CRAFTENV_AWS_REGION'),
       ],
-      'newsEventsAssets' => [
-        'url' => getenv('CRAFTENV_BASE_URL') . 'volumes/news-events',
-        'path' => getenv('CRAFTENV_BASE_PATH') . 'volumes/news-events',
+
+      'imagesStaff' => [
+        'hasUrls' => true,
+        'url' => '//s3.' . getenv('CRAFTENV_AWS_REGION') . '.amazonaws.com/' . getenv('CRAFTENV_AWS_BUCKET') . '/',
+        'subfolder' => 'images/staff',
+        'keyId' => getenv('CRAFTENV_AWS_KEY'),
+        'secret' => getenv('CRAFTENV_AWS_SECRET'),
+        'bucket' => getenv('CRAFTENV_AWS_BUCKET'),
+        'region' => getenv('CRAFTENV_AWS_REGION'),
       ],
-      'staffPhotos' => [
-        'url' => getenv('CRAFTENV_BASE_URL') . 'volumes/site/staff',
-        'path' => getenv('CRAFTENV_BASE_PATH') . 'volumes/site/staff',
+
+      'imagesUser' => [
+        'hasUrls' => true,
+        'url' => '//s3.' . getenv('CRAFTENV_AWS_REGION') . '.amazonaws.com/' . getenv('CRAFTENV_AWS_BUCKET') . '/',
+        'subfolder' => 'images/user',
+        'keyId' => getenv('CRAFTENV_AWS_KEY'),
+        'secret' => getenv('CRAFTENV_AWS_SECRET'),
+        'bucket' => getenv('CRAFTENV_AWS_BUCKET'),
+        'region' => getenv('CRAFTENV_AWS_REGION'),
       ],
-      'logos' => [
-        'url' => getenv('CRAFTENV_BASE_URL') . 'volumes/site/logos',
-        'path' => getenv('CRAFTENV_BASE_PATH') . 'volumes/site/logos',
+
+      'svgLogos' => [
+        'hasUrls' => true,
+        'url' => '//s3.' . getenv('CRAFTENV_AWS_REGION') . '.amazonaws.com/' . getenv('CRAFTENV_AWS_BUCKET') . '/',
+        'subfolder' => 'images/svg/logos',
+        'keyId' => getenv('CRAFTENV_AWS_KEY'),
+        'secret' => getenv('CRAFTENV_AWS_SECRET'),
+        'bucket' => getenv('CRAFTENV_AWS_BUCKET'),
+        'region' => getenv('CRAFTENV_AWS_REGION'),
       ],
-      'icons' => [
-        'url' => getenv('CRAFTENV_BASE_URL') . 'volumes/site/icons',
-        'path' => getenv('CRAFTENV_BASE_PATH') . 'volumes/site/icons',
-      ],
-      'fileAttachments' => [
-        'url' => getenv('CRAFTENV_BASE_URL') . 'volumes/downloads',
-        'path' => getenv('CRAFTENV_BASE_PATH') . 'volumes/downloads',
+
+      'svgIcons' => [
+        'hasUrls' => true,
+        'url' => '//s3.' . getenv('CRAFTENV_AWS_REGION') . '.amazonaws.com/' . getenv('CRAFTENV_AWS_BUCKET') . '/',
+        'subfolder' => 'images/svg/icons',
+        'keyId' => getenv('CRAFTENV_AWS_KEY'),
+        'secret' => getenv('CRAFTENV_AWS_SECRET'),
+        'bucket' => getenv('CRAFTENV_AWS_BUCKET'),
+        'region' => getenv('CRAFTENV_AWS_REGION'),
       ],
     ],
 ];
