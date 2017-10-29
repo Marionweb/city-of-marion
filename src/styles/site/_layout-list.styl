@@ -51,10 +51,20 @@
       font-size $list-intro-text-size-desktop
 
 
-#list--content
+.list--content
   +above(m)
     lost-column 32/36
     lost-offset: 2/36
+
+  &#list--content--upcoming
+    margin-bottom rem(60px)
+
+  > h3
+    color $list-section-title-color
+    font-size $list-section-title-mobile
+    +above(m)
+      font-size $list-section-title-desktop
+
   ul
     list-style none
     padding 0
