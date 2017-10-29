@@ -18,19 +18,19 @@
     opacity .8
     img
       @extend $lazy-load
-
+  figure.mobile
+    padding-bottom percentage(15/16)
   figure.desktop
     display none
     visibility hidden
-  +above(m)
+    padding-bottom percentage(5/12)
+  +above(tablet-min)
     figure.mobile
       display none
       visibility none
-      padding-bottom percentage(15/16)
     figure.desktop
       display block
       visibility visible
-      padding-bottom percentage(5/12)
 
   #block--featured-video--content
     position absolute
@@ -41,18 +41,21 @@
     z-index 5
     align-items center
 
-    +below(m)
+    +below(mobile-max)
       lost-flex-container: column
       justify-content center
       left rem(15px)
       right rem(15px)
 
-    +above(m)
+    +above(tablet-min)
       lost-flex-container: row
 
   #block--featured-video--title
 
-    +above(m)
+    +between(tablet-min, tablet-max)
+      lost-column 18/36
+      lost-offset: 2/36
+    +above(xl)
       lost-column 17/36
       lost-offset 4/36
 
