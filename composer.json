@@ -82,6 +82,9 @@
         "type": "path",
         "url": "../../../other/craft3-encodeemail/"
       },
+      {
+        "type": "vcs",
+        "url": "https://github.com/tippingmedia/venti"
       }
     ]
 }
