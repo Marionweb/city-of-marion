@@ -12,27 +12,63 @@
 
 {% set year = craft.app.request.getSegment(4) %}
 
-{% set params = {
+{% set upcomingMeetingsParams = {
   section : 'minutesAgendas',
   orderBy : 'meetingDate desc',
-  meetingDate : 'and, >= ' ~ year ~ '-01-01, < ' ~ (year + 1) ~ '-01-01',
+  meetingDate : 'and, >= ' ~ now|date("Y-m-d") ~ ', < ' ~ (year + 1) ~ '-01-01',
   relatedTo: board
 } %}
 
-{% for meeting in craft.entries(params).all() %}
+{% if craft.entries(upcomingMeetingsParams).all() | length %}
+<section class="list--content" id="list--content--upcoming">
+<h3>Upcoming Meetings</h3>
+<ul>
+  {% for meeting in craft.entries(upcomingMeetingsParams).all() %}
 
-{% set minutes = meeting.minutesPdf.one() %}
-{% set agenda = meeting.agendaPdf.one() %}
-<li{% if meeting.minutesPdf | length %} data-minutes="true"{% endif %}{% if meeting.agendaPdf | length %} data-agenda="true"{% endif %}>
-  <span class="title">{{ meeting.title }}</span>
-  <span class="date">{{ meeting.meetingDate | date('m/d/Y') }}</span>
-  <span class="actions">
-    {% if meeting.agendaPdf | length %}<a href="{{ agenda.url }}" title="Download the meeting agenda for {{ meeting.title }}" target="_blank">View Agenda</a>{% endif %}
-    {% if meeting.minutesPdf | length %}<a href="{{ minutes.url }}" title="Download the meeting minutes for {{ meeting.title }}" target="_blank">View Minutes</a>{% endif %}
-  </span>
-</li>
+  {% set minutes = meeting.minutesPdf.one() %}
+  {% set agenda = meeting.agendaPdf.one() %}
+  <li{% if meeting.minutesPdf | length %} data-minutes="true"{% endif %}{% if meeting.agendaPdf | length %} data-agenda="true"{% endif %}>
+    <span class="title">{{ meeting.title }}</span>
+    <span class="date">{{ meeting.meetingDate | date('m/d/Y') }}</span>
+    <span class="actions">
+      {% if meeting.agendaPdf | length %}<a href="{{ agenda.url }}" title="Download the meeting agenda for {{ meeting.title }}" target="_blank">Agenda</a>{% endif %}
+    </span>
+  </li>
 
-{% endfor %}
+  {% endfor %}
+</ul>
+</section>
+{% endif %}
+
+
+{% set pastMeetingsParams = {
+  section : 'minutesAgendas',
+  orderBy : 'meetingDate desc',
+  meetingDate : 'and, >= ' ~ year ~ '-01-01, < ' ~ now|date("Y-m-d"),
+  relatedTo: board
+} %}
+
+{% if craft.entries(pastMeetingsParams).all() | length %}
+<section class="list--content" id="list--content--past">
+{% if craft.entries(upcomingMeetingsParams).all() | length %}<h3>Past Meetings</h3>{% endif %}
+<ul>
+  {% for meeting in craft.entries(pastMeetingsParams).all() %}
+
+  {% set minutes = meeting.minutesPdf.one() %}
+  {% set agenda = meeting.agendaPdf.one() %}
+  <li{% if meeting.minutesPdf | length %} data-minutes="true"{% endif %}{% if meeting.agendaPdf | length %} data-agenda="true"{% endif %}>
+    <span class="title">{{ meeting.title }}</span>
+    <span class="date">{{ meeting.meetingDate | date('m/d/Y') }}</span>
+    <span class="actions">
+      {% if meeting.video | length %}<a data-fancybox href="{{ meeting.video.url }}" data-options='{"toolbar" : false, "smallBtn" : true}' title="Watch {{ meeting.video.title }}">Watch Video</a>{% endif %}
+      {% if meeting.minutesPdf | length %}<a href="{{ minutes.url }}" title="Download the meeting minutes for {{ meeting.title }}" target="_blank">Minutes</a>{% endif %}
+    </span>
+  </li>
+
+  {% endfor %}
+</ul>
+</section>
+{% endif %}
 
 {% endblock %}
 

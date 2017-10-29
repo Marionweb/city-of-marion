@@ -10,8 +10,11 @@
 {% set entryIds = craft.entries.section('minutesAgendas').ids() %}
 {% set boards = craft.entries.relatedTo({ sourceElement: entryIds }).all() %}
 
-{% for board in boards %}
-  <li><span>{{ board.title }}</span> <a href="{{ (craft.app.request.segments|last) ~ '/' ~ board.slug }}" title="View all Minutes &amp; Agendas for {{ board.title }}">View</a></li>
-{% endfor %}﻿
-
+<section class="list--content">
+<ul>
+  {% for board in boards %}
+    <li><span>{{ board.title }}</span> <a href="{{ (craft.app.request.segments|last) ~ '/' ~ board.slug }}" title="View all Minutes &amp; Agendas for {{ board.title }}">View</a></li>
+  {% endfor %}﻿
+</ul>
+</section>
 {% endblock %}

@@ -27,6 +27,7 @@ rupture.scale-names = 'xs' 'sm' 'm' 'l' 'xl' 'hd'
 
 mobile = (rupture.mobile-cutoff)
 tablet-min = 736px
+mobile-max = tablet-min - 1px
 tablet-max = (rupture.tablet-cutoff) - 1px
 desktop-min = (rupture.tablet-cutoff)
 
@@ -683,10 +684,13 @@ $list-intro-subheadline-color = $light-blue
 $list-intro-subheadline-size-mobile = rem(21px)
 $list-intro-subheadline-size-desktop = rem(32px)
 
-
 $list-intro-text-size-mobile = rem(18px)
 $list-intro-text-size-desktop = rem(18px)
 $list-intro-text-color = $navy
+
+$list-section-title-color = $navy
+$list-section-title-mobile = rem(21px)
+$list-section-title-desktop = rem(24px)
 
 $list-content-row-bg-color = $background-gray
 $list-content-row-bg-color-alt = $white
