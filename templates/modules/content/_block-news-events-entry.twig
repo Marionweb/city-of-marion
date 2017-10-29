@@ -14,17 +14,11 @@
         {%- set image = entry.employee.one().staffPhoto.one() -%}
       {% endif %}
 
-      {%- set mobileAspectRatio = (15/8) -%}
-      {%- set mobileSmall = { width: 40, height: 40 / mobileAspectRatio, quality: 20 } -%}
-
-      {%- set desktopAspectRatio = (9/5) -%}
-      {%- set desktopSmall = { width: 40, height: 40 / desktopAspectRatio, quality: 20 } -%}
-
         <figure class="mobile">
           <img class="lazyload"
-            src="{{ image.getUrl(mobileSmall) }}"
+            src="{{ image.optimizedImagesBlockPreview.placeholderBox() }}"
             data-sizes="100vw"
-            data-srcset="{{ image.optimizedImagesSquare.srcset() }}"
+            data-srcset="{{ image.optimizedImagesBlockPreview.srcset() }}"
             {% if image.alt %}alt="{{ image.alt }}"{% endif %}>
           {% if image.caption %}
           <figcaption>{{ image.caption }}</figcaption>
@@ -33,9 +27,9 @@
 
         <figure class="desktop">
           <img class="lazyload"
-            src="{{ image.getUrl(desktopSmall) }}"
+            src="{{ image.optimizedImagesBlockPreview.placeholderBox() }}"
             data-sizes="100vw"
-            data-srcset="{{ image.optimizedImagesSquare.srcset() }}"
+            data-srcset="{{ image.optimizedImagesBlockPreview.srcset() }}"
             {% if image.alt %}alt="{{ image.alt }}"{% endif %}>
           {% if image.caption %}
           <figcaption>{{ image.caption }}</figcaption>

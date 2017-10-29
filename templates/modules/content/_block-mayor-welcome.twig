@@ -2,20 +2,12 @@
 {%- set welcomeBlock = entry.welcome.one() -%}
 
 {% if welcomeBlock.welcomePhoto | length %}
-  {%- import "macros/_images" as imageFunctions -%}
   {%- set image = welcomeBlock.welcomePhoto.one() -%}
-  {% set outputWidths = [230, 400, 800] %}
-  {%- set lowQuality = 20 -%}
-  {%- set highQuality = 82 -%}
-
-  {%- set aspectRatio = (1/1) -%}
-  {%- set small = { width: 40, height: 40 / aspectRatio, quality: lowQuality } -%}
-
   <figure>
     <img class="lazyload"
-      src="{{ image.getUrl(small) }}"
+      src="{{ image.optimizedImagesSquare.placeholderImage() }}"
       data-sizes="100vw"
-      data-srcset="{{ imageFunctions.srcset(image, outputWidths, aspectRatio) }}"
+      data-srcset="{{ image.optimizedImagesSquare.srcset() }}"
       {% if image.alt %}alt="{{ image.alt }}"{% endif %}>
     {% if image.caption %}
     <figcaption>{{ image.caption }}</figcaption>
@@ -24,15 +16,15 @@
 {% endif %}
 
 {% if welcomeBlock.welcomeName %}
-  <h3>From {{ welcomeBlock.welcomeName }}</h3>
+  <h3>From {{ welcomeBlock.welcomeName | typogrify }}</h3>
 {% endif %}
 
 {% if welcomeBlock.welcomeHeadline %}
-  <h2>{{ welcomeBlock.welcomeHeadline |typogrify|nl2br|raw }}</h2>
+  <h2>{{ welcomeBlock.welcomeHeadline | nl2br | typogrify }}</h2>
 {% endif %}
 
 {% if welcomeBlock.welcomeText %}
-  <p>{{ welcomeBlock.welcomeText |typogrify|nl2br|raw }}</p>
+  <p>{{ welcomeBlock.welcomeText | nl2br | typogrify }}</p>
 {% endif %}
 
 {% if welcomeBlock.learnMoreLink | length %}

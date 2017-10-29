@@ -1,18 +1,11 @@
 <div id="header-image" class="news-events-article">
-  {%- import "macros/_images" as imageFunctions -%}
   {%- set image = entry.primaryImage.one() -%}
-  {% set outputWidths = [480, 640, 1024, 1600] %}
-  {%- set initialQuality = 20 -%}
-  {%- set aspectRatio = (3/1) -%}
-  {%- set small = { width: 40, height: 40 / aspectRatio, quality: initialQuality } -%}
-  {%- set medium = { width: 100, height: 100 / aspectRatio, quality: initialQuality } -%}
 
   <figure>
       <img class="lazyload"
-        src="{{ image.getUrl(small) }}"
-        data-src="{{ image.getUrl(medium) }}"
-        data-sizes="auto"
-        data-srcset="{{ imageFunctions.srcset(image, outputWidths, aspectRatio) }}"
+        src="{{ image.optimizedImagesNewsHeader.placeholderBox() }}"
+        data-sizes="100vw"
+        data-srcset="{{ image.optimizedImagesNewsHeader.srcset() }}"
         {% if image.alt %}alt="{{ image.alt }}"{% endif %}>
     {% if image.caption %}
     <figcaption>{{ image.caption }}</figcaption>

@@ -11,27 +11,17 @@
     {% endif %}
 
     {% if (spotlight.primaryImage | length) or employeePhotoExists %}
-      {%- import "macros/_images" as imageFunctions -%}
       {% if spotlight.primaryImage | length %}
         {%- set image = spotlight.primaryImage.one() -%}
       {% else %}
         {%- set image = spotlight.employee.one().staffPhoto.one() -%}
       {% endif %}
 
-      {% set outputWidths = [480, 736, 980, 1280, 1690] %}
-      {%- set lowQuality = 20 -%}
-
-      {%- set mobileAspectRatio = (15/8) -%}
-      {%- set mobileSmall = { width: 40, height: 40 / mobileAspectRatio, quality: lowQuality } -%}
-
-      {%- set desktopAspectRatio = (9/5) -%}
-      {%- set desktopSmall = { width: 40, height: 40 / desktopAspectRatio, quality: lowQuality } -%}
-
         <figure class="mobile">
           <img class="lazyload"
-            src="{{ image.getUrl(mobileSmall) }}"
+            src="{{ image.optimizedImagesBlockPreview.placeholderBox() }}"
             data-sizes="auto"
-            data-srcset="{{ imageFunctions.srcset(image, outputWidths, mobileAspectRatio) }}"
+            data-srcset="{{ image.optimizedImagesBlockPreview.srcset() }}"
             {% if image.alt %}alt="{{ image.alt }}"{% endif %}>
           {% if image.caption %}
           <figcaption>{{ image.caption }}</figcaption>
@@ -40,9 +30,9 @@
 
         <figure class="desktop">
           <img class="lazyload"
-            src="{{ image.getUrl(desktopSmall) }}"
+            src="{{ image.optimizedImagesBlockPreview.placeholderBox() }}"
             data-sizes="auto"
-            data-srcset="{{ imageFunctions.srcset(image, outputWidths, desktopAspectRatio) }}"
+            data-srcset="{{ image.optimizedImagesBlockPreview.srcset() }}"
             {% if image.alt %}alt="{{ image.alt }}"{% endif %}>
           {% if image.caption %}
           <figcaption>{{ image.caption }}</figcaption>
@@ -56,20 +46,3 @@
   </a>
 </section>
 {% endif %}
-
-{# {% if welcomeBlock.welcomeName %}
-  <h3>From {{ welcomeBlock.welcomeName }}</h3>
-{% endif %}
-
-{% if welcomeBlock.welcomeHeadline %}
-  <h2>{{ welcomeBlock.welcomeHeadline|nl2br|raw }}</h2>
-{% endif %}
-
-{% if welcomeBlock.welcomeText %}
-  <p>{{ welcomeBlock.welcomeText|nl2br|raw }}</p>
-{% endif %}
-
-{% if welcomeBlock.learnMoreLink | length %}
-  {%- set learnMore = welcomeBlock.learnMoreLink.one() -%}
-  <a href="{{learnMore.url}}" title="{{ learnMore.title }}">Learn More</a>
-{% endif %} #}

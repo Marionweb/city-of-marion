@@ -1,6 +1,6 @@
 <header>
-  <h1>{{ entry.title }}</h1>
-  <p class="lead">{{ entry.leadIn }}</p>
+  <h1>{{ entry.title | typogrify }}</h1>
+  <p class="lead">{{ entry.leadIn | typogrify }}</p>
 </header>
 
 {% include "modules/content/_page-content" %}

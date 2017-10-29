@@ -1,7 +1,7 @@
 <section id="landing--intro">
   <div class="inside">
-    <h1>{% if entry.headline %}{{ entry.headline }}{% else %}{{ entry.title }}{% endif %}</h1>
-    <p>{{ entry.leadIn }}</p>
+    <h1>{% if entry.headline %}{{ entry.headline | typogrify }}{% else %}{{ entry.title | typogrify }}{% endif %}</h1>
+    <p>{{ entry.leadIn | typogrify }}</p>
   </div>
 </section>
 

@@ -8,25 +8,20 @@
 {% block parallaxBack %}
 
 <div id="header-image" class="{{entry.section.handle}}">
-  {%- import "macros/_images" as imageFunctions -%}
   {%- set image = entry.primaryImage.one() -%}
-  {% set outputWidths = [480, 640, 1024, 1600] %}
   {%- set initialQuality = 20 -%}
 
   {%- set mobileAspectRatio = (15/12) -%}
   {%- set mobileSmall = { width: 40, height: 40 / mobileAspectRatio, quality: initialQuality } -%}
-  {%- set mobileMedium = { width: 100, height: 100 / mobileAspectRatio, quality: initialQuality } -%}
 
   {%- set desktopAspectRatio = (12/5) -%}
   {%- set desktopSmall = { width: 40, height: 40 / desktopAspectRatio, quality: initialQuality } -%}
-  {%- set desktopMedium = { width: 100, height: 100 / desktopAspectRatio, quality: initialQuality } -%}
 
   <figure class="mobile">
     <img class="lazyload"
-      src="{{ image.getUrl(mobileSmall) }}"
-      data-src="{{ image.getUrl(mobileMedium) }}"
-      data-sizes="auto"
-      data-srcset="{{ imageFunctions.srcset(image, outputWidths, mobileAspectRatio) }}"
+      src="{{ image.optimizedImagesLandingHeader.placeholderImage() }}"
+      data-sizes="100vw"
+      data-srcset="{{ image.optimizedImagesLandingHeader.srcset() }}"
       {% if image.alt %}alt="{{ image.alt }}"{% endif %}>
     {% if image.caption %}
     <figcaption>{{ image.caption }}</figcaption>
@@ -35,10 +30,9 @@
 
   <figure class="desktop">
     <img class="lazyload"
-      src="{{ image.getUrl(desktopSmall) }}"
-      data-src="{{ image.getUrl(desktopMedium) }}"
-      data-sizes="auto"
-      data-srcset="{{ imageFunctions.srcset(image, outputWidths, desktopAspectRatio) }}"
+      src="{{ image.optimizedImagesLandingHeader.placeholderImage() }}"
+      data-sizes="100vw"
+      data-srcset="{{ image.optimizedImagesLandingHeader.srcset() }}"
       {% if image.alt %}alt="{{ image.alt }}"{% endif %}>
     {% if image.caption %}
     <figcaption>{{ image.caption }}</figcaption>

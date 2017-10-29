@@ -4,7 +4,7 @@
   {% if block.type == "richText" %}
     {# RICH TEXT #}
 
-    {{ block.text |typogrify }}
+    {{ block.text | typogrify }}
 
   {% elseif block.type == "image" %}
     {# IMAGES #}
@@ -73,9 +73,9 @@
     {# QUOTES #}
 
     <blockquote>
-      <p>{{ block.quote |typogrify }}</p>
+      <p>{{ block.quote | typogrify }}</p>
       <footer>
-        <cite>{% if block.citeUrl %}<a href="{{ block.citeUrl }}" target="_blank">{% endif %}{{ block.cite |typogrify }}{% if block.citeUrl %}</a>{% endif %}{% if block.citeSecondary %} <em>{{ block.citeSecondary |typogrify }}</em>{% endif %}</cite>
+        <cite>{% if block.citeUrl %}<a href="{{ block.citeUrl }}" target="_blank">{% endif %}{{ block.cite | typogrify }}{% if block.citeUrl %}</a>{% endif %}{% if block.citeSecondary %} <em>{{ block.citeSecondary | typogrify }}</em>{% endif %}</cite>
     </blockquote>
 
   {% endif %}

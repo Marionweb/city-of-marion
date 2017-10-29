@@ -31,12 +31,12 @@
       <input type="checkbox">
       <i></i>
       <h2>
-        {{ department.title }}
+        {{ department.title | typogrify }}
         {% if department.description or department.email %}
         <span class="controls">
           {% if department.description %}<input type="checkbox"><span class="toggle-description">Description <i></i></span>{% endif %}
           {% if department.email %}<a data-fancybox data-src="#department--{{ department.slug }}--modal" href="javascript:;" class="contact-department-modal">Contact <span>Department</span></a>{% endif %}
-          {% if department.description %}<p>{{ department.description }}</p>{% endif %}
+          {% if department.description %}<p>{{ department.description | typogrify }}</p>{% endif %}
         </span>
         {% endif %}
       </h2>

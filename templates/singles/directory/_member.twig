@@ -7,12 +7,12 @@
         <sources data-srcset="{{ member.staffPhoto.one().optimizedImagesSquare.srcsetWebP() }}"
                  data-sizes="50vw"
                  type="image/webp" />
-        <img class="lazyload" src="{{ member.staffPhoto.one().getUrl(thumb) }}"
+        <img class="lazyload" src="{{ member.staffPhoto.one().optimizedImagesSquare.placeholderBox() }}"
              data-srcset="{{ member.staffPhoto.one().optimizedImagesSquare.srcset() }}"
              data-sizes="50vw" alt="{{ memberName }}" />
       </picture>
     {% endif %}
-    <h3>{{ memberName }}</h3>
-    {% if member.positionTitle %}<h4>{{ member.positionTitle }}</h4>{% endif %}
+    <h3>{{ memberName | typogrify }}</h3>
+    {% if member.positionTitle %}<h4>{{ member.positionTitle | typogrify }}</h4>{% endif %}
   </a>
 </li>

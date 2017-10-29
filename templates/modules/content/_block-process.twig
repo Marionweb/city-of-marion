@@ -4,11 +4,10 @@
   {%- set collaborations = entry.collaboration.limit(3).all() -%}
 
   {% for collaboration in collaborations %}
-  {%- set logo = collaboration.collaborationLogo.one() -%}
+  {%- set logoUrl = 'https:' ~ collaboration.collaborationLogo.one().getUrl() -%}
   <figure class="collaboration">
     <a href="{{ collaboration.collaborationUrl }}" target="_blank" title="{{ collaboration.collaborationName }}">
-      {% set path = logo.volume.path ~ '/' ~ logo.filename %}
-      {{ craft.inlin.er(path, true) | raw }}
+      {{ craft.inlin.er(logoUrl, true) | raw }}
     </a>
   </figure>
   {% endfor %}

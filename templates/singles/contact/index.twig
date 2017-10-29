@@ -102,14 +102,13 @@
 
     {% if logo.logoIcon | length %}
     <figure id="contact--logo-icon">
-      {% set logo = logo.logoIcon.one() %}
-      {% set path = logo.volume.path ~ '/' ~ logo.filename %}
-      {{ craft.inlin.er(path, true) | raw }}
+      {% set logoUrl = 'https:' ~ logo.logoIcon.one().getUrl() %}
+      {{ craft.inlin.er(logoUrl, true) | raw }}
     </figure>
     {% endif %}
 
     <h4>Address</h4>
-    <span itemprop="name">{{ building.title }}</span>
+    <span itemprop="name">{{ building.title | typogrify }}</span>
     <div class="address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
       <span itemprop="streetAddress">{{ building.buildingAddress.addressLine2 }}</span><br>
       <span itemprop="addressLocality">{{ building.buildingAddress.locality }}</span>,

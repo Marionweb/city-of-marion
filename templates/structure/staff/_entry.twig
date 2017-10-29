@@ -17,21 +17,20 @@
 
 <section id="staff-profile" itemscope itemtype="http://schema.org/Person">
   {% if entry.staffPhoto | length %}
-    {%- set thumb = { width: 40, height: 40, quality: 20 } -%}
     <picture itemprop="image">
       <sources data-srcset="{{ entry.staffPhoto.one().optimizedImagesSquare.srcsetWebP() }}"
                data-sizes="50vw"
                type="image/webp" />
-      <img class="lazyload" src="{{ entry.staffPhoto.one().getUrl(thumb) }}"
+      <img class="lazyload" src="{{ entry.staffPhoto.one().optimizedImagesSquare.placeholderBox() }}"
            data-srcset="{{ entry.staffPhoto.one().optimizedImagesSquare.srcset() }}"
            data-sizes="50vw" alt="{{ fullName }}" />
     </picture>
   {% endif %}
 
-  <h1 itemprop="name" class="fn">{{ fullName }}</h1>
-  <h2 itemprop="jobTitle">{{ entry.positionTitle }}</h2>
+  <h1 itemprop="name" class="fn">{{ fullName | typogrify }}</h1>
+  <h2 itemprop="jobTitle">{{ entry.positionTitle | typogrify }}</h2>
 
-  <h4>{{ department.title }}</h4>
+  <h4>{{ department.title | typogrify }}</h4>
 
   <div id="staff-profile--address-data" itemscope itemtype="http://schema.org/GovernmentBuilding">
     <div id="staff-profile--address" itemscope itemtype="http://schema.org/GovernmentBuilding">
@@ -83,7 +82,7 @@
     </div>
   </div>
 
-  {% if entry.bio %}<p>{{ entry.bio |typogrify }}</p>{% endif %}
+  {% if entry.bio %}<p>{{ entry.bio | typogrify }}</p>{% endif %}
 
 </section>
 
