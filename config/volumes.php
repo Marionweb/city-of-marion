@@ -1,15 +1,15 @@
 <?php
-
 /**
- * Asset Volume Configuration
+ * $_ENV constants are loaded by craft3-multi-environment from .env.php via web/index.php
  *
- * All of your system's volume configuration settings go in here.
- * Put the Asset Volume handle in `ASSET_HANDLE` key, and put the path
- * to the asset in `ASSET_PATH`. Create an array for each Asset Volume
- * your website uses.
+ * @author    nystudio107
+ * @copyright Copyright (c) 2017 nystudio107
+ * @link      https://nystudio107.com/
+ * @package   craft3-multi-environment
+ * @since     1.0.3
+ * @license   MIT
  */
 
-// $_ENV constants are loaded by craft3-multi-environment from .env.php via web/index.php
 return [
 
     // All environments

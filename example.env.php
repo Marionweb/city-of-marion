@@ -49,6 +49,10 @@ $craftEnvVars = [
     // if multiple things are sharing the same database)
     'DB_TABLE_PREFIX' => '',
 
+    // The secure key Craft will use for hashing and encrypting data, see:
+    // https://craftcms.com/docs/config-settings#validationKey
+    'SECURITY_KEY' => 'REPLACE_ME',
+
     // The site url to use; it can be hard-coded as well
     'SITE_URL' => $protocol . $_SERVER['HTTP_HOST'] . '/',
 
@@ -59,15 +63,6 @@ $craftEnvVars = [
     // The base path environmentVariable for Assets; it can be hard-coded as well
     // You will also need to configure `config/volumes.php` for your Asset Volumes
     'BASE_PATH' => realpath(dirname(__FILE__)) . '/web/',
-
-    // The private Stripe key.
-    'STRIPE_KEY' => 'REPLACE_ME',
-
-    // The private Amazon Web Services key.
-    'AWS_KEY' => 'REPLACE_ME',
-
-    // The private Amazon Web Services secret code.
-    'AWS_SECRET' => 'REPLACE_ME',
 ];
 
 // Set all of the .env values, auto-prefixed with `CRAFTENV_`
@@ -89,6 +84,7 @@ SetEnv CRAFTENV_DB_PASSWORD "REPLACE_ME"
 SetEnv CRAFTENV_DB_DATABASE "REPLACE_ME"
 SetEnv CRAFTENV_DB_SCHEMA "public"
 SetEnv CRAFTENV_DB_TABLE_PREFIX ""
+SetEnv CRAFTENV_SECURITY_KEY "REPLACE_ME"
 SetEnv CRAFTENV_SITE_URL "REPLACE_ME"
 SetEnv CRAFTENV_BASE_URL "REPLACE_ME"
 SetEnv CRAFTENV_BASE_PATH "REPLACE_ME"
@@ -103,6 +99,7 @@ fastcgi_param CRAFTENV_DB_PASSWORD "REPLACE_ME";
 fastcgi_param CRAFTENV_DB_DATABASE "REPLACE_ME";
 fastcgi_param CRAFTENV_DB_SCHEMA "public";
 fastcgi_param CRAFTENV_DB_TABLE_PREFIX "";
+fastcgi_param CRAFTENV_SECURITY_KEY "REPLACE_ME";
 fastcgi_param CRAFTENV_SITE_URL "REPLACE_ME";
 fastcgi_param CRAFTENV_BASE_URL "REPLACE_ME";
 fastcgi_param CRAFTENV_BASE_PATH "REPLACE_ME";

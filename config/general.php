@@ -1,13 +1,15 @@
 <?php
-
 /**
- * General Configuration
+ * $_ENV constants are loaded by craft3-multi-environment from .env.php via web/index.php
  *
- * All of your system's general configuration settings go in here.
- * You can see a list of the default settings in src/config/defaults/general.php
+ * @author    nystudio107
+ * @copyright Copyright (c) 2017 nystudio107
+ * @link      https://nystudio107.com/
+ * @package   craft3-multi-environment
+ * @since     1.0.3
+ * @license   MIT
  */
 
-// $_ENV constants are loaded by craft3-multi-environment from .env.php via web/index.php
 return [
 
     // All environments
@@ -17,9 +19,10 @@ return [
         'cacheDuration' => false,
         'useEmailAsUsername' => true,
         'generateTransformsBeforePageLoad' => true,
+        'enableCsrfProtection' => true,
         'siteUrl' => getenv('CRAFTENV_SITE_URL'),
         'craftEnv' => CRAFT_ENVIRONMENT,
-        'securityKey' => CRAFT_SECURITY_KEY,
+        'securityKey' => getenv('CRAFTENV_SECURITY_KEY'),
 
         // Control Panel trigger word
         'cpTrigger' => 'admin',
@@ -35,7 +38,9 @@ return [
 
     // Live (production) environment
     'live' => [
+        'isSystemOn' => true,
         'devMode' => false,
+        'backupDbOnUpdate' => false,
         'enableTemplateCaching' => true,
         'allowAutoUpdates' => false,
         'appId' => 'cerulean',
@@ -44,14 +49,18 @@ return [
 
     // Staging (pre-production) environment
     'staging' => [
+        'isSystemOn' => false,
         'devMode' => false,
+        'backupDbOnUpdate' => false,
         'enableTemplateCaching' => true,
         'allowAutoUpdates' => false,
     ],
 
     // Local (development) environment
     'local' => [
+        'isSystemOn' => true,
         'devMode' => true,
+        'backupDbOnUpdate' => true,
         'enableTemplateCaching' => false,
         'allowAutoUpdates' => true,
         'rememberUsernameDuration' => 'P101Y',
