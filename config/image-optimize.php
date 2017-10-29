@@ -27,6 +27,65 @@
 return [
 
     '*' => [
+      // Should image variant be created on Asset save (aka BeforePageLoad)
+      'generateTransformsBeforePageLoad' => true,
+
+      // Controls whether a dominant color palette should be created for image variants
+      // It takes a bit of time, so if you never plan to use it, you can turn it off
+      'createColorPalette' => true,
+
+       // Controls whether SVG placeholder silhouettes should be created for image variants
+       // It takes a bit of time, so if you never plan to use them, you can turn it off
+      'createPlaceholderSilhouettes' => true,
+
+      // Default image variants
+      'defaultVariants'            => [
+          [
+              'width'          => 1690,
+              'useAspectRatio' => true,
+              'aspectRatioX'   => 16.0,
+              'aspectRatioY'   => 9.0,
+              'retinaSizes'    => ['1', '2'],
+              'quality'        => 82,
+              'format'         => 'jpg',
+          ],
+          [
+              'width'          => 1280,
+              'useAspectRatio' => true,
+              'aspectRatioX'   => 16.0,
+              'aspectRatioY'   => 9.0,
+              'retinaSizes'    => ['1', '2'],
+              'quality'        => 82,
+              'format'         => 'jpg',
+          ],
+          [
+              'width'          => 980,
+              'useAspectRatio' => true,
+              'aspectRatioX'   => 4.0,
+              'aspectRatioY'   => 3.0,
+              'retinaSizes'    => ['1', '2'],
+              'quality'        => 60,
+              'format'         => 'jpg',
+          ],
+          [
+              'width'          => 736,
+              'useAspectRatio' => true,
+              'aspectRatioX'   => 4.0,
+              'aspectRatioY'   => 3.0,
+              'retinaSizes'    => ['1', '2', '3'],
+              'quality'        => 60,
+              'format'         => 'jpg',
+          ],
+          [
+              'width'          => 480,
+              'useAspectRatio' => true,
+              'aspectRatioX'   => 4.0,
+              'aspectRatioY'   => 3.0,
+              'retinaSizes'    => ['1', '2', '3'],
+              'quality'        => 60,
+              'format'         => 'jpg',
+          ],
+      ],
 
       // Active image processors
       "activeImageProcessors" => [
