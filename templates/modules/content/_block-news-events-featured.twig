@@ -1,4 +1,4 @@
-<article id="preview-{{ entry.id }}" class="block--news-events--preview article-type-{{ entry.type }}">
+<article id="preview-featured-{{ entry.id }}" class="block--news-events--preview block--news-events--featured {{ entry.type.handle }}">
   <a href="{{ entry.url }}" title="Champion of the Month: {{ entry.title }}">
     {% set employeePhotoExists = false %}
     {% if entry.employee | length %}
@@ -16,7 +16,7 @@
 
         <figure class="mobile">
           <img class="lazyload"
-            src="{{ image.optimizedImagesSquare.placeholderBox() }}"
+            src="{{ image.optimizedImagesNewsHeader.placeholderBox() }}"
             data-sizes="100vw"
             data-srcset="{{ image.optimizedImagesSquare.srcset() }}"
             {% if image.alt %}alt="{{ image.alt }}"{% endif %}>
@@ -27,9 +27,9 @@
 
         <figure class="desktop">
           <img class="lazyload"
-            src="{{ image.optimizedImagesSquare.placeholderBox() }}"
+            src="{{ image.optimizedImagesNewsHeader.placeholderBox() }}"
             data-sizes="100vw"
-            data-srcset="{{ image.optimizedImagesSquare.srcset() }}"
+            data-srcset="{{ image.optimizedImagesNewsHeader.srcset() }}"
             {% if image.alt %}alt="{{ image.alt }}"{% endif %}>
           {% if image.caption %}
           <figcaption>{{ image.caption }}</figcaption>
@@ -37,14 +37,16 @@
         </figure>
     {% endif %}
 
-    <h3>
-      {% if entry.type.handle == 'story' %}
-        <span>{% if entry.storyType %}{{ entry.storyType.one().slug == 'champions' ? 'Champion of the Month' : entry.storyType.one().title }}</span>{% endif %}<time datetime="{{ entry.postDate|date('Y-m-01\T00:00:00O') }}">{{ entry.postDate|date("M Y") }}</time>
-      {% else %}
-        <span>{{ entry.type.name }}</span><time datetime="{{ entry.postDate|date('Y-m-d\TH:i:sO') }}">{{ entry.postDate|date("n-j-y") }}</time>
-      {% endif %}
-    </h3>
-    <h2>{{ entry.title }}</h2>
+    <div class="block--news-events--featured-title">
+      <h3>
+        {% if entry.type.handle == 'story' %}
+          <span>{% if entry.storyType %}{{ entry.storyType.one().slug == 'champions' ? 'Champion of the Month' : entry.storyType.one().title }}</span>{% endif %}<time datetime="{{ entry.postDate|date('Y-m-01\T00:00:00O') }}">{{ entry.postDate|date("M Y") }}</time>
+        {% else %}
+          <span>{{ entry.type.name }}</span><time datetime="{{ entry.postDate|date('Y-m-d\TH:i:sO') }}">{{ entry.postDate|date("n-j-y") }}</time>
+        {% endif %}
+      </h3>
+      <h2>{{ entry.title }} <span>Read</span></h2>
+    </div>
 
   </a>
 </article>

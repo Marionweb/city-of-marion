@@ -10,7 +10,7 @@
     +above(m)
       padding-bottom rem(30px)
 
-    > figure
+    figure
       margin 0
       line-height 0
       overflow hidden
@@ -29,40 +29,54 @@
           display block
           visibility visible
 
-    > h2
-    > h3
+    h2
+    h3
       padding-left rem(30px)
       padding-right rem(30px)
       +above(m)
         padding-left: 'calc(%s * (-%s/%s * -%s) - (%s - %s * (-%s/%s * -%s)) + %s)' % (100vw 1 36 1 30px 30px 1 36 1 30px)
         padding-right: 'calc(%s * (-%s/%s * -%s) - (%s - %s * (-%s/%s * -%s)) + %s)' % (100vw 1 36 1 30px 30px 1 36 1 30px)
 
-    > h2
-      font-family $module-news-events-preview-name-font
-      line-height $line-height-solid
-      margin 0
-      text-align left
-      text-transform $module-news-events-preview-name-transform
-      margin-top rem(27px)
-      color $module-news-events-preview-name-color
-
-      font-size $module-news-events-preview-name-size-mobile
-      +above(m)
-        margin-top rem(40px)
-        font-size $module-news-events-preview-name-size-desktop
-
-    > h3
+    h2
       font-family $module-news-events-preview-title-font
       line-height $line-height-solid
       margin 0
       text-align left
       color $module-news-events-preview-title-color
-      font-style $module-news-events-preview-title-style
-      margin-top rem(10px)
-
       font-size $module-news-events-preview-title-size-mobile
+      margin-top rem(12px)
       +above(m)
         font-size $module-news-events-preview-title-size-desktop
+        margin-top rem(15px)
+
+    h3
+      font-family $module-news-events-preview-category-font
+      line-height $line-height-solid
+      margin 0
+      text-align left
+      color $module-news-events-preview-category-color
+      text-transform $module-news-events-preview-category-transform
+      margin-top rem(30px)
+      display inline-block
+      width 100%
+
+      font-size $module-news-events-preview-category-size-mobile
+      +above(m)
+        font-size $module-news-events-preview-category-size-desktop
+        margin-top rem(42px)
+
+      > time
+        &::before
+          display: inline-block
+          color: #d6d6d6
+          content: '•'
+          font-size: 80%
+          vertical-align: top
+          line-height: 1.1
+          margin-left: 0.5rem
+          margin-right: 0.5rem
+
+
 
     &:hover
       box-shadow $module-news-events-preview-box-shadow-hover
