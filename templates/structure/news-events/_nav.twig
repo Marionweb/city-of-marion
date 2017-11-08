@@ -1,0 +1,44 @@
+<nav id="news-events--nav">
+  <div class="news-events--nav--filter-row news-events--nav--filter-row--type">
+    <input type="checkbox" id="news-events--nav--filter-row--type">
+    <label for="news-events--nav--filter-row--type"><span>Type</span></label>
+    <ul class="news-events--nav--filters news-events--nav--filters--type">
+    {% for entryType in craft.app.sections.getSectionByHandle('newsEvents').getEntryTypes() %}
+      {% set firstSegment = craft.app.request.segments|first %}
+      {% if entryType.handle == 'event' %}
+        <li><a href="{{ url(firstSegment~'/events/') }}">{{ entryType.name|pluralize }}</a></li>
+      {% else %}
+        {# <li><a href="{{ url(firstSegment~'/type/'~entryType.handle) }}">{{ entryType.name|pluralize }}</a></li> #}
+        <li><a href="{{ url(firstSegment~'/type/'~entryType.handle|replace('/(^|[a-z])([A-Z])/', '\\1-\\2')|lower) }}">{{ entryType.name|pluralize }}</a></li>
+      {% endif %}
+    {% endfor %}
+    </ul>
+  </div>
+  <div class="news-events--nav--filter-row news-events--nav--filter-row--date">
+    <input type="checkbox" id="news-events--nav--filter-row--date">
+    <label for="news-events--nav--filter-row--date"><span>Date</span></label>
+    <form class="news-events--nav--filters">
+      <ul class="news-events--nav--filters--date">
+        <li>
+          <select data-choices id="news-events--nav--filters--date--year">
+            <option placeholder>Year</option>
+            {% for year, entriesInYear in craft.entries(queryParams).all() | group("postDate|date('Y')") %}
+            <option value="{{ year }}">{{ year }}</option>
+            {% endfor %}
+          </select>
+        </li>
+        <li>
+          <select data-choices id="news-events--nav--filters--date--month">
+            <option placeholder>Month</option>
+            {% for month, entriesInMonth in craft.entries(queryParams).all() | group("postDate|date('F')") %}
+            <option value="{{ month }}">{{ month }}</option>
+            {% endfor %}
+          </select>
+        </li>
+        <li>
+          <input value="Filter Date" type="submit">
+        </li>
+      </ul>
+    </form>
+  </div>
+</nav>

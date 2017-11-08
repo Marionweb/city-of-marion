@@ -1,31 +1,33 @@
 {# Pagination nav #}
-<nav class="pagination">
-{% if pageInfo.prevUrl %}<a href="{{ pageInfo.prevUrl }}" title="Go to previous page">Previous</a>{% endif %}
+{% if pageInfo.totalPages > 1 %}
+  <nav class="pagination">
+  {% if pageInfo.prevUrl %}<a href="{{ pageInfo.prevUrl }}" title="Go to previous page">Previous</a>{% endif %}
 
-<div class="page-numbers">
-  {% if pageInfo.currentPage > 1 %}
-    {% if pageInfo.currentPage > 3 %}<a href="{{ pageInfo.firstUrl }}" title="Go to page 1">1</a>{% endif %}
-    {% if pageInfo.currentPage > 5 %}<a href="{{ pageInfo.getPageUrl(2) }}" title="Go to page 2">2</a>{% endif %}
-    {% if pageInfo.currentPage > 4 %}<span class="ellip">&hellip;</span>{% endif %}
+    <div class="page-numbers">
+      {% if pageInfo.currentPage > 1 %}
+        {% if pageInfo.currentPage > 3 %}<a href="{{ pageInfo.firstUrl }}" title="Go to page 1">1</a>{% endif %}
+        {% if pageInfo.currentPage > 5 %}<a href="{{ pageInfo.getPageUrl(2) }}" title="Go to page 2">2</a>{% endif %}
+        {% if pageInfo.currentPage > 4 %}<span class="ellip">&hellip;</span>{% endif %}
 
-    {% for page, url in pageInfo.getPrevUrls(2) %}
-      <a href="{{ url }}" title="Go to page {{ page }}">{{ page }}</a>
-    {% endfor %}
-  {% endif %}
+        {% for page, url in pageInfo.getPrevUrls(2) %}
+          <a href="{{ url }}" title="Go to page {{ page }}">{{ page }}</a>
+        {% endfor %}
+      {% endif %}
 
-  <span class="current">{{ pageInfo.currentPage }}</span>
+      <span class="current">{{ pageInfo.currentPage }}</span>
 
-  {% if pageInfo.totalPages > pageInfo.currentPage %}
-    {% for page, url in pageInfo.getNextUrls(2) %}
-      <a href="{{ url }}" title="Go to page {{ page }}">{{ page }}</a>
-    {% endfor %}
+      {% if pageInfo.totalPages > pageInfo.currentPage %}
+        {% for page, url in pageInfo.getNextUrls(2) %}
+          <a href="{{ url }}" title="Go to page {{ page }}">{{ page }}</a>
+        {% endfor %}
 
-    {% if pageInfo.totalPages > (pageInfo.currentPage + 3) %}<span class="ellip">&hellip;</span>{% endif %}
-    {% if pageInfo.totalPages > (pageInfo.currentPage + 4) %}<a href="{{ pageInfo.getPageUrl(pageInfo.totalPages - 1) }}" title="Go to page {{ (pageInfo.totalPages - 1) }}">{{ (pageInfo.totalPages - 1) }}</a>{% endif %}
+        {% if pageInfo.totalPages > (pageInfo.currentPage + 3) %}<span class="ellip">&hellip;</span>{% endif %}
+        {% if pageInfo.totalPages > (pageInfo.currentPage + 4) %}<a href="{{ pageInfo.getPageUrl(pageInfo.totalPages - 1) }}" title="Go to page {{ (pageInfo.totalPages - 1) }}">{{ (pageInfo.totalPages - 1) }}</a>{% endif %}
 
-    {% if pageInfo.totalPages > (pageInfo.currentPage + 2) %}<a href="{{ pageInfo.lastUrl }}" title="Go to page {{ pageInfo.totalPages }}">{{ pageInfo.totalPages }}</a>{% endif %}
-  {% endif %}
-</div>
+        {% if pageInfo.totalPages > (pageInfo.currentPage + 2) %}<a href="{{ pageInfo.lastUrl }}" title="Go to page {{ pageInfo.totalPages }}">{{ pageInfo.totalPages }}</a>{% endif %}
+      {% endif %}
+    </div>
 
-{% if pageInfo.nextUrl %}<a href="{{ pageInfo.nextUrl }}" title="Go to next page">Next</a>{% endif %}
-</nav>
+  {% if pageInfo.nextUrl %}<a href="{{ pageInfo.nextUrl }}" title="Go to next page">Next</a>{% endif %}
+  </nav>
+{% endif %}

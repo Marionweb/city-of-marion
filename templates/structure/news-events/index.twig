@@ -6,6 +6,44 @@
 
 {% set title = entry.title %}
 
+
+
+{# Is anything featured? #}
+{%- if entry.featuredArticle | length -%}
+  {# Get an array of filtered article ID's #}
+  {% set featuredIds = entry.featuredArticle.ids() %}
+  {% set featuredQueryParams = {
+      'section' : 'newsEvents',
+      'id' : 'and, ' ~ featuredIds | join(', ')
+    } %}
+
+  {# Exclude featured ids from the page results #}
+  {# {% set queryParams = {
+    'section' : 'newsEvents',
+    'id' : 'and, not ' ~ featuredIds | join(', not '),
+    'type' : 'and, not event, not story',
+  } %} #}
+  {% set queryParams = {
+    'section' : 'newsEvents',
+    'id' : 'and, not ' ~ featuredIds | join(', not '),
+    'type' : 'and, not event'
+  } %}
+
+{%- else -%}
+
+  {# {% set queryParams = {
+    'section' : 'newsEvents',
+    'type' : 'and, not event, not story',
+  } %} #}
+  {% set queryParams = {
+    'section' : 'newsEvents',
+    'type' : 'and, not event'
+  } %}
+
+{%- endif -%}
+
+
+
 {# HTML #}
 {% block content %}
 
@@ -19,51 +57,16 @@
 
 {# Is anything featured? #}
 {%- if entry.featuredArticle | length -%}
-  {# Get an array of filtered article ID's #}
-  {% set featuredIds = entry.featuredArticle.ids() %}
-  {% set queryParams = {
-      'section' : 'newsEvents',
-      'id' : 'and, ' ~ featuredIds | join(', ')
-    } %}
   <section class="news-events--featured-article">
-    {% for entry in craft.entries(queryParams).limit(1) %}
+    {% for entry in craft.entries(featuredQueryParams).limit(1).all() %}
       {% include 'modules/content/_block-news-events-featured' %}
     {% endfor %}
   </section>
 {%- endif -%}
 
-<nav id="news-events--nav">
-
-</nav>
+{% include 'structure/news-events/_nav' %}
 
 <section id="news-events--articles-list">
-  {# Is anything featured? #}
-  {%- if entry.featuredArticle | length -%}
-    {# Exclude featured ids from the results #}
-    {# {% set queryParams = {
-      'section' : 'newsEvents',
-      'id' : 'and, not ' ~ featuredIds | join(', not '),
-      'type' : 'and, not event, not story',
-    } %} #}
-    {% set queryParams = {
-      'section' : 'newsEvents',
-      'id' : 'and, not ' ~ featuredIds | join(', not '),
-      'type' : 'and, not event'
-    } %}
-
-  {%- else -%}
-
-    {# {% set queryParams = {
-      'section' : 'newsEvents',
-      'type' : 'and, not event, not story',
-    } %} #}
-    {% set queryParams = {
-      'section' : 'newsEvents',
-      'type' : 'and, not event'
-    } %}
-
-  {%- endif -%}
-
   {% paginate craft.entries(queryParams).limit(6) as pageInfo, recentNews %}
   {% for entry in recentNews %}
     {% include 'modules/content/_block-news-events-entry' %}

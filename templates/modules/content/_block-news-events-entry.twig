@@ -16,9 +16,9 @@
 
         <figure class="mobile">
           <img class="lazyload"
-            src="{{ image.optimizedImagesSquare.placeholderBox() }}"
+            src="{{ image.optimizedImagesBlockPreview.placeholderBox() }}"
             data-sizes="100vw"
-            data-srcset="{{ image.optimizedImagesSquare.srcset() }}"
+            data-srcset="{{ image.optimizedImagesBlockPreview.srcset() }}"
             {% if image.alt %}alt="{{ image.alt }}"{% endif %}>
           {% if image.caption %}
           <figcaption>{{ image.caption }}</figcaption>
@@ -27,13 +27,20 @@
 
         <figure class="desktop">
           <img class="lazyload"
-            src="{{ image.optimizedImagesSquare.placeholderBox() }}"
+            src="{{ image.optimizedImagesBlockPreview.placeholderBox() }}"
             data-sizes="100vw"
-            data-srcset="{{ image.optimizedImagesSquare.srcset() }}"
+            data-srcset="{{ image.optimizedImagesBlockPreview.srcset() }}"
             {% if image.alt %}alt="{{ image.alt }}"{% endif %}>
           {% if image.caption %}
           <figcaption>{{ image.caption }}</figcaption>
           {% endif %}
+        </figure>
+    {% else %}
+        <figure class="mobile no-image">
+          <img src="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%273380%27 height=%271901%27 style=%27background:%23383932%27 /%3E">
+        </figure>
+        <figure class="desktop no-image">
+          <img src="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%273380%27 height=%271901%27 style=%27background:%23383932%27 /%3E">
         </figure>
     {% endif %}
 
