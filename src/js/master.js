@@ -141,14 +141,6 @@ docReady(function() {
       while (labelVal.firstChild) labelVal.removeChild(labelVal.firstChild);
     }
 
-    // INITIALIZE CHOICES.JS FOR FORM SELECTS
-    if (input.hasAttribute('data-choices')) {
-      var genericSelects = new Choices('[data-choices]', {
-        searchEnabled: false,
-        itemSelectText: ''
-      });
-    }
-
   }
 
 
@@ -173,6 +165,17 @@ inputs.forEach(function (input) {
 //   e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
 // });
 
+// INITIALIZE CHOICES.JS FOR FORM SELECTS
+const selects = Array.from(document.querySelectorAll('select'))
+selects.forEach(function (select) {
+  if(select.hasAttribute('data-choices')){
+    var genericSelects = new Choices('[data-choices]', {
+      searchEnabled: false,
+      itemSelectText: '',
+      shouldSort: false
+    });
+  };
+});
 
 //Google Maps JS
 //Set Map
