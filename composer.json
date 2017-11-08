@@ -26,6 +26,7 @@
         "ext-mcrypt": "^7.0",
         "aelvan/inlin": "^2.0",
         "aelvan/stamp": "^2.0",
+        "bower-asset/bugsnag": "^3.3",
         "craftcms/anchors": "^2.0",
         "craftcms/aws-s3": "^1.0",
         "craftcms/cms": "^3.0.0-beta.23",
@@ -45,6 +46,7 @@
         "dukt/videos": "^2.0@beta",
         "mblode/svgplaceholder": "^1.0",
         "mexitek/phpcolors": "dev-master",
+        "mikestecker/craft3-encodeemail": "dev-master",
         "mikestecker/craft3-videoembedder": "^1.0",
         "misterbk/mix": "^1.1",
         "newism/craft3-fields": "0.0.4",
@@ -55,6 +57,7 @@
         "nystudio107/craft3-pathtools": "^1.0",
         "nystudio107/craft3-richvariables": "^1.0",
         "nystudio107/craft3-typogrify": "^1.0",
+        "pinfirestudios/craft3-bugsnag": "^1.0@beta",
         "roave/security-advisories": "dev-master",
         "selvinortiz/patrol": "^3.0",
         "verbb/cp-nav": "^2.0",
@@ -75,16 +78,16 @@
     },
     "repositories": [
       {
-        "type": "path",
-        "url": "../../../other/craft3-inlin/"
-      },
-      {
-        "type": "path",
-        "url": "../../../other/craft3-encodeemail/"
+        "type": "composer",
+        "url": "https://asset-packagist.org"
       },
       {
         "type": "vcs",
-        "url": "https://github.com/tippingmedia/venti"
+        "url": "https://github.com/mikestecker/craft3-encodeemail"
+      },
+      {
+        "type": "path",
+        "url": "../../../other/craft3-venti/"
       }
     ]
 }
