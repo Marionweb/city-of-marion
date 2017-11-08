@@ -19,5 +19,8 @@
  */
 
 return [
-
+  'government/minutes-agendas/<slug>' => ['template' => 'structure/minutes-agendas/_category'],
+  'government/minutes-agendas/<slug>/<year:\d{4}>' => ['template' => 'structure/minutes-agendas/_year'],
+  'news-events/events' => ['template' => 'structure/news-events/_events-landing'],
+  'news-events/type/<type>' => ['template' => 'structure/news-events/_type'],
 ];
