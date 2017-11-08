@@ -40,7 +40,7 @@ return [
     'live' => [
         'isSystemOn' => true,
         'devMode' => false,
-        'backupDbOnUpdate' => false,
+        'backupOnUpdate' => false,
         'enableTemplateCaching' => true,
         'allowAutoUpdates' => false,
         'appId' => 'cerulean',
@@ -51,7 +51,7 @@ return [
     'staging' => [
         'isSystemOn' => false,
         'devMode' => false,
-        'backupDbOnUpdate' => false,
+        'backupOnUpdate' => false,
         'enableTemplateCaching' => true,
         'allowAutoUpdates' => false,
     ],
@@ -60,7 +60,7 @@ return [
     'local' => [
         'isSystemOn' => true,
         'devMode' => true,
-        'backupDbOnUpdate' => true,
+        'backupOnUpdate' => true,
         'enableTemplateCaching' => false,
         'allowAutoUpdates' => true,
         'rememberUsernameDuration' => 'P101Y',
