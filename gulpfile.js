@@ -1,3 +1,7 @@
+// package vars
+const pkg = require("./package.json");
+
+// gulp
 var gulp        = require('gulp'),
     nib         = require('nib'),
     rupture     = require('rupture'),
@@ -13,14 +17,27 @@ var gulp        = require('gulp'),
     browserSync = require('browser-sync').create(),
     del         = require('del');
 
-// load all plugins in 'devDependencies' into the variable $
+// load all plugins in "devDependencies" into the variable $
 const $ = require('gulp-load-plugins')({
-    pattern: ['*'],
-    scope: ['devDependencies']
+  pattern: ['*'],
+  scope: ['devDependencies']
 });
 
-// package vars
-const pkg = require('./package.json');
+const onError = (err) => {
+    console.log(err);
+};
+
+const banner = [
+    "/**",
+    " * @project        <%= pkg.name %>",
+    " * @author         <%= pkg.author %>",
+    " * @build          " + $.moment().format("llll") + " ET",
+    " * @release        " + $.gitRevSync.long() + " [" + $.gitRevSync.branch() + "]",
+    " * @copyright      Copyright (c) " + $.moment().format("YYYY") + ", <%= pkg.copyright %>",
+    " *",
+    " */",
+    ""
+].join("\n");
 
 
 
@@ -89,6 +106,7 @@ gulp.task('stylus:watch', function () {
       'include css': true
     }))
     .pipe($.cached('styl_compile'))
+    .pipe($.header(banner, {pkg: pkg}))
     .pipe($.sourcemaps.write('./'))
     .pipe($.size({ gzip: true, showFiles: true }))
     // .pipe(gulp.dest(pkg.paths.build.css));
@@ -182,9 +200,20 @@ var jsFiles = [
 gulp.task('js:watch', function() {
   return gulp.src(pkg.globs.distJs.concat(jsFiles))
     .pipe($.plumber())
+    .pipe($.sourcemaps.init({loadMaps: true}))
     .pipe($.concat('scripts.js'))
+    .pipe($.sourcemaps.write('/dev/null', {addComment: false}))
     .pipe(gulp.dest(pkg.paths.dist.js))
     .pipe(browserSync.stream());
+});
+
+gulp.task('js:watchv2', function() {
+  return gulp.src(pkg.globs.distJs.concat(jsFiles))
+    .pipe($.plumber())
+    .pipe($.sourcemaps.init({loadMaps: true}))
+    .pipe($.concat('scripts.js'))
+    .pipe($.sourcemaps.write('/dev/null', {addComment: false}))
+    .pipe(gulp.dest(pkg.paths.dist.js))
 });
 
 gulp.task('js:build', function() {
@@ -306,5 +335,6 @@ gulp.task('clean-build', function() {
 // Run Tasks
 
 gulp.task('watch', ['svgSprites:compile', 'svgSprites:copy', 'stylus:watch', 'js:watch', 'imagemin', 'copy-fonts', 'browser-sync', 'watch-tasks']);
+gulp.task('build:staging', ['svgSprites:compile', 'svgSprites:copy', 'stylus:watch', 'js:watchv2', 'imagemin', 'copy-fonts']);
 gulp.task('build', ['stylus:build', 'js:build', 'imagemin', 'copy-fonts']);
 // gulp.task('clean', ['clean-build']);
