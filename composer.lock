@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "6115b0f91c5e85bea9694141fb6ae495",
+    "content-hash": "b7e272ce66bb352fca2e86a8f576a19f",
     "packages": [
         {
             "name": "aelvan/inlin",
@@ -116,16 +116,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.37.1",
+            "version": "3.38.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "f3166fbdf14cea6898729dd945eaabdd211abe8f"
+                "reference": "65bc3aec387a2cfb997ec60bce3febdac8b30701"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/f3166fbdf14cea6898729dd945eaabdd211abe8f",
-                "reference": "f3166fbdf14cea6898729dd945eaabdd211abe8f",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/65bc3aec387a2cfb997ec60bce3febdac8b30701",
+                "reference": "65bc3aec387a2cfb997ec60bce3febdac8b30701",
                 "shasum": ""
             },
             "require": {
@@ -192,7 +192,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2017-11-07T20:32:15+00:00"
+            "time": "2017-11-08T23:17:54+00:00"
         },
         {
             "name": "bower-asset/bootstrap",
@@ -230,23 +230,7 @@
             "type": "bower-asset"
         },
         {
-            "name": "bower-asset/jquery",
-            "version": "2.2.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/jquery/jquery-dist.git",
-                "reference": "c0185ab7c75aab88762c5aae780b9d83b80eda72"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/jquery/jquery-dist/zipball/c0185ab7c75aab88762c5aae780b9d83b80eda72",
-                "reference": "c0185ab7c75aab88762c5aae780b9d83b80eda72",
-                "shasum": null
-            },
-            "type": "bower-asset"
-        },
-        {
-            "name": "bower-asset/jquery.inputmask",
+            "name": "bower-asset/inputmask",
             "version": "3.3.10",
             "source": {
                 "type": "git",
@@ -265,6 +249,25 @@
             "type": "bower-asset",
             "license": [
                 "http://opensource.org/licenses/mit-license.php"
+            ]
+        },
+        {
+            "name": "bower-asset/jquery",
+            "version": "3.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jquery/jquery-dist.git",
+                "reference": "77d2a51d0520d2ee44173afdf4e40a9201f5964e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jquery/jquery-dist/zipball/77d2a51d0520d2ee44173afdf4e40a9201f5964e",
+                "reference": "77d2a51d0520d2ee44173afdf4e40a9201f5964e",
+                "shasum": null
+            },
+            "type": "bower-asset",
+            "license": [
+                "MIT"
             ]
         },
         {
@@ -964,16 +967,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.0.0-beta.30",
+            "version": "3.0.0-beta.33",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "757ce0db6d1729fb51178afd824b60d086db5252"
+                "reference": "4690d8faa9f095c7410a39230b92e464885d7167"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/757ce0db6d1729fb51178afd824b60d086db5252",
-                "reference": "757ce0db6d1729fb51178afd824b60d086db5252",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/4690d8faa9f095c7410a39230b92e464885d7167",
+                "reference": "4690d8faa9f095c7410a39230b92e464885d7167",
                 "shasum": ""
             },
             "require": {
@@ -995,10 +998,10 @@
                 "league/flysystem": "~1.0.35",
                 "mikehaertl/php-shellcommand": "~1.2.5",
                 "php": ">=7.0.0",
-                "pixelandtonic/imagine": "0.7.1.3",
+                "pixelandtonic/imagine": "~0.7.1.2",
                 "seld/cli-prompt": "^1.0",
                 "twig/twig": "~2.3.0",
-                "yiisoft/yii2": "~2.0.12.0",
+                "yiisoft/yii2": "~2.0.13.0",
                 "yiisoft/yii2-debug": "~2.0.10",
                 "yiisoft/yii2-queue": "~2.0.0",
                 "yiisoft/yii2-swiftmailer": "~2.0.6",
@@ -1006,8 +1009,8 @@
             },
             "provide": {
                 "bower-asset/bootstrap": "3.3.* | 3.2.* | 3.1.*",
-                "bower-asset/jquery": "2.2.*@stable | 2.1.*@stable | 1.11.*@stable | 1.12.*@stable",
-                "bower-asset/jquery.inputmask": "~3.2.2 | ~3.3.5",
+                "bower-asset/inputmask": "~3.2.2 | ~3.3.5",
+                "bower-asset/jquery": "3.2.*@stable | 3.1.*@stable | 2.2.*@stable | 2.1.*@stable | 1.11.*@stable | 1.12.*@stable",
                 "bower-asset/punycode": "1.3.*",
                 "bower-asset/yii2-pjax": "~2.0.1"
             },
@@ -1039,7 +1042,7 @@
                 "craftcms",
                 "yii2"
             ],
-            "time": "2017-10-31T21:35:07+00:00"
+            "time": "2017-11-09T01:54:54+00:00"
         },
         {
             "name": "craftcms/contact-form",
@@ -1140,20 +1143,20 @@
         },
         {
             "name": "craftcms/element-api",
-            "version": "2.5.0",
+            "version": "2.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/element-api.git",
-                "reference": "192b3c737dfeadc121979c26b3a1cce43e0d6050"
+                "reference": "516b9104cef51603831f6cc4d08a02b835b5c594"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/element-api/zipball/192b3c737dfeadc121979c26b3a1cce43e0d6050",
-                "reference": "192b3c737dfeadc121979c26b3a1cce43e0d6050",
+                "url": "https://api.github.com/repos/craftcms/element-api/zipball/516b9104cef51603831f6cc4d08a02b835b5c594",
+                "reference": "516b9104cef51603831f6cc4d08a02b835b5c594",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "~3.0.0-beta.20",
+                "craftcms/cms": "~3.0.0-beta.31",
                 "league/fractal": "^0.16.0"
             },
             "type": "craft-plugin",
@@ -1186,7 +1189,7 @@
                 "json",
                 "yii2"
             ],
-            "time": "2017-10-31T21:18:32+00:00"
+            "time": "2017-11-09T18:11:07+00:00"
         },
         {
             "name": "craftcms/hexdec",
@@ -1461,16 +1464,16 @@
         },
         {
             "name": "craftcms/store-hours",
-            "version": "2.0.4",
+            "version": "2.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/store-hours.git",
-                "reference": "35a074a30f74d109bb3c1a76273446994576c05a"
+                "reference": "2d39db9d90c365d5429a614a0d71aa022936e75e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/store-hours/zipball/35a074a30f74d109bb3c1a76273446994576c05a",
-                "reference": "35a074a30f74d109bb3c1a76273446994576c05a",
+                "url": "https://api.github.com/repos/craftcms/store-hours/zipball/2d39db9d90c365d5429a614a0d71aa022936e75e",
+                "reference": "2d39db9d90c365d5429a614a0d71aa022936e75e",
                 "shasum": ""
             },
             "require": {
@@ -1509,7 +1512,7 @@
                 "store",
                 "yii2"
             ],
-            "time": "2017-07-07T17:01:00+00:00"
+            "time": "2017-11-09T17:18:39+00:00"
         },
         {
             "name": "creocoder/yii2-nested-sets",
@@ -3498,12 +3501,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mikestecker/craft3-encodeemail.git",
-                "reference": "7a3e9433fd258196becaa45f8957fe038eaa45b8"
+                "reference": "979410c479149b24113944d0a837cb2b6f3233e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mikestecker/craft3-encodeemail/zipball/7a3e9433fd258196becaa45f8957fe038eaa45b8",
-                "reference": "7a3e9433fd258196becaa45f8957fe038eaa45b8",
+                "url": "https://api.github.com/repos/mikestecker/craft3-encodeemail/zipball/979410c479149b24113944d0a837cb2b6f3233e7",
+                "reference": "979410c479149b24113944d0a837cb2b6f3233e7",
                 "shasum": ""
             },
             "require": {
@@ -3546,7 +3549,7 @@
                 "issues": "???",
                 "source": "https://github.com/mikestecker/craft3-encodeemail/tree/master"
             },
-            "time": "2017-11-07T22:07:13+00:00"
+            "time": "2017-11-07T22:49:55+00:00"
         },
         {
             "name": "mikestecker/craft3-videoembedder",
@@ -6714,21 +6717,21 @@
         },
         {
             "name": "yiisoft/yii2",
-            "version": "2.0.12",
+            "version": "2.0.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "70acbecc75cb26b6cd66d16be0b06e4b73db190d"
+                "reference": "9f82b8f0df9adb4b8a410be5aaa97818153689d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/70acbecc75cb26b6cd66d16be0b06e4b73db190d",
-                "reference": "70acbecc75cb26b6cd66d16be0b06e4b73db190d",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/9f82b8f0df9adb4b8a410be5aaa97818153689d9",
+                "reference": "9f82b8f0df9adb4b8a410be5aaa97818153689d9",
                 "shasum": ""
             },
             "require": {
-                "bower-asset/jquery": "2.2.*@stable | 2.1.*@stable | 1.11.*@stable | 1.12.*@stable",
-                "bower-asset/jquery.inputmask": "~3.2.2 | ~3.3.5",
+                "bower-asset/inputmask": "~3.2.2 | ~3.3.5",
+                "bower-asset/jquery": "3.2.*@stable | 3.1.*@stable | 2.2.*@stable | 2.1.*@stable | 1.11.*@stable | 1.12.*@stable",
                 "bower-asset/punycode": "1.3.*",
                 "bower-asset/yii2-pjax": "~2.0.1",
                 "cebe/markdown": "~1.0.0 | ~1.1.0",
@@ -6810,7 +6813,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2017-06-05T14:33:41+00:00"
+            "time": "2017-11-02T22:09:29+00:00"
         },
         {
             "name": "yiisoft/yii2-bootstrap",
