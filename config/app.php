@@ -17,6 +17,7 @@ return [
 
     // Staging (pre-production) environment
     'staging'  => [
+      'bootstrap' => [ '\pinfirestudios\craft3bugsnag\Bootstrap' ]
     ],
 
     // Local (development) environment

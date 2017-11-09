@@ -120,10 +120,86 @@ return [
 
     // Live (production) environment
     'live' => [
+      // Preset image processors
+      "imageProcessors" => [
+        // jpeg optimizers
+        "jpegoptim" => [
+            "commandPath"           => "/usr/bin/jpegoptim",
+            'commandOptions'        => '-s',
+            'commandOutputFileFlag' => '',
+        ],
+        // png optimizers
+        "optipng" => [
+            "commandPath"           => "/usr/bin/optipng",
+            'commandOptions'        => '-o7 -strip all',
+            'commandOutputFileFlag' => '',
+        ],
+        // svg optimizers
+        "svgo" => [
+            "commandPath"           => "/usr/bin/svgo",
+            'commandOptions'        => '',
+            'commandOutputFileFlag' => '',
+        ],
+        // gif optimizers
+        "gifsicle" => [
+            "commandPath"           => "/usr/bin/gifsicle",
+            'commandOptions'        => '-O3 -k 256',
+            'commandOutputFileFlag' => '',
+        ],
+      ],
+
+      'imageVariantCreators' => [
+          // webp variant creator
+          'cwebp' => [
+              'commandPath'           => '/usr/bin/cwebp',
+              'commandOptions'        => '',
+              'commandOutputFileFlag' => '-o',
+              'commandQualityFlag'    => '-q',
+              'imageVariantExtension' => 'webp',
+          ],
+      ],
     ],
 
     // Staging (pre-production) environment
     'staging' => [
+      // Preset image processors
+      "imageProcessors" => [
+        // jpeg optimizers
+        "jpegoptim" => [
+            "commandPath"           => "/usr/bin/jpegoptim",
+            'commandOptions'        => '-s',
+            'commandOutputFileFlag' => '',
+        ],
+        // png optimizers
+        "optipng" => [
+            "commandPath"           => "/usr/bin/optipng",
+            'commandOptions'        => '-o7 -strip all',
+            'commandOutputFileFlag' => '',
+        ],
+        // svg optimizers
+        "svgo" => [
+            "commandPath"           => "/usr/bin/svgo",
+            'commandOptions'        => '',
+            'commandOutputFileFlag' => '',
+        ],
+        // gif optimizers
+        "gifsicle" => [
+            "commandPath"           => "/usr/bin/gifsicle",
+            'commandOptions'        => '-O3 -k 256',
+            'commandOutputFileFlag' => '',
+        ],
+      ],
+
+      'imageVariantCreators' => [
+          // webp variant creator
+          'cwebp' => [
+              'commandPath'           => '/usr/bin/cwebp',
+              'commandOptions'        => '',
+              'commandOutputFileFlag' => '-o',
+              'commandQualityFlag'    => '-q',
+              'imageVariantExtension' => 'webp',
+          ],
+      ],
     ],
 
     // Local (development) environment
@@ -136,30 +212,10 @@ return [
             'commandOptions'        => '-s',
             'commandOutputFileFlag' => '',
         ],
-        'mozjpeg'   => [
-            'commandPath'           => '/usr/local/bin/mozjpeg',
-            'commandOptions'        => '-optimize -copy none',
-            'commandOutputFileFlag' => '-outfile',
-        ],
-        "jpegtran" => [
-            "commandPath"           => "/usr/local/bin/jpegtran",
-            'commandOptions'        => '-optimize -copy none',
-            'commandOutputFileFlag' => '',
-        ],
         // png optimizers
         "optipng" => [
             "commandPath"           => "/usr/local/bin/optipng",
             'commandOptions'        => '-o7 -strip all',
-            'commandOutputFileFlag' => '',
-        ],
-        "pngcrush" => [
-            "commandPath"           => "/usr/local/bin/pngcrush",
-            'commandOptions'        => '-brute -ow',
-            'commandOutputFileFlag' => '',
-        ],
-        "pngquant" => [
-            "commandPath"           => "/usr/local/bin/pngquant",
-            'commandOptions'        => '--strip --skip-if-larger',
             'commandOutputFileFlag' => '',
         ],
         // svg optimizers
