@@ -1,14 +1,31 @@
 <div id="header-image" class="news-events-article">
-  {%- set image = entry.primaryImage.one() -%}
-
-  <figure>
-      <img class="lazyload"
-        src="{{ image.optimizedImagesNewsHeader.placeholderBox() }}"
-        data-sizes="100vw"
-        data-srcset="{{ image.optimizedImagesNewsHeader.srcset() }}"
-        {% if image.alt %}alt="{{ image.alt }}"{% endif %}>
-    {% if image.caption %}
-    <figcaption>{{ image.caption }}</figcaption>
+  {% set employeePhotoExists = false %}
+    {% if entry.employee | length %}
+      {% if entry.employee.one().staffPhoto | length %}
+        {% set employeePhotoExists = true %}
+      {% endif %}
     {% endif %}
-  </figure>
+
+    {% if (entry.primaryImage | length) or employeePhotoExists %}
+      {% if entry.primaryImage | length %}
+        {%- set image = entry.primaryImage.one() -%}
+      {% else %}
+        {%- set image = entry.employee.one().staffPhoto.one() -%}
+      {% endif %}
+
+      <figure>
+          <img class="lazyload"
+            src="{{ image.optimizedImagesNewsHeader.placeholderBox() }}"
+            data-sizes="100vw"
+            data-srcset="{{ image.optimizedImagesNewsHeader.srcset() }}"
+            {% if image.alt %}alt="{{ image.alt }}"{% endif %}>
+        {% if image.caption %}
+        <figcaption>{{ image.caption }}</figcaption>
+        {% endif %}
+      </figure>
+    {% else %}
+      <figure class="no-image">
+        <img src="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%273380%27 height=%271126%27 style=%27background:%23383932%27 /%3E">
+      </figure>
+    {% endif %}
 </div>
