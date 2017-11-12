@@ -8,7 +8,6 @@
       {% if entryType.handle == 'event' %}
         <li><a href="{{ url(firstSegment~'/events/') }}">{{ entryType.name|pluralize }}</a></li>
       {% else %}
-        {# <li><a href="{{ url(firstSegment~'/type/'~entryType.handle) }}">{{ entryType.name|pluralize }}</a></li> #}
         <li><a href="{{ url(firstSegment~'/type/'~entryType.handle|replace('/(^|[a-z])([A-Z])/', '\\1-\\2')|lower) }}">{{ entryType.name|pluralize }}</a></li>
       {% endif %}
     {% endfor %}
@@ -20,18 +19,18 @@
     <form class="news-events--nav--filters">
       <ul class="news-events--nav--filters--date">
         <li>
-          <select data-choices id="news-events--nav--filters--date--year">
+          <select id="news-events--nav--filters--date--year" name="year">
             <option placeholder>Year</option>
-            {% for year, entriesInYear in craft.entries(queryParams).all() | group("postDate|date('Y')") %}
-            <option value="{{ year }}">{{ year }}</option>
+            {% for year, entriesInYear in craft.entries(allQueryParams).all() | group("postDate|date('Y')") %}
+            <option value="{{ year }}"{% if craft.app.request.getParam('year') == year %} selected{% endif %}>{{ year }}</option>
             {% endfor %}
           </select>
         </li>
         <li>
-          <select data-choices id="news-events--nav--filters--date--month">
+          <select id="news-events--nav--filters--date--month" name="month">
             <option placeholder>Month</option>
-            {% for month, entriesInMonth in craft.entries(queryParams).all() | group("postDate|date('F')") %}
-            <option value="{{ month }}">{{ month }}</option>
+            {% for month, entriesInMonth in craft.entries(allQueryParams).all() | group("postDate|date('F')") %}
+            <option value="{{ month|date('m') }}"{% if craft.app.request.getParam('month') == month|date('m') %} selected{% endif %}>{{ month }}</option>
             {% endfor %}
           </select>
         </li>
@@ -42,3 +41,24 @@
     </form>
   </div>
 </nav>
+
+{% js %}
+document.addEventListener('DOMContentLoaded', function() {
+  var years = new Choices(document.getElementById('news-events--nav--filters--date--year'), {
+    searchEnabled: false,
+    placeholder: true
+  });
+  var months = new Choices(document.getElementById('news-events--nav--filters--date--month'), {
+    searchEnabled: false,
+    placeholder: true
+  }){% if craft.app.request.getParam('year') is null or craft.app.request.getParam('year') == 'Year' %}.disable(){% endif %};
+
+  years.passedElement.addEventListener('change', function(e) {
+    if (e.detail.value != 'Year') {
+      months.enable();
+    } else {
+      months.disable();
+    }
+  });
+});
+{% endjs %}

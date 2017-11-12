@@ -1,16 +1,40 @@
+{% set queryString = null %}
+
+{% if (craft.app.request.getParam('year')is not null) and (craft.app.request.getParam('month')is not null) %}
+
+  {% set queryString = '?year=' ~ craft.app.request.getParam('year') ~ ((craft.app.request.getParam('month') == 'Month')
+    ? null
+    : '&month=' ~ craft.app.request.getParam('month')) %}
+
+{% elseif (craft.app.request.getParam('year') is not null) and (craft.app.request.getParam('month') is null) %}
+
+  {% set queryString = (craft.app.request.getParam('year') == 'Year')
+    ? null
+    : '?year=' ~ craft.app.request.getParam('year') %}
+
+{% endif %}
+
 {# Pagination nav #}
 {% if pageInfo.totalPages > 1 %}
   <nav class="pagination">
-  {% if pageInfo.prevUrl %}<a href="{{ pageInfo.prevUrl }}" title="Go to previous page">Previous</a>{% endif %}
+    {% if pageInfo.prevUrl %}
+      <a href="{{ pageInfo.prevUrl }}{{queryString}}" title="Go to previous page">Previous</a>
+    {% endif %}
 
     <div class="page-numbers">
       {% if pageInfo.currentPage > 1 %}
-        {% if pageInfo.currentPage > 3 %}<a href="{{ pageInfo.firstUrl }}" title="Go to page 1">1</a>{% endif %}
-        {% if pageInfo.currentPage > 5 %}<a href="{{ pageInfo.getPageUrl(2) }}" title="Go to page 2">2</a>{% endif %}
-        {% if pageInfo.currentPage > 4 %}<span class="ellip">&hellip;</span>{% endif %}
+        {% if pageInfo.currentPage > 3 %}
+          <a href="{{ pageInfo.firstUrl }}{{queryString}}" title="Go to page 1">1</a>
+        {% endif %}
+        {% if pageInfo.currentPage > 5 %}
+          <a href="{{ pageInfo.getPageUrl(2) }}{{queryString}}" title="Go to page 2">2</a>
+        {% endif %}
+        {% if pageInfo.currentPage > 4 %}
+          <span class="ellip">&hellip;</span>
+        {% endif %}
 
         {% for page, url in pageInfo.getPrevUrls(2) %}
-          <a href="{{ url }}" title="Go to page {{ page }}">{{ page }}</a>
+          <a href="{{ url }}{{queryString}}" title="Go to page {{ page }}">{{ page }}</a>
         {% endfor %}
       {% endif %}
 
@@ -18,16 +42,24 @@
 
       {% if pageInfo.totalPages > pageInfo.currentPage %}
         {% for page, url in pageInfo.getNextUrls(2) %}
-          <a href="{{ url }}" title="Go to page {{ page }}">{{ page }}</a>
+          <a href="{{ url }}{{queryString}}" title="Go to page {{ page }}">{{ page }}</a>
         {% endfor %}
 
-        {% if pageInfo.totalPages > (pageInfo.currentPage + 3) %}<span class="ellip">&hellip;</span>{% endif %}
-        {% if pageInfo.totalPages > (pageInfo.currentPage + 4) %}<a href="{{ pageInfo.getPageUrl(pageInfo.totalPages - 1) }}" title="Go to page {{ (pageInfo.totalPages - 1) }}">{{ (pageInfo.totalPages - 1) }}</a>{% endif %}
+        {% if pageInfo.totalPages > (pageInfo.currentPage + 3) %}
+          <span class="ellip">&hellip;</span>
+        {% endif %}
+        {% if pageInfo.totalPages > (pageInfo.currentPage + 4) %}
+          <a href="{{ pageInfo.getPageUrl(pageInfo.totalPages - 1) }}{{queryString}}" title="Go to page {{ (pageInfo.totalPages - 1) }}">{{ (pageInfo.totalPages - 1) }}</a>
+        {% endif %}
 
-        {% if pageInfo.totalPages > (pageInfo.currentPage + 2) %}<a href="{{ pageInfo.lastUrl }}" title="Go to page {{ pageInfo.totalPages }}">{{ pageInfo.totalPages }}</a>{% endif %}
+        {% if pageInfo.totalPages > (pageInfo.currentPage + 2) %}
+          <a href="{{ pageInfo.lastUrl }}{{queryString}}" title="Go to page {{ pageInfo.totalPages }}">{{ pageInfo.totalPages }}</a>
+        {% endif %}
       {% endif %}
     </div>
 
-  {% if pageInfo.nextUrl %}<a href="{{ pageInfo.nextUrl }}" title="Go to next page">Next</a>{% endif %}
+    {% if pageInfo.nextUrl %}
+      <a href="{{ pageInfo.nextUrl }}{{queryString}}" title="Go to next page">Next</a>
+    {% endif %}
   </nav>
 {% endif %}
