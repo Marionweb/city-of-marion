@@ -1,4 +1,7 @@
-{%- set image = entry.primaryImage.one() -%}
+{%- set image = null -%}
+{% if entry.primaryImage | length %}
+  {%- set image = entry.primaryImage.one() -%}
+{% endif %}
 <span>
   <input type="checkbox">
   <i>Share</i>

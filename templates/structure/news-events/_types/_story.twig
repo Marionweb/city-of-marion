@@ -1,2 +1,12 @@
-<h1>{{ entry.title }}</h1>
-<h2>Story</h2>
+<header>
+  <p class="meta">Story</p>
+  <h1>
+    {{ entry.title }}
+    {% include "structure/news-events/_block-share" %}
+  </h1>
+  <p class="meta">{{ entry.postDate|date('M j, Y') }}&nbsp;&nbsp;|&nbsp;&nbsp;{{ entry.author }}&nbsp;&nbsp;|&nbsp;&nbsp;META</p>
+  {% if entry.leadIn %}<p class="lead">{{ entry.leadIn }}</p>{% endif %}
+</header>
+
+{% include "modules/content/_page-content" %}
+{% include "modules/content/_page-content-attachments" %}
