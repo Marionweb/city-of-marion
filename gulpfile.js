@@ -72,8 +72,7 @@ function doSynchronousLoop(data, processData, done) {
 // CSS
 // Compile Stylus CSS
 // build the scss to the build folder, including the required paths, and writing out a sourcemap
-
-gulp.task('stylus:watch', function () {
+gulp.task('stylus:watch', ['svgSprites:copy'], function () {
   var postCSSPlugins = [
     lost,
     cssnext({
@@ -260,10 +259,9 @@ gulp.task('svgSprites:compile', function() {
     .pipe($.plumber())
     .pipe($.svgSprite(config))
     .pipe(gulp.dest(pkg.paths.build.sprites))
-    .pipe(browserSync.stream());
+    // .pipe(browserSync.stream());
 });
-
-gulp.task('svgSprites:copy', function() {
+gulp.task('svgSprites:copy', ['svgSprites:compile'], function () {
   return gulp.src(pkg.paths.build.sprites + 'img/*.svg')
     .pipe($.plumber())
     .pipe(gulp.dest(pkg.paths.dist.img))
@@ -281,7 +279,7 @@ gulp.task('imagemin', function() {
     .pipe($.plumber())
     .pipe($.imagemin())
     .pipe(gulp.dest('build/images'))
-    .pipe(browserSync.stream());
+    // .pipe(browserSync.stream());
 });
 
 
@@ -334,7 +332,7 @@ gulp.task('clean-build', function() {
 
 // Run Tasks
 
-gulp.task('watch', ['svgSprites:compile', 'svgSprites:copy', 'stylus:watch', 'js:watch', 'imagemin', 'copy-fonts', 'browser-sync', 'watch-tasks']);
-gulp.task('build:staging', ['svgSprites:compile', 'svgSprites:copy', 'stylus:watch', 'js:watchv2', 'imagemin', 'copy-fonts']);
+gulp.task('watch', ['stylus:watch', 'js:watch', 'imagemin', 'copy-fonts', 'browser-sync', 'watch-tasks']);
+gulp.task('build:staging', ['stylus:watch', 'js:watchv2']);
 gulp.task('build', ['stylus:build', 'js:build', 'imagemin', 'copy-fonts']);
 // gulp.task('clean', ['clean-build']);
