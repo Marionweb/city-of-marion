@@ -18,8 +18,11 @@ printf '%s\n' 'User-agent: *' 'Disallow: /' | tee releases/${execution.to_revisi
 echo "Running composer install"
 cd releases/${execution.to_revision.revision} && composer install
 
-echo "Running npm install"
-cd releases/${execution.to_revision.revision} && npm install
+echo "COMMENTED OUT: Running npm install"
+echo "COMMENTED OUT: cd releases/${execution.to_revision.revision} && npm install"
+
+echo "Running yarn install"
+cd releases/${execution.to_revision.revision} && yarn install
 
 echo "Wait for it..."
 sleep 3.5s
