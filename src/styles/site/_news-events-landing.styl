@@ -50,7 +50,9 @@
 
 #news-events--articles-list
   > article
-    lost-waffle: 1/3
+    margin 0 rem(10px) rem(15px)
+    +above(m)
+      lost-waffle: 1/3
 
 
 #news-events--nav
@@ -63,6 +65,8 @@
 
 #news-events--nav
   background-color $news-events-filter-background
+  +below(mobile-max)
+    padding rem(30px)
 
   .news-events--nav--filter-row
     +above(m)
@@ -79,16 +83,64 @@
         lost-column 32/36
         lost-flex-container: row
 
-    input[type="checkbox"] + label::before
-    input[type="radio"] + label::before
-      display none
+    input[type="checkbox"]
+      & + label::before
+        display none
+      
+      & + label::after
+        opacity 1
+        pointer-events: none
+        closeSize = $line-height-computed / 2
+        left auto
+        right $border-width-base
+        top $border-width-base
+        mask: embedurl("../sprites/arrow-small-down.svg", "utf8") no-repeat 50% 50%/closeSize closeSize
+        height $input-height-base
+        width ($padding-base-horizontal * 3)
+        background-color: $navy
+        transition: all 150ms ease
+        +above(m)
+          opacity 0
+          display none
+      
+      & + label[for=news-events--nav--filter-row--date]::after
+        background-color: $button-background
+      
+      &:checked
+        & + label::after
+          transform: rotate( -180deg )
+          transform-origin: 50% 50%
+        & + label
+          background-color $button-hover-background
+          &[for=news-events--nav--filter-row--date]
+            background-color $dark-gray
+            color $white
+        & ~ ul
+        & ~ form ul
+          display block
+
+
+
+
+
     > label
-      color $news-events-filter-label-color = $navy
-      display inline-block
-      font-size $news-events-filter-label-size-mobile
-      font-weight bold
-      text-transform $news-events-filter-label-transform
-      vertical-align middle
+      +below(mobile-max)
+        button($button-background, $button-hover-background, $button-text-color, $button-text-color, $button-font-size, $button-line-height, ($button-padding * 0.8) $button-padding, uppercase, left)
+        display block
+        margin-right 0
+        position relative
+        
+        &[for=news-events--nav--filter-row--date]
+          button($white, $dark-gray, $button-background, $white, $button-font-size, $button-line-height, ($button-padding * 0.8) $button-padding, uppercase, left)
+          display block
+          margin-right 0
+      
+      +above(m)
+        color $news-events-filter-label-color
+        font-size $news-events-filter-label-size-mobile
+        font-weight bold
+        text-transform $news-events-filter-label-transform
+        vertical-align middle
 
     ul
     form
@@ -96,6 +148,16 @@
       width 100%
 
     ul
+      display none
+      +below(mobile-max)
+        margin-top rem(-10px)
+        li
+          a
+          input[type=submit]
+            margin-right 0
+            width 100%
+            &, &:hover
+              box-shadow none
       +above(m)
         display: flex
         flex-flow: row nowrap
@@ -117,10 +179,8 @@
 
         a
         input[type=submit]
-          button()
+          button($button-background, $button-hover-background, $button-text-color, $button-text-color, $button-font-size, $button-line-height, ($button-padding * 0.8) $button-padding, uppercase, center)
           display block
-          padding-top ($button-padding * 0.8)
-          padding-bottom ($button-padding * 0.8)
 
 
 

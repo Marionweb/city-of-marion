@@ -1,7 +1,7 @@
 <nav id="news-events--nav">
   <div class="news-events--nav--filter-row news-events--nav--filter-row--type">
     <input type="checkbox" id="news-events--nav--filter-row--type">
-    <label for="news-events--nav--filter-row--type"><span>Type</span></label>
+    <label for="news-events--nav--filter-row--type"><span>Category</span></label>
     <ul class="news-events--nav--filters news-events--nav--filters--type">
     {% for entryType in craft.app.sections.getSectionByHandle('newsEvents').getEntryTypes() %}
       {% set firstSegment = craft.app.request.segments|first %}
