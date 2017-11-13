@@ -422,6 +422,58 @@
             "time": "2017-07-16T21:13:23+00:00"
         },
         {
+            "name": "cloudinary/cloudinary_php",
+            "version": "1.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cloudinary/cloudinary_php.git",
+                "reference": "641b0901ca616c540b773abb802987a502aa8b89"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cloudinary/cloudinary_php/zipball/641b0901ca616c540b773abb802987a502aa8b89",
+                "reference": "641b0901ca616c540b773abb802987a502aa8b89",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "5.7.*"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src"
+                ],
+                "files": [
+                    "src/Helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cloudinary",
+                    "homepage": "https://github.com/cloudinary/cloudinary_php/graphs/contributors"
+                }
+            ],
+            "description": "Cloudinary PHP SDK",
+            "homepage": "https://github.com/cloudinary/cloudinary_php",
+            "keywords": [
+                "cdn",
+                "cloud",
+                "cloudinary",
+                "image management",
+                "sdk"
+            ],
+            "time": "2017-05-03T14:29:33+00:00"
+        },
+        {
             "name": "clue/stream-filter",
             "version": "v1.4.0",
             "source": {
@@ -2568,6 +2620,53 @@
             "time": "2017-03-20T17:10:46+00:00"
         },
         {
+            "name": "imageoptim/imageoptim",
+            "version": "1.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ImageOptim/php-imageoptim-api.git",
+                "reference": "b73eb5d6747fc181de86b2de50fb158dff463618"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ImageOptim/php-imageoptim-api/zipball/b73eb5d6747fc181de86b2de50fb158dff463618",
+                "reference": "b73eb5d6747fc181de86b2de50fb158dff463618",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.4 || ^7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ImageOptim\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Kornel",
+                    "email": "kornel@imageoptim.com"
+                }
+            ],
+            "description": "ImageOptim API for PHP",
+            "homepage": "https://imageoptim.com/api",
+            "keywords": [
+                "image",
+                "optimize",
+                "performance",
+                "resize",
+                "scale"
+            ],
+            "time": "2017-01-09T23:58:20+00:00"
+        },
+        {
             "name": "imgix/imgix-php",
             "version": "1.1.0",
             "source": {
@@ -2718,6 +2817,43 @@
                 "schema"
             ],
             "time": "2017-10-21T13:15:38+00:00"
+        },
+        {
+            "name": "kraken-io/kraken-php",
+            "version": "1.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kraken-io/kraken-php.git",
+                "reference": "56563df1b9a7829f7039cc6e712cf89fab655e26"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kraken-io/kraken-php/zipball/56563df1b9a7829f7039cc6e712cf89fab655e26",
+                "reference": "56563df1b9a7829f7039cc6e712cf89fab655e26",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Kraken": "lib"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kraken Image Optimizer",
+                    "email": "support@kraken.io"
+                }
+            ],
+            "description": "Official Kraken.io SDK",
+            "time": "2016-07-26T08:03:24+00:00"
         },
         {
             "name": "ksubileau/color-thief-php",
@@ -4260,21 +4396,24 @@
         },
         {
             "name": "nystudio107/craft3-imageoptimize",
-            "version": "1.2.10",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft3-imageoptimize.git",
-                "reference": "58318573421149517d36f4dd2c16ee79feab7489"
+                "reference": "bf590478b61303d28aed6f617e5e8f44609a7b81"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft3-imageoptimize/zipball/58318573421149517d36f4dd2c16ee79feab7489",
-                "reference": "58318573421149517d36f4dd2c16ee79feab7489",
+                "url": "https://api.github.com/repos/nystudio107/craft3-imageoptimize/zipball/bf590478b61303d28aed6f617e5e8f44609a7b81",
+                "reference": "bf590478b61303d28aed6f617e5e8f44609a7b81",
                 "shasum": ""
             },
             "require": {
+                "cloudinary/cloudinary_php": "^1.8.0",
                 "craftcms/cms": "~3.0.0-beta.20",
-                "imgix/imgix-php": "@dev",
+                "imageoptim/imageoptim": "^1.0.0",
+                "imgix/imgix-php": "^1.1.0",
+                "kraken-io/kraken-php": "^1.2",
                 "ksubileau/color-thief-php": "^1.3",
                 "mikehaertl/php-shellcommand": "~1.2"
             },
@@ -4307,7 +4446,7 @@
                     "homepage": "https://nystudio107.com"
                 }
             ],
-            "description": "Automatically create & optimize responsive image transforms",
+            "description": "Automatically create & optimize responsive image transforms, using either native Craft transforms or a service like Imgix, with zero template changes.",
             "keywords": [
                 "Craft",
                 "cms",
@@ -4319,7 +4458,7 @@
                 "optimize",
                 "optimize-images"
             ],
-            "time": "2017-11-04T00:31:11+00:00"
+            "time": "2017-11-11T03:02:13+00:00"
         },
         {
             "name": "nystudio107/craft3-minify",
@@ -5415,12 +5554,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "43f7f8243b81e3fd843b150a30a6d0a91167d4f5"
+                "reference": "5de810cf96008ab760a0590fb49078e12ab80cf9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/43f7f8243b81e3fd843b150a30a6d0a91167d4f5",
-                "reference": "43f7f8243b81e3fd843b150a30a6d0a91167d4f5",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/5de810cf96008ab760a0590fb49078e12ab80cf9",
+                "reference": "5de810cf96008ab760a0590fb49078e12ab80cf9",
                 "shasum": ""
             },
             "conflict": {
@@ -5428,7 +5567,7 @@
                 "amphp/artax": ">=2,<2.0.6|<1.0.6",
                 "aws/aws-sdk-php": ">=3,<3.2.1",
                 "bugsnag/bugsnag-laravel": ">=2,<2.0.2",
-                "cakephp/cakephp": ">=2,<2.4.99|>=1.3,<1.3.18|>=3,<3.0.15|>=2.5,<2.5.99|>=2.6,<2.6.12|>=2.7,<2.7.6|>=3.1,<3.1.4",
+                "cakephp/cakephp": ">=2,<2.4.99|>=2.5,<2.5.99|>=2.6,<2.6.12|>=2.7,<2.7.6|>=3,<3.0.15|>=3.1,<3.1.4|>=1.3,<1.3.18",
                 "cart2quote/module-quotation": ">=4.1.6,<=4.4.5|>=5,<5.4.4",
                 "cartalyst/sentry": "<2.1",
                 "codeigniter/framework": "<=3.0.6",
@@ -5468,6 +5607,7 @@
                 "oro/crm": ">=1.7,<1.7.4",
                 "oro/platform": ">=1.7,<1.7.4",
                 "phpmailer/phpmailer": ">=5,<5.2.24",
+                "phpunit/phpunit": ">=5.0.10,<5.6.3|>=4.8.19,<4.8.28",
                 "phpxmlrpc/extras": "<6.0.1",
                 "pusher/pusher-php-server": "<2.2.1",
                 "sabre/dav": ">=1.6,<1.6.99|>=1.7,<1.7.11|>=1.8,<1.8.9",
@@ -5488,11 +5628,11 @@
                 "symfony/http-foundation": ">=2,<2.3.27|>=2.4,<2.5.11|>=2.6,<2.6.6",
                 "symfony/http-kernel": ">=2,<2.3.29|>=2.4,<2.5.12|>=2.6,<2.6.8",
                 "symfony/routing": ">=2,<2.0.19",
-                "symfony/security": ">=2.3,<2.3.37|>=2.4,<2.6.13|>=2.7,<2.7.9|>=2.7.30,<2.7.32|>=2.8.23,<2.8.25|>=3.2.10,<3.2.12|>=3.3.3,<3.3.5|>=2,<2.0.25|>=2.1,<2.1.13|>=2.2,<2.2.9",
-                "symfony/security-core": ">=2.7.30,<2.7.32|>=2.8.23,<2.8.25|>=3.2.10,<3.2.12|>=3.3.3,<3.3.5|>=2.8,<2.8.6|>=3,<3.0.6|>=2.4,<2.6.13|>=2.7,<2.7.9",
-                "symfony/security-http": ">=2.4,<2.7.13|>=2.3,<2.3.41|>=2.8,<2.8.6|>=3,<3.0.6",
+                "symfony/security": ">=2.7.30,<2.7.32|>=2.8.23,<2.8.25|>=3.2.10,<3.2.12|>=3.3.3,<3.3.5|>=2,<2.0.25|>=2.3,<2.3.37|>=2.4,<2.6.13|>=2.7,<2.7.9|>=2.1,<2.1.13|>=2.2,<2.2.9",
+                "symfony/security-core": ">=2.8,<2.8.6|>=3,<3.0.6|>=2.7.30,<2.7.32|>=2.8.23,<2.8.25|>=3.2.10,<3.2.12|>=3.3.3,<3.3.5|>=2.4,<2.6.13|>=2.7,<2.7.9",
+                "symfony/security-http": ">=2.3,<2.3.41|>=2.4,<2.7.13|>=2.8,<2.8.6|>=3,<3.0.6",
                 "symfony/serializer": ">=2,<2.0.11",
-                "symfony/symfony": ">=2,<2.3.41|>=2.4,<2.7.13|>=2.7.30,<2.7.32|>=2.8.23,<2.8.25|>=3.2.10,<3.2.12|>=3.3.3,<3.3.5|>=2.8,<2.8.6|>=3,<3.0.6",
+                "symfony/symfony": ">=2,<2.3.41|>=2.4,<2.7.13|>=2.8,<2.8.6|>=3,<3.0.6|>=2.7.30,<2.7.32|>=2.8.23,<2.8.25|>=3.2.10,<3.2.12|>=3.3.3,<3.3.5",
                 "symfony/translation": ">=2,<2.0.17",
                 "symfony/validator": ">=2,<2.0.24|>=2.1,<2.1.12|>=2.2,<2.2.5|>=2.3,<2.3.3",
                 "symfony/web-profiler-bundle": ">=2,<2.3.19|>=2.4,<2.4.9|>=2.5,<2.5.4",
@@ -5500,8 +5640,8 @@
                 "thelia/backoffice-default-template": ">=2.1,<2.1.2",
                 "thelia/thelia": ">=2.1.0-beta1,<2.1.3|>=2.1,<2.1.2",
                 "twig/twig": "<1.20",
-                "typo3/cms": ">=6.2,<6.2.30|>=7,<7.6.22|>=8,<8.7.5",
-                "typo3/flow": ">=2.3,<2.3.16|>=3,<3.0.10|>=3.1,<3.1.7|>=3.2,<3.2.7|>=3.3,<3.3.5|>=1.1,<1.1.1|>=2,<2.0.1|>=1,<1.0.4",
+                "typo3/cms": ">=8,<8.7.5|>=7,<7.6.22|>=6.2,<6.2.30",
+                "typo3/flow": ">=1,<1.0.4|>=1.1,<1.1.1|>=2,<2.0.1|>=2.3,<2.3.16|>=3,<3.0.10|>=3.1,<3.1.7|>=3.2,<3.2.7|>=3.3,<3.3.5",
                 "typo3/neos": ">=1.1,<1.1.3|>=1.2,<1.2.13|>=2,<2.0.4",
                 "willdurand/js-translation-bundle": "<2.1.1",
                 "yiisoft/yii": ">=1.1.14,<1.1.15",
@@ -5546,7 +5686,7 @@
                 }
             ],
             "description": "Prevents installation of composer packages with known security vulnerabilities: no API, simply require it",
-            "time": "2017-10-31T23:55:04+00:00"
+            "time": "2017-11-11T03:27:01+00:00"
         },
         {
             "name": "seld/cli-prompt",
@@ -5801,16 +5941,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v3.4.0-BETA3",
+            "version": "v3.4.0-BETA4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "379744aa3f7ccc56d0b767d0a27edc44b3bef8d9"
+                "reference": "0f859c42d6b557fdac74754c9823170765ae3872"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/379744aa3f7ccc56d0b767d0a27edc44b3bef8d9",
-                "reference": "379744aa3f7ccc56d0b767d0a27edc44b3bef8d9",
+                "url": "https://api.github.com/repos/symfony/console/zipball/0f859c42d6b557fdac74754c9823170765ae3872",
+                "reference": "0f859c42d6b557fdac74754c9823170765ae3872",
                 "shasum": ""
             },
             "require": {
@@ -5866,20 +6006,20 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2017-11-05T16:10:10+00:00"
+            "time": "2017-11-12T16:53:54+00:00"
         },
         {
             "name": "symfony/debug",
-            "version": "v4.0.0-BETA3",
+            "version": "v4.0.0-BETA4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
-                "reference": "a5bb97fb9fbd0e2a5e44feb8b32bb541f8b5b7b7"
+                "reference": "92697a71cd55c5852d0f19cd80e7fb6d1eb12b88"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/debug/zipball/a5bb97fb9fbd0e2a5e44feb8b32bb541f8b5b7b7",
-                "reference": "a5bb97fb9fbd0e2a5e44feb8b32bb541f8b5b7b7",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/92697a71cd55c5852d0f19cd80e7fb6d1eb12b88",
+                "reference": "92697a71cd55c5852d0f19cd80e7fb6d1eb12b88",
                 "shasum": ""
             },
             "require": {
@@ -5922,20 +6062,20 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2017-10-24T14:16:56+00:00"
+            "time": "2017-11-12T16:47:31+00:00"
         },
         {
             "name": "symfony/dependency-injection",
-            "version": "v3.4.0-BETA3",
+            "version": "v3.4.0-BETA4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dependency-injection.git",
-                "reference": "7a397eac41b7ba11d8c8caab4767ae5f306d2eed"
+                "reference": "9b7afbb83642a057f23fa448bb59c4545c997690"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/7a397eac41b7ba11d8c8caab4767ae5f306d2eed",
-                "reference": "7a397eac41b7ba11d8c8caab4767ae5f306d2eed",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/9b7afbb83642a057f23fa448bb59c4545c997690",
+                "reference": "9b7afbb83642a057f23fa448bb59c4545c997690",
                 "shasum": ""
             },
             "require": {
@@ -5993,20 +6133,20 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
-            "time": "2017-11-05T18:01:07+00:00"
+            "time": "2017-11-11T16:18:07+00:00"
         },
         {
             "name": "symfony/filesystem",
-            "version": "v3.4.0-BETA3",
+            "version": "v3.4.0-BETA4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
-                "reference": "dc207346812fcb31e3f91edcf9837512a82e6a1e"
+                "reference": "2365c3ddfcd48de678f13d54b1785cede221afd4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/dc207346812fcb31e3f91edcf9837512a82e6a1e",
-                "reference": "dc207346812fcb31e3f91edcf9837512a82e6a1e",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/2365c3ddfcd48de678f13d54b1785cede221afd4",
+                "reference": "2365c3ddfcd48de678f13d54b1785cede221afd4",
                 "shasum": ""
             },
             "require": {
@@ -6042,11 +6182,11 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "https://symfony.com",
-            "time": "2017-11-05T16:10:10+00:00"
+            "time": "2017-11-07T14:20:24+00:00"
         },
         {
             "name": "symfony/finder",
-            "version": "v3.4.0-BETA3",
+            "version": "v3.4.0-BETA4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
@@ -6095,16 +6235,16 @@
         },
         {
             "name": "symfony/intl",
-            "version": "v3.4.0-BETA3",
+            "version": "v3.4.0-BETA4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/intl.git",
-                "reference": "3cdd300e3ba2dd3c3edc2410374177f1ee5f94dd"
+                "reference": "ebd50fc0f9c7606957b4afe5bc0123b108250c5f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/intl/zipball/3cdd300e3ba2dd3c3edc2410374177f1ee5f94dd",
-                "reference": "3cdd300e3ba2dd3c3edc2410374177f1ee5f94dd",
+                "url": "https://api.github.com/repos/symfony/intl/zipball/ebd50fc0f9c7606957b4afe5bc0123b108250c5f",
+                "reference": "ebd50fc0f9c7606957b4afe5bc0123b108250c5f",
                 "shasum": ""
             },
             "require": {
@@ -6166,11 +6306,11 @@
                 "l10n",
                 "localization"
             ],
-            "time": "2017-11-05T16:10:10+00:00"
+            "time": "2017-11-10T19:03:56+00:00"
         },
         {
             "name": "symfony/options-resolver",
-            "version": "v3.4.0-BETA3",
+            "version": "v3.4.0-BETA4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/options-resolver.git",
@@ -6341,7 +6481,7 @@
         },
         {
             "name": "symfony/process",
-            "version": "v3.4.0-BETA3",
+            "version": "v3.4.0-BETA4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
