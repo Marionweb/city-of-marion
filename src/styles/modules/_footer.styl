@@ -78,14 +78,16 @@ footer
   background-repeat: no-repeat
   background-size: cover
   display: block
-  height: rem(43px)
-  width: rem(287px)
-  // +between(tablet-min, tablet-max)
-  //   height: rem(38px)
-  //   width: rem(254.6px)
-  // +above(desktop-min)
-  //   height: rem(54.5px)
-  //   width: rem(365.15px)
+  +below(mobile-max)
+    height: rem(37px)
+    width: rem(254.6px)
+  +between(m, l)
+    height: rem(43px)
+    width: rem(287px)
+  +above(l)
+    height: rem(54.5px)
+    width: rem(365.15px)
+
   strong
     @extend .hide-text
 
