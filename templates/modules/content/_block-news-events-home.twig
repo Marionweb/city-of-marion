@@ -18,6 +18,16 @@
 
 <section id="block--events-home" class="block--news-events-home">
   <h2>Events</h2>
+  {# {% set upcomingEvents = craft.entries({
+      'section' : 'newsEvents',
+      'type' : 'event',
+      'limit' : 3,
+      'andWhere' : [
+        '>=',
+        'field_eventDate',
+        now|date('Y-m-d')
+      ]
+  }) %} #}
   {% set upcomingEvents = craft.entries({
       'section' : 'newsEvents',
       'type' : 'event',
