@@ -18,7 +18,7 @@
 {% if pageInfo.totalPages > 1 %}
   <nav class="pagination">
     {% if pageInfo.prevUrl %}
-      <a href="{{ pageInfo.prevUrl }}{{queryString}}" title="Go to previous page">Previous</a>
+      <a href="{{ pageInfo.prevUrl }}{{queryString}}" class="previous" title="Go to previous page">Previous</a>
     {% endif %}
 
     <div class="page-numbers">
@@ -59,7 +59,7 @@
     </div>
 
     {% if pageInfo.nextUrl %}
-      <a href="{{ pageInfo.nextUrl }}{{queryString}}" title="Go to next page">Next</a>
+      <a href="{{ pageInfo.nextUrl }}{{queryString}}" class="next" title="Go to next page">Next</a>
     {% endif %}
   </nav>
 {% endif %}
