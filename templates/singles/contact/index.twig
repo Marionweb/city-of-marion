@@ -121,9 +121,9 @@
     <div class="hours">
       {% if item.open|length and item.close|length %}
         <meta itemprop="openingHours"
-          content="{{ item.daysShort|join(',') }} {{ item.open.time|date('H:i') }}-{{ item.close.time|date('H:i') }}">
+          content="{{ item.daysShort|join(',') }} {{ item.open|date('H:i') }}-{{ item.close|date('H:i') }}">
           {{ item.daysShort|first }}{% if item.daysShort|length > 1 %}-{{ item.daysShort|last }}{% endif %}<br>
-          {{ item.open.time|date('g:ia') }}-{{ item.close.time|date('g:ia') }}
+          {{ item.open|date('g:ia') }}-{{ item.close|date('g:ia') }}
       {% else %}
         <meta class="hours__hours" itemprop="openingHours"
           content="{{ item.daysShort|join(',') }} Closed">
