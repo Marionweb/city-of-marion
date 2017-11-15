@@ -69,42 +69,7 @@
 
   {% else %}
 
-  
-
-    {% set tempArray = [] %}
-    {% set tempArray2 = [] %}
-    {% set subset = [] %}
-
-      {% for variantWidth in image.optimizedImagesLandingHeader.variantSourceWidths %}
-        {% if variantWidth not in tempArray %}
-          {% set tempArray = tempArray|merge([variantWidth]) %}
-          {# {% set subset = subset|merge([image.optimizedImagesLandingHeader.optimizedImageUrls|slice(loop.index0, 1, true)]) %} #}
-          {# create a dynamic property if one doesn't exist #}
-          {% if not attribute(tempArray2, 'w' ~ variantWidth) is defined %}
-            {% set tempArray2 = tempArray2|merge({ ('w' ~ variantWidth) : [loop.index0] }) %}
-          
-          {# else update the dynamic property with the new url #}
-          {% else %}
-              {% set indexes = attribute(tempArray2, 'w' ~ variantWidth) %}
-              {% set indexes = indexes|merge([loop.index0]) %}
-              {% set tempArray2 = tempArray2|merge({ ('w' ~ variantWidth) : indexes }) %}
-
-          {% endif %}
-        {% endif %}
-        
-      {% endfor %}
-
-      
-
-    <code style="font-size:10px"><pre>{{dump(tempArray2)}}</pre></code>
-    {# <code style="font-size:10px"><pre>{{dump(urls)}}</pre></code> #}
-
-    
-
-
-  {# {{ dump(repeatedIds) }} #}
-
-    {# <figure class="mobile">
+    <figure class="mobile">
       <img class="lazyload"
         src="{{ image.getUrl(mobileSmall) }}"
         data-sizes="100vw"
@@ -124,7 +89,7 @@
       {% if image.caption %}
       <figcaption>{{ image.caption }}</figcaption>
       {% endif %}
-    </figure> #}
+    </figure>
 
   {% endif %}
 
