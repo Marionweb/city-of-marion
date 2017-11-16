@@ -65,10 +65,10 @@
     {% set lastImage = finalImageArray|last %}
 
   <picture>
+    <!--[if IE 9]><video style="display: none"><![endif]-->
     {# Loop through all variants #}
     {% for width, sizes in finalImageArrayWebP %}
-      {% if not loop.last %}
-      
+      {% if not loop.last and loop.length > 1 %}
       <source
             {# Loop through all variations inside a variant #}
             data-srcset="
@@ -82,7 +82,7 @@
       {% endif %}
     {% endfor %}
     {% for width, sizes in finalImageArray %}
-      {% if not loop.last %}
+      {% if not loop.last and loop.length > 1 %}
         <source
             {# Loop through all variations inside a variant #}
             data-srcset="
@@ -94,6 +94,7 @@
             data-sizes="auto" />
       {% endif %}
     {% endfor %}
+    <!--[if IE 9]></video><![endif]-->
     <img class="lazyload"
           {# options: placeholderSilhouette(), placeholderBox() or placeholderImage() #}
           src="{{ image.placeholderImage() }}"
