@@ -1,17 +1,12 @@
 <section id="{{ entry.id }}-{{ entry.slug }}" class="block--subpage">
   <a href="{{ entry.url }}" title="{{ entry.title }}">
   {% if entry.primaryImage | length %}
+    {%- import "macros/_images" as imageFunctions -%}
     {%- set image = entry.primaryImage.one() -%}
 
     <figure>
-        <img class="lazyload"
-          src="{{ image.optimizedImagesBlockPreview.placeholderBox() }}"
-          data-sizes="auto"
-          data-srcset="{{ image.optimizedImagesBlockPreview.srcset() }}"
-          {% if image.alt %}alt="{{ image.alt }}"{% endif %}>
-      {% if image.caption %}
-      <figcaption>{{ image.caption }}</figcaption>
-      {% endif %}
+      {{ imageFunctions.responsivePicture(image.optimizedImagesBlockPreview, image.alt) }}
+      {% if image.caption %}<figcaption>{{ image.caption }}</figcaption>{% endif %}
     </figure>
   {% endif %}
 

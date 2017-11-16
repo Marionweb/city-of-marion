@@ -8,35 +8,12 @@
 {% block parallaxBack %}
 
 <div id="header-image" class="{{entry.section.handle}}">
+  {%- import "macros/_images" as imageFunctions -%}
   {%- set image = entry.primaryImage.one() -%}
-  {%- set initialQuality = 20 -%}
 
-  {%- set mobileAspectRatio = (15/12) -%}
-  {%- set mobileSmall = { width: 40, height: 40 / mobileAspectRatio, quality: initialQuality } -%}
-
-  {%- set desktopAspectRatio = (12/5) -%}
-  {%- set desktopSmall = { width: 40, height: 40 / desktopAspectRatio, quality: initialQuality } -%}
-
-  <figure class="mobile">
-    <img class="lazyload"
-      src="{{ image.optimizedImagesLandingHeader.placeholderImage() }}"
-      data-sizes="100vw"
-      data-srcset="{{ image.optimizedImagesLandingHeader.srcset() }}"
-      {% if image.alt %}alt="{{ image.alt }}"{% endif %}>
-    {% if image.caption %}
-    <figcaption>{{ image.caption }}</figcaption>
-    {% endif %}
-  </figure>
-
-  <figure class="desktop">
-    <img class="lazyload"
-      src="{{ image.optimizedImagesLandingHeader.placeholderImage() }}"
-      data-sizes="100vw"
-      data-srcset="{{ image.optimizedImagesLandingHeader.srcset() }}"
-      {% if image.alt %}alt="{{ image.alt }}"{% endif %}>
-    {% if image.caption %}
-    <figcaption>{{ image.caption }}</figcaption>
-    {% endif %}
+  <figure>
+    {{ imageFunctions.responsivePicture(image.optimizedImagesLandingHeader, image.alt) }}
+    {% if image.caption %}<figcaption>{{ image.caption }}</figcaption>{% endif %}
   </figure>
 
   <h1>Welcome to <span><strong>{{siteName}}</strong></span></h1>

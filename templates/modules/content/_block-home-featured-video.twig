@@ -3,29 +3,11 @@
 
   <section id="block--featured-video">
     {% if videoBlock.backgroundImage | length %}
-
+      {%- import "macros/_images" as imageFunctions -%}
       {% set image = videoBlock.backgroundImage.one() %}
-
-      <figure class="mobile">
-        <img class="lazyload"
-          src="{{ image.optimizedImagesHomepageVideoFeatureBg.placeholderBox() }}"
-          data-sizes="100vw"
-          data-srcset="{{ image.optimizedImagesHomepageVideoFeatureBg.srcset() }}"
-          {% if image.alt %}alt="{{ image.alt }}"{% endif %}>
-        {% if image.caption %}
-        <figcaption>{{ image.caption }}</figcaption>
-        {% endif %}
-      </figure>
-
-      <figure class="desktop">
-        <img class="lazyload"
-          src="{{ image.optimizedImagesHomepageVideoFeatureBg.placeholderBox() }}"
-          data-sizes="100vw"
-          data-srcset="{{ image.optimizedImagesHomepageVideoFeatureBg.srcset() }}"
-          {% if image.alt %}alt="{{ image.alt }}"{% endif %}>
-        {% if image.caption %}
-        <figcaption>{{ image.caption }}</figcaption>
-        {% endif %}
+      <figure>
+        {{ imageFunctions.responsivePicture(image.optimizedImagesHomepageVideoFeatureBg, image.alt) }}
+        {% if image.caption %}<figcaption>{{ image.caption }}</figcaption>{% endif %}
       </figure>
     {% endif %}
 

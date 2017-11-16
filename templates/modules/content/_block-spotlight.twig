@@ -11,33 +11,24 @@
     {% endif %}
 
     {% if (spotlight.primaryImage | length) or employeePhotoExists %}
+      {%- import "macros/_images" as imageFunctions -%}
       {% if spotlight.primaryImage | length %}
         {%- set image = spotlight.primaryImage.one() -%}
       {% else %}
         {%- set image = spotlight.employee.one().staffPhoto.one() -%}
       {% endif %}
 
-        <figure class="mobile">
-          <img class="lazyload"
-            src="{{ image.optimizedImagesBlockPreview.placeholderBox() }}"
-            data-sizes="auto"
-            data-srcset="{{ image.optimizedImagesBlockPreview.srcset() }}"
-            {% if image.alt %}alt="{{ image.alt }}"{% endif %}>
-          {% if image.caption %}
-          <figcaption>{{ image.caption }}</figcaption>
-          {% endif %}
-        </figure>
-
-        <figure class="desktop">
-          <img class="lazyload"
-            src="{{ image.optimizedImagesBlockPreview.placeholderBox() }}"
-            data-sizes="auto"
-            data-srcset="{{ image.optimizedImagesBlockPreview.srcset() }}"
-            {% if image.alt %}alt="{{ image.alt }}"{% endif %}>
-          {% if image.caption %}
-          <figcaption>{{ image.caption }}</figcaption>
-          {% endif %}
-        </figure>
+      <figure>
+        {{ imageFunctions.responsivePicture(image.optimizedImagesBlockPreview, image.alt) }}
+        {% if image.caption %}<figcaption>{{ image.caption }}</figcaption>{% endif %}
+      </figure>
+    {% else %}
+      <figure class="mobile no-image">
+        <img src="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%273380%27 height=%271901%27 style=%27background:%23383932%27 /%3E">
+      </figure>
+      <figure class="desktop no-image">
+        <img src="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%273380%27 height=%271901%27 style=%27background:%23383932%27 /%3E">
+      </figure>
     {% endif %}
 
     <h2>{{ spotlight.title }}</h2>

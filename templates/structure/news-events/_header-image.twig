@@ -7,6 +7,7 @@
     {% endif %}
 
     {% if (entry.primaryImage | length) or employeePhotoExists %}
+      {%- import "macros/_images" as imageFunctions -%}
       {% if entry.primaryImage | length %}
         {%- set image = entry.primaryImage.one() -%}
       {% else %}
@@ -14,14 +15,8 @@
       {% endif %}
 
       <figure>
-          <img class="lazyload"
-            src="{{ image.optimizedImagesNewsHeader.placeholderBox() }}"
-            data-sizes="100vw"
-            data-srcset="{{ image.optimizedImagesNewsHeader.srcset() }}"
-            {% if image.alt %}alt="{{ image.alt }}"{% endif %}>
-        {% if image.caption %}
-        <figcaption>{{ image.caption }}</figcaption>
-        {% endif %}
+        {{ imageFunctions.responsivePicture(image.optimizedImagesNewsHeader, image.alt) }}
+        {% if image.caption %}<figcaption>{{ image.caption }}</figcaption>{% endif %}
       </figure>
     {% else %}
       <figure class="no-image">

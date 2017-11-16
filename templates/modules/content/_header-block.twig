@@ -1,137 +1,30 @@
 <div id="header-image" class="{{entry.section | lower}}">
   {%- import "macros/_images" as imageFunctions -%}
   {%- set image = entry.primaryImage.one() -%}
-  {% set outputWidths = [480, 736, 980, 1280, 1690] %}
-  {%- set lowQuality = 20 -%}
 
-  {% if (entry.section | lower) == 'newsEvents' %}
-
-    {# NEWS/EVENTS ARTICLES: 3:1 (2880x1000 in PSD's) #}
-    {%- set aspectRatio = (3/1) -%}
-    {%- set small = { width: 40, height: 40 / aspectRatio, quality: lowQuality } -%}
-
-  {% elseif (entry.section | lower) == 'pages' and (entry.type | lower) == 'standard' %}
-
-    {# STANDARD PAGES: 72:25 (2880x1000 in PSD's) #}
-    {%- set mobileAspectRatio = (5/4) -%}
-    {%- set mobileSmall = { width: 40, height: 40 / mobileAspectRatio, quality: lowQuality } -%}
-
-    {%- set desktopAspectRatio = (72/25) -%}
-    {%- set desktopSmall = { width: 40, height: 40 / desktopAspectRatio, quality: lowQuality } -%}
-
-  {% else %}
-
-    {# LANDING/HOME/ABOUT/CONTACT: 12:5 (2880x1200 in PSD's) #}
-    {%- set mobileAspectRatio = (5/4) -%}
-    {%- set mobileSmall = { width: 40, height: 40 / mobileAspectRatio, quality: lowQuality } -%}
-
-    {%- set desktopAspectRatio = (12/5) -%}
-    {%- set desktopSmall = { width: 40, height: 40 / desktopAspectRatio, quality: lowQuality } -%}
-
-  {% endif %}
-
+  {# Where are we? #}
   {% if (entry.section | lower) == 'newsEvents' %}
 
     <figure>
-      <img class="lazyload"
-        src="{{ image.getUrl(small) }}"
-        data-sizes="100vw"
-        data-srcset="{{ image.optimizedImagesNewsHeader.srcset() }}"
-        {% if image.alt %}alt="{{ image.alt }}"{% endif %}>
-      {% if image.caption %}
-      <figcaption>{{ image.caption }}</figcaption>
-      {% endif %}
+      {{ imageFunctions.responsivePicture(image.optimizedImagesNewsHeader, image.alt) }}
+      {% if image.caption %}<figcaption>{{ image.caption }}</figcaption>{% endif %}
     </figure>
 
   {% elseif (entry.section | lower) == 'pages' and (entry.type | lower) == 'standard' %}
 
-    <figure class="mobile">
-      <img class="lazyload"
-        src="{{ image.getUrl(mobileSmall) }}"
-        data-sizes="100vw"
-        data-srcset="{{ image.optimizedImagesPageHeader.srcset() }}"
-        {% if image.alt %}alt="{{ image.alt }}"{% endif %}>
-      {% if image.caption %}
-      <figcaption>{{ image.caption }}</figcaption>
-      {% endif %}
-    </figure>
-
-    <figure class="desktop">
-      <img class="lazyload"
-        src="{{ image.getUrl(desktopSmall) }}"
-        data-sizes="100vw"
-        data-srcset="{{ image.optimizedImagesPageHeader.srcset() }}"
-        {% if image.alt %}alt="{{ image.alt }}"{% endif %}>
-      {% if image.caption %}
-      <figcaption>{{ image.caption }}</figcaption>
-      {% endif %}
+    <figure>
+      {{ imageFunctions.responsivePicture(image.optimizedImagesPageHeader, image.alt) }}
+      {% if image.caption %}<figcaption>{{ image.caption }}</figcaption>{% endif %}
     </figure>
 
   {% else %}
 
-    <figure class="mobile">
-      <img class="lazyload"
-        src="{{ image.getUrl(mobileSmall) }}"
-        data-sizes="100vw"
-        data-srcset="{{ image.optimizedImagesLandingHeader.srcset() }}"
-        {% if image.alt %}alt="{{ image.alt }}"{% endif %}>
-      {% if image.caption %}
-      <figcaption>{{ image.caption }}</figcaption>
-      {% endif %}
-    </figure>
-
-    <figure class="desktop">
-      <img class="lazyload"
-        src="{{ image.getUrl(desktopSmall) }}"
-        data-sizes="100vw"
-        data-srcset="{{ image.optimizedImagesLandingHeader.srcset() }}"
-        {% if image.alt %}alt="{{ image.alt }}"{% endif %}>
-      {% if image.caption %}
-      <figcaption>{{ image.caption }}</figcaption>
-      {% endif %}
+    <figure>
+      {{ imageFunctions.responsivePicture(image.optimizedImagesLandingHeader, image.alt) }}
+      {% if image.caption %}<figcaption>{{ image.caption }}</figcaption>{% endif %}
     </figure>
 
   {% endif %}
-
-
-  {# {% if (entry.section | lower) != 'newsEvents' %}
-
-    <figure class="mobile">
-      <img class="lazyload"
-        src="{{ image.getUrl(mobileSmall) }}"
-        data-sizes="100vw"
-        data-srcset="{{ imageFunctions.srcset(image, outputWidths, mobileAspectRatio) }}"
-        {% if image.alt %}alt="{{ image.alt }}"{% endif %}>
-      {% if image.caption %}
-      <figcaption>{{ image.caption }}</figcaption>
-      {% endif %}
-    </figure>
-
-    <figure class="desktop">
-      <img class="lazyload"
-        src="{{ image.getUrl(desktopSmall) }}"
-        data-sizes="100vw"
-        data-srcset="{{ imageFunctions.srcset(image, outputWidths, desktopAspectRatio) }}"
-        {% if image.alt %}alt="{{ image.alt }}"{% endif %}>
-      {% if image.caption %}
-      <figcaption>{{ image.caption }}</figcaption>
-      {% endif %}
-    </figure>
-
-  {% elseif (entry.section | lower) == 'newsEvents' %}
-
-    <figure>
-      <img class="lazyload"
-        src="{{ image.getUrl(small) }}"
-        data-sizes="100vw"
-        data-srcset="{{ imageFunctions.srcset(image, outputWidths, aspectRatio) }}"
-        {% if image.alt %}alt="{{ image.alt }}"{% endif %}>
-      {% if image.caption %}
-      <figcaption>{{ image.caption }}</figcaption>
-      {% endif %}
-    </figure>
-
-  {% endif %} #}
 
   <h1>{{ entry.title | typogrify }}</h1>
 </div>

@@ -2,16 +2,11 @@
 {%- set welcomeBlock = entry.welcome.one() -%}
 
 {% if welcomeBlock.welcomePhoto | length %}
+  {%- import "macros/_images" as imageFunctions -%}
   {%- set image = welcomeBlock.welcomePhoto.one() -%}
   <figure>
-    <img class="lazyload"
-      src="{{ image.optimizedImagesSquare.placeholderImage() }}"
-      data-sizes="100vw"
-      data-srcset="{{ image.optimizedImagesSquare.srcset() }}"
-      {% if image.alt %}alt="{{ image.alt }}"{% endif %}>
-    {% if image.caption %}
-    <figcaption>{{ image.caption }}</figcaption>
-    {% endif %}
+    {{ imageFunctions.responsivePicture(image.optimizedImagesSquare, image.alt) }}
+    {% if image.caption %}<figcaption>{{ image.caption }}</figcaption>{% endif %}
   </figure>
 {% endif %}
 
