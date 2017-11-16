@@ -1,5 +1,9 @@
 $lazy-load
-  filter: blur(5px)
-  transition: filter 400ms
-  &.lazyloaded
-    filter: blur(0)
+  filter blur(5px)
+  transition filter 400ms
+
+.lazyload
+  @extend $lazy-load
+
+img.lazyloaded
+  filter blur(0)
