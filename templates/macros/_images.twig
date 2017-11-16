@@ -67,19 +67,28 @@
 
   <picture>
     {% for width, sizes in finalImageArrayWebP %}
-    <source srcset="{% for variationImage in sizes %}{{ variationImage.url }} {{ variationImage.width }}w{% if not loop.last %}, {% endif %}{% endfor %}"       
+    <source srcset="{% for variationImage in sizes %}{{ variationImage.url }}{% if not loop.first %} {{ loop.index }}x{% endif %}{% if not loop.last %}, {% endif %}{% endfor %}"       
           media="(min-width: {{ width|replace({'width_': ''}) }}px)"
           data-sizes="100vw"
           type="image/webp" />
+    {# <source srcset="{% for variationImage in sizes %}{{ variationImage.url }} {{ variationImage.width }}w{% if not loop.last %}, {% endif %}{% endfor %}"       
+          media="(min-width: {{ width|replace({'width_': ''}) }}px)"
+          data-sizes="100vw"
+          type="image/webp" /> #}
     {% endfor %}
     {% for width, sizes in finalImageArray %}
-    <source srcset="{% for variationImage in sizes %}{{ variationImage.url }} {{ variationImage.width }}w{% if not loop.last %}, {% endif %}{% endfor %}"       
+    <source srcset="{% for variationImage in sizes %}{{ variationImage.url }}{% if not loop.first %} {{ loop.index }}x{% endif %}{% if not loop.last %}, {% endif %}{% endfor %}"       
+          media="(min-width: {{ width|replace({'width_': ''}) }}px)" />
+    {# <source srcset="{% for variationImage in sizes %}{{ variationImage.url }} {{ variationImage.width }}w{% if not loop.last %}, {% endif %}{% endfor %}"       
           media="(min-width: {{ width|replace({'width_': ''}) }}px)"
-          data-sizes="100vw" />
+          data-sizes="100vw" /> #}
     {% endfor %}
     <img class="lazyload" src="{{ image.placeholderImage() }}"
-          srcset="{% for variationImage in lastImage %}{{ variationImage.url }} {{ variationImage.width }}w{% if not loop.last %}, {% endif %}{% endfor %}"
+          srcset="{% for variationImage in lastImage %}{{ variationImage.url }}{% if not loop.first %} {{ loop.index }}x{% endif %}{% if not loop.last %}, {% endif %}{% endfor %}"
           {% if alt %}alt="{{ alt }}" {% endif %}/>
+    {# <img class="lazyload" src="{{ image.placeholderImage() }}"
+          srcset="{% for variationImage in lastImage %}{{ variationImage.url }}{% if not loop.first %} {{ variationImage.width }}w{% endif %}{% if not loop.last %}, {% endif %}{% endfor %}"
+          {% if alt %}alt="{{ alt }}" {% endif %}/> #}
   </picture>
 
 {%- endmacro -%}
