@@ -44,33 +44,50 @@
     </div>
     <div id="staff-profile--phone-other">
       {% if entry.phone %}
-        {% set directPhoneLength = entry.phone.phoneNumber|length %}
+        {# {% set directPhoneLength = entry.phone.phoneNumber|length %}
         {% set directPhoneNewLength = directPhoneLength - 10 %}
         {% set directPhoneUnformattedNumber = entry.phone.phoneNumber|slice(directPhoneNewLength, directPhoneLength) %}
         {% set directPhoneAreaCode = directPhoneUnformattedNumber|slice(0, 3) %}
         {% set directPhoneSliceA = directPhoneUnformattedNumber|slice(3, 3) %}
         {% set directPhoneSliceB = directPhoneUnformattedNumber|slice(6, 4) %}
-        <p><strong>Phone</strong> <span itemprop="telephone">{{ '(' ~ directPhoneAreaCode ~ ') ' ~ directPhoneSliceA ~ '-' ~ directPhoneSliceB }}</span></p>
+        <p><strong>Phone</strong> <span itemprop="telephone">{{ '(' ~ directPhoneAreaCode ~ ') ' ~ directPhoneSliceA ~ '-' ~ directPhoneSliceB }}</span></p> #}
+        <p><strong>Phone</strong> <span itemprop="telephone">{{ entry.phone.phoneNumber }}</span></p>
+      {% endif %}
+
+      {% if general.tollFreePhoneNumber %}
+      <h4>Toll-Free</h4>
+      <div class="phone">
+        {# {% set tfPhoneLength = general.tollFreePhoneNumber|length %}
+        {% set tfNewLength = tfPhoneLength - 10 %}
+        {% set tfUnformattedNumber = general.tollFreePhoneNumber|slice(tfNewLength, tfPhoneLength) %}
+        {% set tfAreaCode = tfUnformattedNumber|slice(0, 3) %}
+        {% set tfPhoneSliceA = tfUnformattedNumber|slice(3, 3) %}
+        {% set tfPhoneSliceB = tfUnformattedNumber|slice(6, 4) %}
+        <span itemprop="telephone">{{ '(' ~ tfAreaCode ~ ') ' ~ tfPhoneSliceA ~ '-' ~ tfPhoneSliceB }}</span> #}
+        <span itemprop="telephone">{{ general.tollFreePhoneNumber }}</span>
+      </div>
       {% endif %}
 
       {% if department.phone %}
-        {% set deptPhoneLength = department.phone.phoneNumber|length %}
+        {# {% set deptPhoneLength = department.phone.phoneNumber|length %}
         {% set deptPhoneNewLength = deptPhoneLength - 10 %}
         {% set deptPhoneUnformattedNumber = department.phone.phoneNumber|slice(deptPhoneNewLength, deptPhoneLength) %}
         {% set deptPhoneAreaCode = deptPhoneUnformattedNumber|slice(0, 3) %}
         {% set deptPhoneSliceA = deptPhoneUnformattedNumber|slice(3, 3) %}
         {% set deptPhoneSliceB = deptPhoneUnformattedNumber|slice(6, 4) %}
-        <p><strong>Department Phone</strong> <span itemprop="telephone">{{ '(' ~ deptPhoneAreaCode ~ ') ' ~ deptPhoneSliceA ~ '-' ~ deptPhoneSliceB }}</span></p>
+        <p><strong>Department Phone</strong> <span itemprop="telephone">{{ '(' ~ deptPhoneAreaCode ~ ') ' ~ deptPhoneSliceA ~ '-' ~ deptPhoneSliceB }}</span></p> #}
+        <p><strong>Department Phone</strong> <span itemprop="telephone">{{ department.phone.phoneNumber }}</span></p>
       {% endif %}
 
       {% if department.fax %}
-        {% set deptFaxLength = department.fax.phoneNumber|length %}
+        {# {% set deptFaxLength = department.fax.phoneNumber|length %}
         {% set deptFaxNewLength = deptFaxLength - 10 %}
         {% set deptFaxUnformattedNumber = department.fax.phoneNumber|slice(deptFaxNewLength, deptFaxLength) %}
         {% set deptFaxAreaCode = deptFaxUnformattedNumber|slice(0, 3) %}
         {% set deptFaxSliceA = deptFaxUnformattedNumber|slice(3, 3) %}
         {% set deptFaxSliceB = deptFaxUnformattedNumber|slice(6, 4) %}
-        <p><strong>Department Fax</strong> <span itemprop="faxNumber">{{ '(' ~ deptFaxAreaCode ~ ') ' ~ deptFaxSliceA ~ '-' ~ deptFaxSliceB }}</span></p>
+        <p><strong>Department Fax</strong> <span itemprop="faxNumber">{{ '(' ~ deptFaxAreaCode ~ ') ' ~ deptFaxSliceA ~ '-' ~ deptFaxSliceB }}</span></p> #}
+        <p><strong>Department Fax</strong> <span itemprop="faxNumber">{{ department.fax.phoneNumber }}</span></p>
       {% endif %}
 
       {% if entry.email %}

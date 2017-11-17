@@ -132,16 +132,31 @@
     </div>
     {% endfor %}
 
+    {% if general.tollFreePhoneNumber %}
+    <h4>Toll-Free</h4>
+    <div class="phone">
+      {# {% set tfPhoneLength = general.tollFreePhoneNumber|length %}
+      {% set tfNewLength = tfPhoneLength - 10 %}
+      {% set tfUnformattedNumber = general.tollFreePhoneNumber|slice(tfNewLength, tfPhoneLength) %}
+      {% set tfAreaCode = tfUnformattedNumber|slice(0, 3) %}
+      {% set tfPhoneSliceA = tfUnformattedNumber|slice(3, 3) %}
+      {% set tfPhoneSliceB = tfUnformattedNumber|slice(6, 4) %}
+      <span itemprop="telephone">{{ '(' ~ tfAreaCode ~ ') ' ~ tfPhoneSliceA ~ '-' ~ tfPhoneSliceB }}</span> #}
+      <span itemprop="telephone">{{ general.tollFreePhoneNumber }}</span>
+    </div>
+    {% endif %}
+
     {% if entry.phone %}
     <h4>Phone</h4>
     <div class="phone">
-      {% set phoneLength = entry.phone.phoneNumber|length %}
+      {# {% set phoneLength = entry.phone.phoneNumber|length %}
       {% set newLength = phoneLength - 10 %}
       {% set unformattedNumber = entry.phone.phoneNumber|slice(newLength, phoneLength) %}
       {% set areaCode = unformattedNumber|slice(0, 3) %}
       {% set phoneSliceA = unformattedNumber|slice(3, 3) %}
       {% set phoneSliceB = unformattedNumber|slice(6, 4) %}
-      <span itemprop="telephone">{{ '(' ~ areaCode ~ ') ' ~ phoneSliceA ~ '-' ~ phoneSliceB }}</span>
+      <span itemprop="telephone">{{ '(' ~ areaCode ~ ') ' ~ phoneSliceA ~ '-' ~ phoneSliceB }}</span> #}
+      <span itemprop="telephone">{{ entry.phone }}</span>
     </div>
     {% endif %}
 
