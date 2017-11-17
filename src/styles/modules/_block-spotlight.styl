@@ -4,7 +4,7 @@
     background-color $module-spotlight-background-color
     box-shadow $module-spotlight-box-shadow
     text-decoration none
-    transition: box-shadow 200ms ease-out
+    transition: box-shadow $transition-timing
     padding-bottom rem(28px)
 
     +above(m)
@@ -74,7 +74,7 @@
         width rem(16px)
         mask: embedurl("../sprites/arrow-right.svg", "utf8") no-repeat 50% 50%/12px 12px
         margin-left: 0.15em
-        transition: background-color 200ms ease-out, transform 200ms ease-out
+        transition: background-color $transition-timing, transform $transition-timing
         vertical-align middle
 
     &:hover

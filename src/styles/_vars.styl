@@ -165,8 +165,9 @@ $body-background-color = $white
 
 $global-block-box-shadow = 0 0 rem(15px) $black-10
 $global-block-box-shadow-hover = 0 0 rem(30px) $black-15
-$link-transition = color 200ms ease-out
-$button-transition = all 200ms ease-out
+$transition-timing = 200ms ease-out
+$link-transition = color $transition-timing
+$button-transition = all $transition-timing
 
 $text-color = $navy
 
@@ -194,6 +195,7 @@ $border-width-base = rem(2px)
 
 $top-menu-background-color = $white
 $top-menu-toggle-icon-color = $light-blue
+$top-menu-toggle-icon-color-hover = $navy
 $top-menu-font-family = $sans-serif-headline
 $top-menu-main-font-size = rem(14px)
 $top-menu-main-font-weight = $font-weight.bold
