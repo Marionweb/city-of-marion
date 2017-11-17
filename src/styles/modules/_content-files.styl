@@ -90,14 +90,27 @@
         width calc(100% - 112px)
         height rem(60px)
         vertical-align middle
+        justify-content center
         display flex
-        align-items center
+        flex-direction column
         border-right 2px solid $light-gray
         overflow hidden
         padding-right rem(10px)
-        font-size: rem(12px)
-        +above(m)
-          font-size: rem(14px)
+        white-space nowrap
+        overflow hidden
+        text-overflow ellipsis
+        p
+          font-size rem(12px)
+          margin 0
+          white-space nowrap
+          overflow hidden
+          text-overflow ellipsis
+          vertical-align middle
+          +above(m)
+            font-size rem(14px)
+          
+          &.filename
+            font-weight: $font-weight.regular
       &:after
         width: rem(38px)
         margin-left rem(8px)

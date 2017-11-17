@@ -22,7 +22,8 @@
         </div>
         {% endif %}
         <div class="title">
-          {{ file.filename }} ({{ file.size|filesize }})
+          {% if file.title %}<p class="filetitle">{{ file.title }}</p>{% endif %}
+          <p class="filename">{{ file.filename }} <span>({{ file.size|filesize }})</span></p>
         </div>
       </a>
     </li>
