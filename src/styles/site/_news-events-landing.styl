@@ -73,14 +73,19 @@
       lost-flex-container: row
       width 100%
       > label
-        lost-column 3/36
+        lost-column 6/36
+        +above(xl)
+          lost-column 4/36
         text-align right
         font-size $news-events-filter-label-size-desktop
         display: flex
         justify-content: center
         flex-direction: column
+        cursor default
       > .news-events--nav--filters
-        lost-column 32/36
+        lost-column 29/36
+        +above(xl)
+          lost-column 31/36
         lost-flex-container: row
 
     input[type="checkbox"]
@@ -106,18 +111,19 @@
       & + label[for=news-events--nav--filter-row--date]::after
         background-color: $button-background
       
-      &:checked
-        & + label::after
-          transform: rotate( -180deg )
-          transform-origin: 50% 50%
-        & + label
-          background-color $button-hover-background
-          &[for=news-events--nav--filter-row--date]
-            background-color $dark-gray
-            color $white
-        & ~ ul
-        & ~ form ul
-          display block
+      +below(mobile-max)
+        &:checked
+          & + label::after
+            transform: rotate( -180deg )
+            transform-origin: 50% 50%
+          & + label
+            background-color $button-hover-background
+            &[for=news-events--nav--filter-row--date]
+              background-color $dark-gray
+              color $white
+          & ~ ul
+          & ~ form ul
+            display block
 
 
 
@@ -125,13 +131,13 @@
 
     > label
       +below(mobile-max)
-        button($button-background, $button-hover-background, $button-text-color, $button-text-color, $button-font-size, $button-line-height, ($button-padding * 0.8) $button-padding, uppercase, left)
+        button($button-background, $button-hover-background, $button-text-color, $button-text-color, $button-font-size, $button-line-height, ($button-padding * 0.8), uppercase, left)
         display block
         margin-right 0
         position relative
         
         &[for=news-events--nav--filter-row--date]
-          button($white, $dark-gray, $button-background, $white, $button-font-size, $button-line-height, ($button-padding * 0.8) $button-padding, uppercase, left)
+          button($white, $dark-gray, $button-background, $white, $button-font-size, $button-line-height, ($button-padding * 0.8), uppercase, left)
           display block
           margin-right 0
       
@@ -161,13 +167,16 @@
       +above(m)
         display: flex
         flex-flow: row nowrap
+        margin 1rem 0 0
         &.news-events--nav--filters--type
           align-items: stretch
           li
             flex-grow: 1
         &.news-events--nav--filters--date
-          width 70%
+          width 100%
           align-items: stretch
+          +above(xl)
+            width 70%
           li
             flex-grow: 1
 
@@ -175,11 +184,11 @@
         display block
         +above(m)
           display inline-block
-          margin 0 rem(10px)
+          margin 0 rem(10px) 1rem
 
         a
         input[type=submit]
-          button($button-background, $button-hover-background, $button-text-color, $button-text-color, $button-font-size, $button-line-height, ($button-padding * 0.8) $button-padding, uppercase, center)
+          button($button-background, $button-hover-background, $button-text-color, $button-text-color, $button-font-size, $button-line-height, ($button-padding * 0.8), uppercase, center)
           display block
 
 
