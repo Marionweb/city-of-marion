@@ -1,14 +1,23 @@
 {#
     Boards Landing Template
 #}
+{% set parallax = (entry.primaryImage | length) ? '_parallax' : '' %}
 
-{% extends "layouts/columns/_one" %}
+{% extends 'layouts/columns/_one' ~ parallax %}
 
 {% set title = entry.title %}
+{% set type = 'landing' %}
+
+{# HEADER IMAGE #}
+{% block headerBlock %}
+  {% if entry.primaryImage | length %}{% include "modules/content/_header-block" %}{% endif %}
+{% endblock %}
 
 {# HTML #}
 {% block main %}
 
-<h1>{{ entry.title | typogrify }}</h1>
+    {% set subPages = craft.entries.section('boards').order('title').all() %}
+
+    {% include 'structure/pages/_types/_landing' with { subPages: subPages } %}
 
 {% endblock %}
