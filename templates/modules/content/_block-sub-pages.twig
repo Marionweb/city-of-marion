@@ -2,7 +2,7 @@
   {% set subPages = craft.entries({
     'section' : 'pages',
     'descendantOf' : entry.id
-  }) %}
+  }).all() %}
 {% endif %}
 
 {% if subPages | length %}
