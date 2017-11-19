@@ -13,17 +13,18 @@
 
 {# HEADER IMAGE #}
 {% block headerBlock %}
-  {% if entry.primaryImage | length %}{% include "modules/content/_header-block" %}{% endif %}
+  {% if entry.primaryImage | length %}{% include 'modules/content/_header-block' %}{% endif %}
 {% endblock %}
 
 
 {# HTML #}
 {% block main %}
-  {% include "structure/pages/_types/_" ~ entry.type %}
+  {% include 'structure/pages/_types/_' ~ entry.type %}
 {% endblock %}
 
 
 {# ASIDE #}
 {% block aside %}
-  {% include "modules/content/_block-quick-links" %}
+  {% include 'modules/content/_block-sub-pages' %}
+  {% include 'modules/content/_block-quick-links' %}
 {% endblock %}

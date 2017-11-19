@@ -1,5 +1,5 @@
 {#
-    Boards Channel Entry Template
+    Departments Sub-page Template
 #}
 {% set parallax = (entry.primaryImage | length) ? '_parallax' : '' %}
 
@@ -22,12 +22,16 @@
     <p class="lead">{{ entry.leadIn | typogrify }}</p>
     </header>
 
-    {% include 'modules/content/_page-content' %}
-    {% include 'modules/content/_page-content-attachments' %}
+    {% include "modules/content/_page-content" %}
+    {% include "modules/content/_page-content-attachments" %}
 
 {% endblock %}
 
 {# ASIDE #}
 {% block aside %}
-  {% include 'modules/content/_block-quick-links' %}
+  {% set parentSlug = craft.app.request.getSegment(3) %}
+  {% set parent = craft.entries.slug(parentSlug).one() %}
+  {% set subPages = craft.entries.section('departmentsContent').relatedTo(parent).orderBy('title').all() %}
+  {% include 'modules/content/_block-sub-pages' with { subPages: subPages } %}
+  {% include "modules/content/_block-quick-links" %}
 {% endblock %}

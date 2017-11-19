@@ -16,7 +16,7 @@
 {# HTML #}
 {% block main %}
 
-    {% set subPages = craft.entries.section('boards').order('title').all() %}
+    {% set subPages = craft.entries.section('boards').orderBy('title').all() %}
 
     {% include 'structure/pages/_types/_landing' with { subPages: subPages } %}
 

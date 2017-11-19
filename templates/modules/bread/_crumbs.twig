@@ -103,6 +103,23 @@
     {{ bread.breadcrumbs(allCrumbs) }}
   {% endif %}
 
+
+  {% if (entry.section.handle == 'departmentsContent') %}
+    {% set firstSegment = craft.app.request.segments|first %}
+    {% set topLevel = craft.entries.slug(firstSegment).all() %}
+    {% set landing = craft.entries.section('departmentsLanding').all()|first %}
+    {% set parentSlug = craft.app.request.getSegment(3) %}
+    {% set parent = craft.entries.slug(parentSlug).one() %}
+    {% set current = entry %}
+
+    {% set allCrumbs = topLevel %}
+    {% set allCrumbs = allCrumbs|merge([landing]) %}
+    {% set allCrumbs = allCrumbs|merge([parent]) %}
+    {% set allCrumbs = allCrumbs|merge([current]) %}
+
+    {{ bread.breadcrumbs(allCrumbs) }}
+  {% endif %}
+
   {#- ---------------------- BOARDS ---------------------- -#}
 
   {% if (entry.section.handle == 'boards') %}

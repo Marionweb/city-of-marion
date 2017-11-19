@@ -1,0 +1,17 @@
+{% if subPages is not defined %}
+  {% set subPages = craft.entries({
+    'section' : 'pages',
+    'descendantOf' : entry.id
+  }) %}
+{% endif %}
+
+{% if subPages | length %}
+<div id="block--subpages">
+  <h3>Pages</h3>
+  <ul>
+    {% nav entry in subPages %}
+      <li class="quick-links--item"><a href="{{entry.url}}" title="{{ entry.title }}">{{ entry.title }}</a></li>
+    {% endnav %}
+  </ul>
+</div>
+{% endif %}

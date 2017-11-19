@@ -11,7 +11,7 @@
 
 {# HEADER IMAGE #}
 {% block headerBlock %}
-  {% if entry.primaryImage | length %}{% include "modules/content/_header-block" %}{% endif %}
+  {% if entry.primaryImage | length %}{% include 'modules/content/_header-block' %}{% endif %}
 {% endblock %}
 
 {# HTML #}
@@ -22,13 +22,13 @@
     <p class="lead">{{ entry.leadIn | typogrify }}</p>
     </header>
 
-    {% include "modules/content/_page-content" %}
-    {% include "modules/content/_page-content-attachments" %}
+    {% include 'modules/content/_page-content' %}
+    {% include 'modules/content/_page-content-attachments' %}
 
 {% endblock %}
 
-
 {# ASIDE #}
 {% block aside %}
-  {% include "modules/content/_block-quick-links" %}
+  {% include 'modules/content/_block-sub-pages' with { subPages: craft.entries.section('departmentsContent').relatedTo(entry).all() } %}
+  {% include 'modules/content/_block-quick-links' %}
 {% endblock %}
