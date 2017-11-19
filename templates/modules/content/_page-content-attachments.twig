@@ -23,7 +23,7 @@
         {% endif %}
         <div class="title">
           {% set title = file.title %}
-          {% set fileName = file.filename | replace({('.' ~ file.filename | split('.')[file.filename | split('.')|length - 1]): ""}) %}
+          {% set fileName = file.filename | split('.')|slice(0,-1)|join %}
           {% if title and (title|lower != fileName|lower) %}<p class="filetitle">{{ file.title }}</p>{% endif %}
           <p class="filename">{{ file.filename }} <span>({{ file.size|filesize }})</span></p>
         </div>
