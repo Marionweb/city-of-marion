@@ -3,7 +3,7 @@
   position relative
   height 0
   padding-bottom percentage(15/16)
-  +above(m)
+  +above(l)
     padding-bottom percentage(5/12)
 
   figure
@@ -22,7 +22,7 @@
     display none
     visibility hidden
     padding-bottom percentage(5/12)
-  +above(tablet-min)
+  +above(desktop-min)
     figure.mobile
       display none
       visibility none
@@ -39,18 +39,17 @@
     z-index 5
     align-items center
 
-    +below(mobile-max)
+    +below(tablet-max)
       lost-flex-container: column
       justify-content center
       left rem(15px)
       right rem(15px)
 
-    +above(tablet-min)
+    +above(desktop-min)
       lost-flex-container: row
 
   #block--featured-video--title
-
-    +between(tablet-min, tablet-max)
+    +between(desktop-min, desktop-max)
       lost-column 18/36
       lost-offset: 2/36
     +above(xl)
@@ -65,7 +64,7 @@
       margin 0 0 rem(44px) 0
       text-align center
       text-transform $module-video-feature-headline-transform
-      +above(m)
+      +above(l)
         font-size $module-video-feature-headline-size-desktop
         margin 0
         text-align left
@@ -78,7 +77,7 @@
       margin rem(22px) 0 0
       display none
       visibility none
-      +above(m)
+      +above(l)
         display block
         visibility visible
         font-size $module-video-feature-subheadline-size-desktop
@@ -96,7 +95,7 @@
     text-transform $module-video-feature-video-transform
     transition: $link-transition
     z-index 5
-    +above(m)
+    +above(l)
       lost-offset 4/36
 
     &::before

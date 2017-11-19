@@ -1,5 +1,7 @@
-$landingImageRatio = (5/12)
-$standardImageRatio = (25/72)
+$landingImageRatio = (4/5)
+$landingImageRatioDesktop = (5/12)
+$standardImageRatio = (4/5)
+$standardImageRatioDesktop = (25/72)
 $newsImageRatio = percentage(1/3)
 
 .parallax__layer--base #page--inner--columns
@@ -50,4 +52,12 @@ $newsImageRatio = percentage(1/3)
       min-height: 'calc(((100vmin * (32/36)) / 3) + %s)' % topMarginNews
       top: 'calc(((100vmax * (32/36)) / 3) + %s)' % topMarginNews
 
++above(l)
+  .page-section--homepage
+  .page-type--landing
+    .parallax .parallax__layer--base
+      top: 'calc(100vw * %s)' % $landingImageRatioDesktop
 
+  .page-type--standard
+    .parallax .parallax__layer--base
+      top: 'calc(100vw * %s)' % $standardImageRatioDesktop

@@ -73,7 +73,7 @@
             {# Loop through all variations inside a variant #}
             data-srcset="
               {%- for variationImage in sizes -%}
-                {{ variationImage.url }} {{ variationImage.width }}w{# {% if not loop.first %} {{ loop.index }}x{% endif %} #}{% if not loop.last %}, {% endif %}
+                {{ variationImage.url }}{#  {{ variationImage.width }}w #}{% if not loop.first %} {{ loop.index }}x{% endif %}{% if not loop.last %}, {% endif %}
               {%- endfor -%}"       
             media="(min-width: {{ width|replace({'width_': ''}) }}px)"
             srcset="data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAD8D+JaQAA3AA/uVqAAA="
@@ -87,7 +87,7 @@
             {# Loop through all variations inside a variant #}
             data-srcset="
               {%- for variationImage in sizes -%}
-                {{ variationImage.url }} {{ variationImage.width }}w{# {% if not loop.first %} {{ loop.index }}x{% endif %} #}{% if not loop.last %}, {% endif %}
+                {{ variationImage.url }}{#  {{ variationImage.width }}w #}{% if not loop.first %} {{ loop.index }}x{% endif %}{% if not loop.last %}, {% endif %}
               {%- endfor -%}"       
             media="(min-width: {{ width|replace({'width_': ''}) }}px)"
             srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
@@ -102,7 +102,7 @@
           {# Loop through all variations inside a variant #}
           data-srcset="
             {%- for variationImage in lastImage -%}
-              {{ variationImage.url }} {{ variationImage.width }}w{# {% if not loop.first %} {{ loop.index }}x{% endif %} #}{% if not loop.last %}, {% endif %}
+              {{ variationImage.url }}{#  {{ variationImage.width }}w #}{% if not loop.first %} {{ loop.index }}x{% endif %}{% if not loop.last %}, {% endif %}
             {%- endfor -%}"
           {% if alt %}alt="{{ alt }}" {% endif %}/>
   </picture>
