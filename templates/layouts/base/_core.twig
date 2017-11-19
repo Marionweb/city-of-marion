@@ -38,7 +38,7 @@
   {# {% endcache %} #}
 
   {# content push wrapper #}
-  <div id="page" class="{% if entry is defined %}page-section--{{ entry.section.handle }}{% endif %}{% if type is defined %} page-type--{{ type }}{% endif %}{% if entry.primaryImage | length %} has--header-image{{ type }}{% endif %}">
+  <div id="page" class="{% if entry is defined %}page-section--{{ entry.section.handle }}{% endif %}{% if type is defined %} page-type--{{ type }}{% endif %}{% if entry.primaryImage | length %} has--header-image{% endif %}">
 
     {# <div id="page"> #}{# this is the wrapper for the content #}
       {# <div id="page--inner" class="page-section--{{ craft.app.request.segments | first }}{% if type is defined %} page-type--{{ type }}{% endif %}"> #}{# extra div for emulating position:fixed of the menu #}
