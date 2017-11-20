@@ -1,5 +1,5 @@
   <nav id="menu--top">
-    {% set logo = logo.logo.one() %}<style>.menu--top-logo { background-image: url({{logo.url}}); }</style>
+    {% set logo = logo.logo.one() %}{% css %}.menu--top-logo { background-image: url({{logo.url}}); }{% endcss %}
     <ul id="menu--top-mobile">
       {% include 'modules/header/_logo' %}
       {% include 'modules/header/_toggle-icon' %}

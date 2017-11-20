@@ -1,4 +1,4 @@
-{% set logo = footer.logo.one() %}<style>.footer--logo { background-image: url({{logo.url}}); }</style>
+{% set logo = footer.logo.one() %}{% css %}.footer--logo { background-image: url({{logo.url}}); }{% endcss %}
 <div id="footer--logo-container">
   <a href="{{siteUrl}}" data-analytics-title="{{ siteName }} homepage" title="{{ siteName }} homepage">
     <span class="footer--logo"><strong>{{ siteName }}</strong></span>

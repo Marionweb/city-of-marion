@@ -70,7 +70,7 @@
 
 </div>
 
-{% set formJs %}
+{% js %}
 {% minify js %}
 $('#department--{{ department.slug }}--form').submit(function(ev) {
   // Prevent the form from actually submitting
@@ -102,6 +102,4 @@ $('#department--{{ department.slug }}--form').submit(function(ev) {
   });
 });
 {% endminify %}
-{% endset %}
-
-{% js formJs %}
+{% endjs %}
