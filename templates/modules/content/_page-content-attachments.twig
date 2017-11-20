@@ -24,8 +24,9 @@
         <div class="title">
           {% set title = file.title %}
           {% set fileName = file.filename | split('.')|slice(0,-1)|join %}
+          {# https://github.com/craftcms/cms/commit/06d6560d3f0d72bcacdc63b230d2ecc7fb34c87d #}
           {% if title and (title|lower != fileName|lower) %}<p class="filetitle">{{ file.title }}</p>{% endif %}
-          <p class="filename">{{ file.filename }} <span>({{ file.size|filesize }})</span></p>
+          <p class="filename">{{ file.filename }} <span>({{ craft.typogrify.humanFileSize(file.size, 2) }})</span></p>
         </div>
       </a>
     </li>
