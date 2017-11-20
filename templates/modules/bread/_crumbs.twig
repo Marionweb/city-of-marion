@@ -153,7 +153,7 @@
   {% if (entry.section.handle == 'jobs') %}
     {% set firstSegment = craft.app.request.segments|first %}
     {% set topLevel = craft.entries.slug(firstSegment).all() %}
-    {% set landing = craft.entries.section('jobsLanding').all() %}
+    {% set landing = craft.entries.section('jobsLanding').all()|first %}
     {% set current = entry %}
 
     {% set allCrumbs = topLevel %}

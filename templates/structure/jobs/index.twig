@@ -3,11 +3,24 @@
 #}
 
 {% extends "layouts/type/_list" %}
+{% set jobs = craft.entries.section('jobs').all() %}
+
+
+
+{% block aboveListContent %}
+<section id="job-instructions">
+    <h3>Instructions &amp; Requirements</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis turpis urna, tempor ut ornare id, condimentum et felis. Curabitur pretium magna ac dolor congue tincidunt. Donec pretium, est id tempor dignissim, ante tortor ultrices ante, id dictum tellus odio eget lacus. Pellent
+esque sed porttitor purus. Proin quis arcu et elit ornare faucibus eget vel quam. Phasellus leo ante, ultricies sit amet porttitor sit amet, sodales ac leo. Vestibulum consectetur molestie diam a pretium.</p>
+</section>
+{% endblock %}
 
 {% block listContent %}
 <section class="list--content">
-<ul>
-
-</ul>
+    <ul>
+    {% for job in jobs %}
+        <li><span>{{ job.title }}</span> <a href="{{ job.url }}" title="View {{ job.title }} Details">View</a></li>
+    {% endfor %}﻿
+    </ul>
 </section>
 {% endblock %}

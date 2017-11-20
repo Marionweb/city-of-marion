@@ -2,13 +2,20 @@
     Jobs Channel Entry Template
 #}
 
-{% extends "layouts/columns/_one" %}
+{% extends 'layouts/columns/_two' %}
 
 {% set title = entry.title %}
+{% set type = 'standard' %}
 
 {# HTML #}
 {% block main %}
 
-<h1>{{ entry.title | typogrify }}</h1>
+    <header>
+        <h1>{{ entry.title | typogrify }}</h1>
+    </header>
+
+    {{ entry.copy }}
+    
+    {% include 'modules/content/_page-content-attachments' %}
 
 {% endblock %}
