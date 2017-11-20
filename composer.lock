@@ -116,16 +116,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.38.2",
+            "version": "3.38.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "7b13de0b39f29833a977176ce58eed990e1487ba"
+                "reference": "13ffa481127c08e04244f116ae85a64b4172479c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/7b13de0b39f29833a977176ce58eed990e1487ba",
-                "reference": "7b13de0b39f29833a977176ce58eed990e1487ba",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/13ffa481127c08e04244f116ae85a64b4172479c",
+                "reference": "13ffa481127c08e04244f116ae85a64b4172479c",
                 "shasum": ""
             },
             "require": {
@@ -192,7 +192,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2017-11-14T23:47:41+00:00"
+            "time": "2017-11-17T22:08:25+00:00"
         },
         {
             "name": "bower-asset/bootstrap",
@@ -2222,16 +2222,16 @@
         },
         {
             "name": "giggsey/libphonenumber-for-php",
-            "version": "8.8.5",
+            "version": "8.8.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/giggsey/libphonenumber-for-php.git",
-                "reference": "a0405e2b3de6497174db4a3fcfa9bfd67f4ef282"
+                "reference": "95f5cc6d1f074db32abed92a13a0b7d013d03e47"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/a0405e2b3de6497174db4a3fcfa9bfd67f4ef282",
-                "reference": "a0405e2b3de6497174db4a3fcfa9bfd67f4ef282",
+                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/95f5cc6d1f074db32abed92a13a0b7d013d03e47",
+                "reference": "95f5cc6d1f074db32abed92a13a0b7d013d03e47",
                 "shasum": ""
             },
             "require": {
@@ -2286,7 +2286,7 @@
                 "phonenumber",
                 "validation"
             ],
-            "time": "2017-10-30T15:09:43+00:00"
+            "time": "2017-11-15T10:32:37+00:00"
         },
         {
             "name": "giggsey/locale",
@@ -3395,16 +3395,16 @@
         },
         {
             "name": "mblode/svgplaceholder",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mblode/svgplaceholder.git",
-                "reference": "6cebc8282411d1bb0798b4289509240e5b05ec74"
+                "reference": "b2f84933edddb778291308ef2bb41e7b45f795eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mblode/svgplaceholder/zipball/6cebc8282411d1bb0798b4289509240e5b05ec74",
-                "reference": "6cebc8282411d1bb0798b4289509240e5b05ec74",
+                "url": "https://api.github.com/repos/mblode/svgplaceholder/zipball/b2f84933edddb778291308ef2bb41e7b45f795eb",
+                "reference": "b2f84933edddb778291308ef2bb41e7b45f795eb",
                 "shasum": ""
             },
             "require": {
@@ -3412,7 +3412,7 @@
             },
             "type": "craft-plugin",
             "extra": {
-                "name": "svgplaceholder",
+                "name": "SVG Placeholder",
                 "handle": "svgplaceholder",
                 "schemaVersion": "1.0.0",
                 "hasCpSettings": false,
@@ -3435,15 +3435,15 @@
                     "homepage": "https://matthewblode.com"
                 }
             ],
-            "description": "SVG Placeholder",
+            "description": "A plugin which generates an invisible SVG of specific dimensions for use when lazyloading images in Craft CMS templates.",
             "keywords": [
                 "Craft",
                 "cms",
-                "craft-plugin",
-                "craftcms",
-                "svgplaceholder"
+                "craft cms",
+                "craft plugin",
+                "svg placeholder"
             ],
-            "time": "2017-09-08T06:21:38+00:00"
+            "time": "2017-11-18T02:52:34+00:00"
         },
         {
             "name": "mexitek/phpcolors",
@@ -5401,12 +5401,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "5de810cf96008ab760a0590fb49078e12ab80cf9"
+                "reference": "bf2267389f86ae9a168fd0166be59d36ffc07827"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/5de810cf96008ab760a0590fb49078e12ab80cf9",
-                "reference": "5de810cf96008ab760a0590fb49078e12ab80cf9",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/bf2267389f86ae9a168fd0166be59d36ffc07827",
+                "reference": "bf2267389f86ae9a168fd0166be59d36ffc07827",
                 "shasum": ""
             },
             "conflict": {
@@ -5420,8 +5420,9 @@
                 "codeigniter/framework": "<=3.0.6",
                 "composer/composer": "<=1.0.0-alpha11",
                 "contao-components/mediaelement": ">=2.14.2,<2.21.1",
-                "contao/core": ">=2,<3.5.28",
-                "contao/core-bundle": ">=4,<4.4.1",
+                "contao/core": ">=2,<3.5.31",
+                "contao/core-bundle": ">=4,<4.4.8",
+                "contao/listing-bundle": ">=4,<4.4.8",
                 "doctrine/annotations": ">=1,<1.2.7",
                 "doctrine/cache": ">=1,<1.3.2|>=1.4,<1.4.2",
                 "doctrine/common": ">=2,<2.4.3|>=2.5,<2.5.1",
@@ -5459,7 +5460,7 @@
                 "pusher/pusher-php-server": "<2.2.1",
                 "sabre/dav": ">=1.6,<1.6.99|>=1.7,<1.7.11|>=1.8,<1.8.9",
                 "shopware/shopware": "<5.2.25",
-                "silverstripe/cms": ">=3.1,<3.1.11|>=3,<=3.0.11",
+                "silverstripe/cms": ">=3,<=3.0.11|>=3.1,<3.1.11",
                 "silverstripe/forum": "<=0.6.1|>=0.7,<=0.7.3",
                 "silverstripe/framework": ">=3,<3.3",
                 "silverstripe/userforms": "<3",
@@ -5470,26 +5471,28 @@
                 "squizlabs/php_codesniffer": ">=1,<2.8.1",
                 "swiftmailer/swiftmailer": ">=4,<5.4.5",
                 "symfony/dependency-injection": ">=2,<2.0.17",
-                "symfony/form": ">=2.3,<2.3.35|>=2.4,<2.6.12|>=2.7,<2.7.7",
+                "symfony/form": ">=2.7,<2.7.38|>=2.8,<2.8.31|>=3,<3.2.14|>=3.3,<3.3.13|>=2.3,<2.3.35|>=2.4,<2.6.12",
                 "symfony/framework-bundle": ">=2,<2.3.18|>=2.4,<2.4.8|>=2.5,<2.5.2",
                 "symfony/http-foundation": ">=2,<2.3.27|>=2.4,<2.5.11|>=2.6,<2.6.6",
                 "symfony/http-kernel": ">=2,<2.3.29|>=2.4,<2.5.12|>=2.6,<2.6.8",
+                "symfony/intl": ">=2.7,<2.7.38|>=2.8,<2.8.31|>=3,<3.2.14|>=3.3,<3.3.13",
                 "symfony/routing": ">=2,<2.0.19",
-                "symfony/security": ">=2.7.30,<2.7.32|>=2.8.23,<2.8.25|>=3.2.10,<3.2.12|>=3.3.3,<3.3.5|>=2,<2.0.25|>=2.3,<2.3.37|>=2.4,<2.6.13|>=2.7,<2.7.9|>=2.1,<2.1.13|>=2.2,<2.2.9",
-                "symfony/security-core": ">=2.8,<2.8.6|>=3,<3.0.6|>=2.7.30,<2.7.32|>=2.8.23,<2.8.25|>=3.2.10,<3.2.12|>=3.3.3,<3.3.5|>=2.4,<2.6.13|>=2.7,<2.7.9",
-                "symfony/security-http": ">=2.3,<2.3.41|>=2.4,<2.7.13|>=2.8,<2.8.6|>=3,<3.0.6",
+                "symfony/security": ">=2.7.30,<2.7.32|>=2.8.23,<2.8.25|>=3.2.10,<3.2.12|>=3.3.3,<3.3.5|>=2.3,<2.3.37|>=2.4,<2.6.13|>=2.7,<2.7.9|>=2,<2.0.25|>=2.1,<2.1.13|>=2.2,<2.2.9",
+                "symfony/security-core": ">=2.7.30,<2.7.32|>=2.8.23,<2.8.25|>=3.2.10,<3.2.12|>=3.3.3,<3.3.5|>=2.4,<2.6.13|>=2.7,<2.7.9|>=2.8,<2.8.6|>=3,<3.0.6",
+                "symfony/security-csrf": ">=2.7,<2.7.38|>=2.8,<2.8.31|>=3,<3.2.14|>=3.3,<3.3.13",
+                "symfony/security-http": ">=2.4,<2.7.38|>=2.8,<2.8.31|>=3,<3.2.14|>=3.3,<3.3.13|>=2.3,<2.3.41",
                 "symfony/serializer": ">=2,<2.0.11",
-                "symfony/symfony": ">=2,<2.3.41|>=2.4,<2.7.13|>=2.8,<2.8.6|>=3,<3.0.6|>=2.7.30,<2.7.32|>=2.8.23,<2.8.25|>=3.2.10,<3.2.12|>=3.3.3,<3.3.5",
+                "symfony/symfony": ">=2,<2.3.41|>=2.4,<2.7.38|>=2.8,<2.8.31|>=3,<3.2.14|>=3.3,<3.3.13",
                 "symfony/translation": ">=2,<2.0.17",
                 "symfony/validator": ">=2,<2.0.24|>=2.1,<2.1.12|>=2.2,<2.2.5|>=2.3,<2.3.3",
                 "symfony/web-profiler-bundle": ">=2,<2.3.19|>=2.4,<2.4.9|>=2.5,<2.5.4",
                 "symfony/yaml": ">=2,<2.0.22|>=2.1,<2.1.7",
                 "thelia/backoffice-default-template": ">=2.1,<2.1.2",
-                "thelia/thelia": ">=2.1.0-beta1,<2.1.3|>=2.1,<2.1.2",
+                "thelia/thelia": ">=2.1,<2.1.2|>=2.1.0-beta1,<2.1.3",
                 "twig/twig": "<1.20",
-                "typo3/cms": ">=8,<8.7.5|>=7,<7.6.22|>=6.2,<6.2.30",
-                "typo3/flow": ">=1,<1.0.4|>=1.1,<1.1.1|>=2,<2.0.1|>=2.3,<2.3.16|>=3,<3.0.10|>=3.1,<3.1.7|>=3.2,<3.2.7|>=3.3,<3.3.5",
-                "typo3/neos": ">=1.1,<1.1.3|>=1.2,<1.2.13|>=2,<2.0.4",
+                "typo3/cms": ">=6.2,<6.2.30|>=7,<7.6.22|>=8,<8.7.5",
+                "typo3/flow": ">=1,<1.0.4|>=2.3,<2.3.16|>=3,<3.0.10|>=3.1,<3.1.7|>=3.2,<3.2.7|>=3.3,<3.3.5|>=1.1,<1.1.1|>=2,<2.0.1",
+                "typo3/neos": ">=1.2,<1.2.13|>=2,<2.0.4|>=1.1,<1.1.3",
                 "willdurand/js-translation-bundle": "<2.1.1",
                 "yiisoft/yii": ">=1.1.14,<1.1.15",
                 "yiisoft/yii2": "<2.0.5",
@@ -5516,6 +5519,7 @@
                 "zendframework/zendframework1": "<1.12.20",
                 "zendframework/zendopenid": ">=2,<2.0.2",
                 "zendframework/zendxml": ">=1,<1.0.1",
+                "zetacomponents/mail": "<1.8.2",
                 "zf-commons/zfc-user": "<1.2.2",
                 "zfcampus/zf-apigility-doctrine": ">=1,<1.0.3",
                 "zfr/zfr-oauth2-server-module": "<0.1.2"
@@ -5533,7 +5537,7 @@
                 }
             ],
             "description": "Prevents installation of composer packages with known security vulnerabilities: no API, simply require it",
-            "time": "2017-11-11T03:27:01+00:00"
+            "time": "2017-11-17T12:15:33+00:00"
         },
         {
             "name": "seld/cli-prompt",
