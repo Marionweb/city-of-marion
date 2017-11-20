@@ -17,6 +17,107 @@
 {# MAIN COLUMN CONTENT #}
 {% block content %}
 
-<h1>{{ entry.title | typogrify }}</h1>
+{% if entry.aboutBlock | length %}
+  {% set aboutBlock = entry.aboutBlock.one() %}
+<section id="about--about" class="about--section-two-col">
+
+  <div id="about--about--content" class="about--section-text">
+
+    {% if logo.logoIcon | length %}
+    <figure id="about--logo-icon">
+      {% set logoUrl = 'https:' ~ logo.logoIcon.one().getUrl() %}
+      {{ craft.inlin.er(logoUrl, true) | raw }}
+    </figure>
+    {% endif %}
+
+    <h2>{{ aboutBlock.headline | typogrify }}</h2>
+    <p>{{ aboutBlock.text | typogrify }}</p>
+  </div>
+
+  {% if aboutBlock.image | length %}
+    {% set image = aboutBlock.image.one() %}
+    {%- set transformOptions = { width: 1600, height: 1280, quality: 82 } -%}
+    <style>#about--about .about--section-image { background-image: url({{ image.getUrl(transformOptions) }}) }</style>
+    <div class="about--section-image"></div>
+  {% endif %}
+
+</section>
+{% endif %}
+
+
+{% if entry.missionText %}
+  <section id="about--mission">
+    <h2>Our Mission</h2>
+    <p>{{ entry.missionText | typogrify }}</p>
+  </section>
+{% endif %}
+
+
+{% if entry.mayorWelcomeBlock | length %}
+  {% set mayorWelcomeBlock = entry.mayorWelcomeBlock.one() %}
+  {% set mayor = mayorWelcomeBlock.mayor.one() %}
+  {% set memberName = mayor.personName|trim|replace({'  ': ' '}) %}
+<section id="about--mayor-welcome" class="about--section-two-col">
+  
+  {% set image = mayor.staffPhoto.one() %}
+  {% if mayorWelcomeBlock.imageOverride | length %}
+    {% set image = mayorWelcomeBlock.imageOverride.one() %}
+  {% endif %}
+  {% set image = mayor.staffPhoto.one() %}
+  {%- set transformOptions = { width: 1600, height: 1280, quality: 82 } -%}
+  <style>#about--mayor-welcome .about--section-image { background-image: url({{ image.getUrl(transformOptions) }}) }</style>
+  <div class="about--section-image"></div>
+
+  <div id="about--mayor-welcome--content" class="about--section-text">
+    <h4>From The Mayor</h4>
+    <h2>{{ mayorWelcomeBlock.headline | typogrify }}</h2>
+    {% if mayorWelcomeBlock.subHeadline %}<h3>{{ mayorWelcomeBlock.subHeadline | typogrify }}</h3>{% endif %}
+    <p>{{ mayorWelcomeBlock.text | typogrify }}</p>
+    <cite>{{ memberName | typogrify }} | {% if mayor.positionTitle %}<i>{{ mayor.positionTitle | typogrify }}</i>{% endif %}</cite>
+  </div>
+
+</section>
+{% endif %}
+
+
+{% if entry.historyBlock | length %}
+  {% set historyBlock = entry.historyBlock.one() %}
+<section id="about--history">
+    {% if historyBlock.backgroundImage | length %}
+      {% set image = historyBlock.backgroundImage.one() %}
+      {%- set transformOptions = { width: 1600, quality: 82 } -%}
+      <style>#about--history--image { background-image: url({{ image.getUrl(transformOptions) }}) }</style>
+      <div id="about--history--image"></div>
+    {% endif %}
+
+  <div id="about--history--content">
+    <div id="about--history--content-text">
+      <h2>{{ historyBlock.headline | typogrify }}</h2>
+      <p>{{ historyBlock.text | typogrify }}</p>
+      <p class="learn-more"><a href="history" title="Learn More">Learn More</a></p>
+    </div>
+  </div>
+
+</section>
+{% endif %}
+
+
+{% if entry.factsAndFigures | length %}
+<section id="about--facts-figures">
+  <h2>Facts and Figures</h2>
+  <div class="inside">
+    {% for fact in entry.factsAndFigures.all() %}
+    <div class="block--fact">
+      <p>{{ fact.text }}</p>
+      <cite>{{ fact.reference }}</cite>
+    </div>
+    {% endfor %}
+    
+  </div>
+</section>
+{% endif %}
+
+
 
 {% endblock %}
+
