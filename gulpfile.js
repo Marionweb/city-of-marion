@@ -171,10 +171,15 @@ function processCriticalCSS(element, i, callback) {
 
 //critical css task
 gulp.task('criticalcss', ['css'], (callback) => {
-    doSynchronousLoop(pkg.globs.critical, processCriticalCSS, () => {
-        // all done
+    if (process.env.NODE_ENV === "production") {
+        doSynchronousLoop(pkg.globs.critical, processCriticalCSS, () => {
+            // all done
+            callback();
+        });
+    } else {
         callback();
-    });
+    }
+    
 });
 
 
