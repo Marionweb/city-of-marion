@@ -1,5 +1,7 @@
 {% header "x-author: Mike Stecker (@mikestecker)" %}
 <!DOCTYPE html>
+<html lang="{{ craft.app.language |slice(0,2) }}" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
@@ -12,22 +14,25 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#033762">
 <meta name="theme-color" content="#ffffff">
 
-{# Base #}
-{% do view.registerCssFile('//fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i|Noto+Serif:400,400i,700,700i|Source+Sans+Pro:400,400i,600,600i,700,700i') %}
+{% set fonts = '//fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i|Noto+Serif:400,400i,700,700i|Source+Sans+Pro:400,400i,600,600i,700,700i' %}
 
+{# Base #}
 {% if craft.app.config.general.craftEnv == 'local' %}
-  {% do view.registerCssFile('/assets/css/master.css') %}
+  <link rel="preload" href="/assets/css/site.combined.min.css" as="style" onload="this.rel='stylesheet'">
+  <noscript>{% do view.registerCssFile('/assets/css/site.combined.min.css') %}</noscript>
+  {% do view.registerCssFile(fonts) %}
 {% else %}
-  {% do view.registerCssFile(craft.stamp.er('/assets/css/master.css')) %}
+  <link rel="preload" href="/assets/css/site.combined.min.css" as="style" onload="this.rel='stylesheet'">
+  <noscript>{% do view.registerCssFile(craft.stamp.er('/assets/css/site.combined.min.css')) %}</noscript>
+  {% do view.registerCssFile(fonts) %}
 {% endif %}
 
-{% do view.registerJsFile('//code.jquery.com/jquery-3.2.1.min.js') %}
 
 {% if craft.app.config.general.craftEnv == 'local' %}
-  {% do view.registerJsFile('/assets/js/scripts.js') %}
+  {% do view.registerJsFile('/assets/js/site.combined.min.js') %}
 {% else %}
   {% do view.registerJsFile('//speedfont.com/api?key=qCWgzVFVUilK') %}
-  {% do view.registerJsFile(craft.stamp.er('/assets/js/scripts.js')) %}
+  {% do view.registerJsFile(craft.stamp.er('/assets/js/site.combined.min.js')) %}
 {% endif %}
 
 {{ head() }}
@@ -38,7 +43,7 @@
   {# {% endcache %} #}
 
   {# content push wrapper #}
-  <div id="page" class="{% if entry is defined %}page-section--{{ entry.section.handle }}{% endif %}{% if type is defined %} page-type--{{ type }}{% endif %}{% if entry.primaryImage | length %} has--header-image{% endif %}">
+  <div id="page" class="{% if entry is defined %}page-section--{{ entry.section.handle }}{% endif %}{% if type is defined %} page-type--{{ type }}{% endif %}{% if (entry is defined) and (entry.primaryImage | length) %} has--header-image{% endif %}">
 
     {# <div id="page"> #}{# this is the wrapper for the content #}
       {# <div id="page--inner" class="page-section--{{ craft.app.request.segments | first }}{% if type is defined %} page-type--{{ type }}{% endif %}"> #}{# extra div for emulating position:fixed of the menu #}
@@ -56,3 +61,4 @@
 </div><!-- /#container -->
 
 {{ endBody() }}
+</html>

@@ -75,8 +75,8 @@ docReady(function() {
 
 ;( function ( document, window, index )
 {
-  var inputs = document.querySelectorAll("input[type='file']");
-  Array.prototype.forEach.call( inputs, function( input )
+  var fileInputs = document.querySelectorAll("input[type='file']");
+  Array.prototype.forEach.call( fileInputs, function( input )
   {
     var label  = input.nextElementSibling,
       labelVal = label.innerHTML,
@@ -150,23 +150,18 @@ docReady(function() {
 
 
 // MASK PHONE INPUT
-const inputs = Array.from(document.querySelectorAll('input'))
+var inputs = Array.from(document.querySelectorAll('input'));
 inputs.forEach(function (input) {
   if(input.getAttribute('type')=='tel'){
     input.addEventListener('input', function (e) {
         var x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
         e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
-    }, false)
+    }, false);
   };
 });
 
-// document.getElementById('phone').addEventListener('input', function (e) {
-//   var x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
-//   e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
-// });
-
 // INITIALIZE CHOICES.JS FOR FORM SELECTS
-const selects = Array.from(document.querySelectorAll('select'))
+var selects = Array.from(document.querySelectorAll('select'));
 selects.forEach(function (select) {
   if(select.hasAttribute('data-choices')){
     var genericSelects = new Choices('[data-choices]', {
@@ -176,6 +171,9 @@ selects.forEach(function (select) {
     });
   };
 });
+
+
+
 
 //Google Maps JS
 //Set Map

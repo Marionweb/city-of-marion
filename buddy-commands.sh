@@ -28,7 +28,7 @@ echo "Wait for it..."
 sleep 3.5s
 
 echo "Building JS and CSS"
-cd releases/${execution.to_revision.revision} && gulp build:staging
+cd releases/${execution.to_revision.revision} && gulp build
 
 echo "Adding symlinks to runtime folders"
 ln -s /srv/users/serverpilot/apps/cityofmarion-staging/storage/backups releases/${execution.to_revision.revision}/storage/backups

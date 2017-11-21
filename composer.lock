@@ -116,16 +116,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.38.5",
+            "version": "3.39.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "13ffa481127c08e04244f116ae85a64b4172479c"
+                "reference": "fd829dedc766a23e00cb155fb3c417f3cc025ef9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/13ffa481127c08e04244f116ae85a64b4172479c",
-                "reference": "13ffa481127c08e04244f116ae85a64b4172479c",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/fd829dedc766a23e00cb155fb3c417f3cc025ef9",
+                "reference": "fd829dedc766a23e00cb155fb3c417f3cc025ef9",
                 "shasum": ""
             },
             "require": {
@@ -192,7 +192,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2017-11-17T22:08:25+00:00"
+            "time": "2017-11-20T23:33:24+00:00"
         },
         {
             "name": "bower-asset/bootstrap",
@@ -915,21 +915,21 @@
         },
         {
             "name": "craftcms/aws-s3",
-            "version": "1.0.6",
+            "version": "1.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/aws-s3.git",
-                "reference": "27b9e64191b1128b3dd9606224842685f4bd04d3"
+                "reference": "7cb9cfc53a5873103cbe8053b99aaf933cbaaf79"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/aws-s3/zipball/27b9e64191b1128b3dd9606224842685f4bd04d3",
-                "reference": "27b9e64191b1128b3dd9606224842685f4bd04d3",
+                "url": "https://api.github.com/repos/craftcms/aws-s3/zipball/7cb9cfc53a5873103cbe8053b99aaf933cbaaf79",
+                "reference": "7cb9cfc53a5873103cbe8053b99aaf933cbaaf79",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "~3.0.0-beta.24",
-                "league/flysystem-aws-s3-v3": "1.0.13"
+                "craftcms/cms": "^3.0.0-beta.24",
+                "league/flysystem-aws-s3-v3": "^1.0.13"
             },
             "type": "craft-plugin",
             "extra": {
@@ -962,7 +962,7 @@
                 "s3",
                 "yii2"
             ],
-            "time": "2017-08-15T20:01:46+00:00"
+            "time": "2017-11-21T05:26:40+00:00"
         },
         {
             "name": "craftcms/cms",
@@ -2940,21 +2940,21 @@
         },
         {
             "name": "league/flysystem-aws-s3-v3",
-            "version": "1.0.13",
+            "version": "1.0.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem-aws-s3-v3.git",
-                "reference": "dc56a8faf3aff0841f9eae04b6af94a50657896c"
+                "reference": "dc09b19f455750663b922ed52dcc0ff215bed284"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem-aws-s3-v3/zipball/dc56a8faf3aff0841f9eae04b6af94a50657896c",
-                "reference": "dc56a8faf3aff0841f9eae04b6af94a50657896c",
+                "url": "https://api.github.com/repos/thephpleague/flysystem-aws-s3-v3/zipball/dc09b19f455750663b922ed52dcc0ff215bed284",
+                "reference": "dc09b19f455750663b922ed52dcc0ff215bed284",
                 "shasum": ""
             },
             "require": {
                 "aws/aws-sdk-php": "^3.0.0",
-                "league/flysystem": "~1.0",
+                "league/flysystem": "^1.0.40",
                 "php": ">=5.5.0"
             },
             "require-dev": {
@@ -2983,7 +2983,7 @@
                 }
             ],
             "description": "Flysystem adapter for the AWS S3 SDK v3.x",
-            "time": "2016-06-21T21:34:35+00:00"
+            "time": "2017-06-30T06:29:25+00:00"
         },
         {
             "name": "league/fractal",
