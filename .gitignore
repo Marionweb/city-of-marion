@@ -38,6 +38,7 @@ web/templates/**/**/*.css
 
 
 # MISC FILES
+package-lock.json
 .cache
 .DS_Store
 .idea
