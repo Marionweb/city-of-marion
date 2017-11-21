@@ -28,10 +28,10 @@ const onError = (err) => {
 
 const banner = [
     "/**",
-    " * @project        <%= pkg.name %>",
+    " * @project        <%= pkg.name %> - <%= pkg.description %>",
     " * @author         <%= pkg.author %>",
     " * @build          " + $.moment().format("llll") + " ET",
-    " * @release        " + $.gitRevSync.long() + " [" + $.gitRevSync.branch() + "]",
+    // " * @release        " + $.gitRevSync.long() + " [" + $.gitRevSync.branch() + "]",
     " * @copyright      Copyright (c) " + $.moment().format("YYYY") + ", <%= pkg.copyright %>",
     " *",
     " */",
