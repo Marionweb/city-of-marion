@@ -22,7 +22,7 @@
   <noscript>{% do view.registerCssFile('/assets/css/site.combined.min.css') %}</noscript>
   {% do view.registerCssFile(fonts) %}
 {% else %}
-  <link rel="preload" href="/assets/css/site.combined.min.css" as="style" onload="this.rel='stylesheet'">
+  <link rel="preload" href="{{ craft.stamp.er('/assets/css/site.combined.min.css') }}" as="style" onload="this.rel='stylesheet'">
   <noscript>{% do view.registerCssFile(craft.stamp.er('/assets/css/site.combined.min.css')) %}</noscript>
   {% do view.registerCssFile(fonts) %}
 {% endif %}
