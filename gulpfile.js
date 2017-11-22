@@ -367,6 +367,7 @@ gulp.task('default', function() {
   gulp.watch(pkg.paths.src.styles + '**/*.styl', ['css']);
   gulp.watch(pkg.paths.src.js + '**/*.js', ['js']);
   gulp.watch(pkg.paths.src.img + '**/*', ['imagemin']);
+  gulp.watch(pkg.paths.src.sprites + '**/*.svg', ['svgSprites:copy']);
 });
 
 
