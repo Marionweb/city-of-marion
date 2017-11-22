@@ -21,7 +21,6 @@
       display inline-block
       height rem(16px)
       width rem(16px)
-      mask: embedurl("../sprites/arrow-angle.svg", "utf8") no-repeat 50% 50%/12px 12px
       margin-right: 0.35em
       transition: background-color $transition-timing
       vertical-align middle
@@ -36,6 +35,14 @@
     margin 1em 0
     &:last-child
       margin-bottom 0
+
+
+#block--subpages
+  > h3:before
+    mask: embedurl("../sprites/arrow-subpage.svg", "utf8") no-repeat 50% 50%/12px 12px
+#block--quick-links
+  > h3:before
+    mask: embedurl("../sprites/arrow-angle.svg", "utf8") no-repeat 50% 50%/12px 12px
 
 
 // STYLES FOR WHEN USED IN MAIN COLUMN
