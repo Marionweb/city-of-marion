@@ -3,20 +3,26 @@
 
   > h1
     position: absolute
-    left: 50%
-    top: 50%
-    transform: 'translate(%s, calc(%s - %s))' % (-50% -50% rem(((31.75+16.5)/2)px))
+    left 0
+    right 0
+    top 50%
+    transform 'translate(%s, calc(%s - %s))' % (0 -50% rem(((31.75+16.5)/2)px))
     margin 0
     z-index 5
 
-    color: $header-block-title-color
-    font-family: $header-block-title-font
-    font-size: $header-block-title-size-mobile
-    font-weight: $header-block-title-weight
-    text-transform: $header-block-title-transform
+    color $header-block-title-color
+    font-family $header-block-title-font
+    font-size $header-block-title-size-mobile
+    font-weight $header-block-title-weight
+    text-transform $header-block-title-transform
+    text-align center
+    width 100vw
+    padding-left rem(30px)
+    padding-right rem(30px)
+
     +above(m)
-      font-size: $header-block-title-size-desktop
-      transform: 'translate(%s, calc(%s - %s))' % (-50% -50% rem(((53.5+33)/2)px))
+      font-size $header-block-title-size-desktop
+      transform 'translate(%s, calc(%s - %s))' % (0 -50% rem(((53.5+33)/2)px))
 
   figure
     line-height 0
