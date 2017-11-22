@@ -1,3 +1,4 @@
+{% cache using key 'header-block_' ~ craft.app.request.pathInfo %}
 <div id="header-image" class="{{entry.section | lower}}">
   {%- import "macros/_images" as imageFunctions -%}
   {%- set image = entry.primaryImage.one() -%}
@@ -28,3 +29,4 @@
 
   <h1>{{ entry.title | typogrify }}</h1>
 </div>
+{% endcache %}

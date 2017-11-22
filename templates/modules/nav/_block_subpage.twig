@@ -1,3 +1,4 @@
+ {% cache globally using key 'block-subpage-' ~ entry.id ~ '-' ~ entry.slug %}
 <section id="{{ entry.id }}-{{ entry.slug }}" class="block--subpage">
   <a href="{{ entry.url }}" title="{{ entry.title }}">
   {% if entry.primaryImage | length %}
@@ -13,3 +14,4 @@
     <h3>{{ entry.title }}</h3>
   </a>
 </section>
+ {% endcache %}

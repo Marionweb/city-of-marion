@@ -16,7 +16,7 @@
 
 {# HTML #}
 {% block main %}
-
+{% cache using key 'departments_subpage_main_' ~ craft.app.request.pathInfo %}
     <header>
     <h1>{{ entry.title | typogrify }}</h1>
     <p class="lead">{{ entry.leadIn | typogrify }}</p>
@@ -24,14 +24,16 @@
 
     {% include "modules/content/_page-content" %}
     {% include "modules/content/_page-content-attachments" %}
-
+{% endcache %}
 {% endblock %}
 
 {# ASIDE #}
 {% block aside %}
+{% cache using key 'departments_subpage_aside_' ~ craft.app.request.pathInfo %}
   {% set parentSlug = craft.app.request.getSegment(3) %}
   {% set parent = craft.entries.slug(parentSlug).one() %}
   {% set subPages = craft.entries.section('departmentsContent').relatedTo(parent).orderBy('title').all() %}
   {% include 'modules/content/_block-sub-pages' with { subPages: subPages } %}
   {% include "modules/content/_block-quick-links" %}
+{% endcache %}
 {% endblock %}

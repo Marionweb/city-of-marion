@@ -6,6 +6,7 @@
 
 {# HTML #}
 {% block listContent %}
+  {% cache %}
 
 {% set entryIds = craft.entries.section('minutesAgendas').ids() %}
 {% set boards = craft.entries.relatedTo({ sourceElement: entryIds }).all() %}
@@ -17,4 +18,6 @@
   {% endfor %}﻿
 </ul>
 </section>
+
+  {% endcache %}
 {% endblock %}

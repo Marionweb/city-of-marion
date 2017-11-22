@@ -5,6 +5,7 @@
 {% extends "layouts/type/_list" %}
 
 {% block listContent %}
+  {% cache %}
 
 {% set slug = craft.app.request.getSegment(3) %}
 {% set landing = craft.entries.section('minutesAgendasLanding').one() %}
@@ -70,6 +71,7 @@
 </section>
 {% endif %}
 
+  {% endcache %}
 {% endblock %}
 
 

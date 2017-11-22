@@ -1,3 +1,4 @@
+{% cache using key 'staff-member-' ~ member.id %}
 {% set memberName = member.personName|trim|replace({'  ': ' '}) %}
 <li id="staff-member-{{ member.id }}">
   <a href="{{ member.url }}" title="View contact details for {{ memberName }}">
@@ -16,3 +17,4 @@
     {% if member.positionTitle %}<h4>{{ member.positionTitle | typogrify }}</h4>{% endif %}
   </a>
 </li>
+{% endcache %}

@@ -95,7 +95,7 @@
 
 {# MAIN COLUMN CONTENT #}
 {% block content %}
-
+{% cache %}
 <section id="contact--address">
 
   <div id="contact--address-data" itemscope itemtype="http://schema.org/GovernmentBuilding">
@@ -232,9 +232,9 @@
 google.maps.event.addDomListener(window, 'load', initializeContactMap({{building.buildingAddress.latitude}},{{building.buildingAddress.longitude}}));
 {% endminify %}
 {% endset %}
-
 {% do view.registerJsFile('//maps.googleapis.com/maps/api/js?key=' ~ craft.app.config.general.googleApiKey ~ '&v=3.exp') %}
 
 {% js mapsJs %}
 
+{% endcache %}
 {% endblock %}

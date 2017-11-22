@@ -16,6 +16,7 @@
 
 {# HTML #}
 {% block main %}
+  {% cache %}
 
     <header>
     <h1>{{ entry.title | typogrify }}</h1>
@@ -24,7 +25,7 @@
 
     {% include 'modules/content/_page-content' %}
     {% include 'modules/content/_page-content-attachments' %}
-
+  {% endcache %}
 {% endblock %}
 
 {# ASIDE #}

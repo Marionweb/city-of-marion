@@ -1,3 +1,4 @@
+{% cache using key 'header-block_' ~ craft.app.request.pathInfo %}
 <div id="header-image" class="news-events-article">
   {% set employeePhotoExists = false %}
     {% if entry.employee | length %}
@@ -24,3 +25,4 @@
       </figure>
     {% endif %}
 </div>
+{% endcache %}

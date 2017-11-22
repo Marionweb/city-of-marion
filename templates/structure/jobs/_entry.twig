@@ -9,7 +9,7 @@
 
 {# HTML #}
 {% block main %}
-
+  {% cache %}
     <header>
         <h1>{{ entry.title | typogrify }}</h1>
     </header>
@@ -17,5 +17,5 @@
     {{ entry.copy }}
     
     {% include 'modules/content/_page-content-attachments' %}
-
+  {% endcache %}
 {% endblock %}

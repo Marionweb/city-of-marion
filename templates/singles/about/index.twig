@@ -16,7 +16,7 @@
 
 {# MAIN COLUMN CONTENT #}
 {% block content %}
-
+{% cache %}
 {% if entry.aboutBlock | length %}
   {% set aboutBlock = entry.aboutBlock.one() %}
 <section id="about--about" class="about--section-two-col">
@@ -117,6 +117,6 @@
 {% endif %}
 
 
-
+{% endcache %}
 {% endblock %}
 

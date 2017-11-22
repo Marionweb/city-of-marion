@@ -1,6 +1,7 @@
 {%- set cat = craft.categories.group('storyType').slug(spotlightType).one() -%}
 {%- set spotlight = craft.entries.section('newsEvents').relatedTo(cat).one() -%}
 {% if craft.entries.section('newsEvents').relatedTo(cat) | length %}
+{% cache using key 'block-spotlight_' ~ spotlight.storyType.one().slug ~ '-' ~ spotlight.id ~ '-' ~ spotlight.slug %}
 <section class="block--spotlight">
   <a href="{{ spotlight.url }}" title="Champion of the Month: {{ spotlight.title }}">
     {% set employeePhotoExists = false %}
@@ -36,4 +37,5 @@
 
   </a>
 </section>
+{% endcache %}
 {% endif %}

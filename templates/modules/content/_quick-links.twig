@@ -1,3 +1,4 @@
+{% cache using key 'quick-links_' ~ entry.id ~ craft.app.request.pathInfo %}
 {%- set nav = entry.quickLinks.all() -%}
 <ul>
   {% nav item in nav %}
@@ -9,3 +10,4 @@
     {% endif %}
   {% endnav %}
 </ul>
+{% endcache %}
