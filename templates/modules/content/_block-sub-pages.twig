@@ -16,9 +16,8 @@
 {% if subPages | length %}
 {% cache using key 'aside-subpages_' ~ craft.app.request.pathInfo %}
 <div id="block--subpages">
-  <h3>Pages</h3>
+  <h3{% if parent is not null %} class="parent"{% endif %}>{% if parent is not null %}<a href="{{ parent.url }}" title="Back to {{ parent.title }}">{{ parent.title }}</a>{% else %}Pages{% endif %}</h3>
   <ul>
-    {% if parent is not null %}<li class="quick-links--parent">Back to: <a href="{{ parent.url }}" title="Back to {{ parent.title }}">{{ parent.title }}</a></li>{% endif %}
     {% nav page in subPages %}
       <li class="quick-links--item{{ page.id == entry.id ? ' active' }}"><a href="{{page.url}}" title="{{ page.title }}">{{ page.title }}</a></li>
     {% endnav %}
