@@ -49,26 +49,32 @@
 
 #block--subpages
   > h3:before
-    mask: embedurl("../sprites/arrow-subpage.svg", "utf8") no-repeat 50% 50%/12px 12px
+    mask embedurl("../sprites/arrow-subpage.svg", "utf8") no-repeat 50% 50%/12px 12px
   > h3.parent:before
-    mask: embedurl("../sprites/arrow-subpage-back.svg", "utf8") no-repeat 50% 50%/12px 12px
+    mask embedurl("../sprites/arrow-subpage-back.svg", "utf8") no-repeat 50% 50%/12px 12px
 #block--quick-links
   > h3:before
-    mask: embedurl("../sprites/arrow-angle.svg", "utf8") no-repeat 50% 50%/12px 12px
+    mask embedurl("../sprites/arrow-angle.svg", "utf8") no-repeat 50% 50%/12px 12px
 
 
 // STYLES FOR WHEN USED IN MAIN COLUMN
 #content #block--subpages
 #content #block--quick-links
+#content .page-content--block.block--button
   > h3
     text-align left
 
   ul
-    width: 100%
+    width 100%
+    
     +above(m)
-      display: flex
-      flex-flow: row wrap
-      align-items: stretch
+      display flex
+      flex-flow row wrap
+      align-items stretch
+      justify-content space-evenly
+      margin-left '-%s' % (rem(3.75px))
+      margin-right '-%s' % (rem(3.75px))
+      width auto
 
   li
     display block
@@ -76,7 +82,7 @@
       flex-grow: 1
       display inline-block
       min-width 'calc(%s - %s)' % (percentage(1/4) rem(7.5px))
-      margin rem(3.75px) 0 rem(3.75px) rem(7.5px)
+      margin rem(3.75px) rem(3.75px)
 
   a
     button()
@@ -109,7 +115,7 @@ aside #block--quick-links
         background-color: $module-quick-links-arrow-color
         background-repeat: no-repeat
         background-size: cover
-        content: " "
+        content: ' '
         display inline-block
         height rem(16px)
         width rem(16px)
