@@ -81,13 +81,19 @@
           <cite>{% if block.citeUrl %}<a href="{{ block.citeUrl }}" target="_blank">{% endif %}{{ block.cite | typogrify }}{% if block.citeUrl %}</a>{% endif %}{% if block.citeSecondary %} <em>{{ block.citeSecondary | typogrify }}</em>{% endif %}</cite>
       </blockquote>
 
-    {% case 'button' %}
-    {# BUTTON LINK #}
+    {% case 'buttonInternal' %}
+    {# BUTTON LINK - INTERNAL PAGE #}
       {% set buttons = block.entry.all() %}
       <ul>
         {% for link in buttons %}
           <li class="quick-links--item"><a href="{{ link.url }}" title="{{ link.title }}">{{ link.title }}</a></li>
         {% endfor %}
+      </ul>
+
+    {% case 'buttonExternal' %}
+    {# BUTTON LINK - EXTERNAL PAGE #}
+      <ul>
+        <li class="quick-links--item"><a href="{{block.linkUrl}}"{% if block.newWindow %} target="_blank"{% endif %}>{{block.linkTitle}}</a></li>
       </ul>
 
   {% endswitch %}
