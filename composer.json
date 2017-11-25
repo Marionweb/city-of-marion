@@ -57,6 +57,7 @@
         "nystudio107/craft3-pathtools": "^1.0",
         "nystudio107/craft3-richvariables": "^1.0",
         "nystudio107/craft3-typogrify": "^1.0",
+        "rias/craft3-position-fieldtype": "^1.0",
         "roave/security-advisories": "dev-master",
         "selvinortiz/patrol": "^3.0",
         "verbb/cp-nav": "^2.0",

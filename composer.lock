@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "95f3a1c804eae1353547754387626b22",
+    "content-hash": "03a6862540429b8e8f75952d9b61bdb6",
     "packages": [
         {
             "name": "aelvan/inlin",
@@ -5394,6 +5394,58 @@
                 "psr-3"
             ],
             "time": "2016-10-10T12:19:37+00:00"
+        },
+        {
+            "name": "rias/craft3-position-fieldtype",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Rias500/craft3-position-fieldtype.git",
+                "reference": "44ae42021f77d1f0611215c12fafeea7a9f6450c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Rias500/craft3-position-fieldtype/zipball/44ae42021f77d1f0611215c12fafeea7a9f6450c",
+                "reference": "44ae42021f77d1f0611215c12fafeea7a9f6450c",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "~3.0.0-beta.23"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Position Fieldtype",
+                "handle": "position-fieldtype",
+                "schemaVersion": "1.0.0",
+                "hasCpSettings": false,
+                "hasCpSection": false,
+                "changelogUrl": "https://raw.githubusercontent.com/Rias500/position-fieldtype/master/CHANGELOG.md",
+                "class": "rias\\positionfieldtype\\PositionFieldtype"
+            },
+            "autoload": {
+                "psr-4": {
+                    "rias\\positionfieldtype\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rias",
+                    "homepage": "https://rias.be"
+                }
+            ],
+            "description": "Brings back the Position fieldtype from Craft 2",
+            "keywords": [
+                "Craft",
+                "cms",
+                "craft-plugin",
+                "craftcms",
+                "position fieldtype"
+            ],
+            "time": "2017-11-25T14:09:13+00:00"
         },
         {
             "name": "roave/security-advisories",
