@@ -88,16 +88,26 @@
     button()
     display block
 
+#landing--quick-links #block--subpages
+#landing--quick-links #block--quick-links
+aside #block--subpages
+aside #block--quick-links
+  > h3
+    padding 0 rem(30px)
+    +above(xl)
+      padding 0 'calc(%s * (%s/%s))' % (100vw 1 36)
+
+#landing--quick-links #block--subpages
+#landing--quick-links #block--quick-links
+  ul
+    padding 0 rem(30px)
+    +above(xl)
+      padding 0 'calc(%s * (%s/%s))' % (100vw 1 36)
 
 // STYLES FOR WHEN USED IN ASIDE COLUMN
 aside #block--subpages
 aside #block--quick-links
   border-top $module-quick-links-top-border
-  
-  > h3
-    padding 0 'calc(%s - %s)' % (rem(30px) $module-quick-links-left-border-width)
-    +above(xl)
-      padding 0 'calc((%s * (%s/%s)) - %s)' % (100vw 1 36 $module-quick-links-left-border-width)
       
   li
     border-left $module-quick-links-left-border
