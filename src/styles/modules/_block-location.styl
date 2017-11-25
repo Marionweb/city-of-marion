@@ -15,17 +15,17 @@
       lost-column 11/36
       lost-offset 5/36
       position relative
-    > figure
+    > #block--location-map
       margin 0
       lost-column 14/36
       lost-offset 1/36
 
   +between(m, l)
-    > .block--text
-        padding-top 1%
+    > .block--text .inner
+      transform translateY(0)
   +above(xl)
-    > .block--text
-      padding-top 10%
+    > .block--text .inner
+      transform translateY(100%)
 
   h2
   h3
@@ -59,18 +59,19 @@
       font-size $module-location-text-size-desktop
 
 
-  > figure
-    margin rem(40px) 0 0 0
-    height 0
-    width 100%
-    padding-bottom 105%
-    overflow hidden
-    svg
+  #block--location-map
+    figure
+      margin rem(40px) 0 0 0
+      height 0
       width 100%
-      height auto
+      padding-bottom 105%
+      overflow hidden
+      svg
+        width 100%
+        height auto
 
-    +above(m)
-      padding-bottom 54%
+      +above(m)
+        padding-bottom 144%
 
 
 

@@ -1,10 +1,14 @@
 <section id="block--location">
   <div class="block--text">
-    <h3>Our Location</h3>
-    <h2>{{ entry.locationHeadline | nl2br  | typogrify }}</h2>
-    <p>{{ entry.locationText | nl2br | typogrify }}</p>
+    <div class="inner">
+      <h3>Our Location</h3>
+      <h2>{{ entry.locationHeadline | nl2br  | typogrify }}</h2>
+      <p>{{ entry.locationText | nl2br | typogrify }}</p>
+    </div>
   </div>
-  <figure>
-    {{ craft.inlin.er('../src/images/indiana_map.svg') | raw }}
-  </figure>
+  <div id="block--location-map">
+    <figure>
+      {{ craft.inlin.er('../src/images/indiana_map.svg') | raw }}
+    </figure>
+  </div>
 </section>
