@@ -1,6 +1,6 @@
 {% cache using key 'staff-member-' ~ member.id %}
 {% set memberName = member.personName|trim|replace({'  ': ' '}) %}
-<li id="staff-member-{{ member.id }}">
+<li id="staff-member-{{ member.id }}" class="block--staff-member">
   <a href="{{ member.url }}" title="View contact details for {{ memberName }}">
     {% if member.staffPhoto | length %}
       {%- set thumb = { width: 40, height: 40, quality: 20 } -%}
@@ -13,8 +13,10 @@
              data-sizes="50vw" alt="{{ memberName }}" />
       </picture>
     {% endif %}
-    <h3>{{ memberName | typogrify }}</h3>
-    {% if member.positionTitle %}<h4>{{ member.positionTitle | typogrify }}</h4>{% endif %}
+    <div class="block--staff-member--name">
+      <h3>{{ memberName | typogrify }}</h3>
+      {% if member.positionTitle %}<h4>{{ member.positionTitle | typogrify }}</h4>{% endif %}
+    </div>
   </a>
 </li>
 {% endcache %}

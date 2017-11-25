@@ -43,7 +43,7 @@
       </h2>
       <ul>
       {% for member in departmentStaffMembers %}
-        {% include "singles/directory/_member" %}
+        {% include "modules/content/_block-staff-member" %}
       {% endfor %}
       </ul>
       {% if department.email %}{% include "singles/directory/_form" %}{% endif %}

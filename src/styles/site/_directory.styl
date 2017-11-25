@@ -229,64 +229,13 @@
       margin 0 0 rem(9.5px) 0
       +above(sm)
         margin-bottom rem(30px)
-      +between(sm, m)
-        lost-column 1/2 2
       +between(m, l)
         lost-column 1/3 3
       +above(l)
         lost-column 1/4 4
 
-      a
-        box-shadow $directory-block-shadow
-        display block
-        height $directory-block-image-size-mobile
-        padding rem(22px) rem(22px) rem(10px) $directory-block-image-size-mobile
-        position: relative
-        text-align right
-        text-decoration none
-        &:hover
-          box-shadow $directory-block-shadow-hover
 
-        +above(m)
-          height 100%
-          padding rem(60px) rem(10px) rem(57.5px)
-          text-align center
 
-        > picture
-          display block
-          margin 0
-          position absolute
-          left 0
-          top 0
-          height $directory-block-image-size-mobile
-          width $directory-block-image-size-mobile
-          +above(m)
-            box-shadow $directory-block-shadow
-            // width 65%
-            width: 'calc(%s + %s)' % (65% rem(20px))
-            position: relative
-            margin: 0 auto rem(55.5px)
-            height: auto
-            line-height: 0
-            border 10px solid $white
-            &, img
-              border-radius 50%
-
-        h3
-          color $directory-block-name-color
-          font-size $directory-block-name-size-mobile
-          margin 0 0 rem(8px) 0
-          +above(m)
-            font-size $directory-block-name-size-desktop
-        h4
-          color $directory-block-title-color
-          font-family $directory-block-title-font
-          font-size $directory-block-title-size-mobile
-          font-style $directory-block-title-style
-          line-height 1
-          margin 0
-          +above(m)
-            font-size $directory-block-title-size-desktop
 
 .contact-department-modal-pop
   &, .thank-you-message
@@ -299,8 +248,6 @@
     max-width: 80%
     max-height: 80%
     margin: 0
-
-
 
 
 
