@@ -35,37 +35,37 @@
   <div id="staff-profile--address-data" itemscope itemtype="http://schema.org/GovernmentBuilding">
     <div id="staff-profile--address" itemscope itemtype="http://schema.org/GovernmentBuilding">
       <span itemprop="name">{{ building.title }}</span>
+      {% if building.buildingAddress.addressLine1 %}
       <div class="address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
         <span itemprop="streetAddress">{{ building.buildingAddress.addressLine2 }}</span><br>
         <span itemprop="addressLocality">{{ building.buildingAddress.locality }}</span>,
         <span itemprop="addressRegion">{{ building.buildingAddress.administrativeArea }}</span>
         <span itemprop="postalCode">{{ building.buildingAddress.postalCode }}</span>
       </div>
+      {% endif %}
     </div>
     <div id="staff-profile--phone-other">
-      {% if entry.phone %}
-        {# {% set directPhoneLength = entry.phone.phoneNumber|length %}
-        {% set directPhoneNewLength = directPhoneLength - 10 %}
-        {% set directPhoneUnformattedNumber = entry.phone.phoneNumber|slice(directPhoneNewLength, directPhoneLength) %}
-        {% set directPhoneAreaCode = directPhoneUnformattedNumber|slice(0, 3) %}
-        {% set directPhoneSliceA = directPhoneUnformattedNumber|slice(3, 3) %}
-        {% set directPhoneSliceB = directPhoneUnformattedNumber|slice(6, 4) %}
-        <p><strong>Phone</strong> <span itemprop="telephone">{{ '(' ~ directPhoneAreaCode ~ ') ' ~ directPhoneSliceA ~ '-' ~ directPhoneSliceB }}</span></p> #}
-        <p><strong>Phone</strong> <span itemprop="telephone">{{ entry.phone }}</span></p>
+      {% if entry.phone.rawInput %}
+        <p><strong>Phone</strong> <span itemprop="telephone">{{ entry.phone.format('national') }}</span></p>
       {% endif %}
 
-      {% if general.tollFreePhoneNumber %}
-      <h4>Toll-Free</h4>
-      <div class="phone">
-        <span itemprop="telephone">{{ general.tollFreePhoneNumber.format('national') }}</span>
-      </div>
+      {% if entry.phoneSecondary.rawInput %}
+        <p><strong>Phone 2</strong> <span itemprop="telephone">{{ entry.phoneSecondary.format('national') }}</span></p>
+      {% endif %}
+      
+      {% if entry.fax.rawInput %}
+        <p><strong>Direct Fax</strong> <span itemprop="faxNumber">{{ entry.fax.format('national') }}</span></p>
       {% endif %}
 
-      {% if department.phone %}
+      {% if general.tollFreePhoneNumber.rawInput %}
+        <p><strong>Toll-Free</strong> <span itemprop="telephone">{{ general.tollFreePhoneNumber.format('national') }}</span></p>
+      {% endif %}
+
+      {% if department.phone.rawInput %}
         <p><strong>Department Phone</strong> <span itemprop="telephone">{{ department.phone.format('national') }}</span></p>
       {% endif %}
 
-      {% if department.fax %}
+      {% if department.fax.rawInput %}
         <p><strong>Department Fax</strong> <span itemprop="faxNumber">{{ department.fax.format('national') }}</span></p>
       {% endif %}
 

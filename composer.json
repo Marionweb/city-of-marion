@@ -49,7 +49,7 @@
         "mikestecker/craft3-encodeemail": "dev-master",
         "mikestecker/craft3-videoembedder": "^1.0",
         "misterbk/mix": "^1.1",
-        "newism/craft3-fields": "0.0.4",
+        "newism/craft3-fields": "0.0.7",
         "nystudio107/craft3-cookies": "^1.1",
         "nystudio107/craft3-fastcgicachebust": "^1.0",
         "nystudio107/craft3-imageoptimize": "^1.2",

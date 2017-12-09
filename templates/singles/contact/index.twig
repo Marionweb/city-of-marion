@@ -132,14 +132,14 @@
     </div>
     {% endfor %}
 
-    {% if general.tollFreePhoneNumber %}
+    {% if general.tollFreePhoneNumber.rawInput %}
     <h4>Toll-Free</h4>
     <div class="phone">
       <span itemprop="telephone">{{ general.tollFreePhoneNumber.format('national') }}</span>
     </div>
     {% endif %}
 
-    {% if entry.phone %}
+    {% if entry.phone.rawInput %}
     <h4>Phone</h4>
     <div class="phone">
       <span itemprop="telephone">{{ entry.phone.format('national') }}</span>
