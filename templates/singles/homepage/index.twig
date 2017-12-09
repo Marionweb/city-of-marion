@@ -7,6 +7,7 @@
 {# PARALLAX HEADER #}
 {% block parallaxBack %}
 
+{% if entry.primaryImage | length %}
 <div id="header-image" class="{{entry.section.handle}}">
   {%- import "macros/_images" as imageFunctions -%}
   {%- set image = entry.primaryImage.one() -%}
@@ -18,6 +19,7 @@
 
   <h1>Welcome to <span><strong>{{siteName}}</strong></span></h1>
 </div>
+{% endif %}
 
 {% endblock %}
 
