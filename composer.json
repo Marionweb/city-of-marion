@@ -37,7 +37,7 @@
         "craftcms/mailgun": "1.1.0",
         "craftcms/plugin-installer": "^1.0.0",
         "craftcms/query": "^2.0",
-        "craftcms/redactor": "1.0.0",
+        "craftcms/redactor": "1.0.0.1",
         "craftcms/simple-text": "^2.0",
         "craftcms/store-hours": "^2.0",
         "dolphiq/titleentriesfield": "^1.0",
