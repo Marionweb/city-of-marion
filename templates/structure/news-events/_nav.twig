@@ -9,7 +9,7 @@
         <li{{ 'event' == craft.app.request.segments|last ? ' class="current"' : '' }}><a href="{{ url(firstSegment~'/events/') }}">{{ entryType.name|pluralize }}</a></li>
       {% else %}
         {% set articleTypeSegment = entryType.handle|replace('/(^|[a-z])([A-Z])/', '\\1-\\2')|lower %}
-        <li{{ articleTypeSegment == craft.app.request.segments|last ? ' class="current"' : '' }}><a href="{{ url(firstSegment ~ '/type/' ~ articleTypeSegment) }}">{{ entryType.name | pluralize }}</a></li>
+        <li{{ articleTypeSegment == craft.app.request.getSegment(3) ? ' class="current"' : '' }}><a href="{{ url(firstSegment ~ '/type/' ~ articleTypeSegment) }}">{{ entryType.name | pluralize }}</a></li>
       {% endif %}
     {% endfor %}
     </ul>
@@ -23,7 +23,7 @@
       {% set firstSegment = craft.app.request.segments|first %}
       {% set articleTypeSegment = craft.app.request.getSegment(3) %}
       {% set storyTypeSegment = storyType.slug %}
-      <li{{ storyTypeSegment == craft.app.request.segments|last ? ' class="current"' : '' }}><a href="{{ url(firstSegment ~ '/type/' ~ articleTypeSegment ~ '/' ~ storyTypeSegment) }}">{{ storyType.title | pluralize }}</a></li>
+      <li{{ storyTypeSegment == craft.app.request.segments|last ? ' class="current"' : '' }}><a href="{{ url(firstSegment ~ '/type/' ~ articleTypeSegment ~ '/' ~ storyTypeSegment) }}">{{ storyType.title }}</a></li>
     {% endfor %}
     </ul>
   </div>
