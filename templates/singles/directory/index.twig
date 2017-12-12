@@ -12,22 +12,21 @@
 
 
 <section id="staff-department-blocks">
-  {% set staffIds = craft.entries.section('staff').ids() %}
-  {% set params = {
+  {% set staffMembers = craft.entries.section('staff').all() %}
+  {% set deptParams = {
       section : 'departments',
       orderBy : 'title asc',
-      relatedTo: staffIds
+      relatedTo: staffMembers
     } %}
-  {% set departments = craft.entries(params).all() %}
+  {% set departments = craft.entries(deptParams).all() %}
 
   {% for department in departments %}
-    {% cache using key 'department-directory-' ~ department.id ~ '-' ~ department.slug %}
-    {% set params = {
+    {% set staffParams = {
       section : 'staff',
       orderBy : 'title asc',
       relatedTo: department
     } %}
-    {% set departmentStaffMembers = craft.entries(params).all() %}
+    {% set departmentStaffMembers = craft.entries(staffParams).all() %}
     <section id="department--{{ department.slug }}" class="staff-department">
       <input type="checkbox">
       <i></i>
@@ -43,12 +42,11 @@
       </h2>
       <ul>
       {% for member in departmentStaffMembers %}
-        {% include "modules/content/_block-staff-member" %}
+      {% cache using key 'department-directory-' ~ department.id ~ '-' ~ department.slug ~ '-' ~ member.slug %}{% include "modules/content/_block-staff-member" %}{% endcache %}
       {% endfor %}
       </ul>
       {% if department.email %}{% include "singles/directory/_form" %}{% endif %}
     </section>
-    {% endcache %}
   {% endfor %}
 </section>
 
