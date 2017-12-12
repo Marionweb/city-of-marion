@@ -55,6 +55,9 @@ return [
         'backupOnUpdate' => false,
         'enableTemplateCaching' => true,
         'allowAutoUpdates' => false,
+        'rememberUsernameDuration' => 'P101Y',
+        'rememberedUserSessionDuration' => 'P101Y',
+        'userSessionDuration' => 'P101Y',
     ],
 
     // Local (development) environment
