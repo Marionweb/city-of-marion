@@ -6,9 +6,10 @@
     {% for entryType in craft.app.sections.getSectionByHandle('newsEvents').getEntryTypes() %}
       {% set firstSegment = craft.app.request.segments|first %}
       {% if entryType.handle == 'event' %}
-        <li><a href="{{ url(firstSegment~'/events/') }}">{{ entryType.name|pluralize }}</a></li>
+        <li{{ 'event' == craft.app.request.segments|last ? ' class="current"' : '' }}><a href="{{ url(firstSegment~'/events/') }}">{{ entryType.name|pluralize }}</a></li>
       {% else %}
-        <li><a href="{{ url(firstSegment~'/type/'~entryType.handle|replace('/(^|[a-z])([A-Z])/', '\\1-\\2')|lower) }}">{{ entryType.name|pluralize }}</a></li>
+        {% set typeSegment = entryType.handle|replace('/(^|[a-z])([A-Z])/', '\\1-\\2')|lower %}
+        <li{{ typeSegment == craft.app.request.segments|last ? ' class="current"' : '' }}><a href="{{ url(firstSegment ~ '/type/' ~ typeSegment) }}">{{ entryType.name | pluralize }}</a></li>
       {% endif %}
     {% endfor %}
     </ul>

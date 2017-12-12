@@ -189,6 +189,12 @@
         input[type=submit]
           button($button-background, $button-hover-background, $button-text-color, $button-text-color, $button-font-size, $button-line-height, ($button-padding * 0.8), uppercase, center)
           display block
+        
+        &.current
+          a
+          input[type=submit]
+            button($button-hover-background, $button-hover-background, $button-text-color, $button-text-color, $button-font-size, $button-line-height, ($button-padding * 0.8), uppercase, center)
+            display block
 
 
 
