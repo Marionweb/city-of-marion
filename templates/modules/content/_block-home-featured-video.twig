@@ -1,11 +1,11 @@
 {% if entry.videoFeatureBlock | length %}
   {% set videoBlock = entry.videoFeatureBlock.one() %}
 
-  <section id="block--featured-video">
+  <section id="block--featured-video" style="background-color:{{ videoBlock.backgroundColor }}">
     {% if videoBlock.backgroundImage | length %}
       {%- import "macros/_images" as imageFunctions -%}
       {% set image = videoBlock.backgroundImage.one() %}
-      <figure>
+      <figure style="opacity:{{ videoBlock.backgroundImageOpacity }}">
         {{ imageFunctions.responsivePicture(image.optimizedImagesHomepageVideoFeatureBg, image.alt) }}
         {% if image.caption %}<figcaption>{{ image.caption }}</figcaption>{% endif %}
       </figure>
