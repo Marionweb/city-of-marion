@@ -50,7 +50,7 @@ return [
 
     // Staging (pre-production) environment
     'staging' => [
-        'isSystemOn' => false,
+        'isSystemOn' => true,
         'devMode' => false,
         'backupOnUpdate' => false,
         'enableTemplateCaching' => true,
