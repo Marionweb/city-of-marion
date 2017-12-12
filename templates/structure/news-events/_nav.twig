@@ -8,12 +8,26 @@
       {% if entryType.handle == 'event' %}
         <li{{ 'event' == craft.app.request.segments|last ? ' class="current"' : '' }}><a href="{{ url(firstSegment~'/events/') }}">{{ entryType.name|pluralize }}</a></li>
       {% else %}
-        {% set typeSegment = entryType.handle|replace('/(^|[a-z])([A-Z])/', '\\1-\\2')|lower %}
-        <li{{ typeSegment == craft.app.request.segments|last ? ' class="current"' : '' }}><a href="{{ url(firstSegment ~ '/type/' ~ typeSegment) }}">{{ entryType.name | pluralize }}</a></li>
+        {% set articleTypeSegment = entryType.handle|replace('/(^|[a-z])([A-Z])/', '\\1-\\2')|lower %}
+        <li{{ articleTypeSegment == craft.app.request.segments|last ? ' class="current"' : '' }}><a href="{{ url(firstSegment ~ '/type/' ~ articleTypeSegment) }}">{{ entryType.name | pluralize }}</a></li>
       {% endif %}
     {% endfor %}
     </ul>
   </div>
+  {% if (craft.app.request.getSegment(3)) == 'story' %}
+  <div class="news-events--nav--filter-row news-events--nav--filter-row--type news-events--nav--filter-row--type--story">
+    <input type="checkbox" id="news-events--nav--filter-row--type--story">
+    <label for="news-events--nav--filter-row--type--story"><span>Type</span></label>
+    <ul class="news-events--nav--filters news-events--nav--filters--type news-events--nav--filters--type--story">
+    {% for storyType in craft.categories.group('storyType').all() %}
+      {% set firstSegment = craft.app.request.segments|first %}
+      {% set articleTypeSegment = craft.app.request.getSegment(3) %}
+      {% set storyTypeSegment = storyType.slug %}
+      <li{{ storyTypeSegment == craft.app.request.segments|last ? ' class="current"' : '' }}><a href="{{ url(firstSegment ~ '/type/' ~ articleTypeSegment ~ '/' ~ storyTypeSegment) }}">{{ storyType.title | pluralize }}</a></li>
+    {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
   <div class="news-events--nav--filter-row news-events--nav--filter-row--date">
     <input type="checkbox" id="news-events--nav--filter-row--date">
     <label for="news-events--nav--filter-row--date"><span>Date</span></label>
