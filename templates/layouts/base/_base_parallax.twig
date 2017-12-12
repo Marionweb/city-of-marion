@@ -17,12 +17,9 @@
     {% if entry is defined and entry.section.handle == 'pages' %}{% include 'modules/bread/_crumbs' %}{% endif %}
 
     {% block content %}{% endblock %}
-
     {% block content_two %}{% endblock %}
 
-    {# {% cache for 4 weeks %} #}
-      {% include 'modules/footer/_footer' %}
-    {# {% endcache %} #}
+    {% include 'modules/footer/_footer' %}
 
   </div>
 

@@ -1,64 +1,56 @@
 {% header "x-author: Mike Stecker (@mikestecker)" %}
 <!DOCTYPE html>
 <html lang="{{ craft.app.language |slice(0,2) }}" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
 
-<title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
+  <link type="text/plain" rel="author" href="/humans.txt" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#033762">
+  <meta name="theme-color" content="#ffffff">
 
-<link type="text/plain" rel="author" href="/humans.txt" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#033762">
-<meta name="theme-color" content="#ffffff">
-
-{% set fonts = '//fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i|Noto+Serif:400,400i,700,700i|Source+Sans+Pro:400,400i,600,600i,700,700i' %}
+  {% set fonts = '//fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i|Noto+Serif:400,400i,700,700i|Source+Sans+Pro:400,400i,600,600i,700,700i' %}
 
 {# Base #}
 {% if craft.app.config.general.craftEnv == 'local' %}
   <link rel="preload" href="/assets/css/site.combined.min.css" as="style" onload="this.rel='stylesheet'">
-  <noscript>{% do view.registerCssFile('/assets/css/site.combined.min.css') %}</noscript>
-  {% do view.registerCssFile(fonts) %}
+  <noscript><link rel="stylesheet" href="/assets/css/site.combined.min.css"></noscript>
 {% else %}
   <link rel="preload" href="{{ craft.stamp.er('/assets/css/site.combined.min.css') }}" as="style" onload="this.rel='stylesheet'">
-  <noscript>{% do view.registerCssFile(craft.stamp.er('/assets/css/site.combined.min.css')) %}</noscript>
-  {% do view.registerCssFile(fonts) %}
+  <noscript><link rel="stylesheet" href="{{ craft.stamp.er('/assets/css/site.combined.min.css') }}"></noscript>
 {% endif %}
 
+{% do view.registerCssFile(fonts) %}
 
 {% if craft.app.config.general.craftEnv == 'local' %}
   {% do view.registerJsFile('/assets/js/site.combined.min.js') %}
 {% else %}
-  {% do view.registerJsFile('//speedfont.com/api?key=qCWgzVFVUilK') %}
   {% do view.registerJsFile(craft.stamp.er('/assets/js/site.combined.min.js')) %}
 {% endif %}
 
+{# {% do view.registerJsFile('https://speedfont.com/api?key=HueyefKgmbJc') %} #}
+
 {{ head() }}
-
-<div id="container">
-  {# {% cache for 4 weeks %} #}
+</head>
+<body>
+  {{ beginBody() }}
+  <div id="container">
     {% include 'modules/side-menu/_side-menu' %}
-  {# {% endcache %} #}
 
-  {# content push wrapper #}
-  <div id="page" class="{% if entry is defined %}page-section--{{ entry.section.handle }}{% endif %}{% if type is defined %} page-type--{{ type }}{% endif %}{% if (entry is defined) and (entry.primaryImage | length) %} has--header-image{% endif %}">
+    {# content push wrapper #}
+    <div id="page" class="{% if entry is defined %}page-section--{{ entry.section.handle }}{% endif %}{% if type is defined %} page-type--{{ type }}{% endif %}{% if (entry is defined) and (entry.primaryImage | length) %} has--header-image{% endif %}">
 
-    {# <div id="page"> #}{# this is the wrapper for the content #}
-      {# <div id="page--inner" class="page-section--{{ craft.app.request.segments | first }}{% if type is defined %} page-type--{{ type }}{% endif %}"> #}{# extra div for emulating position:fixed of the menu #}
+      {% include 'modules/header/_header' %}
+      {% block core %}{% endblock %}
 
-        {# {% cache for 4 weeks %} #}
-          {% include 'modules/header/_header' %}
-        {# {% endcache %} #}
+    </div>{#  /#wrapper #}
+  </div>{#  /#container #}
 
-        {% block core %}{% endblock %}
-
-      {# </div><!-- /#page--inner --> #}
-    {# </div><!-- /#page --> #}
-
-  </div><!-- /#wrapper -->
-</div><!-- /#container -->
-
-{{ endBody() }}
+  {{ endBody() }}
+</body>
 </html>

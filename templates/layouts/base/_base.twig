@@ -9,12 +9,9 @@
   {% block crumbs %}{% if (entry is defined) or (type is defined) %}{% include 'modules/bread/_crumbs' %}{% endif %}{% endblock %}
 
   {% block content %}{% endblock %}
-
   {% block content_two %}{% endblock %}
 
-  {# {% cache for 4 weeks %} #}
-    {% include 'modules/footer/_footer' %}
-  {# {% endcache %} #}
+  {% include 'modules/footer/_footer' %}
 
 
 {% endblock %}
