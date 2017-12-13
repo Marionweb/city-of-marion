@@ -1,5 +1,5 @@
 {#
-    404 Template
+404 Template
 #}
 
 {% extends "layouts/base/_base" %}
@@ -10,8 +10,13 @@
 
 {# MAIN COLUMN CONTENT #}
 {% block content %}
-
-<h1>404</h1>
-
+<section id="four-oh-four">
+  <div class="shapes"></div>
+  <div id="four-oh-four--content">
+    <h1>404</h1>
+    <h4>Our apologies, it seems something went awry.</h4>
+    <a href="{{ siteUrl }}" title="Homepage">Home Page</a>
+  </div>
+</section>
 {% endblock %}
 
