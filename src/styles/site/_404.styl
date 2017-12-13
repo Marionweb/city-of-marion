@@ -2,13 +2,14 @@
   align-items center
   background $medium-blue
   display flex
-  height 100vh
+  height 'calc(%s - %s)' % (100vh $top-menu-height-desktop)
   justify-content center
   overflow-x hidden
   overflow-y auto
   perspective 1px
   position relative
   text-align center
+  transform-style preserve-3d
   width 100vw
 
   .shapes
