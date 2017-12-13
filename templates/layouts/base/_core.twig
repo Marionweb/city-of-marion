@@ -18,11 +18,9 @@
 
 {# Base #}
 {% if craft.app.config.general.craftEnv == 'local' %}
-  <link rel="preload" href="/assets/css/site.combined.min.css" as="style" onload="this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="/assets/css/site.combined.min.css"></noscript>
+  <link rel="stylesheet" href="/assets/css/site.combined.min.css">
 {% else %}
-  <link rel="preload" href="{{ craft.stamp.er('/assets/css/site.combined.min.css') }}" as="style" onload="this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="{{ craft.stamp.er('/assets/css/site.combined.min.css') }}"></noscript>
+  <link rel="stylesheet" href="{{ craft.stamp.er('/assets/css/site.combined.min.css') }}">
 {% endif %}
 
 {% do view.registerCssFile(fonts) %}

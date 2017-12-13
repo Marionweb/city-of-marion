@@ -227,12 +227,11 @@
 
 
 
-{% set mapsJs %}
-{% minify js %}
-google.maps.event.addDomListener(window, 'load', initializeContactMap({{building.buildingAddress.latitude}},{{building.buildingAddress.longitude}}));
-{% endminify %}
-{% endset %}
 {% do view.registerJsFile('//maps.googleapis.com/maps/api/js?key=' ~ craft.app.config.general.googleApiKey ~ '&v=3.exp') %}
+
+{% set mapsJs %}
+google.maps.event.addDomListener(window, 'load', initializeContactMap({{building.buildingAddress.latitude}},{{building.buildingAddress.longitude}}));
+{% endset %}
 
 {% js mapsJs %}
 
