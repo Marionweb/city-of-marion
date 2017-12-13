@@ -1,7 +1,48 @@
 .page-section--directoryLanding main
-  padding rem(57px) 0 rem(35px)
+  padding 0 0 rem(35px)
   +above(m)
-    padding rem(77.5px) 0 rem(81px)
+    padding 0 0 rem(81px)
+
+#staff-department--intro
+  padding rem(40px) rem(30px)
+  +above(m)
+    lost-flex-container: row
+    padding rem(40px) 0
+
+#staff-department--intro-text
+  +between(m, l)
+    lost-column 15/36
+    lost-offset: 2/36
+  +above(xl)
+    lost-column 15/36
+    lost-offset: 2/36
+
+  h1
+    color $news-events-intro-headline-color
+    font-family $news-events-intro-headline-font
+    font-size $news-events-intro-headline-size-mobile
+    line-height 1
+    margin 0
+    text-transform $news-events-intro-headline-transform
+    +above(m)
+      font-size $news-events-intro-headline-size-desktop
+
+  h2
+    color $news-events-intro-subheadline-color
+    font-family $news-events-intro-subheadline-font
+    font-size $news-events-intro-subheadline-size-mobile
+    margin rem(10px) 0 0
+    text-transform $news-events-intro-subheadline-transform
+    +above(m)
+      font-size $news-events-intro-subheadline-size-desktop
+
+  p
+    color $news-events-intro-text-color
+    font-size $news-events-intro-text-size-mobile
+    line-height 1.5
+    margin-top rem(24px)
+    +above(m)
+      font-size $news-events-intro-text-size-desktop
 
 #staff-department-blocks
   perspective: 900

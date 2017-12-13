@@ -9,7 +9,13 @@
 {# HTML #}
 {% block main %}
 
-
+<header id="staff-department--intro">
+  <div id="staff-department--intro-text">
+    <h1>{{ title }}</h1>
+    {%- if entry.headline -%}<h2>{{ entry.headline }}</h2>{%- endif -%}
+    {%- if entry.leadIn -%}<p>{{ entry.leadIn }}</p>{%- endif -%}
+  </div>
+</header>
 
 <section id="staff-department-blocks">
   {% set staffMembers = craft.entries.section('staff').all() %}
@@ -49,6 +55,5 @@
     </section>
   {% endfor %}
 </section>
-
 
 {% endblock %}
