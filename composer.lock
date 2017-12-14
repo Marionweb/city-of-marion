@@ -3605,20 +3605,20 @@
         },
         {
             "name": "mblode/svgplaceholder",
-            "version": "1.0.1",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mblode/svgplaceholder.git",
-                "reference": "b2f84933edddb778291308ef2bb41e7b45f795eb"
+                "reference": "30abaea2819e1d21f0b780dc76a345fe4102aaf9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mblode/svgplaceholder/zipball/b2f84933edddb778291308ef2bb41e7b45f795eb",
-                "reference": "b2f84933edddb778291308ef2bb41e7b45f795eb",
+                "url": "https://api.github.com/repos/mblode/svgplaceholder/zipball/30abaea2819e1d21f0b780dc76a345fe4102aaf9",
+                "reference": "30abaea2819e1d21f0b780dc76a345fe4102aaf9",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "~3.0.0-beta.23"
+                "craftcms/cms": "^3.0.0-RC1"
             },
             "type": "craft-plugin",
             "extra": {
@@ -3653,7 +3653,7 @@
                 "craft plugin",
                 "svg placeholder"
             ],
-            "time": "2017-11-18T02:52:34+00:00"
+            "time": "2017-12-14T10:12:48+00:00"
         },
         {
             "name": "mexitek/phpcolors",
@@ -4444,16 +4444,16 @@
         },
         {
             "name": "nystudio107/craft3-imageoptimize",
-            "version": "1.4.0",
+            "version": "1.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft3-imageoptimize.git",
-                "reference": "9315e8ae27c572ee6e1f7b2e36a45beaf9fa2f12"
+                "reference": "316d162af53ecb3ed5fada509f205700d986d324"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft3-imageoptimize/zipball/9315e8ae27c572ee6e1f7b2e36a45beaf9fa2f12",
-                "reference": "9315e8ae27c572ee6e1f7b2e36a45beaf9fa2f12",
+                "url": "https://api.github.com/repos/nystudio107/craft3-imageoptimize/zipball/316d162af53ecb3ed5fada509f205700d986d324",
+                "reference": "316d162af53ecb3ed5fada509f205700d986d324",
                 "shasum": ""
             },
             "require": {
@@ -4507,7 +4507,7 @@
                 "optimize",
                 "optimize-images"
             ],
-            "time": "2017-12-12T23:16:04+00:00"
+            "time": "2017-12-14T20:37:48+00:00"
         },
         {
             "name": "nystudio107/craft3-minify",
