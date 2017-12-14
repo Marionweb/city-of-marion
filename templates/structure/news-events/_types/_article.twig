@@ -4,7 +4,7 @@
     {{ entry.title }}
     {% include "structure/news-events/_block-share" %}
   </h1>
-  <p class="meta">{{ entry.postDate|date('M j, Y') }}&nbsp;&nbsp;|&nbsp;&nbsp;{{ entry.author }}&nbsp;&nbsp;|&nbsp;&nbsp;META</p>
+  <p class="meta">{{ entry.postDate|date('M j, Y') }}&nbsp;&nbsp;|&nbsp;&nbsp;{{ entry.author }}</p>
   {% if entry.leadIn %}<p class="lead">{{ entry.leadIn }}</p>{% endif %}
 </header>
 
