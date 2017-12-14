@@ -36,7 +36,7 @@
         <li>
           <select id="news-events--nav--filters--date--year" name="year">
             <option placeholder>Year</option>
-            {% for year, entriesInYear in craft.entries(allQueryParams).all() | group("postDate|date('Y')") %}
+            {% for year, entriesInYear in craft.entries(allQueryParams).orderBy('postDate desc').all() | group("postDate|date('Y')") %}
             <option value="{{ year }}"{% if craft.app.request.getParam('year') == year %} selected{% endif %}>{{ year }}</option>
             {% endfor %}
           </select>
@@ -44,7 +44,7 @@
         <li>
           <select id="news-events--nav--filters--date--month" name="month">
             <option placeholder>Month</option>
-            {% for month, entriesInMonth in craft.entries(allQueryParams).all() | group("postDate|date('F')") %}
+            {% for month, entriesInMonth in craft.entries(allQueryParams).orderBy('postDate asc').all() | group("postDate|date('F')") %}
             <option value="{{ month|date('m') }}"{% if craft.app.request.getParam('month') == month|date('m') %} selected{% endif %}>{{ month }}</option>
             {% endfor %}
           </select>
@@ -65,7 +65,8 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   var months = new Choices(document.getElementById('news-events--nav--filters--date--month'), {
     searchEnabled: false,
-    placeholder: true
+    placeholder: true,
+    shouldSort: false
   }){% if craft.app.request.getParam('year') is null or craft.app.request.getParam('year') == 'Year' %}.disable(){% endif %};
 
   years.passedElement.addEventListener('change', function(e) {
