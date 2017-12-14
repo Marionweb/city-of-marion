@@ -292,6 +292,9 @@
 
 
 
+
+
+
 #staff-profile
   color $navy
   line-height $line-height-base
@@ -338,7 +341,7 @@
     +above(m)
       font-size $directory-profile-department-title-size-desktop
 
-  > picture
+  > figure
     display block
     margin 0 auto rem(55.5px)
     width $directory-profile-image-size-mobile
@@ -350,7 +353,19 @@
     height: auto
     line-height: 0
     border 10px solid $white
-    &, img
+    
+    &.desktop
+      display none
+      visibility hidden
+    +above(m)
+      &.mobile
+        display none
+        visibility none
+      &.desktop
+        display block
+        visibility visible
+
+    &, img, &:before
       border-radius 50%
 
   #staff-profile--address-data

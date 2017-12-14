@@ -16,7 +16,7 @@
       padding rem(60px) rem(10px) rem(57.5px)
       text-align center
 
-    > picture
+    > figure
       display block
       margin 0
       position absolute
@@ -24,6 +24,19 @@
       top 0
       height $module-person-image-size-mobile
       width $module-person-image-size-mobile
+
+    
+      &.desktop
+        display none
+        visibility hidden
+      +above(m)
+        &.mobile
+          display none
+          visibility none
+        &.desktop
+          display block
+          visibility visible
+      
       +above(m)
         box-shadow $module-person-shadow
         // width 65%
@@ -33,7 +46,7 @@
         height: auto
         line-height: 0
         border 10px solid $white
-        &, img
+        &, img, &:before
           border-radius 50%
 
     h3

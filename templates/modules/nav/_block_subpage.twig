@@ -1,17 +1,23 @@
- {% cache globally using key 'block-subpage-' ~ entry.id ~ '-' ~ entry.slug %}
+{% cache globally using key 'block-subpage-' ~ entry.id ~ '-' ~ entry.slug %}
 <section id="{{ entry.id }}-{{ entry.slug }}" class="block--subpage">
   <a href="{{ entry.url }}" title="{{ entry.title }}">
   {% if entry.primaryImage | length %}
     {%- import "macros/_images" as imageFunctions -%}
     {%- set image = entry.primaryImage.one() -%}
-
     <figure>
       {{ imageFunctions.responsivePicture(image.optimizedImagesBlockPreview, image.alt) }}
       {% if image.caption %}<figcaption>{{ image.caption }}</figcaption>{% endif %}
     </figure>
-  {% endif %}
+    {% else %}
+     <figure class="mobile no-image">
+       <img src="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%273380%27 height=%271901%27 style=%27background:%23383932%27 /%3E">
+     </figure>
+     <figure class="desktop no-image">
+       <img src="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%273380%27 height=%271901%27 style=%27background:%23383932%27 /%3E">
+     </figure>
+    {% endif %}
 
     <h3>{{ entry.title }}</h3>
   </a>
 </section>
- {% endcache %}
+{% endcache %}

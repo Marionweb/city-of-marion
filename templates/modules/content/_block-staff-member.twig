@@ -2,16 +2,20 @@
 {% set memberName = member.personName|trim|replace({'  ': ' '}) %}
 <li id="staff-member-{{ member.id }}" class="block--staff-member">
   <a href="{{ member.url }}" title="View contact details for {{ memberName }}">
-    {% if member.staffPhoto | length %}
-      {%- set thumb = { width: 40, height: 40, quality: 20 } -%}
-      <picture>
-        <sources data-srcset="{{ member.staffPhoto.one().optimizedImagesSquare.srcsetWebP() }}"
-                 data-sizes="50vw"
-                 type="image/webp" />
-        <img class="lazyload" src="{{ member.staffPhoto.one().optimizedImagesSquare.placeholderBox() }}"
-             data-srcset="{{ member.staffPhoto.one().optimizedImagesSquare.srcset() }}"
-             data-sizes="50vw" alt="{{ memberName }}" />
-      </picture>
+    {% if entry.staffPhoto | length %}
+      {%- import "macros/_images" as imageFunctions -%}
+      {%- set image = entry.staffPhoto.one() -%}
+      <figure itemprop="image">
+        {{ imageFunctions.responsivePicture(image.optimizedImagesSquare, image.alt) }}
+        {% if image.caption %}<figcaption>{{ image.caption }}</figcaption>{% endif %}
+      </figure>
+    {% else %}
+      <figure class="mobile no-image">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+      </figure>
+      <figure class="desktop no-image">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+      </figure>
     {% endif %}
     <div class="block--staff-member--name">
       <h3>{{ memberName | typogrify }}</h3>
