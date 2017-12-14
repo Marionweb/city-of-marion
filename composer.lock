@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "c47b27e325f15b442e20a9aad360bd17",
+    "content-hash": "4ecb793964bc74adc79cd6f4aad7863a",
     "packages": [
         {
             "name": "aelvan/inlin",
@@ -210,22 +210,6 @@
             },
             "require": {
                 "bower-asset/jquery": ">=1.9.1,<4.0"
-            },
-            "type": "bower-asset"
-        },
-        {
-            "name": "bower-asset/bugsnag",
-            "version": "v3.3.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/bugsnag/bugsnag-js.git",
-                "reference": "9cee10eca1a1bf6d66b89c31e5b42a5b186a74ad"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/bugsnag/bugsnag-js/zipball/9cee10eca1a1bf6d66b89c31e5b42a5b186a74ad",
-                "reference": "9cee10eca1a1bf6d66b89c31e5b42a5b186a74ad",
-                "shasum": null
             },
             "type": "bower-asset"
         },
@@ -3862,116 +3846,6 @@
             "time": "2017-11-07T22:49:55+00:00"
         },
         {
-            "name": "mikestecker/craft3-videoembedder",
-            "version": "1.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mikestecker/craft3-videoembedder.git",
-                "reference": "0121258c468c30822e77991dfef2dfa479750df3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mikestecker/craft3-videoembedder/zipball/0121258c468c30822e77991dfef2dfa479750df3",
-                "reference": "0121258c468c30822e77991dfef2dfa479750df3",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^3.0.0-RC1"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "name": "Video Embedder",
-                "handle": "video-embedder",
-                "schemaVersion": "1.0.0",
-                "hasCpSettings": false,
-                "hasCpSection": false,
-                "changelogUrl": "https://raw.githubusercontent.com/mikestecker/craft3-videoembedder/master/CHANGELOG.md",
-                "class": "mikestecker\\videoembedder\\VideoEmbedder"
-            },
-            "autoload": {
-                "psr-4": {
-                    "mikestecker\\videoembedder\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Mike Stecker",
-                    "homepage": "http://github.com/mikestecker"
-                }
-            ],
-            "description": "Craft plugin to generate an embed URL from a YouTube or Vimeo URL.",
-            "keywords": [
-                "Craft",
-                "cms",
-                "craft-plugin",
-                "craftcms",
-                "video embedder"
-            ],
-            "time": "2017-12-13T20:59:18+00:00"
-        },
-        {
-            "name": "misterbk/mix",
-            "version": "1.4.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mister-bk/craft-plugin-mix.git",
-                "reference": "e631f17058891b8f66de97fafab62456f71ff05c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mister-bk/craft-plugin-mix/zipball/e631f17058891b8f66de97fafab62456f71ff05c",
-                "reference": "e631f17058891b8f66de97fafab62456f71ff05c",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^3.0.0-RC1"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "name": "Mix",
-                "handle": "mix",
-                "schemaVersion": "1.0.0",
-                "documentationUrl": "https://github.com/mister-bk/craft-plugin-mix/blob/master/README.md",
-                "changelogUrl": "https://raw.githubusercontent.com/mister-bk/craft-plugin-mix/master/CHANGELOG.md",
-                "hasCpSettings": true,
-                "hasCpSection": false,
-                "components": {
-                    "mix": "misterbk\\mix\\services\\MixService"
-                },
-                "class": "misterbk\\mix\\Mix"
-            },
-            "autoload": {
-                "psr-4": {
-                    "misterbk\\mix\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "mister bk! GmbH",
-                    "email": "info@mister-bk.de",
-                    "homepage": "https://www.mister-bk.de/"
-                }
-            ],
-            "description": "Helper plugin for Laravel Mix in Craft CMS templates",
-            "keywords": [
-                "Craft",
-                "craft-plugin",
-                "craft3",
-                "craftcms",
-                "laravel-mix",
-                "mix"
-            ],
-            "time": "2017-11-23T09:21:07+00:00"
-        },
-        {
             "name": "monolog/monolog",
             "version": "1.23.0",
             "source": {
@@ -4742,58 +4616,6 @@
                 "pathtools"
             ],
             "time": "2017-12-12T00:55:59+00:00"
-        },
-        {
-            "name": "nystudio107/craft3-richvariables",
-            "version": "1.0.15",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/nystudio107/craft3-richvariables.git",
-                "reference": "47e35bafb32c1d8e0b010c852be37f96e06a871c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft3-richvariables/zipball/47e35bafb32c1d8e0b010c852be37f96e06a871c",
-                "reference": "47e35bafb32c1d8e0b010c852be37f96e06a871c",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^3.0.0-RC1"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "name": "Rich Variables",
-                "handle": "rich-variables",
-                "schemaVersion": "1.0.0",
-                "hasCpSettings": true,
-                "hasCpSection": false,
-                "changelogUrl": "https://raw.githubusercontent.com/nystudio107/craft3-richvariables/master/CHANGELOG.md",
-                "class": "nystudio107\\richvariables\\RichVariables"
-            },
-            "autoload": {
-                "psr-4": {
-                    "nystudio107\\richvariables\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "nystudio107",
-                    "homepage": "https://nystudio107.com"
-                }
-            ],
-            "description": "Allows you to easily use Craft Globals as variables in Rich Text fields",
-            "keywords": [
-                "Craft",
-                "cms",
-                "craft-plugin",
-                "craftcms",
-                "richvariables"
-            ],
-            "time": "2017-12-12T05:17:07+00:00"
         },
         {
             "name": "nystudio107/craft3-typogrify",
