@@ -1141,20 +1141,20 @@
         },
         {
             "name": "craftcms/element-api",
-            "version": "2.5.1",
+            "version": "2.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/element-api.git",
-                "reference": "516b9104cef51603831f6cc4d08a02b835b5c594"
+                "reference": "4619d809280fe4a82e6e0859aa51073820065008"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/element-api/zipball/516b9104cef51603831f6cc4d08a02b835b5c594",
-                "reference": "516b9104cef51603831f6cc4d08a02b835b5c594",
+                "url": "https://api.github.com/repos/craftcms/element-api/zipball/4619d809280fe4a82e6e0859aa51073820065008",
+                "reference": "4619d809280fe4a82e6e0859aa51073820065008",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "~3.0.0-beta.31",
+                "craftcms/cms": "^3.0.0-beta.31",
                 "league/fractal": "^0.16.0"
             },
             "type": "craft-plugin",
@@ -1187,7 +1187,7 @@
                 "json",
                 "yii2"
             ],
-            "time": "2017-11-09T18:11:07+00:00"
+            "time": "2017-12-13T11:16:27+00:00"
         },
         {
             "name": "craftcms/hexdec",
@@ -1897,20 +1897,20 @@
         },
         {
             "name": "dolphiq/titleentriesfield",
-            "version": "1.0.2",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Dolphiq/craft3-plugin-title-entries-field.git",
-                "reference": "5bf7683e75ee8465d29d88e785ba55c93bd45560"
+                "reference": "3af1fc407c8682f64098fcf487ee3a0d73422b9d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Dolphiq/craft3-plugin-title-entries-field/zipball/5bf7683e75ee8465d29d88e785ba55c93bd45560",
-                "reference": "5bf7683e75ee8465d29d88e785ba55c93bd45560",
+                "url": "https://api.github.com/repos/Dolphiq/craft3-plugin-title-entries-field/zipball/3af1fc407c8682f64098fcf487ee3a0d73422b9d",
+                "reference": "3af1fc407c8682f64098fcf487ee3a0d73422b9d",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "~3.0.0-beta.1"
+                "craftcms/cms": "^3.0.0-RC1"
             },
             "type": "craft-plugin",
             "extra": {
@@ -1919,7 +1919,7 @@
                 "schemaVersion": "1.0.0",
                 "developer": "Dolphiq",
                 "developerUrl": "https://dolphiq.nl/",
-                "description": "Craft plugin that provides a new field type that works like an Entries field type but offers users an easy way to set a different title for the relation than the related page title.",
+                "description": "Offers users a field type with an easy way to set a different title for the relation than the related page title. Useful in menus, submenus or related lists if you are linking to other content but want to use shorter or different titles in the lists.",
                 "hasCpSettings": false,
                 "hasCpSection": false,
                 "documentationUrl": "https://github.com/Dolphiq/craft3-plugin-title-entries-field/blob/master/README.md",
@@ -1942,17 +1942,20 @@
                     "homepage": "https://dolphiq.nl/"
                 }
             ],
-            "description": "Craft plugin that provides a new field type that works like an Entries field type but offers users an easy way to set a different title for the relation than the related page title.",
+            "description": "Offers users a field type with an easy way to set a different title for the relation than the related page title. Useful in menus, submenus or related lists if you are linking to other content but want to use shorter or different titles in the lists.",
             "keywords": [
                 "Craft",
                 "cms",
                 "craft-plugin",
                 "craft3",
                 "craftcms",
+                "entry",
+                "item",
                 "link",
-                "linkfield"
+                "linkfield",
+                "menu"
             ],
-            "time": "2017-06-27T09:51:23+00:00"
+            "time": "2017-12-13T12:49:39+00:00"
         },
         {
             "name": "dukt/facebook",
@@ -3860,20 +3863,20 @@
         },
         {
             "name": "mikestecker/craft3-videoembedder",
-            "version": "1.0.2",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mikestecker/craft3-videoembedder.git",
-                "reference": "efa4a934c8f27ee6cf7e9996b88649c8d0d3aae9"
+                "reference": "0121258c468c30822e77991dfef2dfa479750df3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mikestecker/craft3-videoembedder/zipball/efa4a934c8f27ee6cf7e9996b88649c8d0d3aae9",
-                "reference": "efa4a934c8f27ee6cf7e9996b88649c8d0d3aae9",
+                "url": "https://api.github.com/repos/mikestecker/craft3-videoembedder/zipball/0121258c468c30822e77991dfef2dfa479750df3",
+                "reference": "0121258c468c30822e77991dfef2dfa479750df3",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "~3.0.0-beta.23"
+                "craftcms/cms": "^3.0.0-RC1"
             },
             "type": "craft-plugin",
             "extra": {
@@ -3908,7 +3911,7 @@
                 "craftcms",
                 "video embedder"
             ],
-            "time": "2017-08-07T15:24:52+00:00"
+            "time": "2017-12-13T20:59:18+00:00"
         },
         {
             "name": "misterbk/mix",
