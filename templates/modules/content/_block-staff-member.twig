@@ -2,9 +2,9 @@
 {% set memberName = member.personName|trim|replace({'  ': ' '}) %}
 <li id="staff-member-{{ member.id }}" class="block--staff-member">
   <a href="{{ member.url }}" title="View contact details for {{ memberName }}">
-    {% if entry.staffPhoto | length %}
+    {% if member.staffPhoto | length %}
       {%- import "macros/_images" as imageFunctions -%}
-      {%- set image = entry.staffPhoto.one() -%}
+      {%- set image = member.staffPhoto.one() -%}
       <figure itemprop="image">
         {{ imageFunctions.responsivePicture(image.optimizedImagesSquare, image.alt) }}
         {% if image.caption %}<figcaption>{{ image.caption }}</figcaption>{% endif %}
