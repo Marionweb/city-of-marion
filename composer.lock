@@ -616,16 +616,16 @@
         },
         {
             "name": "composer/composer",
-            "version": "1.5.5",
+            "version": "1.5.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "aab6229c9a4b6731f23b36107c39f4007c290b50"
+                "reference": "4f7f9c12753ec43f1e4629e2a71cabe81f2a4eab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/aab6229c9a4b6731f23b36107c39f4007c290b50",
-                "reference": "aab6229c9a4b6731f23b36107c39f4007c290b50",
+                "url": "https://api.github.com/repos/composer/composer/zipball/4f7f9c12753ec43f1e4629e2a71cabe81f2a4eab",
+                "reference": "4f7f9c12753ec43f1e4629e2a71cabe81f2a4eab",
                 "shasum": ""
             },
             "require": {
@@ -689,7 +689,7 @@
                 "dependency",
                 "package"
             ],
-            "time": "2017-12-01T13:42:57+00:00"
+            "time": "2017-12-18T11:09:18+00:00"
         },
         {
             "name": "composer/semver",
@@ -1881,16 +1881,16 @@
         },
         {
             "name": "dolphiq/titleentriesfield",
-            "version": "1.0.4",
+            "version": "1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Dolphiq/craft3-plugin-title-entries-field.git",
-                "reference": "3af1fc407c8682f64098fcf487ee3a0d73422b9d"
+                "reference": "13b2fb12ea27a1044670def372c0210ec24195d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Dolphiq/craft3-plugin-title-entries-field/zipball/3af1fc407c8682f64098fcf487ee3a0d73422b9d",
-                "reference": "3af1fc407c8682f64098fcf487ee3a0d73422b9d",
+                "url": "https://api.github.com/repos/Dolphiq/craft3-plugin-title-entries-field/zipball/13b2fb12ea27a1044670def372c0210ec24195d8",
+                "reference": "13b2fb12ea27a1044670def372c0210ec24195d8",
                 "shasum": ""
             },
             "require": {
@@ -1939,7 +1939,7 @@
                 "linkfield",
                 "menu"
             ],
-            "time": "2017-12-13T12:49:39+00:00"
+            "time": "2017-12-18T21:49:29+00:00"
         },
         {
             "name": "dukt/facebook",
@@ -2083,20 +2083,20 @@
         },
         {
             "name": "dukt/social",
-            "version": "2.0.0-beta.3",
+            "version": "2.0.0-beta.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dukt/social.git",
-                "reference": "5349f7e3558c2c45b0e91478d9debdb2380ed8eb"
+                "reference": "06ba272e3b113043acbe8fe478849a5ca8c96cfd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dukt/social/zipball/5349f7e3558c2c45b0e91478d9debdb2380ed8eb",
-                "reference": "5349f7e3558c2c45b0e91478d9debdb2380ed8eb",
+                "url": "https://api.github.com/repos/dukt/social/zipball/06ba272e3b113043acbe8fe478849a5ca8c96cfd",
+                "reference": "06ba272e3b113043acbe8fe478849a5ca8c96cfd",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^3.0.0-beta.20",
+                "craftcms/cms": "^3.0.0-RC1",
                 "dukt/oauth2-google": "^2.0",
                 "league/oauth1-client": "1.7.0@dev",
                 "league/oauth2-client": "^2.2",
@@ -2130,7 +2130,7 @@
                 "google",
                 "twitter"
             ],
-            "time": "2017-10-09T13:14:35+00:00"
+            "time": "2017-12-17T14:40:45+00:00"
         },
         {
             "name": "dukt/twitter",
@@ -2185,20 +2185,20 @@
         },
         {
             "name": "dukt/videos",
-            "version": "2.0.0-beta.5",
+            "version": "2.0.0-beta.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dukt/videos.git",
-                "reference": "70a2dc0897077df3f5444751d513b483911ea258"
+                "reference": "01d7bf360d45863e71d57cc5c2c061109c603e12"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dukt/videos/zipball/70a2dc0897077df3f5444751d513b483911ea258",
-                "reference": "70a2dc0897077df3f5444751d513b483911ea258",
+                "url": "https://api.github.com/repos/dukt/videos/zipball/01d7bf360d45863e71d57cc5c2c061109c603e12",
+                "reference": "01d7bf360d45863e71d57cc5c2c061109c603e12",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^3.0.0-beta.27",
+                "craftcms/cms": "^3.0.0-RC1",
                 "dukt/oauth2-google": "^2.0",
                 "dukt/oauth2-vimeo": "^2.0",
                 "league/oauth2-client": "^2.2"
@@ -2209,7 +2209,7 @@
                 "handle": "videos",
                 "schemaVersion": "1.0.0",
                 "documentationUrl": "https://github.com/dukt/videos-docs",
-                "changelogUrl": "https://raw.githubusercontent.com/dukt/videos/develop/CHANGELOG.md"
+                "changelogUrl": "https://github.com/dukt/videos/blob/v2/CHANGELOG.md"
             },
             "autoload": {
                 "psr-4": {
@@ -2231,7 +2231,7 @@
                 "vimeo",
                 "youtube"
             ],
-            "time": "2017-09-24T09:08:05+00:00"
+            "time": "2017-12-17T17:21:14+00:00"
         },
         {
             "name": "egulias/email-validator",
