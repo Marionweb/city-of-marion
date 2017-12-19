@@ -116,16 +116,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.48.0",
+            "version": "3.48.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "f5aef5671cd7f6e3b9ede0a3ff17c131cc05f4d3"
+                "reference": "a9468ab045ae43eac19850c82858074f211b269b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/f5aef5671cd7f6e3b9ede0a3ff17c131cc05f4d3",
-                "reference": "f5aef5671cd7f6e3b9ede0a3ff17c131cc05f4d3",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/a9468ab045ae43eac19850c82858074f211b269b",
+                "reference": "a9468ab045ae43eac19850c82858074f211b269b",
                 "shasum": ""
             },
             "require": {
@@ -192,7 +192,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2017-12-15T19:49:31+00:00"
+            "time": "2017-12-19T05:46:02+00:00"
         },
         {
             "name": "bower-asset/bootstrap",
@@ -947,16 +947,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.0.0-RC2",
+            "version": "3.0.0-RC3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "526218356fc0c0e272ecc113c969eeb11e46e0ee"
+                "reference": "fbecf432a08ef457667234ea938218031f1a4e6e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/526218356fc0c0e272ecc113c969eeb11e46e0ee",
-                "reference": "526218356fc0c0e272ecc113c969eeb11e46e0ee",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/fbecf432a08ef457667234ea938218031f1a4e6e",
+                "reference": "fbecf432a08ef457667234ea938218031f1a4e6e",
                 "shasum": ""
             },
             "require": {
@@ -1024,7 +1024,7 @@
                 "craftcms",
                 "yii2"
             ],
-            "time": "2017-12-12T20:42:34+00:00"
+            "time": "2017-12-19T18:07:14+00:00"
         },
         {
             "name": "craftcms/contact-form",
@@ -4444,21 +4444,21 @@
         },
         {
             "name": "nystudio107/craft3-imageoptimize",
-            "version": "1.4.2",
+            "version": "1.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft3-imageoptimize.git",
-                "reference": "6181159c567d8e8145cf514341e149831ab04135"
+                "reference": "a67ddf935610fef41cd3bdb00b129a4f506abcee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft3-imageoptimize/zipball/6181159c567d8e8145cf514341e149831ab04135",
-                "reference": "6181159c567d8e8145cf514341e149831ab04135",
+                "url": "https://api.github.com/repos/nystudio107/craft3-imageoptimize/zipball/a67ddf935610fef41cd3bdb00b129a4f506abcee",
+                "reference": "a67ddf935610fef41cd3bdb00b129a4f506abcee",
                 "shasum": ""
             },
             "require": {
                 "cloudinary/cloudinary_php": "^1.8.0",
-                "craftcms/cms": "^3.0.0-RC1",
+                "craftcms/cms": "^3.0.0-RC2",
                 "imageoptim/imageoptim": "^1.0.0",
                 "imgix/imgix-php": "^1.1.0",
                 "kraken-io/kraken-php": "^1.2",
@@ -4507,7 +4507,7 @@
                 "optimize",
                 "optimize-images"
             ],
-            "time": "2017-12-15T20:40:07+00:00"
+            "time": "2017-12-19T17:32:46+00:00"
         },
         {
             "name": "nystudio107/craft3-minify",
