@@ -1,5 +1,5 @@
 {% cache using key 'header-block_' ~ craft.app.request.pathInfo %}
-<div id="header-image" class="news-events-article">
+<div id="header-image" class="news-events-article article-type-{{ entry.type }}">
   {% set employeePhotoExists = false %}
     {% if entry.employee | length %}
       {% if entry.employee.one().staffPhoto | length %}
