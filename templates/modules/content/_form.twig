@@ -50,7 +50,7 @@
                     {{ label }}
                 </label>
                 {%- if field.instructions|length -%}
-                    {{ field.instructions }}
+                    <p>{{ field.instructions }}</p>
                 {%- endif -%}
                 <input
                     value=""
@@ -73,7 +73,7 @@
                     {{ label }}
                 </label>
                 {%- if field.instructions|length -%}
-                    {{ field.instructions }}
+                    <p>{{ field.instructions }}</p>
                 {%- endif -%}
                 <textarea
                     id="{{ id }}"
@@ -92,6 +92,9 @@
                 <label>
                     {{ label }}
                 </label>
+                {%- if field.instructions|length -%}
+                    <p>{{ field.instructions }}</p>
+                {%- endif -%}
                 <select
                     name="message[{{ field["label"] }}]" data-choices
                 >
@@ -117,7 +120,7 @@
                     {{ label }}
                 </label>
                 {%- if field.instructions|length -%}
-                    {{ field.instructions }}
+                    <p>{{ field.instructions }}</p>
                 {%- endif -%}
                 {%- for option in field.options -%}
                     {# Generate a random id so that clicking the field’s label selects the field #}
@@ -150,7 +153,7 @@
                     {{ label }}
                 </label>
                 {%- if field.instructions|length -%}
-                    {{ field.instructions }}
+                    <p>{{ field.instructions }}</p>
                 {%- endif -%}
                 {%- for option in field.options -%}
                     {# Generate a random id so that clicking the field’s label selects the field #}
