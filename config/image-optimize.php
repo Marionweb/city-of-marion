@@ -29,24 +29,50 @@ return [
     '*' => [
         //  What transform method should be used for image transforms?
         'transformMethod' => 'craft',
+
         // Domain for the Imgix transform service
         'imgixDomain' => '',
+
         // API key for the Imgix transform service
         'imgixApiKey' => '',
+
         // Should image variant be created on Asset save (aka BeforePageLoad)
         'generateTransformsBeforePageLoad' => true,
+
         // Controls whether a dominant color palette should be created for image variants
         // It takes a bit of time, so if you never plan to use it, you can turn it off
         'createColorPalette' => true,
+
          // Controls whether SVG placeholder silhouettes should be created for image variants
          // It takes a bit of time, so if you never plan to use them, you can turn it off
         'createPlaceholderSilhouettes' => true,
+
         // Controls whether retina images are automatically created with reduced quality
         // as per https://www.netvlies.nl/tips-updates/design-interactie/design-interactie/retina-revolution/
         'lowerQualityRetinaImageVariants' => true,
+
         // Controls whether Optimized Image Variants be created that would be up-scaled
         // to be larger than the original source image
         'allowUpScaledImageVariants' => true,
+
+        // Controls whether images scaled down >= 50% should be automatically sharpened
+        'autoSharpenScaledImages' => true,
+        
+        // Default aspect ratios
+        'defaultAspectRatios' => [
+            ['x' => 16, 'y' => 9],
+            ['x' => 8, 'y' => 5],
+            ['x' => 4, 'y' => 3],
+            ['x' => 5, 'y' => 4],
+            
+            ['x' => 1, 'y' => 1],
+            ['x' => 2, 'y' => 2],
+
+            ['x' => 9, 'y' => 16],
+            ['x' => 5, 'y' => 8],
+            ['x' => 3, 'y' => 4],
+            ['x' => 4, 'y' => 5],
+        ],
       
         // Default image variants
         'defaultVariants'            => [
