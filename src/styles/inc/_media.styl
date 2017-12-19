@@ -66,3 +66,34 @@ figure.no-image
   a:hover
     figure.no-image:before
       transform scale(1.08)
+
+
+.article-type-announcement
+.article-type-article
+.article-type-notice
+.article-type-press-release
+  figure.no-image:before
+    background-repeat no-repeat
+    background-size cover
+    background-position 50% 50%
+    
+
+.article-type-announcement
+  figure.no-image:before
+    background-image embedurl("../images/filler_announcement.svg", "utf8")
+    background-color $light-blue
+
+.article-type-article
+  figure.no-image:before
+    background-image embedurl("../images/filler_news.svg", "utf8")
+    background-color $navy
+
+.article-type-notice
+  figure.no-image:before
+    background-image embedurl("../images/filler_notice.svg", "utf8")
+    background-color $teal
+
+.article-type-press-release
+  figure.no-image:before
+    background-image  embedurl("../images/filler_press-release.svg", "utf8")
+    background-color $dark-blue
