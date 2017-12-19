@@ -9,7 +9,7 @@ return [
 
     // All environments
     '*' => [
-      'toEmail' => Craft::$app->request->getValidatedBodyParam('toEmail'),
+      'toEmail'             => Craft::$app->request->getValidatedBodyParam('toEmail'),
       'prependSubject'      => 'New message from City of Marion Website',
       'prependSender'       => 'On behalf of',
       'allowAttachments'    => false,

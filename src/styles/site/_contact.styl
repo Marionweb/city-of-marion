@@ -112,14 +112,14 @@
 
 
 #contact--form
-  background-color $contact-page-form-section-background
-  padding rem(52px) rem(30px) rem(87.5px)
   color $navy
+  border-top $module-person-contact-top-border
+  margin-top rem(26px)
+  padding-top rem(32px)
   +above(m)
+    margin-top rem(77px)
+    padding-top rem(64px)
     lost-flex-container: row
-    padding rem(114px) 0 rem(103px)
-
-
 
   #contact--form--content
     h1
@@ -142,6 +142,17 @@
     .center
       text-align center
 
+.page-section--contact.page-type--landing .parallax__layer--base
+  #contact--form
+    background-color $contact-page-form-section-background
+    padding rem(52px) rem(30px) rem(87.5px)
+    margin-top 0
+    border-top 0 none
     +above(m)
-      lost-column 14/36
-      lost-offset: 11/36
+      padding rem(114px) 0 rem(103px)
+      margin-top 0
+    
+    #contact--form--content
+      +above(m)
+        lost-column 14/36
+        lost-offset: 11/36

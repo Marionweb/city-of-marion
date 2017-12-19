@@ -1,0 +1,231 @@
+{% set form = entry.embedForm.one() %}
+
+<section id="contact--form">
+    <div id="contact--form--content">
+  
+      <h1>{{ form.formTitle }}</h1>
+      {% if form.formIntroductionText %}{{ form.formIntroductionText }}{% endif %}
+  
+  
+      {% macro errorList(errors) %}
+      {% if errors %}
+        <ul class="errors">
+          {% for error in errors %}
+            <li>{{ error }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+      {% endmacro %}
+  
+      {% from _self import errorList %}
+  
+      <form id="form-{{ form.slug }}" method="post" action="" accept-charset="UTF-8">
+        {{ csrfInput() }}
+        <input type="hidden" name="action" value="contact-form/send">
+        {# The form submission will be sent to the `toEmail` if set, otherwise it will be sent to the email set in the Contact Form settings #}
+        {%- if form.toEmail|length -%}
+        <input type="hidden" name="toEmail" value="{{ form.toEmail|hash }}" />
+        {%- endif -%}
+        <input id="swampFox" name="swampFox" type="text">
+  
+        <fieldset>
+          <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="fromEmail" placeholder="Email" value="{{ message.fromEmail ?? '' }}" required>
+            {{ message is defined and message ? errorList(message.getErrors('fromEmail')) }}
+          </div>
+
+          {# Loop through the fields Matrix #}
+          {%- for field in form.formFields.all() -%}
+          <div>
+            {% switch field.type %}
+
+              {% case 'text' %}
+                {%- set label = field.label -%}
+                {# Use the Matrix block type to set the type of field (i.e. tel, text, etc.) #}
+                {%- set type = field.inputType -%}
+                {# Generate a random id so that clicking the field’s label focusses the field #}
+                {%- set id = "f_" ~ random() -%} 
+                <label for="{{ id }}">
+                    {{ label }}
+                </label>
+                {%- if field.instructions|length -%}
+                    {{ field.instructions }}
+                {%- endif -%}
+                <input
+                    value=""
+                    name="message[{{ label }}]"
+                    id="{{ id }}"
+                    type="{{ type }}"
+                    {% if field.placeholder %}
+                    placeholder="{{ field.placeholder }}"
+                    {% endif %}
+                    {% if field.required %}
+                        required
+                    {% endif %}
+                />
+
+              {% case 'textArea' %}
+                {%- set label = field.label -%}
+                {# Generate a random id so that clicking the field’s label focusses the field #}
+                {%- set id = "f_" ~ random() -%} 
+                <label for="{{ id }}">
+                    {{ label }}
+                </label>
+                {%- if field.instructions|length -%}
+                    {{ field.instructions }}
+                {%- endif -%}
+                <textarea
+                    id="{{ id }}"
+                    name="message[{{ label }}]"
+                    cols="30" rows="5"
+                    {% if field.placeholder %}
+                    placeholder="{{ field.placeholder }}"
+                    {% endif %}
+                    {% if field.required %}
+                    required
+                    {% endif %}
+                ></textarea>
+
+              {% case 'select' %}
+                {%- set label = field["label"] %}
+                <label>
+                    {{ label }}
+                </label>
+                <select
+                    name="message[{{ field["label"] }}]" data-choices
+                >
+                    {%- for option in field.options -%}
+                        {%- set value = option["value"] ?? "" %}
+                        {%- set label = option["label"] ?? "" -%}
+                        <option
+                            value="{{ value }}"
+                            {% if option["selected"] %}
+                                selected
+                            {% endif %}
+                        >
+                            {{ label }}
+                        </option>
+                    {%- endfor -%}
+                </select>
+
+
+              {% case 'checkbox' %}
+                {%- set label = field.label -%}
+                {%- set type = "checkbox" -%}
+                <label>
+                    {{ label }}
+                </label>
+                {%- if field.instructions|length -%}
+                    {{ field.instructions }}
+                {%- endif -%}
+                {%- for option in field.options -%}
+                    {# Generate a random id so that clicking the field’s label selects the field #}
+                    {%- set id = 'f_' ~ random()  -%}
+                    <input
+                        type="{{ type }}"
+                        {# 
+                        # For checkboxes, make the name an array by adding []
+                        # so multiple checkboxes may be selected
+                        #}
+                        name="message[{{ label }}]{{- (type == "checkbox" ? "[]") -}}"
+                        id="{{ id }}"
+                        value="{{ option.value }}"
+                        {% if option.selected %}
+                        checked
+                        {% endif %}
+                        {% if field.required %}
+                            required
+                        {% endif %}
+                    />
+                    <label for="{{ id }}">
+                        {{ option.label }}
+                    </label>
+                {%- endfor -%}
+
+              {% case 'radio' %}
+                {%- set label = field.label -%}
+                {%- set type = "radio" -%}
+                <label>
+                    {{ label }}
+                </label>
+                {%- if field.instructions|length -%}
+                    {{ field.instructions }}
+                {%- endif -%}
+                {%- for option in field.options -%}
+                    {# Generate a random id so that clicking the field’s label selects the field #}
+                    {%- set id = 'f_' ~ random()  -%}
+                    <input
+                        type="{{ type }}"
+                        {# 
+                        # For checkboxes, make the name an array by adding []
+                        # so multiple checkboxes may be selected
+                        #}
+                        name="message[{{ label }}]{{- (type == "checkbox" ? "[]") -}}"
+                        id="{{ id }}"
+                        value="{{ option.value }}"
+                        {% if option.selected %}
+                        checked
+                        {% endif %}
+                        {% if field.required %}
+                            required
+                        {% endif %}
+                    />
+                    <label for="{{ id }}">
+                        {{ option.label }}
+                    </label>
+                {%- endfor -%}
+
+            
+            {% endswitch %}
+          </div>
+          {%- endfor -%}
+
+          <div class="center">
+            <input type="submit" id="submit" value="{{ form.submitLabel }}">
+          </div>
+        </fieldset>
+      </form>
+  
+      <div id="form-modal-confirmation" style="display: none;">
+          {{ form.successMessage }}
+      </div>
+  
+    </div>
+  </section>
+  
+  
+  {% js %}
+  
+  
+  $('#form-{{ form.slug }}').submit(function(ev) {
+
+    alert("I see you submitted the form! Be aware I'm not working quite yet but will be soon hopefully!");
+
+    // Prevent the form from actually submitting
+    ev.preventDefault();
+  
+    // Send it to the server
+    $.post('/', {
+      dataType: 'json',
+      data: $(this).serialize(),
+      success: function(response) {
+        console.log(response);
+      
+        if (response.success) {
+          console.log('success');
+          $('#form-modal-confirmation').fadeIn();
+        } else {
+          // response.error will be an object containing any validation errors that occurred, indexed by field name
+          // e.g. response.error.fromName => ['From Name is required']
+          alert('An error occurred. Please try again.');
+        }
+      }
+    });
+    
+  });
+  
+  
+  
+  
+  {% endjs %}

@@ -85,7 +85,7 @@
             }
         ],
         "distJs": [
-            "./node_modules/jquery/dist/jquery.slim.min.js",
+            "./node_modules/jquery/dist/jquery.min.js",
             "./node_modules/lazysizes/lazysizes.min.js",
             "./node_modules/lazysizes/plugins/bgset/ls.bgset.min.js",
             "./node_modules/picturefill/dist/picturefill.min.js",
