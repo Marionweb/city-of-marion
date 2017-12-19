@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "4ecb793964bc74adc79cd6f4aad7863a",
+    "content-hash": "0200e036a134849dc13a63b94c363bb1",
     "packages": [
         {
             "name": "aelvan/inlin",
@@ -1222,20 +1222,20 @@
         },
         {
             "name": "craftcms/mailgun",
-            "version": "1.1.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/mailgun.git",
-                "reference": "f86dd2e1ad89ebae39c9502a8127c37b2f569feb"
+                "reference": "622053e6efa27a98f5e8f590380ba917c86eb25d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/mailgun/zipball/f86dd2e1ad89ebae39c9502a8127c37b2f569feb",
-                "reference": "f86dd2e1ad89ebae39c9502a8127c37b2f569feb",
+                "url": "https://api.github.com/repos/craftcms/mailgun/zipball/622053e6efa27a98f5e8f590380ba917c86eb25d",
+                "reference": "622053e6efa27a98f5e8f590380ba917c86eb25d",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^3.0.0-beta.35",
+                "craftcms/cms": "^3.0.0-RC1",
                 "cspoo/swiftmailer-mailgun-bundle": "^1.0.0",
                 "php-http/guzzle6-adapter": "^1.1.1"
             },
@@ -1269,7 +1269,7 @@
                 "mailgun",
                 "yii2"
             ],
-            "time": "2017-11-28T21:50:11+00:00"
+            "time": "2017-12-19T00:02:49+00:00"
         },
         {
             "name": "craftcms/oauth2-craftid",
