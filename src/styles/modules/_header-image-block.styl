@@ -6,7 +6,7 @@
     left 0
     right 0
     top 50%
-    transform 'translate(%s, calc(%s - %s))' % (0 -50% rem(((31.75+16.5)/2)px))
+    transform 'translate(%s, calc(%s - %s))' % (0 -50% rem(($header-block-title-size-mobile/2)))
     margin 0
     z-index 5
 
@@ -22,7 +22,7 @@
 
     +above(m)
       font-size $header-block-title-size-desktop
-      transform 'translate(%s, calc(%s - %s))' % (0 -50% rem(((53.5+33)/2)px))
+      transform 'translate(%s, calc(%s - %s))' % (0 -50% rem(($header-block-title-size-desktop/2)))
       padding-left 'calc(%s + %s)' % (rem(30px) 5%)
       padding-right 'calc(%s + %s)' % (rem(30px) 5%)
 
