@@ -83,8 +83,9 @@
   text-align center
   +above(m)
     lost-flex-container: row
+    align-items center
     padding rem(136.5px) rem(30px) rem(122px)
-    h1, p
+    h1, div
       display inline-block
 
   h1
@@ -99,7 +100,7 @@
       margin 0
       text-align right
 
-  p
+  div
     font-size $contact-page-info-request-section-description-size-mobile
     +above(m)
       font-size $contact-page-info-request-section-description-size-desktop
@@ -109,6 +110,9 @@
       lost-offset: 2/36
       margin 0
       text-align left
+    a
+      button()
+      min-width rem(220px)
 
 
 #contact--form

@@ -157,10 +157,14 @@
 
 </section>
 
+{% if entry.publicInformationRequestLink | length %}
+{% set pirButton = entry.publicInformationRequestLink.one() %}
+{% set pirButtonTitle = pirButton.linkTitle ? pirButton.linkTitle : pirButton.title %}
 <section id="contact--info-request">
   <h1>Public Information Request</h1>
-  <p>Coming soon.</p>
+  <div><a href="{{ pirButton.url }}" target="_blank" title="{{ pirButtonTitle }}">{{ pirButtonTitle }}</a></div>
 </section>
+{% endif %}
 
 {% if entry.embedForm | length %}{% include "modules/content/_form" %}{% endif %}
 
