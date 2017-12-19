@@ -39,6 +39,7 @@
         "craftcms/redactor": "1.0.0.1",
         "craftcms/simple-text": "^2.0",
         "craftcms/store-hours": "^2.0",
+        "dolphiq/sitemap": "v1.0.5",
         "dolphiq/titleentriesfield": "^1.0",
         "dukt/facebook": "~2.0",
         "dukt/social": "~2.0",
