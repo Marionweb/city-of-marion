@@ -60,4 +60,4 @@ $newsImageRatio = percentage(1/3)
 
   .page-type--standard
     .parallax .parallax__layer--base
-      top: 'calc(100vw * %s)' % $standardImageRatioDesktop
+      top: 'calc((%s * %s) + %s)' % (100vw $standardImageRatioDesktop $top-menu-height-desktop)
