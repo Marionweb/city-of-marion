@@ -107,9 +107,7 @@
       
     
     +above(m)
-      display flex
-      align-items center
-      justify-content left
+      display block
       height auto
       padding-left rem(25.5px)
       padding-right 'calc(%s * (-%s/%s * -%s) - (%s - %s * (-%s/%s * -%s)) + %s)' % (100vw 2 36 1 30px 30px 2 36 1 30px)
@@ -121,16 +119,20 @@
     
     > figure
       +above(m)
-        max-width $module-person-contact-image-size-desktop
+        display inline-block
+        width $module-person-contact-image-size-desktop
         margin 0
         border $module-person-contact-image-border-width-desktop solid $white
+        vertical-align top
     
     .block--staff-member--name
       padding-left rem(12px)
       text-align left
       +above(m)
+        display inline-block
         padding-left rem(24px)
-        width auto
+        width 'calc(%s - %s)' % (100% $module-person-contact-image-size-desktop)
+        white-space initial
   
   dl
     dt
