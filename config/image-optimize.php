@@ -31,6 +31,8 @@ return [
         'transformMethod' => 'craft',
         // Domain for the Imgix transform service
         'imgixDomain' => '',
+        // API key for the Imgix transform service
+        'imgixApiKey' => '',
         // Should image variant be created on Asset save (aka BeforePageLoad)
         'generateTransformsBeforePageLoad' => true,
         // Controls whether a dominant color palette should be created for image variants
@@ -39,6 +41,12 @@ return [
          // Controls whether SVG placeholder silhouettes should be created for image variants
          // It takes a bit of time, so if you never plan to use them, you can turn it off
         'createPlaceholderSilhouettes' => true,
+        // Controls whether retina images are automatically created with reduced quality
+        // as per https://www.netvlies.nl/tips-updates/design-interactie/design-interactie/retina-revolution/
+        'lowerQualityRetinaImageVariants' => true,
+        // Controls whether Optimized Image Variants be created that would be up-scaled
+        // to be larger than the original source image
+        'allowUpScaledImageVariants' => true,
       
         // Default image variants
         'defaultVariants'            => [
