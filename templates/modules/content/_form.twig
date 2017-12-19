@@ -22,6 +22,7 @@
       <form id="form-{{ form.slug }}" method="post" action="" accept-charset="UTF-8">
         {{ csrfInput() }}
         <input type="hidden" name="action" value="contact-form/send">
+        <input type="hidden" name="subject" value="{{ form.title }}">
         {# The form submission will be sent to the `toEmail` if set, otherwise it will be sent to the email set in the Contact Form settings #}
         {%- if form.toEmail|length -%}
         <input type="hidden" name="toEmail" value="{{ form.toEmail|hash }}" />
@@ -205,33 +206,43 @@
   
   {% js %}
   
-  
-  $('#form-{{ form.slug }}').submit(function(ev) {
 
-    alert("I see you submitted the form! Be aware I'm not working quite yet but will be soon hopefully!");
-
-    // Prevent the form from actually submitting
-    ev.preventDefault();
   
-    // Send it to the server
-    $.post('/', {
-      dataType: 'json',
-      data: $(this).serialize(),
-      success: function(response) {
-        console.log(response);
-      
-        if (response.success) {
-          console.log('success');
-          $('#form-modal-confirmation').fadeIn();
-        } else {
-          // response.error will be an object containing any validation errors that occurred, indexed by field name
-          // e.g. response.error.fromName => ['From Name is required']
-          alert('An error occurred. Please try again.');
+
+
+  $('#form-{{ form.slug }}').submit(function(event) {
+
+    event.preventDefault();
+
+    // prepare some variables
+    var postUrl = '/';
+    var formData = $(this).serialize();
+
+    // process the form
+    $.ajax({
+        type : 'POST',
+        url : postUrl,
+        data : formData,
+        dataType : 'json',
+        encode : true
+    })
+    .done(function(data) {
+
+        // Sprout Forms will give you back a success or error response in JSON
+        if (data.success == true)
+        {
+          $.fancybox.open({
+            src: '#form-modal-confirmation',
+            type: 'inline'
+          });
+          $('#form-{{ form.slug }}').trigger("reset");
         }
-      }
+        else
+        {
+          alert('Oops! Something went wrong. Please try again.');
+        }
     });
-    
-  });
+});
   
   
   
