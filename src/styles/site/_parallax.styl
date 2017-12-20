@@ -40,13 +40,6 @@ $newsImageRatio = percentage(1/3)
   .page-type--standard
     .parallax .parallax__layer--base
       top: 'calc(100vw * %s)' % $standardImageRatio
-  
-  .page-section--departments
-  .page-section--boards
-  .page-section--departmentsContent
-    &.page-type--standard
-      .parallax .parallax__layer--base
-        top: 'calc((%s * %s) + %s)' % (100vw $standardImageRatioDesktop $top-menu-height-desktop)
 
   .page-section--newsEvents
     .parallax .parallax__layer--base
@@ -68,3 +61,10 @@ $newsImageRatio = percentage(1/3)
   .page-type--standard
     .parallax .parallax__layer--base
       top: 'calc(100vw * %s)' % $standardImageRatioDesktop
+  
+  .page-section--departments
+  .page-section--boards
+  .page-section--departmentsContent
+    &.page-type--standard
+      .parallax .parallax__layer--base
+        top: 'calc((%s * %s) + %s)' % (100vw $standardImageRatioDesktop $top-menu-height-desktop)
