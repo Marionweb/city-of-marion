@@ -22,5 +22,13 @@
       {% if member.positionTitle %}<h4>{{ member.positionTitle | typogrify }}</h4>{% endif %}
     </div>
   </a>
+  {% if (contactFor is defined) and (contactFor|length) %}
+  <dl>
+    <dt>Contact for: </dt>
+    {% for item in contactFor %}
+    <dd>{{item}}</dd>
+    {% endfor %}
+  </dl>
+  {% endif %}
 </li>
 {% endcache %}

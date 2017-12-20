@@ -4,16 +4,7 @@
   <ul>
   {% for person in entry.contactPerson.all() %}
     {% set member = person.person.one() %}
-    {% include "modules/content/_block-staff-member" %}
-    {% set contactFor = person.contactFor.all() %}
-    {% if contactFor | length %}
-    <dl>
-      <dt>Contact for: </dt>
-      {% for item in contactFor %}
-      <dd>{{item}}</dd>
-      {% endfor %}
-    </dl>
-    {% endif %}
+    {% include "modules/content/_block-staff-member" with { contactFor: person.contactFor.all() } %}
   {% endfor %}
   </ul>
 </section>
