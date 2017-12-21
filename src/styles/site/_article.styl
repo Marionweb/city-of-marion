@@ -96,8 +96,11 @@ main .news-events-article
     padding 0
 
     > li
+      &:not(:last-child)
+        margin-bottom rem(28px)
       +above(m)
         lost-column 12/36 4
+        margin-bottom 0
 
 
 
