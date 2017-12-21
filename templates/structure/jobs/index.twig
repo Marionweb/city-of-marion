@@ -5,7 +5,7 @@
 {% extends "layouts/type/_list" %}
 
 
-
+{#
 {% block aboveListContent %}
 <section id="job-instructions">
     <h3>Instructions &amp; Requirements</h3>
@@ -13,15 +13,20 @@
 esque sed porttitor purus. Proin quis arcu et elit ornare faucibus eget vel quam. Phasellus leo ante, ultricies sit amet porttitor sit amet, sodales ac leo. Vestibulum consectetur molestie diam a pretium.</p>
 </section>
 {% endblock %}
+#}
 
 {% block listContent %}
 {% cache %}
 {% set jobs = craft.entries.section('jobs').all() %}
 <section class="list--content">
     <ul>
-    {% for job in jobs %}
+    {% if jobs | length %}
+      {% for job in jobs %}
         <li><span>{{ job.title }}</span> <a href="{{ job.url }}" title="View {{ job.title }} Details">View</a></li>
-    {% endfor %}﻿
+      {% endfor %}
+    {% else %}
+      <li><span>No positions currently available.</span></li>
+    {% endif %}
     </ul>
 </section>
 {% endcache %}
