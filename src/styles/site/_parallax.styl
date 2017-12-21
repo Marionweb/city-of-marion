@@ -7,6 +7,9 @@ $newsImageRatio = percentage(1/3)
 .parallax__layer--base #page--inner--columns
   background-color $white
 
+.parallax
+  height: calc(100% + 1px)
+
 +above(m)
   .parallax
     perspective: 1px
@@ -14,7 +17,6 @@ $newsImageRatio = percentage(1/3)
     // height: 100vh
     overflow-x: hidden
     overflow-y: auto
-    -webkit-overflow-scrolling: touch
     +above(l)
       height 'calc(%s - %s)' % (100vh $top-menu-height-desktop)
 

@@ -26,7 +26,12 @@ body,
   transition: transform 0.5s
   overflow-y scroll
   overflow-x hidden
-  background: $body-background-color
+  background $body-background-color
+
+  // needs to be here for performance issues but introduces other problems
+  -webkit-overflow-scrolling: touch
+
+
   &::after
     position: absolute
     top: 0
