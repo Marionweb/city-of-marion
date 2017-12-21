@@ -7,7 +7,7 @@ docReady(function() {
    mainMenuOpenAnchor = document.getElementsByClassName('menu--side--toggle-open'),
    mainMenuCloseAnchor = document.getElementsByClassName('menu--side--toggle-close'),
    sideMenuCloseBtn = document.getElementById('menu--side--close'),
-   container = document.querySelector('#container');
+   container = document.querySelector('body');
 
   for (var i = 0; i < mainMenuToggleBread.length; i++) {
     mainMenuToggleBread[i].addEventListener('click', toggleNav, false);
