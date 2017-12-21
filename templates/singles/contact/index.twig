@@ -168,7 +168,8 @@
 
 {% if entry.embedForm | length %}{% include "modules/content/_form" %}{% endif %}
 
-
+{% endcache %}
+{% endblock %}
 
 {% do view.registerJsFile('//maps.googleapis.com/maps/api/js?key=' ~ craft.app.config.general.googleApiKey ~ '&v=3.exp') %}
 
@@ -177,6 +178,3 @@ google.maps.event.addDomListener(window, 'load', initializeContactMap({{building
 {% endset %}
 
 {% js mapsJs %}
-
-{% endcache %}
-{% endblock %}
