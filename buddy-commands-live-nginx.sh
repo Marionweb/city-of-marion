@@ -11,4 +11,5 @@ sudo -n mv -f ~/playground/craft-vars.conf /etc/nginx-sp/vhosts.d/cityofmarion-p
 sudo -n rm -rf ~/playground
 
 echo "Restart NGINX"
+sudo nginx-sp -s reload
 sudo -n service nginx-sp restart
