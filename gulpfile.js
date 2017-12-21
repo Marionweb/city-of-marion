@@ -66,7 +66,7 @@ gulp.task('stylus', ['svgSprites:copy'], function () {
   $.fancyLog("-> Compiling stylus: " + pkg.paths.src.styles + pkg.vars.styleName);
   return gulp.src(pkg.paths.src.styles + pkg.vars.styleName)
     .pipe($.plumber({errorHandler: onError}))
-    .pipe($.sourcemaps.init({loadMaps: true}))
+    // .pipe($.sourcemaps.init({loadMaps: true}))
     .pipe($.stylus({
       compress: false,
       use: [
@@ -84,7 +84,7 @@ gulp.task('stylus', ['svgSprites:copy'], function () {
       'include css': true
     }))
     .pipe($.cached('styl_compile'))
-    .pipe($.sourcemaps.write("./"))
+    // .pipe($.sourcemaps.write("./"))
     .pipe($.size({gzip: true, showFiles: true}))
     .pipe(gulp.dest(pkg.paths.build.css));
 });
