@@ -82,10 +82,10 @@
 {% do view.registerCssFile(fonts) %}
 
 {% if craft.app.config.general.craftEnv == 'local' %}
-  {% do view.registerJsFile('/assets/js/site.combined.min.js') %}
+  {% do view.registerJsFile('/assets/js/site.combined.min.js', {defer: ''}) %}
 {% else %}
-  {% do view.registerJsFile(craft.stamp.er('/assets/js/site.combined.min.js')) %}
-  {% do view.registerJsFile('https://www.googletagmanager.com/gtag/js?id=UA-111364147-1') %}
+  {% do view.registerJsFile(craft.stamp.er('/assets/js/site.combined.min.js'), {defer: ''}) %}
+  {% do view.registerJsFile('https://www.googletagmanager.com/gtag/js?id=UA-111364147-1', {defer: ''}) %}
   {% js %}
   if(!(navigator.doNotTrack == "1" || window.doNotTrack == "1")) {
     window.dataLayer = window.dataLayer || [];

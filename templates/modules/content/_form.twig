@@ -207,44 +207,44 @@
   {% js %}
   
 
-  
+  document.addEventListener('DOMContentLoaded', function() {
 
 
-  $('#form-{{ form.slug }}').submit(function(event) {
+    $('#form-{{ form.slug }}').submit(function(event) {
 
-    event.preventDefault();
+        event.preventDefault();
 
-    // prepare some variables
-    var postUrl = '/';
-    var formData = $(this).serialize();
+        // prepare some variables
+        var postUrl = '/';
+        var formData = $(this).serialize();
 
-    // process the form
-    $.ajax({
-        type : 'POST',
-        url : postUrl,
-        data : formData,
-        dataType : 'json',
-        encode : true
-    })
-    .done(function(data) {
+        // process the form
+        $.ajax({
+            type : 'POST',
+            url : postUrl,
+            data : formData,
+            dataType : 'json',
+            encode : true
+        })
+        .done(function(data) {
 
-        // Sprout Forms will give you back a success or error response in JSON
-        if (data.success == true)
-        {
-          $.fancybox.open({
-            src: '#form-modal-confirmation',
-            type: 'inline'
-          });
-          $('#form-{{ form.slug }}').trigger("reset");
-        }
-        else
-        {
-          alert('Oops! Something went wrong. Please try again.');
-        }
+            // Sprout Forms will give you back a success or error response in JSON
+            if (data.success == true)
+            {
+            $.fancybox.open({
+                src: '#form-modal-confirmation',
+                type: 'inline'
+            });
+            $('#form-{{ form.slug }}').trigger("reset");
+            }
+            else
+            {
+            alert('Oops! Something went wrong. Please try again.');
+            }
+        });
     });
-});
-  
-  
+    
+    });
   
   
   {% endjs %}

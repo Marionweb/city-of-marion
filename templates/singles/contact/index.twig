@@ -174,7 +174,9 @@
 {% do view.registerJsFile('//maps.googleapis.com/maps/api/js?key=' ~ craft.app.config.general.googleApiKey ~ '&v=3.exp') %}
 
 {% set mapsJs %}
-google.maps.event.addDomListener(window, 'load', initializeContactMap({{building.buildingAddress.latitude}},{{building.buildingAddress.longitude}}));
+document.addEventListener('DOMContentLoaded', function() {
+  google.maps.event.addDomListener(window, 'load', initializeContactMap({{building.buildingAddress.latitude}},{{building.buildingAddress.longitude}}));
+});
 {% endset %}
 
 {% js mapsJs %}

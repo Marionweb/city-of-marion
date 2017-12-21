@@ -72,34 +72,38 @@
 
 {% js %}
 {% minify js %}
-$('#department--{{ department.slug }}--form').submit(function(ev) {
-  // Prevent the form from actually submitting
-  ev.preventDefault();
+document.addEventListener('DOMContentLoaded', function() {
+
+  $('#department--{{ department.slug }}--form').submit(function(ev) {
+    // Prevent the form from actually submitting
+    ev.preventDefault();
 
 
-  {# disable stuff, give feedback to UI #}
-  $('#department--{{ department.slug }}--form-submit').prop('disabled', true).val('Sending...');
+    {# disable stuff, give feedback to UI #}
+    $('#department--{{ department.slug }}--form-submit').prop('disabled', true).val('Sending...');
 
-  // Send it to the server
-  $.ajax('/', {
-    dataType: 'json',
-    type: 'POST',
-    data: $(this).serialize(),
-    success: function(response) {
-      if (response.success) {
-        $('#department--{{ department.slug }}--thanks').fadeIn();
+    // Send it to the server
+    $.ajax('/', {
+      dataType: 'json',
+      type: 'POST',
+      data: $(this).serialize(),
+      success: function(response) {
+        if (response.success) {
+          $('#department--{{ department.slug }}--thanks').fadeIn();
 
-        {# reset form #}
-        $('#department--{{ department.slug }}--form-submit').prop('disabled', false);
-        $('#department--{{ department.slug }}--form-submit').val('Send Message');
-        $(this)[0].reset();
-      } else {
-        // response.error will be an object containing any validation errors that occurred, indexed by field name
-        // e.g. response.error.fromName => ['From Name is required']
-        alert('An error occurred. Please try again.');
+          {# reset form #}
+          $('#department--{{ department.slug }}--form-submit').prop('disabled', false);
+          $('#department--{{ department.slug }}--form-submit').val('Send Message');
+          $(this)[0].reset();
+        } else {
+          // response.error will be an object containing any validation errors that occurred, indexed by field name
+          // e.g. response.error.fromName => ['From Name is required']
+          alert('An error occurred. Please try again.');
+        }
       }
-    }
+    });
   });
+
 });
 {% endminify %}
 {% endjs %}
