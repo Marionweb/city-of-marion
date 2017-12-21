@@ -79,7 +79,6 @@
   <link rel="stylesheet" href="{{ craft.stamp.er('/assets/css/site.combined.min.css') }}">
 {% endif %}
 
-{% do view.registerCssFile(fonts) %}
 
 {% if craft.app.config.general.craftEnv == 'local' %}
   {% do view.registerJsFile('/assets/js/site.combined.min.js', {defer: ''}) %}
