@@ -4,19 +4,20 @@
     background-color $module-news-events-preview-background-color
     box-shadow $module-news-events-preview-box-shadow
     text-decoration none
-    transition: box-shadow $transition-timing
     padding-bottom rem(28px)
 
     +above(m)
       padding-bottom rem(30px)
+      transition: box-shadow $transition-timing
 
     figure
       margin 0
       line-height 0
       overflow hidden
 
-      img
-        transition filter 400ms, transform 0.8s ease
+      +above(m)
+        img
+          transition filter 400ms, transform 0.8s ease
 
       &.desktop
         display none
@@ -80,8 +81,9 @@
 
     &:hover
       box-shadow $module-news-events-preview-box-shadow-hover
-      figure img
-        transform scale(1.08)
+      +above(m)
+        figure img
+          transform scale(1.08)
 
 
 #content
