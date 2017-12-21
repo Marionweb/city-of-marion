@@ -1,11 +1,11 @@
 #breadcrumbs
   padding: 0 (rem(30px) - $bread-divider-width)
   margin: 0
-  list-style: none
-
-  display: flex
-  flex-wrap: wrap
+  list-style none
   width 100%
+  display block
+  overflow-x scroll
+  overflow-y hidden
   background-color $bread-background-color
   font-family $bread-font-family
   font-size $bread-font-size-mobile
@@ -15,12 +15,19 @@
 
   height $breadcrumb-total-height-mobile
   max-height $breadcrumb-total-height-mobile
+  white-space nowrap
+  -webkit-overflow-scrolling touch
+  
 
   +above(m)
     font-size $bread-font-size-desktop
     padding: 0 (rem(40px) - $bread-divider-width)
     height $breadcrumb-total-height-desktop
     max-height $breadcrumb-total-height-desktop
+    display flex
+    flex-wrap wrap
+    width 100%
+    white-space unset
 
 
   li
