@@ -11,10 +11,6 @@ chmod -R 774 storage/runtime
 chmod -R 774 storage/cpresources
 
 
-echo "Disallow robots from indexing site"
-printf '%s\n' 'User-agent: *' 'Disallow: /' | tee releases/${execution.to_revision.revision}/web/robots.txt
-
-
 echo "Running composer install"
 cd releases/${execution.to_revision.revision} && composer install
 
