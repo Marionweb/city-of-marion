@@ -116,16 +116,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.48.2",
+            "version": "3.48.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "992eaf4a5026e234a17dafef344587fec219bf64"
+                "reference": "ffcb011ac0fbd839cdad1a10f0a86c5b7669f594"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/992eaf4a5026e234a17dafef344587fec219bf64",
-                "reference": "992eaf4a5026e234a17dafef344587fec219bf64",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/ffcb011ac0fbd839cdad1a10f0a86c5b7669f594",
+                "reference": "ffcb011ac0fbd839cdad1a10f0a86c5b7669f594",
                 "shasum": ""
             },
             "require": {
@@ -192,7 +192,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2017-12-19T22:05:52+00:00"
+            "time": "2017-12-21T23:06:20+00:00"
         },
         {
             "name": "bower-asset/bootstrap",
@@ -5552,20 +5552,20 @@
         },
         {
             "name": "rias/craft3-position-fieldtype",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Rias500/craft3-position-fieldtype.git",
-                "reference": "44ae42021f77d1f0611215c12fafeea7a9f6450c"
+                "reference": "54d51b2ab094e86e17ed9a4018f99c531fc138fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Rias500/craft3-position-fieldtype/zipball/44ae42021f77d1f0611215c12fafeea7a9f6450c",
-                "reference": "44ae42021f77d1f0611215c12fafeea7a9f6450c",
+                "url": "https://api.github.com/repos/Rias500/craft3-position-fieldtype/zipball/54d51b2ab094e86e17ed9a4018f99c531fc138fb",
+                "reference": "54d51b2ab094e86e17ed9a4018f99c531fc138fb",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "~3.0.0-beta.23"
+                "craftcms/cms": "^3.0.0-beta.23"
             },
             "type": "craft-plugin",
             "extra": {
@@ -5600,7 +5600,7 @@
                 "craftcms",
                 "position fieldtype"
             ],
-            "time": "2017-11-25T14:09:13+00:00"
+            "time": "2017-12-20T12:24:35+00:00"
         },
         {
             "name": "roave/security-advisories",
