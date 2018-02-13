@@ -116,16 +116,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.52.3",
+            "version": "3.52.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "c6fa9217f1ff1cbfd8c498bb6deff5f342615717"
+                "reference": "fbbbf393a84306c52f964bbd177f163fbfee835f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/c6fa9217f1ff1cbfd8c498bb6deff5f342615717",
-                "reference": "c6fa9217f1ff1cbfd8c498bb6deff5f342615717",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/fbbbf393a84306c52f964bbd177f163fbfee835f",
+                "reference": "fbbbf393a84306c52f964bbd177f163fbfee835f",
                 "shasum": ""
             },
             "require": {
@@ -192,7 +192,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2018-02-05T21:14:16+00:00"
+            "time": "2018-02-13T22:16:05+00:00"
         },
         {
             "name": "bower-asset/bootstrap",
@@ -947,16 +947,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.0.0-RC8",
+            "version": "3.0.0-RC10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "952585f7b1afc1905368c2c22457049e2e6f80d6"
+                "reference": "52294b3580286bd19d1e1e2000ae78e9b9ca1361"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/952585f7b1afc1905368c2c22457049e2e6f80d6",
-                "reference": "952585f7b1afc1905368c2c22457049e2e6f80d6",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/52294b3580286bd19d1e1e2000ae78e9b9ca1361",
+                "reference": "52294b3580286bd19d1e1e2000ae78e9b9ca1361",
                 "shasum": ""
             },
             "require": {
@@ -1025,7 +1025,7 @@
                 "craftcms",
                 "yii2"
             ],
-            "time": "2018-01-30T18:59:17+00:00"
+            "time": "2018-02-13T20:12:44+00:00"
         },
         {
             "name": "craftcms/contact-form",
@@ -2525,16 +2525,16 @@
         },
         {
             "name": "giggsey/libphonenumber-for-php",
-            "version": "8.8.10",
+            "version": "8.8.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/giggsey/libphonenumber-for-php.git",
-                "reference": "df46f26492f88fb6d226929cadf60d3111f868ce"
+                "reference": "919d24a13ff772b6af07d0f3ffefe8963cfb635c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/df46f26492f88fb6d226929cadf60d3111f868ce",
-                "reference": "df46f26492f88fb6d226929cadf60d3111f868ce",
+                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/919d24a13ff772b6af07d0f3ffefe8963cfb635c",
+                "reference": "919d24a13ff772b6af07d0f3ffefe8963cfb635c",
                 "shasum": ""
             },
             "require": {
@@ -2589,7 +2589,7 @@
                 "phonenumber",
                 "validation"
             ],
-            "time": "2018-01-24T14:12:25+00:00"
+            "time": "2018-02-07T11:27:18+00:00"
         },
         {
             "name": "giggsey/locale",
@@ -3007,16 +3007,16 @@
         },
         {
             "name": "jaybizzle/crawler-detect",
-            "version": "v1.2.57",
+            "version": "v1.2.58",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JayBizzle/Crawler-Detect.git",
-                "reference": "2f1502a434baad1da0fa43c3f3e2b09504fa6b81"
+                "reference": "7d5346fefb34033f7c08019dc57ceaa5d7a68dc0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JayBizzle/Crawler-Detect/zipball/2f1502a434baad1da0fa43c3f3e2b09504fa6b81",
-                "reference": "2f1502a434baad1da0fa43c3f3e2b09504fa6b81",
+                "url": "https://api.github.com/repos/JayBizzle/Crawler-Detect/zipball/7d5346fefb34033f7c08019dc57ceaa5d7a68dc0",
+                "reference": "7d5346fefb34033f7c08019dc57ceaa5d7a68dc0",
                 "shasum": ""
             },
             "require": {
@@ -3052,7 +3052,7 @@
                 "crawlerdetect",
                 "php crawler detect"
             ],
-            "time": "2018-02-03T12:01:03+00:00"
+            "time": "2018-02-09T16:24:01+00:00"
         },
         {
             "name": "justinrainbow/json-schema",
@@ -4591,16 +4591,16 @@
         },
         {
             "name": "nystudio107/craft-imageoptimize",
-            "version": "1.4.13",
+            "version": "1.4.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-imageoptimize.git",
-                "reference": "691b0fb543570572a3d13a68b387d523c0dc742d"
+                "reference": "0210131bf8831e7234211fdd201a9ae2ed4a5f88"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-imageoptimize/zipball/691b0fb543570572a3d13a68b387d523c0dc742d",
-                "reference": "691b0fb543570572a3d13a68b387d523c0dc742d",
+                "url": "https://api.github.com/repos/nystudio107/craft-imageoptimize/zipball/0210131bf8831e7234211fdd201a9ae2ed4a5f88",
+                "reference": "0210131bf8831e7234211fdd201a9ae2ed4a5f88",
                 "shasum": ""
             },
             "require": {
@@ -4654,7 +4654,7 @@
                 "optimize",
                 "optimize-images"
             ],
-            "time": "2018-02-05T14:04:23+00:00"
+            "time": "2018-02-10T04:32:15+00:00"
         },
         {
             "name": "nystudio107/craft-minify",
@@ -4932,16 +4932,16 @@
         },
         {
             "name": "php-http/discovery",
-            "version": "1.3.0",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-http/discovery.git",
-                "reference": "7b50ab4d6c9fdaa1ed53ae310c955900af6e3372"
+                "reference": "9a6cb24de552bfe1aa9d7d1569e2d49c5b169a33"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-http/discovery/zipball/7b50ab4d6c9fdaa1ed53ae310c955900af6e3372",
-                "reference": "7b50ab4d6c9fdaa1ed53ae310c955900af6e3372",
+                "url": "https://api.github.com/repos/php-http/discovery/zipball/9a6cb24de552bfe1aa9d7d1569e2d49c5b169a33",
+                "reference": "9a6cb24de552bfe1aa9d7d1569e2d49c5b169a33",
                 "shasum": ""
             },
             "require": {
@@ -4990,7 +4990,7 @@
                 "message",
                 "psr7"
             ],
-            "time": "2017-08-03T10:12:53+00:00"
+            "time": "2018-02-06T10:55:24+00:00"
         },
         {
             "name": "php-http/guzzle6-adapter",
@@ -5649,12 +5649,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "3df94834c80037130b533703df4672785b6ea112"
+                "reference": "5ebdd35b291cf9be4a425022872cb3aaf03192df"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/3df94834c80037130b533703df4672785b6ea112",
-                "reference": "3df94834c80037130b533703df4672785b6ea112",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/5ebdd35b291cf9be4a425022872cb3aaf03192df",
+                "reference": "5ebdd35b291cf9be4a425022872cb3aaf03192df",
                 "shasum": ""
             },
             "conflict": {
@@ -5704,6 +5704,7 @@
                 "onelogin/php-saml": "<2.10.4",
                 "oro/crm": ">=1.7,<1.7.4",
                 "oro/platform": ">=1.7,<1.7.4",
+                "padraic/file_get_contents": "<1.1.2",
                 "phpmailer/phpmailer": ">=5,<5.2.24",
                 "phpunit/phpunit": ">=4.8.19,<4.8.28|>=5.0.10,<5.6.3",
                 "phpxmlrpc/extras": "<0.6.1",
@@ -5738,7 +5739,7 @@
                 "symfony/web-profiler-bundle": ">=2,<2.3.19|>=2.4,<2.4.9|>=2.5,<2.5.4",
                 "symfony/yaml": ">=2,<2.0.22|>=2.1,<2.1.7",
                 "thelia/backoffice-default-template": ">=2.1,<2.1.2",
-                "thelia/thelia": ">=2.1.0-beta1,<2.1.3|>=2.1,<2.1.2",
+                "thelia/thelia": ">=2.1,<2.1.2|>=2.1.0-beta1,<2.1.3",
                 "twig/twig": "<1.20",
                 "typo3/cms": ">=6.2,<6.2.30|>=7,<7.6.22|>=8,<8.7.5",
                 "typo3/flow": ">=1,<1.0.4|>=1.1,<1.1.1|>=2,<2.0.1|>=2.3,<2.3.16|>=3,<3.0.10|>=3.1,<3.1.7|>=3.2,<3.2.7|>=3.3,<3.3.5",
@@ -5787,7 +5788,7 @@
                 }
             ],
             "description": "Prevents installation of composer packages with known security vulnerabilities: no API, simply require it",
-            "time": "2018-02-04T22:09:50+00:00"
+            "time": "2018-02-13T10:17:11+00:00"
         },
         {
             "name": "seld/cli-prompt",
@@ -6751,20 +6752,20 @@
         },
         {
             "name": "verbb/cp-nav",
-            "version": "2.0.2",
+            "version": "2.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/verbb/cp-nav.git",
-                "reference": "13c78a606ca7c86946df45daf79a98e2a351a368"
+                "reference": "6723a1a13020b9021221b6dac30ff68d0521ac2e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/cp-nav/zipball/13c78a606ca7c86946df45daf79a98e2a351a368",
-                "reference": "13c78a606ca7c86946df45daf79a98e2a351a368",
+                "url": "https://api.github.com/repos/verbb/cp-nav/zipball/6723a1a13020b9021221b6dac30ff68d0521ac2e",
+                "reference": "6723a1a13020b9021221b6dac30ff68d0521ac2e",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "~3.0.0-RC1"
+                "craftcms/cms": "^3.0.0-RC1"
             },
             "type": "craft-plugin",
             "extra": {
@@ -6775,7 +6776,7 @@
                 "hasCpSettings": true,
                 "hasCpSection": false,
                 "documentationUrl": "https://github.com/verbb/cp-nav",
-                "changelogUrl": "https://raw.githubusercontent.com/verbb/cp-nav/master/CHANGELOG.md",
+                "changelogUrl": "https://raw.githubusercontent.com/verbb/cp-nav/craft-3/CHANGELOG.md",
                 "class": "verbb\\cpnav\\CpNav"
             },
             "autoload": {
@@ -6803,24 +6804,24 @@
                 "craft-plugin",
                 "craftcms"
             ],
-            "time": "2017-12-12T22:11:13+00:00"
+            "time": "2018-02-12T11:33:31+00:00"
         },
         {
             "name": "verbb/expanded-singles",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/verbb/expanded-singles.git",
-                "reference": "1c466ceeaba921bb50912a04f27ec316bb9e517e"
+                "reference": "9f36226c02a94ed90634fa6a8c128452f9e8bc36"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/expanded-singles/zipball/1c466ceeaba921bb50912a04f27ec316bb9e517e",
-                "reference": "1c466ceeaba921bb50912a04f27ec316bb9e517e",
+                "url": "https://api.github.com/repos/verbb/expanded-singles/zipball/9f36226c02a94ed90634fa6a8c128452f9e8bc36",
+                "reference": "9f36226c02a94ed90634fa6a8c128452f9e8bc36",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "~3.0.0-beta.23"
+                "craftcms/cms": "^3.0.0-RC1"
             },
             "type": "craft-plugin",
             "extra": {
@@ -6830,7 +6831,8 @@
                 "schemaVersion": "1.0.0",
                 "hasCpSettings": true,
                 "hasCpSection": false,
-                "changelogUrl": "https://raw.githubusercontent.com/verbb/expanded-singles/master/CHANGELOG.md",
+                "documentationUrl": "https://github.com/verbb/expanded-singles",
+                "changelogUrl": "https://raw.githubusercontent.com/verbb/expanded-singles/craft-3/CHANGELOG.md",
                 "class": "verbb\\expandedsingles\\ExpandedSingles"
             },
             "autoload": {
@@ -6856,7 +6858,7 @@
                 "craftcms",
                 "expanded singles"
             ],
-            "time": "2017-12-06T22:40:26+00:00"
+            "time": "2018-02-12T11:31:05+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -6910,20 +6912,20 @@
         },
         {
             "name": "wbrowar/guide",
-            "version": "1.1.2",
+            "version": "1.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wbrowar/craft-3-guide.git",
-                "reference": "32c6e289b6f9b82243badd7ad3ac4d5b3d837776"
+                "reference": "e1ddaa9c79751d750831288bd8d09a8c296826bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wbrowar/craft-3-guide/zipball/32c6e289b6f9b82243badd7ad3ac4d5b3d837776",
-                "reference": "32c6e289b6f9b82243badd7ad3ac4d5b3d837776",
+                "url": "https://api.github.com/repos/wbrowar/craft-3-guide/zipball/e1ddaa9c79751d750831288bd8d09a8c296826bb",
+                "reference": "e1ddaa9c79751d750831288bd8d09a8c296826bb",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^3.0.0-RC7"
+                "craftcms/cms": "^3.0.0-RC9"
             },
             "type": "craft-plugin",
             "extra": {
@@ -6961,7 +6963,7 @@
                 "craftcms",
                 "guide"
             ],
-            "time": "2018-02-05T15:26:39+00:00"
+            "time": "2018-02-11T01:07:25+00:00"
         },
         {
             "name": "webmozart/assert",
