@@ -947,16 +947,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.0.0-RC10",
+            "version": "3.0.0-RC10.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "52294b3580286bd19d1e1e2000ae78e9b9ca1361"
+                "reference": "3c24705f0ae2ac22c1702aefd87debaa9e373731"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/52294b3580286bd19d1e1e2000ae78e9b9ca1361",
-                "reference": "52294b3580286bd19d1e1e2000ae78e9b9ca1361",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/3c24705f0ae2ac22c1702aefd87debaa9e373731",
+                "reference": "3c24705f0ae2ac22c1702aefd87debaa9e373731",
                 "shasum": ""
             },
             "require": {
@@ -1025,7 +1025,7 @@
                 "craftcms",
                 "yii2"
             ],
-            "time": "2018-02-13T20:12:44+00:00"
+            "time": "2018-02-14T14:33:08+00:00"
         },
         {
             "name": "craftcms/contact-form",
@@ -4591,16 +4591,16 @@
         },
         {
             "name": "nystudio107/craft-imageoptimize",
-            "version": "1.4.14",
+            "version": "1.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-imageoptimize.git",
-                "reference": "0210131bf8831e7234211fdd201a9ae2ed4a5f88"
+                "reference": "201c6a66a1f3075e667a224f8c336b01b634be20"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-imageoptimize/zipball/0210131bf8831e7234211fdd201a9ae2ed4a5f88",
-                "reference": "0210131bf8831e7234211fdd201a9ae2ed4a5f88",
+                "url": "https://api.github.com/repos/nystudio107/craft-imageoptimize/zipball/201c6a66a1f3075e667a224f8c336b01b634be20",
+                "reference": "201c6a66a1f3075e667a224f8c336b01b634be20",
                 "shasum": ""
             },
             "require": {
@@ -4654,7 +4654,7 @@
                 "optimize",
                 "optimize-images"
             ],
-            "time": "2018-02-10T04:32:15+00:00"
+            "time": "2018-02-14T17:03:27+00:00"
         },
         {
             "name": "nystudio107/craft-minify",
