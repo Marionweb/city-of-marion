@@ -116,16 +116,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.52.8",
+            "version": "3.52.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "fbbbf393a84306c52f964bbd177f163fbfee835f"
+                "reference": "4baba19877e363b971a4600a4bc3b3fa94fdfbba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/fbbbf393a84306c52f964bbd177f163fbfee835f",
-                "reference": "fbbbf393a84306c52f964bbd177f163fbfee835f",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/4baba19877e363b971a4600a4bc3b3fa94fdfbba",
+                "reference": "4baba19877e363b971a4600a4bc3b3fa94fdfbba",
                 "shasum": ""
             },
             "require": {
@@ -192,7 +192,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2018-02-13T22:16:05+00:00"
+            "time": "2018-02-16T20:40:39+00:00"
         },
         {
             "name": "bower-asset/bootstrap",
@@ -3056,16 +3056,16 @@
         },
         {
             "name": "justinrainbow/json-schema",
-            "version": "5.2.6",
+            "version": "5.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/justinrainbow/json-schema.git",
-                "reference": "d283e11b6e14c6f4664cf080415c4341293e5bbd"
+                "reference": "8560d4314577199ba51bf2032f02cd1315587c23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/justinrainbow/json-schema/zipball/d283e11b6e14c6f4664cf080415c4341293e5bbd",
-                "reference": "d283e11b6e14c6f4664cf080415c4341293e5bbd",
+                "url": "https://api.github.com/repos/justinrainbow/json-schema/zipball/8560d4314577199ba51bf2032f02cd1315587c23",
+                "reference": "8560d4314577199ba51bf2032f02cd1315587c23",
                 "shasum": ""
             },
             "require": {
@@ -3074,7 +3074,7 @@
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^2.1",
                 "json-schema/json-schema-test-suite": "1.2.0",
-                "phpunit/phpunit": "^4.8.22"
+                "phpunit/phpunit": "^4.8.35"
             },
             "bin": [
                 "bin/validate-json"
@@ -3118,7 +3118,7 @@
                 "json",
                 "schema"
             ],
-            "time": "2017-10-21T13:15:38+00:00"
+            "time": "2018-02-14T22:26:30+00:00"
         },
         {
             "name": "kraken-io/kraken-php",
@@ -4591,16 +4591,16 @@
         },
         {
             "name": "nystudio107/craft-imageoptimize",
-            "version": "1.4.15",
+            "version": "1.4.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-imageoptimize.git",
-                "reference": "201c6a66a1f3075e667a224f8c336b01b634be20"
+                "reference": "a28214a51fc67423c349f0dedc7338c177f31f1e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-imageoptimize/zipball/201c6a66a1f3075e667a224f8c336b01b634be20",
-                "reference": "201c6a66a1f3075e667a224f8c336b01b634be20",
+                "url": "https://api.github.com/repos/nystudio107/craft-imageoptimize/zipball/a28214a51fc67423c349f0dedc7338c177f31f1e",
+                "reference": "a28214a51fc67423c349f0dedc7338c177f31f1e",
                 "shasum": ""
             },
             "require": {
@@ -4654,7 +4654,7 @@
                 "optimize",
                 "optimize-images"
             ],
-            "time": "2018-02-14T17:03:27+00:00"
+            "time": "2018-02-15T17:53:57+00:00"
         },
         {
             "name": "nystudio107/craft-minify",
@@ -5593,16 +5593,16 @@
         },
         {
             "name": "rias/craft-position-fieldtype",
-            "version": "1.0.9",
+            "version": "1.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Rias500/craft-position-fieldtype.git",
-                "reference": "83f660adc608d561d0df763e9c033a42b0c9acc3"
+                "reference": "e874843ac70e87c01c9e92be4d3c2de54f963da2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Rias500/craft-position-fieldtype/zipball/83f660adc608d561d0df763e9c033a42b0c9acc3",
-                "reference": "83f660adc608d561d0df763e9c033a42b0c9acc3",
+                "url": "https://api.github.com/repos/Rias500/craft-position-fieldtype/zipball/e874843ac70e87c01c9e92be4d3c2de54f963da2",
+                "reference": "e874843ac70e87c01c9e92be4d3c2de54f963da2",
                 "shasum": ""
             },
             "require": {
@@ -5641,7 +5641,7 @@
                 "craftcms",
                 "position fieldtype"
             ],
-            "time": "2018-01-29T22:15:26+00:00"
+            "time": "2018-02-15T15:54:22+00:00"
         },
         {
             "name": "roave/security-advisories",
@@ -7117,16 +7117,16 @@
         },
         {
             "name": "yiisoft/yii2-bootstrap",
-            "version": "2.0.7",
+            "version": "2.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-bootstrap.git",
-                "reference": "02a54d868343ed11d02f0f0f8cbbecb590e0cb3f"
+                "reference": "3f49c47924bb9fa5363c3fc7b073d954168cf438"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-bootstrap/zipball/02a54d868343ed11d02f0f0f8cbbecb590e0cb3f",
-                "reference": "02a54d868343ed11d02f0f0f8cbbecb590e0cb3f",
+                "url": "https://api.github.com/repos/yiisoft/yii2-bootstrap/zipball/3f49c47924bb9fa5363c3fc7b073d954168cf438",
+                "reference": "3f49c47924bb9fa5363c3fc7b073d954168cf438",
                 "shasum": ""
             },
             "require": {
@@ -7141,7 +7141,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "yii\\bootstrap\\": ""
+                    "yii\\bootstrap\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -7150,8 +7150,22 @@
             ],
             "authors": [
                 {
+                    "name": "Paul Klimov",
+                    "email": "klimov.paul@gmail.com"
+                },
+                {
+                    "name": "Alexander Makarov",
+                    "email": "sam@rmcreative.ru",
+                    "homepage": "http://rmcreative.ru/"
+                },
+                {
+                    "name": "Antonio Ramirez",
+                    "email": "amigo.cobos@gmail.com"
+                },
+                {
                     "name": "Qiang Xue",
-                    "email": "qiang.xue@gmail.com"
+                    "email": "qiang.xue@gmail.com",
+                    "homepage": "http://www.yiiframework.com/"
                 }
             ],
             "description": "The Twitter Bootstrap extension for the Yii framework",
@@ -7159,7 +7173,7 @@
                 "bootstrap",
                 "yii2"
             ],
-            "time": "2017-10-09T19:48:22+00:00"
+            "time": "2018-02-16T10:41:52+00:00"
         },
         {
             "name": "yiisoft/yii2-composer",
