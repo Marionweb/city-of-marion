@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" {% if craft.app.language %}xml:lang="{{ craft.app.language }}"{% endif %}>
+  <generator uri="https://craftcms.com/" version="{{ craft.app.version }}">Craft CMS</generator>
+  <link href="{{ url(craft.app.request.pathInfo) }}" rel="self" type="application/atom+xml" />
+  <link href="{{ siteUrl }}" rel="alternate" type="text/html" {% if craft.app.language %}hreflang="{{ craft.app.language }}" {% endif %}/>
+  <updated>{{ now | atom }}</updated>
+  <id>{{ url(craft.app.request.pathInfo) }}</id>
+
+  <title type="html">{{ siteName }}</title>
+
+  {% if general.description %}
+    <subtitle>{{ general.description | e }}</subtitle>
+  {% endif %}
+
+  {% if general.feedAuthorName %}
+    <author>
+        <name>{{ general.feedAuthorName | e }}</name>
+      {% if general.feedAuthorEmail %}
+        <email>{{ general.feedAuthorEmail | e }}</email>
+      {% endif %}
+    </author>
+  {% endif %}
+
+  {% set queryParams = {
+    'section': 'newsEvents',
+    'type': 'and, not event'
+  } %}
+
+  {% set posts = craft.entries(queryParams).limit(10).all() %}
+  {% for post in posts %}
+    {%- set cat = null -%}
+    {%- set type = post.type.name -%}
+    {%- if type == "Story" -%}
+      {%- if post.storyType | length -%}
+        {%- set cat = post.storyType.one().title -%}
+        {%- if cat == "Champions" -%}{%- set cat = "Champion of the Month" -%}{%- endif -%}
+      {%- endif -%}
+    {%- endif -%}
+    <entry>
+      <title type="html">{% if cat != null %}{{ cat | e }}: {% endif %}{{ post.title | e }}</title>
+      <link href="{{ post.url }}" rel="alternate" type="text/html" title="{{ post.title | e }}" />
+      <published>{{ post.postDate | atom }}</published>
+      <updated>{{ post.dateUpdated | atom }}</updated>
+      <id>{{ post.id | e }}</id>
+
+      <content type="html"><![CDATA[
+        {% if (post.primaryImage | length) or employeePhotoExists %}
+
+          {%- set initialQuality = 75 -%}
+          {%- set large = { width: 1280, quality: initialQuality } -%}
+
+          {% if post.primaryImage | length %}
+            {%- set image = post.primaryImage.one() -%}
+          {% else %}
+            {%- set image = post.employee.one().staffPhoto.one() -%}
+          {% endif %}
+          <img class="type:primaryImage" src="{{ image.getUrl(large) }}">
+        {% endif %}
+
+        {%- if post.headline -%}
+          <h2>{{ post.headline }}</h2>
+        {%- endif -%}
+        {%- if post.leadIn -%}
+          <p>{{ post.leadIn }}</p>
+        {%- endif -%}
+
+        {% for block in post.pageContent.all() %}
+          {% switch block.type %}
+
+            {% case 'richText' %}
+            {# RICH TEXT #}
+
+              {{ block.text | typogrify }}
+
+            {% case 'image' %}
+            {# IMAGES #}
+              {% set images = block.image %}
+              {% if images | length == "1" %}
+                {# SINGLE IMAGE #}
+
+                {% set image = images.one() %}
+
+                {% set outputWidths = [480, 640, 1024, 1600] %}
+                {%- set initialQuality = 20 -%}
+                {%- if image.aspectRatio | length -%}
+                  {% set aspect = image.aspectRatio|split('x') %}
+                  {% set aspectRatio = (aspect[0]/aspect[1]) %}
+                  {%- set small = { width: 40, height: 40 / aspectRatio, quality: initialQuality } -%}
+                  {%- set medium = { width: 100, height: 100 / aspectRatio, quality: initialQuality } -%}
+                {%- else -%}
+                  {%- set aspectRatio = (4/3) -%} {# Default aspect ratio #}
+                  {%- set small = { width: 40, quality: initialQuality } -%}
+                  {%- set medium = { width: 100, quality: initialQuality } -%}
+                {%- endif -%}
+
+                <img src="{{ image.getUrl(medium) }}">
+
+
+              {% elseif images | length > "1" %}
+                {# ROW OF IMAGES #}
+
+                {% for image in images.all() %}
+                  {% set outputWidths = [480, 640, 1024, 1600] %}
+                  {%- set initialQuality = 20 -%}
+                  {%- if image.aspectRatio | length -%}
+                    {% set aspect = image.aspectRatio|split('x') %}
+                    {% set aspectRatio = (aspect[0]/aspect[1]) %}
+                    {%- set small = { width: 40, height: 40 / aspectRatio, quality: initialQuality } -%}
+                    {%- set medium = { width: 100, height: 100 / aspectRatio, quality: initialQuality } -%}
+                  {%- else -%}
+                    {%- set aspectRatio = (4/3) -%} {# Default aspect ratio #}
+                    {%- set small = { width: 40, quality: initialQuality } -%}
+                    {%- set medium = { width: 100, quality: initialQuality } -%}
+                  {%- endif -%}
+
+                  <img src="{{ image.getUrl(medium) }}">
+                {% endfor %}
+
+              {% endif %}
+
+            {% case 'video' %}
+            {# VIDEO #}
+              <div class="embed-container type-video">
+                {% set video = block.video %}
+                {{video.embed({ width: 1280, height: 720, autoplay: false, default_size: false, iframeClass: 'lazyload', theme: 'light', rel: false })}}
+              </div>
+
+            {% case 'embed' %}
+            {# EMBEDDED CONTENT #}
+
+              {% if block.embedUrl.embedData.type == "video" %}
+                {# VIDEO #}
+
+                <div class="embed-container type-video {{block.embedUrl.embedData.providerName|lower|kebab}}">
+                  {% set videoUrl = block.embedUrl.embedData.url %}
+                  {{craft.videos.embed(videoUrl, { width: 1280, height: 720, autoplay: false, default_size: false, iframeClass: 'lazyload', theme: 'light', rel: false })}}
+                </div>
+
+              {% elseif block.embedUrl.embedData.type == "rich" %}
+                {# FACEBOOK/TWITTER #}
+
+                <div class="embed-container type-{{block.embedUrl.embedData.type}} {{block.embedUrl.embedData.providerName|lower|kebab}}">
+                  {{ block.embedUrl.embedData.code|replace('<iframe ', '<iframe class="lazyload" ') | raw }}
+                </div>
+              {% else %}
+                {# CATCH-ALL FOR REMAINING #}
+                <div class="embed-container type-{{block.embedUrl.embedData.type}} {{block.embedUrl.embedData.providerName|lower|kebab}}">
+                  {{ block.embedUrl.embedData.code|replace('<iframe ', '<iframe class="lazyload" ') | raw }}
+                </div>
+              {% endif %}
+
+            {% case 'quote' %}
+            {# QUOTES #}
+
+              <blockquote>
+                <p>{{ block.quote | typogrify }}</p>
+                <footer>
+                  <cite>{% if block.citeUrl %}<a href="{{ block.citeUrl }}" target="_blank">{% endif %}{{ block.cite | typogrify }}{% if block.citeUrl %}</a>{% endif %}{% if block.citeSecondary %} <em>{{ block.citeSecondary | typogrify }}</em>{% endif %}</cite>
+              </blockquote>
+
+            {% case 'buttonInternal' %}
+            {# BUTTON LINK - INTERNAL PAGE #}
+              {% set buttons = block.entry.all() %}
+              <ul>
+                {% for link in buttons %}
+                  <li><a href="{{ link.url }}" title="{{ link.title }}">{{ link.title }}</a></li>
+                {% endfor %}
+              </ul>
+
+            {% case 'buttonExternal' %}
+            {# BUTTON LINK - EXTERNAL PAGE #}
+              <ul>
+                <li><a href="{{block.linkUrl}}"{% if block.newWindow %} target="_blank"{% endif %}>{{block.linkTitle}}</a></li>
+              </ul>
+
+          {% endswitch %}
+        {% endfor %}
+      ]]></content>
+
+      <author>
+          <name>{{ post.author.fullName | e }}</name>
+        {% if post.author.email %}
+          <email>{{ post.author.email | e }}</email>
+        {% endif %}
+        <uri>{{ siteUrl | e }}</uri>
+      </author>
+
+      {% if post.category %}
+        <category term="{{ post.category | e }}" />
+      {% endif %}
+
+      {% for tag in post.newsEventsTags.all() %}
+        <category term="{{ tag | e }}" />
+      {% endfor %}
+
+      {# {% if post.excerpt and post.excerpt != empty %}
+        <summary type="html">{{ post.excerpt | e }}</summary>
+      {% endif %} #}
+
+      {% set employeePhotoExists = false %}
+      {% if post.employee | length %}
+        {% if post.employee.one().staffPhoto | length %}
+          {% set employeePhotoExists = true %}
+        {% endif %}
+      {% endif %}
+
+      {% if (post.primaryImage | length) or employeePhotoExists %}
+
+        {% set outputWidths = [480, 640, 1024, 1600] %}
+        {%- set initialQuality = 75 -%}
+        {%- set thumb = { width: 75, height: 75, quality: initialQuality } -%}
+        {%- set large = { width: 1280, quality: initialQuality } -%}
+
+        {% if post.primaryImage | length %}
+          {%- set image = post.primaryImage.one() -%}
+        {% else %}
+          {%- set image = post.employee.one().staffPhoto.one() -%}
+        {% endif %}
+        <media:content xmlns:media="http://search.yahoo.com/mrss/" url="{{ image.getUrl(large) }}" expression="full" width="image.getUrl(large).width()" height="image.getUrl(large).height()" />
+        <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{{ image.getUrl(thumb) }}" width="75" height="75" />
+      {% endif %}
+    </entry>
+  {% endfor %}
+</feed>
