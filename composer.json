@@ -50,7 +50,6 @@
         "mblode/svgplaceholder": "^1.0",
         "mexitek/phpcolors": "dev-master",
         "mikestecker/craft-videoembedder": "^1.0",
-        "mikestecker/craft3-encodeemail": "dev-master",
         "newism/craft3-fields": "^0.0.10",
         "nystudio107/craft-cookies": "^1.1",
         "nystudio107/craft-fastcgicachebust": "^1.0",
@@ -81,10 +80,6 @@
       {
         "type": "composer",
         "url": "https://asset-packagist.org"
-      },
-      {
-        "type": "vcs",
-        "url": "https://github.com/mikestecker/craft3-encodeemail"
       },
       {
         "type": "path",
