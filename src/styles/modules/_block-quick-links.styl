@@ -16,7 +16,7 @@
     text-transform $module-quick-links-title-transform
     text-decoration $module-quick-links-link-decoration
     transition: $link-transition
-  
+
   > h3:before
     background-color: $module-quick-links-link-color
     background-repeat: no-repeat
@@ -28,7 +28,7 @@
     margin-right: 0.35em
     transition: background-color $transition-timing
     vertical-align middle
-    
+
   > h3 a:hover
       color $module-quick-links-link-hover-color
       // &:after
@@ -42,7 +42,7 @@
     font-size $module-quick-links-link-size
     font-weight $module-quick-links-link-weight
     margin 1em 0
-    
+
     &:last-child
       margin-bottom 0
 
@@ -68,7 +68,7 @@
   ul
     padding 0
     width 100%
-    
+
     +above(m)
       display flex
       flex-flow row wrap
@@ -89,6 +89,7 @@
   a
     button()
     display block
+    white-space unset
 
 #landing--quick-links #block--subpages
 #landing--quick-links #block--quick-links
@@ -110,15 +111,15 @@ aside #block--quick-links
 aside #block--subpages
 aside #block--quick-links
   border-top $module-quick-links-top-border
-      
+
   li
     border-left $module-quick-links-left-border
     margin 0
     padding .5em 'calc(%s - %s)' % (rem(30px) $module-quick-links-left-border-width)
-    
+
     +above(xl)
       padding .5em 'calc((%s * (%s/%s)) - %s)' % (100vw 1 36 $module-quick-links-left-border-width)
-    
+
     > a
       color $module-quick-links-link-color
       text-decoration $module-quick-links-link-decoration
@@ -140,7 +141,7 @@ aside #block--quick-links
         color $module-quick-links-link-hover-color
         &:after
           transform translateX(0.35em)
-  
+
     &.active
       border-left-color $module-quick-links-link-color-active
       > a
