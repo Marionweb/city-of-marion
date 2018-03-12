@@ -3734,9 +3734,9 @@ gulp-postcss@^7.0.1:
     postcss-load-config "^1.2.0"
     vinyl-sourcemaps-apply "^0.2.1"
 
-gulp-print@^5.0.0:
+gulp-print@hoschi/gulp-print#feature/rollup:
   version "5.0.0"
-  resolved "https://registry.yarnpkg.com/gulp-print/-/gulp-print-5.0.0.tgz#0fa2791dc4589633f4015f054e4f39a8d285120b"
+  resolved "https://codeload.github.com/hoschi/gulp-print/tar.gz/41e6175008a425c87c307e41e76e4107ea77cddf"
   dependencies:
     ansi-colors "^1.0.1"
     fancy-log "^1.3.2"

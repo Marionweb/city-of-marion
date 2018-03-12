@@ -39,11 +39,14 @@
     width rem(102px)
     +above(m)
       border rem(10px) solid $white
-      height rem(200px)
       margin 0
       position absolute
       right 'calc(%s * (-%s/%s * -%s) - (%s - %s * (-%s/%s * -%s)) + %s) !important' % (100vw 1 36 1 30px 30px 1 36 1 30px)
       top rem(-34.5px)
+      height rem(140px)
+      width rem(140px)
+    +above(xl)
+      height rem(200px)
       width rem(200px)
 
 
@@ -55,7 +58,6 @@
     text-align center
     text-transform $module-mayors-welcome-title-transform
     +above(m)
-      padding-right rem(100px)
       text-align left
 
   > h3
@@ -64,10 +66,14 @@
     font-size $module-mayors-welcome-name-size-mobile
     +above(m)
       font-size $module-mayors-welcome-name-size-desktop
+      padding-right rem(100px)
   > h2
     color $module-mayors-welcome-headline-color
     font-size $module-mayors-welcome-headline-size-mobile
-    +above(m)
+    +above(l)
+      font-size $module-mayors-welcome-headline-size-desktop
+    +above(xl)
+      padding-right rem(120px)
       font-size $module-mayors-welcome-headline-size-desktop
 
   > p
