@@ -6,7 +6,7 @@
   <updated>{{ now | atom }}</updated>
   <id>{{ url(craft.app.request.pathInfo) }}</id>
 
-  <title type="html">{{ siteName }}</title>
+  <title type="html">{{ siteName }} - All News &amp; Updates</title>
 
   {% if general.description %}
     <subtitle>{{ general.description | e }}</subtitle>

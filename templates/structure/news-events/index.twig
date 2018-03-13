@@ -6,7 +6,7 @@
 
 {% set title = entry.title %}
 
-{% do view.registerLinkTag({href: siteUrl ~ 'news-events/feed', rel: 'alternate', type: 'application/rss+xml'}) %}
+{% do view.registerLinkTag({href: siteUrl ~ 'news-events/feed', title: 'City of Marion - All News & Events', rel: 'alternate', type: 'application/rss+xml'}) %}
 
 {% set yearFilter = craft.app.request.getParam('year') %}
 {% set monthFilter = craft.app.request.getParam('month') %}

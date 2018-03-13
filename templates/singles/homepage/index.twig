@@ -4,6 +4,8 @@
 
 {% extends "layouts/columns/_two_parallax" %}
 
+{% do view.registerLinkTag({href: siteUrl ~ 'news-events/feed', title: 'City of Marion - All News & Events', rel: 'alternate', type: 'application/rss+xml'}) %}
+
 {# PARALLAX HEADER #}
 {% block parallaxBack %}
 
