@@ -25,7 +25,7 @@
       height $module-person-image-size-mobile
       width $module-person-image-size-mobile
 
-    
+
       &.desktop
         display none
         visibility hidden
@@ -36,16 +36,17 @@
         &.desktop
           display block
           visibility visible
-      
+
       +above(m)
-        box-shadow $module-person-shadow
         // width 65%
         width: 'calc(%s + %s)' % (65% rem(20px))
         position: relative
         margin: 0 auto rem(55.5px)
         height: auto
         line-height: 0
-        border 10px solid $white
+        img
+          border 10px solid $white
+          box-shadow $module-person-shadow
         &, img, &:before
           border-radius 50%
 
@@ -76,7 +77,7 @@
   +above(m)
     margin-top rem(77px)
     padding-top rem(64px)
-  
+
   > h4
     font-family $module-person-contact-person-title-font
     color $module-person-contact-person-title-color
@@ -90,7 +91,7 @@
   .block--staff-member
     margin-bottom rem(28px)
   .block--staff-member a
-    
+
     &:after
       background-color: $module-person-contact-arrow-color
       background-repeat: no-repeat
@@ -106,11 +107,11 @@
       margin-left: 0.15em
       transition: background-color $transition-timing, transform $transition-timing
       vertical-align middle
-    
-      
-    
+
+
+
     +above(m)
-      display block
+      display flex
       height auto
       padding-left rem(25.5px)
       padding-right 'calc(%s * (-%s/%s * -%s) - (%s - %s * (-%s/%s * -%s)) + %s)' % (100vw 2 36 1 30px 30px 2 36 1 30px)
@@ -119,16 +120,17 @@
       &:hover
         &:after
           transform translateX(0.35em)
-    
+
     > figure
       +above(m)
         &.desktop
           display inline-block
         width $module-person-contact-image-size-desktop
         margin 0
-        border $module-person-contact-image-border-width-desktop solid $white
         vertical-align top
-   
+        img
+          border $module-person-contact-image-border-width-desktop solid $white
+
     .block--staff-member--name
       padding-left rem(12px)
       text-align left
@@ -139,7 +141,7 @@
         white-space initial
         h3
           margin-top .5em
-  
+
   dl
     dt
     dd
@@ -149,7 +151,7 @@
         font-size $module-person-contact-list-size-desktop
     dt
       font-weight $module-person-contact-list-title-weight
-      
+
       &:before
         background-color: $module-person-contact-list-color
         background-repeat: no-repeat
@@ -163,7 +165,7 @@
         margin-right: 0.4em
         vertical-align baseline
         mask: embedurl("../sprites/carrot.svg", "utf8") no-repeat 50% 50%/100% auto
-    
+
     dd
       font-style $module-person-contact-list-list-style
       margin 0
