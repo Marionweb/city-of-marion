@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "ea4bfa95da7094c0b0bacdb189a01f23",
+    "content-hash": "02b9d113d94b2d66e20a2e7d69bcaf40",
     "packages": [
         {
             "name": "aelvan/inlin",
@@ -116,16 +116,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.52.24",
+            "version": "3.52.27",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "e39a486cca4455f1c2294521281efbec5075a144"
+                "reference": "2ff982460d5c5eb0a57b7c38bd9ad4e9c2f05c86"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/e39a486cca4455f1c2294521281efbec5075a144",
-                "reference": "e39a486cca4455f1c2294521281efbec5075a144",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/2ff982460d5c5eb0a57b7c38bd9ad4e9c2f05c86",
+                "reference": "2ff982460d5c5eb0a57b7c38bd9ad4e9c2f05c86",
                 "shasum": ""
             },
             "require": {
@@ -192,7 +192,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2018-03-12T19:40:30+00:00"
+            "time": "2018-03-15T19:43:26+00:00"
         },
         {
             "name": "barrelstrength/sprout-base",
@@ -1148,16 +1148,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.0.0-RC14",
+            "version": "3.0.0-RC15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "fb4faffb435e41756750144c0ed3724d2f52a86f"
+                "reference": "2c92030aa91e5ed655dd7896f7739737d8b8ea29"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/fb4faffb435e41756750144c0ed3724d2f52a86f",
-                "reference": "fb4faffb435e41756750144c0ed3724d2f52a86f",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/2c92030aa91e5ed655dd7896f7739737d8b8ea29",
+                "reference": "2c92030aa91e5ed655dd7896f7739737d8b8ea29",
                 "shasum": ""
             },
             "require": {
@@ -1185,7 +1185,7 @@
                 "pixelandtonic/imagine": "~0.7.1.2",
                 "seld/cli-prompt": "~1.0.3",
                 "twig/twig": "~2.4.4",
-                "yiisoft/yii2": "~2.0.14.0",
+                "yiisoft/yii2": "~2.0.14.2",
                 "yiisoft/yii2-debug": "~2.0.10",
                 "yiisoft/yii2-queue": "~2.0.1",
                 "yiisoft/yii2-swiftmailer": "~2.1.0",
@@ -1226,7 +1226,7 @@
                 "craftcms",
                 "yii2"
             ],
-            "time": "2018-03-06T19:06:32+00:00"
+            "time": "2018-03-13T20:20:40+00:00"
         },
         {
             "name": "craftcms/contact-form",
@@ -1799,6 +1799,49 @@
             "time": "2017-12-05T01:05:58+00:00"
         },
         {
+            "name": "craftcms/vue-asset",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/craftcms/vue-asset.git",
+                "reference": "2f7c1372368cf8bba59375469b43bc68fae3f594"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/craftcms/vue-asset/zipball/2f7c1372368cf8bba59375469b43bc68fae3f594",
+                "reference": "2f7c1372368cf8bba59375469b43bc68fae3f594",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "~3.0.0-beta.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "craft\\vue\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pixel & Tonic",
+                    "homepage": "https://pixelandtonic.com/"
+                }
+            ],
+            "description": "Vue.js asset bundle for Craft CMS",
+            "keywords": [
+                "JS",
+                "cms",
+                "craftcms",
+                "vue",
+                "yii2"
+            ],
+            "time": "2017-07-20T15:14:12+00:00"
+        },
+        {
             "name": "creocoder/yii2-nested-sets",
             "version": "0.9.0",
             "source": {
@@ -1953,6 +1996,57 @@
                 "utils"
             ],
             "time": "2017-06-12T01:10:27+00:00"
+        },
+        {
+            "name": "davechild/textstatistics",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DaveChild/Text-Statistics.git",
+                "reference": "6196462b4fe730a8ff0019036baf362295c161b3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DaveChild/Text-Statistics/zipball/6196462b4fe730a8ff0019036baf362295c161b3",
+                "reference": "6196462b4fe730a8ff0019036baf362295c161b3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.2.*"
+            },
+            "suggest": {
+                "ext-bcmath": "More accurate floating point calculations.",
+                "ext-mbstring": "Handle multi-byte text properly."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "DaveChild\\TextStatistics": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Dave Child",
+                    "email": "dave@addedbytes.com",
+                    "homepage": "https://www.addedbytes.com/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP package to measure the readability of text according to various algorithms.",
+            "homepage": "https://github.com/DaveChild/Text-Statistics",
+            "time": "2015-04-22T14:55:55+00:00"
         },
         {
             "name": "doctrine/collections",
@@ -2726,16 +2820,16 @@
         },
         {
             "name": "giggsey/libphonenumber-for-php",
-            "version": "8.9.1",
+            "version": "8.9.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/giggsey/libphonenumber-for-php.git",
-                "reference": "f50b45cc50d9058797c037fc15e34d0511a4423e"
+                "reference": "dc06ec4f106568fcd79be56e2574a51759d73f67"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/f50b45cc50d9058797c037fc15e34d0511a4423e",
-                "reference": "f50b45cc50d9058797c037fc15e34d0511a4423e",
+                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/dc06ec4f106568fcd79be56e2574a51759d73f67",
+                "reference": "dc06ec4f106568fcd79be56e2574a51759d73f67",
                 "shasum": ""
             },
             "require": {
@@ -2749,7 +2843,7 @@
                 "pear/versioncontrol_git": "^0.5",
                 "phing/phing": "^2.7",
                 "phpunit/phpunit": "^4.8|^5.0",
-                "satooshi/php-coveralls": "^1.0",
+                "satooshi/php-coveralls": "^1.0|^2.0",
                 "symfony/console": "^2.8|^3.0"
             },
             "type": "library",
@@ -2790,7 +2884,7 @@
                 "phonenumber",
                 "validation"
             ],
-            "time": "2018-03-07T12:33:46+00:00"
+            "time": "2018-03-14T18:52:28+00:00"
         },
         {
             "name": "giggsey/locale",
@@ -5018,6 +5112,74 @@
             "time": "2018-02-02T04:22:25+00:00"
         },
         {
+            "name": "nystudio107/craft-seomatic",
+            "version": "3.0.0-beta.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nystudio107/craft-seomatic.git",
+                "reference": "2a9dc2ec99a8afb54ef9c87dd5f54627c4f350ed"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/2a9dc2ec99a8afb54ef9c87dd5f54627c4f350ed",
+                "reference": "2a9dc2ec99a8afb54ef9c87dd5f54627c4f350ed",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0-RC12",
+                "craftcms/vue-asset": "^1.0",
+                "davechild/textstatistics": "^1.0.1",
+                "php-science/textrank": "^1.0.3",
+                "sunra/php-simple-html-dom-parser": "^1.5.2"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "SEOmatic",
+                "handle": "seomatic",
+                "hasCpSettings": true,
+                "hasCpSection": true,
+                "changelogUrl": "https://raw.githubusercontent.com/nystudio107/craft-seomatic/v3/CHANGELOG.md",
+                "class": "nystudio107\\seomatic\\Seomatic",
+                "components": {
+                    "frontendTemplates": "nystudio107\\seomatic\\services\\FrontendTemplates",
+                    "helper": "nystudio107\\seomatic\\services\\Helper",
+                    "jsonLd": "nystudio107\\seomatic\\services\\JsonLd",
+                    "link": "nystudio107\\seomatic\\services\\Link",
+                    "metaBundles": "nystudio107\\seomatic\\services\\MetaBundles",
+                    "metaContainers": "nystudio107\\seomatic\\services\\MetaContainers",
+                    "redirects": "nystudio107\\seomatic\\services\\Redirects",
+                    "script": "nystudio107\\seomatic\\services\\Script",
+                    "sitemaps": "nystudio107\\seomatic\\services\\Sitemaps",
+                    "tag": "nystudio107\\seomatic\\services\\Tag",
+                    "title": "nystudio107\\seomatic\\services\\Title"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "nystudio107\\seomatic\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "nystudio107",
+                    "homepage": "https://nystudio107.com"
+                }
+            ],
+            "description": "SEOmatic facilitates modern SEO best practices & implementation for Craft CMS 3. It is a turnkey SEO system that is comprehensive, powerful, and flexible.",
+            "keywords": [
+                "Craft",
+                "cms",
+                "craft-plugin",
+                "craftcms",
+                "seomatic"
+            ],
+            "time": "2018-03-15T17:29:28+00:00"
+        },
+        {
             "name": "nystudio107/craft-typogrify",
             "version": "1.1.8",
             "source": {
@@ -5591,6 +5753,57 @@
             "time": "2016-01-26T13:27:02+00:00"
         },
         {
+            "name": "php-science/textrank",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DavidBelicza/PHP-Science-TextRank.git",
+                "reference": "927344fe91206ecf9615d801031a1915cf53605c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DavidBelicza/PHP-Science-TextRank/zipball/927344fe91206ecf9615d801031a1915cf53605c",
+                "reference": "927344fe91206ecf9615d801031a1915cf53605c",
+                "shasum": ""
+            },
+            "require": {
+                "php": "7.*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PhpScience\\TextRank\\": [
+                        "src/",
+                        "tests/"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Belicza",
+                    "email": "87.bdavid@gmail.com"
+                }
+            ],
+            "description": "TextRank (automatic text summarization) for PHP7 and HHVM.",
+            "keywords": [
+                "PHP7",
+                "automatic",
+                "hhvm",
+                "science",
+                "strict",
+                "summarization",
+                "textrank"
+            ],
+            "time": "2017-12-18T20:08:03+00:00"
+        },
+        {
             "name": "pimple/pimple",
             "version": "v3.2.3",
             "source": {
@@ -6092,6 +6305,54 @@
                 "plugin"
             ],
             "time": "2017-04-02T06:13:59+00:00"
+        },
+        {
+            "name": "sunra/php-simple-html-dom-parser",
+            "version": "v1.5.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sunra/php-simple-html-dom-parser.git",
+                "reference": "75b9b1cb64502d8f8c04dc11b5906b969af247c6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sunra/php-simple-html-dom-parser/zipball/75b9b1cb64502d8f8c04dc11b5906b969af247c6",
+                "reference": "75b9b1cb64502d8f8c04dc11b5906b969af247c6",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": ">=5.3.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Sunra\\PhpSimple\\HtmlDomParser": "Src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sunra",
+                    "email": "sunra@yandex.ru",
+                    "homepage": "https://github.com/sunra"
+                },
+                {
+                    "name": "S.C. Chen",
+                    "homepage": "http://sourceforge.net/projects/simplehtmldom/"
+                }
+            ],
+            "description": "Composer adaptation of: A HTML DOM parser written in PHP5+ let you manipulate HTML in a very easy way! Require PHP 5+. Supports invalid HTML. Find tags on an HTML page with selectors just like jQuery. Extract contents from HTML in a single line.",
+            "homepage": "https://github.com/sunra/php-simple-html-dom-parser",
+            "keywords": [
+                "dom",
+                "html",
+                "parser"
+            ],
+            "time": "2016-11-22T22:57:47+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -7123,16 +7384,16 @@
         },
         {
             "name": "yiisoft/yii2",
-            "version": "2.0.14.1",
+            "version": "2.0.14.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "d99969394c66dc3606134af092b8ec561ea5d7c6"
+                "reference": "ef74f3783e964cea477f06e6d6ce209df1f37881"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/d99969394c66dc3606134af092b8ec561ea5d7c6",
-                "reference": "d99969394c66dc3606134af092b8ec561ea5d7c6",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/ef74f3783e964cea477f06e6d6ce209df1f37881",
+                "reference": "ef74f3783e964cea477f06e6d6ce209df1f37881",
                 "shasum": ""
             },
             "require": {
@@ -7219,7 +7480,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2018-02-24T20:23:06+00:00"
+            "time": "2018-03-13T14:15:01+00:00"
         },
         {
             "name": "yiisoft/yii2-bootstrap",
@@ -7708,7 +7969,8 @@
     "aliases": [],
     "minimum-stability": "beta",
     "stability-flags": {
-        "mexitek/phpcolors": 20
+        "mexitek/phpcolors": 20,
+        "nystudio107/craft-seomatic": 10
     },
     "prefer-stable": false,
     "prefer-lowest": false,
