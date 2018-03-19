@@ -3302,16 +3302,16 @@
         },
         {
             "name": "jaybizzle/crawler-detect",
-            "version": "v1.2.60",
+            "version": "v1.2.61",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JayBizzle/Crawler-Detect.git",
-                "reference": "6e9abfe7100f1c8febfa600b3568192989f10c2e"
+                "reference": "9f22764fa72f6a30211fe16cf28a1f43642136de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JayBizzle/Crawler-Detect/zipball/6e9abfe7100f1c8febfa600b3568192989f10c2e",
-                "reference": "6e9abfe7100f1c8febfa600b3568192989f10c2e",
+                "url": "https://api.github.com/repos/JayBizzle/Crawler-Detect/zipball/9f22764fa72f6a30211fe16cf28a1f43642136de",
+                "reference": "9f22764fa72f6a30211fe16cf28a1f43642136de",
                 "shasum": ""
             },
             "require": {
@@ -3347,7 +3347,7 @@
                 "crawlerdetect",
                 "php crawler detect"
             ],
-            "time": "2018-03-05T20:50:06+00:00"
+            "time": "2018-03-19T20:27:17+00:00"
         },
         {
             "name": "justinrainbow/json-schema",
@@ -3940,16 +3940,16 @@
         },
         {
             "name": "league/oauth2-google",
-            "version": "2.1.0",
+            "version": "2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/oauth2-google.git",
-                "reference": "647bfbd47b8cf9d59b26ef1a61b710fe811215cb"
+                "reference": "c0faed29ec6d665ce3234e01f62029516cee4c02"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/oauth2-google/zipball/647bfbd47b8cf9d59b26ef1a61b710fe811215cb",
-                "reference": "647bfbd47b8cf9d59b26ef1a61b710fe811215cb",
+                "url": "https://api.github.com/repos/thephpleague/oauth2-google/zipball/c0faed29ec6d665ce3234e01f62029516cee4c02",
+                "reference": "c0faed29ec6d665ce3234e01f62029516cee4c02",
                 "shasum": ""
             },
             "require": {
@@ -3958,7 +3958,7 @@
             "require-dev": {
                 "eloquent/phony": "^0.14.6",
                 "phpunit/phpunit": "^5.7",
-                "satooshi/php-coveralls": "dev-master as 2.0.0",
+                "satooshi/php-coveralls": "^2.0",
                 "squizlabs/php_codesniffer": "^2.0"
             },
             "type": "library",
@@ -3987,7 +3987,7 @@
                 "oauth",
                 "oauth2"
             ],
-            "time": "2018-03-09T15:47:13+00:00"
+            "time": "2018-03-19T17:28:55+00:00"
         },
         {
             "name": "mailgun/mailgun-php",
@@ -5113,16 +5113,16 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "3.0.0-beta.10",
+            "version": "3.0.0-beta.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "febad0c6efbe09ddeb7999056837946fb998ac16"
+                "reference": "5a9b631f78e205e24642afe7393b1656fd98a962"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/febad0c6efbe09ddeb7999056837946fb998ac16",
-                "reference": "febad0c6efbe09ddeb7999056837946fb998ac16",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/5a9b631f78e205e24642afe7393b1656fd98a962",
+                "reference": "5a9b631f78e205e24642afe7393b1656fd98a962",
                 "shasum": ""
             },
             "require": {
@@ -5177,7 +5177,7 @@
                 "craftcms",
                 "seomatic"
             ],
-            "time": "2018-03-19T01:52:31+00:00"
+            "time": "2018-03-19T20:28:11+00:00"
         },
         {
             "name": "nystudio107/craft-typogrify",
