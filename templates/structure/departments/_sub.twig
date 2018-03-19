@@ -6,6 +6,9 @@
 {% extends 'layouts/columns/_two' ~ parallax %}
 
 {% set title = entry.title %}
+
+{% do seomatic.meta.seoTitle("City of Marion " ~ craft.entries.section('departments').slug(craft.app.request.getSegment(3)).one().title ~ " Department: " ~ entry.title) %}
+
 {% set type = 'standard' %}
 
 
