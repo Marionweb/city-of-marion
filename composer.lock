@@ -4938,16 +4938,16 @@
         },
         {
             "name": "nystudio107/craft-imageoptimize",
-            "version": "1.4.23",
+            "version": "1.4.24",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-imageoptimize.git",
-                "reference": "95784f02e17e10e83c1881f4f983d952ad738629"
+                "reference": "1b853f12043c285b58fd41ef73f82bb2d6715546"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-imageoptimize/zipball/95784f02e17e10e83c1881f4f983d952ad738629",
-                "reference": "95784f02e17e10e83c1881f4f983d952ad738629",
+                "url": "https://api.github.com/repos/nystudio107/craft-imageoptimize/zipball/1b853f12043c285b58fd41ef73f82bb2d6715546",
+                "reference": "1b853f12043c285b58fd41ef73f82bb2d6715546",
                 "shasum": ""
             },
             "require": {
@@ -5001,7 +5001,7 @@
                 "optimize",
                 "optimize-images"
             ],
-            "time": "2018-03-03T19:00:08+00:00"
+            "time": "2018-03-19T22:45:14+00:00"
         },
         {
             "name": "nystudio107/craft-minify",
@@ -7053,16 +7053,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v2.4.6",
+            "version": "v2.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "d2117ec118c1ff3d28ccddca8212d82787a4809f"
+                "reference": "69aacd44dbbaa3199d5afb68605c996d577896fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/d2117ec118c1ff3d28ccddca8212d82787a4809f",
-                "reference": "d2117ec118c1ff3d28ccddca8212d82787a4809f",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/69aacd44dbbaa3199d5afb68605c996d577896fc",
+                "reference": "69aacd44dbbaa3199d5afb68605c996d577896fc",
                 "shasum": ""
             },
             "require": {
@@ -7071,8 +7071,8 @@
             },
             "require-dev": {
                 "psr/container": "^1.0",
-                "symfony/debug": "~2.7",
-                "symfony/phpunit-bridge": "~3.3@dev"
+                "symfony/debug": "^2.7",
+                "symfony/phpunit-bridge": "^3.3"
             },
             "type": "library",
             "extra": {
@@ -7115,7 +7115,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2018-03-03T16:23:01+00:00"
+            "time": "2018-03-20T04:31:17+00:00"
         },
         {
             "name": "verbb/cp-nav",
