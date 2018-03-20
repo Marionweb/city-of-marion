@@ -3,12 +3,13 @@
 </p>
 
 # City of Marion Website
-![Craft 3](https://img.shields.io/badge/built%20with-craft%203-red.svg?style=flat-square) 
+![Craft 3](https://img.shields.io/badge/built%20with-craft%203-red.svg?style=flat-square)
 [![buddy pipeline](https://app.buddy.works/cityofmarion/city-of-marion/pipelines/pipeline/64152/badge.svg?token=69b391b5bac8414758e646b1e2c4c26ed1145f5e0ec5de6f07c3a52fa721b371 "buddy pipeline")](https://app.buddy.works/cityofmarion/city-of-marion/pipelines/pipeline/64152)
+[![buddy pipeline](https://app.buddy.works/cityofmarion/city-of-marion/pipelines/pipeline/67650/badge.svg?token=69b391b5bac8414758e646b1e2c4c26ed1145f5e0ec5de6f07c3a52fa721b371 "buddy pipeline")](https://app.buddy.works/cityofmarion/city-of-marion/pipelines/pipeline/67650)
 
 [City of Marion](https://cityofmarion.in.gov) website built with [CraftCMS 3](https://craftcms.com) and a lot of 💜.
 
-*This project is in active development, do not deploy to production.*
+*This project is in active development.*
 
 ## Getting started
 
@@ -20,4 +21,4 @@
 5. You're all set. Enjoy!
 
 
-Copyright 2017 City of Marion, Indiana. Built by [Mike Stecker](http://mikestecker.com) and designed by [Marion Design Co.](http://www.mariondesign.co)
+Copyright 2017-2018 City of Marion, Indiana. Built by [Mike Stecker](http://mikestecker.com) and designed by [Marion Design Co.](http://www.mariondesign.co)
