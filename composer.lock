@@ -116,16 +116,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.52.28",
+            "version": "3.52.29",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "4b8286d243ad9eeaaa1fccf312c1d9f920ef7cd0"
+                "reference": "51efd3a7cda92f245ccf39fea03227e0eb473c93"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/4b8286d243ad9eeaaa1fccf312c1d9f920ef7cd0",
-                "reference": "4b8286d243ad9eeaaa1fccf312c1d9f920ef7cd0",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/51efd3a7cda92f245ccf39fea03227e0eb473c93",
+                "reference": "51efd3a7cda92f245ccf39fea03227e0eb473c93",
                 "shasum": ""
             },
             "require": {
@@ -192,7 +192,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2018-03-16T20:40:34+00:00"
+            "time": "2018-03-20T21:15:39+00:00"
         },
         {
             "name": "barrelstrength/sprout-base",
@@ -4883,16 +4883,16 @@
         },
         {
             "name": "nystudio107/craft-fastcgicachebust",
-            "version": "1.0.6",
+            "version": "1.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-fastcgicachebust.git",
-                "reference": "df4a6eea65e45e3eac9a4f6f0d1cbf3b06c47b89"
+                "reference": "800730cd146a8453a0c6fcbe8772c14c7f30c1e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-fastcgicachebust/zipball/df4a6eea65e45e3eac9a4f6f0d1cbf3b06c47b89",
-                "reference": "df4a6eea65e45e3eac9a4f6f0d1cbf3b06c47b89",
+                "url": "https://api.github.com/repos/nystudio107/craft-fastcgicachebust/zipball/800730cd146a8453a0c6fcbe8772c14c7f30c1e2",
+                "reference": "800730cd146a8453a0c6fcbe8772c14c7f30c1e2",
                 "shasum": ""
             },
             "require": {
@@ -4934,7 +4934,7 @@
                 "craftcms",
                 "fastcgi cache bust"
             ],
-            "time": "2018-03-02T16:04:00+00:00"
+            "time": "2018-03-20T21:04:28+00:00"
         },
         {
             "name": "nystudio107/craft-imageoptimize",
@@ -5113,16 +5113,16 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "3.0.0-beta.11",
+            "version": "3.0.0-beta.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "5a9b631f78e205e24642afe7393b1656fd98a962"
+                "reference": "adf4da057571c0048d4ebba6d6e170662b3754a4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/5a9b631f78e205e24642afe7393b1656fd98a962",
-                "reference": "5a9b631f78e205e24642afe7393b1656fd98a962",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/adf4da057571c0048d4ebba6d6e170662b3754a4",
+                "reference": "adf4da057571c0048d4ebba6d6e170662b3754a4",
                 "shasum": ""
             },
             "require": {
@@ -5177,20 +5177,20 @@
                 "craftcms",
                 "seomatic"
             ],
-            "time": "2018-03-19T20:28:11+00:00"
+            "time": "2018-03-21T17:28:53+00:00"
         },
         {
             "name": "nystudio107/craft-typogrify",
-            "version": "1.1.8",
+            "version": "1.1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-typogrify.git",
-                "reference": "ebc4ea55050d88021d72c78eaae31a6448243e34"
+                "reference": "26ade78f72a67dcff0d65493545bbbd85999926b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-typogrify/zipball/ebc4ea55050d88021d72c78eaae31a6448243e34",
-                "reference": "ebc4ea55050d88021d72c78eaae31a6448243e34",
+                "url": "https://api.github.com/repos/nystudio107/craft-typogrify/zipball/26ade78f72a67dcff0d65493545bbbd85999926b",
+                "reference": "26ade78f72a67dcff0d65493545bbbd85999926b",
                 "shasum": ""
             },
             "require": {
@@ -5234,7 +5234,7 @@
                 "craftcms",
                 "typogrify"
             ],
-            "time": "2018-03-12T14:39:09+00:00"
+            "time": "2018-03-20T23:05:07+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -7544,16 +7544,16 @@
         },
         {
             "name": "yiisoft/yii2-composer",
-            "version": "2.0.5",
+            "version": "2.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-composer.git",
-                "reference": "3f4923c2bde6caf3f5b88cc22fdd5770f52f8df2"
+                "reference": "163419f1f197e02f015713b0d4f85598d8f8aa80"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-composer/zipball/3f4923c2bde6caf3f5b88cc22fdd5770f52f8df2",
-                "reference": "3f4923c2bde6caf3f5b88cc22fdd5770f52f8df2",
+                "url": "https://api.github.com/repos/yiisoft/yii2-composer/zipball/163419f1f197e02f015713b0d4f85598d8f8aa80",
+                "reference": "163419f1f197e02f015713b0d4f85598d8f8aa80",
                 "shasum": ""
             },
             "require": {
@@ -7582,6 +7582,10 @@
                 {
                     "name": "Qiang Xue",
                     "email": "qiang.xue@gmail.com"
+                },
+                {
+                    "name": "Carsten Brandt",
+                    "email": "mail@cebe.cc"
                 }
             ],
             "description": "The composer plugin for Yii extension installer",
@@ -7590,7 +7594,7 @@
                 "extension installer",
                 "yii2"
             ],
-            "time": "2016-12-20T13:26:02+00:00"
+            "time": "2018-03-21T16:15:55+00:00"
         },
         {
             "name": "yiisoft/yii2-debug",
