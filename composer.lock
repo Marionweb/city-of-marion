@@ -116,16 +116,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.52.28",
+            "version": "3.52.32",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "4b8286d243ad9eeaaa1fccf312c1d9f920ef7cd0"
+                "reference": "c10b8f60a5da9ad4d7fa9f890186632a4c025d1b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/4b8286d243ad9eeaaa1fccf312c1d9f920ef7cd0",
-                "reference": "4b8286d243ad9eeaaa1fccf312c1d9f920ef7cd0",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/c10b8f60a5da9ad4d7fa9f890186632a4c025d1b",
+                "reference": "c10b8f60a5da9ad4d7fa9f890186632a4c025d1b",
                 "shasum": ""
             },
             "require": {
@@ -192,20 +192,20 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2018-03-16T20:40:34+00:00"
+            "time": "2018-03-23T18:04:27+00:00"
         },
         {
             "name": "barrelstrength/sprout-base",
-            "version": "1.0.9",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/barrelstrength/craft-sprout-base.git",
-                "reference": "5a7180735264319710de794b0ffecfd8556db876"
+                "reference": "4ca92ebbc7c9b57eb796b254692930c56cb4dff1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/barrelstrength/craft-sprout-base/zipball/5a7180735264319710de794b0ffecfd8556db876",
-                "reference": "5a7180735264319710de794b0ffecfd8556db876",
+                "url": "https://api.github.com/repos/barrelstrength/craft-sprout-base/zipball/4ca92ebbc7c9b57eb796b254692930c56cb4dff1",
+                "reference": "4ca92ebbc7c9b57eb796b254692930c56cb4dff1",
                 "shasum": ""
             },
             "require": {
@@ -232,7 +232,7 @@
                 }
             ],
             "description": "Common libraries for Sprout Plugins for Craft CMS",
-            "time": "2018-03-10T22:48:59+00:00"
+            "time": "2018-03-25T04:11:02+00:00"
         },
         {
             "name": "barrelstrength/sprout-encode-email",
@@ -1148,16 +1148,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.0.0-RC15",
+            "version": "3.0.0-RC16.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "2c92030aa91e5ed655dd7896f7739737d8b8ea29"
+                "reference": "44fff955bb76c383c582bcd6e5ded80ac69a2dec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/2c92030aa91e5ed655dd7896f7739737d8b8ea29",
-                "reference": "2c92030aa91e5ed655dd7896f7739737d8b8ea29",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/44fff955bb76c383c582bcd6e5ded80ac69a2dec",
+                "reference": "44fff955bb76c383c582bcd6e5ded80ac69a2dec",
                 "shasum": ""
             },
             "require": {
@@ -1185,7 +1185,7 @@
                 "pixelandtonic/imagine": "~0.7.1.2",
                 "seld/cli-prompt": "~1.0.3",
                 "twig/twig": "~2.4.4",
-                "yiisoft/yii2": "~2.0.14.2",
+                "yiisoft/yii2": "~2.0.15.1",
                 "yiisoft/yii2-debug": "~2.0.10",
                 "yiisoft/yii2-queue": "~2.0.1",
                 "yiisoft/yii2-swiftmailer": "~2.1.0",
@@ -1226,7 +1226,7 @@
                 "craftcms",
                 "yii2"
             ],
-            "time": "2018-03-13T20:20:40+00:00"
+            "time": "2018-03-25T23:47:20+00:00"
         },
         {
             "name": "craftcms/contact-form",
@@ -2234,20 +2234,20 @@
         },
         {
             "name": "dolphiq/titleentriesfield",
-            "version": "1.0.5",
+            "version": "1.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Dolphiq/craft3-plugin-title-entries-field.git",
-                "reference": "13b2fb12ea27a1044670def372c0210ec24195d8"
+                "reference": "80d1e6901d7bd51bcd2f44a7621eca1294931a9f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Dolphiq/craft3-plugin-title-entries-field/zipball/13b2fb12ea27a1044670def372c0210ec24195d8",
-                "reference": "13b2fb12ea27a1044670def372c0210ec24195d8",
+                "url": "https://api.github.com/repos/Dolphiq/craft3-plugin-title-entries-field/zipball/80d1e6901d7bd51bcd2f44a7621eca1294931a9f",
+                "reference": "80d1e6901d7bd51bcd2f44a7621eca1294931a9f",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^3.0.0-RC1"
+                "craftcms/cms": "^3.0.0-RC2"
             },
             "type": "craft-plugin",
             "extra": {
@@ -2292,7 +2292,7 @@
                 "linkfield",
                 "menu"
             ],
-            "time": "2017-12-18T21:49:29+00:00"
+            "time": "2018-03-25T00:13:47+00:00"
         },
         {
             "name": "dukt/facebook",
@@ -2937,16 +2937,16 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "6.3.0",
+            "version": "6.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "f4db5a78a5ea468d4831de7f0bf9d9415e348699"
+                "reference": "49e42e6539f775e80c74086a710a882e1d5a8111"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/f4db5a78a5ea468d4831de7f0bf9d9415e348699",
-                "reference": "f4db5a78a5ea468d4831de7f0bf9d9415e348699",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/49e42e6539f775e80c74086a710a882e1d5a8111",
+                "reference": "49e42e6539f775e80c74086a710a882e1d5a8111",
                 "shasum": ""
             },
             "require": {
@@ -2956,7 +2956,7 @@
             },
             "require-dev": {
                 "ext-curl": "*",
-                "phpunit/phpunit": "^4.0 || ^5.0",
+                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.4",
                 "psr/log": "^1.0"
             },
             "suggest": {
@@ -2965,7 +2965,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "6.2-dev"
+                    "dev-master": "6.3-dev"
                 }
             },
             "autoload": {
@@ -2998,7 +2998,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2017-06-22T18:50:49+00:00"
+            "time": "2018-03-26T12:06:26+00:00"
         },
         {
             "name": "guzzlehttp/oauth-subscriber",
@@ -4159,12 +4159,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mexitek/phpColors.git",
-                "reference": "3d429c4dff3adf67118afde12eca344767fcd2fb"
+                "reference": "edf134221a1f2b6b9a15c0cfadd65dc1add8bad2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mexitek/phpColors/zipball/3d429c4dff3adf67118afde12eca344767fcd2fb",
-                "reference": "3d429c4dff3adf67118afde12eca344767fcd2fb",
+                "url": "https://api.github.com/repos/mexitek/phpColors/zipball/edf134221a1f2b6b9a15c0cfadd65dc1add8bad2",
+                "reference": "edf134221a1f2b6b9a15c0cfadd65dc1add8bad2",
                 "shasum": ""
             },
             "require": {
@@ -4199,7 +4199,7 @@
                 "frontend",
                 "ui"
             ],
-            "time": "2017-12-29T05:55:50+00:00"
+            "time": "2018-03-26T06:13:55+00:00"
         },
         {
             "name": "michelf/php-smartypants",
@@ -4883,16 +4883,16 @@
         },
         {
             "name": "nystudio107/craft-fastcgicachebust",
-            "version": "1.0.6",
+            "version": "1.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-fastcgicachebust.git",
-                "reference": "df4a6eea65e45e3eac9a4f6f0d1cbf3b06c47b89"
+                "reference": "800730cd146a8453a0c6fcbe8772c14c7f30c1e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-fastcgicachebust/zipball/df4a6eea65e45e3eac9a4f6f0d1cbf3b06c47b89",
-                "reference": "df4a6eea65e45e3eac9a4f6f0d1cbf3b06c47b89",
+                "url": "https://api.github.com/repos/nystudio107/craft-fastcgicachebust/zipball/800730cd146a8453a0c6fcbe8772c14c7f30c1e2",
+                "reference": "800730cd146a8453a0c6fcbe8772c14c7f30c1e2",
                 "shasum": ""
             },
             "require": {
@@ -4934,7 +4934,7 @@
                 "craftcms",
                 "fastcgi cache bust"
             ],
-            "time": "2018-03-02T16:04:00+00:00"
+            "time": "2018-03-20T21:04:28+00:00"
         },
         {
             "name": "nystudio107/craft-imageoptimize",
@@ -5113,16 +5113,16 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "3.0.0-beta.11",
+            "version": "3.0.0-beta.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "5a9b631f78e205e24642afe7393b1656fd98a962"
+                "reference": "010360151cf792f90e2579cf89eecc6e123b4f33"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/5a9b631f78e205e24642afe7393b1656fd98a962",
-                "reference": "5a9b631f78e205e24642afe7393b1656fd98a962",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/010360151cf792f90e2579cf89eecc6e123b4f33",
+                "reference": "010360151cf792f90e2579cf89eecc6e123b4f33",
                 "shasum": ""
             },
             "require": {
@@ -5177,20 +5177,20 @@
                 "craftcms",
                 "seomatic"
             ],
-            "time": "2018-03-19T20:28:11+00:00"
+            "time": "2018-03-26T03:01:02+00:00"
         },
         {
             "name": "nystudio107/craft-typogrify",
-            "version": "1.1.8",
+            "version": "1.1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-typogrify.git",
-                "reference": "ebc4ea55050d88021d72c78eaae31a6448243e34"
+                "reference": "26ade78f72a67dcff0d65493545bbbd85999926b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-typogrify/zipball/ebc4ea55050d88021d72c78eaae31a6448243e34",
-                "reference": "ebc4ea55050d88021d72c78eaae31a6448243e34",
+                "url": "https://api.github.com/repos/nystudio107/craft-typogrify/zipball/26ade78f72a67dcff0d65493545bbbd85999926b",
+                "reference": "26ade78f72a67dcff0d65493545bbbd85999926b",
                 "shasum": ""
             },
             "require": {
@@ -5234,7 +5234,7 @@
                 "craftcms",
                 "typogrify"
             ],
-            "time": "2018-03-12T14:39:09+00:00"
+            "time": "2018-03-20T23:05:07+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -7279,20 +7279,20 @@
         },
         {
             "name": "wbrowar/guide",
-            "version": "1.2.0",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wbrowar/craft-3-guide.git",
-                "reference": "f54e2a9eb31fd130a17b915783eb1e686d41f1fc"
+                "reference": "4767ddca3af59d02a013072691b71edb3fefa61c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wbrowar/craft-3-guide/zipball/f54e2a9eb31fd130a17b915783eb1e686d41f1fc",
-                "reference": "f54e2a9eb31fd130a17b915783eb1e686d41f1fc",
+                "url": "https://api.github.com/repos/wbrowar/craft-3-guide/zipball/4767ddca3af59d02a013072691b71edb3fefa61c",
+                "reference": "4767ddca3af59d02a013072691b71edb3fefa61c",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^3.0.0-RC14"
+                "craftcms/cms": "^3.0.0-RC16"
             },
             "type": "craft-plugin",
             "extra": {
@@ -7330,7 +7330,7 @@
                 "craftcms",
                 "guide"
             ],
-            "time": "2018-03-09T05:33:38+00:00"
+            "time": "2018-03-26T00:18:38+00:00"
         },
         {
             "name": "webmozart/assert",
@@ -7384,16 +7384,16 @@
         },
         {
             "name": "yiisoft/yii2",
-            "version": "2.0.14.2",
+            "version": "2.0.15.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "ef74f3783e964cea477f06e6d6ce209df1f37881"
+                "reference": "ed3a9e1c4abe206e1c3ce48a6b3624119b79850d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/ef74f3783e964cea477f06e6d6ce209df1f37881",
-                "reference": "ef74f3783e964cea477f06e6d6ce209df1f37881",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/ed3a9e1c4abe206e1c3ce48a6b3624119b79850d",
+                "reference": "ed3a9e1c4abe206e1c3ce48a6b3624119b79850d",
                 "shasum": ""
             },
             "require": {
@@ -7480,7 +7480,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2018-03-13T14:15:01+00:00"
+            "time": "2018-03-21T18:36:53+00:00"
         },
         {
             "name": "yiisoft/yii2-bootstrap",
@@ -7544,16 +7544,16 @@
         },
         {
             "name": "yiisoft/yii2-composer",
-            "version": "2.0.5",
+            "version": "2.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-composer.git",
-                "reference": "3f4923c2bde6caf3f5b88cc22fdd5770f52f8df2"
+                "reference": "163419f1f197e02f015713b0d4f85598d8f8aa80"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-composer/zipball/3f4923c2bde6caf3f5b88cc22fdd5770f52f8df2",
-                "reference": "3f4923c2bde6caf3f5b88cc22fdd5770f52f8df2",
+                "url": "https://api.github.com/repos/yiisoft/yii2-composer/zipball/163419f1f197e02f015713b0d4f85598d8f8aa80",
+                "reference": "163419f1f197e02f015713b0d4f85598d8f8aa80",
                 "shasum": ""
             },
             "require": {
@@ -7582,6 +7582,10 @@
                 {
                     "name": "Qiang Xue",
                     "email": "qiang.xue@gmail.com"
+                },
+                {
+                    "name": "Carsten Brandt",
+                    "email": "mail@cebe.cc"
                 }
             ],
             "description": "The composer plugin for Yii extension installer",
@@ -7590,7 +7594,7 @@
                 "extension installer",
                 "yii2"
             ],
-            "time": "2016-12-20T13:26:02+00:00"
+            "time": "2018-03-21T16:15:55+00:00"
         },
         {
             "name": "yiisoft/yii2-debug",
