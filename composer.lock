@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f2cfe716db82ebcdcf86fbd81a72e8c7",
+    "content-hash": "78d82a22acd87c8df369dff7aee64351",
     "packages": [
         {
             "name": "aelvan/inlin",
@@ -2817,63 +2817,6 @@
                 "html"
             ],
             "time": "2018-02-23T01:58:20+00:00"
-        },
-        {
-            "name": "fruitstudios/linkit",
-            "version": "v1.0.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/fruitstudios/craft-linkit.git",
-                "reference": "34bf7b3022d927336f89d83e0e8ec1ae847e3d98"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/fruitstudios/craft-linkit/zipball/34bf7b3022d927336f89d83e0e8ec1ae847e3d98",
-                "reference": "34bf7b3022d927336f89d83e0e8ec1ae847e3d98",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^3.0.0-RC1"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "name": "Linkit",
-                "handle": "linkit",
-                "schemaVersion": "1.0.4",
-                "hasCpSettings": false,
-                "hasCpSection": false,
-                "changelogUrl": "https://raw.githubusercontent.com/fruitstudios/craft-linkit/CHANGELOG.md",
-                "components": {
-                    "linkItService": "fruitstudios\\linkit\\services\\LinkitService"
-                },
-                "class": "fruitstudios\\linkit\\Linkit"
-            },
-            "autoload": {
-                "psr-4": {
-                    "fruitstudios\\linkit\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "authors": [
-                {
-                    "name": "Fruit Studios",
-                    "homepage": "https://fruitstudios.co.uk"
-                }
-            ],
-            "description": "One link field to rule them all.",
-            "keywords": [
-                "Craft",
-                "cms",
-                "craft-plugin",
-                "craftcms",
-                "fruit studios",
-                "link it",
-                "linkit"
-            ],
-            "time": "2018-03-30T20:40:42+00:00"
         },
         {
             "name": "giggsey/libphonenumber-for-php",
