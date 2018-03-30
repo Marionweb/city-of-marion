@@ -45,7 +45,7 @@
 {% set pastMeetingsParams = {
   section : 'minutesAgendas',
   orderBy : 'meetingDate desc',
-  meetingDate : 'and, >= ' ~ year ~ '-01-01, < ' ~ now|date("Y-m-d"),
+  meetingDate : 'and, >= ' ~ year ~ '-01-01, < ' ~ (year + 1) ~ '-01-01',
   relatedTo: board
 } %}
 
