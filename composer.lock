@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "02b9d113d94b2d66e20a2e7d69bcaf40",
+    "content-hash": "f2cfe716db82ebcdcf86fbd81a72e8c7",
     "packages": [
         {
             "name": "aelvan/inlin",
@@ -116,16 +116,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.52.32",
+            "version": "3.53.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "c10b8f60a5da9ad4d7fa9f890186632a4c025d1b"
+                "reference": "225593974bb6f6b1c13ddf946d3736d3e39119e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/c10b8f60a5da9ad4d7fa9f890186632a4c025d1b",
-                "reference": "c10b8f60a5da9ad4d7fa9f890186632a4c025d1b",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/225593974bb6f6b1c13ddf946d3736d3e39119e5",
+                "reference": "225593974bb6f6b1c13ddf946d3736d3e39119e5",
                 "shasum": ""
             },
             "require": {
@@ -192,7 +192,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2018-03-23T18:04:27+00:00"
+            "time": "2018-03-30T20:22:38+00:00"
         },
         {
             "name": "barrelstrength/sprout-base",
@@ -761,16 +761,16 @@
         },
         {
             "name": "composer/ca-bundle",
-            "version": "1.1.0",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/ca-bundle.git",
-                "reference": "943b2c4fcad1ef178d16a713c2468bf7e579c288"
+                "reference": "d2c0a83b7533d6912e8d516756ebd34f893e9169"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/943b2c4fcad1ef178d16a713c2468bf7e579c288",
-                "reference": "943b2c4fcad1ef178d16a713c2468bf7e579c288",
+                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/d2c0a83b7533d6912e8d516756ebd34f893e9169",
+                "reference": "d2c0a83b7533d6912e8d516756ebd34f893e9169",
                 "shasum": ""
             },
             "require": {
@@ -779,7 +779,7 @@
                 "php": "^5.3.2 || ^7.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.8.35",
+                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.5",
                 "psr/log": "^1.0",
                 "symfony/process": "^2.5 || ^3.0 || ^4.0"
             },
@@ -813,7 +813,7 @@
                 "ssl",
                 "tls"
             ],
-            "time": "2017-11-29T09:37:33+00:00"
+            "time": "2018-03-29T19:57:20+00:00"
         },
         {
             "name": "composer/composer",
@@ -1148,16 +1148,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.0.0-RC16.1",
+            "version": "3.0.0-RC17.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "44fff955bb76c383c582bcd6e5ded80ac69a2dec"
+                "reference": "c638b66f752656ac56706a514d0e945319bd70ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/44fff955bb76c383c582bcd6e5ded80ac69a2dec",
-                "reference": "44fff955bb76c383c582bcd6e5ded80ac69a2dec",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/c638b66f752656ac56706a514d0e945319bd70ba",
+                "reference": "c638b66f752656ac56706a514d0e945319bd70ba",
                 "shasum": ""
             },
             "require": {
@@ -1226,7 +1226,7 @@
                 "craftcms",
                 "yii2"
             ],
-            "time": "2018-03-25T23:47:20+00:00"
+            "time": "2018-03-29T22:24:07+00:00"
         },
         {
             "name": "craftcms/contact-form",
@@ -2819,6 +2819,63 @@
             "time": "2018-02-23T01:58:20+00:00"
         },
         {
+            "name": "fruitstudios/linkit",
+            "version": "v1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fruitstudios/craft-linkit.git",
+                "reference": "34bf7b3022d927336f89d83e0e8ec1ae847e3d98"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fruitstudios/craft-linkit/zipball/34bf7b3022d927336f89d83e0e8ec1ae847e3d98",
+                "reference": "34bf7b3022d927336f89d83e0e8ec1ae847e3d98",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0-RC1"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Linkit",
+                "handle": "linkit",
+                "schemaVersion": "1.0.4",
+                "hasCpSettings": false,
+                "hasCpSection": false,
+                "changelogUrl": "https://raw.githubusercontent.com/fruitstudios/craft-linkit/CHANGELOG.md",
+                "components": {
+                    "linkItService": "fruitstudios\\linkit\\services\\LinkitService"
+                },
+                "class": "fruitstudios\\linkit\\Linkit"
+            },
+            "autoload": {
+                "psr-4": {
+                    "fruitstudios\\linkit\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Fruit Studios",
+                    "homepage": "https://fruitstudios.co.uk"
+                }
+            ],
+            "description": "One link field to rule them all.",
+            "keywords": [
+                "Craft",
+                "cms",
+                "craft-plugin",
+                "craftcms",
+                "fruit studios",
+                "link it",
+                "linkit"
+            ],
+            "time": "2018-03-30T20:40:42+00:00"
+        },
+        {
             "name": "giggsey/libphonenumber-for-php",
             "version": "8.9.2",
             "source": {
@@ -2937,16 +2994,16 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "6.3.1",
+            "version": "6.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "49e42e6539f775e80c74086a710a882e1d5a8111"
+                "reference": "68d0ea14d5a3f42a20e87632a5f84931e2709c90"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/49e42e6539f775e80c74086a710a882e1d5a8111",
-                "reference": "49e42e6539f775e80c74086a710a882e1d5a8111",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/68d0ea14d5a3f42a20e87632a5f84931e2709c90",
+                "reference": "68d0ea14d5a3f42a20e87632a5f84931e2709c90",
                 "shasum": ""
             },
             "require": {
@@ -2998,7 +3055,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2018-03-26T12:06:26+00:00"
+            "time": "2018-03-26T16:33:04+00:00"
         },
         {
             "name": "guzzlehttp/oauth-subscriber",
@@ -3302,16 +3359,16 @@
         },
         {
             "name": "jaybizzle/crawler-detect",
-            "version": "v1.2.61",
+            "version": "v1.2.62",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JayBizzle/Crawler-Detect.git",
-                "reference": "9f22764fa72f6a30211fe16cf28a1f43642136de"
+                "reference": "f9767578e00f87a081835b49adc7c71074a5b46c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JayBizzle/Crawler-Detect/zipball/9f22764fa72f6a30211fe16cf28a1f43642136de",
-                "reference": "9f22764fa72f6a30211fe16cf28a1f43642136de",
+                "url": "https://api.github.com/repos/JayBizzle/Crawler-Detect/zipball/f9767578e00f87a081835b49adc7c71074a5b46c",
+                "reference": "f9767578e00f87a081835b49adc7c71074a5b46c",
                 "shasum": ""
             },
             "require": {
@@ -3347,7 +3404,7 @@
                 "crawlerdetect",
                 "php crawler detect"
             ],
-            "time": "2018-03-19T20:27:17+00:00"
+            "time": "2018-03-27T18:25:43+00:00"
         },
         {
             "name": "justinrainbow/json-schema",
@@ -3648,16 +3705,16 @@
         },
         {
             "name": "league/flysystem-aws-s3-v3",
-            "version": "1.0.18",
+            "version": "1.0.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem-aws-s3-v3.git",
-                "reference": "dc09b19f455750663b922ed52dcc0ff215bed284"
+                "reference": "f135691ef6761542af301b7c9880f140fb12dc74"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem-aws-s3-v3/zipball/dc09b19f455750663b922ed52dcc0ff215bed284",
-                "reference": "dc09b19f455750663b922ed52dcc0ff215bed284",
+                "url": "https://api.github.com/repos/thephpleague/flysystem-aws-s3-v3/zipball/f135691ef6761542af301b7c9880f140fb12dc74",
+                "reference": "f135691ef6761542af301b7c9880f140fb12dc74",
                 "shasum": ""
             },
             "require": {
@@ -3691,7 +3748,7 @@
                 }
             ],
             "description": "Flysystem adapter for the AWS S3 SDK v3.x",
-            "time": "2017-06-30T06:29:25+00:00"
+            "time": "2018-03-27T20:33:59+00:00"
         },
         {
             "name": "league/fractal",
@@ -4938,16 +4995,16 @@
         },
         {
             "name": "nystudio107/craft-imageoptimize",
-            "version": "1.4.24",
+            "version": "1.4.25",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-imageoptimize.git",
-                "reference": "1b853f12043c285b58fd41ef73f82bb2d6715546"
+                "reference": "9616d4ea91e48d6234bee49457c770de66896b54"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-imageoptimize/zipball/1b853f12043c285b58fd41ef73f82bb2d6715546",
-                "reference": "1b853f12043c285b58fd41ef73f82bb2d6715546",
+                "url": "https://api.github.com/repos/nystudio107/craft-imageoptimize/zipball/9616d4ea91e48d6234bee49457c770de66896b54",
+                "reference": "9616d4ea91e48d6234bee49457c770de66896b54",
                 "shasum": ""
             },
             "require": {
@@ -5001,7 +5058,7 @@
                 "optimize",
                 "optimize-images"
             ],
-            "time": "2018-03-19T22:45:14+00:00"
+            "time": "2018-03-30T15:30:51+00:00"
         },
         {
             "name": "nystudio107/craft-minify",
@@ -5113,16 +5170,16 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "3.0.0-beta.16",
+            "version": "3.0.0-beta.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "010360151cf792f90e2579cf89eecc6e123b4f33"
+                "reference": "d555d037d31986537bd18112f67597528dc86b3a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/010360151cf792f90e2579cf89eecc6e123b4f33",
-                "reference": "010360151cf792f90e2579cf89eecc6e123b4f33",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/d555d037d31986537bd18112f67597528dc86b3a",
+                "reference": "d555d037d31986537bd18112f67597528dc86b3a",
                 "shasum": ""
             },
             "require": {
@@ -5177,7 +5234,7 @@
                 "craftcms",
                 "seomatic"
             ],
-            "time": "2018-03-26T03:01:02+00:00"
+            "time": "2018-03-28T18:54:20+00:00"
         },
         {
             "name": "nystudio107/craft-typogrify",
@@ -7924,52 +7981,7 @@
             "time": "2016-09-13T14:38:50+00:00"
         }
     ],
-    "packages-dev": [
-        {
-            "name": "heroku/heroku-buildpack-php",
-            "version": "v83",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/heroku/heroku-buildpack-php.git",
-                "reference": "71f0f07375eed9f0e8417d290192e9331cbbb4cd"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/heroku/heroku-buildpack-php/zipball/71f0f07375eed9f0e8417d290192e9331cbbb4cd",
-                "reference": "71f0f07375eed9f0e8417d290192e9331cbbb4cd",
-                "shasum": ""
-            },
-            "bin": [
-                "bin/heroku-hhvm-apache2",
-                "bin/heroku-hhvm-nginx",
-                "bin/heroku-php-apache2",
-                "bin/heroku-php-nginx"
-            ],
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "David Zuelke",
-                    "email": "dz@heroku.com"
-                }
-            ],
-            "description": "Toolkit for starting a PHP application locally, with or without foreman, using the same config for PHP/HHVM and Apache2/Nginx as on Heroku",
-            "homepage": "http://github.com/heroku/heroku-buildpack-php",
-            "keywords": [
-                "apache",
-                "apache2",
-                "foreman",
-                "heroku",
-                "hhvm",
-                "nginx",
-                "php"
-            ],
-            "time": "2015-11-16T16:11:11+00:00"
-        }
-    ],
+    "packages-dev": [],
     "aliases": [],
     "minimum-stability": "beta",
     "stability-flags": {
@@ -7978,11 +7990,6 @@
     },
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": {
-        "php": ">=7.0.0",
-        "ext-imagick": "^3.4",
-        "ext-mbstring": "^7.0",
-        "ext-mcrypt": "^7.0"
-    },
+    "platform": [],
     "platform-dev": []
 }

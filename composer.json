@@ -20,10 +20,6 @@
     },
     "minimum-stability": "beta",
     "require": {
-        "php": ">=7.0.0",
-        "ext-imagick": "^3.4",
-        "ext-mbstring": "^7.0",
-        "ext-mcrypt": "^7.0",
         "aelvan/inlin": "^2.0",
         "aelvan/stamp": "^2.0",
         "barrelstrength/sprout-encode-email": "v2.0",
@@ -47,6 +43,7 @@
         "dukt/social": "^2.0",
         "dukt/twitter": "^2.0",
         "dukt/videos": "^2.0",
+        "fruitstudios/linkit": "^1.0",
         "mblode/svgplaceholder": "^1.0",
         "mexitek/phpcolors": "dev-master",
         "mikestecker/craft-videoembedder": "^1.0",
@@ -64,9 +61,6 @@
         "verbb/expanded-singles": "^1.0",
         "vlucas/phpdotenv": "^2.4.0",
         "wbrowar/guide": "^1.1"
-    },
-    "require-dev": {
-        "heroku/heroku-buildpack-php": "^83.0"
     },
     "config": {
         "optimize-autoloader": true,
