@@ -43,6 +43,7 @@
         "dukt/social": "^2.0",
         "dukt/twitter": "^2.0",
         "dukt/videos": "^2.0",
+        "fruitstudios/linkit": "^1.0",
         "mblode/svgplaceholder": "^1.0",
         "mexitek/phpcolors": "dev-master",
         "mikestecker/craft-videoembedder": "^1.0",

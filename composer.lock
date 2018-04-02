@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "78d82a22acd87c8df369dff7aee64351",
+    "content-hash": "f2cfe716db82ebcdcf86fbd81a72e8c7",
     "packages": [
         {
             "name": "aelvan/inlin",
@@ -2819,6 +2819,63 @@
             "time": "2018-02-23T01:58:20+00:00"
         },
         {
+            "name": "fruitstudios/linkit",
+            "version": "v1.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fruitstudios/craft-linkit.git",
+                "reference": "b964e2fad499ba8addadfb673726020f437baa1e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fruitstudios/craft-linkit/zipball/b964e2fad499ba8addadfb673726020f437baa1e",
+                "reference": "b964e2fad499ba8addadfb673726020f437baa1e",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0-RC1"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Linkit",
+                "handle": "linkit",
+                "schemaVersion": "1.0.5",
+                "hasCpSettings": false,
+                "hasCpSection": false,
+                "changelogUrl": "https://raw.githubusercontent.com/fruitstudios/craft-linkit/CHANGELOG.md",
+                "components": {
+                    "linkitService": "fruitstudios\\linkit\\services\\LinkitService"
+                },
+                "class": "fruitstudios\\linkit\\Linkit"
+            },
+            "autoload": {
+                "psr-4": {
+                    "fruitstudios\\linkit\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Fruit Studios",
+                    "homepage": "https://fruitstudios.co.uk"
+                }
+            ],
+            "description": "One link field to rule them all.",
+            "keywords": [
+                "Craft",
+                "cms",
+                "craft-plugin",
+                "craftcms",
+                "fruit studios",
+                "link it",
+                "linkit"
+            ],
+            "time": "2018-03-31T19:35:26+00:00"
+        },
+        {
             "name": "giggsey/libphonenumber-for-php",
             "version": "8.9.2",
             "source": {
@@ -4938,16 +4995,16 @@
         },
         {
             "name": "nystudio107/craft-imageoptimize",
-            "version": "1.4.25",
+            "version": "1.4.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-imageoptimize.git",
-                "reference": "9616d4ea91e48d6234bee49457c770de66896b54"
+                "reference": "690577bf96f853a7db8832f7f66bce32fe35f15e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-imageoptimize/zipball/9616d4ea91e48d6234bee49457c770de66896b54",
-                "reference": "9616d4ea91e48d6234bee49457c770de66896b54",
+                "url": "https://api.github.com/repos/nystudio107/craft-imageoptimize/zipball/690577bf96f853a7db8832f7f66bce32fe35f15e",
+                "reference": "690577bf96f853a7db8832f7f66bce32fe35f15e",
                 "shasum": ""
             },
             "require": {
@@ -5001,7 +5058,7 @@
                 "optimize",
                 "optimize-images"
             ],
-            "time": "2018-03-30T15:30:51+00:00"
+            "time": "2018-03-31T21:22:56+00:00"
         },
         {
             "name": "nystudio107/craft-minify",
@@ -5113,16 +5170,16 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "3.0.0-beta.19",
+            "version": "3.0.0-beta.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "d555d037d31986537bd18112f67597528dc86b3a"
+                "reference": "19c5265ae7cc0942efc15d56236d844c7fbfb60f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/d555d037d31986537bd18112f67597528dc86b3a",
-                "reference": "d555d037d31986537bd18112f67597528dc86b3a",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/19c5265ae7cc0942efc15d56236d844c7fbfb60f",
+                "reference": "19c5265ae7cc0942efc15d56236d844c7fbfb60f",
                 "shasum": ""
             },
             "require": {
@@ -5177,7 +5234,7 @@
                 "craftcms",
                 "seomatic"
             ],
-            "time": "2018-03-28T18:54:20+00:00"
+            "time": "2018-04-02T14:56:26+00:00"
         },
         {
             "name": "nystudio107/craft-typogrify",
@@ -7053,16 +7110,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v2.4.7",
+            "version": "v2.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "69aacd44dbbaa3199d5afb68605c996d577896fc"
+                "reference": "7b604c89da162034bdf4bb66310f358d313dd16d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/69aacd44dbbaa3199d5afb68605c996d577896fc",
-                "reference": "69aacd44dbbaa3199d5afb68605c996d577896fc",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/7b604c89da162034bdf4bb66310f358d313dd16d",
+                "reference": "7b604c89da162034bdf4bb66310f358d313dd16d",
                 "shasum": ""
             },
             "require": {
@@ -7115,7 +7172,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2018-03-20T04:31:17+00:00"
+            "time": "2018-04-02T09:24:19+00:00"
         },
         {
             "name": "verbb/cp-nav",
