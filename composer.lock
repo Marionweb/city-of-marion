@@ -116,16 +116,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.53.0",
+            "version": "3.53.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "225593974bb6f6b1c13ddf946d3736d3e39119e5"
+                "reference": "7c6d71204696443f7b5631016e41e46b3ebf00b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/225593974bb6f6b1c13ddf946d3736d3e39119e5",
-                "reference": "225593974bb6f6b1c13ddf946d3736d3e39119e5",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/7c6d71204696443f7b5631016e41e46b3ebf00b9",
+                "reference": "7c6d71204696443f7b5631016e41e46b3ebf00b9",
                 "shasum": ""
             },
             "require": {
@@ -192,7 +192,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2018-03-30T20:22:38+00:00"
+            "time": "2018-04-03T20:30:29+00:00"
         },
         {
             "name": "barrelstrength/sprout-base",
@@ -508,58 +508,6 @@
                 "markdown-extra"
             ],
             "time": "2017-07-16T21:13:23+00:00"
-        },
-        {
-            "name": "cloudinary/cloudinary_php",
-            "version": "1.9.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/cloudinary/cloudinary_php.git",
-                "reference": "3f76261e342de120c20355df9e61370a1434cdfd"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/cloudinary/cloudinary_php/zipball/3f76261e342de120c20355df9e61370a1434cdfd",
-                "reference": "3f76261e342de120c20355df9e61370a1434cdfd",
-                "shasum": ""
-            },
-            "require": {
-                "ext-curl": "*",
-                "ext-json": "*",
-                "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "4.8.*"
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "src"
-                ],
-                "files": [
-                    "src/Helpers.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Cloudinary",
-                    "homepage": "https://github.com/cloudinary/cloudinary_php/graphs/contributors"
-                }
-            ],
-            "description": "Cloudinary PHP SDK",
-            "homepage": "https://github.com/cloudinary/cloudinary_php",
-            "keywords": [
-                "cdn",
-                "cloud",
-                "cloudinary",
-                "image management",
-                "sdk"
-            ],
-            "time": "2018-03-12T15:33:59+00:00"
         },
         {
             "name": "clue/stream-filter",
@@ -2945,16 +2893,16 @@
         },
         {
             "name": "giggsey/locale",
-            "version": "1.4",
+            "version": "1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/giggsey/Locale.git",
-                "reference": "e351a72ad6af6b41b690efdeffe1138fe5cc8b9c"
+                "reference": "3c9cc23c15851c54cb3ccd41a00fd4b5a89feeff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/giggsey/Locale/zipball/e351a72ad6af6b41b690efdeffe1138fe5cc8b9c",
-                "reference": "e351a72ad6af6b41b690efdeffe1138fe5cc8b9c",
+                "url": "https://api.github.com/repos/giggsey/Locale/zipball/3c9cc23c15851c54cb3ccd41a00fd4b5a89feeff",
+                "reference": "3c9cc23c15851c54cb3ccd41a00fd4b5a89feeff",
                 "shasum": ""
             },
             "require": {
@@ -2967,10 +2915,10 @@
                 "phing/phing": "~2.7",
                 "phpunit/phpunit": "^4.8|^5.0",
                 "satooshi/php-coveralls": "^1.0",
-                "symfony/console": "^2.8|^3.0",
-                "symfony/filesystem": "^2.8|^3.0",
-                "symfony/finder": "^2.8|^3.0",
-                "symfony/process": "^2.8|^3.0"
+                "symfony/console": "^2.8|^3.0|^4.0",
+                "symfony/filesystem": "^2.8|^3.0|^4.0",
+                "symfony/finder": "^2.8|^3.0|^4.0",
+                "symfony/process": "^2.8|^3.0|^4.0"
             },
             "type": "library",
             "autoload": {
@@ -2990,7 +2938,7 @@
                 }
             ],
             "description": "Locale functions required by libphonenumber-for-php",
-            "time": "2017-11-01T21:34:27+00:00"
+            "time": "2018-04-03T15:53:12+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -3225,53 +3173,6 @@
             "time": "2017-03-20T17:10:46+00:00"
         },
         {
-            "name": "imageoptim/imageoptim",
-            "version": "1.3.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ImageOptim/php-imageoptim-api.git",
-                "reference": "b73eb5d6747fc181de86b2de50fb158dff463618"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ImageOptim/php-imageoptim-api/zipball/b73eb5d6747fc181de86b2de50fb158dff463618",
-                "reference": "b73eb5d6747fc181de86b2de50fb158dff463618",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.4 || ^7.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^5.3"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "ImageOptim\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-2-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Kornel",
-                    "email": "kornel@imageoptim.com"
-                }
-            ],
-            "description": "ImageOptim API for PHP",
-            "homepage": "https://imageoptim.com/api",
-            "keywords": [
-                "image",
-                "optimize",
-                "performance",
-                "resize",
-                "scale"
-            ],
-            "time": "2017-01-09T23:58:20+00:00"
-        },
-        {
             "name": "imgix/imgix-php",
             "version": "1.2.1",
             "source": {
@@ -3471,43 +3372,6 @@
                 "schema"
             ],
             "time": "2018-02-14T22:26:30+00:00"
-        },
-        {
-            "name": "kraken-io/kraken-php",
-            "version": "1.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/kraken-io/kraken-php.git",
-                "reference": "56563df1b9a7829f7039cc6e712cf89fab655e26"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/kraken-io/kraken-php/zipball/56563df1b9a7829f7039cc6e712cf89fab655e26",
-                "reference": "56563df1b9a7829f7039cc6e712cf89fab655e26",
-                "shasum": ""
-            },
-            "require": {
-                "ext-curl": "*",
-                "ext-json": "*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Kraken": "lib"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Kraken Image Optimizer",
-                    "email": "support@kraken.io"
-                }
-            ],
-            "description": "Official Kraken.io SDK",
-            "time": "2016-07-26T08:03:24+00:00"
         },
         {
             "name": "ksubileau/color-thief-php",
@@ -4995,24 +4859,21 @@
         },
         {
             "name": "nystudio107/craft-imageoptimize",
-            "version": "1.4.26",
+            "version": "1.4.28",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-imageoptimize.git",
-                "reference": "690577bf96f853a7db8832f7f66bce32fe35f15e"
+                "reference": "88d326896b803ad97ce8adc3b69c1e522e22ab46"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-imageoptimize/zipball/690577bf96f853a7db8832f7f66bce32fe35f15e",
-                "reference": "690577bf96f853a7db8832f7f66bce32fe35f15e",
+                "url": "https://api.github.com/repos/nystudio107/craft-imageoptimize/zipball/88d326896b803ad97ce8adc3b69c1e522e22ab46",
+                "reference": "88d326896b803ad97ce8adc3b69c1e522e22ab46",
                 "shasum": ""
             },
             "require": {
-                "cloudinary/cloudinary_php": "^1.8.0",
                 "craftcms/cms": "^3.0.0-RC12",
-                "imageoptim/imageoptim": "^1.0.0",
                 "imgix/imgix-php": "^1.1.0",
-                "kraken-io/kraken-php": "^1.2",
                 "ksubileau/color-thief-php": "^1.3",
                 "mikehaertl/php-shellcommand": "~1.2"
             },
@@ -5058,7 +4919,7 @@
                 "optimize",
                 "optimize-images"
             ],
-            "time": "2018-03-31T21:22:56+00:00"
+            "time": "2018-04-03T02:29:18+00:00"
         },
         {
             "name": "nystudio107/craft-minify",
@@ -6468,16 +6329,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v3.4.6",
+            "version": "v3.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "067339e9b8ec30d5f19f5950208893ff026b94f7"
+                "reference": "d4bb70fa24d540c309d88a9d6e43fb2d339b1fbf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/067339e9b8ec30d5f19f5950208893ff026b94f7",
-                "reference": "067339e9b8ec30d5f19f5950208893ff026b94f7",
+                "url": "https://api.github.com/repos/symfony/console/zipball/d4bb70fa24d540c309d88a9d6e43fb2d339b1fbf",
+                "reference": "d4bb70fa24d540c309d88a9d6e43fb2d339b1fbf",
                 "shasum": ""
             },
             "require": {
@@ -6533,20 +6394,20 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2018-02-26T15:46:28+00:00"
+            "time": "2018-04-03T05:22:50+00:00"
         },
         {
             "name": "symfony/debug",
-            "version": "v4.0.6",
+            "version": "v4.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
-                "reference": "1721e4e7effb23480966690cdcdc7d2a4152d489"
+                "reference": "5961d02d48828671f5d8a7805e06579d692f6ede"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/debug/zipball/1721e4e7effb23480966690cdcdc7d2a4152d489",
-                "reference": "1721e4e7effb23480966690cdcdc7d2a4152d489",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/5961d02d48828671f5d8a7805e06579d692f6ede",
+                "reference": "5961d02d48828671f5d8a7805e06579d692f6ede",
                 "shasum": ""
             },
             "require": {
@@ -6589,20 +6450,20 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2018-02-28T21:50:02+00:00"
+            "time": "2018-04-03T05:24:00+00:00"
         },
         {
             "name": "symfony/dependency-injection",
-            "version": "v3.4.6",
+            "version": "v3.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dependency-injection.git",
-                "reference": "12e901abc1cb0d637a0e5abe9923471361d96b07"
+                "reference": "24a68710c6ddc1e3d159a110cef94cedfcf3c611"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/12e901abc1cb0d637a0e5abe9923471361d96b07",
-                "reference": "12e901abc1cb0d637a0e5abe9923471361d96b07",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/24a68710c6ddc1e3d159a110cef94cedfcf3c611",
+                "reference": "24a68710c6ddc1e3d159a110cef94cedfcf3c611",
                 "shasum": ""
             },
             "require": {
@@ -6660,11 +6521,11 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
-            "time": "2018-03-04T03:54:53+00:00"
+            "time": "2018-03-29T11:25:31+00:00"
         },
         {
             "name": "symfony/filesystem",
-            "version": "v3.4.6",
+            "version": "v3.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
@@ -6713,16 +6574,16 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v3.4.6",
+            "version": "v3.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "a479817ce0a9e4adfd7d39c6407c95d97c254625"
+                "reference": "7a2e1299cc0c4162996f18e347b6356729a55317"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/a479817ce0a9e4adfd7d39c6407c95d97c254625",
-                "reference": "a479817ce0a9e4adfd7d39c6407c95d97c254625",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/7a2e1299cc0c4162996f18e347b6356729a55317",
+                "reference": "7a2e1299cc0c4162996f18e347b6356729a55317",
                 "shasum": ""
             },
             "require": {
@@ -6758,20 +6619,20 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2018-03-05T18:28:11+00:00"
+            "time": "2018-03-28T18:23:39+00:00"
         },
         {
             "name": "symfony/intl",
-            "version": "v3.4.6",
+            "version": "v3.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/intl.git",
-                "reference": "4bcae9ab4e07c534586fc22f98a1fe694482b10b"
+                "reference": "e0e9ba72447d2006a5b1b602c6ca3151824b8747"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/intl/zipball/4bcae9ab4e07c534586fc22f98a1fe694482b10b",
-                "reference": "4bcae9ab4e07c534586fc22f98a1fe694482b10b",
+                "url": "https://api.github.com/repos/symfony/intl/zipball/e0e9ba72447d2006a5b1b602c6ca3151824b8747",
+                "reference": "e0e9ba72447d2006a5b1b602c6ca3151824b8747",
                 "shasum": ""
             },
             "require": {
@@ -6833,11 +6694,11 @@
                 "l10n",
                 "localization"
             ],
-            "time": "2018-02-03T00:57:06+00:00"
+            "time": "2018-03-28T18:23:39+00:00"
         },
         {
             "name": "symfony/options-resolver",
-            "version": "v4.0.6",
+            "version": "v4.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/options-resolver.git",
@@ -7008,16 +6869,16 @@
         },
         {
             "name": "symfony/process",
-            "version": "v3.4.6",
+            "version": "v3.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "cc4aea21f619116aaf1c58016a944e4821c8e8af"
+                "reference": "4b7d64e852886319e93ddfdecff0d744ab87658b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/cc4aea21f619116aaf1c58016a944e4821c8e8af",
-                "reference": "cc4aea21f619116aaf1c58016a944e4821c8e8af",
+                "url": "https://api.github.com/repos/symfony/process/zipball/4b7d64e852886319e93ddfdecff0d744ab87658b",
+                "reference": "4b7d64e852886319e93ddfdecff0d744ab87658b",
                 "shasum": ""
             },
             "require": {
@@ -7053,7 +6914,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2018-02-12T17:55:00+00:00"
+            "time": "2018-04-03T05:22:50+00:00"
         },
         {
             "name": "tubalmartin/cssmin",
