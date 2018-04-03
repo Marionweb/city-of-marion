@@ -22,8 +22,9 @@
     "require": {
         "aelvan/inlin": "^2.0",
         "aelvan/stamp": "^2.0",
-        "barrelstrength/sprout-encode-email": "v2.0",
+        "barrelstrength/sprout-encode-email": "^2.0",
         "barrelstrength/sprout-fields": "^3.0",
+        "barrelstrength/sprout-forms": "^3.0@beta",
         "craftcms/anchors": "^2.0",
         "craftcms/aws-s3": "^1.0",
         "craftcms/cms": "^3.0.0-RC1",

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f2cfe716db82ebcdcf86fbd81a72e8c7",
+    "content-hash": "b27bc5cd062c113b6636905a0bdf74be",
     "packages": [
         {
             "name": "aelvan/inlin",
@@ -236,16 +236,16 @@
         },
         {
             "name": "barrelstrength/sprout-encode-email",
-            "version": "2.0.0",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/barrelstrength/craft-sprout-encode-email.git",
-                "reference": "850951e689182213879fc58d9315eb8e985001d4"
+                "reference": "5902dec53e21b19e2e436c021b79645bb1688d48"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/barrelstrength/craft-sprout-encode-email/zipball/850951e689182213879fc58d9315eb8e985001d4",
-                "reference": "850951e689182213879fc58d9315eb8e985001d4",
+                "url": "https://api.github.com/repos/barrelstrength/craft-sprout-encode-email/zipball/5902dec53e21b19e2e436c021b79645bb1688d48",
+                "reference": "5902dec53e21b19e2e436c021b79645bb1688d48",
                 "shasum": ""
             },
             "require": {
@@ -271,6 +271,7 @@
                     "barrelstrength\\sproutencodeemail\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -287,31 +288,24 @@
                 "twig extension",
                 "urls"
             ],
-            "support": {
-                "email": "support@barrelstrengthdesign.com",
-                "issues": "https://github.com/barrelstrength/sprout-encode-email/issues?state=open",
-                "source": "https://github.com/barrelstrength/sprout-encode-email",
-                "docs": "https://sprout.barrelstrengthdesign.com/craft-plugins/encode-email/docs",
-                "rss": "https://github.com/barrelstrength/sprout-encode-email/commits/v2.atom"
-            },
-            "time": "2018-02-24T06:21:38+00:00"
+            "time": "2018-04-03T22:31:46+00:00"
         },
         {
             "name": "barrelstrength/sprout-fields",
-            "version": "3.0.3",
+            "version": "3.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/barrelstrength/craft-sprout-fields.git",
-                "reference": "eec84276b88345d5dfca6b782cef586d2f677372"
+                "reference": "854f2afcb8cbf95d7fff03973da38e964af2ca01"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/barrelstrength/craft-sprout-fields/zipball/eec84276b88345d5dfca6b782cef586d2f677372",
-                "reference": "eec84276b88345d5dfca6b782cef586d2f677372",
+                "url": "https://api.github.com/repos/barrelstrength/craft-sprout-fields/zipball/854f2afcb8cbf95d7fff03973da38e964af2ca01",
+                "reference": "854f2afcb8cbf95d7fff03973da38e964af2ca01",
                 "shasum": ""
             },
             "require": {
-                "barrelstrength/sprout-base": "^1.0.0",
+                "barrelstrength/sprout-base": "^1.1.0",
                 "craftcms/cms": "^3.0.0-RC1"
             },
             "type": "craft-plugin",
@@ -349,7 +343,65 @@
                 "fields",
                 "sprout fields"
             ],
-            "time": "2018-03-09T01:50:43+00:00"
+            "time": "2018-04-03T23:11:02+00:00"
+        },
+        {
+            "name": "barrelstrength/sprout-forms",
+            "version": "3.0.0-beta.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/barrelstrength/craft-sprout-forms.git",
+                "reference": "541636e1d2775bb57faa7bc7acfa8de127f08195"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/barrelstrength/craft-sprout-forms/zipball/541636e1d2775bb57faa7bc7acfa8de127f08195",
+                "reference": "541636e1d2775bb57faa7bc7acfa8de127f08195",
+                "shasum": ""
+            },
+            "require": {
+                "barrelstrength/sprout-base": "^1.1.0",
+                "craftcms/cms": "^3.0.0-RC1"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Sprout Forms",
+                "handle": "sprout-forms",
+                "schemaVersion": "3.0.0",
+                "developer": "Barrel Strength",
+                "developerUrl": "https://barrelstrengthdesign.com",
+                "documentationUrl": "https://sprout.barrelstrengthdesign.com/craft-plugins/forms",
+                "changelogUrl": "https://raw.githubusercontent.com/BarrelStrength/sprout-forms/master/CHANGELOG.md",
+                "downloadUrl": "https://github.com/BarrelStrength/sprout-forms/archive/master.zip",
+                "class": "barrelstrength\\sproutforms\\SproutForms",
+                "components": {
+                    "app": "barrelstrength\\sproutforms\\services\\App"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "barrelstrength\\sproutforms\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Barrel Strength",
+                    "homepage": "https://www.barrelstrengthdesign.com/"
+                }
+            ],
+            "description": "Simple, beautiful forms. 100% control.",
+            "keywords": [
+                "Craft",
+                "cms",
+                "craft-plugin",
+                "craftcms",
+                "sprout forms"
+            ],
+            "time": "2018-04-01T15:14:22+00:00"
         },
         {
             "name": "bower-asset/bootstrap",
@@ -7846,6 +7898,7 @@
     "aliases": [],
     "minimum-stability": "beta",
     "stability-flags": {
+        "barrelstrength/sprout-forms": 10,
         "mexitek/phpcolors": 20,
         "nystudio107/craft-seomatic": 10
     },
