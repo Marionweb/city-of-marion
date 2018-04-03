@@ -15,8 +15,8 @@ return array(
    */
   'loginProviders' => [
     'google' => [
-        'clientId' => getenv('GOOGLE_OAUTH_CLIENT_ID'),
-        'clientSecret' => getenv('GOOGLE_OAUTH_CLIENT_SECRET')
+        'clientId' => getenv('CRAFTENV_GOOGLE_OAUTH_CLIENT_ID'),
+        'clientSecret' => getenv('CRAFTENV_GOOGLE_OAUTH_CLIENT_SECRET')
     ],
   ],
 );
