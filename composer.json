@@ -44,9 +44,9 @@
         "dukt/social": "^2.0",
         "dukt/twitter": "^2.0",
         "dukt/videos": "^2.0",
-        "fruitstudios/linkit": "^1.0",
         "mblode/svgplaceholder": "^1.0",
         "mexitek/phpcolors": "dev-master",
+        "mikestecker/craft-readability": "^1.0",
         "mikestecker/craft-videoembedder": "^1.0",
         "newism/craft3-fields": "^0.0.10",
         "nystudio107/craft-cookies": "^1.1",
@@ -58,10 +58,10 @@
         "nystudio107/craft-typogrify": "^1.0",
         "rias/craft-position-fieldtype": "^1.0",
         "selvinortiz/patrol": "^3.0",
+        "superbig/craft-audit": "^1.0",
         "verbb/cp-nav": "^2.0",
         "verbb/expanded-singles": "^1.0",
-        "vlucas/phpdotenv": "^2.4.0",
-        "wbrowar/guide": "^1.1"
+        "vlucas/phpdotenv": "^2.4.0"
     },
     "config": {
         "optimize-autoloader": true,
