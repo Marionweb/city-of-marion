@@ -41,7 +41,7 @@
       <div class="embed-container type-video">
         {% set video = block.video %}
 
-        {{video.embed({ width: 1280, height: 720, autoplay: false, default_size: false, iframeClass: 'lazyload', theme: 'light', rel: false })}}
+        {{ craft.videoEmbedder.embed(video, {autoplay: 0, rel: 0, theme: 'light'}) }}
 
       </div>
 
@@ -53,7 +53,7 @@
 
         <div class="embed-container type-video {{block.embedUrl.embedData.providerName|lower|kebab}}">
           {% set videoUrl = block.embedUrl.embedData.url %}
-          {{craft.videos.embed(videoUrl, { width: 1280, height: 720, autoplay: false, default_size: false, iframeClass: 'lazyload', theme: 'light', rel: false })}}
+          {{ craft.videoEmbedder.embed(videoUrl, {autoplay: 0, rel: 0, theme: 'light'}) }}
 
         </div>
 

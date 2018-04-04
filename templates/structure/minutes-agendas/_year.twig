@@ -61,7 +61,7 @@
     <span class="title">{{ meeting.title }}</span>
     <span class="date">{{ meeting.meetingDate | date('m/d/Y') }}</span>
     <span class="actions">
-      {% if meeting.video | length %}<a data-fancybox href="{{ meeting.video.url }}" data-options='{"toolbar" : false, "smallBtn" : true}' title="Watch {{ meeting.video.title }}">Watch Video</a>{% endif %}
+      {% if meeting.video | length %}<a data-fancybox href="{{ meeting.video }}" data-options='{"toolbar" : false, "smallBtn" : true}' title="Watch Meeting Video">Watch Video</a>{% endif %}
       {% if meeting.minutesPdf | length %}<a href="{{ minutes.url }}" title="Download the meeting minutes for {{ meeting.title }}" target="_blank">Minutes</a>{% endif %}
     </span>
   </li>
