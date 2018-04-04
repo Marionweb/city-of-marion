@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f281f892a81a94296cce8a7fa85e617b",
+    "content-hash": "78c6a21c8a0731c854fb9e41bfb189af",
     "packages": [
         {
             "name": "aelvan/inlin",
@@ -2441,51 +2441,6 @@
             "time": "2017-03-24T14:45:00+00:00"
         },
         {
-            "name": "dukt/oauth2-vimeo",
-            "version": "2.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/dukt/oauth2-vimeo.git",
-                "reference": "fb9bbbfe546a082edef508a04e881f732b18f530"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/dukt/oauth2-vimeo/zipball/fb9bbbfe546a082edef508a04e881f732b18f530",
-                "reference": "fb9bbbfe546a082edef508a04e881f732b18f530",
-                "shasum": ""
-            },
-            "require": {
-                "league/oauth2-client": "^2.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Dukt\\OAuth2\\Client\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Benjamin David",
-                    "email": "ben@dukt.net",
-                    "homepage": "https://github.com/benjamindavid"
-                }
-            ],
-            "description": "Vimeo OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
-            "keywords": [
-                "authorisation",
-                "authorization",
-                "client",
-                "oauth",
-                "oauth2",
-                "vimeo"
-            ],
-            "time": "2017-04-06T13:13:14+00:00"
-        },
-        {
             "name": "dukt/social",
             "version": "2.0.0-beta.5",
             "source": {
@@ -2586,56 +2541,6 @@
                 "twitter"
             ],
             "time": "2017-12-05T14:43:31+00:00"
-        },
-        {
-            "name": "dukt/videos",
-            "version": "2.0.0-beta.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/dukt/videos.git",
-                "reference": "01d7bf360d45863e71d57cc5c2c061109c603e12"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/dukt/videos/zipball/01d7bf360d45863e71d57cc5c2c061109c603e12",
-                "reference": "01d7bf360d45863e71d57cc5c2c061109c603e12",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^3.0.0-RC1",
-                "dukt/oauth2-google": "^2.0",
-                "dukt/oauth2-vimeo": "^2.0",
-                "league/oauth2-client": "^2.2"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "name": "Videos",
-                "handle": "videos",
-                "schemaVersion": "1.0.0",
-                "documentationUrl": "https://github.com/dukt/videos-docs",
-                "changelogUrl": "https://github.com/dukt/videos/blob/v2/CHANGELOG.md"
-            },
-            "autoload": {
-                "psr-4": {
-                    "dukt\\videos\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "authors": [
-                {
-                    "name": "Dukt",
-                    "homepage": "https://dukt.net/"
-                }
-            ],
-            "description": "Connect to YouTube & Vimeo and publish social videos on your website.",
-            "keywords": [
-                "cms",
-                "craftcms",
-                "videos",
-                "vimeo",
-                "youtube"
-            ],
-            "time": "2017-12-17T17:21:14+00:00"
         },
         {
             "name": "egulias/email-validator",
@@ -5568,16 +5473,16 @@
         },
         {
             "name": "paragonie/random_compat",
-            "version": "v2.0.11",
+            "version": "v2.0.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/random_compat.git",
-                "reference": "5da4d3c796c275c55f057af5a643ae297d96b4d8"
+                "reference": "258c89a6b97de7dfaf5b8c7607d0478e236b04fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/5da4d3c796c275c55f057af5a643ae297d96b4d8",
-                "reference": "5da4d3c796c275c55f057af5a643ae297d96b4d8",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/258c89a6b97de7dfaf5b8c7607d0478e236b04fb",
+                "reference": "258c89a6b97de7dfaf5b8c7607d0478e236b04fb",
                 "shasum": ""
             },
             "require": {
@@ -5612,7 +5517,7 @@
                 "pseudorandom",
                 "random"
             ],
-            "time": "2017-09-27T21:40:39+00:00"
+            "time": "2018-04-04T21:24:14+00:00"
         },
         {
             "name": "php-http/client-common",
@@ -8652,7 +8557,6 @@
     "minimum-stability": "beta",
     "stability-flags": {
         "barrelstrength/sprout-forms": 10,
-        "dukt/videos": 10,
         "mexitek/phpcolors": 20,
         "nystudio107/craft-seomatic": 10,
         "solspace/craft3-freeform": 10
