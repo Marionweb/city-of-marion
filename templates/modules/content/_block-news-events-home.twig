@@ -3,7 +3,7 @@
   {% set recentNews = craft.entries({
       'section' : 'newsEvents',
       'type' : 'and, not event, not story',
-      'limit' : 6
+      'limit' : 3
   }).all() %}
   {% for entry in recentNews %}
     {% include 'modules/nav/_block-news-events-entry' %}
@@ -15,9 +15,9 @@
   </a>
 </section>
 
-{#
+
 <section id="block--events-home" class="block--news-events-home">
-  <h2>Events</h2> #}
+  <h2>Events</h2>
   {# {% set upcomingEvents = craft.entries({
       'section' : 'newsEvents',
       'type' : 'event',
@@ -28,7 +28,7 @@
         now|date('Y-m-d')
       ]
   }) %} #}
-{#   {% set upcomingEvents = craft.entries({
+  {% set upcomingEvents = craft.entries({
       'section' : 'newsEvents',
       'type' : 'event',
       'limit' : 3
@@ -42,4 +42,3 @@
     View All
   </a>
 </section>
- #}
