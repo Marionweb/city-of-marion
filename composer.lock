@@ -347,16 +347,16 @@
         },
         {
             "name": "barrelstrength/sprout-forms",
-            "version": "3.0.0-beta.3",
+            "version": "3.0.0-beta.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/barrelstrength/craft-sprout-forms.git",
-                "reference": "6caf1348d2007909f0b1860027d869fa4ee82f3d"
+                "reference": "ff92ce3c03adbfe0268a19b9023b583ade16279b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/barrelstrength/craft-sprout-forms/zipball/6caf1348d2007909f0b1860027d869fa4ee82f3d",
-                "reference": "6caf1348d2007909f0b1860027d869fa4ee82f3d",
+                "url": "https://api.github.com/repos/barrelstrength/craft-sprout-forms/zipball/ff92ce3c03adbfe0268a19b9023b583ade16279b",
+                "reference": "ff92ce3c03adbfe0268a19b9023b583ade16279b",
                 "shasum": ""
             },
             "require": {
@@ -401,7 +401,7 @@
                 "craftcms",
                 "sprout forms"
             ],
-            "time": "2018-04-04T19:43:50+00:00"
+            "time": "2018-04-05T13:33:00+00:00"
         },
         {
             "name": "bower-asset/bootstrap",
@@ -2829,16 +2829,16 @@
         },
         {
             "name": "giggsey/libphonenumber-for-php",
-            "version": "8.9.2",
+            "version": "8.9.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/giggsey/libphonenumber-for-php.git",
-                "reference": "dc06ec4f106568fcd79be56e2574a51759d73f67"
+                "reference": "ace655b505f58cc75481e0df54e93418bfa4736d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/dc06ec4f106568fcd79be56e2574a51759d73f67",
-                "reference": "dc06ec4f106568fcd79be56e2574a51759d73f67",
+                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/ace655b505f58cc75481e0df54e93418bfa4736d",
+                "reference": "ace655b505f58cc75481e0df54e93418bfa4736d",
                 "shasum": ""
             },
             "require": {
@@ -2893,7 +2893,7 @@
                 "phonenumber",
                 "validation"
             ],
-            "time": "2018-03-14T18:52:28+00:00"
+            "time": "2018-04-05T07:34:49+00:00"
         },
         {
             "name": "giggsey/locale",
@@ -6596,16 +6596,16 @@
         },
         {
             "name": "solspace/craft3-commons",
-            "version": "1.0.9",
+            "version": "1.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/solspace/craft3-commons.git",
-                "reference": "67c2c7dc83ed55a27835a84e532eecfdbc1ae6d2"
+                "reference": "1039f6a40ff1465cf2795ed1b43ddfd86f5108b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/solspace/craft3-commons/zipball/67c2c7dc83ed55a27835a84e532eecfdbc1ae6d2",
-                "reference": "67c2c7dc83ed55a27835a84e532eecfdbc1ae6d2",
+                "url": "https://api.github.com/repos/solspace/craft3-commons/zipball/1039f6a40ff1465cf2795ed1b43ddfd86f5108b8",
+                "reference": "1039f6a40ff1465cf2795ed1b43ddfd86f5108b8",
                 "shasum": ""
             },
             "require": {
@@ -6622,20 +6622,20 @@
                 "MIT"
             ],
             "description": "Solspace Commons Library for Craft CMS 3 plugins",
-            "time": "2018-03-27T13:11:40+00:00"
+            "time": "2018-04-05T06:35:14+00:00"
         },
         {
             "name": "solspace/craft3-freeform",
-            "version": "2.0.0-beta.14",
+            "version": "2.0.0-beta.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/solspace/craft3-freeform.git",
-                "reference": "664e9a5af347b0ce2ce3cd5a6dbcecd344052af9"
+                "reference": "c7a8f4c015d03175db7f56d59f7a3689d71917a4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/solspace/craft3-freeform/zipball/664e9a5af347b0ce2ce3cd5a6dbcecd344052af9",
-                "reference": "664e9a5af347b0ce2ce3cd5a6dbcecd344052af9",
+                "url": "https://api.github.com/repos/solspace/craft3-freeform/zipball/c7a8f4c015d03175db7f56d59f7a3689d71917a4",
+                "reference": "c7a8f4c015d03175db7f56d59f7a3689d71917a4",
                 "shasum": ""
             },
             "require": {
@@ -6677,7 +6677,7 @@
                 }
             ],
             "description": "The most intuitive and powerful form builder for Craft.",
-            "time": "2018-04-04T21:05:09+00:00"
+            "time": "2018-04-05T13:38:27+00:00"
         },
         {
             "name": "sunra/php-simple-html-dom-parser",
