@@ -21,7 +21,7 @@
         {% if craft.app.request.isLivePreview and image.width < 1600 %}
           <p>Please assign an image that is at least 1600px wide.</p>
         {% endif %}
-        {% include "modules/images/_grid-image" %}
+        {% include "modules/images/_grid-image_single" %}
 
       {% elseif images | length > "1" %}
         {# ROW OF IMAGES #}
