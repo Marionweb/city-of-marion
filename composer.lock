@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "78c6a21c8a0731c854fb9e41bfb189af",
+    "content-hash": "5f46a344d6a79adcc57ff499448ef17c",
     "packages": [
         {
             "name": "aelvan/inlin",
@@ -116,16 +116,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.54.0",
+            "version": "3.54.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "86d1892b41381b77070acb199a57097c71b0f124"
+                "reference": "17c2c7a47f54161d23b9a943b1c36600051cb93c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/86d1892b41381b77070acb199a57097c71b0f124",
-                "reference": "86d1892b41381b77070acb199a57097c71b0f124",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/17c2c7a47f54161d23b9a943b1c36600051cb93c",
+                "reference": "17c2c7a47f54161d23b9a943b1c36600051cb93c",
                 "shasum": ""
             },
             "require": {
@@ -192,7 +192,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2018-04-04T18:22:54+00:00"
+            "time": "2018-04-06T18:01:00+00:00"
         },
         {
             "name": "barrelstrength/sprout-base",
@@ -3591,16 +3591,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "1.0.43",
+            "version": "1.0.44",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "1ce7cc142d906ba58dc54c82915d355a9191c8a8"
+                "reference": "168dbe519737221dc87d17385cde33073881fd02"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/1ce7cc142d906ba58dc54c82915d355a9191c8a8",
-                "reference": "1ce7cc142d906ba58dc54c82915d355a9191c8a8",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/168dbe519737221dc87d17385cde33073881fd02",
+                "reference": "168dbe519737221dc87d17385cde33073881fd02",
                 "shasum": ""
             },
             "require": {
@@ -3671,7 +3671,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2018-03-01T10:27:04+00:00"
+            "time": "2018-04-06T09:58:14+00:00"
         },
         {
             "name": "league/flysystem-aws-s3-v3",
@@ -4018,16 +4018,16 @@
         },
         {
             "name": "mailgun/mailgun-php",
-            "version": "2.4.1",
+            "version": "2.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mailgun/mailgun-php.git",
-                "reference": "ef3dc6b8bf78b1f760da16b6860c4072c798d286"
+                "reference": "0bd1d8bfc5c56a9e59deb8526422a04b9e83a80a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mailgun/mailgun-php/zipball/ef3dc6b8bf78b1f760da16b6860c4072c798d286",
-                "reference": "ef3dc6b8bf78b1f760da16b6860c4072c798d286",
+                "url": "https://api.github.com/repos/mailgun/mailgun-php/zipball/0bd1d8bfc5c56a9e59deb8526422a04b9e83a80a",
+                "reference": "0bd1d8bfc5c56a9e59deb8526422a04b9e83a80a",
                 "shasum": ""
             },
             "require": {
@@ -4061,7 +4061,7 @@
                 }
             ],
             "description": "The Mailgun SDK provides methods for all API functions.",
-            "time": "2018-02-01T22:58:55+00:00"
+            "time": "2018-04-08T10:40:14+00:00"
         },
         {
             "name": "masterminds/html5",
@@ -4826,16 +4826,16 @@
         },
         {
             "name": "mundschenk-at/php-typography",
-            "version": "v6.1.3",
+            "version": "v6.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mundschenk-at/php-typography.git",
-                "reference": "380eef4adc49efcf2368405e4a22f52d64ed24b1"
+                "reference": "fe5c440cae168e5d7fb6ca2140eadf7a04dd8f03"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mundschenk-at/php-typography/zipball/380eef4adc49efcf2368405e4a22f52d64ed24b1",
-                "reference": "380eef4adc49efcf2368405e4a22f52d64ed24b1",
+                "url": "https://api.github.com/repos/mundschenk-at/php-typography/zipball/fe5c440cae168e5d7fb6ca2140eadf7a04dd8f03",
+                "reference": "fe5c440cae168e5d7fb6ca2140eadf7a04dd8f03",
                 "shasum": ""
             },
             "require": {
@@ -4850,7 +4850,7 @@
                 "ext-curl": "*",
                 "phpbench/phpbench": "^0.13||^1.0@dev",
                 "phpstan/phpstan": "^0.9",
-                "phpunit/phpunit": "5.*||6.*",
+                "phpunit/phpunit": "5.*||6.*|7.*",
                 "squizlabs/php_codesniffer": "^3.2",
                 "wimg/php-compatibility": "^8.0",
                 "wp-coding-standards/wpcs": "^0.14.0"
@@ -4884,7 +4884,7 @@
                 }
             ],
             "description": "A PHP library for improving your web typography",
-            "time": "2018-03-02T17:13:33+00:00"
+            "time": "2018-04-08T06:55:47+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -5176,20 +5176,20 @@
         },
         {
             "name": "nystudio107/craft-imageoptimize",
-            "version": "1.4.28",
+            "version": "1.4.30",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-imageoptimize.git",
-                "reference": "88d326896b803ad97ce8adc3b69c1e522e22ab46"
+                "reference": "37555313a35057459fd2c55de66ea706e06e75b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-imageoptimize/zipball/88d326896b803ad97ce8adc3b69c1e522e22ab46",
-                "reference": "88d326896b803ad97ce8adc3b69c1e522e22ab46",
+                "url": "https://api.github.com/repos/nystudio107/craft-imageoptimize/zipball/37555313a35057459fd2c55de66ea706e06e75b0",
+                "reference": "37555313a35057459fd2c55de66ea706e06e75b0",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^3.0.0-RC12",
+                "craftcms/cms": "^3.0.0",
                 "imgix/imgix-php": "^1.1.0",
                 "ksubileau/color-thief-php": "^1.3",
                 "mikehaertl/php-shellcommand": "~1.2"
@@ -5236,7 +5236,7 @@
                 "optimize",
                 "optimize-images"
             ],
-            "time": "2018-04-03T02:29:18+00:00"
+            "time": "2018-04-09T16:06:39+00:00"
         },
         {
             "name": "nystudio107/craft-minify",
@@ -5348,16 +5348,16 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "3.0.0-beta.20",
+            "version": "3.0.0-beta.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "19c5265ae7cc0942efc15d56236d844c7fbfb60f"
+                "reference": "ffcba27811ae2cbcce2a4fa473838d53145fd269"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/19c5265ae7cc0942efc15d56236d844c7fbfb60f",
-                "reference": "19c5265ae7cc0942efc15d56236d844c7fbfb60f",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/ffcba27811ae2cbcce2a4fa473838d53145fd269",
+                "reference": "ffcba27811ae2cbcce2a4fa473838d53145fd269",
                 "shasum": ""
             },
             "require": {
@@ -5412,7 +5412,7 @@
                 "craftcms",
                 "seomatic"
             ],
-            "time": "2018-04-02T14:56:26+00:00"
+            "time": "2018-04-06T15:51:16+00:00"
         },
         {
             "name": "nystudio107/craft-typogrify",
@@ -6346,6 +6346,60 @@
             "time": "2016-10-10T12:19:37+00:00"
         },
         {
+            "name": "rias/craft-password-policy",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Rias500/craft-password-policy.git",
+                "reference": "371c332621fa6a78e1e6594b7cf85825855a06b5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Rias500/craft-password-policy/zipball/371c332621fa6a78e1e6594b7cf85825855a06b5",
+                "reference": "371c332621fa6a78e1e6594b7cf85825855a06b5",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Password Policy",
+                "handle": "password-policy",
+                "hasCpSettings": true,
+                "hasCpSection": false,
+                "changelogUrl": "https://raw.githubusercontent.com/Rias500/craft-password-policy/master/CHANGELOG.md",
+                "components": {
+                    "passwordService": "rias\\passwordpolicy\\services\\PasswordService"
+                },
+                "class": "rias\\passwordpolicy\\PasswordPolicy"
+            },
+            "autoload": {
+                "psr-4": {
+                    "rias\\passwordpolicy\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rias",
+                    "homepage": "https://rias.be"
+                }
+            ],
+            "description": "Enforce a password policy on your users.",
+            "keywords": [
+                "Craft",
+                "cms",
+                "craft-plugin",
+                "craftcms",
+                "strong passwords"
+            ],
+            "time": "2018-04-08T19:20:28+00:00"
+        },
+        {
             "name": "rias/craft-position-fieldtype",
             "version": "1.0.10",
             "source": {
@@ -6842,7 +6896,7 @@
         },
         {
             "name": "symfony/console",
-            "version": "v3.4.7",
+            "version": "v3.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
@@ -6911,7 +6965,7 @@
         },
         {
             "name": "symfony/debug",
-            "version": "v4.0.7",
+            "version": "v4.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
@@ -6967,7 +7021,7 @@
         },
         {
             "name": "symfony/dependency-injection",
-            "version": "v3.4.7",
+            "version": "v3.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dependency-injection.git",
@@ -7038,7 +7092,7 @@
         },
         {
             "name": "symfony/filesystem",
-            "version": "v3.4.7",
+            "version": "v3.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
@@ -7087,16 +7141,16 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v3.4.7",
+            "version": "v3.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "7a2e1299cc0c4162996f18e347b6356729a55317"
+                "reference": "bd14efe8b1fabc4de82bf50dce62f05f9a102433"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/7a2e1299cc0c4162996f18e347b6356729a55317",
-                "reference": "7a2e1299cc0c4162996f18e347b6356729a55317",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/bd14efe8b1fabc4de82bf50dce62f05f9a102433",
+                "reference": "bd14efe8b1fabc4de82bf50dce62f05f9a102433",
                 "shasum": ""
             },
             "require": {
@@ -7132,11 +7186,11 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2018-03-28T18:23:39+00:00"
+            "time": "2018-04-04T05:07:11+00:00"
         },
         {
             "name": "symfony/inflector",
-            "version": "v4.0.7",
+            "version": "v4.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/inflector.git",
@@ -7193,7 +7247,7 @@
         },
         {
             "name": "symfony/intl",
-            "version": "v3.4.7",
+            "version": "v3.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/intl.git",
@@ -7268,7 +7322,7 @@
         },
         {
             "name": "symfony/options-resolver",
-            "version": "v4.0.7",
+            "version": "v4.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/options-resolver.git",
@@ -7498,7 +7552,7 @@
         },
         {
             "name": "symfony/process",
-            "version": "v3.4.7",
+            "version": "v3.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
@@ -7547,7 +7601,7 @@
         },
         {
             "name": "symfony/property-access",
-            "version": "v3.4.7",
+            "version": "v3.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/property-access.git",
@@ -7615,7 +7669,7 @@
         },
         {
             "name": "symfony/translation",
-            "version": "v4.0.7",
+            "version": "v4.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
