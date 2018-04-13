@@ -21,6 +21,7 @@ return [
         'generateTransformsBeforePageLoad' => true,
         'enableCsrfProtection' => true,
         'siteUrl' => getenv('CRAFTENV_SITE_URL'),
+        'craftEnv' => CRAFT_ENVIRONMENT,
         'securityKey' => getenv('CRAFTENV_SECURITY_KEY'),
         'maxUploadFileSize' => 104857600,
 
@@ -34,17 +35,6 @@ return [
         'enableCsrfProtection' => true,
 
         'googleApiKey' => getenv('CRAFTENV_GOOGLE_API_KEY'),
-
-        // Aliases parsed in sites’ settings, volumes’ settings, and Local volumes’ settings
-        'aliases' => [
-            '@basePath' => getenv('CRAFTENV_BASE_PATH'),
-            '@baseUrl' => getenv('CRAFTENV_BASE_URL'),
-        ],
-        // Custom site-specific config settings
-        'custom' => [
-            'craftEnv' => CRAFT_ENVIRONMENT,
-            'staticAssetsVersion' => 1
-        ]
     ],
 
     // Live (production) environment
