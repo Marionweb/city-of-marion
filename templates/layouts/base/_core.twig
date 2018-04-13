@@ -72,13 +72,13 @@
   <link rel="stylesheet" href="{{ fonts }}">
 
 {# Base #}
-{% if craft.app.config.general.craftEnv == 'local' %}
+{% if craft.app.config.general.custom.craftEnv == 'local' %}
   <link rel="stylesheet" href="/assets/css/site.combined.min.css">
 {% else %}
   <link rel="stylesheet" href="{{ craft.stamp.er('/assets/css/site.combined.min.css') }}">
 {% endif %}
 
-{% if craft.app.config.general.craftEnv == 'local' %}
+{% if craft.app.config.general.custom.craftEnv == 'local' %}
   {% do view.registerJsFile('/assets/js/site.combined.min.js', {defer: ''}) %}
 {% else %}
   {% do view.registerJsFile(craft.stamp.er('/assets/js/site.combined.min.js'), {defer: ''}) %}
