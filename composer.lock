@@ -4,8 +4,59 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "e9de216af5ab5b6a5302e19a9886a73c",
+    "content-hash": "7f4d1619db0feaa93711899756831911",
     "packages": [
+        {
+            "name": "aelvan/craft-cp-element-count",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aelvan/craft-cp-element-count.git",
+                "reference": "887b44ab41cf5c1ee28bbf7a0d30bb506d96617d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aelvan/craft-cp-element-count/zipball/887b44ab41cf5c1ee28bbf7a0d30bb506d96617d",
+                "reference": "887b44ab41cf5c1ee28bbf7a0d30bb506d96617d",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "CP Element Count",
+                "handle": "cp-element-count",
+                "hasCpSettings": false,
+                "hasCpSection": false,
+                "changelogUrl": "https://raw.githubusercontent.com/aelvan/craft-cp-element-count/master/CHANGELOG.md",
+                "class": "aelvan\\cpelementcount\\CpElementCount"
+            },
+            "autoload": {
+                "psr-4": {
+                    "aelvan\\cpelementcount\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "André Elvan",
+                    "homepage": "https://www.vaersaagod.no/"
+                }
+            ],
+            "description": "Adds an element count to sections and categories in the Craft control panel",
+            "keywords": [
+                "Craft",
+                "cms",
+                "control-panel",
+                "craft-plugin",
+                "craftcms"
+            ],
+            "time": "2018-04-13T21:21:54+00:00"
+        },
         {
             "name": "aelvan/inlin",
             "version": "2.0.0",
@@ -6022,6 +6073,60 @@
                 "parser"
             ],
             "time": "2016-11-22T22:57:47+00:00"
+        },
+        {
+            "name": "supercool/tablemaker",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/supercool/tablemaker.git",
+                "reference": "da56fc70f43ee616f394b1bf774ad1e9d7906978"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/supercool/tablemaker/zipball/da56fc70f43ee616f394b1bf774ad1e9d7906978",
+                "reference": "da56fc70f43ee616f394b1bf774ad1e9d7906978",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0-RC1"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Table Maker",
+                "handle": "tablemaker",
+                "schemaVersion": "1.0.0",
+                "hasCpSettings": false,
+                "hasCpSection": false,
+                "changelogUrl": "https://raw.githubusercontent.com/supercool/tablemaker/master/CHANGELOG.md",
+                "class": "supercool\\tablemaker\\TableMaker"
+            },
+            "autoload": {
+                "psr-4": {
+                    "supercool\\tablemaker\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Supercool Ltd",
+                    "homepage": "http://www.supercooldesign.co.uk/"
+                }
+            ],
+            "description": "A user-definable table field type for Craft CMS",
+            "keywords": [
+                "Craft",
+                "cms",
+                "craft-plugin",
+                "craftcms",
+                "craftcms3",
+                "supercool",
+                "table maker"
+            ],
+            "time": "2018-04-12T10:56:01+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",

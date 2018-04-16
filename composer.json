@@ -20,6 +20,7 @@
     },
     "minimum-stability": "beta",
     "require": {
+        "aelvan/craft-cp-element-count": "^1.0",
         "aelvan/inlin": "^2.0",
         "aelvan/stamp": "^2.0",
         "barrelstrength/sprout-encode-email": "^2.0",
@@ -56,6 +57,7 @@
         "rias/craft-password-policy": "^1.0",
         "rias/craft-position-fieldtype": "^1.0",
         "selvinortiz/patrol": "^3.0",
+        "supercool/tablemaker": "^2.0",
         "verbb/cp-nav": "^2.0",
         "verbb/expanded-singles": "^1.0",
         "vlucas/phpdotenv": "^2.4.0"
