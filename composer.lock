@@ -4501,16 +4501,16 @@
         },
         {
             "name": "nystudio107/craft-fastcgicachebust",
-            "version": "1.0.7",
+            "version": "1.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-fastcgicachebust.git",
-                "reference": "800730cd146a8453a0c6fcbe8772c14c7f30c1e2"
+                "reference": "6d792aaca1c98bbf1b219bf9241078dc47edd11a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-fastcgicachebust/zipball/800730cd146a8453a0c6fcbe8772c14c7f30c1e2",
-                "reference": "800730cd146a8453a0c6fcbe8772c14c7f30c1e2",
+                "url": "https://api.github.com/repos/nystudio107/craft-fastcgicachebust/zipball/6d792aaca1c98bbf1b219bf9241078dc47edd11a",
+                "reference": "6d792aaca1c98bbf1b219bf9241078dc47edd11a",
                 "shasum": ""
             },
             "require": {
@@ -4552,7 +4552,7 @@
                 "craftcms",
                 "fastcgi cache bust"
             ],
-            "time": "2018-03-20T21:04:28+00:00"
+            "time": "2018-04-14T17:18:37+00:00"
         },
         {
             "name": "nystudio107/craft-imageoptimize",
@@ -4728,20 +4728,20 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "3.0.0-beta.22",
+            "version": "3.0.0-beta.23",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "838f35fc976fb2ee736aeb0fc457e794ee907de3"
+                "reference": "e63672eaf0e6d876e9c5474d7c720a2bf1064fc7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/838f35fc976fb2ee736aeb0fc457e794ee907de3",
-                "reference": "838f35fc976fb2ee736aeb0fc457e794ee907de3",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/e63672eaf0e6d876e9c5474d7c720a2bf1064fc7",
+                "reference": "e63672eaf0e6d876e9c5474d7c720a2bf1064fc7",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^3.0.0-RC12",
+                "craftcms/cms": "^3.0.2",
                 "craftcms/vue-asset": "^1.0",
                 "davechild/textstatistics": "^1.0.1",
                 "php-science/textrank": "^1.0.3",
@@ -4792,7 +4792,7 @@
                 "craftcms",
                 "seomatic"
             ],
-            "time": "2018-04-13T03:00:32+00:00"
+            "time": "2018-04-16T03:55:40+00:00"
         },
         {
             "name": "nystudio107/craft-typogrify",
