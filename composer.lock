@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "920c109cd8085d7c70f2190adc9f9a26",
+    "content-hash": "823fed551591be9e1f04783cee3e87ff",
     "packages": [
         {
             "name": "aelvan/craft-cp-element-count",
@@ -2617,16 +2617,16 @@
         },
         {
             "name": "giggsey/libphonenumber-for-php",
-            "version": "8.9.3",
+            "version": "8.9.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/giggsey/libphonenumber-for-php.git",
-                "reference": "ace655b505f58cc75481e0df54e93418bfa4736d"
+                "reference": "dcdd1257eff60f3f3c72ba3e2d5a3b73efe317e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/ace655b505f58cc75481e0df54e93418bfa4736d",
-                "reference": "ace655b505f58cc75481e0df54e93418bfa4736d",
+                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/dcdd1257eff60f3f3c72ba3e2d5a3b73efe317e9",
+                "reference": "dcdd1257eff60f3f3c72ba3e2d5a3b73efe317e9",
                 "shasum": ""
             },
             "require": {
@@ -2681,7 +2681,7 @@
                 "phonenumber",
                 "validation"
             ],
-            "time": "2018-04-05T07:34:49+00:00"
+            "time": "2018-04-17T10:23:54+00:00"
         },
         {
             "name": "giggsey/locale",
@@ -4779,16 +4779,16 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "3.0.0-beta.23",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "e63672eaf0e6d876e9c5474d7c720a2bf1064fc7"
+                "reference": "6fb1a5abaabca14814077528909b8e64cfaaea16"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/e63672eaf0e6d876e9c5474d7c720a2bf1064fc7",
-                "reference": "e63672eaf0e6d876e9c5474d7c720a2bf1064fc7",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/6fb1a5abaabca14814077528909b8e64cfaaea16",
+                "reference": "6fb1a5abaabca14814077528909b8e64cfaaea16",
                 "shasum": ""
             },
             "require": {
@@ -4843,7 +4843,7 @@
                 "craftcms",
                 "seomatic"
             ],
-            "time": "2018-04-16T03:55:40+00:00"
+            "time": "2018-04-17T18:07:31+00:00"
         },
         {
             "name": "nystudio107/craft-typogrify",
@@ -7643,8 +7643,7 @@
     "minimum-stability": "beta",
     "stability-flags": {
         "barrelstrength/sprout-forms": 10,
-        "mexitek/phpcolors": 20,
-        "nystudio107/craft-seomatic": 10
+        "mexitek/phpcolors": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

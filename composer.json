@@ -52,7 +52,7 @@
         "nystudio107/craft-imageoptimize": "^1.0",
         "nystudio107/craft-minify": "^1.2",
         "nystudio107/craft-pathtools": "^1.0",
-        "nystudio107/craft-seomatic": "^3.0@beta",
+        "nystudio107/craft-seomatic": "^3.0.0",
         "nystudio107/craft-typogrify": "^1.0",
         "rias/craft-password-policy": "^1.0",
         "rias/craft-position-fieldtype": "^1.0",
