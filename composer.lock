@@ -247,16 +247,16 @@
         },
         {
             "name": "barrelstrength/sprout-base",
-            "version": "1.1.4",
+            "version": "1.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/barrelstrength/craft-sprout-base.git",
-                "reference": "e8353e44ab8760d7c20bc423c2e267961b654383"
+                "reference": "c0d1d1b5573fc44371d658d6febeae8df614875f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/barrelstrength/craft-sprout-base/zipball/e8353e44ab8760d7c20bc423c2e267961b654383",
-                "reference": "e8353e44ab8760d7c20bc423c2e267961b654383",
+                "url": "https://api.github.com/repos/barrelstrength/craft-sprout-base/zipball/c0d1d1b5573fc44371d658d6febeae8df614875f",
+                "reference": "c0d1d1b5573fc44371d658d6febeae8df614875f",
                 "shasum": ""
             },
             "require": {
@@ -284,7 +284,7 @@
                 }
             ],
             "description": "Common libraries for Sprout Plugins for Craft CMS",
-            "time": "2018-04-18T02:21:06+00:00"
+            "time": "2018-04-18T16:19:19+00:00"
         },
         {
             "name": "barrelstrength/sprout-encode-email",
@@ -344,20 +344,20 @@
         },
         {
             "name": "barrelstrength/sprout-fields",
-            "version": "3.0.6",
+            "version": "3.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/barrelstrength/craft-sprout-fields.git",
-                "reference": "854f2afcb8cbf95d7fff03973da38e964af2ca01"
+                "reference": "1c1251c810d458a6c23b917e1b6c8da266ecd994"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/barrelstrength/craft-sprout-fields/zipball/854f2afcb8cbf95d7fff03973da38e964af2ca01",
-                "reference": "854f2afcb8cbf95d7fff03973da38e964af2ca01",
+                "url": "https://api.github.com/repos/barrelstrength/craft-sprout-fields/zipball/1c1251c810d458a6c23b917e1b6c8da266ecd994",
+                "reference": "1c1251c810d458a6c23b917e1b6c8da266ecd994",
                 "shasum": ""
             },
             "require": {
-                "barrelstrength/sprout-base": "^1.1.0",
+                "barrelstrength/sprout-base": "^1.1.5",
                 "craftcms/cms": "^3.0.0-RC1"
             },
             "type": "craft-plugin",
@@ -395,7 +395,7 @@
                 "fields",
                 "sprout fields"
             ],
-            "time": "2018-04-03T23:11:02+00:00"
+            "time": "2018-04-18T16:25:47+00:00"
         },
         {
             "name": "barrelstrength/sprout-forms",
@@ -5485,16 +5485,16 @@
         },
         {
             "name": "php-science/textrank",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/DavidBelicza/PHP-Science-TextRank.git",
-                "reference": "927344fe91206ecf9615d801031a1915cf53605c"
+                "reference": "88c83817acd61289ec18c6fc3d0013bb156a5c30"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DavidBelicza/PHP-Science-TextRank/zipball/927344fe91206ecf9615d801031a1915cf53605c",
-                "reference": "927344fe91206ecf9615d801031a1915cf53605c",
+                "url": "https://api.github.com/repos/DavidBelicza/PHP-Science-TextRank/zipball/88c83817acd61289ec18c6fc3d0013bb156a5c30",
+                "reference": "88c83817acd61289ec18c6fc3d0013bb156a5c30",
                 "shasum": ""
             },
             "require": {
@@ -5532,7 +5532,7 @@
                 "summarization",
                 "textrank"
             ],
-            "time": "2017-12-18T20:08:03+00:00"
+            "time": "2018-04-18T17:50:44+00:00"
         },
         {
             "name": "pimple/pimple",

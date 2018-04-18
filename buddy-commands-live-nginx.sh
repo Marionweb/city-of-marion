@@ -1,5 +1,5 @@
 echo "Copying NGINX config"
-sudo -n cp -R -f releases/${execution.to_revision.revision}/nginx-config/partials /etc/nginx-sp/vhosts.d/cityofmarion-production.d/partials
+sudo -n cp -R -f releases/${execution.to_revision.revision}/nginx-config/partials/* /etc/nginx-sp/vhosts.d/cityofmarion-production.d/partials
 sudo -n cp -f releases/${execution.to_revision.revision}/nginx-config/cityofmarion-production/main.custom.conf /etc/nginx-sp/vhosts.d/cityofmarion-production.d/main.custom.conf
 sudo -n cp -f releases/${execution.to_revision.revision}/nginx-config/cityofmarion-production/ssl.conf /etc/nginx-sp/vhosts.d/cityofmarion-production.d/ssl.conf
 sudo -n cp -f releases/${execution.to_revision.revision}/nginx-config/cityofmarion-production.conf /etc/nginx-sp/vhosts.d/cityofmarion-production.conf
