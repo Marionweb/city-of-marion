@@ -247,24 +247,25 @@
         },
         {
             "name": "barrelstrength/sprout-base",
-            "version": "1.1.0",
+            "version": "1.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/barrelstrength/craft-sprout-base.git",
-                "reference": "4ca92ebbc7c9b57eb796b254692930c56cb4dff1"
+                "reference": "e8353e44ab8760d7c20bc423c2e267961b654383"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/barrelstrength/craft-sprout-base/zipball/4ca92ebbc7c9b57eb796b254692930c56cb4dff1",
-                "reference": "4ca92ebbc7c9b57eb796b254692930c56cb4dff1",
+                "url": "https://api.github.com/repos/barrelstrength/craft-sprout-base/zipball/e8353e44ab8760d7c20bc423c2e267961b654383",
+                "reference": "e8353e44ab8760d7c20bc423c2e267961b654383",
                 "shasum": ""
             },
             "require": {
                 "commerceguys/addressing": "^0.8.4",
                 "commerceguys/intl": "^0.7.5",
-                "craftcms/cms": "^3.0.0-RC1",
+                "craftcms/cms": "^3.0.0",
                 "giggsey/libphonenumber-for-php": "^8.8.11",
-                "league/csv": "^7.2"
+                "league/csv": "^8.2.0",
+                "league/html-to-markdown": "v4.6.2"
             },
             "type": "yii-module",
             "autoload": {
@@ -283,7 +284,7 @@
                 }
             ],
             "description": "Common libraries for Sprout Plugins for Craft CMS",
-            "time": "2018-03-25T04:11:02+00:00"
+            "time": "2018-04-18T02:21:06+00:00"
         },
         {
             "name": "barrelstrength/sprout-encode-email",
@@ -398,27 +399,27 @@
         },
         {
             "name": "barrelstrength/sprout-forms",
-            "version": "3.0.0-beta.6",
+            "version": "3.0.0-beta.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/barrelstrength/craft-sprout-forms.git",
-                "reference": "48958f0deeac7f38bda49d22b624b865cf75d182"
+                "reference": "27024e864b7c35c0bac3a8d75415137ac79320a7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/barrelstrength/craft-sprout-forms/zipball/48958f0deeac7f38bda49d22b624b865cf75d182",
-                "reference": "48958f0deeac7f38bda49d22b624b865cf75d182",
+                "url": "https://api.github.com/repos/barrelstrength/craft-sprout-forms/zipball/27024e864b7c35c0bac3a8d75415137ac79320a7",
+                "reference": "27024e864b7c35c0bac3a8d75415137ac79320a7",
                 "shasum": ""
             },
             "require": {
-                "barrelstrength/sprout-base": "^1.1.0",
+                "barrelstrength/sprout-base": "^1.1.4",
                 "craftcms/cms": "^3.0.0-RC1"
             },
             "type": "craft-plugin",
             "extra": {
                 "name": "Sprout Forms",
                 "handle": "sprout-forms",
-                "schemaVersion": "3.0.0",
+                "schemaVersion": "3.0.1",
                 "developer": "Barrel Strength",
                 "developerUrl": "https://barrelstrengthdesign.com",
                 "documentationUrl": "https://sprout.barrelstrengthdesign.com/craft-plugins/forms",
@@ -452,7 +453,7 @@
                 "craftcms",
                 "sprout forms"
             ],
-            "time": "2018-04-12T17:40:24+00:00"
+            "time": "2018-04-18T02:25:08+00:00"
         },
         {
             "name": "bower-asset/bootstrap",
@@ -1199,16 +1200,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.0.2",
+            "version": "3.0.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "8de55f65dfaeef07038578a3aa441729af7aeb49"
+                "reference": "6855a5f1c83205f1506aeb5a610964c58e67ca87"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/8de55f65dfaeef07038578a3aa441729af7aeb49",
-                "reference": "8de55f65dfaeef07038578a3aa441729af7aeb49",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/6855a5f1c83205f1506aeb5a610964c58e67ca87",
+                "reference": "6855a5f1c83205f1506aeb5a610964c58e67ca87",
                 "shasum": ""
             },
             "require": {
@@ -1277,7 +1278,7 @@
                 "craftcms",
                 "yii2"
             ],
-            "time": "2018-04-10T17:44:29+00:00"
+            "time": "2018-04-18T13:58:37+00:00"
         },
         {
             "name": "craftcms/contact-form",
@@ -3171,30 +3172,30 @@
         },
         {
             "name": "league/csv",
-            "version": "7.2.0",
+            "version": "8.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/csv.git",
-                "reference": "69bafa6ff924fbf9effe4275d6eb16be81a853ef"
+                "reference": "d2aab1e7bde802582c3879acf03d92716577c76d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/csv/zipball/69bafa6ff924fbf9effe4275d6eb16be81a853ef",
-                "reference": "69bafa6ff924fbf9effe4275d6eb16be81a853ef",
+                "url": "https://api.github.com/repos/thephpleague/csv/zipball/d2aab1e7bde802582c3879acf03d92716577c76d",
+                "reference": "d2aab1e7bde802582c3879acf03d92716577c76d",
                 "shasum": ""
             },
             "require": {
                 "ext-mbstring": "*",
-                "php": ">=5.4.0"
+                "php": ">=5.5.0"
             },
             "require-dev": {
-                "fabpot/php-cs-fixer": "^1.9",
+                "friendsofphp/php-cs-fixer": "^1.9",
                 "phpunit/phpunit": "^4.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "7.2-dev"
+                    "dev-master": "8.2-dev"
                 }
             },
             "autoload": {
@@ -3224,7 +3225,7 @@
                 "read",
                 "write"
             ],
-            "time": "2015-11-02T07:36:25+00:00"
+            "time": "2018-02-06T08:27:03+00:00"
         },
         {
             "name": "league/flysystem",
@@ -3420,6 +3421,70 @@
                 "rest"
             ],
             "time": "2017-03-12T01:28:43+00:00"
+        },
+        {
+            "name": "league/html-to-markdown",
+            "version": "4.6.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/html-to-markdown.git",
+                "reference": "3af14d8f44838257a75822819784e83819b34e2e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/html-to-markdown/zipball/3af14d8f44838257a75822819784e83819b34e2e",
+                "reference": "3af14d8f44838257a75822819784e83819b34e2e",
+                "shasum": ""
+            },
+            "require": {
+                "ext-dom": "*",
+                "ext-xml": "*",
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "mikehaertl/php-shellcommand": "~1.1.0",
+                "phpunit/phpunit": "4.*",
+                "scrutinizer/ocular": "~1.1"
+            },
+            "bin": [
+                "bin/html-to-markdown"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.7-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\HTMLToMarkdown\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Colin O'Dell",
+                    "email": "colinodell@gmail.com",
+                    "homepage": "http://www.colinodell.com",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "Nick Cernis",
+                    "email": "nick@cern.is",
+                    "homepage": "http://modernnerd.net",
+                    "role": "Original Author"
+                }
+            ],
+            "description": "An HTML-to-markdown conversion helper for PHP",
+            "homepage": "https://github.com/thephpleague/html-to-markdown",
+            "keywords": [
+                "html",
+                "markdown"
+            ],
+            "time": "2018-01-07T19:45:06+00:00"
         },
         {
             "name": "league/oauth1-client",
