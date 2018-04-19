@@ -11,11 +11,12 @@
 {% block main %}
   {% cache %}
     <header>
-        <h1>{{ entry.title | typogrify }}</h1>
+      <h1>{% if entry.headline %}{{ entry.headline | typogrify }}{% else %}{{ entry.title | typogrify }}{% endif %}</h1>
+      {% if entry.leadIn %}<p class="lead">{{ entry.leadIn | typogrify }}</p>{% endif %}
     </header>
 
     {{ entry.copy }}
-    
+
     {% include 'modules/content/_page-content-attachments' %}
     {% include 'modules/content/_block-contact-person' %}
   {% endcache %}

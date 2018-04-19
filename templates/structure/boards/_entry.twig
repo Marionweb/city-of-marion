@@ -17,10 +17,9 @@
 {# HTML #}
 {% block main %}
   {% cache %}
-
     <header>
-    <h1>{{ entry.title | typogrify }}</h1>
-    <p class="lead">{{ entry.leadIn | typogrify }}</p>
+      <h1>{% if entry.headline %}{{ entry.headline | typogrify }}{% else %}{{ entry.title | typogrify }}{% endif %}</h1>
+      {% if entry.leadIn %}<p class="lead">{{ entry.leadIn | typogrify }}</p>{% endif %}
     </header>
 
     {% include 'modules/content/_page-content' %}
