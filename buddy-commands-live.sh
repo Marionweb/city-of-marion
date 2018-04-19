@@ -37,5 +37,5 @@ rm -f public
 ln -s releases/${execution.to_revision.revision}/web public
 
 echo "Removing old releases"
-cd releases && ls -t | tail -n +11 | xargs rm -rf
+cd releases && ls -t | tail -n +5 | xargs rm -rf
 
