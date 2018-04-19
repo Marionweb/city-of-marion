@@ -7,10 +7,12 @@
 {% set title = entry.title %}
 {% set type = 'landing' %}
 
-{% if historyBlock.backgroundImage | length %}
-  {% set historyImage = entry.historyBlock.one().backgroundImage.one() %}
-  {%- set transformOptions = { width: 1600, quality: 82 } -%}
-  {% css %}#about--history--image { background-image: url({{ historyImage.getUrl(transformOptions) }}) }{% endcss %}
+{% if entry.historyBlock | length %}
+  {% if entry.historyBlock.one().backgroundImage | length %}
+    {% set historyImage = entry.historyBlock.one().backgroundImage.one() %}
+    {%- set transformOptions = { width: 1600, quality: 82 } -%}
+    {% css %}#about--history--image { background-image: url({{ historyImage.getUrl(transformOptions) }}) }{% endcss %}
+  {% endif %}
 {% endif %}
 
 {# HEADER IMAGE #}
@@ -116,7 +118,7 @@
       <cite>{{ fact.reference }}</cite>
     </div>
     {% endfor %}
-    
+
   </div>
 </section>
 {% endif %}

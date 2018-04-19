@@ -17,7 +17,7 @@
       {{ imageFunctions.responsivePicture(image.optimizedImagesPageHeader, image.alt) }}
       {% if image.caption %}<figcaption>{{ image.caption }}</figcaption>{% endif %}
     </figure>
-    
+
   {% elseif ((entry.section | lower) == 'boards') or ((entry.section | lower) == 'departments') or ((entry.section | lower) == 'departmentsContent') %}
 
     <figure>
