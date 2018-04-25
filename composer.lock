@@ -167,16 +167,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.54.4",
+            "version": "3.55.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "6642a13df7ddcccf19e66c744c5bfae5b61e9e85"
+                "reference": "3be3068a3a643f5029f18714b3fe26733a51e07c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/6642a13df7ddcccf19e66c744c5bfae5b61e9e85",
-                "reference": "6642a13df7ddcccf19e66c744c5bfae5b61e9e85",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/3be3068a3a643f5029f18714b3fe26733a51e07c",
+                "reference": "3be3068a3a643f5029f18714b3fe26733a51e07c",
                 "shasum": ""
             },
             "require": {
@@ -243,20 +243,20 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2018-04-10T22:11:31+00:00"
+            "time": "2018-04-25T18:33:29+00:00"
         },
         {
             "name": "barrelstrength/sprout-base",
-            "version": "1.1.5",
+            "version": "1.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/barrelstrength/craft-sprout-base.git",
-                "reference": "c0d1d1b5573fc44371d658d6febeae8df614875f"
+                "reference": "f137914882d80e10ef543d5cd3be1430d03a53c7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/barrelstrength/craft-sprout-base/zipball/c0d1d1b5573fc44371d658d6febeae8df614875f",
-                "reference": "c0d1d1b5573fc44371d658d6febeae8df614875f",
+                "url": "https://api.github.com/repos/barrelstrength/craft-sprout-base/zipball/f137914882d80e10ef543d5cd3be1430d03a53c7",
+                "reference": "f137914882d80e10ef543d5cd3be1430d03a53c7",
                 "shasum": ""
             },
             "require": {
@@ -284,7 +284,7 @@
                 }
             ],
             "description": "Common libraries for Sprout Plugins for Craft CMS",
-            "time": "2018-04-18T16:19:19+00:00"
+            "time": "2018-04-20T15:23:24+00:00"
         },
         {
             "name": "barrelstrength/sprout-encode-email",
@@ -344,20 +344,20 @@
         },
         {
             "name": "barrelstrength/sprout-fields",
-            "version": "3.0.7",
+            "version": "3.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/barrelstrength/craft-sprout-fields.git",
-                "reference": "1c1251c810d458a6c23b917e1b6c8da266ecd994"
+                "reference": "1989cc37e5cf161ad6006f6c2830f552ae0a577b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/barrelstrength/craft-sprout-fields/zipball/1c1251c810d458a6c23b917e1b6c8da266ecd994",
-                "reference": "1c1251c810d458a6c23b917e1b6c8da266ecd994",
+                "url": "https://api.github.com/repos/barrelstrength/craft-sprout-fields/zipball/1989cc37e5cf161ad6006f6c2830f552ae0a577b",
+                "reference": "1989cc37e5cf161ad6006f6c2830f552ae0a577b",
                 "shasum": ""
             },
             "require": {
-                "barrelstrength/sprout-base": "^1.1.5",
+                "barrelstrength/sprout-base": "^1.1.6",
                 "craftcms/cms": "^3.0.0-RC1"
             },
             "type": "craft-plugin",
@@ -395,7 +395,7 @@
                 "fields",
                 "sprout fields"
             ],
-            "time": "2018-04-18T16:25:47+00:00"
+            "time": "2018-04-20T15:25:49+00:00"
         },
         {
             "name": "barrelstrength/sprout-forms",
@@ -1200,16 +1200,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.0.3.1",
+            "version": "3.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "6855a5f1c83205f1506aeb5a610964c58e67ca87"
+                "reference": "d8420fe5c5a61887063fb49a3663c8649161b1b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/6855a5f1c83205f1506aeb5a610964c58e67ca87",
-                "reference": "6855a5f1c83205f1506aeb5a610964c58e67ca87",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/d8420fe5c5a61887063fb49a3663c8649161b1b7",
+                "reference": "d8420fe5c5a61887063fb49a3663c8649161b1b7",
                 "shasum": ""
             },
             "require": {
@@ -1278,7 +1278,7 @@
                 "craftcms",
                 "yii2"
             ],
-            "time": "2018-04-18T13:58:37+00:00"
+            "time": "2018-04-24T18:12:44+00:00"
         },
         {
             "name": "craftcms/contact-form",
@@ -2735,16 +2735,16 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "6.3.2",
+            "version": "6.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "68d0ea14d5a3f42a20e87632a5f84931e2709c90"
+                "reference": "407b0cb880ace85c9b63c5f9551db498cb2d50ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/68d0ea14d5a3f42a20e87632a5f84931e2709c90",
-                "reference": "68d0ea14d5a3f42a20e87632a5f84931e2709c90",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/407b0cb880ace85c9b63c5f9551db498cb2d50ba",
+                "reference": "407b0cb880ace85c9b63c5f9551db498cb2d50ba",
                 "shasum": ""
             },
             "require": {
@@ -2754,7 +2754,7 @@
             },
             "require-dev": {
                 "ext-curl": "*",
-                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.4",
+                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.4 || ^7.0",
                 "psr/log": "^1.0"
             },
             "suggest": {
@@ -2796,7 +2796,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2018-03-26T16:33:04+00:00"
+            "time": "2018-04-22T15:46:56+00:00"
         },
         {
             "name": "guzzlehttp/oauth-subscriber",
@@ -4672,16 +4672,16 @@
         },
         {
             "name": "nystudio107/craft-imageoptimize",
-            "version": "1.4.30",
+            "version": "1.4.31",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-imageoptimize.git",
-                "reference": "37555313a35057459fd2c55de66ea706e06e75b0"
+                "reference": "b6e1556d1fb61f93869474a3af86e7e346590c45"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-imageoptimize/zipball/37555313a35057459fd2c55de66ea706e06e75b0",
-                "reference": "37555313a35057459fd2c55de66ea706e06e75b0",
+                "url": "https://api.github.com/repos/nystudio107/craft-imageoptimize/zipball/b6e1556d1fb61f93869474a3af86e7e346590c45",
+                "reference": "b6e1556d1fb61f93869474a3af86e7e346590c45",
                 "shasum": ""
             },
             "require": {
@@ -4732,7 +4732,7 @@
                 "optimize",
                 "optimize-images"
             ],
-            "time": "2018-04-09T16:06:39+00:00"
+            "time": "2018-04-22T22:17:53+00:00"
         },
         {
             "name": "nystudio107/craft-minify",
@@ -4844,16 +4844,16 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "3.0.0",
+            "version": "3.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "6fb1a5abaabca14814077528909b8e64cfaaea16"
+                "reference": "f286a9d9bf5490954c793f384fe4097e1ce0f90a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/6fb1a5abaabca14814077528909b8e64cfaaea16",
-                "reference": "6fb1a5abaabca14814077528909b8e64cfaaea16",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/f286a9d9bf5490954c793f384fe4097e1ce0f90a",
+                "reference": "f286a9d9bf5490954c793f384fe4097e1ce0f90a",
                 "shasum": ""
             },
             "require": {
@@ -4908,20 +4908,20 @@
                 "craftcms",
                 "seomatic"
             ],
-            "time": "2018-04-17T18:07:31+00:00"
+            "time": "2018-04-25T17:32:51+00:00"
         },
         {
             "name": "nystudio107/craft-typogrify",
-            "version": "1.1.9",
+            "version": "1.1.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-typogrify.git",
-                "reference": "26ade78f72a67dcff0d65493545bbbd85999926b"
+                "reference": "ac69b6b2db40958ce2679f2154be12438b746117"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-typogrify/zipball/26ade78f72a67dcff0d65493545bbbd85999926b",
-                "reference": "26ade78f72a67dcff0d65493545bbbd85999926b",
+                "url": "https://api.github.com/repos/nystudio107/craft-typogrify/zipball/ac69b6b2db40958ce2679f2154be12438b746117",
+                "reference": "ac69b6b2db40958ce2679f2154be12438b746117",
                 "shasum": ""
             },
             "require": {
@@ -4965,7 +4965,7 @@
                 "craftcms",
                 "typogrify"
             ],
-            "time": "2018-03-20T23:05:07+00:00"
+            "time": "2018-04-25T19:29:06+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -5844,16 +5844,16 @@
         },
         {
             "name": "rias/craft-position-fieldtype",
-            "version": "1.0.10",
+            "version": "1.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Rias500/craft-position-fieldtype.git",
-                "reference": "e874843ac70e87c01c9e92be4d3c2de54f963da2"
+                "reference": "e4e1c8a32fef332718383a960b7f757e63b8a138"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Rias500/craft-position-fieldtype/zipball/e874843ac70e87c01c9e92be4d3c2de54f963da2",
-                "reference": "e874843ac70e87c01c9e92be4d3c2de54f963da2",
+                "url": "https://api.github.com/repos/Rias500/craft-position-fieldtype/zipball/e4e1c8a32fef332718383a960b7f757e63b8a138",
+                "reference": "e4e1c8a32fef332718383a960b7f757e63b8a138",
                 "shasum": ""
             },
             "require": {
@@ -5892,7 +5892,7 @@
                 "craftcms",
                 "position fieldtype"
             ],
-            "time": "2018-02-15T15:54:22+00:00"
+            "time": "2018-04-23T08:19:58+00:00"
         },
         {
             "name": "seld/cli-prompt",
@@ -7504,16 +7504,16 @@
         },
         {
             "name": "yiisoft/yii2-swiftmailer",
-            "version": "2.1.0",
+            "version": "2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-swiftmailer.git",
-                "reference": "563570c9aa19ca47c1b22e3032983229378e9274"
+                "reference": "fd917fbe63b7ea796c52902143b83b98e65bfb73"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-swiftmailer/zipball/563570c9aa19ca47c1b22e3032983229378e9274",
-                "reference": "563570c9aa19ca47c1b22e3032983229378e9274",
+                "url": "https://api.github.com/repos/yiisoft/yii2-swiftmailer/zipball/fd917fbe63b7ea796c52902143b83b98e65bfb73",
+                "reference": "fd917fbe63b7ea796c52902143b83b98e65bfb73",
                 "shasum": ""
             },
             "require": {
@@ -7523,12 +7523,12 @@
             "type": "yii2-extension",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.0.x-dev"
+                    "dev-master": "2.1.x-dev"
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "yii\\swiftmailer\\": ""
+                    "yii\\swiftmailer\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -7550,34 +7550,34 @@
                 "swiftmailer",
                 "yii2"
             ],
-            "time": "2017-08-04T10:48:17+00:00"
+            "time": "2018-04-24T23:17:42+00:00"
         },
         {
             "name": "zendframework/zend-escaper",
-            "version": "2.5.2",
+            "version": "2.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-escaper.git",
-                "reference": "2dcd14b61a72d8b8e27d579c6344e12c26141d4e"
+                "reference": "31d8aafae982f9568287cb4dce987e6aff8fd074"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-escaper/zipball/2dcd14b61a72d8b8e27d579c6344e12c26141d4e",
-                "reference": "2dcd14b61a72d8b8e27d579c6344e12c26141d4e",
+                "url": "https://api.github.com/repos/zendframework/zend-escaper/zipball/31d8aafae982f9568287cb4dce987e6aff8fd074",
+                "reference": "31d8aafae982f9568287cb4dce987e6aff8fd074",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.5"
+                "php": "^5.6 || ^7.0"
             },
             "require-dev": {
-                "fabpot/php-cs-fixer": "1.7.*",
-                "phpunit/phpunit": "~4.0"
+                "phpunit/phpunit": "^5.7.27 || ^6.5.8 || ^7.1.2",
+                "zendframework/zend-coding-standard": "~1.0.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.5-dev",
-                    "dev-develop": "2.6-dev"
+                    "dev-master": "2.6.x-dev",
+                    "dev-develop": "2.7.x-dev"
                 }
             },
             "autoload": {
@@ -7589,12 +7589,13 @@
             "license": [
                 "BSD-3-Clause"
             ],
-            "homepage": "https://github.com/zendframework/zend-escaper",
+            "description": "Securely and safely escape HTML, HTML attributes, JavaScript, CSS, and URLs",
             "keywords": [
+                "ZendFramework",
                 "escaper",
-                "zf2"
+                "zf"
             ],
-            "time": "2016-06-30T19:48:38+00:00"
+            "time": "2018-04-25T15:48:53+00:00"
         },
         {
             "name": "zendframework/zend-feed",
