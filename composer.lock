@@ -167,16 +167,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.55.2",
+            "version": "3.55.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "3be3068a3a643f5029f18714b3fe26733a51e07c"
+                "reference": "28a1828814ce34d056492fa494f1e4bbaddaf33e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/3be3068a3a643f5029f18714b3fe26733a51e07c",
-                "reference": "3be3068a3a643f5029f18714b3fe26733a51e07c",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/28a1828814ce34d056492fa494f1e4bbaddaf33e",
+                "reference": "28a1828814ce34d056492fa494f1e4bbaddaf33e",
                 "shasum": ""
             },
             "require": {
@@ -243,7 +243,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2018-04-25T18:33:29+00:00"
+            "time": "2018-04-26T21:09:13+00:00"
         },
         {
             "name": "barrelstrength/sprout-base",
@@ -4844,16 +4844,16 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "3.0.3",
+            "version": "3.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "f286a9d9bf5490954c793f384fe4097e1ce0f90a"
+                "reference": "ab6d3df21327c590d93f2ce39aa01c60e1b8cf0c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/f286a9d9bf5490954c793f384fe4097e1ce0f90a",
-                "reference": "f286a9d9bf5490954c793f384fe4097e1ce0f90a",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/ab6d3df21327c590d93f2ce39aa01c60e1b8cf0c",
+                "reference": "ab6d3df21327c590d93f2ce39aa01c60e1b8cf0c",
                 "shasum": ""
             },
             "require": {
@@ -4908,7 +4908,7 @@
                 "craftcms",
                 "seomatic"
             ],
-            "time": "2018-04-25T17:32:51+00:00"
+            "time": "2018-04-27T02:53:32+00:00"
         },
         {
             "name": "nystudio107/craft-typogrify",
