@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "7fa595f294f52d5664092502fdd1eecc",
+    "content-hash": "c240f411b38a8fc35f6ce93a9be3c60c",
     "packages": [
         {
             "name": "aelvan/craft-cp-element-count",
@@ -167,16 +167,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.55.5",
+            "version": "3.55.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "12152498f9c6f5595ebdeb4ec3d8b45379843bf4"
+                "reference": "fcafbbdaa58ca2b1db62fd6dc626c01125f8eee9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/12152498f9c6f5595ebdeb4ec3d8b45379843bf4",
-                "reference": "12152498f9c6f5595ebdeb4ec3d8b45379843bf4",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/fcafbbdaa58ca2b1db62fd6dc626c01125f8eee9",
+                "reference": "fcafbbdaa58ca2b1db62fd6dc626c01125f8eee9",
                 "shasum": ""
             },
             "require": {
@@ -243,7 +243,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2018-05-02T19:55:35+00:00"
+            "time": "2018-05-03T22:24:42+00:00"
         },
         {
             "name": "barrelstrength/sprout-base",
@@ -3666,6 +3666,57 @@
                 "oauth2"
             ],
             "time": "2017-07-22T01:25:00+00:00"
+        },
+        {
+            "name": "lukeyouell/craft-updatechecker",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lukeyouell/craft-updatechecker.git",
+                "reference": "f82e68115f787fa5a53b705794f1950133a2b672"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lukeyouell/craft-updatechecker/zipball/f82e68115f787fa5a53b705794f1950133a2b672",
+                "reference": "f82e68115f787fa5a53b705794f1950133a2b672",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Update Checker",
+                "handle": "update-checker",
+                "hasCpSettings": true,
+                "hasCpSection": false,
+                "changelogUrl": "https://raw.githubusercontent.com/lukeyouell/craft-updatechecker/master/CHANGELOG.md",
+                "class": "lukeyouell\\updatechecker\\UpdateChecker"
+            },
+            "autoload": {
+                "psr-4": {
+                    "lukeyouell\\updatechecker\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Luke Youell",
+                    "homepage": "https://github.com/lukeyouell"
+                }
+            ],
+            "description": "Automated update checker that notifies you of any pending updates",
+            "keywords": [
+                "Craft",
+                "cms",
+                "craft-plugin",
+                "craftcms",
+                "update checker"
+            ],
+            "time": "2018-05-03T12:58:33+00:00"
         },
         {
             "name": "mailgun/mailgun-php",

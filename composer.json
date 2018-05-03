@@ -42,6 +42,7 @@
         "dolphiq/titleentriesfield": "^1.0",
         "dukt/facebook": "^2.0",
         "dukt/twitter": "^2.0",
+        "lukeyouell/craft-updatechecker": "^1.1",
         "mblode/svgplaceholder": "^1.0",
         "mexitek/phpcolors": "dev-master",
         "mikestecker/craft-readability": "^1.0",
