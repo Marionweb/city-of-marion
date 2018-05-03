@@ -2618,16 +2618,16 @@
         },
         {
             "name": "giggsey/libphonenumber-for-php",
-            "version": "8.9.4",
+            "version": "8.9.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/giggsey/libphonenumber-for-php.git",
-                "reference": "dcdd1257eff60f3f3c72ba3e2d5a3b73efe317e9"
+                "reference": "cf4adb15bc43a2746a322431194ef0ff85766282"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/dcdd1257eff60f3f3c72ba3e2d5a3b73efe317e9",
-                "reference": "dcdd1257eff60f3f3c72ba3e2d5a3b73efe317e9",
+                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/cf4adb15bc43a2746a322431194ef0ff85766282",
+                "reference": "cf4adb15bc43a2746a322431194ef0ff85766282",
                 "shasum": ""
             },
             "require": {
@@ -2682,7 +2682,7 @@
                 "phonenumber",
                 "validation"
             ],
-            "time": "2018-04-17T10:23:54+00:00"
+            "time": "2018-05-03T11:02:57+00:00"
         },
         {
             "name": "giggsey/locale",
@@ -4844,16 +4844,16 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "3.0.9",
+            "version": "3.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "b0221535de47493b031487783cef118b89036b48"
+                "reference": "9734dde85ff627e7e9567a52ff94d763ffade72a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/b0221535de47493b031487783cef118b89036b48",
-                "reference": "b0221535de47493b031487783cef118b89036b48",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/9734dde85ff627e7e9567a52ff94d763ffade72a",
+                "reference": "9734dde85ff627e7e9567a52ff94d763ffade72a",
                 "shasum": ""
             },
             "require": {
@@ -4908,7 +4908,7 @@
                 "craftcms",
                 "seomatic"
             ],
-            "time": "2018-04-30T21:28:45+00:00"
+            "time": "2018-05-02T21:59:55+00:00"
         },
         {
             "name": "nystudio107/craft-typogrify",
