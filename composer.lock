@@ -1008,16 +1008,16 @@
         },
         {
             "name": "composer/spdx-licenses",
-            "version": "1.3.0",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/spdx-licenses.git",
-                "reference": "7e111c50db92fa2ced140f5ba23b4e261bc77a30"
+                "reference": "cb17687e9f936acd7e7245ad3890f953770dec1b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/spdx-licenses/zipball/7e111c50db92fa2ced140f5ba23b4e261bc77a30",
-                "reference": "7e111c50db92fa2ced140f5ba23b4e261bc77a30",
+                "url": "https://api.github.com/repos/composer/spdx-licenses/zipball/cb17687e9f936acd7e7245ad3890f953770dec1b",
+                "reference": "cb17687e9f936acd7e7245ad3890f953770dec1b",
                 "shasum": ""
             },
             "require": {
@@ -1065,7 +1065,7 @@
                 "spdx",
                 "validator"
             ],
-            "time": "2018-01-31T13:17:27+00:00"
+            "time": "2018-04-30T10:33:04+00:00"
         },
         {
             "name": "container-interop/container-interop",
@@ -3669,16 +3669,16 @@
         },
         {
             "name": "lukeyouell/craft-updatechecker",
-            "version": "1.1.1",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lukeyouell/craft-updatechecker.git",
-                "reference": "f82e68115f787fa5a53b705794f1950133a2b672"
+                "reference": "c14ced4650051cefa5b36c04526029627f46c3f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lukeyouell/craft-updatechecker/zipball/f82e68115f787fa5a53b705794f1950133a2b672",
-                "reference": "f82e68115f787fa5a53b705794f1950133a2b672",
+                "url": "https://api.github.com/repos/lukeyouell/craft-updatechecker/zipball/c14ced4650051cefa5b36c04526029627f46c3f0",
+                "reference": "c14ced4650051cefa5b36c04526029627f46c3f0",
                 "shasum": ""
             },
             "require": {
@@ -3716,7 +3716,7 @@
                 "craftcms",
                 "update checker"
             ],
-            "time": "2018-05-03T12:58:33+00:00"
+            "time": "2018-05-04T11:08:18+00:00"
         },
         {
             "name": "mailgun/mailgun-php",
@@ -4895,16 +4895,16 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "3.0.10",
+            "version": "3.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "9734dde85ff627e7e9567a52ff94d763ffade72a"
+                "reference": "bb4eac5837b12cb5815b439592ca7ab20e75461a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/9734dde85ff627e7e9567a52ff94d763ffade72a",
-                "reference": "9734dde85ff627e7e9567a52ff94d763ffade72a",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/bb4eac5837b12cb5815b439592ca7ab20e75461a",
+                "reference": "bb4eac5837b12cb5815b439592ca7ab20e75461a",
                 "shasum": ""
             },
             "require": {
@@ -4959,7 +4959,7 @@
                 "craftcms",
                 "seomatic"
             ],
-            "time": "2018-05-02T21:59:55+00:00"
+            "time": "2018-05-04T02:24:55+00:00"
         },
         {
             "name": "nystudio107/craft-typogrify",
