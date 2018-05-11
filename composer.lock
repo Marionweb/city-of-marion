@@ -167,16 +167,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.55.9",
+            "version": "3.55.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "ec7b972330ce65fa33875025ffec8e09e0476a8f"
+                "reference": "5177cbe73c96d25ff759e406ac81b8e25557482c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/ec7b972330ce65fa33875025ffec8e09e0476a8f",
-                "reference": "ec7b972330ce65fa33875025ffec8e09e0476a8f",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/5177cbe73c96d25ff759e406ac81b8e25557482c",
+                "reference": "5177cbe73c96d25ff759e406ac81b8e25557482c",
                 "shasum": ""
             },
             "require": {
@@ -243,7 +243,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2018-05-08T16:37:41+00:00"
+            "time": "2018-05-10T23:23:00+00:00"
         },
         {
             "name": "barrelstrength/sprout-base",
@@ -1200,16 +1200,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.0.6",
+            "version": "3.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "bbfa79f10458bec30eae41c1bbda29b4bf1bae4a"
+                "reference": "4b041728306579aec5badab7df7d4bf42440305b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/bbfa79f10458bec30eae41c1bbda29b4bf1bae4a",
-                "reference": "bbfa79f10458bec30eae41c1bbda29b4bf1bae4a",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/4b041728306579aec5badab7df7d4bf42440305b",
+                "reference": "4b041728306579aec5badab7df7d4bf42440305b",
                 "shasum": ""
             },
             "require": {
@@ -1278,7 +1278,7 @@
                 "craftcms",
                 "yii2"
             ],
-            "time": "2018-05-08T18:15:48+00:00"
+            "time": "2018-05-10T18:26:07+00:00"
         },
         {
             "name": "craftcms/contact-form",
@@ -4426,16 +4426,16 @@
         },
         {
             "name": "mundschenk-at/php-typography",
-            "version": "v6.1.4",
+            "version": "v6.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mundschenk-at/php-typography.git",
-                "reference": "fe5c440cae168e5d7fb6ca2140eadf7a04dd8f03"
+                "reference": "8f2be6c39e4ae53515bbf802aeaec88bee3818b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mundschenk-at/php-typography/zipball/fe5c440cae168e5d7fb6ca2140eadf7a04dd8f03",
-                "reference": "fe5c440cae168e5d7fb6ca2140eadf7a04dd8f03",
+                "url": "https://api.github.com/repos/mundschenk-at/php-typography/zipball/8f2be6c39e4ae53515bbf802aeaec88bee3818b5",
+                "reference": "8f2be6c39e4ae53515bbf802aeaec88bee3818b5",
                 "shasum": ""
             },
             "require": {
@@ -4484,7 +4484,7 @@
                 }
             ],
             "description": "A PHP library for improving your web typography",
-            "time": "2018-04-08T06:55:47+00:00"
+            "time": "2018-05-10T10:36:45+00:00"
         },
         {
             "name": "newism/craft3-fields",
@@ -4723,16 +4723,16 @@
         },
         {
             "name": "nystudio107/craft-imageoptimize",
-            "version": "1.4.31",
+            "version": "1.4.32",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-imageoptimize.git",
-                "reference": "b6e1556d1fb61f93869474a3af86e7e346590c45"
+                "reference": "68c45bd4de004dc943a2b0312a2445f005a8bb2a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-imageoptimize/zipball/b6e1556d1fb61f93869474a3af86e7e346590c45",
-                "reference": "b6e1556d1fb61f93869474a3af86e7e346590c45",
+                "url": "https://api.github.com/repos/nystudio107/craft-imageoptimize/zipball/68c45bd4de004dc943a2b0312a2445f005a8bb2a",
+                "reference": "68c45bd4de004dc943a2b0312a2445f005a8bb2a",
                 "shasum": ""
             },
             "require": {
@@ -4783,7 +4783,7 @@
                 "optimize",
                 "optimize-images"
             ],
-            "time": "2018-04-22T22:17:53+00:00"
+            "time": "2018-05-09T22:51:27+00:00"
         },
         {
             "name": "nystudio107/craft-minify",
@@ -4895,16 +4895,16 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "3.0.11",
+            "version": "3.0.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "bb4eac5837b12cb5815b439592ca7ab20e75461a"
+                "reference": "94ab842f7d92113ed622b762e0a63ee7c9a5ce02"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/bb4eac5837b12cb5815b439592ca7ab20e75461a",
-                "reference": "bb4eac5837b12cb5815b439592ca7ab20e75461a",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/94ab842f7d92113ed622b762e0a63ee7c9a5ce02",
+                "reference": "94ab842f7d92113ed622b762e0a63ee7c9a5ce02",
                 "shasum": ""
             },
             "require": {
@@ -4959,7 +4959,7 @@
                 "craftcms",
                 "seomatic"
             ],
-            "time": "2018-05-04T02:24:55+00:00"
+            "time": "2018-05-10T16:34:48+00:00"
         },
         {
             "name": "nystudio107/craft-typogrify",
