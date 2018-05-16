@@ -167,16 +167,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.55.12",
+            "version": "3.56.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "5177cbe73c96d25ff759e406ac81b8e25557482c"
+                "reference": "933bc65b9f8e4d88e0bf4635d9476c2766eee743"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/5177cbe73c96d25ff759e406ac81b8e25557482c",
-                "reference": "5177cbe73c96d25ff759e406ac81b8e25557482c",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/933bc65b9f8e4d88e0bf4635d9476c2766eee743",
+                "reference": "933bc65b9f8e4d88e0bf4635d9476c2766eee743",
                 "shasum": ""
             },
             "require": {
@@ -243,7 +243,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2018-05-10T23:23:00+00:00"
+            "time": "2018-05-15T18:32:36+00:00"
         },
         {
             "name": "barrelstrength/sprout-base",
@@ -1200,16 +1200,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.0.7",
+            "version": "3.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "4b041728306579aec5badab7df7d4bf42440305b"
+                "reference": "d443e51ce496620abd56a711f7484da7ce366422"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/4b041728306579aec5badab7df7d4bf42440305b",
-                "reference": "4b041728306579aec5badab7df7d4bf42440305b",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/d443e51ce496620abd56a711f7484da7ce366422",
+                "reference": "d443e51ce496620abd56a711f7484da7ce366422",
                 "shasum": ""
             },
             "require": {
@@ -1278,7 +1278,7 @@
                 "craftcms",
                 "yii2"
             ],
-            "time": "2018-05-10T18:26:07+00:00"
+            "time": "2018-05-15T23:56:55+00:00"
         },
         {
             "name": "craftcms/contact-form",
@@ -1668,16 +1668,16 @@
         },
         {
             "name": "craftcms/redactor",
-            "version": "2.0.1",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/redactor.git",
-                "reference": "4d83ac07bf91236db163a46a92fede6ecf1503e4"
+                "reference": "7d72a873e12ea7c92a8a6d00e025e303089d504e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/redactor/zipball/4d83ac07bf91236db163a46a92fede6ecf1503e4",
-                "reference": "4d83ac07bf91236db163a46a92fede6ecf1503e4",
+                "url": "https://api.github.com/repos/craftcms/redactor/zipball/7d72a873e12ea7c92a8a6d00e025e303089d504e",
+                "reference": "7d72a873e12ea7c92a8a6d00e025e303089d504e",
                 "shasum": ""
             },
             "require": {
@@ -1713,7 +1713,7 @@
                 "html",
                 "yii2"
             ],
-            "time": "2018-05-07T17:50:01+00:00"
+            "time": "2018-05-15T21:58:54+00:00"
         },
         {
             "name": "craftcms/server-check",
@@ -2618,16 +2618,16 @@
         },
         {
             "name": "giggsey/libphonenumber-for-php",
-            "version": "8.9.5",
+            "version": "8.9.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/giggsey/libphonenumber-for-php.git",
-                "reference": "cf4adb15bc43a2746a322431194ef0ff85766282"
+                "reference": "3fa83ad80f9ac06fa9c105640dc0fffbe1086614"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/cf4adb15bc43a2746a322431194ef0ff85766282",
-                "reference": "cf4adb15bc43a2746a322431194ef0ff85766282",
+                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/3fa83ad80f9ac06fa9c105640dc0fffbe1086614",
+                "reference": "3fa83ad80f9ac06fa9c105640dc0fffbe1086614",
                 "shasum": ""
             },
             "require": {
@@ -2682,7 +2682,7 @@
                 "phonenumber",
                 "validation"
             ],
-            "time": "2018-05-03T11:02:57+00:00"
+            "time": "2018-05-15T11:28:45+00:00"
         },
         {
             "name": "giggsey/locale",
