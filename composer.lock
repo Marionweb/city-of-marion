@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "aelvan/craft-cp-element-count",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aelvan/craft-cp-element-count.git",
-                "reference": "887b44ab41cf5c1ee28bbf7a0d30bb506d96617d"
+                "reference": "15c18de5f9c6bbfb8649f851eb9acb5eb7821050"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aelvan/craft-cp-element-count/zipball/887b44ab41cf5c1ee28bbf7a0d30bb506d96617d",
-                "reference": "887b44ab41cf5c1ee28bbf7a0d30bb506d96617d",
+                "url": "https://api.github.com/repos/aelvan/craft-cp-element-count/zipball/15c18de5f9c6bbfb8649f851eb9acb5eb7821050",
+                "reference": "15c18de5f9c6bbfb8649f851eb9acb5eb7821050",
                 "shasum": ""
             },
             "require": {
@@ -47,7 +47,7 @@
                     "homepage": "https://www.vaersaagod.no/"
                 }
             ],
-            "description": "Adds an element count to sections and categories in the Craft control panel",
+            "description": "Adds an element count to sections, categories, user groups and asset folders in the Craft control panel",
             "keywords": [
                 "Craft",
                 "cms",
@@ -55,7 +55,7 @@
                 "craft-plugin",
                 "craftcms"
             ],
-            "time": "2018-04-13T21:21:54+00:00"
+            "time": "2018-05-16T18:45:31+00:00"
         },
         {
             "name": "aelvan/inlin",
@@ -167,16 +167,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.56.1",
+            "version": "3.56.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "933bc65b9f8e4d88e0bf4635d9476c2766eee743"
+                "reference": "b4a2ac39a00eef77c1da5fa3807e7ec54982dddd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/933bc65b9f8e4d88e0bf4635d9476c2766eee743",
-                "reference": "933bc65b9f8e4d88e0bf4635d9476c2766eee743",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/b4a2ac39a00eef77c1da5fa3807e7ec54982dddd",
+                "reference": "b4a2ac39a00eef77c1da5fa3807e7ec54982dddd",
                 "shasum": ""
             },
             "require": {
@@ -243,7 +243,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2018-05-15T18:32:36+00:00"
+            "time": "2018-05-16T18:29:09+00:00"
         },
         {
             "name": "barrelstrength/sprout-base",
@@ -4895,16 +4895,16 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "3.0.12",
+            "version": "3.0.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "94ab842f7d92113ed622b762e0a63ee7c9a5ce02"
+                "reference": "dd4db3e1a66a8941637fa73a1412b9faba3897c8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/94ab842f7d92113ed622b762e0a63ee7c9a5ce02",
-                "reference": "94ab842f7d92113ed622b762e0a63ee7c9a5ce02",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/dd4db3e1a66a8941637fa73a1412b9faba3897c8",
+                "reference": "dd4db3e1a66a8941637fa73a1412b9faba3897c8",
                 "shasum": ""
             },
             "require": {
@@ -4954,12 +4954,19 @@
             "description": "SEOmatic facilitates modern SEO best practices & implementation for Craft CMS 3. It is a turnkey SEO system that is comprehensive, powerful, and flexible.",
             "keywords": [
                 "Craft",
+                "JSON-LD",
+                "Sitemap",
                 "cms",
                 "craft-plugin",
                 "craftcms",
-                "seomatic"
+                "facebook",
+                "meta",
+                "seo",
+                "seomatic",
+                "tags",
+                "twitter"
             ],
-            "time": "2018-05-10T16:34:48+00:00"
+            "time": "2018-05-16T04:12:07+00:00"
         },
         {
             "name": "nystudio107/craft-typogrify",
