@@ -23,6 +23,7 @@
 # CRAFT STORAGE
 /storage/*
 /web/cpresources/*
+/web/transforms
 
 # ASSETS
 /web/assets/*
