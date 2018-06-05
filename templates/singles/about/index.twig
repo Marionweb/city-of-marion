@@ -42,9 +42,9 @@
   </div>
 
   {% if aboutBlock.image | length %}
-    {% set image = aboutBlock.image.one() %}
-    {%- set transformOptions = { width: 1600, height: 1280, quality: 82 } -%}
-    {% css %}#about--about .about--section-image { background-image: url({{ image.getUrl(transformOptions) }}) }{% endcss %}
+    {% set aboutBlockImage = aboutBlock.image.one() %}
+    {% set aboutBlockImageTransformed = craft.imager.transformImage(aboutBlockImage, { width: 1600, height: 1280, jpegQuality: 82 }) -%}
+    {% css %}#about--about .about--section-image { background-image: url({{ aboutBlockImageTransformed.url }}) }{% endcss %}
     <div class="about--section-image"></div>
   {% endif %}
 
@@ -64,13 +64,13 @@
   {% set mayorWelcomeBlock = entry.mayorWelcomeBlock.one() %}
   {% set mayor = mayorWelcomeBlock.mayor.one() %}
   {% set memberName = mayor.personName|trim|replace({'  ': ' '}) %}
-  {% set image = mayor.staffPhoto.one() %}
+  {% set mayorImage = mayor.staffPhoto.one() %}
   {% if mayorWelcomeBlock.imageOverride | length %}
-    {% set image = mayorWelcomeBlock.imageOverride.one() %}
+    {% set mayorImage = mayorWelcomeBlock.imageOverride.one() %}
   {% endif %}
-  {% set image = mayor.staffPhoto.one() %}
-  {%- set transformOptions = { width: 1600, height: 1280, quality: 82 } -%}
-  {% css %}#about--mayor-welcome .about--section-image { background-image: url({{ image.getUrl(transformOptions) }}) }{% endcss %}
+  {% set mayorImage = mayor.staffPhoto.one() %}
+  {% set mayorImageTransformed = craft.imager.transformImage(mayorImage, { width: 1600, height: 1280, jpegQuality: 82 }) -%}
+  {% css %}#about--mayor-welcome .about--section-image { background-image: url({{ mayorImageTransformed.url }}) }{% endcss %}
 <section id="about--mayor-welcome" class="about--section-two-col">
   <div class="about--section-image"></div>
 
@@ -90,9 +90,9 @@
   {% set historyBlock = entry.historyBlock.one() %}
 <section id="about--history">
   {% if historyBlock.backgroundImage | length %}
-    {% set image = historyBlock.backgroundImage.one() %}
-    {%- set transformOptions = { width: 1600, quality: 82 } -%}
-    {% css %}#about--history--image { background-image: url({{ image.getUrl(transformOptions) }}) }{% endcss %}
+    {% set historyBlockImage = historyBlock.backgroundImage.one() %}
+    {% set historyBlockImageTransformed = craft.imager.transformImage(historyBlockImage, { width: 1600, jpegQuality: 82 }) -%}
+    {% css %}#about--history--image { background-image: url({{ historyBlockImageTransformed.url }}) }{% endcss %}
     <div id="about--history--image"></div>
   {% endif %}
 
