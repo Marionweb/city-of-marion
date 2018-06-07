@@ -31,6 +31,11 @@
 {# ASIDE #}
 {% block aside %}
   {% include "modules/content/_block-quick-links" %}
+  {% if entry.type == 'story' %}
+    {% if entry.storyType.one.slug == 'champions' %}
+      {{ include('modules/content/_block-story-share') }}
+    {% endif %}
+  {% endif %}
 {% endblock %}
 
 {# Bottom of page - full width column #}
