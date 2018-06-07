@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "7eccb76098cbdebf4442e38d3b0ac322",
+    "content-hash": "8cb4b35272c4efa601cfbc735bd9cf1c",
     "packages": [
         {
             "name": "aelvan/craft-cp-element-count",
@@ -232,16 +232,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.61.0",
+            "version": "3.61.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "5dabf378a52afd357fedd290f6b1837aec15eab8"
+                "reference": "527d7d10b30a2294686d146b0a12b587f28057b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/5dabf378a52afd357fedd290f6b1837aec15eab8",
-                "reference": "5dabf378a52afd357fedd290f6b1837aec15eab8",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/527d7d10b30a2294686d146b0a12b587f28057b0",
+                "reference": "527d7d10b30a2294686d146b0a12b587f28057b0",
                 "shasum": ""
             },
             "require": {
@@ -308,7 +308,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2018-06-04T21:48:21+00:00"
+            "time": "2018-06-05T22:44:12+00:00"
         },
         {
             "name": "barrelstrength/sprout-base",
@@ -1310,16 +1310,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.0.9",
+            "version": "3.0.10.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "c9798817ac3cb39e53df1d69ec2c2c495f562a02"
+                "reference": "046036309aaa6a383b84a4f7d9b4c521fffda843"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/c9798817ac3cb39e53df1d69ec2c2c495f562a02",
-                "reference": "c9798817ac3cb39e53df1d69ec2c2c495f562a02",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/046036309aaa6a383b84a4f7d9b4c521fffda843",
+                "reference": "046036309aaa6a383b84a4f7d9b4c521fffda843",
                 "shasum": ""
             },
             "require": {
@@ -1388,7 +1388,7 @@
                 "craftcms",
                 "yii2"
             ],
-            "time": "2018-05-22T19:15:42+00:00"
+            "time": "2018-06-07T12:33:59+00:00"
         },
         {
             "name": "craftcms/contact-form",
@@ -3099,21 +3099,21 @@
         },
         {
             "name": "google/gax",
-            "version": "0.33.0",
+            "version": "0.33.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/gax-php.git",
-                "reference": "9f975d6ebf2b7c7a064c22e3f7fc6818052fd387"
+                "reference": "9d15f56374ab3940f5f11761cfefc7dfb18ea363"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/gax-php/zipball/9f975d6ebf2b7c7a064c22e3f7fc6818052fd387",
-                "reference": "9f975d6ebf2b7c7a064c22e3f7fc6818052fd387",
+                "url": "https://api.github.com/repos/googleapis/gax-php/zipball/9d15f56374ab3940f5f11761cfefc7dfb18ea363",
+                "reference": "9d15f56374ab3940f5f11761cfefc7dfb18ea363",
                 "shasum": ""
             },
             "require": {
                 "google/auth": "^1.2.0",
-                "google/protobuf": "^3.5.1",
+                "google/protobuf": "3.5.*",
                 "grpc/grpc": "^1.4",
                 "guzzlehttp/promises": "^1.3",
                 "guzzlehttp/psr7": "^1.2",
@@ -3146,7 +3146,7 @@
             "keywords": [
                 "google"
             ],
-            "time": "2018-05-24T17:47:50+00:00"
+            "time": "2018-06-07T17:09:36+00:00"
         },
         {
             "name": "google/proto-client",
@@ -3190,16 +3190,16 @@
         },
         {
             "name": "google/protobuf",
-            "version": "v3.6.0rc2",
+            "version": "v3.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/google/protobuf.git",
-                "reference": "a239ed2bda4b246c10c9d0d2a11a1f7bb1f52c86"
+                "reference": "b5fbb742af122b565925987e65c08957739976a7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/google/protobuf/zipball/a239ed2bda4b246c10c9d0d2a11a1f7bb1f52c86",
-                "reference": "a239ed2bda4b246c10c9d0d2a11a1f7bb1f52c86",
+                "url": "https://api.github.com/repos/google/protobuf/zipball/b5fbb742af122b565925987e65c08957739976a7",
+                "reference": "b5fbb742af122b565925987e65c08957739976a7",
                 "shasum": ""
             },
             "require": {
@@ -3227,7 +3227,7 @@
             "keywords": [
                 "proto"
             ],
-            "time": "2018-05-30T21:40:42+00:00"
+            "time": "2018-03-06T03:54:18+00:00"
         },
         {
             "name": "grpc/grpc",
@@ -4287,6 +4287,57 @@
                 "oauth2"
             ],
             "time": "2017-07-22T01:25:00+00:00"
+        },
+        {
+            "name": "lukeyouell/craft-readtime",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lukeyouell/craft-readtime.git",
+                "reference": "b0253e24f1eb6d92ba83fc70c3eff92509db9f0b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lukeyouell/craft-readtime/zipball/b0253e24f1eb6d92ba83fc70c3eff92509db9f0b",
+                "reference": "b0253e24f1eb6d92ba83fc70c3eff92509db9f0b",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Read Time",
+                "handle": "read-time",
+                "hasCpSettings": true,
+                "hasCpSection": false,
+                "changelogUrl": "https://raw.githubusercontent.com/lukeyouell/craft-readtime/master/CHANGELOG.md",
+                "class": "lukeyouell\\readtime\\ReadTime"
+            },
+            "autoload": {
+                "psr-4": {
+                    "lukeyouell\\readtime\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Luke Youell",
+                    "homepage": "https://github.com/lukeyouell"
+                }
+            ],
+            "description": "Calculate the estimated read time for content.",
+            "keywords": [
+                "Craft",
+                "average read time",
+                "cms",
+                "craft-plugin",
+                "craftcms"
+            ],
+            "time": "2018-06-06T14:06:42+00:00"
         },
         {
             "name": "lukeyouell/craft-updatechecker",
@@ -5648,16 +5699,16 @@
         },
         {
             "name": "paragonie/random_compat",
-            "version": "v2.0.12",
+            "version": "v2.0.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/random_compat.git",
-                "reference": "258c89a6b97de7dfaf5b8c7607d0478e236b04fb"
+                "reference": "f6ce7dd93628088e1017fb5dd73b0b9fec7df9e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/258c89a6b97de7dfaf5b8c7607d0478e236b04fb",
-                "reference": "258c89a6b97de7dfaf5b8c7607d0478e236b04fb",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/f6ce7dd93628088e1017fb5dd73b0b9fec7df9e5",
+                "reference": "f6ce7dd93628088e1017fb5dd73b0b9fec7df9e5",
                 "shasum": ""
             },
             "require": {
@@ -5689,10 +5740,11 @@
             "description": "PHP 5.x polyfill for random_bytes() and random_int() from PHP 7",
             "keywords": [
                 "csprng",
+                "polyfill",
                 "pseudorandom",
                 "random"
             ],
-            "time": "2018-04-04T21:24:14+00:00"
+            "time": "2018-06-06T17:40:22+00:00"
         },
         {
             "name": "php-http/client-common",
