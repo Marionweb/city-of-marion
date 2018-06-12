@@ -1,5 +1,8 @@
+{% if general.storyShareWidget | length %}
+{% set storyShareWidget = general.storyShareWidget.one() %}
 <section class="block--story-share">
   <span><strong>City of Champions</strong></span>
-  <p>Know a Champion in our community?</p>
-  <a href="/share-a-story" title="Share a story of a champion">Share their story</a>
+  {% if storyShareWidget.widgetText %}<p>Know a Champion in our community?</p>{% endif %}
+  {% if storyShareWidget.widgetButton | length %}<a href="{{ storyShareWidget.widgetButton.one.url }}" title="{% if storyShareWidget.widgetButtonTitle %}{{ storyShareWidget.widgetButtonTitle }}{% else %}{{ storyShareWidget.widgetButton.one.Title }}{% endif %}" rel="{{ entry.title }}">{{ storyShareWidget.widgetButton.one.Title }}</a>{% endif %}
 </section>
+{% endif %}
