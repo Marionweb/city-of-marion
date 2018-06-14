@@ -232,16 +232,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.61.4",
+            "version": "3.61.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "2c1ec9b0f39549eeb0fb37166e5b28a8f4392f1b"
+                "reference": "a2477aacfb780a024c9a20fdb6f6c3fbf5cc84d1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/2c1ec9b0f39549eeb0fb37166e5b28a8f4392f1b",
-                "reference": "2c1ec9b0f39549eeb0fb37166e5b28a8f4392f1b",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/a2477aacfb780a024c9a20fdb6f6c3fbf5cc84d1",
+                "reference": "a2477aacfb780a024c9a20fdb6f6c3fbf5cc84d1",
                 "shasum": ""
             },
             "require": {
@@ -308,7 +308,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2018-06-11T21:08:37+00:00"
+            "time": "2018-06-13T21:37:13+00:00"
         },
         {
             "name": "barrelstrength/sprout-base",
@@ -459,20 +459,20 @@
         },
         {
             "name": "barrelstrength/sprout-forms",
-            "version": "3.0.0-beta.16",
+            "version": "3.0.0-beta.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/barrelstrength/craft-sprout-forms.git",
-                "reference": "337808a18e3e26b248fe5d3294b2822b589f43f0"
+                "reference": "e62f5eb95b607756101f0f78fd327252e2593e16"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/barrelstrength/craft-sprout-forms/zipball/337808a18e3e26b248fe5d3294b2822b589f43f0",
-                "reference": "337808a18e3e26b248fe5d3294b2822b589f43f0",
+                "url": "https://api.github.com/repos/barrelstrength/craft-sprout-forms/zipball/e62f5eb95b607756101f0f78fd327252e2593e16",
+                "reference": "e62f5eb95b607756101f0f78fd327252e2593e16",
                 "shasum": ""
             },
             "require": {
-                "barrelstrength/sprout-base": "^2.0.6",
+                "barrelstrength/sprout-base": "^2.0.7",
                 "craftcms/cms": "^3.0.0"
             },
             "type": "craft-plugin",
@@ -509,7 +509,7 @@
                 "craftcms",
                 "sprout forms"
             ],
-            "time": "2018-05-23T14:42:00+00:00"
+            "time": "2018-06-12T18:28:11+00:00"
         },
         {
             "name": "barrelstrength/sprout-forms-us-states",
@@ -2445,23 +2445,23 @@
         },
         {
             "name": "dukt/twitter",
-            "version": "2.0.1",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dukt/twitter.git",
-                "reference": "0718d1cd539ea69e3d3e1320674a211a1cae252c"
+                "reference": "5e6a6ab64e5f6fcb4b6b6cf5cdcaaec1340722ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dukt/twitter/zipball/0718d1cd539ea69e3d3e1320674a211a1cae252c",
-                "reference": "0718d1cd539ea69e3d3e1320674a211a1cae252c",
+                "url": "https://api.github.com/repos/dukt/twitter/zipball/5e6a6ab64e5f6fcb4b6b6cf5cdcaaec1340722ed",
+                "reference": "5e6a6ab64e5f6fcb4b6b6cf5cdcaaec1340722ed",
                 "shasum": ""
             },
             "require": {
                 "craftcms/cms": "^3.0.0-RC1",
                 "guzzlehttp/oauth-subscriber": "0.3.*",
                 "league/oauth1-client": "1.7.0@dev",
-                "nojimage/twitter-text-php": "^1.1"
+                "nojimage/twitter-text-php": "^2.0"
             },
             "type": "craft-plugin",
             "extra": {
@@ -2492,7 +2492,7 @@
                 "craftcms",
                 "twitter"
             ],
-            "time": "2018-05-24T23:25:38+00:00"
+            "time": "2018-06-14T11:05:51+00:00"
         },
         {
             "name": "egulias/email-validator",
@@ -2774,16 +2774,16 @@
         },
         {
             "name": "giggsey/libphonenumber-for-php",
-            "version": "8.9.7",
+            "version": "8.9.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/giggsey/libphonenumber-for-php.git",
-                "reference": "cc4ec7cd91e6bc629f868dd4564aa74bbcd8dd34"
+                "reference": "420621360d56499ac1b0e6293561ed8661017c6b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/cc4ec7cd91e6bc629f868dd4564aa74bbcd8dd34",
-                "reference": "cc4ec7cd91e6bc629f868dd4564aa74bbcd8dd34",
+                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/420621360d56499ac1b0e6293561ed8661017c6b",
+                "reference": "420621360d56499ac1b0e6293561ed8661017c6b",
                 "shasum": ""
             },
             "require": {
@@ -2838,7 +2838,7 @@
                 "phonenumber",
                 "validation"
             ],
-            "time": "2018-05-29T11:52:24+00:00"
+            "time": "2018-06-14T11:25:48+00:00"
         },
         {
             "name": "giggsey/locale",
@@ -5201,32 +5201,32 @@
         },
         {
             "name": "nojimage/twitter-text-php",
-            "version": "v1.14.2",
+            "version": "v2.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nojimage/twitter-text-php.git",
-                "reference": "4c3d764030429a227e7687a44a3fe12aaf7d0e84"
+                "reference": "b6103f250e32248c6ca9676417eef40ae0e1344d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nojimage/twitter-text-php/zipball/4c3d764030429a227e7687a44a3fe12aaf7d0e84",
-                "reference": "4c3d764030429a227e7687a44a3fe12aaf7d0e84",
+                "url": "https://api.github.com/repos/nojimage/twitter-text-php/zipball/b6103f250e32248c6ca9676417eef40ae0e1344d",
+                "reference": "b6103f250e32248c6ca9676417eef40ae0e1344d",
                 "shasum": ""
             },
             "require": {
+                "ext-intl": "*",
+                "ext-mbstring": "*",
                 "php": ">=5.3.3"
             },
             "require-dev": {
-                "php": ">=5.3.3",
-                "phpunit/phpunit": "4.8.*|5.7.*",
+                "phpunit/phpunit": "4.8.*|5.7.*|6.5.*",
                 "symfony/yaml": "~2.6.0",
-                "twitter/twitter-text": "^1.14.7"
+                "twitter/twitter-text": "^2.0.0"
             },
             "type": "library",
             "autoload": {
                 "psr-0": {
-                    "Twitter\\Text\\": "lib/",
-                    "Twitter_": "compat/"
+                    "Twitter\\Text\\": "lib/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -5262,7 +5262,7 @@
                 "text",
                 "twitter"
             ],
-            "time": "2017-09-21T09:38:42+00:00"
+            "time": "2018-05-17T10:50:52+00:00"
         },
         {
             "name": "nystudio107/craft-cookies",
@@ -5548,16 +5548,16 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "3.0.20",
+            "version": "3.0.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "ef6867bde31d01f5e7a3f6fe27327f99c980c5ac"
+                "reference": "adc6eef9653c583b01176166ec8d42cb0d9953a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/ef6867bde31d01f5e7a3f6fe27327f99c980c5ac",
-                "reference": "ef6867bde31d01f5e7a3f6fe27327f99c980c5ac",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/adc6eef9653c583b01176166ec8d42cb0d9953a0",
+                "reference": "adc6eef9653c583b01176166ec8d42cb0d9953a0",
                 "shasum": ""
             },
             "require": {
@@ -5619,24 +5619,24 @@
                 "tags",
                 "twitter"
             ],
-            "time": "2018-05-31T16:45:02+00:00"
+            "time": "2018-06-12T23:30:53+00:00"
         },
         {
             "name": "nystudio107/craft-typogrify",
-            "version": "1.1.10",
+            "version": "1.1.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-typogrify.git",
-                "reference": "ac69b6b2db40958ce2679f2154be12438b746117"
+                "reference": "2a59863e4c797212300e69a7c184f20c8771ca35"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-typogrify/zipball/ac69b6b2db40958ce2679f2154be12438b746117",
-                "reference": "ac69b6b2db40958ce2679f2154be12438b746117",
+                "url": "https://api.github.com/repos/nystudio107/craft-typogrify/zipball/2a59863e4c797212300e69a7c184f20c8771ca35",
+                "reference": "2a59863e4c797212300e69a7c184f20c8771ca35",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^3.0.0-RC1",
+                "craftcms/cms": "^3.0.0",
                 "michelf/php-smartypants": "^1.8",
                 "mundschenk-at/php-typography": "^6.0"
             },
@@ -5676,7 +5676,7 @@
                 "craftcms",
                 "typogrify"
             ],
-            "time": "2018-04-25T19:29:06+00:00"
+            "time": "2018-06-13T03:03:12+00:00"
         },
         {
             "name": "paragonie/random_compat",
