@@ -21,7 +21,7 @@
     "minimum-stability": "beta",
     "require": {
         "aelvan/craft-cp-element-count": "^1.0",
-        "aelvan/imager": "v2.0.1.1",
+        "aelvan/imager": "^2.0",
         "aelvan/inlin": "^2.0",
         "aelvan/stamp": "^2.0",
         "barrelstrength/sprout-encode-email": "^2.0",

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "8cb4b35272c4efa601cfbc735bd9cf1c",
+    "content-hash": "83e0ba4707246a746298f80c4b70afe2",
     "packages": [
         {
             "name": "aelvan/craft-cp-element-count",
@@ -59,16 +59,16 @@
         },
         {
             "name": "aelvan/imager",
-            "version": "v2.0.1.1",
+            "version": "v2.0.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aelvan/Imager-Craft.git",
-                "reference": "17c6575576858025fae952d01bd7ffb10dd5e232"
+                "reference": "56c84bb0a7aabf2fc24abe70fe3ee82b3f86f39c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aelvan/Imager-Craft/zipball/17c6575576858025fae952d01bd7ffb10dd5e232",
-                "reference": "17c6575576858025fae952d01bd7ffb10dd5e232",
+                "url": "https://api.github.com/repos/aelvan/Imager-Craft/zipball/56c84bb0a7aabf2fc24abe70fe3ee82b3f86f39c",
+                "reference": "56c84bb0a7aabf2fc24abe70fe3ee82b3f86f39c",
                 "shasum": ""
             },
             "require": {
@@ -80,7 +80,7 @@
                 "kraken-io/kraken-php": "^1.2",
                 "ksubileau/color-thief-php": "^1.3.1",
                 "mikehaertl/php-shellcommand": "^1.2",
-                "tinify/tinify": "^1.5.2"
+                "tinify/tinify": ">=1.1.1"
             },
             "type": "craft-plugin",
             "extra": {
@@ -120,7 +120,7 @@
                 "srcset",
                 "transform"
             ],
-            "time": "2018-05-14T08:10:57+00:00"
+            "time": "2018-06-12T19:59:07+00:00"
         },
         {
             "name": "aelvan/inlin",
@@ -232,16 +232,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.61.6",
+            "version": "3.62.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "a2477aacfb780a024c9a20fdb6f6c3fbf5cc84d1"
+                "reference": "79741b807366b6e885d1b610872a0e2296072b0f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/a2477aacfb780a024c9a20fdb6f6c3fbf5cc84d1",
-                "reference": "a2477aacfb780a024c9a20fdb6f6c3fbf5cc84d1",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/79741b807366b6e885d1b610872a0e2296072b0f",
+                "reference": "79741b807366b6e885d1b610872a0e2296072b0f",
                 "shasum": ""
             },
             "require": {
@@ -308,7 +308,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2018-06-13T21:37:13+00:00"
+            "time": "2018-06-21T19:48:04+00:00"
         },
         {
             "name": "barrelstrength/sprout-base",
@@ -1310,16 +1310,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.0.11",
+            "version": "3.0.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "8cb1ec0f12691683bcba7d94003065c7d7a2693c"
+                "reference": "10d8b9fdcfd17638095c46c7139d74d4ab98c3b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/8cb1ec0f12691683bcba7d94003065c7d7a2693c",
-                "reference": "8cb1ec0f12691683bcba7d94003065c7d7a2693c",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/10d8b9fdcfd17638095c46c7139d74d4ab98c3b7",
+                "reference": "10d8b9fdcfd17638095c46c7139d74d4ab98c3b7",
                 "shasum": ""
             },
             "require": {
@@ -1388,7 +1388,7 @@
                 "craftcms",
                 "yii2"
             ],
-            "time": "2018-06-12T16:58:59+00:00"
+            "time": "2018-06-18T19:20:11+00:00"
         },
         {
             "name": "craftcms/contact-form",
@@ -1489,20 +1489,20 @@
         },
         {
             "name": "craftcms/element-api",
-            "version": "2.5.2",
+            "version": "2.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/element-api.git",
-                "reference": "4619d809280fe4a82e6e0859aa51073820065008"
+                "reference": "50276cad7760e17a50db09bf3c20b4c36fef086f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/element-api/zipball/4619d809280fe4a82e6e0859aa51073820065008",
-                "reference": "4619d809280fe4a82e6e0859aa51073820065008",
+                "url": "https://api.github.com/repos/craftcms/element-api/zipball/50276cad7760e17a50db09bf3c20b4c36fef086f",
+                "reference": "50276cad7760e17a50db09bf3c20b4c36fef086f",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^3.0.0-beta.31",
+                "craftcms/cms": "^3.0.0-RC11",
                 "league/fractal": "^0.16.0"
             },
             "type": "craft-plugin",
@@ -1535,7 +1535,7 @@
                 "json",
                 "yii2"
             ],
-            "time": "2017-12-13T11:16:27+00:00"
+            "time": "2018-06-20T17:17:30+00:00"
         },
         {
             "name": "craftcms/hexdec",
@@ -2591,16 +2591,16 @@
         },
         {
             "name": "embed/embed",
-            "version": "v3.3.3",
+            "version": "v3.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oscarotero/Embed.git",
-                "reference": "d180045daf923980bf254b2973ea13c421435d11"
+                "reference": "46e19804e330065c899657c047288f792e2bca02"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oscarotero/Embed/zipball/d180045daf923980bf254b2973ea13c421435d11",
-                "reference": "d180045daf923980bf254b2973ea13c421435d11",
+                "url": "https://api.github.com/repos/oscarotero/Embed/zipball/46e19804e330065c899657c047288f792e2bca02",
+                "reference": "46e19804e330065c899657c047288f792e2bca02",
                 "shasum": ""
             },
             "require": {
@@ -2640,7 +2640,7 @@
                 "opengraph",
                 "twitter cards"
             ],
-            "time": "2018-05-31T17:17:30+00:00"
+            "time": "2018-06-18T21:12:45+00:00"
         },
         {
             "name": "enshrined/svg-sanitize",
@@ -2938,16 +2938,16 @@
         },
         {
             "name": "google/cloud",
-            "version": "v0.68.0",
+            "version": "v0.69.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GoogleCloudPlatform/google-cloud-php.git",
-                "reference": "a4e7e52158a2f08b52df76bf0ea15b84ba1ac11a"
+                "reference": "d72d8a8f8edbc1bce836586b0028af0fa7d3d7a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GoogleCloudPlatform/google-cloud-php/zipball/a4e7e52158a2f08b52df76bf0ea15b84ba1ac11a",
-                "reference": "a4e7e52158a2f08b52df76bf0ea15b84ba1ac11a",
+                "url": "https://api.github.com/repos/GoogleCloudPlatform/google-cloud-php/zipball/d72d8a8f8edbc1bce836586b0028af0fa7d3d7a9",
+                "reference": "d72d8a8f8edbc1bce836586b0028af0fa7d3d7a9",
                 "shasum": ""
             },
             "require": {
@@ -2968,14 +2968,14 @@
                 "google/cloud-core": "1.20.5",
                 "google/cloud-dataproc": "0.5.0",
                 "google/cloud-datastore": "1.5.4",
-                "google/cloud-debugger": "0.11.0",
+                "google/cloud-debugger": "0.12.0",
                 "google/cloud-dialogflow": "0.3.0",
                 "google/cloud-dlp": "0.10.0",
                 "google/cloud-error-reporting": "0.11.0",
                 "google/cloud-firestore": "0.11.0",
                 "google/cloud-iot": "0.3.0",
                 "google/cloud-language": "0.15.0",
-                "google/cloud-logging": "1.12.0",
+                "google/cloud-logging": "1.12.1",
                 "google/cloud-monitoring": "0.11.0",
                 "google/cloud-oslogin": "0.5.0",
                 "google/cloud-pubsub": "1.3.0",
@@ -2985,7 +2985,7 @@
                 "google/cloud-storage": "1.5.2",
                 "google/cloud-trace": "0.10.0",
                 "google/cloud-translate": "1.2.2",
-                "google/cloud-videointelligence": "0.12.0",
+                "google/cloud-videointelligence": "1.0.0",
                 "google/cloud-vision": "0.14.0"
             },
             "require-dev": {
@@ -3115,7 +3115,7 @@
                 "translation",
                 "vision"
             ],
-            "time": "2018-06-12T16:51:43+00:00"
+            "time": "2018-06-20T16:07:22+00:00"
         },
         {
             "name": "google/gax",
@@ -4271,16 +4271,16 @@
         },
         {
             "name": "lukeyouell/craft-readtime",
-            "version": "1.1.0",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lukeyouell/craft-readtime.git",
-                "reference": "b0253e24f1eb6d92ba83fc70c3eff92509db9f0b"
+                "reference": "893ce6c5b924050b65e77fa3b99d4c1092ae6b94"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lukeyouell/craft-readtime/zipball/b0253e24f1eb6d92ba83fc70c3eff92509db9f0b",
-                "reference": "b0253e24f1eb6d92ba83fc70c3eff92509db9f0b",
+                "url": "https://api.github.com/repos/lukeyouell/craft-readtime/zipball/893ce6c5b924050b65e77fa3b99d4c1092ae6b94",
+                "reference": "893ce6c5b924050b65e77fa3b99d4c1092ae6b94",
                 "shasum": ""
             },
             "require": {
@@ -4318,7 +4318,7 @@
                 "craft-plugin",
                 "craftcms"
             ],
-            "time": "2018-06-06T14:06:42+00:00"
+            "time": "2018-06-19T11:53:13+00:00"
         },
         {
             "name": "lukeyouell/craft-updatechecker",
@@ -5548,16 +5548,16 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "3.0.22",
+            "version": "3.0.23",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "adc6eef9653c583b01176166ec8d42cb0d9953a0"
+                "reference": "5df749c14540f33cba94496bf5069fff7061f35c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/adc6eef9653c583b01176166ec8d42cb0d9953a0",
-                "reference": "adc6eef9653c583b01176166ec8d42cb0d9953a0",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/5df749c14540f33cba94496bf5069fff7061f35c",
+                "reference": "5df749c14540f33cba94496bf5069fff7061f35c",
                 "shasum": ""
             },
             "require": {
@@ -5619,7 +5619,7 @@
                 "tags",
                 "twitter"
             ],
-            "time": "2018-06-12T23:30:53+00:00"
+            "time": "2018-06-18T15:05:15+00:00"
         },
         {
             "name": "nystudio107/craft-typogrify",
@@ -6628,16 +6628,16 @@
         },
         {
             "name": "rias/craft-password-policy",
-            "version": "1.0.2",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Rias500/craft-password-policy.git",
-                "reference": "849b9c183769569842f2eba466a4cda079b2d071"
+                "reference": "a85c2cec1e8ddd290e7a0120484c370107e9a910"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Rias500/craft-password-policy/zipball/849b9c183769569842f2eba466a4cda079b2d071",
-                "reference": "849b9c183769569842f2eba466a4cda079b2d071",
+                "url": "https://api.github.com/repos/Rias500/craft-password-policy/zipball/a85c2cec1e8ddd290e7a0120484c370107e9a910",
+                "reference": "a85c2cec1e8ddd290e7a0120484c370107e9a910",
                 "shasum": ""
             },
             "require": {
@@ -6678,7 +6678,7 @@
                 "craftcms",
                 "strong passwords"
             ],
-            "time": "2018-04-11T07:49:58+00:00"
+            "time": "2018-06-21T08:37:56+00:00"
         },
         {
             "name": "rias/craft-position-fieldtype",
