@@ -50,6 +50,7 @@
         "mexitek/phpcolors": "dev-master",
         "mikestecker/craft-readability": "^1.0",
         "mikestecker/craft-videoembedder": "^1.0",
+        "mmikkel/retcon": "v2.x-dev",
         "newism/craft3-fields": "^0.0.10",
         "nystudio107/craft-cookies": "^1.1",
         "nystudio107/craft-fastcgicachebust": "^1.0",
