@@ -10,80 +10,6 @@
 {# Get building #}
 {% set building = entry.building.one() %}
 
-{# Get hours from entry #}
-{% set hoursOfOperation = entry.hoursOfOperation %}
-
-{# Set up our array of weekdays #}
-{% set days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'] %}
-{% set daysShort = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'] %}
-{% set daysInitial = ['S', 'M', 'T', 'W', 'T', 'F', 'S'] %}
-
-{# Setup a new array operationHours to hold all you hashes
-   and prev variables to compare things to in the loop
- #}
-{% set operationHours, prevDays, prevDaysShort, prevOpen, prevClose = [],[],[],"","" %}
-
-{# Check to see if a preference has been set to change the default week start day from Sunday to Monday #}
-{% set startDay = currentUser.getPreference('weekStartDay') ?? craft.app.config.general.defaultWeekStartDay %}
-{% if startDay != 0 %}
-  {% set days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'] %}
-  {% set daysShort = ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'] %}
-  {% set daysInitial = ['M', 'T', 'W', 'T', 'F', 'S', 'S'] %}
-  {% set hoursOfOperation = entry.hoursOfOperation|slice(1,entry.hoursOfOperation|length)|merge(entry.hoursOfOperation|slice(0,1)) %}
-{% endif %}
-
-{# Loop thru the Hours of Operation field and build the operationHours array #}
-{% for item in hoursOfOperation %}
-
-  {# in the first loop, setup the prevOpen and prevClose variables  #}
-  {% if loop.first %}
-    {% set prevOpen, prevClose = item.open, item.close %}
-  {% endif %}
-
-  {# If the prev hours match the current item's hours,
-     add that day's name to the array of prev days, ["Monday","Tuesday"] etc.
-   #}
-  {% if prevOpen == item.open and prevClose == item.close %}
-    {% set prevDays = prevDays|merge([days[loop.index0]]) %}
-    {% set prevDaysShort = prevDaysShort|merge([daysShort[loop.index0]]) %}
-
-  {# If it doesn't match, add prev variables as a hash to the operationHours array,
-     Then set all prev variables with current item
-   #}
-  {% else %}
-
-    {% set operationHours = operationHours|merge([{
-      "days" : prevDays,
-      "daysShort" : prevDaysShort,
-      "open" : prevOpen,
-      "close" : prevClose
-    }]) %}
-
-    {% set prevDays = [days[loop.index0]] %}
-    {% set prevDaysShort = [daysShort[loop.index0]] %}
-    {% set prevOpen = item.open %}
-    {% set prevClose = item.close %}
-
-  {% endif %}
-
-  {# If last loop, add prev variables as a hash to the operationHours array
-     because there won't be another loop to compare it to.
-   #}
-  {% if loop.last %}
-    {% set operationHours = operationHours|merge([{
-      "days" : prevDays,
-      "daysShort" : prevDaysShort,
-      "open" : prevOpen,
-      "close" : prevClose
-    }]) %}
-  {% endif %}
-
-{% endfor %}
-
-
-
-
-
 
 
 
@@ -117,18 +43,18 @@
     </div>
 
     <h4>Office Hours</h4>
-    {% for item in operationHours %}
+    {% for day in entry.hoursOfOperation %}
     <div class="hours">
-      {% if item.open|length and item.close|length %}
-        <meta itemprop="openingHours"
-          content="{{ item.daysShort|join(',') }} {{ item.open|date('H:i') }}-{{ item.close|date('H:i') }}">
-          {{ item.daysShort|first }}{% if item.daysShort|length > 1 %}-{{ item.daysShort|last }}{% endif %}<br>
-          {{ item.open|date('g:ia') }}-{{ item.close|date('g:ia') }}
-      {% else %}
-        <meta class="hours__hours" itemprop="openingHours"
-          content="{{ item.daysShort|join(',') }} Closed">
-          Closed {{ item.daysShort|first }}{% if item.daysShort|length > 1 %}-{{ item.daysShort|last }}{% endif %}
-      {% endif %}
+        {% if day.isBlank %}
+            <meta class="hours__hours" itemprop="openingHours"
+              content="{{ day.name }} Closed">
+              Closed {{ day.name }}
+        {% else %}
+          <meta itemprop="openingHours"
+            content="{{ day.name }} {{ day.open|date('H:i') }}-{{ day.close|date('H:i') }}">
+            {{ day.name }}<br>
+            {{ day.open|date('g:ia') }}-{{ day.close|date('g:ia') }}
+        {% endif %}
     </div>
     {% endfor %}
 
