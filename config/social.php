@@ -7,7 +7,7 @@ return array(
   'lockDomains' => [
     'stecker.me',
     'cityofmarion.in.gov',
-    'cityofmarion.in.dev'
+    'cityofmarion.in.localhost'
   ],
 
   /**

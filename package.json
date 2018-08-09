@@ -42,13 +42,13 @@
     },
     "domains": {
         "live": "cityofmarion.in.gov",
-        "local": "cityofmarion.in.dev",
+        "local": "cityofmarion.in.localhost",
         "critical": "cityofmarion.in.gov"
     },
     "urls": {
         "live": "https://cityofmarion.in.gov/",
-        "local": "https://cityofmarion.in.dev/",
-        "critical": "https://cityofmarion.in.dev/"
+        "local": "https://cityofmarion.in.localhost/",
+        "critical": "https://cityofmarion.in.gov/"
     },
     "vars": {
         "siteCssName": "site.combined.min.css",
