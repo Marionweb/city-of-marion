@@ -233,16 +233,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.64.5",
+            "version": "3.64.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "c1292388910063803cfd7aa73d48ad4df42a526c"
+                "reference": "14a8d1499450a755d6c1f147ea76eabdc1666a9d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/c1292388910063803cfd7aa73d48ad4df42a526c",
-                "reference": "c1292388910063803cfd7aa73d48ad4df42a526c",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/14a8d1499450a755d6c1f147ea76eabdc1666a9d",
+                "reference": "14a8d1499450a755d6c1f147ea76eabdc1666a9d",
                 "shasum": ""
             },
             "require": {
@@ -309,7 +309,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2018-08-03T18:10:54+00:00"
+            "time": "2018-08-08T20:28:00+00:00"
         },
         {
             "name": "barrelstrength/sprout-base",
@@ -924,16 +924,16 @@
         },
         {
             "name": "composer/ca-bundle",
-            "version": "1.1.1",
+            "version": "1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/ca-bundle.git",
-                "reference": "d2c0a83b7533d6912e8d516756ebd34f893e9169"
+                "reference": "46afded9720f40b9dc63542af4e3e43a1177acb0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/d2c0a83b7533d6912e8d516756ebd34f893e9169",
-                "reference": "d2c0a83b7533d6912e8d516756ebd34f893e9169",
+                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/46afded9720f40b9dc63542af4e3e43a1177acb0",
+                "reference": "46afded9720f40b9dc63542af4e3e43a1177acb0",
                 "shasum": ""
             },
             "require": {
@@ -976,7 +976,7 @@
                 "ssl",
                 "tls"
             ],
-            "time": "2018-03-29T19:57:20+00:00"
+            "time": "2018-08-08T08:57:40+00:00"
         },
         {
             "name": "composer/composer",
@@ -1311,16 +1311,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.0.18",
+            "version": "3.0.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "d547e55fb9022bfa08e92cf6b194589c7fa101a4"
+                "reference": "24ce69a3150fcbed51cd71e13db754fe169423c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/d547e55fb9022bfa08e92cf6b194589c7fa101a4",
-                "reference": "d547e55fb9022bfa08e92cf6b194589c7fa101a4",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/24ce69a3150fcbed51cd71e13db754fe169423c2",
+                "reference": "24ce69a3150fcbed51cd71e13db754fe169423c2",
                 "shasum": ""
             },
             "require": {
@@ -1390,7 +1390,7 @@
                 "craftcms",
                 "yii2"
             ],
-            "time": "2018-07-31T18:57:08+00:00"
+            "time": "2018-08-07T18:08:50+00:00"
         },
         {
             "name": "craftcms/contact-form",
@@ -2945,16 +2945,16 @@
         },
         {
             "name": "google/cloud",
-            "version": "v0.72.0",
+            "version": "v0.73.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GoogleCloudPlatform/google-cloud-php.git",
-                "reference": "42e0b9f6a7d8da2e2a044bf776d0dd33cd7d73c1"
+                "reference": "7d306c2a0e62ee292650cef40edbf6f9608423d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GoogleCloudPlatform/google-cloud-php/zipball/42e0b9f6a7d8da2e2a044bf776d0dd33cd7d73c1",
-                "reference": "42e0b9f6a7d8da2e2a044bf776d0dd33cd7d73c1",
+                "url": "https://api.github.com/repos/GoogleCloudPlatform/google-cloud-php/zipball/7d306c2a0e62ee292650cef40edbf6f9608423d6",
+                "reference": "7d306c2a0e62ee292650cef40edbf6f9608423d6",
                 "shasum": ""
             },
             "require": {
@@ -2968,35 +2968,35 @@
                 "rize/uri-template": "~0.3"
             },
             "replace": {
-                "google/cloud-bigquery": "1.4.0",
-                "google/cloud-bigquerydatatransfer": "0.6.2",
+                "google/cloud-bigquery": "1.4.1",
+                "google/cloud-bigquerydatatransfer": "0.7.0",
                 "google/cloud-bigtable": "0.5.3",
                 "google/cloud-container": "0.5.2",
-                "google/cloud-core": "1.21.1",
+                "google/cloud-core": "1.22.0",
                 "google/cloud-dataproc": "0.5.3",
-                "google/cloud-datastore": "1.5.4",
-                "google/cloud-debugger": "0.12.2",
+                "google/cloud-datastore": "1.5.5",
+                "google/cloud-debugger": "0.12.3",
                 "google/cloud-dialogflow": "0.3.2",
                 "google/cloud-dlp": "0.11.2",
-                "google/cloud-error-reporting": "0.11.2",
-                "google/cloud-firestore": "0.12.0",
+                "google/cloud-error-reporting": "0.11.3",
+                "google/cloud-firestore": "0.12.1",
                 "google/cloud-iot": "0.3.2",
                 "google/cloud-kms": "0.2.0",
-                "google/cloud-language": "0.15.2",
-                "google/cloud-logging": "1.12.5",
+                "google/cloud-language": "0.15.3",
+                "google/cloud-logging": "1.12.6",
                 "google/cloud-monitoring": "0.11.2",
                 "google/cloud-oslogin": "0.6.1",
-                "google/cloud-pubsub": "1.4.1",
+                "google/cloud-pubsub": "1.4.2",
                 "google/cloud-redis": "0.3.3",
-                "google/cloud-spanner": "1.6.2",
-                "google/cloud-speech": "0.15.2",
-                "google/cloud-storage": "1.6.0",
+                "google/cloud-spanner": "1.6.3",
+                "google/cloud-speech": "0.16.0",
+                "google/cloud-storage": "1.7.0",
                 "google/cloud-tasks": "0.2.0",
-                "google/cloud-text-to-speech": "0.1.1",
-                "google/cloud-trace": "0.10.2",
-                "google/cloud-translate": "1.2.3",
+                "google/cloud-text-to-speech": "0.1.2",
+                "google/cloud-trace": "0.10.3",
+                "google/cloud-translate": "1.2.4",
                 "google/cloud-videointelligence": "1.0.4",
-                "google/cloud-vision": "0.15.1"
+                "google/cloud-vision": "0.15.2"
             },
             "require-dev": {
                 "erusev/parsedown": "^1.6",
@@ -3133,7 +3133,7 @@
                 "translation",
                 "vision"
             ],
-            "time": "2018-07-19T17:51:07+00:00"
+            "time": "2018-08-08T15:42:37+00:00"
         },
         {
             "name": "google/gax",
@@ -5458,16 +5458,16 @@
         },
         {
             "name": "nystudio107/craft-imageoptimize",
-            "version": "1.4.36",
+            "version": "1.4.37",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-imageoptimize.git",
-                "reference": "c41c3d1ffe9d63354080485008089ae2d4f8148d"
+                "reference": "1fc7efa04bf8c844b4f11834bbcf7fae4e661e37"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-imageoptimize/zipball/c41c3d1ffe9d63354080485008089ae2d4f8148d",
-                "reference": "c41c3d1ffe9d63354080485008089ae2d4f8148d",
+                "url": "https://api.github.com/repos/nystudio107/craft-imageoptimize/zipball/1fc7efa04bf8c844b4f11834bbcf7fae4e661e37",
+                "reference": "1fc7efa04bf8c844b4f11834bbcf7fae4e661e37",
                 "shasum": ""
             },
             "require": {
@@ -5518,7 +5518,7 @@
                 "optimize",
                 "optimize-images"
             ],
-            "time": "2018-08-06T20:32:09+00:00"
+            "time": "2018-08-09T19:52:45+00:00"
         },
         {
             "name": "nystudio107/craft-minify",
@@ -5630,16 +5630,16 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "3.1.12",
+            "version": "3.1.13.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "b7b5e26b159afe1b023daadc6b8b90c3e1bc2fbe"
+                "reference": "9a0af099e84271b94424c17f87f17b3987b3018a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/b7b5e26b159afe1b023daadc6b8b90c3e1bc2fbe",
-                "reference": "b7b5e26b159afe1b023daadc6b8b90c3e1bc2fbe",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/9a0af099e84271b94424c17f87f17b3987b3018a",
+                "reference": "9a0af099e84271b94424c17f87f17b3987b3018a",
                 "shasum": ""
             },
             "require": {
@@ -5701,7 +5701,7 @@
                 "tags",
                 "twitter"
             ],
-            "time": "2018-08-06T15:57:23+00:00"
+            "time": "2018-08-07T18:54:26+00:00"
         },
         {
             "name": "nystudio107/craft-typogrify",
