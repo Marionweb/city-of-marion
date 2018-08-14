@@ -233,16 +233,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.64.8",
+            "version": "3.64.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "14a8d1499450a755d6c1f147ea76eabdc1666a9d"
+                "reference": "4f34eafb0da35ecc6ab0dddd4946a233aa03a280"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/14a8d1499450a755d6c1f147ea76eabdc1666a9d",
-                "reference": "14a8d1499450a755d6c1f147ea76eabdc1666a9d",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/4f34eafb0da35ecc6ab0dddd4946a233aa03a280",
+                "reference": "4f34eafb0da35ecc6ab0dddd4946a233aa03a280",
                 "shasum": ""
             },
             "require": {
@@ -309,7 +309,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2018-08-08T20:28:00+00:00"
+            "time": "2018-08-13T21:42:40+00:00"
         },
         {
             "name": "barrelstrength/sprout-base",
@@ -1311,16 +1311,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.0.19",
+            "version": "3.0.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "24ce69a3150fcbed51cd71e13db754fe169423c2"
+                "reference": "def373ae3e0f1b8b469efd8399d71f87301c6a0e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/24ce69a3150fcbed51cd71e13db754fe169423c2",
-                "reference": "24ce69a3150fcbed51cd71e13db754fe169423c2",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/def373ae3e0f1b8b469efd8399d71f87301c6a0e",
+                "reference": "def373ae3e0f1b8b469efd8399d71f87301c6a0e",
                 "shasum": ""
             },
             "require": {
@@ -1390,7 +1390,7 @@
                 "craftcms",
                 "yii2"
             ],
-            "time": "2018-08-07T18:08:50+00:00"
+            "time": "2018-08-14T17:37:50+00:00"
         },
         {
             "name": "craftcms/contact-form",
@@ -1831,16 +1831,16 @@
         },
         {
             "name": "craftcms/server-check",
-            "version": "1.1.4",
+            "version": "1.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/server-check.git",
-                "reference": "5d6a2c6033db666fd775c301b6c92b9a86487ace"
+                "reference": "e3955dcfe0ee3c9886b415c2c912e232594cefaf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/server-check/zipball/5d6a2c6033db666fd775c301b6c92b9a86487ace",
-                "reference": "5d6a2c6033db666fd775c301b6c92b9a86487ace",
+                "url": "https://api.github.com/repos/craftcms/server-check/zipball/e3955dcfe0ee3c9886b415c2c912e232594cefaf",
+                "reference": "e3955dcfe0ee3c9886b415c2c912e232594cefaf",
                 "shasum": ""
             },
             "type": "library",
@@ -1861,7 +1861,7 @@
                 "requirements",
                 "yii2"
             ],
-            "time": "2018-07-25T19:16:43+00:00"
+            "time": "2018-08-14T18:02:05+00:00"
         },
         {
             "name": "craftcms/simple-text",
