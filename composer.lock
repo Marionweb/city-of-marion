@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
     "content-hash": "fd255088ed8a2f8d9d64dac86a6623d1",
@@ -233,16 +233,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.67.10",
+            "version": "3.67.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "e6571970d7f28da4c736eeeb0d01c0a5fdaf51e1"
+                "reference": "cdc7180ae87b23d8b34eb8eb8176002081b32c3d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/e6571970d7f28da4c736eeeb0d01c0a5fdaf51e1",
-                "reference": "e6571970d7f28da4c736eeeb0d01c0a5fdaf51e1",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/cdc7180ae87b23d8b34eb8eb8176002081b32c3d",
+                "reference": "cdc7180ae87b23d8b34eb8eb8176002081b32c3d",
                 "shasum": ""
             },
             "require": {
@@ -309,7 +309,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2018-09-11T18:17:34+00:00"
+            "time": "2018-09-13T18:34:42+00:00"
         },
         {
             "name": "barrelstrength/sprout-base",
@@ -2596,16 +2596,16 @@
         },
         {
             "name": "embed/embed",
-            "version": "v3.3.5",
+            "version": "v3.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oscarotero/Embed.git",
-                "reference": "46e19804e330065c899657c047288f792e2bca02"
+                "reference": "4b4ab5f5a02563ba4a0707baad00eef2e376108a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oscarotero/Embed/zipball/46e19804e330065c899657c047288f792e2bca02",
-                "reference": "46e19804e330065c899657c047288f792e2bca02",
+                "url": "https://api.github.com/repos/oscarotero/Embed/zipball/4b4ab5f5a02563ba4a0707baad00eef2e376108a",
+                "reference": "4b4ab5f5a02563ba4a0707baad00eef2e376108a",
                 "shasum": ""
             },
             "require": {
@@ -2645,7 +2645,7 @@
                 "opengraph",
                 "twitter cards"
             ],
-            "time": "2018-06-18T21:12:45+00:00"
+            "time": "2018-09-13T19:10:15+00:00"
         },
         {
             "name": "enshrined/svg-sanitize",
@@ -2899,12 +2899,12 @@
             "version": "v1.3.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/google/google-auth-library-php.git",
+                "url": "https://github.com/googleapis/google-auth-library-php.git",
                 "reference": "af72b3f50420c801dc35cc07b1fa429ae027b847"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/google/google-auth-library-php/zipball/af72b3f50420c801dc35cc07b1fa429ae027b847",
+                "url": "https://api.github.com/repos/googleapis/google-auth-library-php/zipball/af72b3f50420c801dc35cc07b1fa429ae027b847",
                 "reference": "af72b3f50420c801dc35cc07b1fa429ae027b847",
                 "shasum": ""
             },
@@ -2943,16 +2943,16 @@
         },
         {
             "name": "google/cloud",
-            "version": "v0.76.1",
+            "version": "v0.78.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GoogleCloudPlatform/google-cloud-php.git",
-                "reference": "86b426a59c4fca1d0fcb98900658fc68446c5ec7"
+                "reference": "0f645315ff60bf280a06d8d801debe4c481fa4a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GoogleCloudPlatform/google-cloud-php/zipball/86b426a59c4fca1d0fcb98900658fc68446c5ec7",
-                "reference": "86b426a59c4fca1d0fcb98900658fc68446c5ec7",
+                "url": "https://api.github.com/repos/GoogleCloudPlatform/google-cloud-php/zipball/0f645315ff60bf280a06d8d801debe4c481fa4a2",
+                "reference": "0f645315ff60bf280a06d8d801debe4c481fa4a2",
                 "shasum": ""
             },
             "require": {
@@ -2966,35 +2966,36 @@
                 "rize/uri-template": "~0.3"
             },
             "replace": {
+                "google/cloud-asset": "0.1.0",
                 "google/cloud-bigquery": "1.4.3",
                 "google/cloud-bigquerydatatransfer": "0.8.1",
                 "google/cloud-bigtable": "0.6.1",
                 "google/cloud-container": "0.6.1",
-                "google/cloud-core": "1.23.2",
+                "google/cloud-core": "1.23.4",
                 "google/cloud-dataproc": "0.6.1",
-                "google/cloud-datastore": "1.5.6",
+                "google/cloud-datastore": "1.5.8",
                 "google/cloud-debugger": "0.14.0",
                 "google/cloud-dialogflow": "0.3.4",
                 "google/cloud-dlp": "0.12.1",
                 "google/cloud-error-reporting": "0.12.0",
-                "google/cloud-firestore": "0.14.1",
+                "google/cloud-firestore": "0.15.0",
                 "google/cloud-iot": "0.4.0",
-                "google/cloud-kms": "0.2.3",
+                "google/cloud-kms": "0.3.0",
                 "google/cloud-language": "0.16.0",
                 "google/cloud-logging": "1.12.8",
                 "google/cloud-monitoring": "0.11.4",
                 "google/cloud-oslogin": "0.6.3",
                 "google/cloud-pubsub": "1.4.4",
-                "google/cloud-redis": "0.3.5",
+                "google/cloud-redis": "0.4.0",
                 "google/cloud-spanner": "1.9.0",
-                "google/cloud-speech": "0.16.2",
-                "google/cloud-storage": "1.7.1",
+                "google/cloud-speech": "0.17.0",
+                "google/cloud-storage": "1.7.3",
                 "google/cloud-tasks": "0.3.1",
                 "google/cloud-text-to-speech": "0.1.4",
                 "google/cloud-trace": "0.10.5",
                 "google/cloud-translate": "1.2.5",
                 "google/cloud-videointelligence": "1.0.6",
-                "google/cloud-vision": "0.15.4"
+                "google/cloud-vision": "0.16.0"
             },
             "require-dev": {
                 "erusev/parsedown": "^1.6",
@@ -3032,6 +3033,7 @@
             "autoload": {
                 "psr-4": {
                     "Google\\Cloud\\": "src",
+                    "Google\\Cloud\\Asset\\": "Asset/src",
                     "Google\\Cloud\\BigQuery\\": "BigQuery/src",
                     "Google\\Cloud\\BigQuery\\DataTransfer\\": "BigQueryDataTransfer/src",
                     "Google\\Cloud\\Bigtable\\": "Bigtable/src",
@@ -3061,6 +3063,7 @@
                     "Google\\Cloud\\Translate\\": "Translate/src",
                     "Google\\Cloud\\VideoIntelligence\\": "VideoIntelligence/src",
                     "Google\\Cloud\\Vision\\": "Vision/src",
+                    "GPBMetadata\\Google\\Cloud\\Asset\\": "Asset/metadata",
                     "GPBMetadata\\Google\\Bigtable\\": "Bigtable/metadata",
                     "GPBMetadata\\Google\\Container\\": "Container/metadata",
                     "GPBMetadata\\Google\\Cloud\\Bigquery\\Datatransfer\\": "BigQueryDataTransfer/metadata",
@@ -3131,7 +3134,7 @@
                 "translation",
                 "vision"
             ],
-            "time": "2018-09-06T18:37:35+00:00"
+            "time": "2018-09-13T20:56:50+00:00"
         },
         {
             "name": "google/gax",
@@ -3268,23 +3271,23 @@
         },
         {
             "name": "grpc/grpc",
-            "version": "1.13.0",
+            "version": "1.15.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/grpc/grpc-php.git",
-                "reference": "8ff8ed6a99803b4e2396ce63b289cad4b4c40d39"
+                "reference": "1a7cd0dc95a68594b8a8cfbf75ff236383172e2f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/grpc/grpc-php/zipball/8ff8ed6a99803b4e2396ce63b289cad4b4c40d39",
-                "reference": "8ff8ed6a99803b4e2396ce63b289cad4b4c40d39",
+                "url": "https://api.github.com/repos/grpc/grpc-php/zipball/1a7cd0dc95a68594b8a8cfbf75ff236383172e2f",
+                "reference": "1a7cd0dc95a68594b8a8cfbf75ff236383172e2f",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.5.0"
             },
             "require-dev": {
-                "google/auth": "v0.9"
+                "google/auth": "^v1.3.0"
             },
             "suggest": {
                 "ext-protobuf": "For better performance, install the protobuf C extension.",
@@ -3305,7 +3308,7 @@
             "keywords": [
                 "rpc"
             ],
-            "time": "2018-06-28T22:47:39+00:00"
+            "time": "2018-09-12T21:49:56+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -3890,26 +3893,26 @@
         },
         {
             "name": "league/flysystem",
-            "version": "1.0.46",
+            "version": "1.0.47",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "f3e0d925c18b92cf3ce84ea5cc58d62a1762a2b2"
+                "reference": "a11e4a75f256bdacf99d20780ce42d3b8272975c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/f3e0d925c18b92cf3ce84ea5cc58d62a1762a2b2",
-                "reference": "f3e0d925c18b92cf3ce84ea5cc58d62a1762a2b2",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/a11e4a75f256bdacf99d20780ce42d3b8272975c",
+                "reference": "a11e4a75f256bdacf99d20780ce42d3b8272975c",
                 "shasum": ""
             },
             "require": {
+                "ext-fileinfo": "*",
                 "php": ">=5.5.9"
             },
             "conflict": {
                 "league/flysystem-sftp": "<1.0.6"
             },
             "require-dev": {
-                "ext-fileinfo": "*",
                 "phpspec/phpspec": "^3.4",
                 "phpunit/phpunit": "^5.7.10"
             },
@@ -3970,7 +3973,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2018-08-22T07:45:22+00:00"
+            "time": "2018-09-14T15:30:29+00:00"
         },
         {
             "name": "league/flysystem-aws-s3-v3",
@@ -5671,16 +5674,16 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "3.1.19",
+            "version": "3.1.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "869aaec457ddf705b2d8bd2033e6445ddf37cdc8"
+                "reference": "ed20075a5dac4410e734c96dbde3a1c153e846c8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/869aaec457ddf705b2d8bd2033e6445ddf37cdc8",
-                "reference": "869aaec457ddf705b2d8bd2033e6445ddf37cdc8",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/ed20075a5dac4410e734c96dbde3a1c153e846c8",
+                "reference": "ed20075a5dac4410e734c96dbde3a1c153e846c8",
                 "shasum": ""
             },
             "require": {
@@ -5742,7 +5745,7 @@
                 "tags",
                 "twitter"
             ],
-            "time": "2018-09-05T03:07:29+00:00"
+            "time": "2018-09-12T17:23:59+00:00"
         },
         {
             "name": "nystudio107/craft-typogrify",
