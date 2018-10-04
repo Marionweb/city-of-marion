@@ -91,7 +91,7 @@
     input[type="checkbox"]
       & + label::before
         display none
-      
+
       & + label::after
         opacity 1
         pointer-events: none
@@ -107,10 +107,10 @@
         +above(m)
           opacity 0
           display none
-      
+
       & + label[for=news-events--nav--filter-row--date]::after
         background-color: $button-background
-      
+
       +below(mobile-max)
         &:checked
           & + label::after
@@ -135,12 +135,12 @@
         display block
         margin-right 0
         position relative
-        
+
         &[for=news-events--nav--filter-row--date]
           button($white, $dark-gray, $button-background, $white, $button-font-size, $button-line-height, ($button-padding * 0.8), uppercase, left)
           display block
           margin-right 0
-      
+
       +above(m)
         color $news-events-filter-label-color
         font-size $news-events-filter-label-size-mobile
@@ -191,7 +191,7 @@
         input[type=submit]
           button($button-background, $button-hover-background, $button-text-color, $button-text-color, $button-font-size, $button-line-height, ($button-padding * 0.8), uppercase, center)
           display block
-        
+
         &.current
           a
           input[type=submit]
@@ -203,6 +203,7 @@
 .news-events--featured-article
   > article
     position relative
+    width 100%
 
     &.block--news-events--preview
       a
