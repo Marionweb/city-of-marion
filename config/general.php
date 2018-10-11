@@ -25,6 +25,9 @@ return [
         'securityKey' => getenv('CRAFTENV_SECURITY_KEY'),
         'maxUploadFileSize' => 104857600,
 
+        // change default number of slugs
+        'maxSlugIncrement' => 100000,
+
         // Control Panel trigger word
         'cpTrigger' => 'admin',
 
