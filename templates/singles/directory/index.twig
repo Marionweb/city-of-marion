@@ -6,6 +6,15 @@
 
 {% set title = entry.title %}
 
+
+{% set staffMembers = craft.entries.section('staff').all() %}
+{% set deptParams = {
+    section : 'departments',
+    orderBy : 'title asc',
+    relatedTo: staffMembers
+  } %}
+{% set departments = craft.entries(deptParams).all() %}
+
 {# HTML #}
 {% block main %}
 
@@ -14,18 +23,18 @@
     <h1>{{ title }}</h1>
     {%- if entry.headline -%}<h2>{{ entry.headline }}</h2>{%- endif -%}
     {%- if entry.leadIn -%}<p>{{ entry.leadIn }}</p>{%- endif -%}
+
+    <select id="jump" data-choices>
+        <option placeholder>Jump to Department</option>
+        {% for department in departments %}
+        <option value="department--{{ department.slug }}">{{ department.title | typogrify }}</option>
+        {% endfor %}
+    </select>
+
   </div>
 </header>
 
 <section id="staff-department-blocks">
-  {% set staffMembers = craft.entries.section('staff').all() %}
-  {% set deptParams = {
-      section : 'departments',
-      orderBy : 'title asc',
-      relatedTo: staffMembers
-    } %}
-  {% set departments = craft.entries(deptParams).all() %}
-
   {% for department in departments %}
     {% set staffParams = {
       section : 'staff',
@@ -57,3 +66,20 @@
 </section>
 
 {% endblock %}
+
+{# Scroll with dropdown #}
+{% js %}
+{% minify js %}
+document.addEventListener('DOMContentLoaded', function() {
+  const element = document.getElementById('jump');
+  const jumpToDept = new Choices(element);
+
+  element.addEventListener('addItem', function(event) {
+    console.log(event.detail.value);
+    if ((event.detail.value) != 'Jump to Department') {
+      $("html, body").animate({scrollTop: $('#' + event.detail.value).offset().top}, "slow");
+    }
+  }, false);
+});
+{% endminify %}
+{% endjs %}

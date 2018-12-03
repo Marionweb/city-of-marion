@@ -592,12 +592,12 @@ $choices-font-size-sm = 12px
 $choices-guttering = 24px
 $choices-border-radius = 0
 $choices-border-radius-item = 20px
-$choices-bg-color = $white
+$choices-bg-color = $input-bg
 $choices-bg-color-disabled = #eaeaea
 $choices-bg-color-dropdown = white
-$choices-text-color = $navy
-$choices-keyline-color = $input-border
-$choices-primary-color = #00bcd4
+$choices-text-color = $input-color
+$choices-keyline-color = $input-border-color
+$choices-primary-color = $light-blue
 $choices-disabled-color = #eaeaea
 $choices-highlight-color = $choices-primary-color
 $choices-button-icon-path = "../../icons"
@@ -865,3 +865,59 @@ $choices-button-offset = 8px
 .{$choices-selector}__placeholder
   opacity: .5
 /*=====  End of Choices  ======*/
+
+
+$choices-bg-color-inverted = $button-background
+$choices-bg-color-dropdown-inverted = $button-background
+$choices-text-color = $button-text-color
+$choices-keyline-color-inverted = $button-background
+$choices-primary-color-inverted = $button-hover-background
+$choices-highlight-color-inverted = $choices-primary-color-inverted
+
+/*=====  Start Custom Choices  ======*/
+#staff-department--intro-text
+  .{$choices-selector}[data-type*="select-one"]
+    .{$choices-selector}__input
+      border-bottom: $border-width-base solid $choices-keyline-color-inverted
+      background-color: $button-hover-background
+    .{$choices-selector}__button
+      background-image: url($choices-button-icon-path + "/cross-inverse.svg")
+      &:focus
+        box-shadow: 0px 0px 0px 2px $choices-highlight-color
+    &:after
+      background-color: $white
+  .{$choices-selector}[data-type*="select-multiple"], .{$choices-selector}[data-type*="text"]
+    .{$choices-selector}__button
+      border-left: 1px solid darken($choices-primary-color-inverted, 10%)
+  .{$choices-selector}__inner
+    background-color: $choices-bg-color-inverted
+    border-color: $choices-keyline-color-inverted
+    .is-focused &, .is-open &
+      border-color: $input-border-focus
+    .is-open &
+      border-color: $input-border-color-active
+  .{$choices-selector}__list--single
+    color: $white
+    .{$choices-selector}__placeholder
+      opacity: 1
+  .{$choices-selector}__list--dropdown
+    background-color: $choices-bg-color-dropdown-inverted
+    border-left: $border-width-base solid $choices-keyline-color-inverted
+    border-right: $border-width-base solid $choices-keyline-color-inverted
+    border-bottom: $border-width-base solid $choices-keyline-color-inverted
+    color: $white
+    .is-open &
+      border-left-color: $input-border-color-active
+      border-right-color: $input-border-color-active
+      border-bottom-color: $input-border-color-active
+    .{$choices-selector}__item--selectable
+      &.is-highlighted
+        background-color: $button-hover-background
+        &.{$choices-selector}__placeholder
+          background-color: $choices-bg-color-dropdown-inverted
+  .{$choices-selector}__heading
+    border-bottom: 1px solid lighten($choices-keyline-color-inverted, 10%)
+    color: lighten(#333333, 30%)
+  .{$choices-selector}__input
+    background-color: $choices-bg-color-inverted
+  /*=====  End of Custom choices  ======*/
