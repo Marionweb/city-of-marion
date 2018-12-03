@@ -3,7 +3,7 @@
 {% if craft.entries.section('newsEvents').relatedTo(cat) | length %}
 {% cache using key 'block-spotlight_' ~ spotlight.storyType.one().slug ~ '-' ~ spotlight.id ~ '-' ~ spotlight.slug %}
 <section class="block--spotlight">
-  <a href="{{ spotlight.url }}" title="Champion of the Month: {{ spotlight.title }}">
+  <a href="{{ spotlight.url }}" title="{{ spotlight.storyType.one().slug == 'champions' ? 'Champion of the Month' : spotlight.storyType.one().title }}: {{ spotlight.title }}">
     {% set employeePhotoExists = false %}
     {% if spotlight.employee | length %}
       {% if spotlight.employee.one().staffPhoto | length %}

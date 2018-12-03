@@ -1,5 +1,5 @@
 <header>
-  <p class="meta">Story</p>
+  <p class="meta">{{ entry.storyType.one().slug == 'champions' ? 'Champion of the Month' : entry.storyType.one().title }}</p>
   <h1>
     {{ entry.title }}
     {% include "structure/news-events/_block-share" %}
