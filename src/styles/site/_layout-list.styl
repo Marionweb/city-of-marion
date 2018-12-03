@@ -132,6 +132,19 @@
         +above(l)
           margin-left: auto
 
+        &.button--external-link
+          &:after
+            mask embedurl("../sprites/arrow-angle.svg", "utf8") no-repeat 50% 50%/7.4px 7.4px
+            background-color: $white
+            background-repeat: no-repeat
+            background-size: cover
+            content: " "
+            display inline-block
+            height rem(9.4px)
+            width rem(9.4px)
+            margin-left: 0.5em
+            transition: background-color $transition-timing
+            vertical-align middle
 
 
 

@@ -8,14 +8,18 @@
 {% block listContent %}
   {% cache %}
 
-{% set entryIds = craft.entries.section('minutesAgendas').ids() %}
-{% set boards = craft.entries.relatedTo({ sourceElement: entryIds }).all() %}
+{%- set entryIds = craft.entries.section('minutesAgendas').ids() -%}
+{%- set boards = craft.entries.section('boards').relatedTo({ sourceElement: entryIds }).all() -%}
 
 <section class="list--content">
 <ul>
   {% for board in boards %}
     <li><span>{{ board.title }}</span> <a href="{{ (craft.app.request.segments|last) ~ '/' ~ board.slug }}" title="View all Minutes &amp; Agendas for {{ board.title }}">View</a></li>
-  {% endfor %}﻿
+  {% endfor %}
+
+  {% for entry in craft.entries.section('boards').all() %}
+    {% if entry.boardExternalMinutesAgendasUrl %}<li><span>{{ entry.title }}</span> <a class="button--external-link" href="{{ entry.boardExternalMinutesAgendasUrl }}" title="View all Minutes &amp; Agendas for {{ entry.title }}" target="_blank">View</a></li>{% endif %}
+  {% endfor %}
 </ul>
 </section>
 

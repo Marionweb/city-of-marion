@@ -1,9 +1,27 @@
 {% cache using key 'quick-links_' ~ entry.id ~ craft.app.request.pathInfo %}
 {%- set nav = entry.quickLinks.all() -%}
 <ul>
+  {# CUSTOM FOR BOARDS #}
+  {% if entry.section.handle == 'boards' %}
+    {%- set hasMinutesInternal = false %}
+    {%- set entryIds = craft.entries.section('minutesAgendas').ids() -%}
+    {%- set boards = craft.entries.section('boards').relatedTo({ sourceElement: entryIds }).all() -%}
+    {% for board in boards %}
+        {% if board.id == entry.id %}
+            {% set hasMinutesInternal = true %}
+        {% endif %}
+    {% endfor %}
+    {% if hasMinutesInternal %}
+      <li class="quick-links--item"><a href="{{ '/government/minutes-agendas/' ~ entry.slug }}" title="View Minutes &amp; Agendas for {{ entry.title }}">View Minutes &amp; Agendas</a></li>
+    {% elseif entry.boardExternalMinutesAgendasUrl %}
+      <li class="quick-links--item quick-links-item--external"><a href="{{entry.boardExternalMinutesAgendasUrl}}" title="View Minutes &amp; Agendas for {{ entry.title }}" target="_blank">View Minutes &amp; Agendas</a></li>
+    {% endif %}
+  {% endif %}
+
+  {# NORMAL #}
   {% nav item in nav %}
     {% if item.type == "external" %}
-      <li class="quick-links--item"><a href="{{item.linkUrl}}"{% if item.newWindow %} target="_blank"{% endif %}>{{item.linkTitle}}</a></li>
+      <li class="quick-links--item quick-links-item--external"><a href="{{item.linkUrl}}"{% if item.newWindow %} target="_blank"{% endif %}>{{item.linkTitle}}</a></li>
     {% elseif item.type == "internal" %}
       {%- set entry = item.entry.one() -%}
       <li class="quick-links--item"><a href="{{entry.url}}" title="{{ entry.title }}">{{ entry.title }}</a></li>
