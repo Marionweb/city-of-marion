@@ -8,7 +8,7 @@
 {% set entries = craft.entries()
     .search(searchQuery)
     .orderBy('score')
-    .limit(10) %}
+    .all() %}
 
 {# HTML #}
 {% block main %}
