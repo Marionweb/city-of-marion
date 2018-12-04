@@ -54,9 +54,9 @@
   display: block
   padding: rem(22.5px) rem(20px) rem(22px)
   +between(tablet-min, tablet-max)
-    padding: rem(21.5px) rem(30px) rem(20.5px) rem(30px)
+    padding: rem(17.5px) rem(10px) rem(17.5px) rem(30px)
   +above(desktop-min)
-    padding: rem(21px) rem(30px) rem(18.5px) rem(30px)
+    padding: rem(19px) rem(30px) rem(13px) rem(30px)
 .menu--top-logo
   background-repeat: no-repeat
   background-size: cover
@@ -77,17 +77,17 @@
   +above(tablet-min)
     display block
   li
-    height: rem(80px)
+    height: rem(74px)
     +above(desktop-min)
-      height: rem(94px)
+      height: rem(88px)
   li.menu--item-text
     font-family: $top-menu-font-family
     font-size: ($top-menu-main-font-size * .9)
     font-weight: $top-menu-main-font-weight
-    line-height: rem(80px)
+    line-height: rem(74px)
     +above(desktop-min)
       font-size: $top-menu-main-font-size
-      line-height: rem(94px)
+      line-height: rem(82px)
 
   li.menu--item-text a
     display block
@@ -97,7 +97,7 @@
     text-transform: uppercase
     transition: $link-transition
     +above(desktop-min)
-      padding: 0 1.92857em
+      padding: rem(6px) 1.92857em 0
     &:hover
       color: $top-menu-link-hover-color
 
@@ -106,6 +106,8 @@
   padding: rem(29px) rem(30px) rem(24px)
   cursor: pointer
   display: block
+  +between(tablet-min, tablet-max)
+    padding: rem(25px) rem(30px) rem(22px) rem(10px)
   +above(desktop-min)
     padding: rem(32px) rem(47.5px) rem(29.5px) rem(25px)
   svg
@@ -133,3 +135,71 @@
 
 .menu--side--toggle-close
   display: none
+
+
+// SEARCH
+.menu--item-top-searchicon
+  form
+    padding 1em 0
+    width 100%
+
+    .search-form
+      align-items: center
+      display: flex
+
+      input[type="search"]
+        width: 100%
+
+  input[type="search"]
+    position: relative
+    display: inline-block
+    direction: ltr
+    float: left
+    width: 100%
+    border-right none
+    & + button
+      flex-shrink: 0
+      button()
+      line-height 1.428571429
+      padding: $padding-base-vertical ($padding-base-horizontal * .75)
+      svg
+        width: rem(24px)
+        vertical-align: middle
+        > path
+          transition: fill $transition-timing
+
+#menu--side ul li.menu--item-top-searchicon
+  a.menu--search-icon
+    display none !important
+  input[type="search"] + button
+    svg
+      > path
+        fill: $white
+    &:hover
+      svg > path
+        fill: $white
+
+#menu--top ul li.menu--item-top-searchicon
+  a.menu--search-icon
+    display: none
+    +between((tablet-min + 100px), tablet-max)
+      display: block
+      padding: rem(26px) rem(8px) rem(27.5px)
+    +above(desktop-min + 100px)
+      display: block
+      padding: rem(36px) rem(12px) rem(26px)
+
+    svg
+      width: rem(18px)
+      vertical-align: middle
+      +above(desktop-min)
+        width: rem(26px)
+      > path
+        fill: $top-menu-toggle-icon-color
+    &:hover
+      svg > path
+        fill: $top-menu-toggle-icon-color-hover
+
+  form
+    display none
+    max-width rem(600px)

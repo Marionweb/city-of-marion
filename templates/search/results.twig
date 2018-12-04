@@ -1,0 +1,53 @@
+{#
+    Search Results Template
+#}
+{% extends "layouts/columns/_one" %}
+
+{% set searchQuery = craft.app.request.getParam('q') %}
+
+{% set results = craft.entries()
+    .search(searchQuery)
+    .orderBy('score')
+    .limit(10) %}
+
+{# HTML #}
+{% block main %}
+<section class="search-results-page">
+  <header>
+    <h1>Search Results</h1>
+    <form class="search--form--wrapper" action="{{ url('search/results') }}">
+      {{ csrfInput() }}
+      <div class="search-form">
+        <input type="search" name="q" placeholder="Search..." value="{{ searchQuery }}" autocomplete="off">
+        <button class="button" type="submit">{{ source('svg/search.svg') }}</button>
+      </div>
+      <div class="search-dropdown"></div>
+    </form>
+  </header>
+
+  <section id="results" class="page-content page-content--block">
+    {% if results|length %}
+    <div class="result-summary">{{ results|length }} results{#  in 1.380 seconds #}<hr/></div>
+    {# <p class="result-notice">Did you mean <a href="/search?q=marion party">"marion party"</a>?</p> #}
+    {% endif %}
+
+    {% if results|length %}
+      {% paginate results as pageInfo, entries %}
+      {% for entry in entries %}
+      <article class="result">
+        <header class="result-title">
+          <h1><a href="{{ entry.url }}">{{ entry.title }}</a></h1>
+        </header>
+        <div class="result-url">{{ entry.url }}</div>
+        <p class="result-text">{{ seomatic.helper.extractTextFromField(entry.pageContent) | chop(limit=230, unit='c', append='...') }}</p>
+      </article>
+      {% endfor %}
+
+    {% endif %}
+
+  </section>
+
+  {% if results|length %}{% include 'modules/nav/_pagination' %}{% endif %}
+
+</section>
+{% endblock %}
