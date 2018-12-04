@@ -5,7 +5,7 @@
 
 {% set searchQuery = craft.app.request.getParam('q') %}
 
-{% set results = craft.entries()
+{% set entries = craft.entries()
     .search(searchQuery)
     .orderBy('score')
     .limit(10) %}
@@ -26,13 +26,13 @@
   </header>
 
   <section id="results" class="page-content page-content--block">
-    {% if results|length %}
-    <div class="result-summary">{{ results|length }} results{#  in 1.380 seconds #}<hr/></div>
+    {% if entries|length %}
+    <div class="result-summary">{{ entries|length }} results{#  in 1.380 seconds #}<hr/></div>
     {# <p class="result-notice">Did you mean <a href="/search?q=marion party">"marion party"</a>?</p> #}
     {% endif %}
 
-    {% if results|length %}
-      {% paginate results as pageInfo, entries %}
+    {% if entries|length %}
+      {# {% paginate results as pageInfo, entries %} #}
       {% for entry in entries %}
       <article class="result">
         <header class="result-title">
@@ -47,7 +47,7 @@
 
   </section>
 
-  {% if results|length %}{% include 'modules/nav/_pagination' %}{% endif %}
+  {# {% if results|length %}{% include 'modules/nav/_pagination' %}{% endif %} #}
 
 </section>
 {% endblock %}
