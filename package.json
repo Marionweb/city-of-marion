@@ -96,6 +96,9 @@
             "./src/js/modules/*.js",
             "./build/js/*.js"
         ],
+        "copyJs": [
+          "./src/js/copy/*.js"
+        ],
         "babelJs": [
             "./src/js/*.js"
         ],
