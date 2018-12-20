@@ -139,7 +139,7 @@ function doSynchronousLoop(data, processData, done) {
 function processCriticalCSS(element, i, callback) {
   const criticalSrc = pkg.urls.critical + element.url;
   const criticalDest = pkg.paths.templates + element.template + "_critical.min.css";
-  
+
   let criticalWidth = 1200;
   let criticalHeight = 1200;
   if (element.template.indexOf("amp_") !== -1) {
@@ -179,7 +179,7 @@ gulp.task('criticalcss', ['css'], (callback) => {
     } else {
         callback();
     }
-    
+
 });
 
 
@@ -257,7 +257,19 @@ gulp.task("js-babel", () => {
 
 
 // js task - minimize any distribution Javascript into the public js folder, and add our banner to it
-gulp.task("js", ["js-babel"], () => {
+gulp.task("js-copy", () => {
+  $.fancyLog("-> Copy js");
+  return gulp.src(pkg.globs.copyJs)
+      .pipe($.plumber({errorHandler: onError}))
+      .pipe($.header(banner, {pkg: pkg}))
+      .pipe($.size({gzip: true, showFiles: true}))
+      .pipe(gulp.dest(pkg.paths.dist.js))
+      .pipe($.filter("**/*.js"));
+});
+
+
+// js task - minimize any distribution Javascript into the public js folder, and add our banner to it
+gulp.task("js", ["js-copy", "js-babel"], () => {
   $.fancyLog("-> Building js");
   return gulp.src(pkg.globs.distJs)
       .pipe($.plumber({errorHandler: onError}))
