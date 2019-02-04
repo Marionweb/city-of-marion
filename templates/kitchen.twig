@@ -815,19 +815,27 @@ Hi
 
 
 <h2>video - youtube</h2>
+
+<img src="{{ craft.videoEmbedder.getVideoThumbnail('https://www.youtube.com/watch?v=R2oB-uK-A5c') }}" />
+
 <div class="embed-container type-video youtube">
-  <iframe width="1280" height="720" src="https://www.youtube.com/embed/R2oB-uK-A5c?rel=0" frameborder="0" allowfullscreen></iframe>
+  {{ craft.videoEmbedder.embed('https://www.youtube.com/watch?v=6xWpo5Dn254') }}
+</div>
+
+<div class="embed-container type-video youtube">
+  {{ craft.videoEmbedder.embed('https://www.youtube.com/watch?v=R2oB-uK-A5c', {autoplay: 0, rel: 0, theme: 'dark'}) }}
 </div>
 <br>
 
 
 <h2>video - vimeo</h2>
+
+<img src="{{ craft.videoEmbedder.getVideoThumbnail('https://vimeo.com/212832836') }}" />
+
 <div class="embed-container type-video vimeo">
-  <iframe src="https://player.vimeo.com/video/212832836" width="1280" height="720" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  {{ craft.videoEmbedder.embed('https://vimeo.com/212832836') }}
 </div>
 <br>
-
-
 
 
 <h2>wbr</h2>
