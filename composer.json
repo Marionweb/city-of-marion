@@ -61,6 +61,7 @@
         "nystudio107/craft-typogrify": "^1.0",
         "rias/craft-password-policy": "^1.0",
         "rias/craft-position-fieldtype": "^1.0",
+        "rias/craft-scout": "^1.1",
         "selvinortiz/patrol": "^3.0",
         "superbig/craft-entry-instructions": "^1.0",
         "supercool/tablemaker": "^2.0",
