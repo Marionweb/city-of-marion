@@ -42,7 +42,7 @@ return [
 
     // Live (production) environment
     'live' => [
-        'isSystemOn' => true,
+        'isSystemLive' => true,
         'devMode' => false,
         'backupOnUpdate' => false,
         'enableTemplateCaching' => true,
@@ -53,7 +53,7 @@ return [
 
     // Staging (pre-production) environment
     'staging' => [
-        'isSystemOn' => false,
+        'isSystemLive' => false,
         'devMode' => false,
         'backupOnUpdate' => false,
         'enableTemplateCaching' => true,
@@ -65,7 +65,7 @@ return [
 
     // Local (development) environment
     'local' => [
-        'isSystemOn' => true,
+        'isSystemLive' => true,
         'devMode' => true,
         'backupOnUpdate' => true,
         'enableTemplateCaching' => false,
