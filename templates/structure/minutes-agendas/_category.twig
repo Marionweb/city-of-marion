@@ -11,7 +11,7 @@
 {% set landing = craft.entries.section('minutesAgendasLanding').one() %}
 {% set board = craft.entries.section('boards').slug(slug).one() %}
 
-{% set allEntries = craft.entries.section('minutesAgendas').relatedTo(board).all() %}
+{% set allEntries = craft.entries.section('minutesAgendas').relatedTo(board).orderBy('meetingDate desc').all() %}
 
 <section class="list--content">
 <ul>
