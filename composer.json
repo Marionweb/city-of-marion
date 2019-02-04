@@ -64,6 +64,7 @@
         "rias/craft-scout": "^1.1",
         "selvinortiz/patrol": "^3.0",
         "superbig/craft-entry-instructions": "^1.0",
+        "superbig/craft-imagerpretransform": "^2.0",
         "supercool/tablemaker": "^2.0",
         "topshelfcraft/wordsmith": "^3.0",
         "verbb/cp-nav": "^2.0",
