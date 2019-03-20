@@ -93,11 +93,12 @@
             "./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js",
             "./node_modules/choices.js/assets/scripts/dist/choices.min.js",
             "./node_modules/autosize/dist/autosize.min.js",
+            "./node_modules/outdatedbrowser/outdatedbrowser/outdatedbrowser.js",
             "./src/js/modules/*.js",
             "./build/js/*.js"
         ],
         "copyJs": [
-          "./src/js/copy/*.js"
+            "./src/js/copy/*.js"
         ],
         "babelJs": [
             "./src/js/*.js"
@@ -114,6 +115,7 @@
         "jquery": "^3.3.1",
         "lazysizes": "^4.0.1",
         "normalize.css": "^8.0.0",
+        "outdatedbrowser": "^1.1.5",
         "picturefill": "^3.0.2",
         "responsive-social-buttons": "^1.0.7"
     },
