@@ -27,6 +27,14 @@ addLoadEvent(function(){
 
 docReady(function() {
 
+
+
+  jarallax(document.querySelectorAll('.jarallax'), {
+    speed: 0.2,
+    zIndex: 0,
+    disableVideo: /iPad|iPhone|iPod|Android/
+  });
+
   // SLIDE-OUT NAVIGATION
   var mainMenuToggleBread = document.getElementsByClassName('menu--side--toggle'),
    mainMenuOpenAnchor = document.getElementsByClassName('menu--side--toggle-open'),
