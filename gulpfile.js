@@ -3,6 +3,7 @@ const pkg = require("./package.json");
 
 // gulp and post-css plugins
 var gulp        = require('gulp'),
+    print       = require('gulp-print').default,
     nib         = require('nib'),
     rupture     = require('rupture'),
     csso        = require('csso-stylus'),
@@ -96,7 +97,7 @@ gulp.task("css", ["stylus"], () => {
     return gulp.src(pkg.globs.distCss)
         .pipe($.plumber({errorHandler: onError}))
         .pipe($.newer({dest: pkg.paths.dist.css + pkg.vars.siteCssName}))
-        .pipe($.print())
+        .pipe(print())
         .pipe($.sourcemaps.init({loadMaps: true}))
         .pipe($.concat(pkg.vars.siteCssName))
         .pipe($.cssnano({
