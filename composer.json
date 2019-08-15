@@ -1,96 +1,105 @@
 {
-    "name": "craftcms/craft",
-    "description": "Craft CMS",
-    "keywords": [
-        "craft",
-        "cms",
-        "craftcms",
-        "project"
-    ],
-    "license": "MIT",
-    "homepage": "https://craftcms.com/",
-    "type": "project",
-    "support": {
-        "email": "support@craftcms.com",
-        "issues": "https://github.com/craftcms/cms/issues",
-        "forum": "https://craftcms.stackexchange.com/",
-        "source": "https://github.com/craftcms/cms",
-        "docs": "https://craftcms.com/docs",
-        "rss": "https://craftcms.com/changelog.rss"
-    },
-    "minimum-stability": "beta",
-    "require": {
-        "aelvan/craft-cp-element-count": "^1.0",
-        "aelvan/imager": "^2.0",
-        "aelvan/inlin": "^2.0",
-        "aelvan/stamp": "^2.0",
-        "barrelstrength/sprout-encode-email": "^2.0",
-        "barrelstrength/sprout-fields": "^3.0",
-        "barrelstrength/sprout-forms": "^3.0@beta",
-        "barrelstrength/sprout-forms-us-states": "^1.0",
-        "craftcms/anchors": "^2.0",
-        "craftcms/aws-s3": "^1.0",
-        "craftcms/cms": "^3.0",
-        "craftcms/contact-form": "^2.0",
-        "craftcms/contact-form-honeypot": "^1.0",
-        "craftcms/element-api": "^2.4",
-        "craftcms/hexdec": "^2.0",
-        "craftcms/mailgun": "^1.0",
-        "craftcms/plugin-installer": "^1.0.0",
-        "craftcms/query": "^2.0",
-        "craftcms/redactor": "^2.0",
-        "craftcms/simple-text": "^2.0.0",
-        "craftcms/store-hours": "^2.0",
-        "dolphiq/titleentriesfield": "^1.0",
-        "dukt/facebook": "^2.0.0",
-        "dukt/twitter": "^2.0.0",
-        "lukeyouell/craft-readtime": "^1.1",
-        "lukeyouell/craft-updatechecker": "^1.1",
-        "mblode/svgplaceholder": "^1.0",
-        "mexitek/phpcolors": "dev-master",
-        "mikestecker/craft-readability": "^1.0",
-        "mikestecker/craft-videoembedder": "^1.0",
-        "mmikkel/retcon": "v2.x-dev",
-        "newism/craft3-fields": "^0.0.14",
-        "nystudio107/craft-cookies": "^1.1",
-        "nystudio107/craft-fastcgicachebust": "^1.0",
-        "nystudio107/craft-icalendar": "^1.0",
-        "nystudio107/craft-imageoptimize": "^1.0",
-        "nystudio107/craft-minify": "^1.2",
-        "nystudio107/craft-pathtools": "^1.0",
-        "nystudio107/craft-seomatic": "^3.0.0",
-        "nystudio107/craft-typogrify": "^1.0",
-        "rias/craft-password-policy": "^1.0",
-        "rias/craft-position-fieldtype": "^1.0",
-        "rias/craft-scout": "^1.1",
-        "selvinortiz/patrol": "^3.0",
-        "superbig/craft-entry-instructions": "^1.0",
-        "superbig/craft-imagerpretransform": "^2.0",
-        "superbig/craft3-calendarlinks": "^1.0",
-        "supercool/tablemaker": "^2.0",
-        "topshelfcraft/wordsmith": "^3.0",
-        "unionco/calendarize": "^1.2",
-        "verbb/cp-nav": "^2.0",
-        "verbb/expanded-singles": "^1.0",
-        "vlucas/phpdotenv": "^2.4.0"
-    },
-    "config": {
-        "optimize-autoloader": true,
-        "sort-packages": true
-    },
-    "scripts": {
-        "post-root-package-install": [
-            "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
-        ]
-    },
-    "repositories": [
-      {
-        "type": "composer",
-        "url": "https://asset-packagist.org"
-      },
-      {
-        "type": "path",
-        "url": "../../../other/craft3-venti/"
-      }
+  "name": "craftcms/craft",
+  "description": "Craft CMS",
+  "keywords": [
+    "craft",
+    "cms",
+    "craftcms",
+    "project"
+  ],
+  "license": "MIT",
+  "homepage": "https://craftcms.com/",
+  "type": "project",
+  "support": {
+    "email": "support@craftcms.com",
+    "issues": "https://github.com/craftcms/cms/issues",
+    "forum": "https://craftcms.stackexchange.com/",
+    "source": "https://github.com/craftcms/cms",
+    "docs": "https://craftcms.com/docs",
+    "rss": "https://craftcms.com/changelog.rss"
+  },
+  "minimum-stability": "beta",
+  "require": {
+    "aelvan/craft-cp-element-count": "^1.0",
+    "aelvan/imager": "^2.0",
+    "aelvan/inlin": "^2.0",
+    "aelvan/stamp": "^2.0",
+    "barrelstrength/sprout-encode-email": "^2.0",
+    "barrelstrength/sprout-fields": "^3.0",
+    "barrelstrength/sprout-forms": "^3.0@beta",
+    "barrelstrength/sprout-forms-us-states": "^1.0",
+    "barrelstrength/sprout-lists": "^2.0",
+    "codemonauts/craft-instagram-feed": "^1.0",
+    "craftcms/anchors": "^2.0",
+    "craftcms/aws-s3": "^1.0",
+    "craftcms/cms": "^3.0",
+    "craftcms/commerce": "^2.1",
+    "craftcms/contact-form": "^2.0",
+    "craftcms/contact-form-honeypot": "^1.0",
+    "craftcms/element-api": "^2.4",
+    "craftcms/feed-me": "^4.1",
+    "craftcms/hexdec": "^2.0",
+    "craftcms/mailgun": "^1.0",
+    "craftcms/plugin-installer": "^1.0.0",
+    "craftcms/query": "^2.0",
+    "craftcms/redactor": "^2.0",
+    "craftcms/simple-text": "^2.0.0",
+    "craftcms/store-hours": "^2.0",
+    "dolphiq/titleentriesfield": "^1.0",
+    "dukt/facebook": "^2.0.0",
+    "dukt/twitter": "^2.0.0",
+    "glue-agency/craft-fingerprint-assets": "^1.0",
+    "lukeyouell/craft-readtime": "^1.1",
+    "lukeyouell/craft-updatechecker": "^1.1",
+    "mblode/svgplaceholder": "^1.0",
+    "mexitek/phpcolors": "dev-master",
+    "mikestecker/craft-readability": "^1.0",
+    "mikestecker/craft-videoembedder": "^1.0",
+    "mmikkel/retcon": "v2.x-dev",
+    "newism/craft3-fields": "^0.0.14",
+    "nfourtythree/vcard": "^1.0",
+    "nystudio107/craft-cookies": "^1.1",
+    "nystudio107/craft-fastcgicachebust": "^1.0",
+    "nystudio107/craft-icalendar": "1.1.0",
+    "nystudio107/craft-imageoptimize": "^1.0",
+    "nystudio107/craft-minify": "^1.2",
+    "nystudio107/craft-pathtools": "^1.0",
+    "nystudio107/craft-seomatic": "^3.0.0",
+    "nystudio107/craft-typogrify": "^1.0",
+    "nystudio107/craft-youtubeliveembed": "^1.0",
+    "rias/craft-password-policy": "^1.0",
+    "rias/craft-position-fieldtype": "^1.0",
+    "rias/craft-scout": "^1.1",
+    "selvinortiz/patrol": "^3.0",
+    "superbig/craft-imagerpretransform": "^2.0",
+    "superbig/craft3-calendarlinks": "^1.0",
+    "superbig/craft3-shortcut": "^2.0",
+    "supercool/tablemaker": "^2.0",
+    "topshelfcraft/wordsmith": "^3.0",
+    "unionco/calendarize": "^1.2",
+    "verbb/cp-nav": "^2.0",
+    "verbb/events": "^1.0",
+    "verbb/expanded-singles": "^1.0",
+    "verbb/smith": "^1.0",
+    "vlucas/phpdotenv": "^2.4.0"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "sort-packages": true
+  },
+  "scripts": {
+    "post-root-package-install": [
+      "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
     ]
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    },
+    {
+      "type": "path",
+      "url": "../../../other/craft3-venti/"
+    }
+  ]
 }
