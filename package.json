@@ -152,7 +152,7 @@
     "gulp-load-plugins": "^2.0.1",
     "gulp-newer": "^1.4.0",
     "gulp-plumber": "^1.2.1",
-    "gulp-postcss": "^7.0.1",
+    "gulp-postcss": "^8.0.0",
     "gulp-print": "^5.0.2",
     "gulp-rename": "^1.4.0",
     "gulp-replace": "^0.6.1",
