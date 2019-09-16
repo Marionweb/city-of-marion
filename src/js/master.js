@@ -13,20 +13,12 @@ function addLoadEvent(func) {
       }
   }
 }
-//call plugin function after DOM ready
-addLoadEvent(function(){
-  outdatedBrowser({
-      bgColor: '#f25648',
-      color: '#ffffff',
-      lowerThan: 'Edge',
-      languagePath: '/outdatedbrowser/lang/en.html'
-  })
-});
 
 
 
 docReady(function() {
-
+  // loading outdated browser
+  outdatedBrowserRework();
 
 
   jarallax(document.querySelectorAll('.jarallax'), {
