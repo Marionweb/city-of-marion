@@ -169,7 +169,7 @@
     "nib": "^1.1.2",
     "pa11y": "^5.2.0",
     "phantomjs-prebuilt": "^2.1.16",
-    "postcss-brand-colors": "^2.0.0",
+    "postcss-brand-colors": "^3.0.0",
     "postcss-cssnext": "^3.1.0",
     "poststylus": "^1.0.0",
     "rupture": "^0.7.1",
