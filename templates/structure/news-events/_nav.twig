@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
     shouldSort: false
   }){% if craft.app.request.getParam('year') is null or craft.app.request.getParam('year') == 'Year' %}.disable(){% endif %};
 
-  years.passedElement.addEventListener('change', function(e) {
+  years.passedElement.element.addEventListener('change', function(e) {
     if (e.detail.value != 'Year') {
       months.enable();
     } else {

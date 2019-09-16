@@ -186,15 +186,10 @@ inputs.forEach(function (input) {
 });
 
 // INITIALIZE CHOICES.JS FOR FORM SELECTS
-var selects = Array.from(document.querySelectorAll('select'));
-selects.forEach(function (select) {
-  if(select.hasAttribute('data-choices')){
-    var genericSelects = new Choices('[data-choices]', {
-      searchEnabled: false,
-      itemSelectText: '',
-      shouldSort: false
-    });
-  };
+const choices = new Choices("[data-choices]", {
+  searchEnabled: false,
+  itemSelectText: "",
+  shouldSort: false
 });
 
 
