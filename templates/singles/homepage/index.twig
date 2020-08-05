@@ -47,17 +47,13 @@
 {# MAIN COLUMN CONTENT #}
 {% block main %}
 
-{% cache using key 'homepage_section_top' %}
+{{ include('modules/content/_block-mayor-welcome') }}
 
-  {{ include('modules/content/_block-mayor-welcome') }}
+{{ include('modules/content/_block-quick-links') }}
 
-  {{ include('modules/content/_block-quick-links') }}
+{{ include('modules/content/_block-spotlight', {spotlightType: 'champions'}) }}
 
-  {{ include('modules/content/_block-spotlight', {spotlightType: 'champions'}) }}
-
-  {{ include('modules/content/_block-story-share') }}
-
-{% endcache %}
+{{ include('modules/content/_block-story-share') }}
 
 {% endblock %}
 
@@ -78,8 +74,6 @@
 {# SECONDARY CONTENT #}
 {% block content_two %}
 
-{% cache using key 'homepage_section_bottom' %}
-
   {{ include('modules/content/_block-home-featured-video') }}
 
   <section id="block--spotlights-two">
@@ -90,8 +84,6 @@
   {{ include('modules/content/_block-location') }}
 
   {{ include('modules/content/_block-process') }}
-
-{% endcache %}
 
 {% endblock %}
 

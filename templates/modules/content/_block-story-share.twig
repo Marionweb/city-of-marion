@@ -1,8 +1,12 @@
-{% if general.storyShareWidget | length %}
-{% set storyShareWidget = general.storyShareWidget.one() %}
-<section class="block--story-share">
-  <span><strong>City of Champions</strong></span>
-  {% if storyShareWidget.widgetText %}<p>Know a Champion in our community?</p>{% endif %}
-  {% if storyShareWidget.widgetButton | length %}<a href="{{ storyShareWidget.widgetButton.one.url }}" title="{% if storyShareWidget.widgetButtonTitle %}{{ storyShareWidget.widgetButtonTitle }}{% else %}{{ storyShareWidget.widgetButton.one.Title }}{% endif %}" rel="{{ entry.title }}">{{ storyShareWidget.widgetButton.one.Title }}</a>{% endif %}
-</section>
-{% endif %}
+{% cache %}
+
+  {% if general.storyShareWidget | length %}
+  {% set storyShareWidget = general.storyShareWidget.one() %}
+  <section class="block--story-share">
+    <span><strong>City of Champions</strong></span>
+    {% if storyShareWidget.widgetText %}<p>Know a Champion in our community?</p>{% endif %}
+    {% if storyShareWidget.widgetButton | length %}<a href="{{ storyShareWidget.widgetButton.one.url }}" title="{% if storyShareWidget.widgetButtonTitle %}{{ storyShareWidget.widgetButtonTitle }}{% else %}{{ storyShareWidget.widgetButton.one.Title }}{% endif %}" rel="{{ entry.title }}">{{ storyShareWidget.widgetButton.one.Title }}</a>{% endif %}
+  </section>
+  {% endif %}
+
+{% endcache %}
