@@ -21,7 +21,6 @@
   "minimum-stability": "beta",
   "require": {
     "aelvan/craft-cp-element-count": "^1.0",
-    "aelvan/imager": "^2.0",
     "aelvan/inlin": "^2.0",
     "aelvan/stamp": "^2.0",
     "barrelstrength/sprout-encode-email": "^2.0",
@@ -71,7 +70,6 @@
     "rias/craft-position-fieldtype": "^1.0",
     "rias/craft-scout": "2.3.1",
     "selvinortiz/patrol": "^3.0",
-    "superbig/craft-imagerpretransform": "^2.0",
     "superbig/craft3-calendarlinks": "^1.0",
     "superbig/craft3-shortcut": "^2.0",
     "supercool/tablemaker": "^2.0",
