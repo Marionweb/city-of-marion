@@ -28,6 +28,14 @@
 
   {% set posts = craft.entries(queryParams).limit(10).all() %}
   {% for post in posts %}
+
+    {% set employeePhotoExists = false %}
+    {% if post.employee | length %}
+      {% if post.employee.one().staffPhoto | length %}
+        {% set employeePhotoExists = true %}
+      {% endif %}
+    {% endif %}
+
     {%- set cat = null -%}
     {%- set type = post.type.name -%}
     {%- if type == "Story" -%}
@@ -196,13 +204,6 @@
       {# {% if post.excerpt and post.excerpt != empty %}
         <summary type="html">{{ post.excerpt | e }}</summary>
       {% endif %} #}
-
-      {% set employeePhotoExists = false %}
-      {% if post.employee | length %}
-        {% if post.employee.one().staffPhoto | length %}
-          {% set employeePhotoExists = true %}
-        {% endif %}
-      {% endif %}
 
       {% if (post.primaryImage | length) or employeePhotoExists %}
 
