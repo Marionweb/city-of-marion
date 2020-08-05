@@ -16,7 +16,6 @@ esque sed porttitor purus. Proin quis arcu et elit ornare faucibus eget vel quam
 #}
 
 {% block listContent %}
-{% cache %}
 {% set jobs = craft.entries.section('jobs').all() %}
 <section class="list--content">
     <ul>
@@ -29,5 +28,4 @@ esque sed porttitor purus. Proin quis arcu et elit ornare faucibus eget vel quam
     {% endif %}
     </ul>
 </section>
-{% endcache %}
 {% endblock %}

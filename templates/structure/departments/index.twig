@@ -15,9 +15,7 @@
 
 {# HTML #}
 {% block main %}
-{% cache %}
-    {% set subPages = craft.entries.section('departments').orderBy('title').all() %}
+  {% set subPages = craft.entries.section('departments').orderBy('title').all() %}
 
-    {% include 'structure/pages/_types/_landing' with { subPages: subPages } %}
-{% endcache %}
+  {% include 'structure/pages/_types/_landing' with { subPages: subPages } %}
 {% endblock %}
