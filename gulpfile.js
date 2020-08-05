@@ -279,9 +279,9 @@ gulp.task("js", ["js-copy", "js-babel"], () => {
           $.newer({dest: pkg.paths.dist.js})
       ))
       .pipe($.concat(pkg.vars.siteJsName))
-      .pipe($.if(["*.js", "!*.min.js"],
-          $.uglify()
-      ))
+      // .pipe($.if(["*.js", "!*.min.js"],
+      //     $.uglify()
+      // ))
       .pipe($.if(["*.js", "!*.min.js"],
           $.rename({suffix: ".min"})
       ))
