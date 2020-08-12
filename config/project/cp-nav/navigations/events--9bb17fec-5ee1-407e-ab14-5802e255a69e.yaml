@@ -1,0 +1,12 @@
+currLabel: Events
+customIcon: null
+enabled: '1'
+handle: events
+icon: /srv/users/serverpilot/apps/cityofmarion-production/releases/b287c57de95ef30c1bb9a42865aac81cbdfe13b8/vendor/verbb/events/src/icon-mask.svg
+layoutId: '1'
+newWindow: '0'
+order: '7'
+prevLabel: Events
+prevUrl: events
+type: '0'
+url: events

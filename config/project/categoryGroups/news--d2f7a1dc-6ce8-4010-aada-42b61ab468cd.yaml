@@ -1,0 +1,10 @@
+handle: news
+name: News
+siteSettings:
+  4a8c06e2-f6c2-4e05-b6d8-9ba159a22cac:
+    hasUrls: '1'
+    template: structure/news/_category
+    uriFormat: 'news/{slug}'
+structure:
+  maxLevels: '1'
+  uid: 85572fb3-f955-4714-94ad-660be1044461

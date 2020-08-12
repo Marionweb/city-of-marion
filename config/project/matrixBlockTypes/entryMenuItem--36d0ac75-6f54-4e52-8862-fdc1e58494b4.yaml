@@ -1,0 +1,45 @@
+field: f3fb35c1-0fcb-4e63-815f-1c6a18f8da4d
+fieldLayouts:
+  2ee5d51d-4b96-48da-b8f6-f42fd0dd3d07:
+    tabs:
+      -
+        fields:
+          b27afa92-a5e7-4614-9223-8eb571d3ff6e:
+            required: '1'
+            sortOrder: '1'
+        name: Content
+        sortOrder: '1'
+fields:
+  b27afa92-a5e7-4614-9223-8eb571d3ff6e:
+    contentColumnType: string
+    fieldGroup: null
+    handle: entry
+    instructions: ''
+    name: Entry
+    searchable: '1'
+    settings:
+      limit: '1'
+      localizeRelations: false
+      selectionLabel: 'Select an Entry'
+      source: null
+      sources:
+        - 'single:9'
+        - 'single:18'
+        - 'single:11'
+        - 'single:17'
+        - 'section:21'
+        - 'single:10'
+        - 'single:14'
+        - 'single:4'
+        - 'single:15'
+        - 'single:12'
+        - 'section:3'
+        - 'single:16'
+      targetSiteId: null
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: dolphiq\titleentriesfield\fields\TitleEntriesField
+handle: entryMenuItem
+name: 'Entry Link'
+sortOrder: '1'

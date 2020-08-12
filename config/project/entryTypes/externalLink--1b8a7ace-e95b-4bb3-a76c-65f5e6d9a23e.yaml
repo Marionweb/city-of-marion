@@ -1,0 +1,25 @@
+fieldLayouts:
+  fa02f0a7-dbbe-429f-8698-d1284c5d8ec1:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: Title
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: 38158424-1094-4cc9-93ee-2a3175aa348c
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: b5061442-8b7d-4711-b563-6f1751fafc10
+            required: true
+            type: craft\fieldlayoutelements\CustomField
+        name: Content
+        sortOrder: '1'
+handle: externalLink
+hasTitleField: '1'
+name: 'External Link'
+section: a6ad0cda-56ac-4e50-adcd-f970f490e975
+sortOrder: '2'
+titleFormat: null

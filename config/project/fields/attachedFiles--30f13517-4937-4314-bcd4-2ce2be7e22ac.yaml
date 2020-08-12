@@ -1,0 +1,32 @@
+contentColumnType: string
+fieldGroup: 1baac923-6a88-450e-b39f-63bd7949f12f
+handle: attachedFiles
+instructions: ''
+name: 'Attached Files'
+searchable: '1'
+settings:
+  allowedKinds:
+    - audio
+    - compressed
+    - excel
+    - image
+    - pdf
+    - powerpoint
+    - text
+    - word
+  defaultUploadLocationSource: 'volume:49202ccc-5e2a-4f00-b47f-af43674d5329'
+  defaultUploadLocationSubpath: 'attachments/{slug}'
+  limit: ''
+  localizeRelations: false
+  restrictFiles: '1'
+  selectionLabel: ''
+  singleUploadLocationSource: 'volume:49202ccc-5e2a-4f00-b47f-af43674d5329'
+  singleUploadLocationSubpath: 'attachments/{slug}'
+  source: null
+  sources: '*'
+  targetSiteId: null
+  useSingleFolder: '1'
+  viewMode: list
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

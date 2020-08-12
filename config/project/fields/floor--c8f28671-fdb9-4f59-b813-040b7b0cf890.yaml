@@ -1,0 +1,14 @@
+contentColumnType: integer(10)
+fieldGroup: 1baac923-6a88-450e-b39f-63bd7949f12f
+handle: floor
+instructions: ''
+name: Floor
+searchable: '1'
+settings:
+  decimals: '0'
+  max: null
+  min: '1'
+  size: '2'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Number

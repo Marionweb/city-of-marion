@@ -1,0 +1,12 @@
+currLabel: SEOmatic
+customIcon: null
+enabled: '1'
+handle: seomatic
+icon: /srv/users/serverpilot/apps/cityofmarion-production/releases/9a2d7be208f762fde5a7b073f5589886dabc41d9/vendor/nystudio107/craft-seomatic/src/icon-mask.svg
+layoutId: '1'
+newWindow: '0'
+order: '6'
+prevLabel: SEOmatic
+prevUrl: seomatic
+type: '0'
+url: seomatic

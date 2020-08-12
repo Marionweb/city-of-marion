@@ -1,0 +1,21 @@
+fieldLayouts:
+  d069d8c2-bb8a-4039-8844-25a2f554f9f0:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: Title
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: 51612493-0944-4de2-a3bf-7fa1f279e11f
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Content
+        sortOrder: '1'
+handle: buildings
+hasTitleField: '1'
+name: Buildings
+section: 56a72281-2b7d-4c88-839a-90710ec4b5b5
+sortOrder: '1'
+titleFormat: null

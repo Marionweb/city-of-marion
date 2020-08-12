@@ -1,0 +1,12 @@
+currLabel: Users
+customIcon: null
+enabled: '0'
+handle: users
+icon: users
+layoutId: '2'
+newWindow: '0'
+order: '5'
+prevLabel: Users
+prevUrl: users
+type: '0'
+url: users

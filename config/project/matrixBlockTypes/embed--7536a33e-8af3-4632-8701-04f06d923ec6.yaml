@@ -1,0 +1,25 @@
+field: ece2df18-646e-4acd-89d3-82a7dd27ad3c
+fieldLayouts:
+  ca8dbe0e-e9fa-4ee4-9708-c49375a9a556:
+    tabs:
+      -
+        fields:
+          88f03c8d-e7fe-40a0-97aa-d02a51ad825c:
+            required: '1'
+            sortOrder: '1'
+        name: Content
+        sortOrder: '1'
+fields:
+  88f03c8d-e7fe-40a0-97aa-d02a51ad825c:
+    contentColumnType: text
+    fieldGroup: null
+    handle: embedUrl
+    instructions: "Currently Supported: YouTube, Vimeo, Facebook & Twitter. Any other URL's might cause problems.\r\nIf embedding a video however, it is strongly suggested to use the Video block type instead."
+    name: 'Embed URL'
+    searchable: '1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: newism\fields\fields\Embed
+handle: embed
+name: Embed
+sortOrder: '4'

@@ -1,0 +1,45 @@
+contentColumnType: text
+fieldGroup: d4c986d6-9200-4dfa-967f-daac942dce8f
+handle: optimizedImagesSquare
+instructions: ''
+name: 'Optimized Images Square'
+searchable: '1'
+settings:
+  displayDominantColorPalette: '1'
+  displayLazyLoadPlaceholderImages: '1'
+  displayOptimizedImageVariants: '1'
+  variants:
+    -
+      aspectRatioX: '1'
+      aspectRatioY: '1'
+      format: jpg
+      quality: '82'
+      retinaSizes:
+        - '1'
+        - '2'
+      useAspectRatio: '1'
+      width: '400'
+    -
+      aspectRatioX: '1'
+      aspectRatioY: '1'
+      format: jpg
+      quality: '82'
+      retinaSizes:
+        - '1'
+        - '2'
+        - '3'
+      useAspectRatio: '1'
+      width: '150'
+    -
+      aspectRatioX: '1'
+      aspectRatioY: '1'
+      format: jpg
+      quality: '82'
+      retinaSizes:
+        - '1'
+        - '2'
+      useAspectRatio: '1'
+      width: '220'
+translationKeyFormat: null
+translationMethod: none
+type: nystudio107\imageoptimize\fields\OptimizedImages

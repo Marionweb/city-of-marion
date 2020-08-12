@@ -1,0 +1,25 @@
+field: b2812cb3-f5f4-4a17-84b2-efca995224a1
+fieldLayouts:
+  25f27e49-911b-416c-82d6-1f408b1e91e3:
+    tabs:
+      -
+        fields:
+          3708519a-37d2-4b34-8c99-f193130feb3a:
+            required: '1'
+            sortOrder: '1'
+        name: Content
+        sortOrder: '1'
+fields:
+  3708519a-37d2-4b34-8c99-f193130feb3a:
+    contentColumnType: string
+    fieldGroup: null
+    handle: pageUrl
+    instructions: 'Full URL please'
+    name: 'Page Url'
+    searchable: '1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url
+handle: linkedin
+name: LinkedIn
+sortOrder: '4'

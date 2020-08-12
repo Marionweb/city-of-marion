@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: 770fc847-88dc-471d-918d-d241b9efd400
+handle: collaborationLearnMore
+instructions: ''
+name: 'Collaboration Learn More Link'
+searchable: '1'
+settings:
+  customPattern: ''
+  customPatternErrorMessage: ''
+  customPatternToggle: ''
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: none
+type: barrelstrength\sproutfields\fields\Url

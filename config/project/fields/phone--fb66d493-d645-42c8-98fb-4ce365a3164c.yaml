@@ -1,0 +1,11 @@
+contentColumnType: string
+fieldGroup: 1baac923-6a88-450e-b39f-63bd7949f12f
+handle: phone
+instructions: ''
+name: 'Phone Number'
+searchable: '1'
+settings:
+  defaultCountryCode: US
+translationKeyFormat: null
+translationMethod: none
+type: newism\fields\fields\Telephone

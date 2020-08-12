@@ -1,0 +1,50 @@
+field: ece2df18-646e-4acd-89d3-82a7dd27ad3c
+fieldLayouts:
+  2d2dde44-b5ce-4738-b91a-b48bec8c154c:
+    tabs:
+      -
+        fields:
+          7008f21f-9861-485d-abb8-e03cea704ede:
+            required: '0'
+            sortOrder: '1'
+        name: Content
+        sortOrder: '1'
+fields:
+  7008f21f-9861-485d-abb8-e03cea704ede:
+    contentColumnType: string
+    fieldGroup: null
+    handle: entry
+    instructions: 'Links to an entry inside the side'
+    name: Entry
+    searchable: '1'
+    settings:
+      limit: ''
+      localizeRelations: false
+      selectionLabel: ''
+      source: null
+      sources:
+        - 'single:9'
+        - 'single:18'
+        - 'section:7'
+        - 'single:11'
+        - 'single:17'
+        - 'section:8'
+        - 'section:21'
+        - 'single:10'
+        - 'single:14'
+        - 'single:4'
+        - 'section:6'
+        - 'single:15'
+        - 'single:12'
+        - 'section:5'
+        - 'section:3'
+        - 'single:16'
+        - 'section:19'
+      targetSiteId: null
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: dolphiq\titleentriesfield\fields\TitleEntriesField
+handle: buttonInternal
+name: 'Button - Internal Link'
+sortOrder: '6'

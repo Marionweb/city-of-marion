@@ -1,0 +1,13 @@
+contentColumnType: string
+fieldGroup: a4768851-8074-465e-a263-ab7e7141292b
+handle: subMenu
+instructions: ''
+name: Sub-Menu
+searchable: '1'
+settings:
+  contentTable: '{{%matrixcontent_submenu}}'
+  localizeBlocks: false
+  maxBlocks: '8'
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

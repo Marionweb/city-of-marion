@@ -1,0 +1,15 @@
+contentColumnType: text
+fieldGroup: 38b2fb4b-9a4f-4ada-b17f-5c864646b58a
+handle: formTitle
+instructions: ''
+name: 'Form Title'
+searchable: '1'
+settings:
+  charLimit: ''
+  columnType: text
+  initialRows: '4'
+  multiline: ''
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

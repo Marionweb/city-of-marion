@@ -1,0 +1,19 @@
+contentColumnType: text
+fieldGroup: 38b2fb4b-9a4f-4ada-b17f-5c864646b58a
+handle: formIntroductionText
+instructions: ''
+name: 'Form Introduction Text'
+searchable: '1'
+settings:
+  availableTransforms: '*'
+  availableVolumes: ''
+  columnType: text
+  purifierConfig: ''
+  purifyHtml: '1'
+  redactorConfig: Standard.json
+  removeEmptyTags: '1'
+  removeInlineStyles: '1'
+  removeNbsp: '1'
+translationKeyFormat: null
+translationMethod: none
+type: craft\redactor\Field

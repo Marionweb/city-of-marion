@@ -1,0 +1,84 @@
+field: a29967bc-ee07-4a6a-ac2f-2d20966bb285
+fieldLayouts:
+  def5ea78-b893-4d0d-84a5-cd5a14db2b8d:
+    tabs:
+      -
+        fields:
+          2f654fc4-4186-4ffb-b6e4-f9805d34bc79:
+            required: '0'
+            sortOrder: '3'
+          4a16e400-eb6e-4025-8e4c-a28002c88daf:
+            required: '0'
+            sortOrder: '4'
+          57643be3-cc56-4089-97f6-93f4e5dfd9d9:
+            required: '0'
+            sortOrder: '2'
+          f89cda26-8849-41eb-92a9-7b1f770e95af:
+            required: '1'
+            sortOrder: '1'
+        name: Content
+        sortOrder: '1'
+fields:
+  2f654fc4-4186-4ffb-b6e4-f9805d34bc79:
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: required
+    instructions: ''
+    name: 'Required?'
+    searchable: '1'
+    settings:
+      default: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
+  4a16e400-eb6e-4025-8e4c-a28002c88daf:
+    contentColumnType: text
+    fieldGroup: null
+    handle: instructions
+    instructions: 'helpful text shown to visitors'
+    name: 'Instructions (optional)'
+    searchable: '1'
+    settings:
+      charLimit: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  57643be3-cc56-4089-97f6-93f4e5dfd9d9:
+    contentColumnType: text
+    fieldGroup: null
+    handle: placeholder
+    instructions: ''
+    name: 'Placeholder (optional)'
+    searchable: '1'
+    settings:
+      charLimit: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  f89cda26-8849-41eb-92a9-7b1f770e95af:
+    contentColumnType: text
+    fieldGroup: null
+    handle: label
+    instructions: 'The label shown to visitors and the parameter for the field'
+    name: Label
+    searchable: '1'
+    settings:
+      charLimit: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: textArea
+name: 'Text Area'
+sortOrder: '2'

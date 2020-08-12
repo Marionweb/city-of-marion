@@ -1,0 +1,11 @@
+contentColumnType: string
+fieldGroup: 770fc847-88dc-471d-918d-d241b9efd400
+handle: headerBackgroundVideo
+instructions: "Only used on homepage.\r\n\r\nYouTube URL only. URL must be similar to the following: https://www.youtube.com/watch?v=7sqoDHXj-dA\r\n\r\n\"Primary Image\" is used while video is loading or fails to load. If no primary image is uploaded, will attempt to use YouTube's provided thumbnail however the quality provided is sub-par."
+name: 'Header Background Video'
+searchable: false
+settings:
+  placeholder: 'https://www.youtube.com/watch?v=7sqoDHXj-dA'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Url

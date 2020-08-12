@@ -1,0 +1,60 @@
+field: ece2df18-646e-4acd-89d3-82a7dd27ad3c
+fieldLayouts:
+  4b6f63a8-bcf3-4221-8e5b-7b230cc028a2:
+    tabs:
+      -
+        fields:
+          98b5c769-52a3-4d43-8367-280be7458109:
+            required: '0'
+            sortOrder: '3'
+          f35e83af-dd68-4d4b-b7bb-2887ab77508d:
+            required: '1'
+            sortOrder: '1'
+          f4d17204-3c6d-4919-8baf-cd6836125cc5:
+            required: '1'
+            sortOrder: '2'
+        name: Content
+        sortOrder: '1'
+fields:
+  98b5c769-52a3-4d43-8367-280be7458109:
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: newWindow
+    instructions: ''
+    name: 'Open in new window?'
+    searchable: '1'
+    settings:
+      default: '1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
+  f35e83af-dd68-4d4b-b7bb-2887ab77508d:
+    contentColumnType: text
+    fieldGroup: null
+    handle: linkTitle
+    instructions: ''
+    name: Title
+    searchable: '1'
+    settings:
+      charLimit: ''
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  f4d17204-3c6d-4919-8baf-cd6836125cc5:
+    contentColumnType: string
+    fieldGroup: null
+    handle: linkUrl
+    instructions: ''
+    name: Link
+    searchable: '1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url
+handle: buttonExternal
+name: 'Button - External Link'
+sortOrder: '7'

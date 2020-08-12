@@ -1,0 +1,59 @@
+field: 12d55b37-3af5-4b65-8b34-5ece88cf6620
+fieldLayouts:
+  47fd59a9-d424-4887-a4b5-324ff1c4aaeb:
+    tabs:
+      -
+        fields:
+          221b4122-97d1-4664-8590-b181baa56a61:
+            required: '0'
+            sortOrder: '3'
+          ea4bfe32-79cc-4c8a-afa0-fa7a4964ae97:
+            required: '1'
+            sortOrder: '2'
+          f67007ab-7118-467e-9b7e-6f5532b71173:
+            required: '1'
+            sortOrder: '1'
+        name: Content
+        sortOrder: '1'
+fields:
+  221b4122-97d1-4664-8590-b181baa56a61:
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: newWindow
+    instructions: ''
+    name: 'Open in new window?'
+    searchable: '1'
+    settings:
+      default: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
+  ea4bfe32-79cc-4c8a-afa0-fa7a4964ae97:
+    contentColumnType: string
+    fieldGroup: null
+    handle: menuItemUrl
+    instructions: ''
+    name: Link
+    searchable: '1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url
+  f67007ab-7118-467e-9b7e-6f5532b71173:
+    contentColumnType: string
+    fieldGroup: null
+    handle: menuItemTitle
+    instructions: ''
+    name: Title
+    searchable: '1'
+    settings:
+      charLimit: '18'
+      columnType: string
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: customMenuItem
+name: 'Custom Link'
+sortOrder: '2'

@@ -1,0 +1,74 @@
+field: a1289511-acb4-46f5-901b-302901455808
+fieldLayouts:
+  bb07e233-90d4-4200-a348-7951f05cef78:
+    tabs:
+      -
+        fields:
+          219fa5de-65ba-46dc-b737-ec712efe4e2c:
+            required: '0'
+            sortOrder: '1'
+          cbb0941d-cc4d-41fe-b393-ddaf6aa1b8ce:
+            required: '0'
+            sortOrder: '2'
+          df1b979a-e183-409e-9f1a-9f6e57163035:
+            required: '0'
+            sortOrder: '3'
+        name: Content
+        sortOrder: '1'
+fields:
+  219fa5de-65ba-46dc-b737-ec712efe4e2c:
+    contentColumnType: text
+    fieldGroup: null
+    handle: widgetText
+    instructions: ''
+    name: 'Widget Text'
+    searchable: '1'
+    settings:
+      charLimit: ''
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  cbb0941d-cc4d-41fe-b393-ddaf6aa1b8ce:
+    contentColumnType: string
+    fieldGroup: null
+    handle: widgetButton
+    instructions: ''
+    name: 'Widget Button'
+    searchable: '1'
+    settings:
+      limit: '1'
+      localizeRelations: false
+      selectionLabel: 'Select page to link'
+      source: null
+      sources:
+        - 'section:3'
+      targetSiteId: null
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: dolphiq\titleentriesfield\fields\TitleEntriesField
+  df1b979a-e183-409e-9f1a-9f6e57163035:
+    contentColumnType: text
+    fieldGroup: null
+    handle: widgetButtonTitle
+    instructions: 'NOTE: Not the button text, but rather the title used for SEO and screen readers. Displays when hovered over the button. Should read more naturally.'
+    name: 'Widget Button Title'
+    searchable: '1'
+    settings:
+      charLimit: ''
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: options
+name: Options
+sortOrder: '1'

@@ -1,0 +1,17 @@
+contentColumnType: string
+fieldGroup: fe791b08-e2f6-487f-843c-dc06d289728f
+handle: newsEventsTags
+instructions: ''
+name: Tags
+searchable: '1'
+settings:
+  limit: null
+  localizeRelations: false
+  selectionLabel: ''
+  source: 'taggroup:8fdbb3b1-946b-450d-ab5e-4a055a5b5945'
+  sources: '*'
+  targetSiteId: null
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Tags

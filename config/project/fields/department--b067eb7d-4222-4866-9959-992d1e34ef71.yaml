@@ -1,0 +1,18 @@
+contentColumnType: string
+fieldGroup: 770fc847-88dc-471d-918d-d241b9efd400
+handle: department
+instructions: ''
+name: Department
+searchable: '1'
+settings:
+  limit: '1'
+  localizeRelations: false
+  selectionLabel: ''
+  source: null
+  sources:
+    - 'section:d2801f0f-f2b1-4729-bf00-62125760965d'
+  targetSiteId: null
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

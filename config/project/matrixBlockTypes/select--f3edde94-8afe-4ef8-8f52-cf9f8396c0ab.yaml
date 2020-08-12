@@ -1,0 +1,103 @@
+field: a29967bc-ee07-4a6a-ac2f-2d20966bb285
+fieldLayouts:
+  350efcf1-39b1-4e6e-ba62-17b71912f798:
+    tabs:
+      -
+        fields:
+          20f5243b-25de-4545-8d66-a95f6ebe25ce:
+            required: '0'
+            sortOrder: '3'
+          5a2771a6-56fe-4771-b052-c4026a898c90:
+            required: '0'
+            sortOrder: '2'
+          bf0557bb-a902-4b54-9b70-896b43317a41:
+            required: '0'
+            sortOrder: '4'
+          bfe941c8-d4fc-4ea2-8b7e-167ebe91e08d:
+            required: '1'
+            sortOrder: '1'
+        name: Content
+        sortOrder: '1'
+fields:
+  20f5243b-25de-4545-8d66-a95f6ebe25ce:
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: required
+    instructions: ''
+    name: 'Required?'
+    searchable: '1'
+    settings:
+      default: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
+  5a2771a6-56fe-4771-b052-c4026a898c90:
+    contentColumnType: text
+    fieldGroup: null
+    handle: options
+    instructions: ''
+    name: Options
+    searchable: '1'
+    settings:
+      columnType: text
+      columns:
+        __assoc__:
+          -
+            - col1
+            -
+              handle: label
+              heading: Label
+              type: singleline
+              width: ''
+          -
+            - col2
+            -
+              handle: value
+              heading: Value
+              type: singleline
+              width: ''
+          -
+            - col3
+            -
+              handle: selected
+              heading: 'Selected?'
+              type: checkbox
+              width: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Table
+  bf0557bb-a902-4b54-9b70-896b43317a41:
+    contentColumnType: text
+    fieldGroup: null
+    handle: instructions
+    instructions: 'helpful text shown to visitors'
+    name: 'Instructions (optional)'
+    searchable: '1'
+    settings:
+      charLimit: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  bfe941c8-d4fc-4ea2-8b7e-167ebe91e08d:
+    contentColumnType: text
+    fieldGroup: null
+    handle: label
+    instructions: 'The label shown to visitors and the parameter for the field'
+    name: Label
+    searchable: '1'
+    settings:
+      charLimit: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: select
+name: Select
+sortOrder: '3'

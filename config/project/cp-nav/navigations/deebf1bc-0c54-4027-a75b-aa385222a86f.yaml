@@ -1,0 +1,12 @@
+currLabel: 'Sprout Forms'
+customIcon: null
+enabled: '1'
+handle: sprout-forms
+icon: /srv/users/serverpilot/apps/cityofmarion-production/releases/027713cf10e7856c941e5553af2348eb137d4db4/vendor/barrelstrength/sprout-forms/src/icon-mask.svg
+layoutId: '1'
+newWindow: '0'
+order: '8'
+prevLabel: 'Sprout Forms'
+prevUrl: sprout-forms
+type: '0'
+url: sprout-forms

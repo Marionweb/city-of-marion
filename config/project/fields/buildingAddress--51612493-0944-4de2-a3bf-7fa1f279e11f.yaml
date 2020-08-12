@@ -1,0 +1,17 @@
+contentColumnType: text
+fieldGroup: 1baac923-6a88-450e-b39f-63bd7949f12f
+handle: buildingAddress
+instructions: ''
+name: 'Building Address'
+searchable: '1'
+settings:
+  autoCompleteConfiguration: ''
+  defaultCountryCode: US
+  showAutoComplete: '1'
+  showLatLng: '1'
+  showMapUrl: '1'
+  showOrganization: ''
+  showRecipient: ''
+translationKeyFormat: null
+translationMethod: none
+type: newism\fields\fields\Address

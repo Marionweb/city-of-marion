@@ -1,0 +1,12 @@
+currLabel: GraphQL
+customIcon: null
+enabled: '1'
+handle: graphql
+icon: '@app/icons/graphql.svg'
+layoutId: '1'
+newWindow: '0'
+order: '10'
+prevLabel: GraphQL
+prevUrl: graphql
+type: '0'
+url: graphql

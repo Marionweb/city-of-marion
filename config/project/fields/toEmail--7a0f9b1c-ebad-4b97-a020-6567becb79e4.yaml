@@ -1,0 +1,9 @@
+contentColumnType: string
+fieldGroup: 38b2fb4b-9a4f-4ada-b17f-5c864646b58a
+handle: toEmail
+instructions: 'The email where the form submission is sent'
+name: 'To Email'
+searchable: '1'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Email

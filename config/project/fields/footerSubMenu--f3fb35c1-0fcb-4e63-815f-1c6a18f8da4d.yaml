@@ -1,0 +1,13 @@
+contentColumnType: string
+fieldGroup: a4768851-8074-465e-a263-ab7e7141292b
+handle: footerSubMenu
+instructions: ''
+name: 'Footer Sub Menu'
+searchable: '1'
+settings:
+  contentTable: '{{%matrixcontent_footersubmenu}}'
+  localizeBlocks: false
+  maxBlocks: ''
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

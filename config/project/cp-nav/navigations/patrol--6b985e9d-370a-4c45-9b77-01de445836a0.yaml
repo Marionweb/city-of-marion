@@ -1,0 +1,12 @@
+currLabel: Patrol
+customIcon: null
+enabled: '1'
+handle: patrol
+icon: /srv/users/serverpilot/apps/cityofmarion-production/releases/d883682ddc33950a826577931630cf615e00ced5/vendor/selvinortiz/patrol/src/icon-mask.svg
+layoutId: '1'
+newWindow: '0'
+order: '6'
+prevLabel: Patrol
+prevUrl: patrol
+type: '0'
+url: patrol

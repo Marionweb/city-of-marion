@@ -1,0 +1,9 @@
+description: 'Default Order PDF'
+enabled: true
+fileNameFormat: 'Order-{number}'
+handle: order
+isDefault: true
+name: Default
+sortOrder: 0
+templatePath: shop/_pdf/order
+uid: 97c8d22b-94ec-44c2-8800-461bea118a84

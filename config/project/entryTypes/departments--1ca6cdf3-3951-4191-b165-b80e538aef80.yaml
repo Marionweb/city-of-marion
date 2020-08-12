@@ -1,0 +1,85 @@
+fieldLayouts:
+  e8bd04f4-1045-42d9-828b-28ec7664fbed:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: 'Department Name'
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: 38158424-1094-4cc9-93ee-2a3175aa348c
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 050e10e5-e506-4904-b55a-8efac89dac16
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 8d58412c-2c37-4da6-892e-69ab4d8a413b
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: ece2df18-646e-4acd-89d3-82a7dd27ad3c
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 30f13517-4937-4314-bcd4-2ce2be7e22ac
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 3bf4a6bc-a0ee-4ff9-ad77-4422fc25aca1
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: b0a0c5f9-dbf0-41ff-b56f-779215f6d54f
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 0b53ea16-35d5-4aef-9b82-e0441fc674c9
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Content
+        sortOrder: '1'
+      -
+        elements:
+          -
+            fieldUid: 87a16a2b-c436-4138-a913-43777f0be518
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: c8f28671-fdb9-4f59-b813-040b7b0cf890
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: b8ca2e9d-45fd-4524-be32-e3ba82617005
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: fb66d493-d645-42c8-98fb-4ce365a3164c
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 6096dd72-85c9-4b7a-a8d5-294206f79989
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: c53231e7-a5e7-406f-be24-9e04ac91b932
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 7b5fec06-2d1b-40f8-9064-156a2eda548c
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 1d4b9eb7-63c0-4303-8f46-9e606ecebd1e
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: 'Basic Info'
+        sortOrder: '2'
+handle: departments
+hasTitleField: '1'
+name: Departments
+section: d2801f0f-f2b1-4729-bf00-62125760965d
+sortOrder: '1'
+titleFormat: null

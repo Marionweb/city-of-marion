@@ -1,0 +1,11 @@
+handle: generalEventTicketed
+hasTickets: true
+hasTitleField: true
+name: 'General Event (Ticketed)'
+siteSettings:
+  4a8c06e2-f6c2-4e05-b6d8-9ba159a22cac:
+    hasUrls: true
+    template: general-ticketed/_event
+    uriFormat: 'general-ticketed/{slug}'
+titleFormat: ''
+titleLabel: Title

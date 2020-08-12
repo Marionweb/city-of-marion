@@ -1,0 +1,31 @@
+field: b2812cb3-f5f4-4a17-84b2-efca995224a1
+fieldLayouts:
+  9f43eb63-a540-4c66-be6b-23483419e171:
+    tabs:
+      -
+        fields:
+          36541d4d-b837-41e3-9820-877449983b2c:
+            required: '1'
+            sortOrder: '1'
+        name: Content
+        sortOrder: '1'
+fields:
+  36541d4d-b837-41e3-9820-877449983b2c:
+    contentColumnType: text
+    fieldGroup: null
+    handle: twitterName
+    instructions: 'Username only, do not include @'
+    name: 'Twitter Username'
+    searchable: '1'
+    settings:
+      charLimit: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: twitter
+name: Twitter
+sortOrder: '2'
