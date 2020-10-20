@@ -1,0 +1,31 @@
+field: b2812cb3-f5f4-4a17-84b2-efca995224a1
+fieldLayouts:
+  92d52f75-1147-4fe9-9224-cfa07c0712af:
+    tabs:
+      -
+        fields:
+          3f48c5d5-ad98-4e90-994e-97551913b10d:
+            required: '1'
+            sortOrder: '1'
+        name: Content
+        sortOrder: '1'
+fields:
+  3f48c5d5-ad98-4e90-994e-97551913b10d:
+    contentColumnType: text
+    fieldGroup: null
+    handle: pageUrl
+    instructions: 'Only insert the part AFTER: http://facebook.com/. '
+    name: 'Page Url'
+    searchable: '1'
+    settings:
+      charLimit: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: facebook
+name: Facebook
+sortOrder: '1'

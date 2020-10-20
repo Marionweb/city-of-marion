@@ -1,0 +1,13 @@
+contentColumnType: string
+fieldGroup: 38b2fb4b-9a4f-4ada-b17f-5c864646b58a
+handle: formFields
+instructions: ''
+name: 'Form Fields'
+searchable: '1'
+settings:
+  contentTable: '{{%matrixcontent_formfields}}'
+  localizeBlocks: false
+  maxBlocks: ''
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

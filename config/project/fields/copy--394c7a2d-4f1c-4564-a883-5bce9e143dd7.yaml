@@ -1,0 +1,19 @@
+contentColumnType: mediumtext
+fieldGroup: 1baac923-6a88-450e-b39f-63bd7949f12f
+handle: copy
+instructions: ''
+name: Copy
+searchable: '1'
+settings:
+  availableTransforms: '*'
+  availableVolumes: ''
+  columnType: mediumtext
+  purifierConfig: ''
+  purifyHtml: '1'
+  redactorConfig: Standard.json
+  removeEmptyTags: '1'
+  removeInlineStyles: '1'
+  removeNbsp: '1'
+translationKeyFormat: null
+translationMethod: none
+type: craft\redactor\Field

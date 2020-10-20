@@ -1,0 +1,13 @@
+contentColumnType: string
+fieldGroup: 770fc847-88dc-471d-918d-d241b9efd400
+handle: historyBlock
+instructions: ''
+name: 'History Block'
+searchable: '1'
+settings:
+  contentTable: '{{%matrixcontent_historyblock}}'
+  localizeBlocks: false
+  maxBlocks: '1'
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

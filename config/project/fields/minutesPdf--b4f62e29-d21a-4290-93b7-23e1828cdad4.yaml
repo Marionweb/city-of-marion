@@ -1,0 +1,25 @@
+contentColumnType: string
+fieldGroup: 770fc847-88dc-471d-918d-d241b9efd400
+handle: minutesPdf
+instructions: ''
+name: 'Meeting Minutes PDF'
+searchable: '1'
+settings:
+  allowedKinds:
+    - pdf
+  defaultUploadLocationSource: 'volume:ffe6bee7-f3f2-41de-9997-df6c2ada6fbe'
+  defaultUploadLocationSubpath: ''
+  limit: '1'
+  localizeRelations: false
+  restrictFiles: '1'
+  selectionLabel: ''
+  singleUploadLocationSource: 'volume:49202ccc-5e2a-4f00-b47f-af43674d5329'
+  singleUploadLocationSubpath: 'meeting/{slug}'
+  source: null
+  sources: '*'
+  targetSiteId: null
+  useSingleFolder: '1'
+  viewMode: list
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

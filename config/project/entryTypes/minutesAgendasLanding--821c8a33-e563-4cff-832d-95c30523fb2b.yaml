@@ -1,0 +1,29 @@
+fieldLayouts:
+  c4cbf0c9-596f-4736-bbb5-6d81e9bd1516:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: null
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: 050e10e5-e506-4904-b55a-8efac89dac16
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 8d58412c-2c37-4da6-892e-69ab4d8a413b
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 38158424-1094-4cc9-93ee-2a3175aa348c
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Content
+        sortOrder: '1'
+handle: minutesAgendasLanding
+hasTitleField: '0'
+name: 'Minutes & Agendas'
+section: 5a2c5c4f-4f4e-44fd-b7b7-3492ea093e8a
+sortOrder: '1'
+titleFormat: '{section.name|raw}'

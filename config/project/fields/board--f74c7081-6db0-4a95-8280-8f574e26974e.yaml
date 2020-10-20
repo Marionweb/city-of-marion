@@ -1,0 +1,18 @@
+contentColumnType: string
+fieldGroup: 770fc847-88dc-471d-918d-d241b9efd400
+handle: board
+instructions: ''
+name: Board
+searchable: '1'
+settings:
+  limit: '1'
+  localizeRelations: false
+  selectionLabel: 'Select Board'
+  source: null
+  sources:
+    - 'section:227c8918-3a0f-40ea-9a92-5d4676ed0790'
+  targetSiteId: null
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

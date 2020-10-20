@@ -1,0 +1,85 @@
+field: ece2df18-646e-4acd-89d3-82a7dd27ad3c
+fieldLayouts:
+  772fcd4c-1947-4e63-9c95-4910bb2c3ef5:
+    tabs:
+      -
+        fields:
+          5a949d42-7b93-4435-8f97-cb83127d0ab1:
+            required: '0'
+            sortOrder: '2'
+          c3cd6d37-3eb3-4f8a-9131-d7a3f9e0ff16:
+            required: '0'
+            sortOrder: '1'
+          ca956c4c-4ba0-43a4-925f-199dc351bc9e:
+            required: '0'
+            sortOrder: '3'
+          e3de3832-622a-4acc-9c47-95e311f9bde0:
+            required: '0'
+            sortOrder: '4'
+        name: Content
+        sortOrder: '1'
+fields:
+  5a949d42-7b93-4435-8f97-cb83127d0ab1:
+    contentColumnType: text
+    fieldGroup: null
+    handle: cite
+    instructions: 'Recommended. Gives context to the quote.'
+    name: Citation
+    searchable: '1'
+    settings:
+      charLimit: ''
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  c3cd6d37-3eb3-4f8a-9131-d7a3f9e0ff16:
+    contentColumnType: text
+    fieldGroup: null
+    handle: quote
+    instructions: ''
+    name: 'Quote Text'
+    searchable: '1'
+    settings:
+      charLimit: ''
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: '1'
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  ca956c4c-4ba0-43a4-925f-199dc351bc9e:
+    contentColumnType: string
+    fieldGroup: null
+    handle: citeUrl
+    instructions: 'Optional. Will wrap the citation with this link.'
+    name: 'Citation Link'
+    searchable: '1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url
+  e3de3832-622a-4acc-9c47-95e311f9bde0:
+    contentColumnType: text
+    fieldGroup: null
+    handle: citeSecondary
+    instructions: 'Will be prefaced with | '
+    name: 'Citation 2 (optional)'
+    searchable: '1'
+    settings:
+      charLimit: ''
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: quote
+name: Quote
+sortOrder: '2'

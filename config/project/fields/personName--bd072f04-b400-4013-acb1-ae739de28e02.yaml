@@ -1,0 +1,9 @@
+contentColumnType: text
+fieldGroup: fb7746ab-3959-4e46-8b24-1b2035b322ec
+handle: personName
+instructions: ''
+name: Name
+searchable: '1'
+translationKeyFormat: null
+translationMethod: none
+type: newism\fields\fields\PersonName

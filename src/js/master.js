@@ -1,6 +1,31 @@
 'use strict';
 
+function addLoadEvent(func) {
+  var oldonload = window.onload;
+  if (typeof window.onload != 'function') {
+      window.onload = func;
+  } else {
+      window.onload = function() {
+          if (oldonload) {
+              oldonload();
+          }
+          func();
+      }
+  }
+}
+
+
+
 docReady(function() {
+  // loading outdated browser
+  outdatedBrowserRework();
+
+
+  jarallax(document.querySelectorAll('.jarallax'), {
+    speed: 0.2,
+    zIndex: 0,
+    disableVideo: /iPad|iPhone|iPod|Android/
+  });
 
   // SLIDE-OUT NAVIGATION
   var mainMenuToggleBread = document.getElementsByClassName('menu--side--toggle'),
@@ -161,15 +186,10 @@ inputs.forEach(function (input) {
 });
 
 // INITIALIZE CHOICES.JS FOR FORM SELECTS
-var selects = Array.from(document.querySelectorAll('select'));
-selects.forEach(function (select) {
-  if(select.hasAttribute('data-choices')){
-    var genericSelects = new Choices('[data-choices]', {
-      searchEnabled: false,
-      itemSelectText: '',
-      shouldSort: false
-    });
-  };
+const choices = new Choices("[data-choices]", {
+  searchEnabled: false,
+  itemSelectText: "",
+  shouldSort: false
 });
 
 

@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: 770fc847-88dc-471d-918d-d241b9efd400
+handle: videoFeatureBlock
+instructions: ''
+name: 'Video Feature Block'
+searchable: '1'
+settings:
+  contentTable: '{{%matrixcontent_videofeatureblock}}'
+  localizeBlocks: false
+  maxBlocks: '1'
+  minBlocks: ''
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

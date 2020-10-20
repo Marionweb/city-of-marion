@@ -1,0 +1,18 @@
+contentColumnType: string
+fieldGroup: 38b2fb4b-9a4f-4ada-b17f-5c864646b58a
+handle: embedForm
+instructions: ''
+name: 'Embed Form'
+searchable: '1'
+settings:
+  limit: '1'
+  localizeRelations: false
+  selectionLabel: ''
+  source: null
+  sources:
+    - 'section:6e1af2c6-b615-42cf-95d4-0fa3e13c5979'
+  targetSiteId: null
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

@@ -81,13 +81,20 @@
 
   {% include 'structure/news-events/_nav' %}
 
+  <section id="news-events--rss">
+    <a class="news-events--rss-icon" href="/news-events/feed" target="_blank">
+      Subscribe to news
+      {{ source('svg/rss.svg') }}
+    </a>
+  </section>
+
   <section id="news-events--articles-list">
     {% paginate craft.entries(queryParams).limit(6)as pageInfo, recentNews %}
-      {% for entry in recentNews %}
-        {% include 'modules/content/_block-news-events-entry' %}
-      {% endfor %}
+    {% for entry in recentNews %}
+      {% include 'modules/content/_block-news-events-entry' %}
+    {% endfor %}
 
-      {% include 'modules/nav/_pagination' %}
-    </section>
+    {% include 'modules/nav/_pagination' %}
+  </section>
 
   {% endblock %}

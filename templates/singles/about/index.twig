@@ -7,11 +7,19 @@
 {% set title = entry.title %}
 {% set type = 'landing' %}
 
+{% set aboutBlockTransform = {
+    width: 1600,
+    height: 1280,
+    quality: 82
+} %}
+{% set historyImageTransform = {
+    width: 1600,
+    quality: 82
+} %}
 
 {% if entry.aboutBlock | length %}
   {% if entry.aboutBlock.one().image | length %}
     {% set aboutImage = entry.aboutBlock.one().image.one() %}
-    {% set aboutImageTransformed = craft.imager.transformImage(aboutImage, { width: 1600, height: 1280, jpegQuality: 82 }) -%}
   {% endif %}
 {% endif %}
 
@@ -22,26 +30,23 @@
   {% if entry.mayorWelcomeBlock.one().imageOverride | length %}
     {% set mayorImage = entry.mayorWelcomeBlock.one().imageOverride.one() %}
   {% endif %}
-
-  {% set mayorImageTransformed = craft.imager.transformImage(mayorImage, { width: 1600, height: 1280, jpegQuality: 82 }) %}
 {% endif %}
 
 {% if entry.historyBlock | length %}
   {% if entry.historyBlock.one().backgroundImage | length %}
     {% set historyImage = entry.historyBlock.one().backgroundImage.one() %}
-    {% set historyImageTransformed = craft.imager.transformImage(historyImage, { width: 1600, jpegQuality: 82 }) %}
   {% endif %}
 {% endif %}
 
 {% css %}
   {% if aboutImage %}
-    #about--about .about--section-image { background-image: url({{ aboutImageTransformed.url }}); }
+    #about--about .about--section-image { background-image: url({{ aboutImage.getUrl(aboutBlockTransform) }}); }
   {% endif %}
   {% if mayorImage %}
-    #about--mayor-welcome .about--section-image { background-image: url({{ mayorImageTransformed.url }}); }
+    #about--mayor-welcome .about--section-image { background-image: url({{ mayorImage.getUrl(aboutBlockTransform) }}); }
   {% endif %}
   {% if historyImage %}
-    #about--history--image { background-image: url({{ historyImageTransformed.url }}); }
+    #about--history--image { background-image: url({{ historyImage.getUrl(historyImageTransform) }}); }
   {% endif %}
 {% endcss %}
 

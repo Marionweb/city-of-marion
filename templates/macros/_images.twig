@@ -18,7 +18,7 @@
       {%- endif -%}
     {%- endfor -%}
   {%- endspaceless -%}
-  
+
   {# output srcset #}
   {{- srcset | join(', ') -}}
 {%- endmacro -%}
@@ -74,7 +74,7 @@
             data-srcset="
               {%- for variationImage in sizes -%}
                 {{ variationImage.url }}{#  {{ variationImage.width }}w #}{% if not loop.first %} {{ loop.index }}x{% endif %}{% if not loop.last %}, {% endif %}
-              {%- endfor -%}"       
+              {%- endfor -%}"
             media="(min-width: {{ width|replace({'width_': ''}) }}px)"
             srcset="data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAD8D+JaQAA3AA/uVqAAA="
             data-sizes="auto"
@@ -88,7 +88,7 @@
             data-srcset="
               {%- for variationImage in sizes -%}
                 {{ variationImage.url }}{#  {{ variationImage.width }}w #}{% if not loop.first %} {{ loop.index }}x{% endif %}{% if not loop.last %}, {% endif %}
-              {%- endfor -%}"       
+              {%- endfor -%}"
             media="(min-width: {{ width|replace({'width_': ''}) }}px)"
             srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
             data-sizes="auto" />

@@ -1,0 +1,29 @@
+fieldLayouts:
+  8a63505f-2936-4ad9-bb2a-001639875c6f:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: 'Page Title'
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: 38158424-1094-4cc9-93ee-2a3175aa348c
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 050e10e5-e506-4904-b55a-8efac89dac16
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 8d58412c-2c37-4da6-892e-69ab4d8a413b
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Content
+        sortOrder: '1'
+handle: boardsLanding
+hasTitleField: '1'
+name: Boards
+section: 0b5111b1-13a4-466f-b3b6-5b73ef1cfd4f
+sortOrder: '1'
+titleFormat: null

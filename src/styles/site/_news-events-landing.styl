@@ -41,11 +41,31 @@
 
 .news-events--featured-article
 #news-events--nav
+#news-events--rss
 #news-events--articles-list
   +above(m)
     lost-column 32/36
     lost-offset: 2/36
     lost-flex-container: row
+
+#news-events--rss
+  justify-content: flex-end
+  > a
+    align-items: center
+    color: $content-text-color
+    display: flex
+    padding: rem(4px)
+    text-decoration: none
+    svg
+      fill: $content-text-color
+      margin-left: rem(8px)
+      width: rem(14px)
+      +above(desktop-min)
+        width: rem(16px)
+    &:hover
+      color: $content-link-color
+      svg
+        fill: $content-link-color
 
 
 #news-events--articles-list

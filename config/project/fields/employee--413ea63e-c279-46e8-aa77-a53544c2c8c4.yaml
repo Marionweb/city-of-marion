@@ -1,0 +1,18 @@
+contentColumnType: string
+fieldGroup: fe791b08-e2f6-487f-843c-dc06d289728f
+handle: employee
+instructions: 'Choose Employee if type is "Employee Spotlight"'
+name: Employee
+searchable: '1'
+settings:
+  limit: '1'
+  localizeRelations: false
+  selectionLabel: 'Select an employee'
+  source: null
+  sources:
+    - 'section:3c2ea8b9-1453-4aeb-a64a-e58761ce7d70'
+  targetSiteId: null
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

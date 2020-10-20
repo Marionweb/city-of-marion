@@ -9,18 +9,35 @@
 {# PARALLAX HEADER #}
 {% block parallaxBack %}
 
-{% if entry.primaryImage | length %}
-<div id="header-image" class="{{entry.section.handle}}">
+{% if (entry.primaryImage | length) or entry.headerBackgroundVideo %}
+<div id="header-image" class="jarallax {{entry.section.handle}}" {% if entry.headerBackgroundVideo %} data-jarallax-video="{{entry.headerBackgroundVideo}}"{% endif %}>
   {%- import "macros/_images" as imageFunctions -%}
   {%- set image = entry.primaryImage.one() -%}
 
-  <figure>
-    {{ imageFunctions.responsivePicture(image.optimizedImagesLandingHeader, image.alt) }}
+  {# <div class="jarallax">
+    <picture class="jarallax-img">
+        <source media="..." srcset="<alternative_background_image_url_here>">
+        <img src="<background_image_url_here>" alt="">
+    </picture>
+    Your content here...
+  </div> #}
+
+  {# <div data-jarallax data-speed="0.2" class="jarallax">
+    <figure class="jarallax-img">
+      {{ imageFunctions.responsivePicture(image.optimizedImagesLandingHeader, image.alt) }}
+      {% if image.caption %}<figcaption>{{ image.caption }}</figcaption>{% endif %}
+    </figure>
+  </div> #}
+
+  <figure class="jarallax-img">
+    {{ imageFunctions.responsivePicture(image.optimizedImagesBlockPreview, image.alt) }}
+    {# {{ imageFunctions.responsivePicture(image.optimizedImagesLandingHeader, image.alt) }} #}
     {% if image.caption %}<figcaption>{{ image.caption }}</figcaption>{% endif %}
   </figure>
 
   <h1>Welcome to <span><strong>{{siteName}}</strong></span></h1>
 </div>
+
 {% endif %}
 
 {% endblock %}
@@ -30,17 +47,13 @@
 {# MAIN COLUMN CONTENT #}
 {% block main %}
 
-{% cache using key 'homepage_section_top' %}
+{{ include('modules/content/_block-mayor-welcome') }}
 
-  {{ include('modules/content/_block-mayor-welcome') }}
+{{ include('modules/content/_block-quick-links') }}
 
-  {{ include('modules/content/_block-quick-links') }}
+{{ include('modules/content/_block-spotlight', {spotlightType: 'champions'}) }}
 
-  {{ include('modules/content/_block-spotlight', {spotlightType: 'champions'}) }}
-
-  {{ include('modules/content/_block-story-share') }}
-
-{% endcache %}
+{{ include('modules/content/_block-story-share') }}
 
 {% endblock %}
 
@@ -61,8 +74,6 @@
 {# SECONDARY CONTENT #}
 {% block content_two %}
 
-{% cache using key 'homepage_section_bottom' %}
-
   {{ include('modules/content/_block-home-featured-video') }}
 
   <section id="block--spotlights-two">
@@ -73,8 +84,6 @@
   {{ include('modules/content/_block-location') }}
 
   {{ include('modules/content/_block-process') }}
-
-{% endcache %}
 
 {% endblock %}
 

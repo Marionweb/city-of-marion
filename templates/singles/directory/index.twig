@@ -24,7 +24,7 @@
     {%- if entry.headline -%}<h2>{{ entry.headline }}</h2>{%- endif -%}
     {%- if entry.leadIn -%}<p>{{ entry.leadIn }}</p>{%- endif -%}
 
-    <select id="jump" data-choices>
+    <select id="jump">
         <option placeholder>Jump to Department</option>
         {% for department in departments %}
         <option value="department--{{ department.slug }}">{{ department.title | typogrify }}</option>

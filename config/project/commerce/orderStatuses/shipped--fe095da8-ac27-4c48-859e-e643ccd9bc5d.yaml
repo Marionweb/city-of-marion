@@ -1,0 +1,5 @@
+color: blue
+default: false
+handle: shipped
+name: Shipped
+sortOrder: 99

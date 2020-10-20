@@ -1,0 +1,37 @@
+fieldLayouts:
+  eaa018f9-8d4c-4330-abad-be256d85c257:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: 'Meeting Title'
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: 65011909-30f9-4f6e-8131-340c22e95ea3
+            required: true
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: f74c7081-6db0-4a95-8280-8f574e26974e
+            required: true
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 6faaf5e2-1f67-4845-be4e-da0f71caee01
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: b4f62e29-d21a-4290-93b7-23e1828cdad4
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 6f6fbbb8-a0e5-4554-a73c-1d6ebdfa1b1a
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Content
+        sortOrder: '1'
+handle: meeting
+hasTitleField: '1'
+name: Meeting
+section: fc15e9ea-51b4-4afa-bf4b-12435c899d54
+sortOrder: '1'
+titleFormat: null

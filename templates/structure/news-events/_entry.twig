@@ -21,9 +21,9 @@
 {% block main %}
   {% cache %}
 
-<article class="news-events-article news-events-article--{{ entry.type }}">
-  {% include "structure/news-events/_types/_" ~ entry.type %}
-</article>
+    <article class="news-events-article news-events-article--{{ entry.type }}">
+      {% include "structure/news-events/_types/_" ~ entry.type %}
+    </article>
 
   {% endcache %}
 {% endblock %}

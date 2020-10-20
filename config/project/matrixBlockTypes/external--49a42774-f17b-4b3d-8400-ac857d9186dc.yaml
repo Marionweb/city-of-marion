@@ -1,0 +1,59 @@
+field: 3bf4a6bc-a0ee-4ff9-ad77-4422fc25aca1
+fieldLayouts:
+  33352883-08a7-4281-8e08-96f415609e6c:
+    tabs:
+      -
+        fields:
+          04f355d6-03a4-4952-852d-ed24b5719a0c:
+            required: '1'
+            sortOrder: '1'
+          4195141d-c215-4ba3-a5c6-4f5c175bf308:
+            required: '1'
+            sortOrder: '2'
+          889f32e0-ad53-458e-8a0f-bec7fca99ac8:
+            required: '0'
+            sortOrder: '3'
+        name: Content
+        sortOrder: '1'
+fields:
+  04f355d6-03a4-4952-852d-ed24b5719a0c:
+    contentColumnType: text
+    fieldGroup: null
+    handle: linkTitle
+    instructions: ''
+    name: Title
+    searchable: '1'
+    settings:
+      charLimit: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  4195141d-c215-4ba3-a5c6-4f5c175bf308:
+    contentColumnType: string
+    fieldGroup: null
+    handle: linkUrl
+    instructions: ''
+    name: Link
+    searchable: '1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url
+  889f32e0-ad53-458e-8a0f-bec7fca99ac8:
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: newWindow
+    instructions: ''
+    name: 'Open in new window?'
+    searchable: '1'
+    settings:
+      default: '1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
+handle: external
+name: External
+sortOrder: '2'

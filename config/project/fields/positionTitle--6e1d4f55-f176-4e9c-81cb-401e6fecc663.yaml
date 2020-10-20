@@ -1,0 +1,15 @@
+contentColumnType: text
+fieldGroup: fb7746ab-3959-4e46-8b24-1b2035b322ec
+handle: positionTitle
+instructions: ''
+name: 'Position Title'
+searchable: '1'
+settings:
+  charLimit: ''
+  columnType: text
+  initialRows: '4'
+  multiline: ''
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

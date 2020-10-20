@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: 1baac923-6a88-450e-b39f-63bd7949f12f
+handle: linkUrl
+instructions: ''
+name: URL
+searchable: '1'
+settings:
+  customPattern: ''
+  customPatternErrorMessage: ''
+  customPatternToggle: ''
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: none
+type: barrelstrength\sproutfields\fields\Url

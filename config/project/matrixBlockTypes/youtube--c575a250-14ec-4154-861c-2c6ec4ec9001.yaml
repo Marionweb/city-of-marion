@@ -1,0 +1,25 @@
+field: b2812cb3-f5f4-4a17-84b2-efca995224a1
+fieldLayouts:
+  1869035f-7198-4da3-93e6-daf5f8f2c4f4:
+    tabs:
+      -
+        fields:
+          dc85c879-a238-477e-851c-4e6c9e6e8e22:
+            required: '1'
+            sortOrder: '1'
+        name: Content
+        sortOrder: '1'
+fields:
+  dc85c879-a238-477e-851c-4e6c9e6e8e22:
+    contentColumnType: string
+    fieldGroup: null
+    handle: pageUrl
+    instructions: 'Full URL please.'
+    name: 'Page Url'
+    searchable: '1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url
+handle: youtube
+name: YouTube
+sortOrder: '5'

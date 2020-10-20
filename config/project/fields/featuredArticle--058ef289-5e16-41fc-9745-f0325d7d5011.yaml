@@ -1,0 +1,18 @@
+contentColumnType: string
+fieldGroup: fe791b08-e2f6-487f-843c-dc06d289728f
+handle: featuredArticle
+instructions: ''
+name: 'Featured Article'
+searchable: '1'
+settings:
+  limit: '1'
+  localizeRelations: false
+  selectionLabel: 'Select an entry'
+  source: null
+  sources:
+    - 'section:38081c3d-4b57-4105-b21d-1039fb3cb116'
+  targetSiteId: null
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

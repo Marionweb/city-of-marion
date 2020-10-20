@@ -1,0 +1,73 @@
+field: 86f0f419-70f3-4723-8ccd-0af12a34c721
+fieldLayouts:
+  94dcfd02-1768-45da-905f-8d08e8654939:
+    tabs:
+      -
+        fields:
+          251d516c-ede6-4398-beb1-9c3ea785b53c:
+            required: '0'
+            sortOrder: '1'
+          4cdca57d-3161-4f9c-af2c-6da0de6598a1:
+            required: '0'
+            sortOrder: '3'
+          e128557e-c40e-4e61-bec9-46001b9656f9:
+            required: '0'
+            sortOrder: '2'
+        name: Content
+        sortOrder: '1'
+fields:
+  251d516c-ede6-4398-beb1-9c3ea785b53c:
+    contentColumnType: string
+    fieldGroup: null
+    handle: collaborationLogo
+    instructions: ''
+    name: Logo
+    searchable: '1'
+    settings:
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:ffe6bee7-f3f2-41de-9997-df6c2ada6fbe'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: ''
+      singleUploadLocationSource: 'volume:46f7a110-e30f-4793-adac-8a9a8117ba52'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: '1'
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  4cdca57d-3161-4f9c-af2c-6da0de6598a1:
+    contentColumnType: string
+    fieldGroup: null
+    handle: collaborationUrl
+    instructions: ''
+    name: 'Collaboration URL'
+    searchable: '1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url
+  e128557e-c40e-4e61-bec9-46001b9656f9:
+    contentColumnType: text
+    fieldGroup: null
+    handle: collaborationName
+    instructions: ''
+    name: Name
+    searchable: '1'
+    settings:
+      charLimit: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: collaboration
+name: Collaboration
+sortOrder: '1'

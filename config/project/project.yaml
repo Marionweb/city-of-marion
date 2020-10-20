@@ -1,0 +1,378 @@
+dateModified: 1596666582
+email:
+  fromEmail: noreply@cityofmarion.in.gov
+  fromName: 'City of Marion'
+  template: ''
+  transportSettings:
+    apiKey: key-0fc6b5fc2ba53df511843cb52e084824
+    domain: mg.cityofmarion.in.gov
+  transportType: craft\mailgun\MailgunAdapter
+plugins:
+  anchors:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings: null
+  aws-s3:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: '1.2'
+    settings: null
+  calendar-links:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  commerce:
+    edition: lite
+    enabled: true
+    licenseKey: JH1W1W9BY4DLMLAY4NWHXAEK
+    schemaVersion: 3.2.3
+    settings:
+      autoSetNewCartAddresses: true
+      cartVariable: cart
+      dimensionUnits: in
+      emailSenderAddress: ''
+      emailSenderAddressPlaceholder: null
+      emailSenderName: ''
+      emailSenderNamePlaceholder: null
+      gatewayPostRedirectTemplate: ''
+      mergeLastCartOnLogin: true
+      minimumTotalPriceStrategy: zero
+      orderPdfFilenameFormat: 'Order-{number}'
+      orderPdfPath: shop/_pdf/order
+      orderReferenceFormat: '{{number[:7]}}'
+      paymentCurrency: null
+      pdfAllowRemoteImages: false
+      pdfPaperOrientation: portrait
+      pdfPaperSize: letter
+      purgeInactiveCarts: true
+      purgeInactiveCartsDuration: P3M
+      requireBillingAddressAtCheckout: false
+      requireShippingAddressAtCheckout: false
+      requireShippingMethodSelectionAtCheckout: false
+      useBillingAddressForTax: false
+      validateBusinessTaxIdAsVatId: false
+      weightUnits: lb
+  contact-form:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings:
+      allowAttachments: ''
+      prependSender: 'On behalf of'
+      prependSubject: 'New message from City of Marion Website'
+      successFlashMessage: 'Your message has been sent.'
+      toEmail: info@cityofmarion.in.gov
+  contact-form-honeypot:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings:
+      honeypotParam: swampFox
+  cookies:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings: null
+  cp-element-count:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings: null
+  cp-nav:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 2.0.5
+    settings:
+      originalNavHash:
+        __assoc__:
+          -
+            - f4a8f257-d763-4d03-86b6-276d59fb8246
+            - W3sibGFiZWwiOiJEYXNoYm9hcmQiLCJ1cmwiOiJkYXNoYm9hcmQiLCJmb250SWNvbiI6ImdhdWdlIn0seyJsYWJlbCI6IkVudHJpZXMiLCJ1cmwiOiJlbnRyaWVzIiwiZm9udEljb24iOiJzZWN0aW9uIn0seyJsYWJlbCI6Ikdsb2JhbHMiLCJ1cmwiOiJnbG9iYWxzIiwiZm9udEljb24iOiJnbG9iZSJ9LHsibGFiZWwiOiJDYXRlZ29yaWVzIiwidXJsIjoiY2F0ZWdvcmllcyIsImZvbnRJY29uIjoiY2F0ZWdvcmllcyJ9LHsibGFiZWwiOiJBc3NldHMiLCJ1cmwiOiJhc3NldHMiLCJmb250SWNvbiI6ImFzc2V0cyJ9LHsibGFiZWwiOiJVc2VycyIsInVybCI6InVzZXJzIiwiZm9udEljb24iOiJ1c2VycyJ9LHsibGFiZWwiOiJDb21tZXJjZSIsInVybCI6ImNvbW1lcmNlIiwiaWNvbiI6Ii9zcnYvdXNlcnMvc2VydmVycGlsb3QvYXBwcy9jaXR5b2ZtYXJpb24tcHJvZHVjdGlvbi9yZWxlYXNlcy9iMjg3YzU3ZGU5NWVmMzBjMWJiOWE0Mjg2NWFhYzgxY2JkZmUxM2I4L3ZlbmRvci9jcmFmdGNtcy9jb21tZXJjZS9zcmMvaWNvbi1tYXNrLnN2ZyIsInN1Ym5hdiI6eyJvcmRlcnMiOnsibGFiZWwiOiJPcmRlcnMiLCJ1cmwiOiJjb21tZXJjZS9vcmRlcnMifSwicHJvZHVjdHMiOnsibGFiZWwiOiJQcm9kdWN0cyIsInVybCI6ImNvbW1lcmNlL3Byb2R1Y3RzIn0sImN1c3RvbWVycyI6eyJsYWJlbCI6IkN1c3RvbWVycyIsInVybCI6ImNvbW1lcmNlL2N1c3RvbWVycyJ9LCJzdWJzY3JpcHRpb25zIjp7ImxhYmVsIjoiU3Vic2NyaXB0aW9ucyIsInVybCI6ImNvbW1lcmNlL3N1YnNjcmlwdGlvbnMifSwicHJvbW90aW9ucyI6eyJsYWJlbCI6IlByb21vdGlvbnMiLCJ1cmwiOiJjb21tZXJjZS9wcm9tb3Rpb25zIn0sInN0b3JlLXNldHRpbmdzIjp7ImxhYmVsIjoiU3RvcmUgU2V0dGluZ3MiLCJ1cmwiOiJjb21tZXJjZS9zdG9yZS1zZXR0aW5ncyJ9LCJzZXR0aW5ncyI6eyJsYWJlbCI6IlN5c3RlbSBTZXR0aW5ncyIsInVybCI6ImNvbW1lcmNlL3NldHRpbmdzIn19fSx7ImxhYmVsIjoiRXZlbnRzIiwidXJsIjoiZXZlbnRzIiwiaWNvbiI6Ii9zcnYvdXNlcnMvc2VydmVycGlsb3QvYXBwcy9jaXR5b2ZtYXJpb24tcHJvZHVjdGlvbi9yZWxlYXNlcy9iMjg3YzU3ZGU5NWVmMzBjMWJiOWE0Mjg2NWFhYzgxY2JkZmUxM2I4L3ZlbmRvci92ZXJiYi9ldmVudHMvc3JjL2ljb24tbWFzay5zdmciLCJzdWJuYXYiOnsiZXZlbnRzIjp7ImxhYmVsIjoiRXZlbnRzIiwidXJsIjoiZXZlbnRzL2V2ZW50cyJ9LCJwdXJjaGFzZWRUaWNrZXRzIjp7ImxhYmVsIjoiUHVyY2hhc2VkIFRpY2tldHMiLCJ1cmwiOiJldmVudHMvcHVyY2hhc2VkLXRpY2tldHMifSwiZXZlbnRUeXBlcyI6eyJsYWJlbCI6IkV2ZW50IFR5cGVzIiwidXJsIjoiZXZlbnRzL2V2ZW50LXR5cGVzIn0sInRpY2tldFR5cGVzIjp7ImxhYmVsIjoiVGlja2V0IFR5cGVzIiwidXJsIjoiZXZlbnRzL3RpY2tldC10eXBlcyJ9LCJzZXR0aW5ncyI6eyJsYWJlbCI6IlNldHRpbmdzIiwidXJsIjoiZXZlbnRzL3NldHRpbmdzIn19fSx7ImxhYmVsIjoiUGF0cm9sIiwidXJsIjoicGF0cm9sIiwiaWNvbiI6Ii9zcnYvdXNlcnMvc2VydmVycGlsb3QvYXBwcy9jaXR5b2ZtYXJpb24tcHJvZHVjdGlvbi9yZWxlYXNlcy9iMjg3YzU3ZGU5NWVmMzBjMWJiOWE0Mjg2NWFhYzgxY2JkZmUxM2I4L3ZlbmRvci9zZWx2aW5vcnRpei9wYXRyb2wvc3JjL2ljb24tbWFzay5zdmcifSx7ImxhYmVsIjoiU0VPIiwidXJsIjoic2VvbWF0aWMiLCJpY29uIjoiL3Nydi91c2Vycy9zZXJ2ZXJwaWxvdC9hcHBzL2NpdHlvZm1hcmlvbi1wcm9kdWN0aW9uL3JlbGVhc2VzL2IyODdjNTdkZTk1ZWYzMGMxYmI5YTQyODY1YWFjODFjYmRmZTEzYjgvdmVuZG9yL255c3R1ZGlvMTA3L2NyYWZ0LXNlb21hdGljL3NyYy9pY29uLW1hc2suc3ZnIiwic3VibmF2Ijp7ImRhc2hib2FyZCI6eyJsYWJlbCI6IkRhc2hib2FyZCIsInVybCI6InNlb21hdGljL2Rhc2hib2FyZCJ9LCJnbG9iYWwiOnsibGFiZWwiOiJHbG9iYWwgU0VPIiwidXJsIjoic2VvbWF0aWMvZ2xvYmFsL2dlbmVyYWwifSwiY29udGVudCI6eyJsYWJlbCI6IkNvbnRlbnQgU0VPIiwidXJsIjoic2VvbWF0aWMvY29udGVudCJ9LCJzaXRlIjp7ImxhYmVsIjoiU2l0ZSBTZXR0aW5ncyIsInVybCI6InNlb21hdGljL3NpdGUvaWRlbnRpdHkifSwidHJhY2tpbmciOnsibGFiZWwiOiJUcmFja2luZyBTY3JpcHRzIiwidXJsIjoic2VvbWF0aWMvdHJhY2tpbmcvZ29vZ2xlQW5hbHl0aWNzIn0sInBsdWdpbiI6eyJsYWJlbCI6IlBsdWdpbiBTZXR0aW5ncyIsInVybCI6InNlb21hdGljL3BsdWdpbiJ9fX0seyJsYWJlbCI6IlNwcm91dCBGb3JtcyIsInVybCI6InNwcm91dC1mb3JtcyIsImljb24iOiIvc3J2L3VzZXJzL3NlcnZlcnBpbG90L2FwcHMvY2l0eW9mbWFyaW9uLXByb2R1Y3Rpb24vcmVsZWFzZXMvYjI4N2M1N2RlOTVlZjMwYzFiYjlhNDI4NjVhYWM4MWNiZGZlMTNiOC92ZW5kb3IvYmFycmVsc3RyZW5ndGgvc3Byb3V0LWZvcm1zL3NyYy9pY29uLW1hc2suc3ZnIiwic3VibmF2Ijp7ImZvcm1zIjp7ImxhYmVsIjoiRm9ybXMiLCJ1cmwiOiJzcHJvdXQtZm9ybXMvZm9ybXMifSwiZW50cmllcyI6eyJsYWJlbCI6IkVudHJpZXMiLCJ1cmwiOiJzcHJvdXQtZm9ybXMvZW50cmllcyJ9LCJub3RpZmljYXRpb25zIjp7ImxhYmVsIjoiTm90aWZpY2F0aW9ucyIsInVybCI6InNwcm91dC1mb3Jtcy9ub3RpZmljYXRpb25zIn0sInJlcG9ydHMiOnsibGFiZWwiOiJSZXBvcnRzIiwidXJsIjoic3Byb3V0LWZvcm1zL3JlcG9ydHMifSwic2V0dGluZ3MiOnsibGFiZWwiOiJTZXR0aW5ncyIsInVybCI6InNwcm91dC1mb3Jtcy9zZXR0aW5ncyJ9fX0seyJsYWJlbCI6IkdyYXBoUUwiLCJ1cmwiOiJncmFwaHFsIiwiaWNvbiI6IkBhcHAvaWNvbnMvZ3JhcGhxbC5zdmciLCJzdWJuYXYiOnsic2NoZW1hcyI6eyJsYWJlbCI6IlNjaGVtYXMiLCJ1cmwiOiJncmFwaHFsL3NjaGVtYXMifSwidG9rZW5zIjp7ImxhYmVsIjoiVG9rZW5zIiwidXJsIjoiZ3JhcGhxbC90b2tlbnMifSwiZ3JhcGhpcWwiOnsibGFiZWwiOiJHcmFwaGlRTCIsInVybCI6ImdyYXBoaXFsIiwiZXh0ZXJuYWwiOnRydWV9fX0seyJ1cmwiOiJ1dGlsaXRpZXMiLCJsYWJlbCI6IlV0aWxpdGllcyIsImZvbnRJY29uIjoidG9vbCIsImJhZGdlQ291bnQiOjIxfSx7InVybCI6InNldHRpbmdzIiwibGFiZWwiOiJTZXR0aW5ncyIsImZvbnRJY29uIjoic2V0dGluZ3MifSx7InVybCI6InBsdWdpbi1zdG9yZSIsImxhYmVsIjoiUGx1Z2luIFN0b3JlIiwiZm9udEljb24iOiJwbHVnaW4ifV0=
+          -
+            - 767397d2-6b8d-40eb-bcdc-b82f2ed324d0
+            - W3sibGFiZWwiOiJEYXNoYm9hcmQiLCJ1cmwiOiJkYXNoYm9hcmQiLCJmb250SWNvbiI6ImdhdWdlIn0seyJsYWJlbCI6IkVudHJpZXMiLCJ1cmwiOiJlbnRyaWVzIiwiZm9udEljb24iOiJzZWN0aW9uIn0seyJsYWJlbCI6Ikdsb2JhbHMiLCJ1cmwiOiJnbG9iYWxzIiwiZm9udEljb24iOiJnbG9iZSJ9LHsibGFiZWwiOiJDYXRlZ29yaWVzIiwidXJsIjoiY2F0ZWdvcmllcyIsImZvbnRJY29uIjoiY2F0ZWdvcmllcyJ9LHsibGFiZWwiOiJBc3NldHMiLCJ1cmwiOiJhc3NldHMiLCJmb250SWNvbiI6ImFzc2V0cyJ9LHsibGFiZWwiOiJVc2VycyIsInVybCI6InVzZXJzIiwiZm9udEljb24iOiJ1c2VycyJ9LHsibGFiZWwiOiJDb21tZXJjZSIsInVybCI6ImNvbW1lcmNlIiwiaWNvbiI6Ii9zcnYvdXNlcnMvc2VydmVycGlsb3QvYXBwcy9jaXR5b2ZtYXJpb24tcHJvZHVjdGlvbi9yZWxlYXNlcy9iMjg3YzU3ZGU5NWVmMzBjMWJiOWE0Mjg2NWFhYzgxY2JkZmUxM2I4L3ZlbmRvci9jcmFmdGNtcy9jb21tZXJjZS9zcmMvaWNvbi1tYXNrLnN2ZyIsInN1Ym5hdiI6eyJvcmRlcnMiOnsibGFiZWwiOiJPcmRlcnMiLCJ1cmwiOiJjb21tZXJjZS9vcmRlcnMifSwicHJvZHVjdHMiOnsibGFiZWwiOiJQcm9kdWN0cyIsInVybCI6ImNvbW1lcmNlL3Byb2R1Y3RzIn0sInN1YnNjcmlwdGlvbnMiOnsibGFiZWwiOiJTdWJzY3JpcHRpb25zIiwidXJsIjoiY29tbWVyY2Uvc3Vic2NyaXB0aW9ucyJ9LCJwcm9tb3Rpb25zIjp7ImxhYmVsIjoiUHJvbW90aW9ucyIsInVybCI6ImNvbW1lcmNlL3Byb21vdGlvbnMifSwic3RvcmUtc2V0dGluZ3MiOnsibGFiZWwiOiJTdG9yZSBTZXR0aW5ncyIsInVybCI6ImNvbW1lcmNlL3N0b3JlLXNldHRpbmdzIn19fSx7ImxhYmVsIjoiRXZlbnRzIiwidXJsIjoiZXZlbnRzIiwiaWNvbiI6Ii9zcnYvdXNlcnMvc2VydmVycGlsb3QvYXBwcy9jaXR5b2ZtYXJpb24tcHJvZHVjdGlvbi9yZWxlYXNlcy9iMjg3YzU3ZGU5NWVmMzBjMWJiOWE0Mjg2NWFhYzgxY2JkZmUxM2I4L3ZlbmRvci92ZXJiYi9ldmVudHMvc3JjL2ljb24tbWFzay5zdmciLCJzdWJuYXYiOnsiZXZlbnRUeXBlcyI6eyJsYWJlbCI6IkV2ZW50IFR5cGVzIiwidXJsIjoiZXZlbnRzL2V2ZW50LXR5cGVzIn19fSx7ImxhYmVsIjoiU0VPIiwidXJsIjoic2VvbWF0aWMiLCJpY29uIjoiL3Nydi91c2Vycy9zZXJ2ZXJwaWxvdC9hcHBzL2NpdHlvZm1hcmlvbi1wcm9kdWN0aW9uL3JlbGVhc2VzL2IyODdjNTdkZTk1ZWYzMGMxYmI5YTQyODY1YWFjODFjYmRmZTEzYjgvdmVuZG9yL255c3R1ZGlvMTA3L2NyYWZ0LXNlb21hdGljL3NyYy9pY29uLW1hc2suc3ZnIiwic3VibmF2Ijp7ImRhc2hib2FyZCI6eyJsYWJlbCI6IkRhc2hib2FyZCIsInVybCI6InNlb21hdGljL2Rhc2hib2FyZCJ9LCJnbG9iYWwiOnsibGFiZWwiOiJHbG9iYWwgU0VPIiwidXJsIjoic2VvbWF0aWMvZ2xvYmFsL2dlbmVyYWwifSwiY29udGVudCI6eyJsYWJlbCI6IkNvbnRlbnQgU0VPIiwidXJsIjoic2VvbWF0aWMvY29udGVudCJ9LCJzaXRlIjp7ImxhYmVsIjoiU2l0ZSBTZXR0aW5ncyIsInVybCI6InNlb21hdGljL3NpdGUvaWRlbnRpdHkifSwidHJhY2tpbmciOnsibGFiZWwiOiJUcmFja2luZyBTY3JpcHRzIiwidXJsIjoic2VvbWF0aWMvdHJhY2tpbmcvZ29vZ2xlQW5hbHl0aWNzIn0sInBsdWdpbiI6eyJsYWJlbCI6IlBsdWdpbiBTZXR0aW5ncyIsInVybCI6InNlb21hdGljL3BsdWdpbiJ9fX0seyJ1cmwiOiJ1dGlsaXRpZXMiLCJsYWJlbCI6IlV0aWxpdGllcyIsImZvbnRJY29uIjoidG9vbCIsImJhZGdlQ291bnQiOjB9XQ==
+  element-api:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings: null
+  encode-email:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings: null
+  events:
+    edition: standard
+    enabled: true
+    licenseKey: 3RU0F86OFUP341RNW4N4K8S5
+    schemaVersion: 1.0.13
+  expanded-singles:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings:
+      expandSingles: '1'
+      redirectToEntry: '1'
+  facebook:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.1
+    settings:
+      apiVersion: v2.12
+      cacheDuration: PT1H
+      enableCache: true
+      facebookInsightsObjectId: null
+      oauthClientId: '186600255471601'
+      oauthClientSecret: 97d6623fd6b062d1e2a37a2363b330ab
+      oauthScope:
+        - public_profile
+        - manage_pages
+        - read_insights
+      token: null
+  fastcgi-cache-bust:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings:
+      cachePath: ''
+  fingerprint-assets:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  icalendar:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  image-optimize:
+    enabled: '1'
+    licenseKey: JMQC3JNHKHGOBIB4X3FUVJSI
+    schemaVersion: 1.0.0
+    settings: null
+  inflect:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings: null
+  inlin:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 2.0.0
+    settings: null
+  instant-analytics:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings: null
+  linkfield:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings: null
+  mailgun:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings: null
+  minify:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings: null
+  nsm-fields:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings:
+      addressDefaultFormat: null
+      googleApiKey: AIzaSyCFs0PxQy4A3nyUL6jTwPpYoKxNzdWs79k
+  password-policy:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings:
+      cases: ''
+      checkPwned: '1'
+      maxLength: '160'
+      minLength: '8'
+      numbers: ''
+      showStrengthIndicator: '1'
+      symbols: ''
+  path-tools:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings: null
+  patrol:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 3.0.0
+    settings:
+      maintenanceModeAuthorizedIps:
+        - '::1'
+        - 127.0.0.1
+      maintenanceModeEnabled: ''
+      maintenanceModePageUrl: /offline
+      primaryDomain: '*'
+      sslRoutingBaseUrl: '{siteUrl}'
+      sslRoutingEnabled: '1'
+      sslRoutingRestrictedUrls:
+        - /
+  read-time:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings: null
+  redactor:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 2.3.0
+    settings: null
+  scout:
+    edition: standard
+    enabled: false
+    schemaVersion: 0.1.0
+  seomatic:
+    enabled: '1'
+    licenseKey: HS3HE8HYSWU2O1CR9M6NN2OL
+    schemaVersion: 3.0.9
+    settings:
+      devModeTitlePrefix: '[devMode] '
+      displayAnalysisSidebar: '1'
+      displayPreviewSidebar: '1'
+      environment: live
+      maxDescriptionLength: '300'
+      maxTitleLength: '120'
+      pluginName: SEO
+      renderEnabled: '1'
+      separatorChar: '|'
+  similar:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.1
+    settings: null
+  simple-text:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.2
+    settings: null
+  sprout-encode-email:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 2.0.0
+    settings: null
+  sprout-fields:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 3.5.3
+    settings: null
+  sprout-forms:
+    edition: pro
+    enabled: '1'
+    licenseKey: GH7N2CRXNOV4PTGNIRAQZMIH
+    schemaVersion: 3.11.8
+    settings:
+      captchaSettings:
+        __assoc__:
+          -
+            - barrelstrength\sproutforms\captchas\DuplicateCaptcha
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - 1
+          -
+            - barrelstrength\sproutforms\captchas\JavascriptCaptcha
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - 1
+          -
+            - barrelstrength\sproutforms\captchas\HoneypotCaptcha
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - 1
+                -
+                  - honeypotFieldName
+                  - beesknees
+                -
+                  - honeypotScreenReaderMessage
+                  - 'Leave this field blank'
+      enableEditFormEntryViaFrontEnd: 0
+      enablePayloadForwarding: 0
+      enableSaveData: 1
+      enableSaveDataDefaultValue: 1
+      formTemplateDefaultValue: ''
+      formTemplateId: ''
+      pluginNameOverride: ''
+      saveDataByDefault: 1
+      templateFolderOverride: sproutforms-accessibletemplates
+  sprout-forms-us-states:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings: null
+  stamp:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 2.0.0
+    settings: null
+  store-hours:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.2
+    settings: null
+  svgplaceholder:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings: null
+  transcoder:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings: null
+  twitter:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.1
+    settings:
+      cacheDuration: PT10M
+      enableCache: true
+      oauthConsumerKey: augHyHXKyV8PreUz0z7YXQ1Sx
+      oauthConsumerSecret: yBA2R8mOqHXhNZN5d9W4FTiMqukRUEgJajSbHXb3RyAS9lfN7k
+      token: null
+      tokenSecret: null
+  typogrify:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings: null
+  update-checker:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings:
+      email: true
+      slack: true
+      slackWebhook: 'https://hooks.slack.com/services/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'
+      toEmail: mike@stecker.me
+  video-embedder:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings: null
+  wordsmith:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 0.0.0.0
+    settings: null
+system:
+  edition: pro
+  live: true
+  name: 'City of Marion'
+  schemaVersion: 3.5.12
+  timeZone: America/Indiana/Indianapolis

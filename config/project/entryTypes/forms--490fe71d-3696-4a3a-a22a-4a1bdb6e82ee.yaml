@@ -1,0 +1,45 @@
+fieldLayouts:
+  5987d474-cf77-4eb5-9276-47cc59740e76:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: 'Title of Form'
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: 0ead5f8a-8d66-4be0-834a-9f4fa567d515
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 39f823bc-9cdf-4abb-b757-750f16110779
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 7a0f9b1c-ebad-4b97-a020-6567becb79e4
+            required: true
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: d58b24c7-4eec-4641-b2e9-10315e23cc5a
+            required: true
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: b8071fd9-4b3c-4d72-8105-e9edfe5eedfa
+            required: true
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: d74dbc41-e452-4f18-a9d9-860998b80e9e
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: a29967bc-ee07-4a6a-ac2f-2d20966bb285
+            required: true
+            type: craft\fieldlayoutelements\CustomField
+        name: 'Form Fields'
+        sortOrder: '1'
+handle: forms
+hasTitleField: '1'
+name: Forms
+section: 6e1af2c6-b615-42cf-95d4-0fa3e13c5979
+sortOrder: '1'
+titleFormat: null

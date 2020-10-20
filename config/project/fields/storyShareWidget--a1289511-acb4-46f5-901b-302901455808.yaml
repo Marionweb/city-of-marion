@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: 1baac923-6a88-450e-b39f-63bd7949f12f
+handle: storyShareWidget
+instructions: ''
+name: 'Story Share Widget'
+searchable: '1'
+settings:
+  contentTable: '{{%matrixcontent_storysharewidget}}'
+  localizeBlocks: false
+  maxBlocks: '1'
+  minBlocks: ''
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

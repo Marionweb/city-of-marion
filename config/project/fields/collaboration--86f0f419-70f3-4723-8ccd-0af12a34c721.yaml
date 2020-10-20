@@ -1,0 +1,13 @@
+contentColumnType: string
+fieldGroup: 770fc847-88dc-471d-918d-d241b9efd400
+handle: collaboration
+instructions: ''
+name: 'Collaboration With'
+searchable: '1'
+settings:
+  contentTable: '{{%matrixcontent_collaboration}}'
+  localizeBlocks: false
+  maxBlocks: '3'
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

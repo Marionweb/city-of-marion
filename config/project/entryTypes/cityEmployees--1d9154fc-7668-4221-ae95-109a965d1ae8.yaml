@@ -1,0 +1,53 @@
+fieldLayouts:
+  a3bfb587-7cb3-4cbd-a6b4-1670db5883f2:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: null
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: 1cf50262-1eb7-42b4-98d8-6cc2de6caabf
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: bd072f04-b400-4013-acb1-ae739de28e02
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 6e1d4f55-f176-4e9c-81cb-401e6fecc663
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: b067eb7d-4222-4866-9959-992d1e34ef71
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 7b5fec06-2d1b-40f8-9064-156a2eda548c
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: fb66d493-d645-42c8-98fb-4ce365a3164c
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 6096dd72-85c9-4b7a-a8d5-294206f79989
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: c53231e7-a5e7-406f-be24-9e04ac91b932
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 9886e0d2-4df0-4486-9784-5a5cd28fc836
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Content
+        sortOrder: '1'
+handle: cityEmployees
+hasTitleField: '0'
+name: 'City Employees'
+section: 3c2ea8b9-1453-4aeb-a64a-e58761ce7d70
+sortOrder: '1'
+titleFormat: '{personName.familyNames}, {personName.givenNames}'

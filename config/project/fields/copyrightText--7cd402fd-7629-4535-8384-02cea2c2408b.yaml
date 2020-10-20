@@ -1,0 +1,15 @@
+contentColumnType: text
+fieldGroup: a4768851-8074-465e-a263-ab7e7141292b
+handle: copyrightText
+instructions: 'Displayed after the copyright date and a comma.'
+name: 'Copyright Text'
+searchable: '1'
+settings:
+  charLimit: ''
+  columnType: text
+  initialRows: '4'
+  multiline: ''
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

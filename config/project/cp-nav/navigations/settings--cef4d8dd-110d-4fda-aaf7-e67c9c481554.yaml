@@ -1,0 +1,12 @@
+currLabel: Settings
+customIcon: null
+enabled: '0'
+handle: settings
+icon: settings
+layoutId: '2'
+newWindow: '0'
+order: '8'
+prevLabel: Settings
+prevUrl: settings
+type: '0'
+url: settings

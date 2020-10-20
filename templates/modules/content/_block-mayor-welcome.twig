@@ -1,30 +1,32 @@
-<section id="block--mayor-welcome">
-{%- set welcomeBlock = entry.welcome.one() -%}
+{% cache %}
+  <section id="block--mayor-welcome">
+  {%- set welcomeBlock = entry.welcome.one() -%}
 
-{% if welcomeBlock.welcomePhoto | length %}
-  {%- import "macros/_images" as imageFunctions -%}
-  {%- set image = welcomeBlock.welcomePhoto.one() -%}
-  <figure>
-    {{ imageFunctions.responsivePicture(image.optimizedImagesSquare, image.alt) }}
-    {% if image.caption %}<figcaption>{{ image.caption }}</figcaption>{% endif %}
-  </figure>
-{% endif %}
+  {% if welcomeBlock.welcomePhoto | length %}
+    {%- import "macros/_images" as imageFunctions -%}
+    {%- set image = welcomeBlock.welcomePhoto.one() -%}
+    <figure>
+      {{ imageFunctions.responsivePicture(image.optimizedImagesSquare, image.alt) }}
+      {% if image.caption %}<figcaption>{{ image.caption }}</figcaption>{% endif %}
+    </figure>
+  {% endif %}
 
-{% if welcomeBlock.welcomeName %}
-  <h3>From {{ welcomeBlock.welcomeName | typogrify }}</h3>
-{% endif %}
+  {% if welcomeBlock.welcomeName %}
+    <h3>From {{ welcomeBlock.welcomeName | typogrify }}</h3>
+  {% endif %}
 
-{% if welcomeBlock.welcomeHeadline %}
-  <h2>{{ welcomeBlock.welcomeHeadline | nl2br | typogrify }}</h2>
-{% endif %}
+  {% if welcomeBlock.welcomeHeadline %}
+    <h2>{{ welcomeBlock.welcomeHeadline | nl2br | typogrify }}</h2>
+  {% endif %}
 
-{% if welcomeBlock.welcomeText %}
-  <p>{{ welcomeBlock.welcomeText | nl2br | typogrify }}</p>
-{% endif %}
+  {% if welcomeBlock.welcomeText %}
+    <p>{{ welcomeBlock.welcomeText | nl2br | typogrify }}</p>
+  {% endif %}
 
-{% if welcomeBlock.learnMoreLink | length %}
-  {%- set learnMore = welcomeBlock.learnMoreLink.one() -%}
-  <a href="{{learnMore.url}}" title="{{ learnMore.title }}">Learn More</a>
-{% endif %}
+  {% if welcomeBlock.learnMoreLink | length %}
+    {%- set learnMore = welcomeBlock.learnMoreLink.one() -%}
+    <a href="{{learnMore.url}}" title="{{ learnMore.title }}">Learn More</a>
+  {% endif %}
 
-</section>
+  </section>
+{% endcache %}

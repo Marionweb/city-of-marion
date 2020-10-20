@@ -1,0 +1,15 @@
+fieldLayouts:
+  39d93d54-e532-4a81-92c1-7286a5159d62:
+    tabs:
+      -
+        fields:
+          12d55b37-3af5-4b65-8b34-5ece88cf6620:
+            required: '0'
+            sortOrder: '1'
+          f3225db0-341d-4fd8-91a5-a04c79929c3b:
+            required: '0'
+            sortOrder: '2'
+        name: Content
+        sortOrder: '1'
+handle: menus
+name: 'Main Menu'
