@@ -1,0 +1,13 @@
+<nav>
+  <ul>
+    {% set nav = footer.footerMenu.all() %}
+    {% nav item in nav %}
+      {% if item.type == "customMenuItem" %}
+        <li class="footer--nav--item footer--nav--item-text"><a href="{{item.menuItemUrl}}"{% if item.newWindow %} target="_blank"{% endif %} title="{{ item.menuItemTitle }}">{{ item.menuItemTitle }}</a></li>
+      {% elseif item.type == "entryMenuItem" %}
+        {% set entry = item.entry.one() %}
+        <li class="footer--nav--item footer--nav--item-text"><a href="{{entry.url}}" title="{{ entry.Title }}">{{ entry.Title }}</a></li>
+      {% endif %}
+    {% endnav %}
+  </ul>
+</nav>

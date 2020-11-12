@@ -1,0 +1,15 @@
+contentColumnType: text
+fieldGroup: 1baac923-6a88-450e-b39f-63bd7949f12f
+handle: feedAuthorName
+instructions: ''
+name: 'Feed Author Name'
+searchable: '1'
+settings:
+  charLimit: ''
+  columnType: text
+  initialRows: '4'
+  multiline: ''
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

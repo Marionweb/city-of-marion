@@ -1,0 +1,10 @@
+handle: events
+name: Events
+siteSettings:
+  4a8c06e2-f6c2-4e05-b6d8-9ba159a22cac:
+    hasUrls: '1'
+    template: structure/events/_category
+    uriFormat: 'news-events/events/{slug}'
+structure:
+  maxLevels: null
+  uid: 49bd9e18-c2a0-48e1-8313-e12b9f9148e7

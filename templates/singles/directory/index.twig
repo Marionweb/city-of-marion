@@ -1,0 +1,85 @@
+{#
+    Directory Landing Template
+#}
+
+{% extends "layouts/columns/_one" %}
+
+{% set title = entry.title %}
+
+
+{% set staffMembers = craft.entries.section('staff').all() %}
+{% set deptParams = {
+    section : 'departments',
+    orderBy : 'title asc',
+    relatedTo: staffMembers
+  } %}
+{% set departments = craft.entries(deptParams).all() %}
+
+{# HTML #}
+{% block main %}
+
+<header id="staff-department--intro">
+  <div id="staff-department--intro-text">
+    <h1>{{ title }}</h1>
+    {%- if entry.headline -%}<h2>{{ entry.headline }}</h2>{%- endif -%}
+    {%- if entry.leadIn -%}<p>{{ entry.leadIn }}</p>{%- endif -%}
+
+    <select id="jump">
+        <option placeholder>Jump to Department</option>
+        {% for department in departments %}
+        <option value="department--{{ department.slug }}">{{ department.title | typogrify }}</option>
+        {% endfor %}
+    </select>
+
+  </div>
+</header>
+
+<section id="staff-department-blocks">
+  {% for department in departments %}
+    {% set staffParams = {
+      section : 'staff',
+      orderBy : 'title asc',
+      relatedTo: department
+    } %}
+    {% set departmentStaffMembers = craft.entries(staffParams).all() %}
+    <section id="department--{{ department.slug }}" class="staff-department">
+      <input type="checkbox">
+      <i></i>
+      <h2>
+        {{ department.title | typogrify }}
+        {% if department.description or department.email %}
+        <span class="controls">
+          {% if department.description %}<input type="checkbox"><span class="toggle-description">Description <i></i></span>{% endif %}
+          {% if department.email %}<a data-fancybox data-src="#department--{{ department.slug }}--modal" href="javascript:;" class="contact-department-modal">Contact <span>Department</span></a>{% endif %}
+          {% if department.description %}<p>{{ department.description | typogrify }}</p>{% endif %}
+        </span>
+        {% endif %}
+      </h2>
+      <ul>
+      {% for member in departmentStaffMembers %}
+      {% cache using key 'department-directory-' ~ department.id ~ '-' ~ department.slug ~ '-' ~ member.slug %}{% include "modules/content/_block-staff-member" %}{% endcache %}
+      {% endfor %}
+      </ul>
+      {% if department.email %}{% include "singles/directory/_form" %}{% endif %}
+    </section>
+  {% endfor %}
+</section>
+
+{% endblock %}
+
+{# Scroll with dropdown #}
+{% js %}
+{% minify js %}
+document.addEventListener('DOMContentLoaded', function() {
+  const element = document.getElementById('jump');
+  const jumpToDept = new Choices(element);
+
+  element.addEventListener('addItem', function(event) {
+    console.log(event.detail.value);
+    if ((event.detail.value) != 'Jump to Department') {
+      $("html, body").animate({scrollTop: $('#' + event.detail.value).offset().top}, "slow");
+    }
+  }, false);
+});
+{% endminify %}
+{% endjs %}

@@ -1,0 +1,18 @@
+contentColumnType: string
+fieldGroup: 770fc847-88dc-471d-918d-d241b9efd400
+handle: minutesAgendasType
+instructions: ''
+name: 'Minutes & Agendas Type'
+searchable: '1'
+settings:
+  branchLimit: '1'
+  limit: null
+  localizeRelations: false
+  selectionLabel: 'Select Type'
+  source: 'group:80352f96-1af0-4d07-99bd-36e591f58174'
+  sources: '*'
+  targetSiteId: null
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

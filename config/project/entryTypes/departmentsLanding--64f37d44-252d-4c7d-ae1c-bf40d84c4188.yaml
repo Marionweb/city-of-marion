@@ -1,0 +1,29 @@
+fieldLayouts:
+  2fb3e3c9-d2cd-4763-9090-e3368c8b05d3:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: null
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: 38158424-1094-4cc9-93ee-2a3175aa348c
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 050e10e5-e506-4904-b55a-8efac89dac16
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 8d58412c-2c37-4da6-892e-69ab4d8a413b
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Content
+        sortOrder: '1'
+handle: departmentsLanding
+hasTitleField: '0'
+name: Departments
+section: c0882bfb-e58e-4510-8f5a-7595419a8e01
+sortOrder: '1'
+titleFormat: '{section.name|raw}'

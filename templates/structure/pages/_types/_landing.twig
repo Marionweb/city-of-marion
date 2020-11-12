@@ -1,0 +1,48 @@
+<section id="landing--intro">
+  <div class="inside">
+    <h1>{% if entry.headline %}{{ entry.headline | typogrify }}{% else %}{{ entry.title | typogrify }}{% endif %}</h1>
+    <p>{{ entry.leadIn | typogrify }}</p>
+  </div>
+</section>
+
+{% if entry.quickLinks | length %}
+<section id="landing--quick-links">
+  <div class="inside">
+    {% include "modules/content/_block-quick-links" %}
+  </div>
+</section>
+{% endif %}
+
+<section id="landing--subpages">
+  <div class="inside">
+
+    {# Custom Navigation for Government Section #}
+    {% if (craft.app.request.segments | first == 'government') %}
+      
+      {# Top-Level landing page #}
+      {% if craft.app.request.segments | length < 2 %}
+        {% include 'modules/nav/_block_subpage' with { entry: craft.entries.section('departmentsLanding').all()|first } %}
+        {% include 'modules/nav/_block_subpage' with { entry: craft.entries.section('boardsLanding').all()|first } %}
+        {% include 'modules/nav/_block_subpage' with { entry: craft.entries.section('minutesAgendasLanding').all()|first } %}
+      
+      {# Sub-level landing page #}
+      {% elseif subPages is defined %}
+
+        {% for entry in subPages %}
+         {% include 'modules/nav/_block_subpage' %}
+        {% endfor %}
+        
+      {% endif %}
+
+    {% endif %}
+
+    {% set pages = craft.entries({
+        'section' : 'pages',
+        'level' : 2,
+        'descendantOf' : entry.id
+    }).all() %}
+    {% for entry in pages %}
+      {% include 'modules/nav/_block_subpage' %}
+    {% endfor %}
+  </div>
+</section>

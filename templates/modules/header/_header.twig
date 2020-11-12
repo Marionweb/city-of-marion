@@ -1,0 +1,18 @@
+  <nav id="menu--top">
+    {% set logo = logo.logo.one() %}{% css %}.menu--top-logo { background-image: url({{logo.url}}); }{% endcss %}
+    <ul id="menu--top-mobile">
+      {% include 'modules/header/_logo' %}
+      {% include 'modules/header/_toggle-icon' %}
+    </ul>
+    {% include 'modules/nav/_nav-main' %}
+
+  </nav>
+
+<form id="search--form--modal" action="{{ url('search/results') }}">
+  {{ csrfInput() }}
+  <div class="search-form">
+    <input type="search" name="q" placeholder="Search..." autocomplete="off">
+    <button class="button" type="submit">{{ source('svg/search.svg') }}</button>
+  </div>
+  <div class="search-dropdown"></div>
+</form>

@@ -1,0 +1,44 @@
+<section id="block--news-home" class="block--news-events-home">
+  <h2>News</h2>
+  {% set recentNews = craft.entries({
+      'section' : 'newsEvents',
+      'type' : 'and, not event, not story',
+      'limit' : 6
+  }).all() %}
+  {% for entry in recentNews %}
+    {% include 'modules/nav/_block-news-events-entry' %}
+  {% endfor %}
+
+  {%- set newsEventsLanding = craft.entries.section('newsEventsLanding').one() -%}
+  <a href="{{ newsEventsLanding.url }}" title="View all news articles">
+    View All
+  </a>
+</section>
+
+
+{# <section id="block--events-home" class="block--news-events-home">
+  <h2>Events</h2> #}
+  {# {% set upcomingEvents = craft.entries({
+      'section' : 'newsEvents',
+      'type' : 'event',
+      'limit' : 3,
+      'andWhere' : [
+        '>=',
+        'field_eventDate',
+        now|date('Y-m-d')
+      ]
+  }) %} #}
+{#   {% set upcomingEvents = craft.entries({
+      'section' : 'newsEvents',
+      'type' : 'event',
+      'limit' : 3
+  }).all() %}
+  {% for entry in upcomingEvents %}
+    {% include 'modules/nav/_block-news-events-entry' %}
+  {% endfor %}
+
+  {%- set singleSectionEntry = craft.entries.section('eventsLanding').one() -%}
+  <a href="{{ singleSectionEntry.url }}" title="View all upcoming events">
+    View All
+  </a>
+</section> #}

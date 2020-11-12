@@ -1,0 +1,95 @@
+{#
+    Events Landing Template
+#}
+
+{% extends "layouts/base/_base" %}
+
+{% set title = entry.title %}
+
+{% set yearFilter = craft.app.request.getParam('year') %}
+{% set monthFilter = craft.app.request.getParam('month') %}
+{% set featuredQueryParams = null %}
+
+{% set allQueryParams = {
+  'section': 'newsEvents',
+  'type': 'and, not event'
+} %}
+
+{%- if (yearFilter is not null and yearFilter != 'Year') or (yearFilter != 'Year' and monthFilter is not null) -%}
+
+  {% set firstMonthQuery = (craft.app.request.getParam('month') is null or craft.app.request.getParam('month') == 'Month') ? 'January' : (craft.app.request.getParam('year') ~ '-' ~ craft.app.request.getParam('month') ~ '-01')|date('F') %}
+  {% set lastMonthQuery = (craft.app.request.getParam('month') is null or craft.app.request.getParam('month') == 'Month') ? 'December' : (craft.app.request.getParam('year') ~ '-' ~ craft.app.request.getParam('month') ~ '-01')|date('F') %}
+
+  {% set firstDayOfMonth = now | date_modify('first day of ' ~ firstMonthQuery ~ ' ' ~ yearFilter)|date('Y-m-d') %}
+  {% set lastDayOfMonth = now | date_modify('last day of ' ~ lastMonthQuery ~ ' ' ~ yearFilter)|date('Y-m-d') %}
+
+  {% set queryParams = {
+    'section' : 'newsEvents',
+    'postDate': 'and, >= ' ~ firstDayOfMonth ~ ', <= ' ~ lastDayOfMonth
+  } %}
+
+  {# Is anything featured? #}
+{%- elseif entry.featuredArticle | length -%}
+  {# Get an array of filtered article ID's #}
+  {% set featuredIds = entry.featuredArticle.ids() %}
+  {% set featuredQueryParams = {
+    'section': 'newsEvents',
+    'id': 'and, ' ~ featuredIds | join(', ')
+  } %}
+
+  {# Exclude featured ids from the page results #}
+  {% set queryParams = {
+    'section': 'newsEvents',
+    'id': 'and, not ' ~ featuredIds | join(', not '),
+    'type': 'and, not event'
+  } %}
+
+{%- else -%}
+
+  {% set queryParams = {
+    'section': 'newsEvents',
+    'type': 'and, not event'
+  } %}
+
+{%- endif -%}
+
+{# HTML #}
+{% block content %}
+
+  <header id="news-events--intro">
+    <div id="news-events--intro-text">
+      <h1>{{ entry.title }}</h1>
+      {%- if entry.headline -%}
+        <h2>{{ entry.headline }}</h2>
+      {%- endif -%}
+      {# {%- if entry.leadIn -%}
+              <p>{{ entry.leadIn }}</p>
+            {%- endif -%} #}
+      <p>Our events section is almost ready! In the meantime, discover events in Grant County by visiting our community calendar,
+        <a href="http://www.dograntcounty.com" target="_blank">DoGrantCounty.com</a>.
+      </p>
+    </div>
+  </header>
+
+  {# Is anything featured? #}
+  {#
+    {%- if (entry.featuredArticle | length) and featuredQueryParams -%}
+      <section class="news-events--featured-article">
+        {% for entry in craft.entries(featuredQueryParams).limit(1).all() %}
+          {% include 'modules/content/_block-news-events-featured' %}
+        {% endfor %}
+      </section>
+    {%- endif -%}
+  
+    {% include 'structure/news-events/_nav' %}
+  
+    <section id="news-events--articles-list">
+      {% paginate craft.entries(queryParams).limit(6)as pageInfo, recentNews %}
+        {% for entry in recentNews %}
+          {% include 'modules/content/_block-news-events-entry' %}
+        {% endfor %}
+  
+        {% include 'modules/nav/_pagination' %}
+      </section>
+     #}
+{% endblock %}

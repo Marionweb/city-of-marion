@@ -1,0 +1,930 @@
+/*
+
+   FORMS
+
+*/
+
+.input-reset
+  -webkit-appearance: none
+  -moz-appearance: none
+
+.button-reset::-moz-focus-inner,
+.input-reset::-moz-focus-inner
+  border: 0
+  padding: 0
+
+
+
+// REMOVING FOCUS OUTLINE
+// https://hackernoon.com/removing-that-ugly-focus-ring-and-keeping-it-too-6c8727fefcd2
+body:not(.user-is-tabbing) button:focus,
+body:not(.user-is-tabbing) input:focus,
+body:not(.user-is-tabbing) select:focus,
+body:not(.user-is-tabbing) textarea:focus
+    outline: none
+
+// body.user-is-tabbing *:focus
+//   outline: 2px solid $input-border-color-outline !important
+//   outline: 5px auto -webkit-focus-ring-color !important
+
+/* no outline for non-keyboard-inputs elements */
+button:focus
+select:focus
+  outline: none
+
+/* a subtle focus style for keyboard-input elements */
+// input[type="text"]
+// input[type="password"]
+// input[type="search"]
+// input[type="email"]
+// input[type="url"]
+// input[type="tel"]
+// input[type="number"]
+// input[type="range"]
+// input[type="date"]
+// input[type="month"]
+// input[type="week"]
+// input[type="time"]
+// input[type="datetime"]
+// input[type="datetime-local"]
+// textarea
+//   &:focus
+//     outline: 1px solid $input-outline-color
+
+
+//
+// Forms
+// --------------------------------------------------
+// Normalize non-controls
+//
+// Restyle and baseline non-control form elements.
+fieldset
+  padding 0
+  margin 0
+  border 0
+  min-width 0
+
+  > div
+    margin-bottom rem(27.5px)
+
+legend
+  display block
+  width 100%
+  padding 0
+  margin-bottom $line-height-computed
+  font-size ($base-font-size * 1.5)
+  line-height inherit
+  color $legend-color
+  border 0
+  border-bottom 1px solid $legend-border-color
+
+label
+  display block
+  margin-bottom rem(12px)
+  font-weight 700
+
+// Normalize form controls
+//
+// While most of our form styles require extra classes, some basic normalization
+// is required to ensure optimum display with or without those classes to better
+// address browser inconsistencies.
+// Override content-box in Normalize (* isn't specific enough)
+input[type="search"]
+  box-sizing border-box
+
+
+// Position radios and checkboxes better
+input[type="radio"], input[type="checkbox"]
+  margin 4px 0 0
+  margin-top 1px \9
+  /* IE8-9 */
+  line-height normal
+
+// Set the height of file controls to match text inputs
+input[type="file"]
+  display block
+
+// Make range inputs behave like textual form controls
+input[type="range"]
+  display block
+  width 100%
+
+// Make multiple select elements height not fixed
+select[multiple], select[size]
+  height auto
+
+// Focus for file, radio, and checkbox
+input[type="file"]:focus, input[type="radio"]:focus, input[type="checkbox"]:focus
+  tab-focus()
+
+
+// Adjust output element
+output
+  display block
+  padding-top ($padding-base-vertical + 1)
+  font-size $base-font-size
+  line-height $line-height-base
+  color $input-color
+
+// Common form controls
+//
+// Shared size and type resets for form controls. Apply `.form-control` to any
+// of the following form controls:
+//
+select
+textarea
+input[type="text"]
+input[type="password"]
+input[type="datetime"]
+input[type="datetime-local"]
+input[type="date"]
+input[type="month"]
+input[type="time"]
+input[type="week"]
+input[type="number"]
+input[type="email"]
+input[type="url"]
+input[type="search"]
+input[type="tel"]
+input[type="color"]
+.form-control
+  display block
+  width 100%
+  height $input-height-base
+  // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+  padding $padding-base-vertical $padding-base-horizontal
+  font-family $input-font
+  font-size $base-font-size
+  line-height $line-height-base
+  color $input-color
+  background-color $input-bg
+  background-image none
+  // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border $input-border-width solid $input-border-color
+  border-radius $input-border-radius
+  box-shadow none
+
+  transition border-color ease-in-out .15s, box-shadow ease-in-out .15s
+
+  // Customize the `:focus` state to imitate native WebKit styles.
+  form-control-focus()
+
+  // Placeholder
+  placeholder()
+
+  // Disabled and read-only inputs
+  //
+  // HTML5 says that controls under a fieldset > legend:first-child won't be
+  // disabled if the fieldset is disabled. Due to implementation difficulty, we
+  // don't honor that edge case; we style them as disabled anyway.
+  &[disabled], &[readonly], fieldset[disabled] &
+    cursor not-allowed
+    background-color $input-bg-disabled
+    opacity 1
+    // iOS fix for unreadable disabled content
+
+// Reset height for `textarea`s
+textarea
+  height auto
+  resize none
+
+
+// Search inputs in iOS
+//
+// This overrides the extra rounded corners on search inputs in iOS so that our
+// `.form-control` class can properly style them. Note that this cannot simply
+// be added to `.form-control` as it's not specific enough. For details, see
+// https://github.com/twbs/bootstrap/issues/11586.
+input[type="search"]
+  -webkit-appearance none
+
+// Special styles for iOS date input
+//
+// In Mobile Safari, date inputs require a pixel line-height that matches the
+// given height of the input.
+input[type="date"]
+  line-height $input-height-base
+
+// Form groups
+//
+// Designed to help with the organization and spacing of vertical forms. For
+// horizontal forms, use the predefined grid classes.
+.form-group
+  +above(m)
+    lost-flex-container: row
+  > div
+    margin-bottom rem(27.5px)
+    +above(m)
+      lost-column 1/2
+      margin-bottom 0
+
+// Checkboxes and radios
+//
+
+input[type="checkbox"]
+input[type="radio"]
+  opacity: 0
+  width: 0
+  height: 0
+  position absolute
+
+  & + label
+    display inline-block
+    margin-top rem(10px)
+    margin-bottom rem(10px)
+
+    &
+    &::before
+    &::after
+      cursor pointer
+      transition all 200ms ease-in-out
+
+  & + label
+    font-weight normal
+    position relative
+
+  // space out consecutive inline controls
+  & + label:not(:only-child)
+    margin-right 1.5em
+
+  // border and fill
+  & + label::before
+  & + label::after
+    margin-right .5em
+  & + label::before
+    border 2px solid $input-border
+    box-sizing border-box
+    content ' '
+    display inline-block
+    height $line-height-computed
+    width $line-height-computed
+    vertical-align text-top
+
+  &:hover
+    & + label::before
+      border 2px solid $input-border-color-hover
+  &:checked
+    & + label::before
+      border 2px solid $input-border-color-active
+      background-color: $input-border-color-active
+
+// Circular radios
+input[type="radio"]
+  // the border
+  & + label::before
+    border-radius 50%
+    padding: 4px
+  &:checked
+    & + label::before
+      background-clip: content-box
+
+// Checkbox filled with icon
+input[type="checkbox"]
+  // the fill
+  & + label::after
+      checkSize = ($line-height-computed - 10)
+      content: ' '
+      mask: embedurl("../sprites/checkmark.svg", "utf8") no-repeat 50% 50%/checkSize checkSize
+      height ($line-height-computed - 6)
+      width ($line-height-computed - 6)
+      left rem(3px)
+      top rem(3px)
+      opacity 0
+      position absolute
+      background-color: $white
+      transition: opacity $transition-timing
+      vertical-align middle
+  &:checked
+    & + label::after
+      opacity 1
+
+
+// Apply same disabled cursor tweak as for inputs
+//
+// Note: Neither radios nor checkboxes can be readonly.
+input[type="radio"]
+input[type="checkbox"]
+  &[disabled], fieldset[disabled] &
+    & + label
+      &
+      &::before
+      &::after
+        cursor not-allowed
+        opacity .5
+    &:hover + label::before
+        border-color $input-border
+    &:checked:hover + label::before
+        border-color $input-border-color-active
+
+
+
+
+
+
+// Checkboxes and radios
+//
+
+
+
+input[type=file]
+  width: 0.1px
+  height: 0.1px
+  opacity: 0
+  overflow: hidden
+  position: absolute
+  z-index: -1
+
+  & + label
+    text-overflow: ellipsis
+    white-space: nowrap
+    cursor: pointer
+    overflow: hidden
+    position relative
+
+    display block
+    width 100%
+    height $input-height-base
+    padding 0
+    font-family $input-font
+    font-size $base-font-size
+    font-weight normal
+    line-height $line-height-base
+    color $input-color
+    background-color $input-bg
+    background-image none
+    // Reset unusual Firefox-on-Android default style see https://github.com/necolas/normalize.css/issues/214
+    // border-right $input-border-width solid $input-border-color
+    border-radius $input-border-radius
+    box-shadow none
+    border-right $input-border-width solid $input-border-color
+
+    transition border-color ease-in-out .15s, box-shadow ease-in-out .15s
+
+    strong
+      padding: $padding-base-vertical $padding-base-horizontal
+      font-weight: normal
+      display: inline-block
+      width 30%
+      color $white
+      background-color $button-background
+      color $button-text-color
+      font-family $button-font
+      font-size $button-font-size
+      font-weight $button-font-weight
+      line-height $line-height-base
+      height $input-height-base
+      text-align center
+      text-decoration none
+      text-transform $button-transform
+      vertical-align: middle
+
+    span
+      border-top $input-border-width solid $input-border-color
+      border-bottom $input-border-width solid $input-border-color
+      padding: $padding-base-vertical ($padding-base-horizontal * 2) $padding-base-vertical $padding-base-horizontal
+      width: 70%
+      display: inline-block
+      font-size $button-font-size
+      font-style italic
+      line-height $line-height-base
+      height $input-height-base
+      text-overflow: ellipsis
+      white-space: nowrap
+      overflow: hidden
+      vertical-align: top
+
+    i
+      closeSize = $line-height-computed / 2
+      closeOffset = $padding-base-horizontal / 3
+      position absolute
+      right 0
+      top 0
+      content: ' '
+      display none
+      mask: embedurl("../sprites/close-small.svg", "utf8") no-repeat closeOffset 50%/closeSize closeSize
+      height $input-height-base
+      width ($padding-base-horizontal * 2)
+      background-color: $medium-gray
+      transition: all $transition-timing
+      vertical-align middle
+      z-index: 1
+
+input[type=file]:focus + label,
+input[type=file].has-focus + label
+  outline: 1px dotted #000
+  outline: -webkit-focus-ring-color auto 5px
+  & + label:hover
+    border-color: $input-border-color-active
+
+
+
+
+
+.no-js
+  input[type=file]
+    & + label
+      display: none
+
+
+
+
+
+// Form control feedback states
+//
+// Apply contextual and semantic states to individual form controls.
+.has-feedback
+  // Enable absolute positioning
+  position relative
+  // Ensure icons don't overlap text
+  .form-control
+    padding-right ($input-height-base * 1.25)
+
+  // Feedback icon (requires .glyphicon classes)
+  .form-control-feedback
+    position absolute
+    top ($line-height-computed + 5)
+    // Height of the `label` and its margin
+    right 0
+    display block
+    width $input-height-base
+    height $input-height-base
+    line-height $input-height-base
+    text-align center
+
+
+// Feedback states
+.has-success
+  form-control-validation($state-success-text, $state-success-text, $state-success-bg)
+
+
+.has-warning
+  form-control-validation($state-warning-text, $state-warning-text, $state-warning-bg)
+
+
+.has-error
+  form-control-validation($state-danger-text, $state-danger-text, $state-danger-bg)
+
+
+// Static form control text
+//
+// Apply class to a `p` element to make any string of text align with labels in
+// a horizontal form layout.
+.form-control-static
+  margin-bottom 0
+  // Remove default margin from `p`
+
+// Help text
+//
+// Apply to any element you wish to create light text for placement immediately
+// below a form control. Use for general help, formatting, or instructional text.
+.help-block
+  display block
+  // account for any element using help-block
+  margin-top rem(5px)
+  margin-bottom rem(10px)
+  color lighten($text-color, 25%)
+  // lighten the text some for contrast
+
+// // Inline forms
+// //
+// // Make forms appear inline(-block) by adding the `.form-inline` class. Inline
+// // forms begin stacked on extra small (mobile) devices and then go inline when
+// // viewports reach <768px.
+// //
+// // Requires wrapping inputs and labels with `.form-group` for proper display of
+// // default HTML form controls and our custom form controls (e.g., input groups).
+// //
+// form-inline()
+//   // Kick in the inline
+//   +above(m)
+//     // Inline-block all the things for "inline"
+//     .form-group
+//       display inline-block
+//       margin-bottom 0
+//       vertical-align middle
+
+//     // In navbar-form, allow folks to *not* use `.form-group`
+//     .form-control
+//       display inline-block
+//       width auto
+//       // Prevent labels from stacking above inputs in `.form-group`
+//       vertical-align middle
+
+//     // Input groups need that 100% width though
+//     .input-group > .form-control
+//       width 100%
+
+//     .control-label
+//       margin-bottom 0
+//       vertical-align middle
+
+//     // Remove default margin on radios/checkboxes that were used for stacking, and
+//     // then undo the floating of radios and checkboxes to match (which also avoids
+//     // a bug in WebKit: https://github.com/twbs/bootstrap/issues/1969).
+//     .radio, .checkbox
+//       display inline-block
+//       margin-top 0
+//       margin-bottom 0
+//       padding-left 0
+//       vertical-align middle
+
+//     .radio input[type="radio"], .checkbox input[type="checkbox"]
+//       float none
+//       margin-left 0
+
+//     // Validation states
+//     //
+//     // Reposition the icon because it's now within a grid column and columns have
+//     // `position: relative;` on them. Also accounts for the grid gutter padding.
+//     .has-feedback .form-control-feedback
+//       top 0
+
+// .form-inline
+//   form-inline()
+
+// // Horizontal forms
+// //
+// // Horizontal forms are built on grid classes and allow you to create forms with
+// // labels on the left and inputs on the right.
+// .form-horizontal
+//   // Consistent vertical alignment of labels, radios, and checkboxes
+//   .control-label, .radio, .checkbox, .radio-inline, .checkbox-inline
+//     margin-top 0
+//     margin-bottom 0
+//     padding-top ($padding-base-vertical + 1)
+//     // Default padding plus a border
+
+//   // Account for padding we're adding to ensure the alignment and of help text
+//   // and other content below items
+//   .radio, .checkbox
+//     min-height ($line-height-computed + ($padding-base-vertical + 1))
+
+//   // Make form groups behave like rows
+//   // .form-group
+//     // make-row()
+
+
+//   .form-control-static
+//     padding-top ($padding-base-vertical + 1)
+
+//   // Only right align form labels here when the columns stop stacking
+//   +above(m)
+//     .control-label
+//       text-align right
+
+//   // Validation states
+//   //
+//   // Reposition the icon because it's now within a grid column and columns have
+//   // `position: relative;` on them. Also accounts for the grid gutter padding.
+//   .has-feedback .form-control-feedback
+//     top 0
+//     // right (grid-gutter-width / 2)
+
+
+
+/*===============================
+=            Choices            =
+===============================*/
+$choices-selector = "choices"
+$choices-font-size-lg = 16px
+$choices-font-size-md = 14px
+$choices-font-size-sm = 12px
+$choices-guttering = 24px
+$choices-border-radius = 0
+$choices-border-radius-item = 20px
+$choices-bg-color = $input-bg
+$choices-bg-color-disabled = #eaeaea
+$choices-bg-color-dropdown = white
+$choices-text-color = $input-color
+$choices-keyline-color = $input-border-color
+$choices-primary-color = $light-blue
+$choices-disabled-color = #eaeaea
+$choices-highlight-color = $choices-primary-color
+$choices-button-icon-path = "../../icons"
+$choices-button-dimension = 8px
+$choices-button-offset = 8px
+$choices-icon-cross = url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjEiIGhlaWdodD0iMjEiIHZpZXdCb3g9IjAgMCAyMSAyMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjRkZGIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0yLjU5Mi4wNDRsMTguMzY0IDE4LjM2NC0yLjU0OCAyLjU0OEwuMDQ0IDIuNTkyeiIvPjxwYXRoIGQ9Ik0wIDE4LjM2NEwxOC4zNjQgMGwyLjU0OCAyLjU0OEwyLjU0OCAyMC45MTJ6Ii8+PC9nPjwvc3ZnPg==")
+$choices-icon-cross-inverse = url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjEiIGhlaWdodD0iMjEiIHZpZXdCb3g9IjAgMCAyMSAyMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjMDAwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0yLjU5Mi4wNDRsMTguMzY0IDE4LjM2NC0yLjU0OCAyLjU0OEwuMDQ0IDIuNTkyeiIvPjxwYXRoIGQ9Ik0wIDE4LjM2NEwxOC4zNjQgMGwyLjU0OCAyLjU0OEwyLjU0OCAyMC45MTJ6Ii8+PC9nPjwvc3ZnPg==")
+.{$choices-selector}
+  position: relative
+  margin-bottom: $choices-guttering
+  font-size: $choices-font-size-lg
+  &:focus
+    outline: none
+  &:last-child
+    margin-bottom: 0
+  &.is-disabled
+    .{$choices-selector}__inner, .{$choices-selector}__input
+      background-color: $choices-bg-color-disabled
+      cursor: not-allowed
+      user-select: none
+    .{$choices-selector}__item
+      cursor: not-allowed
+.{$choices-selector}[data-type*="select-one"]
+  cursor: pointer
+  .{$choices-selector}__inner
+    padding-bottom: $padding-base-vertical
+  .{$choices-selector}__input
+    display: block
+    width: 100%
+    padding: 10px
+    border-bottom: $border-width-base solid $choices-keyline-color
+    background-color: $white
+    margin: 0
+  .{$choices-selector}__button
+    background-image: $choices-icon-cross-inverse
+    padding: 0
+    background-size: 8px
+    position: absolute
+    top: 50%
+    right: 0
+    margin-top: -10px
+    margin-right: 25px
+    height: 20px
+    width: 20px
+    border-radius: 10em
+    opacity: .5
+    &:hover, &:focus
+      opacity: 1
+    &:focus
+      box-shadow: 0px 0px 0px 2px $choices-highlight-color
+  &:after
+    // content: ""
+    // height: 0
+    // width: 0
+    // border-style: solid
+    // border-color: $choices-text-color transparent transparent transparent
+    // border-width: 5px
+    // position: absolute
+    // right: $padding-base-horizontal
+    // top: 50%
+    // margin-top: -2.5px
+    pointer-events: none
+
+    closeSize = $line-height-computed / 2
+    position absolute
+    right $border-width-base
+    top $border-width-base
+    content: ' '
+    mask: embedurl("../sprites/arrow-small-down.svg", "utf8") no-repeat 50% 50%/closeSize closeSize
+    height $input-height-base
+    width ($padding-base-horizontal * 3)
+    background-color: $navy
+    transition: all 150ms ease
+    vertical-align middle
+    z-index: 1
+
+  &.is-open:after
+    transform: rotate( -180deg )
+    transform-origin: 50% 50%
+  &[dir="rtl"]
+    &:after
+      left: 11.5px
+      right: auto
+    .{$choices-selector}__button
+      right: auto
+      left: 0
+      margin-left: 25px
+      margin-right: 0
+
+.{$choices-selector}[data-type*="select-multiple"], .{$choices-selector}[data-type*="text"]
+  .{$choices-selector}__inner
+    cursor: text
+  .{$choices-selector}__button
+    position: relative
+    display: inline-block
+    margin-top: 0
+    margin-right: -($choices-button-offset / 2)
+    margin-bottom: 0
+    margin-left: $choices-button-offset
+    padding-left: ($choices-button-offset * 2)
+    border-left: 1px solid darken($choices-primary-color, 10%)
+    background-image: $choices-icon-cross
+    background-size: $choices-button-dimension
+    width: $choices-button-dimension
+    line-height: 1
+    opacity: .75
+    border-radius: 0
+    &:hover, &:focus
+      opacity: 1
+.{$choices-selector}__inner
+  display: inline-block
+  vertical-align: top
+  width: 100%
+  background-color: $choices-bg-color
+  padding: $padding-base-vertical $padding-base-horizontal ($padding-base-vertical / 2)
+  border: $border-width-base solid $choices-keyline-color
+  border-radius: $choices-border-radius
+  font-size: $choices-font-size-md
+  min-height: 44px
+  overflow: hidden
+  .is-focused &, .is-open &
+    border-color: $input-border-focus
+  .is-open &
+    border-color: $input-border-color-active
+    border-radius: $choices-border-radius $choices-border-radius 0 0
+  .is-flipped.is-open &
+    border-radius: 0 0 $choices-border-radius $choices-border-radius
+.{$choices-selector}__list
+  margin: 0
+  padding-left: 0
+  list-style: none
+.{$choices-selector}__list--single
+  display: inline-block
+  padding: 4px 16px 4px 4px
+  width: 100%
+  [dir="rtl"] &
+    padding-right: 4px
+    padding-left: 16px
+  .{$choices-selector}__item
+    width: 100%
+.{$choices-selector}__list--multiple
+  display: inline
+  .{$choices-selector}__item
+    display: inline-block
+    vertical-align: middle
+    border-radius: $choices-border-radius-item
+    padding: 4px 10px
+    font-size: $choices-font-size-sm
+    font-weight: 500
+    margin-right: 3.75px
+    margin-bottom: 3.75px
+    background-color: $choices-primary-color
+    border: 1px solid darken($choices-primary-color, 5%)
+    color: #FFFFFF
+    word-break: break-all
+    &[data-deletable]
+      padding-right: 5px
+    [dir="rtl"] &
+      margin-right: 0
+      margin-left: 3.75px
+    &.is-highlighted
+      background-color: darken($choices-primary-color, 5%)
+      border: 1px solid darken($choices-primary-color, 10%)
+    .is-disabled &
+      background-color: darken($choices-disabled-color, 25%)
+      border: 1px solid darken($choices-disabled-color, 35%)
+.{$choices-selector}__list--dropdown
+  display: none
+  z-index: 10
+  position: absolute
+  width: 100%
+  background-color: $choices-bg-color-dropdown
+  border-left: $border-width-base solid $choices-keyline-color
+  border-right: $border-width-base solid $choices-keyline-color
+  border-bottom: $border-width-base solid $choices-keyline-color
+  top: 100%
+  margin-top: -($border-width-base)
+  border-bottom-left-radius: $choices-border-radius
+  border-bottom-right-radius: $choices-border-radius
+  overflow: hidden
+  word-break: break-all
+  &.is-active
+    display: block
+  .is-open &
+    border-left-color: $input-border-color-active
+    border-right-color: $input-border-color-active
+    border-bottom-color: $input-border-color-active
+  .is-flipped &
+    top: auto
+    bottom: 100%
+    margin-top: 0
+    margin-bottom: -1px
+    border-radius: .25rem .25rem 0 0
+  .{$choices-selector}__list
+    position: relative
+    max-height: 300px
+    overflow: auto
+    -webkit-overflow-scrolling: touch
+    will-change: scroll-position
+  .{$choices-selector}__item
+    position: relative
+    padding: $padding-base-vertical $padding-base-horizontal
+    font-size: $choices-font-size-md
+    [dir="rtl"] &
+      text-align: right
+  .{$choices-selector}__item--selectable
+    @media (min-width: 640px)
+      padding-right: 100px
+      &:after
+        content: attr(data-select-text)
+        font-size: $choices-font-size-sm
+        opacity: 0
+        position: absolute
+        right: 10px
+        top: 50%
+        transform: translateY(-50%)
+      [dir="rtl"] &
+        text-align: right
+        padding-left: 100px
+        padding-right: 10px
+        &:after
+          right: auto
+          left: 10px
+    &.is-highlighted
+      background-color: $light-gray
+      &:after
+        opacity: .5
+.{$choices-selector}__item
+  cursor: default
+.{$choices-selector}__item--selectable
+  cursor: pointer
+.{$choices-selector}__item--disabled
+  cursor: not-allowed
+  user-select: none
+  opacity: .5
+.{$choices-selector}__heading
+  font-weight: 600
+  font-size: $choices-font-size-sm
+  padding: 10px
+  border-bottom: 1px solid lighten($choices-keyline-color, 10%)
+  color: lighten(#333333, 30%)
+.{$choices-selector}__button
+  text-indent: -9999px
+  -webkit-appearance: none
+  appearance: none
+  border: 0
+  background-color: transparent
+  background-repeat: no-repeat
+  background-position: center
+  cursor: pointer
+  &:focus
+    outline: none
+.{$choices-selector}__input
+  display: inline-block
+  vertical-align: baseline
+  background-color: $choices-bg-color
+  font-size: $choices-font-size-md
+  margin-bottom: 5px
+  border: 0
+  border-radius: 0
+  max-width: 100%
+  padding: 4px 0 4px 2px
+  &:focus
+    outline: 0
+  [dir="rtl"] &
+    padding-right: 2px
+    padding-left: 0
+.{$choices-selector}__placeholder
+  opacity: .5
+.{$choices-selector}__input.is-hidden,
+.{$choices-selector}[data-type*="select-one"] .{$choices-selector}__input.is-hidden,
+.{$choices-selector}[data-type*="select-multiple"] .{$choices-selector}__input.is-hidden
+  display: none
+/*=====  End of Choices  ======*/
+
+
+$choices-bg-color-inverted = $button-background
+$choices-bg-color-dropdown-inverted = $button-background
+$choices-text-color = $button-text-color
+$choices-keyline-color-inverted = $button-background
+$choices-primary-color-inverted = $button-hover-background
+$choices-highlight-color-inverted = $choices-primary-color-inverted
+
+/*=====  Start Custom Choices  ======*/
+#staff-department--intro-text
+  .{$choices-selector}[data-type*="select-one"]
+    .{$choices-selector}__input
+      border-bottom: $border-width-base solid $choices-keyline-color-inverted
+      background-color: $button-hover-background
+    .{$choices-selector}__button
+      background-image: url($choices-button-icon-path + "/cross-inverse.svg")
+      &:focus
+        box-shadow: 0px 0px 0px 2px $choices-highlight-color
+    &:after
+      background-color: $white
+  .{$choices-selector}[data-type*="select-multiple"], .{$choices-selector}[data-type*="text"]
+    .{$choices-selector}__button
+      border-left: 1px solid darken($choices-primary-color-inverted, 10%)
+  .{$choices-selector}__inner
+    background-color: $choices-bg-color-inverted
+    border-color: $choices-keyline-color-inverted
+    .is-focused &, .is-open &
+      border-color: $input-border-focus
+    .is-open &
+      border-color: $input-border-color-active
+  .{$choices-selector}__list--single
+    color: $white
+    .{$choices-selector}__placeholder
+      opacity: 1
+  .{$choices-selector}__list--dropdown
+    background-color: $choices-bg-color-dropdown-inverted
+    border-left: $border-width-base solid $choices-keyline-color-inverted
+    border-right: $border-width-base solid $choices-keyline-color-inverted
+    border-bottom: $border-width-base solid $choices-keyline-color-inverted
+    color: $white
+    .is-open &
+      border-left-color: $input-border-color-active
+      border-right-color: $input-border-color-active
+      border-bottom-color: $input-border-color-active
+    .{$choices-selector}__item--selectable
+      &.is-highlighted
+        background-color: $button-hover-background
+        &.{$choices-selector}__placeholder
+          background-color: $choices-bg-color-dropdown-inverted
+  .{$choices-selector}__heading
+    border-bottom: 1px solid lighten($choices-keyline-color-inverted, 10%)
+    color: lighten(#333333, 30%)
+  .{$choices-selector}__input
+    background-color: $choices-bg-color-inverted
+  /*=====  End of Custom choices  ======*/

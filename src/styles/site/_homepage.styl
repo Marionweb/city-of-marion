@@ -1,0 +1,111 @@
+.page-section--homepage
+  #header-image
+    position: relative
+
+    .jarallax
+      position: relative
+      z-index: 0;
+      > .jarallax-img
+        position: absolute
+        object-fit: cover
+        font-family: 'object-fit: cover;'
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: -1
+
+    > h1
+      position: absolute
+      top: auto
+      left: rem(30px)
+      bottom: rem(26.5px)
+      transform none
+      margin 0
+      padding 0
+      text-align left
+      z-index 5
+
+      color: $homepage-header-block-title-color
+      font-family: $homepage-header-block-title-font
+      font-size: $homepage-header-block-title-size-mobile
+      font-weight: $homepage-header-block-title-weight
+      line-height 2
+      text-transform: $homepage-header-block-title-transform
+
+      +above(m)
+        left: 0
+        bottom: rem(62px)
+        lost-offset: 2/36
+        font-size: $homepage-header-block-title-size-desktop
+
+      > span
+        background-color: $homepage-header-block-title-color
+        background-repeat: no-repeat
+        background-size: cover
+        display table
+        height rem(65px)
+        width rem(254px)
+        mask: embedurl("../images/logo-com-champions.svg", "utf8") no-repeat 50% 50% / contain
+        strong
+          @extend .hide-text
+
+        +above(m)
+          height rem(106px)
+          width rem(410px)
+
+
+  .parallax__layer--base
+    #page--inner--columns
+    > section
+      background-color $snow
+  #page--inner--columns
+    padding 0
+    +above(m)
+      padding rem(74px) 0 0
+    &.two
+      padding-bottom rem(15px)
+      +above(m)
+        padding-bottom rem(57px)
+      main
+        padding 0
+        +between(m, l)
+          lost-column 18/36
+          lost-offset: 2/36
+        +above(xl)
+          lost-column 18/36
+          lost-offset: 2/36
+      aside
+        +between(m, l)
+          lost-column 12/36
+          lost-offset: 2/36
+        +above(xl)
+          lost-column 12/36
+          lost-offset: 2/36
+
+
+  #content
+    position: relative
+
+    #block--quick-links
+      background-color transparent
+      box-shadow none
+      padding 0 rem(30px)
+      +above(m)
+        padding 0
+
+    .block--story-share
+      display block
+      visibility visible
+      margin-bottom rem(12px)
+      +above(m)
+        display none
+        visibility hidden
+
+  aside
+    .block--story-share
+      display none
+      visibility hidden
+      +above(m)
+        display block
+        visibility visible

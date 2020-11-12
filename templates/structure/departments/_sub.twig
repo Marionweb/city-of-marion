@@ -1,0 +1,44 @@
+{#
+    Departments Sub-page Template
+#}
+{% set parallax = (entry.primaryImage | length) ? '_parallax' : '' %}
+
+{% extends 'layouts/columns/_two' ~ parallax %}
+
+{% set title = entry.title %}
+
+{% do seomatic.meta.seoTitle("City of Marion " ~ craft.entries.section('departments').slug(craft.app.request.getSegment(3)).one().title ~ " Department: " ~ entry.title) %}
+
+{% set type = 'standard' %}
+
+
+{# HEADER IMAGE #}
+{% block headerBlock %}
+  {% if entry.primaryImage | length %}{% include "modules/content/_header-block" %}{% endif %}
+{% endblock %}
+
+{# HTML #}
+{% block main %}
+{% cache using key 'departments_subpage_main_' ~ craft.app.request.pathInfo %}
+    <header>
+      <h1>{% if entry.headline %}{{ entry.headline | typogrify }}{% else %}{{ entry.title | typogrify }}{% endif %}</h1>
+      {% if entry.leadIn %}<p class="lead">{{ entry.leadIn | typogrify }}</p>{% endif %}
+    </header>
+
+    {% include "modules/content/_page-content" %}
+    {% include "modules/content/_page-content-attachments" %}
+    {% include 'modules/content/_block-contact-person' %}
+{% endcache %}
+    {% if entry.embedForm | length %}{% include "modules/content/_form" %}{% endif %}
+{% endblock %}
+
+{# ASIDE #}
+{% block aside %}
+{% cache using key 'departments_subpage_aside_' ~ craft.app.request.pathInfo %}
+  {% set parentSlug = craft.app.request.getSegment(3) %}
+  {% set parent = craft.entries.slug(parentSlug).one() %}
+  {% set subPages = craft.entries.section('departmentsContent').relatedTo(parent).orderBy('title').all() %}
+  {% include 'modules/content/_block-sub-pages' with { subPages: subPages } %}
+  {% include "modules/content/_block-quick-links" %}
+{% endcache %}
+{% endblock %}

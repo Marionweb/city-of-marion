@@ -1,0 +1,10 @@
+{% cache %}
+
+  {% if entry.quickLinks | length %}
+  <div id="block--quick-links">
+    <h3>Quick Links</h3>
+    {% include "modules/content/_quick-links" %}
+  </div>
+  {% endif %}
+
+{% endcache %}

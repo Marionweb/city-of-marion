@@ -1,0 +1,103 @@
+field: a29967bc-ee07-4a6a-ac2f-2d20966bb285
+fieldLayouts:
+  6bbf86af-1531-4ae2-95d9-48cd41052e86:
+    tabs:
+      -
+        fields:
+          32f41d2e-bdba-4417-96d0-93d911c6aeec:
+            required: '0'
+            sortOrder: '2'
+          577eea8a-060e-4487-96b2-d79e81534ed0:
+            required: '1'
+            sortOrder: '1'
+          d015d88a-9844-47b3-ba14-8f2064cd812f:
+            required: '0'
+            sortOrder: '4'
+          d4606399-ee79-4585-a9b4-29290b9179a2:
+            required: '0'
+            sortOrder: '3'
+        name: Content
+        sortOrder: '1'
+fields:
+  32f41d2e-bdba-4417-96d0-93d911c6aeec:
+    contentColumnType: text
+    fieldGroup: null
+    handle: options
+    instructions: ''
+    name: Options
+    searchable: '1'
+    settings:
+      columnType: text
+      columns:
+        __assoc__:
+          -
+            - col1
+            -
+              handle: label
+              heading: Label
+              type: singleline
+              width: ''
+          -
+            - col2
+            -
+              handle: value
+              heading: Value
+              type: singleline
+              width: ''
+          -
+            - col3
+            -
+              handle: selected
+              heading: 'Selected?'
+              type: checkbox
+              width: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Table
+  577eea8a-060e-4487-96b2-d79e81534ed0:
+    contentColumnType: text
+    fieldGroup: null
+    handle: label
+    instructions: 'The label shown to visitors and the parameter for the field'
+    name: Label
+    searchable: '1'
+    settings:
+      charLimit: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  d015d88a-9844-47b3-ba14-8f2064cd812f:
+    contentColumnType: text
+    fieldGroup: null
+    handle: instructions
+    instructions: 'helpful text shown to visitors'
+    name: 'Instructions (optional)'
+    searchable: '1'
+    settings:
+      charLimit: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  d4606399-ee79-4585-a9b4-29290b9179a2:
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: required
+    instructions: ''
+    name: 'Required?'
+    searchable: '1'
+    settings:
+      default: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
+handle: checkbox
+name: Checkbox
+sortOrder: '4'

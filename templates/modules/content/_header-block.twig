@@ -1,0 +1,39 @@
+{% cache using key 'header-block_' ~ craft.app.request.pathInfo %}
+<div id="header-image" class="{{entry.section | lower}}">
+  {%- import "macros/_images" as imageFunctions -%}
+  {%- set image = entry.primaryImage.one() -%}
+
+  {# Where are we? #}
+  {% if (entry.section | lower) == 'newsEvents' %}
+
+    <figure>
+      {{ imageFunctions.responsivePicture(image.optimizedImagesNewsHeader, image.alt) }}
+      {% if image.caption %}<figcaption>{{ image.caption }}</figcaption>{% endif %}
+    </figure>
+
+  {% elseif (entry.section | lower) == 'pages' and (entry.type | lower) == 'standard' %}
+
+    <figure>
+      {{ imageFunctions.responsivePicture(image.optimizedImagesPageHeader, image.alt) }}
+      {% if image.caption %}<figcaption>{{ image.caption }}</figcaption>{% endif %}
+    </figure>
+
+  {% elseif ((entry.section | lower) == 'boards') or ((entry.section | lower) == 'departments') or ((entry.section | lower) == 'departmentsContent') %}
+
+    <figure>
+      {{ imageFunctions.responsivePicture(image.optimizedImagesPageHeader, image.alt) }}
+      {% if image.caption %}<figcaption>{{ image.caption }}</figcaption>{% endif %}
+    </figure>
+
+  {% else %}
+
+    <figure>
+      {{ imageFunctions.responsivePicture(image.optimizedImagesLandingHeader, image.alt) }}
+      {% if image.caption %}<figcaption>{{ image.caption }}</figcaption>{% endif %}
+    </figure>
+
+  {% endif %}
+
+  <h1>{{ entry.title | typogrify }}</h1>
+</div>
+{% endcache %}

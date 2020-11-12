@@ -1,0 +1,14 @@
+{#
+    Single Column Layout
+#}
+
+{% extends "layouts/base/_base" %}
+
+{% block content %}
+  <div id="page--inner--columns" class="one">
+    {# MAIN #}
+    <main id="content">
+    {% block main %}{% endblock %}
+    </main>
+  </div>
+{% endblock %}

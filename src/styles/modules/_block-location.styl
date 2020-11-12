@@ -1,0 +1,77 @@
+#block--location
+  margin-bottom 0
+  padding-left rem(30px)
+  padding-right rem(30px)
+  position relative
+
+  +above(m)
+    lost-flex-container: row
+    padding-top rem(62px)
+    padding-left 0
+    padding-right 0
+
+
+    > .block--text
+      lost-column 11/36
+      lost-offset 5/36
+      position relative
+    > #block--location-map
+      margin 0
+      lost-column 14/36
+      lost-offset 1/36
+
+  +between(m, l)
+    > .block--text .inner
+      transform translateY(0)
+  +above(xl)
+    > .block--text .inner
+      transform translateY(100%)
+
+  h2
+  h3
+    font-family $module-location-headline-font
+    line-height $line-height-title
+    margin 0
+    text-transform $module-location-headline-transform
+
+  h2
+  h3
+  p
+    text-align left
+
+  h3
+    color $module-location-subheadline-color
+    font-size $module-location-subheadline-size-mobile
+    +above(m)
+      font-size $module-location-subheadline-size-desktop
+  h2
+    color $module-location-headline-color
+    font-size $module-location-headline-size-mobile
+    +above(m)
+      font-size $module-location-headline-size-desktop
+
+  p
+    color $module-location-text-color
+    font-size $module-location-text-size-mobile
+    line-height $line-height-copy
+    margin-bottom 0
+    +above(m)
+      font-size $module-location-text-size-desktop
+
+
+  #block--location-map
+    figure
+      margin rem(40px) 0 0 0
+      height 0
+      width 100%
+      padding-bottom 105%
+      overflow hidden
+      svg
+        width 100%
+        height auto
+
+      +above(m)
+        padding-bottom 144%
+
+
+

@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: 770fc847-88dc-471d-918d-d241b9efd400
+handle: boardExternalMinutesAgendasUrl
+instructions: 'Use this field ONLY if this board uses an external website to host their meeting notes.'
+name: 'Board External Minutes & Agendas URL'
+searchable: '1'
+settings:
+  customPattern: ''
+  customPatternErrorMessage: ''
+  customPatternToggle: ''
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: none
+type: barrelstrength\sproutfields\fields\Url

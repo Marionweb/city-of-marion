@@ -1,0 +1,31 @@
+field: b2812cb3-f5f4-4a17-84b2-efca995224a1
+fieldLayouts:
+  57b6cfdf-86e7-4b17-a585-c6603d758169:
+    tabs:
+      -
+        fields:
+          a756a4b7-5e2d-4f04-b763-66246ee92ae6:
+            required: '1'
+            sortOrder: '1'
+        name: Content
+        sortOrder: '1'
+fields:
+  a756a4b7-5e2d-4f04-b763-66246ee92ae6:
+    contentColumnType: text
+    fieldGroup: null
+    handle: instagramName
+    instructions: 'Username only, do not include @'
+    name: Username
+    searchable: '1'
+    settings:
+      charLimit: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: instagram
+name: Instagram
+sortOrder: '3'

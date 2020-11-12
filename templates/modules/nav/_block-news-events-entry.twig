@@ -1,0 +1,8 @@
+{% cache using key 'block-news-events-entry_' ~ entry.type.handle ~ '-' ~ entry.id %}
+<article id="{{ entry.type.handle }}-{{ entry.id }}">
+  <a href="{{ entry.url }}" title="{{ entry.title }}">
+    <h3>{% if entry.type.handle == 'event' %}DATE HERE{% else %}{{ entry.type.name }}{% endif %}</h3>
+    <h2>{{ entry.title }}</h2>
+  </a>
+</article>
+{% endcache %}

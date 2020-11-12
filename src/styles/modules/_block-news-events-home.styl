@@ -1,0 +1,102 @@
+.block--news-events-home
+  background-color $module-news-events-home-background-color
+  box-shadow $module-news-events-home-box-shadow
+  margin-bottom rem(16px)
+  padding-bottom rem(40px)
+  +above(m)
+    margin-bottom rem(32px)
+    padding-bottom rem(43px)
+
+  > h2
+  > article a
+    border-bottom $module-news-events-home-border-width solid $module-news-events-home-border-color
+    text-align center
+
+  > h2
+    font-family $module-news-events-home-headline-font
+    text-transform $module-news-events-home-headline-transform
+    color $module-news-events-home-headline-color
+    font-size $module-news-events-home-headline-size-mobile
+    line-height $line-height-solid
+    margin 0
+    padding-top rem(35px)
+    padding-bottom rem(33px)
+
+    +above(m)
+      font-size $module-news-events-home-headline-size-desktop
+      padding-top rem(57.5px)
+      padding-bottom rem(35px)
+
+    &:before
+      background-color: $module-news-events-home-headline-icon-color
+      background-repeat: no-repeat
+      background-size: cover
+      content: " "
+      display inline-block
+      height rem(18px)
+      width rem(18px)
+      margin-right: 0.4em
+      vertical-align baseline
+
+  > a
+    button()
+    display block
+    margin rem(32px) auto 0
+    width 65%
+
+    +above(m)
+      margin rem(41.5px) auto 0
+      width 50%
+
+  article
+    a
+      display block
+      padding-top rem(28px)
+      padding-bottom rem(36px)
+      padding-left rem(15px)
+      padding-right rem(15px)
+      text-decoration none
+      transition: $button-transition
+      +above(m)
+        padding-bottom rem(30px)
+        padding-left: 'calc(%s * (-%s/%s * -%s) - (%s - %s * (-%s/%s * -%s)) + %s)' % (100vw 1 36 1 30px 30px 1 36 1 30px)
+        padding-right: 'calc(%s * (-%s/%s * -%s) - (%s - %s * (-%s/%s * -%s)) + %s)' % (100vw 1 36 1 30px 30px 1 36 1 30px)
+
+      &:hover
+        background-color $module-news-events-home-background-hover-color
+        border-bottom-color darken($module-news-events-home-background-hover-color, 15%)
+        box-shadow: $module-news-events-home-hover-box-shadow
+        h3
+          color $module-news-events-home-type-hover-color
+        h2
+          color $module-news-events-home-title-hover-color
+
+      h3
+        font-family $module-news-events-home-type-font
+        text-transform $module-news-events-home-type-transform
+        color $module-news-events-home-type-color
+        font-size $module-news-events-home-type-size-mobile
+        margin 0 0 1em 0
+        +above(m)
+          font-size $module-news-events-home-type-size-desktop
+
+      h2
+        font-family $module-news-events-home-title-font
+        text-transform $module-news-events-home-title-transform
+        color $module-news-events-home-title-color
+        font-size $module-news-events-home-title-size-mobile
+        margin 0
+        +above(m)
+          font-size $module-news-events-home-title-size-desktop
+
+
+#block--news-home
+  > h2
+    &:before
+      mask: embedurl("../sprites/news.svg", "utf8") no-repeat 50% 50%/18px 18px
+
+#block--events-home
+  > h2
+    &:before
+      mask: embedurl("../sprites/calendar.svg", "utf8") no-repeat 50% 50%/18px 18px
+

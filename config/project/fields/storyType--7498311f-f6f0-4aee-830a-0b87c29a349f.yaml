@@ -1,0 +1,18 @@
+contentColumnType: string
+fieldGroup: fe791b08-e2f6-487f-843c-dc06d289728f
+handle: storyType
+instructions: ''
+name: 'Story Type'
+searchable: '1'
+settings:
+  branchLimit: '1'
+  limit: null
+  localizeRelations: false
+  selectionLabel: 'Select Type'
+  source: 'group:85109ecb-6b71-48a4-9766-2fa26b8d07be'
+  sources: '*'
+  targetSiteId: null
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

@@ -1,0 +1,36 @@
+<article id="preview-featured-{{ entry.id }}" class="block--news-events--preview block--news-events--featured {{ entry.type.handle }}">
+  <a href="{{ entry.url }}" title="Champion of the Month: {{ entry.title }}">
+    {% set employeePhotoExists = false %}
+    {% if entry.employee | length %}
+      {% if entry.employee.one().staffPhoto | length %}
+        {% set employeePhotoExists = true %}
+      {% endif %}
+    {% endif %}
+
+    {% if (entry.primaryImage | length) or employeePhotoExists %}
+      {%- import "macros/_images" as imageFunctions -%}
+      {% if entry.primaryImage | length %}
+        {%- set image = entry.primaryImage.one() -%}
+      {% else %}
+        {%- set image = entry.employee.one().staffPhoto.one() -%}
+      {% endif %}
+
+      <figure>
+        {{ imageFunctions.responsivePicture(image.optimizedImagesNewsHeader, image.alt) }}
+        {% if image.caption %}<figcaption>{{ image.caption }}</figcaption>{% endif %}
+      </figure>
+    {% endif %}
+
+    <div class="block--news-events--featured-title">
+      <h3>
+        {% if entry.type.handle == 'story' %}
+          {% if entry.storyType %}<span>{{ entry.storyType.one().slug == 'champions' ? 'Champion of the Month' : entry.storyType.one().title }}</span>{% endif %}<time datetime="{{ entry.postDate|date('Y-m-01\T00:00:00O') }}">{{ entry.postDate|date("M Y") }}</time>
+        {% else %}
+          <span>{{ entry.type.name }}</span><time datetime="{{ entry.postDate|date('Y-m-d\TH:i:sO') }}">{{ entry.postDate|date("n-j-y") }}</time>
+        {% endif %}
+      </h3>
+      <h2>{{ entry.title }} <span>Read</span></h2>
+    </div>
+
+  </a>
+</article>

@@ -1,0 +1,13 @@
+<header>
+  {% if entry.storyType %}<p class="meta">{{ entry.storyType.one().slug == 'champions' ? 'Champion of the Month' : entry.storyType.one().title }}</p>{% endif %}
+  <h1>
+    {{ entry.title }}
+    {% include "structure/news-events/_block-share" %}
+  </h1>
+  <p class="meta">{{ entry.postDate|date('M j, Y') }}&nbsp;&nbsp;|&nbsp;&nbsp;{{ entry.author }}</p>
+  {% if entry.leadIn %}<p class="lead">{{ entry.leadIn }}</p>{% endif %}
+</header>
+
+{% include "modules/content/_page-content" %}
+{% include "modules/content/_page-content-attachments" %}
+{% include 'modules/content/_block-contact-person.twig' %}

@@ -1,0 +1,110 @@
+{%- macro srcset(image, outputWidths, aspectRatio) -%}
+  {%- spaceless -%}
+    {# setup #}
+    {%- set outputWidths = outputWidths | default([480, 736, 980, 1280, 1690]) -%}
+    {%- set srcset = [] -%}
+    {%- set qual = 82 -%}
+
+    {# if output width is smaller than or equal to the original image width #}
+    {%- for outputWidth in outputWidths -%}
+      {%- if outputWidth <= image.width -%}
+        {%- if aspectRatio -%}
+          {%- set transformOptions = { width: outputWidth, height: outputWidth / aspectRatio, quality: qual } -%}
+        {%- else -%}
+          {%- set transformOptions = { width: outputWidth, quality: qual } -%}
+        {%- endif -%}
+
+        {%- set srcset = srcset | merge([image.getUrl(transformOptions) ~ ' ' ~ outputWidth ~ 'w']) -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endspaceless -%}
+
+  {# output srcset #}
+  {{- srcset | join(', ') -}}
+{%- endmacro -%}
+
+{%- macro responsivePicture(image, alt = null) -%}
+  {%- spaceless -%}
+    {% set finalImageArray = [] %}
+    {% set finalImageArrayWebP = [] %}
+    {% set sourceWidths = image.variantSourceWidths %}
+    {% set sourceImages = image.optimizedImageUrls %}
+    {% set sourceImagesWebP = image.optimizedWebPImageUrls %}
+
+    {# convert the widths from numbers to a string #}
+    {% set newSourceWidths = [] %}
+    {% for key, width in sourceWidths %}
+        {% set newSourceWidths = newSourceWidths|merge({(key): 'width_' ~ width}) %}
+    {% endfor %}
+
+    {# find all variant options, group retina sizes inside of variant #}
+    {% for width, url in sourceImages %}
+        {% set widthKey = newSourceWidths[loop.index0] %}
+        {% set newImage = [{'width': width, 'url': url}] %}
+        {% if finalImageArray[widthKey] is defined %}
+            {% set subImage = finalImageArray[widthKey]|merge(newImage) %}
+        {% else %}
+            {% set subImage = newImage %}
+        {% endif %}
+        {% set finalImageArray = finalImageArray|merge({(widthKey): subImage}) %}
+    {% endfor %}
+
+    {# same as above, just for webp #}
+    {% for width, url in sourceImagesWebP %}
+        {% set widthKey = newSourceWidths[loop.index0] %}
+        {% set newImage = [{'width': width, 'url': url}] %}
+        {% if finalImageArrayWebP[widthKey] is defined %}
+            {% set subImage = finalImageArrayWebP[widthKey]|merge(newImage) %}
+        {% else %}
+            {% set subImage = newImage %}
+        {% endif %}
+        {% set finalImageArrayWebP = finalImageArrayWebP|merge({(widthKey): subImage}) %}
+    {% endfor %}
+
+    {# get the last image in the array for the <img> #}
+    {% set lastImage = finalImageArray|last %}
+
+  <picture>
+    <!--[if IE 9]><video style="display: none"><![endif]-->
+    {# Loop through all variants #}
+    {% for width, sizes in finalImageArrayWebP %}
+      {% if not loop.last and loop.length > 1 %}
+      <source
+            {# Loop through all variations inside a variant #}
+            data-srcset="
+              {%- for variationImage in sizes -%}
+                {{ variationImage.url }}{#  {{ variationImage.width }}w #}{% if not loop.first %} {{ loop.index }}x{% endif %}{% if not loop.last %}, {% endif %}
+              {%- endfor -%}"
+            media="(min-width: {{ width|replace({'width_': ''}) }}px)"
+            srcset="data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAD8D+JaQAA3AA/uVqAAA="
+            data-sizes="auto"
+            type="image/webp" />
+      {% endif %}
+    {% endfor %}
+    {% for width, sizes in finalImageArray %}
+      {% if not loop.last and loop.length > 1 %}
+        <source
+            {# Loop through all variations inside a variant #}
+            data-srcset="
+              {%- for variationImage in sizes -%}
+                {{ variationImage.url }}{#  {{ variationImage.width }}w #}{% if not loop.first %} {{ loop.index }}x{% endif %}{% if not loop.last %}, {% endif %}
+              {%- endfor -%}"
+            media="(min-width: {{ width|replace({'width_': ''}) }}px)"
+            srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+            data-sizes="auto" />
+      {% endif %}
+    {% endfor %}
+    <!--[if IE 9]></video><![endif]-->
+    <img class="lazyload"
+          {# options: placeholderSilhouette(), placeholderBox() or placeholderImage() #}
+          src="{{ image.placeholderImage() }}"
+          srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+          {# Loop through all variations inside a variant #}
+          data-srcset="
+            {%- for variationImage in lastImage -%}
+              {{ variationImage.url }}{#  {{ variationImage.width }}w #}{% if not loop.first %} {{ loop.index }}x{% endif %}{% if not loop.last %}, {% endif %}
+            {%- endfor -%}"
+          {% if alt %}alt="{{ alt }}" {% endif %}/>
+  </picture>
+  {%- endspaceless -%}
+{%- endmacro -%}

@@ -1,0 +1,27 @@
+{% if subPages is not defined %}
+  {% set subPages = craft.entries({
+    'section' : 'pages',
+    'descendantOf' : entry.id
+  }).all() %}
+{% endif %}
+
+{% set parent = null %}
+{% if (entry.section.handle == 'departmentsContent') %}
+  {% set parentSlug = craft.app.request.getSegment(3) %}
+  {% set parent = craft.entries.slug(parentSlug).one() %}
+{% elseif subPages is not defined %}
+  {% set parent = craft.entries.ancestorOf(entry).order('lft desc').one() %}
+{% endif %}
+
+{% if subPages | length %}
+{% cache using key 'aside-subpages_' ~ craft.app.request.pathInfo %}
+<div id="block--subpages">
+  <h3{% if parent is not null %} class="parent"{% endif %}>{% if parent is not null %}<a href="{{ parent.url }}" title="Back to {{ parent.title }}">{{ parent.title }}</a>{% else %}Pages{% endif %}</h3>
+  <ul>
+    {% nav page in subPages %}
+      <li class="quick-links--item{{ page.id == entry.id ? ' active' }}"><a href="{{page.url}}" title="{{ page.title }}">{{ page.title }}</a></li>
+    {% endnav %}
+  </ul>
+</div>
+{% endcache %}
+{% endif %}

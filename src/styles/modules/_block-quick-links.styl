@@ -1,0 +1,158 @@
+#block--subpages
+#block--quick-links
+  background-color $module-quick-links-background-color
+  box-shadow $module-quick-links-box-shadow
+  padding rem(65px) 0 rem(60px)
+  margin-bottom 2em
+  +above(xl)
+    padding rem(66.5px) 0 rem(65px)
+  > h3
+  > h3 a
+    color $module-quick-links-title-color
+    font-family $module-quick-links-title-font
+    font-size $module-quick-links-title-size
+    margin 0 0 rem(30px)
+    text-align left
+    text-transform $module-quick-links-title-transform
+    text-decoration $module-quick-links-link-decoration
+    transition: $link-transition
+
+  > h3:before
+    background-color: $module-quick-links-link-color
+    background-repeat: no-repeat
+    background-size: cover
+    content: " "
+    display inline-block
+    height rem(16px)
+    width rem(16px)
+    margin-right: 0.35em
+    transition: background-color $transition-timing
+    vertical-align middle
+
+  > h3 a:hover
+      color $module-quick-links-link-hover-color
+      // &:after
+      //   transform translateX(0.35em)
+
+  ul
+    margin 0
+    padding 0
+    list-style none
+  li
+    font-size $module-quick-links-link-size
+    font-weight $module-quick-links-link-weight
+    margin 1em 0
+
+    &:last-child
+      margin-bottom 0
+
+
+#block--subpages
+  > h3:before
+    mask embedurl("../sprites/arrow-subpage.svg", "utf8") no-repeat 50% 50%/12px 12px
+  > h3.parent:before
+    mask embedurl("../sprites/arrow-subpage-back.svg", "utf8") no-repeat 50% 50%/12px 12px
+#block--quick-links
+  > h3:before
+    mask embedurl("../sprites/arrow-angle.svg", "utf8") no-repeat 50% 50%/12px 12px
+
+
+// STYLES FOR WHEN USED IN MAIN COLUMN
+#content #block--subpages
+#content #block--quick-links
+#content .page-content--block.block--buttonInternal
+#content .page-content--block.block--buttonExternal
+  > h3
+    text-align left
+
+  ul
+    padding 0
+    width 100%
+
+    +above(m)
+      display flex
+      flex-flow row wrap
+      align-items stretch
+      justify-content space-evenly
+      margin-left '-%s' % (rem(3.75px))
+      margin-right '-%s' % (rem(3.75px))
+      width auto
+
+  li
+    display block
+    +above(m)
+      flex-grow: 1
+      display inline-block
+      min-width 'calc(%s - %s)' % (percentage(1/4) rem(7.5px))
+      margin rem(3.75px) rem(3.75px)
+
+  a
+    button()
+    display block
+    white-space unset
+
+#landing--quick-links #block--subpages
+#landing--quick-links #block--quick-links
+aside #block--subpages
+aside #block--quick-links
+  > h3
+    padding 0 rem(30px)
+    +above(xl)
+      padding 0 'calc(%s * (%s/%s))' % (100vw 1 36)
+
+#landing--quick-links #block--subpages
+#landing--quick-links #block--quick-links
+  ul
+    padding 0 rem(30px)
+    +above(xl)
+      padding 0 'calc(%s * (%s/%s))' % (100vw 1 36)
+
+// STYLES FOR WHEN USED IN ASIDE COLUMN
+aside #block--subpages
+aside #block--quick-links
+  border-top $module-quick-links-top-border
+
+  li
+    border-left $module-quick-links-left-border
+    margin 0
+    padding .5em 'calc(%s - %s)' % (rem(30px) $module-quick-links-left-border-width)
+
+    +above(xl)
+      padding .5em 'calc((%s * (%s/%s)) - %s)' % (100vw 1 36 $module-quick-links-left-border-width)
+
+    > a
+      color $module-quick-links-link-color
+      text-decoration $module-quick-links-link-decoration
+      transition: $link-transition
+      &:after
+        background-color: $module-quick-links-arrow-color
+        background-repeat: no-repeat
+        background-size: cover
+        content: ' '
+        display inline-block
+        height rem(16px)
+        width rem(16px)
+        mask: embedurl("../sprites/arrow-right.svg", "utf8") no-repeat 50% 50%/12px 12px
+        margin-left: 0.15em
+        transition: background-color $transition-timing, transform $transition-timing
+        vertical-align middle
+
+      &:hover
+        color $module-quick-links-link-hover-color
+        &:after
+          transform translateX(0.35em)
+
+    &.active
+      border-left-color $module-quick-links-link-color-active
+      > a
+        color $module-quick-links-link-color-active
+        text-decoration $module-quick-links-link-decoration
+        transition: $link-transition
+        &:after
+          content unset
+          display none
+
+        &:hover
+          color $navy
+          &:after
+            transform none

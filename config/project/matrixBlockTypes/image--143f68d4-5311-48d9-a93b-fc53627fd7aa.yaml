@@ -1,0 +1,42 @@
+field: ece2df18-646e-4acd-89d3-82a7dd27ad3c
+fieldLayouts:
+  7c904875-1442-4d25-b30c-6533bbc591cb:
+    tabs:
+      -
+        fields:
+          bef9d24a-e5ca-4b16-a2a8-9be54f94f53b:
+            required: '1'
+            sortOrder: '1'
+        name: Content
+        sortOrder: '1'
+fields:
+  bef9d24a-e5ca-4b16-a2a8-9be54f94f53b:
+    contentColumnType: string
+    fieldGroup: null
+    handle: image
+    instructions: 'Selecting multiple images will insert a responsive row of images.'
+    name: Image
+    searchable: '1'
+    settings:
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:90926324-deff-4788-936f-fa92501936a2'
+      defaultUploadLocationSubpath: ''
+      limit: ''
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: ''
+      singleUploadLocationSource: 'volume:90926324-deff-4788-936f-fa92501936a2'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources:
+        - 'volume:90926324-deff-4788-936f-fa92501936a2'
+      targetSiteId: null
+      useSingleFolder: ''
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: image
+name: Image(s)
+sortOrder: '3'

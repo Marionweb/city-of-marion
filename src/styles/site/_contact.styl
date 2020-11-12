@@ -1,0 +1,166 @@
+.page-section--contact.page-type--landing .parallax__layer--base
+#contact--address
+  background-color $white
+
+#contact--address
+  +above(m)
+    lost-flex-container: row
+
+  #contact--address-data
+  #contact--address-map
+    +above(m)
+      lost-column 18/36 2 0
+
+#contact--address-data
+
+  font-size $contact-page-address-section-size
+  color $contact-page-address-section-color
+  font-family $contact-page-address-section-font
+  text-transform $contact-page-address-section-transform
+  text-align center
+  padding-top rem(88.5px)
+  padding-bottom rem(108.5px)
+
+  +above(m)
+    padding-top rem(94px)
+    padding-bottom rem(115px)
+
+  figure
+    display block
+    margin 0 auto
+    width rem(100px)
+
+  > h4
+    font-size $contact-page-address-section-title-size
+    color $contact-page-address-section-title-color
+    font-family $contact-page-address-section-title-font
+    font-weight $contact-page-address-section-title-weight
+    text-transform $contact-page-address-section-title-transform
+
+  > span[itemprop="name"]
+    font-weight $contact-page-address-section-title-weight
+
+  .phone ~ a
+    margin-top rem(43.5px)
+
+  .hours
+    margin-bottom rem(8px)
+
+.phone ~ a
+#contact--address-map > a
+  button()
+  min-width rem(220px)
+
+#contact--address-map
+  position relative
+  height 0
+  padding-bottom 100%
+
+  +above(m)
+    height auto
+    padding-bottom 0
+
+  > #map
+    position absolute
+    top 0
+    bottom 0
+    left 0
+    right 0
+    z-index 0
+
+  > a
+    position absolute
+    z-index 1
+    bottom rem(52.5px)
+    left 50%
+    transform translateX(-110px)
+
+    +above(m)
+      bottom rem(115px)
+
+
+#contact--info-request
+  background-color $contact-page-info-request-section-background
+  color $contact-page-info-request-section-color
+  padding rem(82.5px) rem(30px) rem(77px)
+  text-align center
+  +above(m)
+    lost-flex-container: row
+    align-items center
+    padding rem(136.5px) rem(30px) rem(122px)
+    h1, div
+      display inline-block
+
+  h1
+    font-family $contact-page-info-request-section-h1-font
+    font-size $contact-page-info-request-section-h1-size-mobile
+    text-transform uppercase
+    +above(m)
+      font-size $contact-page-info-request-section-h1-size-desktop
+      line-height $contact-page-info-request-section-h1-size-desktop
+      lost-column 12/36
+      lost-offset: 5/36
+      margin 0
+      text-align right
+
+  div
+    font-size $contact-page-info-request-section-description-size-mobile
+    +above(m)
+      font-size $contact-page-info-request-section-description-size-desktop
+      line-height $contact-page-info-request-section-h1-size-desktop
+
+      lost-column 12/36
+      lost-offset: 2/36
+      margin 0
+      text-align left
+    a
+      button()
+      min-width rem(220px)
+
+
+#contact--form
+  color $navy
+  border-top $module-person-contact-top-border
+  margin-top rem(26px)
+  padding-top rem(32px)
+  +above(m)
+    margin-top rem(77px)
+    padding-top rem(64px)
+    lost-flex-container: row
+
+  #contact--form--content
+    width 100%
+    h1
+      font-size $contact-page-form-section-h1-size-mobile
+      +above(m)
+        font-size $contact-page-form-section-h1-size-desktop
+    p
+      font-size $contact-page-form-section-description-size-mobile
+      +above(m)
+        font-size $contact-page-form-section-description-size-desktop
+
+    form
+      margin-top rem(47.5px)
+      +above(m)
+        margin-top rem(58.5px)
+      label
+        font-size $contact-page-form-section-form-labels-size-mobile
+        +above(m)
+          font-size $contact-page-form-section-form-labels-size-mobile
+    .center
+      text-align center
+
+.page-section--contact.page-type--landing .parallax__layer--base
+  #contact--form
+    background-color $contact-page-form-section-background
+    padding rem(52px) rem(30px) rem(87.5px)
+    margin-top 0
+    border-top 0 none
+    +above(m)
+      padding rem(114px) 0 rem(103px)
+      margin-top 0
+
+    #contact--form--content
+      +above(m)
+        lost-column 14/36
+        lost-offset: 11/36

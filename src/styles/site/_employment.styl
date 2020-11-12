@@ -1,0 +1,28 @@
+#job-instructions
+  margin-top rem(76px)
+  margin-bottom rem(76px)
+  padding 0 rem(30px)
+
+  +above(m)
+    lost-column 32/36
+    lost-offset: 2/36
+    border-top $employment-instructions-top-border
+    padding rem(91px) 0 0
+    
+
+  h3
+    color $employment-instructions-title-color
+    font-family $employment-instructions-title-font
+    font-size $employment-instructions-title-mobile
+    text-transform $employment-instructions-title-transform
+    +above(m)
+      font-size $employment-instructions-title-desktop
+  
+  p
+    color $employment-instructions-text-color
+    font-family $employment-instructions-text-font
+    font-size $employment-instructions-text-mobile
+    text-transform $employment-instructions-text-transform
+    line-height $line-height-copy
+    +above(m)
+      font-size $employment-instructions-text-desktop

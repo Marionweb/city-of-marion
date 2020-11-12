@@ -1,0 +1,15 @@
+fieldLayouts:
+  50d831ee-6938-487f-bfc9-0b28a55eafd1:
+    tabs:
+      -
+        fields:
+          963ec030-6443-4c79-89af-dfbd88135bae:
+            required: '0'
+            sortOrder: '1'
+          c7426753-b22f-4bb7-a40e-51ea7cb2854b:
+            required: '0'
+            sortOrder: '2'
+        name: Content
+        sortOrder: '1'
+handle: logo
+name: Logo

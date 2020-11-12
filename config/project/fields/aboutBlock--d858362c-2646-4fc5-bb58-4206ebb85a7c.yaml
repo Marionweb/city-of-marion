@@ -1,0 +1,13 @@
+contentColumnType: string
+fieldGroup: 770fc847-88dc-471d-918d-d241b9efd400
+handle: aboutBlock
+instructions: ''
+name: 'About Block'
+searchable: '1'
+settings:
+  contentTable: '{{%matrixcontent_aboutblock}}'
+  localizeBlocks: false
+  maxBlocks: '1'
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

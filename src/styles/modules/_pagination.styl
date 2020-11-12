@@ -1,0 +1,59 @@
+.pagination
+  display: flex
+  justify-content: space-between
+  margin rem(50px) 0 rem(53px)
+  width: 100%
+
+  span.current
+    // lifted from button()
+    background-color $button-hover-background
+    border 0 none
+    box-shadow $button-box-shadow
+    color $button-text-color
+    display inline-block
+    font-family $button-font
+    font-size $button-font-size
+    font-weight $button-font-weight
+    line-height $button-line-height
+    padding ($button-padding / 2)
+    text-align center
+    text-decoration none
+    text-transform $button-transform
+    transition $button-transition
+    vertical-align: middle
+
+  a
+    button()
+    padding ($button-padding / 2)
+
+  > a
+    min-width rem(122.5px)
+    &.previous
+      margin: 0 auto 0 0
+    &.next
+      margin: 0 0 0 auto
+    +above(m)
+      &.previous
+      &.next
+        margin 0
+
+  .page-numbers
+    display none
+    margin 0 auto
+    +above(m)
+      display block
+
+    > span.current
+    > a
+      min-width rem(56px)
+
+    > span.ellip
+      color $button-hover-background
+      display inline-block
+      font-family $button-font
+      font-size ($button-font-size * 2)
+      line-height ($button-line-height / 2)
+      min-width rem(36px)
+      padding ($button-padding / 2) ($button-padding / 2) ($button-padding / 2) ($button-padding / 2)
+      text-align center
+      vertical-align: middle

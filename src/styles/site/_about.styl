@@ -1,0 +1,310 @@
+.page-section--about.page-type--landing .parallax__layer--base
+#about--about
+  background-color $white
+
+.about--section-image
+  background-size cover
+  background-position 50% 50%
+
+  figure
+    margin 0
+    line-height 0
+    picture
+      display block
+
+.about--section-two-col
+  +above(m)
+    lost-flex-container: row
+
+    .about--section-text
+    .about--section-image
+      lost-column 18/36 2 0
+
+
+
+#about--about
+  .about--section-text
+    padding rem(110px) rem(30px) rem(108.5px)
+
+    +above(m)
+      padding rem(75px) calc((100vw * (2/36)))
+
+    figure
+      display block
+      margin 0
+      width $about-page-about-section-icon-height-mobile
+      +above(m)
+        width $about-page-about-section-icon-height-desktop
+
+    h2
+      color $about-page-about-section-headline-color
+      font-family $about-page-about-section-headline-font
+      font-size $about-page-about-section-headline-size-mobile
+      text-transform $about-page-about-section-headline-transform
+      +above(m)
+        font-size $about-page-about-section-headline-size-desktop
+        line-height $about-page-about-section-headline-size-desktop
+
+    p
+      color $about-page-about-section-text-color
+      font-family $about-page-about-section-text-font
+      font-size $about-page-about-section-text-size-mobile
+      line-height $line-height-copy
+      text-align left
+      text-transform $about-page-about-section-text-transform
+      +above(m)
+        font-size $about-page-about-section-text-size-desktop
+
+
+#about--mission
+  background-color $about-page-mission-section-background
+  padding rem(65px) rem(30px) rem(62px)
+  text-align center
+  +above(m)
+    padding rem(101.5px) 0 rem(101.5px)
+    lost-flex-container: column
+    h1, p
+      lost-column 18/36
+      lost-offset: 9/36
+
+
+  h2
+    color $about-page-mission-section-headline-color
+    font-family $about-page-mission-section-headline-font
+    font-size $about-page-mission-section-headline-size-mobile
+    text-transform $about-page-mission-section-headline-transform
+    +above(m)
+      font-size $about-page-mission-section-headline-size-desktop
+      line-height $about-page-mission-section-headline-size-desktop
+
+  p
+    color $about-page-mission-section-text-color
+    font-family $about-page-mission-section-text-font
+    font-size $about-page-mission-section-text-size-mobile
+    line-height $line-height-copy
+    text-align left
+    text-transform $about-page-mission-section-text-transform
+    +above(m)
+      font-size $about-page-mission-section-text-size-desktop
+      text-align center
+
+
+
+#about--mayor-welcome
+  .about--section-text
+    padding rem(110px) rem(30px) rem(108.5px)
+
+    +above(m)
+      padding rem(75px) calc((100vw * (2/36)))
+
+    h2
+      color $about-page-mayor-section-headline-color
+      font-family $about-page-mayor-section-headline-font
+      font-size $about-page-mayor-section-headline-size-mobile
+      text-transform $about-page-mayor-section-headline-transform
+      line-height $line-height-title
+      +above(m)
+        font-size $about-page-mayor-section-headline-size-desktop
+
+    h3
+      color $about-page-mayor-section-subheadline-color
+      font-family $about-page-mayor-section-subheadline-font
+      font-size $about-page-mayor-section-subheadline-size-mobile
+      font-style $about-page-mayor-section-subheadline-style
+      text-transform $about-page-mayor-section-subheadline-transform
+      line-height 1.5
+      +above(m)
+        font-size $about-page-mayor-section-subheadline-size-desktop
+
+    h4
+      color $about-page-mayor-section-intro-color
+      font-family $about-page-mayor-section-intro-font
+      font-size $about-page-mayor-section-intro-size-mobile
+      text-transform $about-page-mayor-section-intro-transform
+      line-height $line-height-title
+      margin-top 0
+      +above(m)
+        font-size $about-page-mayor-section-intro-size-desktop
+
+    p
+      color $about-page-mayor-section-text-color
+      font-family $about-page-mayor-section-text-font
+      font-size $about-page-mayor-section-text-size-mobile
+      line-height $line-height-copy
+      text-align left
+      text-transform $about-page-mayor-section-text-transform
+      +above(m)
+        font-size $about-page-mayor-section-text-size-desktop
+        margin-bottom rem(35px)
+      +above(l)
+        margin-bottom rem(75px)
+
+    cite
+      color $about-page-mayor-section-name-color
+      font-family $about-page-mayor-section-name-font
+      font-size $about-page-mayor-section-name-size-mobile
+      font-style normal
+      font-weight $about-page-mayor-section-name-font-weight
+      text-align left
+      text-transform $about-page-mayor-section-name-transform
+      +above(m)
+        font-size $about-page-mayor-section-name-size-desktop
+
+
+#about--history
+  background-color $about-page-history-section-background-color
+  position relative
+
+  #about--history--image
+    background-size cover
+    background-position 50% 50%
+    position absolute
+    top 0
+    left 0
+    right 0
+    bottom 0
+    opacity .6
+    z-index 0
+
+    &::after
+      display: block
+      position: absolute
+      background-image: linear-gradient(to bottom, transparent 0%, rgba($black, .6) 100%)
+      top 0
+      right 0
+      left 0
+      bottom 0
+      content: ''
+      z-index 0
+
+  #about--history--content
+    position relative
+    z-index 1
+    lost-flex-container: row
+
+  #about--history--content-text
+    padding rem(75px) rem(30px)
+    +above(m)
+      padding rem(130px) 0 rem(160px)
+      lost-column 24/36
+      lost-offset: 6/36
+    +above(l)
+      padding rem(171.5px) 0 rem(238.5px)
+      lost-column 18/36
+      lost-offset: 9/36
+
+    h2
+      color $about-page-history-section-headline-color
+      font-family $about-page-history-section-headline-font
+      font-size $about-page-history-section-headline-size-mobile
+      text-transform $about-page-history-section-headline-transform
+      text-align center
+      margin-top 0
+      +above(m)
+        font-size $about-page-history-section-headline-size-desktop
+        line-height $about-page-history-section-headline-size-desktop
+
+    p
+      color $about-page-history-section-text-color
+      font-family $about-page-history-section-text-font
+      font-size $about-page-history-section-text-size-mobile
+      font-weight $about-page-history-section-text-font-weight
+      line-height $line-height-copy
+      text-align left
+      text-transform $about-page-history-section-text-transform
+      +above(m)
+        font-size $about-page-history-section-text-size-desktop
+    
+    p.learn-more
+      text-align center
+      > a
+        button()
+        display block
+        margin rem(35px) auto 0
+        +above(m)
+          display inline-block
+          min-width rem(220px)
+          width auto
+          margin rem(35px) auto 0
+
+#about--facts-figures
+  padding rem(65px) 0
+  +above(m)
+    padding rem(116.5px) 0 rem(77px)
+    &,
+    .inside
+      lost-flex-container: row
+      width 100%
+  
+  position: relative
+  background: $background-gray
+  overflow: hidden
+  z-index: 0
+  &:after
+    content: ' '
+    display: block
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    z-index: -1
+    opacity: 0.05
+    background-image: embedurl("../images/logo-com-mark-black.svg", "utf8")
+    background-repeat: no-repeat
+    background-position: 50% 0
+    background-size: cover
+    +above(m)
+      background-size: 90% 90%
+  
+  h2
+    color $about-page-facts-section-headline-color
+    font-family $about-page-facts-section-headline-font
+    font-size $about-page-facts-section-headline-size-mobile
+    text-transform $about-page-facts-section-headline-transform
+    text-align center
+    margin-top 0
+    margin-bottom rem(32.5px)
+    +above(m)
+      font-size $about-page-facts-section-headline-size-desktop
+      line-height $about-page-facts-section-headline-size-desktop
+      margin-bottom rem(78px)
+      lost-column 32/36
+      lost-offset 2/36
+      lost-flex-container: row
+      justify-content: center
+  
+  .inside
+    +above(m)
+      lost-column 32/36
+      lost-offset 2/36
+      lost-flex-container: row
+  
+  .block--fact
+    background-color $about-page-fact-block-background-color
+    box-shadow $about-page-fact-block-box-shadow
+    padding rem(31px) rem(19.5px) rem(27.5px)
+    margin-bottom 2em
+    
+    +above(m)
+      lost-column 12/36 3
+      padding rem(85.5px) calc((100vw * (1/36))) rem(54px)
+
+    > p
+      color $about-page-fact-block-text-color
+      font-family $about-page-fact-block-text-font
+      font-size $about-page-fact-block-text-size-mobile
+      font-weight $about-page-fact-block-text-font-weight
+      margin-top 0
+      text-transform $about-page-fact-block-text-transform
+      +above(m)
+        $about-page-fact-block-text-size-desktop
+    > cite
+      color $about-page-fact-block-reference-color
+      font-family $about-page-fact-block-reference-font
+      font-size $about-page-fact-block-reference-size-mobile
+      font-style normal
+      font-weight $about-page-fact-block-reference-font-weight
+      text-transform $about-page-fact-block-reference-transform
+      +above(m)
+        font-size $about-page-fact-block-reference-size-desktop

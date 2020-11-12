@@ -1,0 +1,90 @@
+{#
+    Staff Directory Entry Template
+#}
+
+{% extends "layouts/columns/_one" %}
+
+{% set fullName = entry.personName|trim|replace({'  ': ' '}) %}
+
+{% set title = fullName ~ ', ' ~ entry.positionTitle %}
+
+{# Get department & building #}
+{% set department = entry.department.one() %}
+{% set building = department.building.one() %}
+
+{# HTML #}
+{% block main %}
+{% cache %}
+<section id="staff-profile" itemscope itemtype="http://schema.org/Person">
+  {% if entry.staffPhoto | length %}
+    {%- import "macros/_images" as imageFunctions -%}
+    {%- set image = entry.staffPhoto.one() -%}
+    <figure itemprop="image">
+      {{ imageFunctions.responsivePicture(image.optimizedImagesSquare, image.alt) }}
+      {% if image.caption %}<figcaption>{{ image.caption }}</figcaption>{% endif %}
+    </figure>
+  {% else %}
+    <figure class="mobile no-image">
+      <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    </figure>
+    <figure class="desktop no-image">
+      <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    </figure>
+  {% endif %}
+
+  <h1 itemprop="name" class="fn">{{ fullName | typogrify }}</h1>
+  <h2 itemprop="jobTitle">{{ entry.positionTitle | typogrify }}</h2>
+
+  <h4>{{ department.title | typogrify }}</h4>
+
+  <div id="staff-profile--address-data" itemscope itemtype="http://schema.org/GovernmentBuilding">
+    <div id="staff-profile--address" itemscope itemtype="http://schema.org/GovernmentBuilding">
+      <span itemprop="name">{{ building.title }}</span>
+      {% if building.buildingAddress.addressLine1 %}
+      <div class="address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+        <span itemprop="streetAddress">{{ building.buildingAddress.addressLine2 }}</span><br>
+        <span itemprop="addressLocality">{{ building.buildingAddress.locality }}</span>,
+        <span itemprop="addressRegion">{{ building.buildingAddress.administrativeArea }}</span>
+        <span itemprop="postalCode">{{ building.buildingAddress.postalCode }}</span>
+      </div>
+      {% endif %}
+    </div>
+    <div id="staff-profile--phone-other">
+      {% if entry.phone.rawInput %}
+        <p><strong>Phone</strong> <span itemprop="telephone">{{ entry.phone.format('national') }}</span></p>
+      {% endif %}
+
+      {% if entry.phoneSecondary.rawInput %}
+        <p><strong>Phone 2</strong> <span itemprop="telephone">{{ entry.phoneSecondary.format('national') }}</span></p>
+      {% endif %}
+      
+      {% if entry.fax.rawInput %}
+        <p><strong>Direct Fax</strong> <span itemprop="faxNumber">{{ entry.fax.format('national') }}</span></p>
+      {% endif %}
+
+      {% if general.tollFreePhoneNumber.rawInput %}
+        <p><strong>Toll-Free</strong> <span itemprop="telephone">{{ general.tollFreePhoneNumber.format('national') }}</span></p>
+      {% endif %}
+
+      {% if department.phone.rawInput %}
+        <p><strong>Department Phone</strong> <span itemprop="telephone">{{ department.phone.format('national') }}</span></p>
+      {% endif %}
+
+      {% if department.fax.rawInput %}
+        <p><strong>Department Fax</strong> <span itemprop="faxNumber">{{ department.fax.format('national') }}</span></p>
+      {% endif %}
+
+      {% if entry.email %}
+      {% set email = "<a href='mailto:" ~ entry.email ~ "' itemprop='email'>" ~ entry.email ~ "</a>" %}
+      <p><strong>Email</strong> {{ email | encode }}</p>
+      {# <a itemprop="email" href="mailto:{{ entry.email }}" target="_blank">{{ entry.email | encode }}</a> #}
+      {% endif %}
+
+    </div>
+  </div>
+
+  {% if entry.bio %}<p>{{ entry.bio | typogrify }}</p>{% endif %}
+
+</section>
+{% endcache %}
+{% endblock %}

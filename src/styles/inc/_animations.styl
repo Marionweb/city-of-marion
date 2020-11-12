@@ -1,0 +1,25 @@
+@keyframes flipdown
+  0%
+    opacity: 0
+    transform-origin: top center
+    transform: rotateX(-90deg)
+  5%
+    opacity: 1
+  80%
+    transform: rotateX(8deg)
+  83%
+    transform: rotateX(6deg)
+  92%
+    transform: rotateX(-3deg)
+  100%
+    transform-origin: top center
+    transform: rotateX(0deg)
+
+.flipIn
+  animation: flipdown 0.5s ease both
+
+@keyframes spin
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(180deg)

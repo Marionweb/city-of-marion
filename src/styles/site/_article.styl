@@ -1,0 +1,106 @@
+main .news-events-article
+  header
+    > h1
+      position relative
+
+
+      > span
+        position absolute
+        height ($header-text-size * .75)
+        width ($header-text-size * .75)
+        left -($header-text-size * 2)
+        top ($header-text-size / 4)
+
+        input[type=checkbox]
+          position absolute
+          cursor pointer
+          margin 0
+          width ($header-text-size * .75)
+          height ($header-text-size * .75)
+          top 0
+          left 0
+          z-index 1
+          opacity 0
+
+          &:checked
+            &~span
+              max-height initial
+              opacity 1
+              transform translate(0, 0)
+              overflow visible
+
+        &:before
+          background-color: $content-link-color
+          background-repeat: no-repeat
+          background-size: cover
+          content: " "
+          display block
+          height ($header-text-size * .75)
+          width ($header-text-size * .75)
+
+          transition: background-color $transition-timing
+          vertical-align middle
+          mask: embedurl("../sprites/share.svg", "utf8") no-repeat 50% 50%/100% auto
+        > i
+          @extend .hide-text
+        > span
+          background-color $white
+          box-shadow $global-block-box-shadow
+          display block
+          margin-top rem(15px)
+          max-height 0
+          opacity 0
+          overflow hidden
+          padding rem(10px)
+          transform translate(0, 10%)
+          transition: all 0.25s ease-out
+          width 40vw
+          z-index 2
+
+
+
+
+
+
+
+#news-events-article-related
+  margin-bottom rem(36px)
+  margin-top rem(45px)
+  padding rem(45px) rem(30px) 0
+  border-top $article-related-block-top-border-width solid $article-related-block-top-border-color
+
+  +above(m)
+    margin-bottom rem(67px)
+    margin-top rem(67px)
+    padding rem(67px) 0 0
+    lost-column 32/36
+    lost-offset 2/36
+
+
+  > h2
+    color $article-related-block-title-color
+    display block
+    font-size $article-related-block-title-size-mobile
+    margin 0 0 rem(45px)
+    width 100%
+    +above(m)
+      color $article-related-block-title-color
+      font-size $article-related-block-title-size-desktop
+      margin 0 0 rem(67px)
+
+  > ul
+    lost-flex-container: row
+
+    list-style-type none
+    margin 0
+    padding 0
+
+    > li
+      &:not(:last-child)
+        margin-bottom rem(28px)
+      +above(m)
+        lost-column 12/36 4
+        margin-bottom 0
+
+
+

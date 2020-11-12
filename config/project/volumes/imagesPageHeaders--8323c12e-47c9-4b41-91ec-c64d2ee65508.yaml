@@ -1,0 +1,39 @@
+fieldLayouts:
+  f788d572-55c0-4202-9412-6cd1ebc77932:
+    tabs:
+      -
+        fields:
+          38ecf2fd-2320-4b9c-b7c1-9c36e49f4dd5:
+            required: '0'
+            sortOrder: '3'
+          3fb0abc8-4bd1-4e6b-a658-f53c6e9ac6d3:
+            required: '0'
+            sortOrder: '2'
+          41c532c2-6106-4305-b799-189374ca1de0:
+            required: '0'
+            sortOrder: '5'
+          479757ec-089d-4ba5-ae9f-468c2ad31ccb:
+            required: '0'
+            sortOrder: '6'
+          4e31b1c2-0dc3-4774-acc9-22753470909e:
+            required: '0'
+            sortOrder: '1'
+          dd89ecbd-c933-44c6-a467-5890fa0f7186:
+            required: '0'
+            sortOrder: '4'
+        name: Content
+        sortOrder: '1'
+handle: imagesPageHeaders
+hasUrls: '1'
+name: 'Images - Page Headers'
+settings:
+  bucket: marion-prod
+  cfDistributionId: ''
+  expires: ''
+  keyId: AKIAJA52FVZLVIIJ5HAA
+  region: us-east-2
+  secret: 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
+  subfolder: images/page-headers
+sortOrder: '5'
+type: craft\awss3\Volume
+url: //s3.us-east-2.amazonaws.com/marion-prod/

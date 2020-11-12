@@ -1,0 +1,13 @@
+siteUid: null
+sortOrder: '2'
+template: structure/minutes-agendas/_year
+uriParts:
+  0: government/minutes-agendas/
+  1:
+    - slug
+    - '[^\/]+'
+  3: /
+  4:
+    - year
+    - '\d{4}'
+uriPattern: 'government/minutes-agendas/<slug:[^\/]+>/<year:\d{4}>'

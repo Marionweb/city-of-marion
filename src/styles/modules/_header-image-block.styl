@@ -1,0 +1,107 @@
+#header-image
+  position: relative
+
+  > h1
+    position: absolute
+    left 0
+    right 0
+    top 50%
+    transform 'translate(%s, calc(%s - %s))' % (0 -50% rem(($header-block-title-size-mobile/2)))
+    margin 0
+    z-index 5
+
+    color $header-block-title-color
+    font-family $header-block-title-font
+    font-size $header-block-title-size-mobile
+    font-weight $header-block-title-weight
+    text-transform $header-block-title-transform
+    text-align center
+    width 100vw
+    padding-left rem(30px)
+    padding-right rem(30px)
+
+    +above(m)
+      font-size $header-block-title-size-desktop
+      transform 'translate(%s, calc(%s - %s))' % (0 -50% rem(($header-block-title-size-desktop/2)))
+      padding-left 'calc(%s + %s)' % (rem(30px) 5%)
+      padding-right 'calc(%s + %s)' % (rem(30px) 5%)
+
+  figure
+    line-height 0
+    margin 0
+    z-index 0
+
+  figure.desktop
+    display none
+    visibility hidden
+  +above(m)
+    figure.mobile
+      display none
+      visibility hidden
+    figure.desktop
+      display block
+      visibility visible
+
+
+.page-type--landing
+  #header-image
+    figure
+      line-height: 0
+      position relative
+      z-index 0
+      &::before
+        position absolute
+        background-color $white
+        bottom rem(31.75px)
+        left 50%
+        margin-left -(rem((16.5/2)px))
+        content: ''
+        background-repeat: no-repeat
+        background-size: cover
+        display block
+        height rem(16.5px)
+        width rem(16.5px)
+        transition: background-color $transition-timing
+        mask: embedurl("../sprites/arrow-down.svg", "utf8") no-repeat 50% 50%/16.5px 16.5px
+        z-index 5
+        +above(m)
+          bottom rem(53.5px)
+          margin-left -(rem((33/2)px))
+          height rem(33px)
+          width rem(33px)
+          mask: embedurl("../sprites/arrow-down.svg", "utf8") no-repeat 50% 50%/33px 33px
+
+.page-section--homepage
+.page-type--landing
+  #header-image
+    figure
+      line-height: 0
+      position relative
+      &::after
+        display: block
+        position: absolute
+        background-image: linear-gradient(to bottom, transparent 0%, rgba($black, .6) 100%)
+        top 0
+        right 0
+        left 0
+        bottom 0
+        content: ''
+        z-index 1
+      img
+        display block
+
+.page-type--standard
+.page-section--departments
+.page-section--boards
+.page-section--departmentsContent
+  #header-image
+    background-color $black
+    figure
+      opacity .6
+
++above(m)
+  .page-section--newsEvents
+    #header-image
+      margin: $header-image-top-margin-news-desktop 0 0
+      lost-column: 32/36
+      lost-offset: 2/36

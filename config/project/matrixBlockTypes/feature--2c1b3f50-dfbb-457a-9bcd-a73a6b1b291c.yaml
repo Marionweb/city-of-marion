@@ -1,0 +1,149 @@
+field: 9589a0d0-c4b0-40be-94ac-4f56a7c71cb1
+fieldLayouts:
+  2188e701-9a5d-4388-9a53-8f88143f9f50:
+    tabs:
+      -
+        fields:
+          2c734029-a2d2-4a63-bbac-922aa4860ea4:
+            required: '0'
+            sortOrder: '5'
+          65a0bcba-9133-44b2-9c69-38ad51e92829:
+            required: '0'
+            sortOrder: '3'
+          69383f6e-11e1-49dd-b929-3231547a0deb:
+            required: '1'
+            sortOrder: '1'
+          a85ff123-bc5c-4c8a-8baf-32519d9626f0:
+            required: '1'
+            sortOrder: '4'
+          b7eb7bc5-b48b-41f8-9859-3d4f67ad15a9:
+            required: '0'
+            sortOrder: '2'
+          cbd9fd8f-b6a5-4d7f-8578-71b6320b04c9:
+            required: '0'
+            sortOrder: '6'
+        name: Content
+        sortOrder: '1'
+fields:
+  2c734029-a2d2-4a63-bbac-922aa4860ea4:
+    contentColumnType: string
+    fieldGroup: null
+    handle: backgroundImageOpacity
+    instructions: 'Change the opacity of the background image. Default is 60%'
+    name: 'Background Image Opacity'
+    searchable: '1'
+    settings:
+      options:
+        -
+          default: ''
+          label: 20%
+          value: '.2'
+        -
+          default: ''
+          label: 40%
+          value: '.4'
+        -
+          default: '1'
+          label: 60%
+          value: '.6'
+        -
+          default: ''
+          label: 80%
+          value: '.8'
+        -
+          default: ''
+          label: 100%
+          value: '1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  65a0bcba-9133-44b2-9c69-38ad51e92829:
+    contentColumnType: string
+    fieldGroup: null
+    handle: video
+    instructions: 'YouTube or Vimeo URL''s *ONLY* - Other links may break. Make sure the video is allowed to be embedded.'
+    name: Video
+    searchable: '1'
+    settings:
+      customPattern: ''
+      customPatternErrorMessage: ''
+      customPatternToggle: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: barrelstrength\sproutfields\fields\Url
+  69383f6e-11e1-49dd-b929-3231547a0deb:
+    contentColumnType: text
+    fieldGroup: null
+    handle: headline
+    instructions: ''
+    name: Headline
+    searchable: '1'
+    settings:
+      charLimit: ''
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: '1'
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  a85ff123-bc5c-4c8a-8baf-32519d9626f0:
+    contentColumnType: string
+    fieldGroup: null
+    handle: backgroundImage
+    instructions: Required.
+    name: 'Background Image Override'
+    searchable: '1'
+    settings:
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:ffe6bee7-f3f2-41de-9997-df6c2ada6fbe'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: ''
+      singleUploadLocationSource: 'volume:ffe6bee7-f3f2-41de-9997-df6c2ada6fbe'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: '1'
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  b7eb7bc5-b48b-41f8-9859-3d4f67ad15a9:
+    contentColumnType: text
+    fieldGroup: null
+    handle: subHeadline
+    instructions: ''
+    name: Sub-Headline
+    searchable: '1'
+    settings:
+      charLimit: ''
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: '1'
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  cbd9fd8f-b6a5-4d7f-8578-71b6320b04c9:
+    contentColumnType: string(7)
+    fieldGroup: null
+    handle: backgroundColor
+    instructions: 'Image will blend to this color. Defaults to black if no color is provided.'
+    name: 'Background Color'
+    searchable: '1'
+    settings:
+      defaultColor: '#000000'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Color
+handle: feature
+name: Feature
+sortOrder: '1'

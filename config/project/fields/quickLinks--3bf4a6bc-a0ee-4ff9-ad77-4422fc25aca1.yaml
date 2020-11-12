@@ -1,0 +1,13 @@
+contentColumnType: string
+fieldGroup: 1baac923-6a88-450e-b39f-63bd7949f12f
+handle: quickLinks
+instructions: ''
+name: 'Quick Links'
+searchable: '1'
+settings:
+  contentTable: '{{%matrixcontent_quicklinks}}'
+  localizeBlocks: false
+  maxBlocks: ''
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

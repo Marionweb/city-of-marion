@@ -1,0 +1,76 @@
+{#
+    News Channel Entry Template
+#}
+
+{% extends "layouts/columns/_two_parallax" %}
+
+{% set title = entry.title %}
+
+
+{# HEADER IMAGE #}
+{% block headerBlock %}
+
+  {# {% if entry.type == 'article' %} #}
+    {% include "structure/news-events/_header-image" %}
+  {# {% endif %} #}
+
+{% endblock %}
+
+
+{# MAIN #}
+{% block main %}
+  {% cache %}
+
+    <article class="news-events-article news-events-article--{{ entry.type }}">
+      {% include "structure/news-events/_types/_" ~ entry.type %}
+    </article>
+
+  {% endcache %}
+{% endblock %}
+
+{# ASIDE #}
+{% block aside %}
+  {% include "modules/content/_block-quick-links" %}
+  {% if entry.type == 'story' %}
+    {% if entry.storyType.one.slug == 'champions' %}
+      {{ include('modules/content/_block-story-share') }}
+    {% endif %}
+  {% endif %}
+{% endblock %}
+
+{# Bottom of page - full width column #}
+{% block bottomWide %}
+
+{# {% set relatedEntries = craft.entries({
+  section: 'newsEvents',
+  relatedTo: ['or', {
+      targetElement: entry.storyType.ids(),
+      field: 'storyType'
+  }, {
+      targetElement: entry.newsEventsTags.ids(),
+      field: 'newsEventsTags'
+  }],
+  id: 'not ' ~ entry.id,
+  limit: 3
+}) %} #}
+{% set relatedEntries = craft.entries({
+  section: 'newsEvents',
+  relatedTo: ['or', {
+      targetElement: entry.newsEventsTags.ids(),
+      field: 'newsEventsTags'
+  }],
+  id: 'not ' ~ entry.id,
+  limit: 3
+}).all() %}
+{% if relatedEntries | length %}
+<section id="news-events-article-related">
+  <h2>Related Posts</h2>
+  <ul>
+  {% for entry in relatedEntries %}
+    <li>{% include "modules/content/_block-news-events-entry" %}</li>
+  {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,36 @@
+{% if entry.attachedFiles | length %}
+<section class="page-content page-content--block block--attachments">
+  <h5>Files Attached:</h5>
+  <ul>
+    {% for file in entry.attachedFiles.all() %}
+    <li>
+      {# getSignedUrl(file.id) #}
+      <a href="{{ file.url }}" id="file-{{file.id}}">
+        {% if file.kind == 'image' %}
+        <div class="preview">
+          {% set transform = {
+            mode: 'crop',
+            width: 100,
+            height: 100
+          } %}
+          {% do file.setTransform(transform) %}
+          <img src="{{ file.url }}" width="{{ file.width }}" height="{{ file.height }}">
+        </div>
+        {% else %}
+        <div class="icon {{ file.kind }}">
+          <i class="fa file-{{ file.kind }}"></i>
+        </div>
+        {% endif %}
+        <div class="title">
+          {% set title = file.title %}
+          {% set fileName = file.filename | split('.')|slice(0,-1)|join %}
+          {# https://github.com/craftcms/cms/commit/06d6560d3f0d72bcacdc63b230d2ecc7fb34c87d #}
+          {% if title and (title|lower != fileName|lower) %}<p class="filetitle">{{ file.title }}</p>{% endif %}
+          <p class="filename">{{ file.filename }} <span>({{ craft.typogrify.humanFileSize(file.size, 2) }})</span></p>
+        </div>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}

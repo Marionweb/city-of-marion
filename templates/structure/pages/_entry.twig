@@ -1,0 +1,30 @@
+{#
+    Page Structure Template
+#}
+{% set parallax = (entry.primaryImage | length) ? '_parallax' : '' %}
+
+{% extends entry.type == 'standard'
+    ? 'layouts/columns/_two' ~ parallax
+    : 'layouts/columns/_one' ~ parallax %}
+
+{% set title = entry.title %}
+{% set type = entry.type %}
+
+
+{# HEADER IMAGE #}
+{% block headerBlock %}
+  {% if entry.primaryImage | length %}{% include 'modules/content/_header-block' %}{% endif %}
+{% endblock %}
+
+
+{# HTML #}
+{% block main %}
+  {% include 'structure/pages/_types/_' ~ entry.type %}
+{% endblock %}
+
+
+{# ASIDE #}
+{% block aside %}
+  {% include 'modules/content/_block-sub-pages' %}
+  {% include 'modules/content/_block-quick-links' %}
+{% endblock %}

@@ -1,0 +1,152 @@
+{#
+    About Landing Template
+#}
+
+{% extends "layouts/base/_base_parallax" %}
+
+{% set title = entry.title %}
+{% set type = 'landing' %}
+
+{% set aboutBlockTransform = {
+    width: 1600,
+    height: 1280,
+    quality: 82
+} %}
+{% set historyImageTransform = {
+    width: 1600,
+    quality: 82
+} %}
+
+{% if entry.aboutBlock | length %}
+  {% if entry.aboutBlock.one().image | length %}
+    {% set aboutImage = entry.aboutBlock.one().image.one() %}
+  {% endif %}
+{% endif %}
+
+{% if entry.mayorWelcomeBlock | length %}
+  {% set mayor = entry.mayorWelcomeBlock.one().mayor.one() %}
+  {% set mayorImage = mayor.staffPhoto.one() %}
+
+  {% if entry.mayorWelcomeBlock.one().imageOverride | length %}
+    {% set mayorImage = entry.mayorWelcomeBlock.one().imageOverride.one() %}
+  {% endif %}
+{% endif %}
+
+{% if entry.historyBlock | length %}
+  {% if entry.historyBlock.one().backgroundImage | length %}
+    {% set historyImage = entry.historyBlock.one().backgroundImage.one() %}
+  {% endif %}
+{% endif %}
+
+{% css %}
+  {% if aboutImage %}
+    #about--about .about--section-image { background-image: url({{ aboutImage.getUrl(aboutBlockTransform) }}); }
+  {% endif %}
+  {% if mayorImage %}
+    #about--mayor-welcome .about--section-image { background-image: url({{ mayorImage.getUrl(aboutBlockTransform) }}); }
+  {% endif %}
+  {% if historyImage %}
+    #about--history--image { background-image: url({{ historyImage.getUrl(historyImageTransform) }}); }
+  {% endif %}
+{% endcss %}
+
+{# HEADER IMAGE #}
+{% block parallaxBack %}
+  {% if entry.primaryImage | length %}{% include "modules/content/_header-block" %}{% endif %}
+{% endblock %}
+
+
+{# MAIN COLUMN CONTENT #}
+{% block content %}
+{% cache %}
+{% if entry.aboutBlock | length %}
+  {% set aboutBlock = entry.aboutBlock.one() %}
+<section id="about--about" class="about--section-two-col">
+
+  <div id="about--about--content" class="about--section-text">
+
+    {% if logo.logoIcon | length %}
+    <figure id="about--logo-icon">
+      {% set logoUrl = 'https:' ~ logo.logoIcon.one().getUrl() %}
+      {{ craft.inlin.er(logoUrl, true) | raw }}
+    </figure>
+    {% endif %}
+
+    <h2>{{ aboutBlock.headline | typogrify }}</h2>
+    <p>{{ aboutBlock.text | typogrify }}</p>
+  </div>
+
+  {% if entry.aboutBlock.one().image | length %}
+    <div class="about--section-image"></div>
+  {% endif %}
+
+</section>
+{% endif %}
+
+
+{% if entry.missionText %}
+  <section id="about--mission">
+    <h2>Our Mission</h2>
+    <p>{{ entry.missionText | typogrify }}</p>
+  </section>
+{% endif %}
+
+
+{% if entry.mayorWelcomeBlock | length %}
+  {% set mayorWelcomeBlock = entry.mayorWelcomeBlock.one() %}
+  {% set mayor = mayorWelcomeBlock.mayor.one() %}
+  {% set memberName = mayor.personName|trim|replace({'  ': ' '}) %}
+
+<section id="about--mayor-welcome" class="about--section-two-col">
+  <div class="about--section-image"></div>
+
+  <div id="about--mayor-welcome--content" class="about--section-text">
+    <h4>From The Mayor</h4>
+    <h2>{{ mayorWelcomeBlock.headline | typogrify }}</h2>
+    {% if mayorWelcomeBlock.subHeadline %}<h3>{{ mayorWelcomeBlock.subHeadline | typogrify }}</h3>{% endif %}
+    <p>{{ mayorWelcomeBlock.text | typogrify }}</p>
+    <cite>{{ memberName | typogrify }} | {% if mayor.positionTitle %}<i>{{ mayor.positionTitle | typogrify }}</i>{% endif %}</cite>
+  </div>
+
+</section>
+{% endif %}
+
+
+{% if entry.historyBlock | length %}
+  {% set historyBlock = entry.historyBlock.one() %}
+<section id="about--history">
+  {% if entry.historyBlock.one().backgroundImage | length %}
+    <div id="about--history--image"></div>
+  {% endif %}
+
+  <div id="about--history--content">
+    <div id="about--history--content-text">
+      <h2>{{ historyBlock.headline | typogrify }}</h2>
+      <p>{{ historyBlock.text | typogrify }}</p>
+      <p class="learn-more"><a href="history" title="Learn More">Learn More</a></p>
+    </div>
+  </div>
+
+</section>
+{% endif %}
+
+
+{% if entry.factsAndFigures | length %}
+<section id="about--facts-figures">
+  <h2>Facts and Figures</h2>
+  <div class="inside">
+    {% for fact in entry.factsAndFigures.all() %}
+    <div class="block--fact">
+      <p>{{ fact.text }}</p>
+      <cite>{{ fact.reference }}</cite>
+    </div>
+    {% endfor %}
+
+  </div>
+</section>
+{% endif %}
+
+
+{% endcache %}
+{% endblock %}
+

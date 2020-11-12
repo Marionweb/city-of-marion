@@ -1,0 +1,27 @@
+{% if entry.videoFeatureBlock | length %}
+  {% set videoBlock = entry.videoFeatureBlock.one() %}
+
+  <section id="block--featured-video" style="background-color:{{ videoBlock.backgroundColor }}">
+    {% if videoBlock.backgroundImage | length %}
+      {%- import "macros/_images" as imageFunctions -%}
+      {% set image = videoBlock.backgroundImage.one() %}
+      <figure style="opacity:{{ videoBlock.backgroundImageOpacity }}">
+        {{ imageFunctions.responsivePicture(image.optimizedImagesHomepageVideoFeatureBg, image.alt) }}
+        {% if image.caption %}<figcaption>{{ image.caption }}</figcaption>{% endif %}
+      </figure>
+    {% endif %}
+
+    {% set video = videoBlock.video %}
+    {% if video | length %}
+
+    <div id="block--featured-video--content">
+      <div id="block--featured-video--title">
+        <h2>{{ videoBlock.headline | nl2br | typogrify }}</h2>
+        {% if videoBlock.subHeadline %}<h3>{{ videoBlock.subHeadline | nl2br | typogrify }}</h3>{% endif %}
+      </div>
+      <a id="block--featured-video--play" data-fancybox href="{{ video }}" data-options='{"toolbar" : false, "smallBtn" : true}' title="Play Video"><span>Play Video</span></a>
+    </div>
+    {% endif %}
+
+  </section>
+{% endif %}

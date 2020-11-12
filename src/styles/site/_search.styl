@@ -1,0 +1,133 @@
+#search--form--modal
+  display none
+  &.fancybox-content
+    background transparent
+    max-width rem(600px)
+    width 100%
+
+  .search-form
+    align-items: center
+    display: flex
+
+    input[type="search"]
+      width: 100%
+
+  input[type="search"]
+    position: relative
+    display: inline-block
+    direction: ltr
+    float: left
+    width: 100%
+    border-right none
+    & + button
+      flex-shrink: 0
+      button()
+      line-height 1.428571429
+      padding: $padding-base-vertical ($padding-base-horizontal * .75)
+      svg
+        width: rem(24px)
+        vertical-align: middle
+        > path
+          fill: $white
+          transition: fill $transition-timing
+
+
+
+
+
+
+
+
+.search-results-page
+  padding rem(40px) rem(30px)
+  +above(m)
+    lost-column 32/36
+    lost-offset: 2/36
+
+  form
+    padding 1em 0 2em
+    width 100%
+
+    .search-form
+      align-items: center
+      display: flex
+
+      input[type="search"]
+        width: 100%
+
+  input[type="search"]
+    position: relative
+    display: inline-block
+    direction: ltr
+    float: left
+    width: 100%
+    border-right none
+    & + button
+      flex-shrink: 0
+      button()
+      line-height 1.428571429
+      padding: $padding-base-vertical ($padding-base-horizontal * .75)
+      svg
+        width: rem(24px)
+        vertical-align: middle
+        > path
+          fill: $white
+          transition: fill $transition-timing
+
+
+
+  .result-summary
+    color $light-grey
+    margin-bottom: 1em
+
+    hr
+      margin: 5px 0
+
+  .result-notice
+    font-size: 130%;
+    margin: 0.2em 0 0.7em 0;
+    padding: 0.6em;
+    border: 1px solid #eee;
+    border-left-color: $light-blue
+    border-left-width: 5px;
+    border-radius: 3px;
+
+  .no-results-found
+    font-size: 1.5em;
+    margin: 2em 0;
+    text-align: center;
+
+  .result
+    margin-bottom: 2.5em;
+    .result-title
+      h1
+        font-family $module-news-events-preview-title-font
+        line-height $line-height-solid
+        margin 0
+        text-align left
+        color $module-news-events-preview-title-color
+        font-size $module-news-events-preview-title-size-mobile
+        margin-top rem(12px)
+        +above(m)
+          font-size $module-news-events-preview-title-size-desktop
+          margin-top rem(15px)
+
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+
+    .result-url
+      color: $light-grey
+      text-overflow: ellipsis;
+      overflow: hidden;
+      max-height: 2em;
+      white-space: nowrap;
+      margin .5em 0
+
+    p.result-text
+      font-size ($content-text-size * .9)
+      line-height: ($content-text-line-height * .9)
+      margin .5em 0 1em
+
+  .notice
+    color: $light-grey

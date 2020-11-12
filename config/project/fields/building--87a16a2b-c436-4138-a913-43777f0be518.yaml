@@ -1,0 +1,18 @@
+contentColumnType: string
+fieldGroup: 1baac923-6a88-450e-b39f-63bd7949f12f
+handle: building
+instructions: ''
+name: Building
+searchable: '1'
+settings:
+  limit: '1'
+  localizeRelations: false
+  selectionLabel: 'Select Building'
+  source: null
+  sources:
+    - 'section:56a72281-2b7d-4c88-839a-90710ec4b5b5'
+  targetSiteId: null
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

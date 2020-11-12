@@ -1,0 +1,162 @@
+.page-content
+  color $content-text-color
+  margin-bottom: 1em
+  &:last-child
+    margin-bottom 0
+
+  h1
+  h2
+  h3
+  h4
+  h5
+  h6
+    line-height $content-text-title-line-height
+
+  p
+  ul
+  ol
+    line-height: $content-text-line-height
+
+  p
+    font-size $content-text-size
+    margin 1em 0
+    & + p
+      // text-indent: 1em
+      margin-top: 1.5em
+      margin-bottom: 0
+
+  a
+    color: $content-link-color
+    font-weight: $content-link-weight
+    text-decoration: $content-link-decoration
+    transition: $link-transition, text-decoration $transition-timing
+    white-space: unset
+    &:active
+    &:focus
+    &:link
+    &:visited
+      transition: $link-transition
+    &:hover
+      color: $content-link-hover-color
+      text-decoration: $content-link-hover-decoration
+    &:focus
+      outline: 1px dotted currentColor
+
+
+  blockquote
+    color $content-blockquote-quote-color
+    font-size $content-blockquote-quote-size
+    line-height $content-blockquote-quote-line-height
+    margin $content-blockquote-margin
+    p
+      margin 0.5em 0
+
+    cite
+      color $content-blockquote-cite-color
+      font-size $content-blockquote-cite-size
+      font-style $content-blockquote-cite-style
+      font-weight $content-blockquote-cite-weight
+      margin-top $content-blockquote-cite-margin-top
+      > em
+        color $content-blockquote-cite2-color
+        font-size $content-blockquote-cite2-size
+        font-style $content-blockquote-cite2-style
+        font-weight $content-blockquote-cite2-weight
+        &:before
+          content: " | "
+          padding-left: 2px
+          padding-right: 2px
+
+  code, kbd, pre, samp
+    font-family $code
+    font-size: 1em
+    line-height: 1.42857143
+  code
+    color rgb(199, 37, 78, 1)
+    padding: rem(2px) rem(4px)
+    font-size: 90%
+    background-color: rgb(249, 242, 244, 1)
+    border-radius: $border-radius-base
+    white-space nowrap
+  kbd
+    padding 2px 4px
+    font-size 90%
+    color rgb(255, 255, 255, 1)
+    background-color rgb(51, 51, 51, 1)
+    border-radius $border-radius-base
+    box-shadow inset 0 -1px 0 rgba(0, 0, 0, 0.25)
+  pre
+    display block
+    padding (($line-height-computed - 1) / 2)
+    margin 0 0 ($line-height-computed / 2)
+    font-size ($base-font-size - 1)
+    line-height $line-height-base
+    color: $dark-gray
+    word-break break-all
+    word-wrap break-word
+    background-color: rgb(245, 245, 245, 1)
+    border: $border-width-base solid rgb(204, 204, 204, 1)
+    border-radius: $border-radius-base
+    // Account for some code outputs that place code tags in pre tags
+    code
+      padding 0
+      font-size inherit
+      color inherit
+      white-space pre-wrap
+      background-color transparent
+      border-radius 0
+
+  hr
+    margin 3em 0
+
+.image-grid
+  // our flexbox container
+
+  +above(m)
+    display flex
+    margin 0 0 0 -.5em
+    // setting the left margin at -.5em and the right at 0 offsets the grid to account for the gutters
+// .image-grid + .image-grid
+//   margin-top: -.5em
+$grid-image
+  margin 0 auto 1em
+  width 100%
+
+  +above(m)
+    margin 0 auto
+    flex 1 auto
+    padding 0 0 0 1em
+    // flex-basis set at 0 rather than 100%
+// register all possible ratios
+.grid-image,
+.grid-image--aspect3x2,
+.grid-image--aspect4x3,
+.grid-image--aspect2x3,
+.grid-image--aspect3x4,
+.grid-image--aspect3x1,
+.grid-image--aspect1x1,
+.grid-image--aspect16x9
+  @extend $grid-image
+.grid-image--aspect3x2
+  +above(m)
+    flex: (3/2) 0%
+.grid-image--aspect4x3
+  +above(m)
+    flex: (4/3) 0%
+.grid-image--aspect2x3
+  +above(m)
+    flex: (2/3) 0%
+.grid-image--aspect3x4
+  +above(m)
+    flex: (3/4) 0%
+.grid-image--aspect3x1
+  +above(m)
+    flex: (3/1) 0%
+.grid-image--aspect1x1
+  +above(m)
+    flex: (1/1) 0%
+.grid-image--aspect16x9
+  +above(m)
+    flex: (16/9) 0%
+
+

@@ -1,0 +1,31 @@
+contentColumnType: text
+fieldGroup: 1baac923-6a88-450e-b39f-63bd7949f12f
+handle: customSeo
+instructions: ''
+name: 'Custom SEO'
+searchable: '1'
+settings:
+  facebookEnabledFields:
+    - seoPreview
+    - ogTitle
+    - ogSiteNamePosition
+    - goDescription
+    - ogImage
+  facebookTabEnabled: '1'
+  generalEnabledFields:
+    - seoTitle
+    - seoDescription
+    - seoImage
+  generalTabEnabled: '1'
+  sitemapTabEnabled: ''
+  twitterEnabledFields:
+    - seoPreview
+    - twitterCardType
+    - twitterTitle
+    - twitterSiteNamePosition
+    - twitterDescription
+    - twitterImage
+  twitterTabEnabled: '1'
+translationKeyFormat: null
+translationMethod: none
+type: nystudio107\seomatic\fields\SeoSettings

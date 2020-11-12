@@ -1,0 +1,11 @@
+contentColumnType: boolean
+fieldGroup: 38b2fb4b-9a4f-4ada-b17f-5c864646b58a
+handle: requireEmail
+instructions: 'Should the form require an email address? If turned off, will be submitted coming from noreply@cityofmarion.in.gov'
+name: 'Require Email'
+searchable: '1'
+settings:
+  default: '1'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

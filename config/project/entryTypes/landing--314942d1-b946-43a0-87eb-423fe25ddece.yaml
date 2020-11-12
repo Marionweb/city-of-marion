@@ -1,0 +1,41 @@
+fieldLayouts:
+  32d3869f-86d8-426d-9464-e698c5084084:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: Title
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: 38158424-1094-4cc9-93ee-2a3175aa348c
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 050e10e5-e506-4904-b55a-8efac89dac16
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 8d58412c-2c37-4da6-892e-69ab4d8a413b
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 3bf4a6bc-a0ee-4ff9-ad77-4422fc25aca1
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Content
+        sortOrder: '1'
+      -
+        elements:
+          -
+            fieldUid: 57c99426-6a5d-4b35-aa93-cddf3d76f404
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Meta
+        sortOrder: '2'
+handle: landing
+hasTitleField: '1'
+name: 'Landing Page'
+section: a6ad0cda-56ac-4e50-adcd-f970f490e975
+sortOrder: '3'
+titleFormat: null

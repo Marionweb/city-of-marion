@@ -1,0 +1,127 @@
+field: a29967bc-ee07-4a6a-ac2f-2d20966bb285
+fieldLayouts:
+  6dd01d7a-a4ff-449a-843a-cc2bbe32743f:
+    tabs:
+      -
+        fields:
+          0452561f-e050-4c2a-9ff4-a31f1e48c49a:
+            required: '0'
+            sortOrder: '4'
+          6e8e0ea5-1bc2-480e-bb1a-1dc27ccad72d:
+            required: '0'
+            sortOrder: '5'
+          82f981c0-d192-4b14-b21f-cede4f5cffa4:
+            required: '1'
+            sortOrder: '1'
+          a06f5e26-add0-400c-84f7-f8f1d0e4db3e:
+            required: '0'
+            sortOrder: '2'
+          b6fccf1a-a410-45e0-b5c6-3f188b74a282:
+            required: '0'
+            sortOrder: '3'
+        name: Content
+        sortOrder: '1'
+fields:
+  0452561f-e050-4c2a-9ff4-a31f1e48c49a:
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: required
+    instructions: ''
+    name: 'Required?'
+    searchable: '1'
+    settings:
+      default: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
+  6e8e0ea5-1bc2-480e-bb1a-1dc27ccad72d:
+    contentColumnType: text
+    fieldGroup: null
+    handle: instructions
+    instructions: 'helpful text shown to visitors'
+    name: 'Instructions (optional)'
+    searchable: '1'
+    settings:
+      charLimit: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  82f981c0-d192-4b14-b21f-cede4f5cffa4:
+    contentColumnType: text
+    fieldGroup: null
+    handle: label
+    instructions: 'The label shown to visitors and the parameter for the field'
+    name: Label
+    searchable: '1'
+    settings:
+      charLimit: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  a06f5e26-add0-400c-84f7-f8f1d0e4db3e:
+    contentColumnType: string
+    fieldGroup: null
+    handle: inputType
+    instructions: ''
+    name: Type
+    searchable: '1'
+    settings:
+      options:
+        -
+          default: '1'
+          label: Text
+          value: text
+        -
+          default: ''
+          label: Email
+          value: email
+        -
+          default: ''
+          label: Phone
+          value: tel
+        -
+          default: ''
+          label: Date
+          value: date
+        -
+          default: ''
+          label: Number
+          value: number
+        -
+          default: ''
+          label: Time
+          value: time
+        -
+          default: ''
+          label: URL
+          value: url
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  b6fccf1a-a410-45e0-b5c6-3f188b74a282:
+    contentColumnType: text
+    fieldGroup: null
+    handle: placeholder
+    instructions: ''
+    name: 'Placeholder (optional)'
+    searchable: '1'
+    settings:
+      charLimit: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: text
+name: Text
+sortOrder: '1'

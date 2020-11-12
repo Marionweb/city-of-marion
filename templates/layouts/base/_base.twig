@@ -1,0 +1,17 @@
+{#
+    Base Layout
+#}
+
+{% extends "layouts/base/_core" %}
+
+{% block core %}
+
+  {% block crumbs %}{% if (entry is defined) or (type is defined) %}{% include 'modules/bread/_crumbs' %}{% endif %}{% endblock %}
+
+  {% block content %}{% endblock %}
+  {% block content_two %}{% endblock %}
+
+  {% include 'modules/footer/_footer' %}
+
+
+{% endblock %}

@@ -1,0 +1,44 @@
+{#
+    Base Layout - Parallax
+#}
+
+{% extends "layouts/base/_core" %}
+
+{% block core %}
+<div class="parallax">
+
+  <div class="parallax__layer parallax__layer--back">
+    {% if entry is defined and entry.section.handle != 'pages' %}
+      {% if entry.section.handle != 'departments' %}
+        {% if entry.section.handle != 'boards' %}
+          {% if entry.section.handle != 'departmentsContent' %}
+            {% include 'modules/bread/_crumbs' %}
+          {% endif %}
+        {% endif %}
+      {% endif %}
+    {% endif %}
+    {% block parallaxBack %}{% endblock %}
+  </div>
+
+  <div class="parallax__layer parallax__layer--base">
+
+    {% if entry is defined and entry.section.handle == 'pages' %}
+      {% include 'modules/bread/_crumbs' %}
+    {% elseif entry is defined and entry.section.handle == 'departments' %}
+      {% include 'modules/bread/_crumbs' %}
+    {% elseif entry is defined and entry.section.handle == 'boards' %}
+      {% include 'modules/bread/_crumbs' %}
+    {% elseif entry is defined and entry.section.handle == 'departmentsContent' %}
+      {% include 'modules/bread/_crumbs' %}
+    {% endif %}
+
+    {% block content %}{% endblock %}
+    {% block content_two %}{% endblock %}
+
+    {% include 'modules/footer/_footer' %}
+
+  </div>
+
+</div>
+
+{% endblock %}

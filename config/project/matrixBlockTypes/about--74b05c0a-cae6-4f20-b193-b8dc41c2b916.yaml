@@ -1,0 +1,79 @@
+field: d858362c-2646-4fc5-bb58-4206ebb85a7c
+fieldLayouts:
+  67951db2-cefd-422f-80fe-0f36d9f4dab4:
+    tabs:
+      -
+        fields:
+          448c6a7d-fe43-47c9-b825-973c856c15f7:
+            required: '1'
+            sortOrder: '3'
+          e188b2be-d490-41c4-a44c-c667f982ef8b:
+            required: '1'
+            sortOrder: '1'
+          fc934c18-f108-4292-890c-9d205925ebec:
+            required: '1'
+            sortOrder: '2'
+        name: Content
+        sortOrder: '1'
+fields:
+  448c6a7d-fe43-47c9-b825-973c856c15f7:
+    contentColumnType: string
+    fieldGroup: null
+    handle: image
+    instructions: ''
+    name: Image
+    searchable: '1'
+    settings:
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:ffe6bee7-f3f2-41de-9997-df6c2ada6fbe'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: ''
+      singleUploadLocationSource: 'volume:ffe6bee7-f3f2-41de-9997-df6c2ada6fbe'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: '1'
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  e188b2be-d490-41c4-a44c-c667f982ef8b:
+    contentColumnType: text
+    fieldGroup: null
+    handle: headline
+    instructions: ''
+    name: Headline
+    searchable: '1'
+    settings:
+      charLimit: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  fc934c18-f108-4292-890c-9d205925ebec:
+    contentColumnType: text
+    fieldGroup: null
+    handle: text
+    instructions: ''
+    name: Text
+    searchable: '1'
+    settings:
+      charLimit: ''
+      columnType: text
+      initialRows: '4'
+      multiline: '1'
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: about
+name: About
+sortOrder: '1'

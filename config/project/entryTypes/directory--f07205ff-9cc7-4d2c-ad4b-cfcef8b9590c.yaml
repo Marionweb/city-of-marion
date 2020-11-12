@@ -1,0 +1,25 @@
+fieldLayouts:
+  0c2aaf70-2f44-4e37-a47d-e64b3073817f:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: 'Page Title'
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: 050e10e5-e506-4904-b55a-8efac89dac16
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 8d58412c-2c37-4da6-892e-69ab4d8a413b
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Content
+        sortOrder: '1'
+handle: directory
+hasTitleField: '1'
+name: 'Staff Directory'
+section: 38ccff5d-286a-4567-b87a-fb632d3d98df
+sortOrder: '1'
+titleFormat: null

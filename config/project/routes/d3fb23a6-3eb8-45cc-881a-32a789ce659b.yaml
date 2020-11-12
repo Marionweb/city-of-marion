@@ -1,0 +1,9 @@
+siteUid: null
+sortOrder: '1'
+template: structure/minutes-agendas/_category
+uriParts:
+  - government/minutes-agendas/
+  -
+    - slug
+    - '[^\/]+'
+uriPattern: 'government/minutes-agendas/<slug:[^\/]+>'

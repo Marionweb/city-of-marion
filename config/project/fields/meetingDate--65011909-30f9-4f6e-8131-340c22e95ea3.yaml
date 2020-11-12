@@ -1,0 +1,13 @@
+contentColumnType: datetime
+fieldGroup: 770fc847-88dc-471d-918d-d241b9efd400
+handle: meetingDate
+instructions: ''
+name: 'Meeting Date'
+searchable: '1'
+settings:
+  minuteIncrement: '30'
+  showDate: true
+  showTime: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Date

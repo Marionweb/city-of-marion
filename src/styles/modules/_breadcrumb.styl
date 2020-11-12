@@ -1,0 +1,75 @@
+#breadcrumbs
+  padding: 0 (rem(30px) - $bread-divider-width)
+  margin: 0
+  list-style none
+  width 100%
+  display block
+  background-color $bread-background-color
+  font-family $bread-font-family
+  font-size $bread-font-size-mobile
+  font-weight $bread-font-weight
+  line-height $line-height-solid
+  text-transform $bread-text-transform
+
+  height $breadcrumb-total-height-mobile
+  max-height $breadcrumb-total-height-mobile
+  white-space nowrap
+  -webkit-overflow-scrolling touch
+  overflow-x scroll
+  overflow-y hidden
+  
+
+  +above(m)
+    font-size $bread-font-size-desktop
+    padding: 0 (rem(40px) - $bread-divider-width)
+    height $breadcrumb-total-height-desktop
+    max-height $breadcrumb-total-height-desktop
+    display flex
+    flex-wrap wrap
+    width 100%
+    white-space unset
+    overflow hidden
+
+
+  li
+    display: inline-block
+    position: relative
+    padding-right: ($bread-divider-width / 2)
+    &:after
+      content: $bread-divider-character
+      line-height: $line-height-solid
+      text-align: center
+      color: $bread-divider-color
+      position: absolute
+      top: 50%
+      right: 0
+      transform: translateY(-50%)
+      margin-top: 2px
+    &:last-child
+      padding-right 0
+      &:after
+        content: ''
+
+    a
+      display block
+      padding $bread-item-pad-top-mobile $bread-item-pad-side-mobile $bread-item-pad-bottom-mobile $bread-item-pad-side-mobile
+      text-decoration none
+
+      +above(m)
+        padding $bread-item-pad-top-desktop $bread-item-pad-side-desktop $bread-item-pad-bottom-desktop $bread-item-pad-side-desktop
+
+      &,
+      &:visited,
+      &:active
+        color: $bread-link-color
+
+    &.active
+      margin-right: 0
+      padding-right: 0
+      &, a
+        color: $bread-current-page-color
+      &:after
+        display: none
+
+    > span
+      color: inherit

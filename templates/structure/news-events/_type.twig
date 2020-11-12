@@ -1,0 +1,118 @@
+{% if craft.app.request.segments | last == 'event' %}{% redirect 'news-events/events' 301 %}
+{% endif %}
+
+{#
+    News & Events Types Template
+#}
+
+{% extends "layouts/base/_base" %}
+
+{% set type = type | camel %}
+{% set entryType = null %}
+{% set section = craft.app.sections.getSectionByHandle('newsEvents') %}
+{% for _entryType in section.getEntryTypes() %}
+  {% if _entryType.handle == type %}
+    {% set entryType = _entryType %}
+  {% endif %}
+{% endfor %}
+
+{% if not entryType %}
+  {% exit 404 %}
+{% endif %}
+
+{% if category is defined %}
+  {% set storyTypeSlug = category %}
+  {% set storyType = null %}
+  {% set storyTypeCats = craft.categories.group('storyType').all() %}
+  {% for _storyType in storyTypeCats %}
+    {% if _storyType.slug == storyTypeSlug %}
+      {% set storyType = _storyType %}
+    {% endif %}
+  {% endfor %}
+
+  {% if not storyType %}
+    {% exit 404 %}
+  {% endif %}
+{% endif %}
+
+{% set title = entryType.name %}
+
+{% set yearFilter = craft.app.request.getParam('year') %}
+{% set monthFilter = craft.app.request.getParam('month') %}
+
+{% set allQueryParams = {
+  'section': 'newsEvents',
+  'type': 'and, ' ~ type
+} %}
+
+{%- if (yearFilter is not null and yearFilter != 'Year') or (yearFilter != 'Year' and monthFilter is not null) -%}
+
+  {% set firstMonthQuery = (craft.app.request.getParam('month') is null or craft.app.request.getParam('month') == 'Month') ? 'January' : (craft.app.request.getParam('year') ~ '-' ~ craft.app.request.getParam('month') ~ '-01')|date('F') %}
+  {% set lastMonthQuery = (craft.app.request.getParam('month') is null or craft.app.request.getParam('month') == 'Month') ? 'December' : (craft.app.request.getParam('year') ~ '-' ~ craft.app.request.getParam('month') ~ '-01')|date('F') %}
+
+  {% set firstDayOfMonth = now | date_modify('first day of ' ~ firstMonthQuery ~ ' ' ~ yearFilter)|date('Y-m-d') %}
+  {% set lastDayOfMonth = now | date_modify('last day of ' ~ lastMonthQuery ~ ' ' ~ yearFilter)|date('Y-m-d') %}
+
+  {% if category is defined %}
+    {% set queryParams = {
+      'section': 'newsEvents',
+      'type': 'and, ' ~ type,
+      'postDate': 'and, >= ' ~ firstDayOfMonth ~ ', <= ' ~ lastDayOfMonth,
+      'relatedTo': {
+        'targetElement': storyType,
+        'field': 'storyType'
+      }
+    } %}
+  {% else %}
+    {% set queryParams = {
+      'section': 'newsEvents',
+      'type': 'and, ' ~ type,
+      'postDate': 'and, >= ' ~ firstDayOfMonth ~ ', <= ' ~ lastDayOfMonth
+    } %}
+  {% endif %}
+  
+{%- elseif (yearFilter is null or yearFilter == 'Year') and category is defined -%}
+
+  {# Only Story Type Category #}
+  {% set queryParams = {
+    'section': 'newsEvents',
+    'type': 'and, ' ~ type,
+    'relatedTo': {
+      'targetElement': storyType,
+      'field': 'storyType'
+    }
+  } %}
+
+{%- else -%}
+
+  {# No filters #}
+  {% set queryParams = {
+    'section': 'newsEvents',
+    'type': 'and, ' ~ type
+  } %}
+
+{%- endif -%}
+
+{# HTML #}
+{% block content %}
+
+  <header id="news-events--intro">
+    <div id="news-events--intro-text">
+      <h1>{{ entryType.name | pluralize }}{% if category is defined %} - {{ storyType.title }}{% endif %}</h1>
+      {# {%- if entry.headline -%}<h2>{{ entry.headline }}</h2>{%- endif -%} #}
+      {# {%- if entry.leadIn -%}<p>{{ entry.leadIn }}</p>{%- endif -%} #}
+    </div>
+  </header>
+
+  {% include 'structure/news-events/_nav' %}
+
+  <section id="news-events--articles-list">
+    {% paginate craft.entries(queryParams).limit(6)as pageInfo, recentNews %}
+      {% for entry in recentNews %}
+        {% include 'modules/content/_block-news-events-entry' %}
+      {% endfor %}
+
+      {% include 'modules/nav/_pagination' %}
+    </section>
+
+  {% endblock %}

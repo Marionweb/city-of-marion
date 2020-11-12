@@ -1,0 +1,109 @@
+<div id="department--{{ department.slug }}--modal" class="contact-department-modal-pop">
+
+  {% macro errorList(errors) %}
+      {% if errors %}
+          <ul class="errors">
+              {% for error in errors %}
+                  <li>{{ error }}</li>
+              {% endfor %}
+          </ul>
+      {% endif %}
+  {% endmacro %}
+
+  {% from _self import errorList %}
+
+
+  <form id="department--{{ department.slug }}--form" method="post" action="" accept-charset="UTF-8">
+      {{ csrfInput() }}
+      <input type="hidden" name="toEmail" value="{{ department.email|hash }}">
+      <input type="hidden" name="action" value="contact-form/send">
+      <input id="swampFox" name="swampFox" type="text">{# honeypot #}
+
+      <fieldset>
+
+        <legend>Send a message to {{ department.title }}</legend>
+
+        <div>
+          <label for="department--{{ department.slug }}--form-from-name">Your Name</label></h3>
+          <input id="department--{{ department.slug }}--form-from-name" type="text" name="fromName" value="{{ message.fromName ?? '' }}">
+          {{ message is defined and message ? errorList(message.getErrors('fromName')) }}
+        </div>
+
+        <div>
+          <label for="department--{{ department.slug }}--form-from-email">Your Email</label></h3>
+          <input id="department--{{ department.slug }}--form-from-email" type="email" name="fromEmail" value="{{ message.fromEmail ?? '' }}">
+          {{ message is defined and message ? errorList(message.getErrors('fromEmail')) }}
+        </div>
+
+        <div>
+          <label for="department--{{ department.slug }}--form-subject">Subject</label></h3>
+          <input id="department--{{ department.slug }}--form-subject" type="text" name="subject" value="{{ message.subject ?? '' }}">
+          {{ message is defined and message ? errorList(message.getErrors('subject')) }}
+        </div>
+
+        <div>
+          <label for="department--{{ department.slug }}--form-phone">Your phone number</label></h3>
+          <input id="department--{{ department.slug }}--form-phone" type="tel" name="message[Phone]" value="">
+        </div>
+
+        <div>
+          <label for="department--{{ department.slug }}--form-message">Message</label>
+          <textarea rows="10" cols="40" id="department--{{ department.slug }}--form-message" name="message[body]">{{ message.message ?? '' }}</textarea>
+          {{ message is defined and message ? errorList(message.getErrors('message')) }}
+        </div>
+
+        <div class="form-group">
+          <div class="form-input">
+            <input type="submit" id="department--{{ department.slug }}--form-submit" value="Send Message">
+          </div>
+          <div class="form-input">
+            <div id="department--{{ department.slug }}--thanks" class="thank-you-message center">
+              <p>Thank you for your message!</p>
+            </div>
+          </div>
+        </div>
+
+
+
+      </fieldset>
+  </form>
+
+</div>
+
+{% js %}
+{% minify js %}
+document.addEventListener('DOMContentLoaded', function() {
+
+  $('#department--{{ department.slug }}--form').submit(function(ev) {
+    // Prevent the form from actually submitting
+    ev.preventDefault();
+
+
+    {# disable stuff, give feedback to UI #}
+    $('#department--{{ department.slug }}--form-submit').prop('disabled', true).val('Sending...');
+
+    // Send it to the server
+    $.ajax('/', {
+      dataType: 'json',
+      type: 'POST',
+      data: $(this).serialize(),
+      success: function(response) {
+        if (response.success) {
+          $('#department--{{ department.slug }}--thanks').fadeIn();
+
+          {# reset form #}
+          $('#department--{{ department.slug }}--form-submit').prop('disabled', false);
+          $('#department--{{ department.slug }}--form-submit').val('Send Message');
+          $(this)[0].reset();
+        } else {
+          // response.error will be an object containing any validation errors that occurred, indexed by field name
+          // e.g. response.error.fromName => ['From Name is required']
+          alert('An error occurred. Please try again.');
+        }
+      }
+    });
+  });
+
+});
+{% endminify %}
+{% endjs %}

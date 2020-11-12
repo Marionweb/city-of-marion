@@ -1,0 +1,79 @@
+field: d197cf7a-a735-40ce-ba8b-9b9c4fec3880
+fieldLayouts:
+  3800e3f1-c889-4218-a23b-863d233e57df:
+    tabs:
+      -
+        fields:
+          0de60bdf-47f8-41a0-9c3c-eaf3ba796032:
+            required: '1'
+            sortOrder: '2'
+          3b664f91-6113-499c-9ed5-562fc466a19c:
+            required: '1'
+            sortOrder: '3'
+          b43b48ea-e68f-4700-9cfe-79ad40b72783:
+            required: '1'
+            sortOrder: '1'
+        name: Content
+        sortOrder: '1'
+fields:
+  0de60bdf-47f8-41a0-9c3c-eaf3ba796032:
+    contentColumnType: text
+    fieldGroup: null
+    handle: text
+    instructions: ''
+    name: Text
+    searchable: '1'
+    settings:
+      charLimit: ''
+      columnType: text
+      initialRows: '4'
+      multiline: '1'
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  3b664f91-6113-499c-9ed5-562fc466a19c:
+    contentColumnType: string
+    fieldGroup: null
+    handle: backgroundImage
+    instructions: ''
+    name: 'Background Image'
+    searchable: '1'
+    settings:
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:ffe6bee7-f3f2-41de-9997-df6c2ada6fbe'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: ''
+      singleUploadLocationSource: 'volume:ffe6bee7-f3f2-41de-9997-df6c2ada6fbe'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: '1'
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  b43b48ea-e68f-4700-9cfe-79ad40b72783:
+    contentColumnType: text
+    fieldGroup: null
+    handle: headline
+    instructions: ''
+    name: Headline
+    searchable: '1'
+    settings:
+      charLimit: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: history
+name: History
+sortOrder: '1'

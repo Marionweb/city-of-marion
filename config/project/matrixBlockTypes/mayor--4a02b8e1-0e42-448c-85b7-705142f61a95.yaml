@@ -1,0 +1,120 @@
+field: 80f2b912-0560-4d2f-957a-6b54685713e3
+fieldLayouts:
+  e2b03971-e439-4dc5-b94f-7f11d913c11f:
+    tabs:
+      -
+        fields:
+          465f35b9-22a8-4f43-86cc-efc50ed55127:
+            required: '1'
+            sortOrder: '3'
+          71eed784-2465-483b-b9e7-70564b66b18f:
+            required: '0'
+            sortOrder: '5'
+          75227f98-fa8f-498e-8ee0-3b9e0e1e3b83:
+            required: '1'
+            sortOrder: '4'
+          770f190e-867e-4a9b-ab8c-998aa5901931:
+            required: '0'
+            sortOrder: '2'
+          d2a4bc90-6972-438e-98df-00cfd530d4d3:
+            required: '1'
+            sortOrder: '1'
+        name: Content
+        sortOrder: '1'
+fields:
+  465f35b9-22a8-4f43-86cc-efc50ed55127:
+    contentColumnType: text
+    fieldGroup: null
+    handle: text
+    instructions: ''
+    name: Text
+    searchable: '1'
+    settings:
+      charLimit: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  71eed784-2465-483b-b9e7-70564b66b18f:
+    contentColumnType: string
+    fieldGroup: null
+    handle: imageOverride
+    instructions: 'Optional, select a different image if you don''t want to use the same one as the Mayor''s primary image.'
+    name: 'Image Override'
+    searchable: '1'
+    settings:
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:ffe6bee7-f3f2-41de-9997-df6c2ada6fbe'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: ''
+      singleUploadLocationSource: 'volume:1491fd85-7dd7-4f86-8c03-642e538c00ea'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: '1'
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  75227f98-fa8f-498e-8ee0-3b9e0e1e3b83:
+    contentColumnType: string
+    fieldGroup: null
+    handle: mayor
+    instructions: ''
+    name: Mayor
+    searchable: '1'
+    settings:
+      limit: '1'
+      localizeRelations: false
+      selectionLabel: ''
+      source: null
+      sources:
+        - 'section:3c2ea8b9-1453-4aeb-a64a-e58761ce7d70'
+      targetSiteId: null
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+  770f190e-867e-4a9b-ab8c-998aa5901931:
+    contentColumnType: text
+    fieldGroup: null
+    handle: subHeadline
+    instructions: ''
+    name: Sub-Headline
+    searchable: '1'
+    settings:
+      charLimit: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  d2a4bc90-6972-438e-98df-00cfd530d4d3:
+    contentColumnType: text
+    fieldGroup: null
+    handle: headline
+    instructions: ''
+    name: Headline
+    searchable: '1'
+    settings:
+      charLimit: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: mayor
+name: Mayor
+sortOrder: '1'

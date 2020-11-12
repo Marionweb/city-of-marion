@@ -1,0 +1,121 @@
+#block--featured-video
+  // background-color $module-video-feature-background-color
+  position relative
+  height 0
+  padding-bottom percentage(15/16)
+  +above(l)
+    padding-bottom percentage(5/12)
+
+  figure
+    line-height 0
+    margin 0
+    position absolute
+    top 0
+    left 0
+    z-index 0
+    width 100%
+    height 0
+    opacity .8
+  figure.mobile
+    padding-bottom percentage(15/16)
+  figure.desktop
+    display none
+    visibility hidden
+    padding-bottom percentage(5/12)
+  +above(desktop-min)
+    figure.mobile
+      display none
+      visibility hidden
+    figure.desktop
+      display block
+      visibility visible
+
+  #block--featured-video--content
+    position absolute
+    top 0
+    left 0
+    right 0
+    bottom 0
+    z-index 5
+    align-items center
+
+    +below(tablet-max)
+      lost-flex-container: column
+      justify-content center
+      left rem(15px)
+      right rem(15px)
+
+    +above(desktop-min)
+      lost-flex-container: row
+
+  #block--featured-video--title
+    +between(desktop-min, desktop-max)
+      lost-column 18/36
+      lost-offset: 2/36
+    +above(xl)
+      lost-column 17/36
+      lost-offset 4/36
+
+    h2
+      color $module-video-feature-headline-color
+      font-family $module-video-feature-headline-font
+      font-size $module-video-feature-headline-size-mobile
+      line-height 1.0666666667
+      margin 0 0 rem(44px) 0
+      text-align center
+      text-transform $module-video-feature-headline-transform
+      +above(l)
+        font-size $module-video-feature-headline-size-desktop
+        margin 0
+        text-align left
+    h3
+      color $module-video-feature-subheadline-color
+      font-family $module-video-feature-subheadline-font
+      font-size $module-video-feature-subheadline-size-mobile
+      font-style $module-video-feature-subheadline-style
+      line-height 1.1666666667
+      margin rem(22px) 0 0
+      display none
+      visibility hidden
+      +above(l)
+        display block
+        visibility visible
+        font-size $module-video-feature-subheadline-size-desktop
+
+
+  a#block--featured-video--play
+    color $module-video-feature-video-color
+    display block
+    font-family $module-video-feature-video-font
+    font-size $module-video-feature-video-font-size
+    font-weight $module-video-feature-video-font-weight
+    position relative
+    text-align center
+    text-decoration none
+    text-transform $module-video-feature-video-transform
+    transition: $link-transition
+    z-index 5
+    +above(l)
+      lost-offset 4/36
+
+    &::before
+      background-color: $module-video-feature-video-color
+      background-repeat: no-repeat
+      background-size: cover
+      content ''
+      display block
+      height rem(94px)
+      transition: background-color $transition-timing
+      mask: embedurl("../sprites/play.svg", "utf8") no-repeat 50% 50% / contain
+      margin-bottom rem(21.5px)
+
+    span
+      display block
+
+    &:hover
+      color $module-video-feature-video-hover-color
+      &::before
+        background-color: $module-video-feature-video-hover-color
+
+
+

@@ -1,0 +1,38 @@
+button($bg=$button-background, $bg-hover=$button-hover-background, $color=$button-text-color, $color-hover=$button-text-color, $fs=$button-font-size, $lh=$button-line-height, $pad=$button-padding, $transform=$button-transform, $align=center)
+  background-color $bg
+  border 0 none
+  border-radius 0
+  box-shadow $button-box-shadow
+  color $color
+  cursor pointer
+  font-family $button-font
+  font-size $fs
+  font-weight $button-font-weight
+  display inline-block
+  line-height $lh
+  padding $pad
+  text-align $align
+  text-decoration none
+  text-transform $transform
+  transition $button-transition
+  vertical-align: middle
+  
+  &:hover
+    background-color $bg-hover
+    box-shadow $button-hover-box-shadow
+    color $color-hover
+    text-decoration none
+
+
+input[type=button]
+input[type=submit]
+input[type=reset]
+  button()
+  min-width rem(220px)
+
+  &[disabled], fieldset[disabled] &
+    opacity .5
+    &:hover
+      background-color $button-background
+      box-shadow $button-box-shadow
+      cursor not-allowed

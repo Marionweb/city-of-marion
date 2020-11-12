@@ -1,0 +1,62 @@
+contentColumnType: text
+fieldGroup: d4c986d6-9200-4dfa-967f-daac942dce8f
+handle: optimizedImages5x4
+instructions: ''
+name: 'Optimized Images 5x4'
+searchable: '1'
+settings:
+  variants:
+    -
+      aspectRatioX: '5'
+      aspectRatioY: '4'
+      format: jpg
+      quality: '60'
+      retinaSizes:
+        - '1'
+        - '2'
+      useAspectRatio: '1'
+      width: '1690'
+    -
+      aspectRatioX: '5'
+      aspectRatioY: '4'
+      format: jpg
+      quality: '60'
+      retinaSizes:
+        - '1'
+        - '2'
+      useAspectRatio: '1'
+      width: '1280'
+    -
+      aspectRatioX: '5'
+      aspectRatioY: '4'
+      format: jpg
+      quality: '60'
+      retinaSizes:
+        - '1'
+        - '2'
+      useAspectRatio: '1'
+      width: '980'
+    -
+      aspectRatioX: '5'
+      aspectRatioY: '4'
+      format: jpg
+      quality: '60'
+      retinaSizes:
+        - '1'
+        - '2'
+      useAspectRatio: '1'
+      width: '736'
+    -
+      aspectRatioX: '5'
+      aspectRatioY: '4'
+      format: jpg
+      quality: '60'
+      retinaSizes:
+        - '1'
+        - '2'
+        - '3'
+      useAspectRatio: '1'
+      width: '480'
+translationKeyFormat: null
+translationMethod: none
+type: nystudio107\imageoptimize\fields\OptimizedImages

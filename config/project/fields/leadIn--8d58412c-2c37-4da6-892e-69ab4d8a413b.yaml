@@ -1,0 +1,15 @@
+contentColumnType: text
+fieldGroup: 1baac923-6a88-450e-b39f-63bd7949f12f
+handle: leadIn
+instructions: ''
+name: 'Lead In'
+searchable: '1'
+settings:
+  charLimit: ''
+  columnType: text
+  initialRows: '4'
+  multiline: '1'
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

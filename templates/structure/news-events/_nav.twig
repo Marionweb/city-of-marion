@@ -1,0 +1,80 @@
+<nav id="news-events--nav">
+  <div class="news-events--nav--filter-row news-events--nav--filter-row--type">
+    <input type="checkbox" id="news-events--nav--filter-row--type">
+    <label for="news-events--nav--filter-row--type"><span>Category</span></label>
+    <ul class="news-events--nav--filters news-events--nav--filters--type">
+    {% for entryType in craft.app.sections.getSectionByHandle('newsEvents').getEntryTypes() %}
+      {% set firstSegment = craft.app.request.segments|first %}
+      {% if entryType.handle == 'event' %}
+        <li{{ 'event' == craft.app.request.segments|last ? ' class="current"' : '' }}><a href="{{ url(firstSegment~'/events/') }}">{{ entryType.name|pluralize }}</a></li>
+      {% else %}
+        {% set articleTypeSegment = entryType.handle|replace('/(^|[a-z])([A-Z])/', '\\1-\\2')|lower %}
+        <li{{ articleTypeSegment == craft.app.request.getSegment(3) ? ' class="current"' : '' }}><a href="{{ url(firstSegment ~ '/type/' ~ articleTypeSegment) }}">{{ entryType.name | pluralize }}</a></li>
+      {% endif %}
+    {% endfor %}
+    </ul>
+  </div>
+  {% if (craft.app.request.getSegment(3)) == 'story' %}
+  <div class="news-events--nav--filter-row news-events--nav--filter-row--type news-events--nav--filter-row--type--story">
+    <input type="checkbox" id="news-events--nav--filter-row--type--story">
+    <label for="news-events--nav--filter-row--type--story"><span>Type</span></label>
+    <ul class="news-events--nav--filters news-events--nav--filters--type news-events--nav--filters--type--story">
+    {% for storyType in craft.categories.group('storyType').all() %}
+      {% set firstSegment = craft.app.request.segments|first %}
+      {% set articleTypeSegment = craft.app.request.getSegment(3) %}
+      {% set storyTypeSegment = storyType.slug %}
+      <li{{ storyTypeSegment == craft.app.request.segments|last ? ' class="current"' : '' }}><a href="{{ url(firstSegment ~ '/type/' ~ articleTypeSegment ~ '/' ~ storyTypeSegment) }}">{{ storyType.title }}</a></li>
+    {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+  <div class="news-events--nav--filter-row news-events--nav--filter-row--date">
+    <input type="checkbox" id="news-events--nav--filter-row--date">
+    <label for="news-events--nav--filter-row--date"><span>Date</span></label>
+    <form class="news-events--nav--filters">
+      <ul class="news-events--nav--filters--date">
+        <li>
+          <select id="news-events--nav--filters--date--year" name="year">
+            <option placeholder>Year</option>
+            {% for year, entriesInYear in craft.entries(allQueryParams).orderBy('postDate desc').all() | group("postDate|date('Y')") %}
+            <option value="{{ year }}"{% if craft.app.request.getParam('year') == year %} selected{% endif %}>{{ year }}</option>
+            {% endfor %}
+          </select>
+        </li>
+        <li>
+          <select id="news-events--nav--filters--date--month" name="month">
+            <option placeholder>Month</option>
+            {% for month, entriesInMonth in craft.entries(allQueryParams).orderBy('postDate asc').all() | group("postDate|date('F')") %}
+            <option value="{{ month|date('m') }}"{% if craft.app.request.getParam('month') == month|date('m') %} selected{% endif %}>{{ month }}</option>
+            {% endfor %}
+          </select>
+        </li>
+        <li>
+          <input value="Filter Date" type="submit">
+        </li>
+      </ul>
+    </form>
+  </div>
+</nav>
+
+{% js %}
+document.addEventListener('DOMContentLoaded', function() {
+  var years = new Choices(document.getElementById('news-events--nav--filters--date--year'), {
+    searchEnabled: false,
+    placeholder: true
+  });
+  var months = new Choices(document.getElementById('news-events--nav--filters--date--month'), {
+    searchEnabled: false,
+    placeholder: true,
+    shouldSort: false
+  }){% if craft.app.request.getParam('year') is null or craft.app.request.getParam('year') == 'Year' %}.disable(){% endif %};
+
+  years.passedElement.element.addEventListener('change', function(e) {
+    if (e.detail.value != 'Year') {
+      months.enable();
+    } else {
+      months.disable();
+    }
+  });
+});
+{% endjs %}

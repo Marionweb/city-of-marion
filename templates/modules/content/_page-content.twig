@@ -1,0 +1,101 @@
+{% for block in entry.pageContent.all() %}
+<section class="page-content page-content--block block--{{ block.type }}">
+
+  {% switch block.type %}
+
+    {% case 'richText' %}
+    {# RICH TEXT #}
+
+      {{ block.text | typogrify }}
+
+    {% case 'image' %}
+    {# IMAGES #}
+
+      <div class="image-grid">
+
+      {% set images = block.image %}
+      {% if images | length == "1" %}
+        {# SINGLE IMAGE #}
+
+        {% set image = images.one() %}
+        {% if craft.app.request.isLivePreview and image.width < 1600 %}
+          <p>Please assign an image that is at least 1600px wide.</p>
+        {% endif %}
+        {% include "modules/images/_grid-image_single" %}
+
+      {% elseif images | length > "1" %}
+        {# ROW OF IMAGES #}
+
+        {% for image in images.all() %}
+          {% if craft.app.request.isLivePreview and image.width < 1600 %}
+            <p>Please assign an image that is at least 1600px wide.</p>
+          {% endif %}
+          {% include "modules/images/_grid-image" %}
+        {% endfor %}
+
+      {% endif %}
+      </div>
+
+    {% case 'video' %}
+    {# VIDEO #}
+      <div class="embed-container type-video">
+        {% set video = block.video %}
+
+        {{ craft.videoEmbedder.embed(video, {autoplay: 0, rel: 0, theme: 'light'}) }}
+
+      </div>
+
+    {% case 'embed' %}
+    {# EMBEDDED CONTENT #}
+
+      {% if block.embedUrl.embedData.type == "video" %}
+        {# VIDEO #}
+
+        <div class="embed-container type-video {{block.embedUrl.embedData.providerName|lower|kebab}}">
+          {% set videoUrl = block.embedUrl.embedData.url %}
+          {{ craft.videoEmbedder.embed(videoUrl, {autoplay: 0, rel: 0, theme: 'light'}) }}
+
+        </div>
+
+      {% elseif block.embedUrl.embedData.type == "rich" %}
+        {# FACEBOOK/TWITTER #}
+
+        <div class="embed-container type-{{block.embedUrl.embedData.type}} {{block.embedUrl.embedData.providerName|lower|kebab}}">
+          {{ block.embedUrl.embedData.code|replace('<iframe ', '<iframe class="lazyload" ') | raw }}
+        </div>
+      {% else %}
+        {# CATCH-ALL FOR REMAINING #}
+
+        <div class="embed-container type-{{block.embedUrl.embedData.type}} {{block.embedUrl.embedData.providerName|lower|kebab}}">
+          {{ block.embedUrl.embedData.code|replace('<iframe ', '<iframe class="lazyload" ') | raw }}
+        </div>
+
+      {% endif %}
+
+    {% case 'quote' %}
+    {# QUOTES #}
+
+      <blockquote>
+        <p>{{ block.quote | typogrify }}</p>
+        <footer>
+          <cite>{% if block.citeUrl %}<a href="{{ block.citeUrl }}" target="_blank">{% endif %}{{ block.cite | typogrify }}{% if block.citeUrl %}</a>{% endif %}{% if block.citeSecondary %} <em>{{ block.citeSecondary | typogrify }}</em>{% endif %}</cite>
+      </blockquote>
+
+    {% case 'buttonInternal' %}
+    {# BUTTON LINK - INTERNAL PAGE #}
+      {% set buttons = block.entry.all() %}
+      <ul>
+        {% for link in buttons %}
+          <li class="quick-links--item"><a href="{{ link.url }}" title="{{ link.title }}">{{ link.title }}</a></li>
+        {% endfor %}
+      </ul>
+
+    {% case 'buttonExternal' %}
+    {# BUTTON LINK - EXTERNAL PAGE #}
+      <ul>
+        <li class="quick-links--item"><a href="{{block.linkUrl}}"{% if block.newWindow %} target="_blank"{% endif %}>{{block.linkTitle}}</a></li>
+      </ul>
+
+  {% endswitch %}
+</section>
+{% endfor %}

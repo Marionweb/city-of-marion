@@ -1,0 +1,11 @@
+{% if (entry.contactPerson is defined) and (entry.contactPerson | length) %}
+<section class="page-content page-content--block block--contact-person">
+  <h4>Contact Us</h4>
+  <ul>
+  {% for person in entry.contactPerson.all() %}
+    {% set member = person.person.one() %}
+    {% include "modules/content/_block-staff-member" with { contactFor: person.contactFor.all() } %}
+  {% endfor %}
+  </ul>
+</section>
+{% endif %}

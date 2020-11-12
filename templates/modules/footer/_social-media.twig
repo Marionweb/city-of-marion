@@ -1,0 +1,19 @@
+<ul id="footer--social">
+  {% for block in footer.socialMedia.all() %}
+
+    <li class="footer--social--{{block.type}}">
+    {% switch block.type %}
+      {% case 'facebook' %}
+        <a href="http://facebook.com/{{ block.pageUrl }}" target="_blank" title="Like {{ siteName }} on Facebook"><span>Like us on Facebook</span></a>
+      {% case 'twitter' %}
+        <a href="https://twitter.com/{{ block.twitterName }}" target="_blank" title="Follow {{ siteName }} on Twitter"><span>Follow us on Twitter</span></a>
+      {% case 'instagram' %}
+        <a href="https://instagram.com/{{ block.instagramName }}" target="_blank" title="Follow {{ siteName }} on Instagram"><span>Follow us on Instagram</span></a>
+      {% case 'linkedin' %}
+        <a href="{{ block.pageUrl }}" target="_blank" title="Follow {{ siteName }} on LinkedIn"><span>Follow us on LinkedIn</span></a>
+      {% case 'youtube' %}
+        <a href="{{ block.pageUrl }}" target="_blank" title="Subscribe to {{ siteName }}'s YouTube Channel"><span>Subscribe to our YouTube Channel</span></a>
+    {% endswitch %}
+    </li>
+  {% endfor %}
+</ul>

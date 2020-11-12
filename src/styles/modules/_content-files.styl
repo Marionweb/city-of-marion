@@ -1,0 +1,155 @@
+.block--attachments
+  background-color $snow
+  border rem(1px) solid $light-gray
+  color $navy
+  display block
+  padding rem(14px)
+  width 100%
+  margin rem(40px) 0
+
+  h5
+    margin-top 0
+    fontBold()
+    font-size: rem(12px)
+    uppercase()
+    color: #888
+    margin-bottom .25em
+    &::before
+      display: inline-block
+      font: normal normal normal 14px/1 FontAwesome
+      font-size: inherit
+      text-rendering: auto
+      -webkit-font-smoothing: antialiased
+      -moz-osx-font-smoothing: grayscale
+      content '\f0c6'
+      margin-right 0.25em
+
+  ul
+    list-style none
+    margin 0
+    padding 0
+
+    li
+      margin-bottom rem(5px)
+
+    a[href]
+      padding rem(10px) rem(8px)
+      background-color $white
+      border-radius rem(2px)
+      box-shadow rem(1px) rem(1px) rem(3px) $light-gray
+      align-items center
+      display flex
+      &:hover
+        text-decoration none
+      .preview,
+      .icon
+        vertical-align middle
+        display flex
+        align-items center
+        justify-content: center
+        width rem(60px)
+        height rem(60px)
+        margin-right rem(20px)
+        background-color $light-gray
+      .icon
+        font-size: rem(36px)
+        &.audio
+          background-color #7c7c7c
+          color $white
+        &.compressed
+          background-color #d0929a
+          color $white
+        &.excel
+          background-color #54a03b
+          color $white
+        &.html
+          background-color #f16628
+          color $white
+        &.image
+          background-color #517fa7
+          color $white
+        &.pdf
+          background-color #c21e07
+          color $white
+        &.php
+          background-color #0f91c6
+          color $white
+        &.powerpoint
+          background-color #d24626
+          color $white
+        &.text
+          background-color #ffa600
+          color $white
+        &.video
+          background-color #42c1fc
+          color $white
+        &.word
+          background-color #2b5697
+          color $white
+      .title
+        width calc(100% - 112px)
+        height rem(60px)
+        vertical-align middle
+        justify-content center
+        display flex
+        flex-direction column
+        border-right 2px solid $light-gray
+        overflow hidden
+        padding-right rem(10px)
+        white-space nowrap
+        overflow hidden
+        text-overflow ellipsis
+        p
+          font-size rem(12px)
+          margin 0
+          white-space nowrap
+          overflow hidden
+          text-overflow ellipsis
+          vertical-align middle
+          +above(m)
+            font-size rem(14px)
+          
+          &.filename
+            font-weight: $font-weight.regular
+      &:after
+        width: rem(38px)
+        margin-left rem(8px)
+        color $light-gray
+        display: inline-block
+        text-align center
+        font: normal normal normal 14px/1 FontAwesome
+        font-size: inherit
+        text-rendering: auto
+        -webkit-font-smoothing: antialiased
+        -moz-osx-font-smoothing: grayscale
+        content '\f0ed'
+
+
+
+
+
+.{$fa-css-prefix}.file-text:before
+  content: $fa-var-file-text-o
+.{$fa-css-prefix}.file-pdf:before
+  content: $fa-var-file-pdf-o
+.{$fa-css-prefix}.file-word:before
+  content: $fa-var-file-word-o
+.{$fa-css-prefix}.file-excel:before
+  content: $fa-var-file-excel-o
+.{$fa-css-prefix}.file-powerpoint:before
+  content: $fa-var-file-powerpoint-o
+.{$fa-css-prefix}.file-photo:before,
+.{$fa-css-prefix}.file-picture:before,
+.{$fa-css-prefix}.file-image:before
+  content: $fa-var-file-image-o
+.{$fa-css-prefix}.file-zip:before,
+.{$fa-css-prefix}.file-archive:before
+  content: $fa-var-file-archive-o
+.{$fa-css-prefix}.file-sound:before,
+.{$fa-css-prefix}.file-audio:before
+  content: $fa-var-file-audio-o
+.{$fa-css-prefix}.file-movie:before,
+.{$fa-css-prefix}.file-video:before
+  content: $fa-var-file-video-o
+.{$fa-css-prefix}.file-code:before
+  content: $fa-var-file-code-o

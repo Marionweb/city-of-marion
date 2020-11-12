@@ -1,0 +1,12 @@
+currLabel: Commerce
+customIcon: null
+enabled: '1'
+handle: commerce
+icon: /srv/users/serverpilot/apps/cityofmarion-production/releases/b287c57de95ef30c1bb9a42865aac81cbdfe13b8/vendor/craftcms/commerce/src/icon-mask.svg
+layoutId: '3'
+newWindow: '0'
+order: '6'
+prevLabel: Commerce
+prevUrl: commerce
+type: '0'
+url: commerce

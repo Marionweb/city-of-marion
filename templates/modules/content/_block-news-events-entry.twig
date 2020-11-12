@@ -1,0 +1,41 @@
+<article id="preview-{{ entry.id }}" class="block--news-events--preview article-type-{{ entry.type }}">
+  <a href="{{ entry.url }}" title="Champion of the Month: {{ entry.title }}">
+    {% set employeePhotoExists = false %}
+    {% if entry.employee | length %}
+      {% if entry.employee.one().staffPhoto | length %}
+        {% set employeePhotoExists = true %}
+      {% endif %}
+    {% endif %}
+
+    {% if (entry.primaryImage | length) or employeePhotoExists %}
+      {%- import "macros/_images" as imageFunctions -%}
+      {% if entry.primaryImage | length %}
+        {%- set image = entry.primaryImage.one() -%}
+      {% else %}
+        {%- set image = entry.employee.one().staffPhoto.one() -%}
+      {% endif %}
+
+      <figure>
+        {{ imageFunctions.responsivePicture(image.optimizedImagesBlockPreview, image.alt) }}
+        {% if image.caption %}<figcaption>{{ image.caption }}</figcaption>{% endif %}
+      </figure>
+    {% else %}
+      <figure class="mobile no-image">
+        <img src="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%273380%27 height=%271901%27 style=%27background:%23383932%27 /%3E">
+      </figure>
+      <figure class="desktop no-image">
+        <img src="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%273380%27 height=%271901%27 style=%27background:%23383932%27 /%3E">
+      </figure>
+    {% endif %}
+
+    <h3>
+      {% if entry.type.handle == 'story' %}
+        {% if entry.storyType %}<span>{{ entry.storyType.one().slug == 'champions' ? 'Champion of the Month' : entry.storyType.one().title }}</span>{% endif %}<time datetime="{{ entry.postDate|date('Y-m-01\T00:00:00O') }}">{{ entry.postDate|date("M Y") }}</time>
+      {% else %}
+        <span>{{ entry.type.name }}</span><time datetime="{{ entry.postDate|date('Y-m-d\TH:i:sO') }}">{{ entry.postDate|date("n-j-y") }}</time>
+      {% endif %}
+    </h3>
+    <h2>{{ entry.title }}</h2>
+
+  </a>
+</article>

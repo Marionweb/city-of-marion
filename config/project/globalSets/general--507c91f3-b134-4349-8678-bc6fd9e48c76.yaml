@@ -1,0 +1,28 @@
+fieldLayouts:
+  b301ecd7-76a8-40d2-8e26-0b1429b34f99:
+    tabs:
+      -
+        fields:
+          18b4da9e-2f7b-4987-8fb0-87a7c40ff2eb:
+            required: '0'
+            sortOrder: '1'
+          1d4b9eb7-63c0-4303-8f46-9e606ecebd1e:
+            required: '0'
+            sortOrder: '2'
+          c8b25135-153c-4fbf-974c-6783ac6ce5b9:
+            required: '0'
+            sortOrder: '3'
+          e097c237-0e8a-4687-ad76-212bde6fb3ad:
+            required: '0'
+            sortOrder: '4'
+        name: Content
+        sortOrder: '1'
+      -
+        fields:
+          a1289511-acb4-46f5-901b-302901455808:
+            required: '0'
+            sortOrder: '1'
+        name: Widgets
+        sortOrder: '2'
+handle: general
+name: General

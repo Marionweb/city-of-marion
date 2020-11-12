@@ -1,0 +1,14 @@
+<section id="block--process">
+  <p>Website Created in Collaboration with: {% if entry.collaborationLearnMore %}<a href="{{ entry.collaborationLearnMore }}" title="Read More About the Process">Read More About the Process</a>{% endif %}</p>
+
+  {%- set collaborations = entry.collaboration.limit(3).all() -%}
+
+  {% for collaboration in collaborations %}
+  {%- set logoUrl = 'https:' ~ collaboration.collaborationLogo.one().getUrl() -%}
+  <figure class="collaboration">
+    <a href="{{ collaboration.collaborationUrl }}" target="_blank" title="{{ collaboration.collaborationName }}">
+      {{ craft.inlin.er(logoUrl, true) | raw }}
+    </a>
+  </figure>
+  {% endfor %}
+</section>

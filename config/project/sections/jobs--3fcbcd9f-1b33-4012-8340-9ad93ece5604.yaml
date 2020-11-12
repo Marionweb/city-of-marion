@@ -1,0 +1,15 @@
+enableVersioning: '1'
+handle: jobs
+name: Jobs
+previewTargets:
+  -
+    label: 'Primary entry page'
+    urlFormat: '{url}'
+propagationMethod: all
+siteSettings:
+  4a8c06e2-f6c2-4e05-b6d8-9ba159a22cac:
+    enabledByDefault: '1'
+    hasUrls: '1'
+    template: structure/jobs/_entry
+    uriFormat: 'employment/job/{slug}'
+type: channel

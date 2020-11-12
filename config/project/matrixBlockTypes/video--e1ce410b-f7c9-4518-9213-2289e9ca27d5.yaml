@@ -1,0 +1,30 @@
+field: ece2df18-646e-4acd-89d3-82a7dd27ad3c
+fieldLayouts:
+  abf17655-df82-4368-91c4-1f2cf0f5ce2f:
+    tabs:
+      -
+        fields:
+          17fcfd85-d0ea-4a73-9bcd-22fd5dd25236:
+            required: '0'
+            sortOrder: '1'
+        name: Content
+        sortOrder: '1'
+fields:
+  17fcfd85-d0ea-4a73-9bcd-22fd5dd25236:
+    contentColumnType: string
+    fieldGroup: null
+    handle: video
+    instructions: 'YouTube or Vimeo URL''s *ONLY* - Other links may break. Make sure the video is allowed to be embedded.'
+    name: Video
+    searchable: '1'
+    settings:
+      customPattern: ''
+      customPatternErrorMessage: ''
+      customPatternToggle: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: barrelstrength\sproutfields\fields\Url
+handle: video
+name: Video
+sortOrder: '5'

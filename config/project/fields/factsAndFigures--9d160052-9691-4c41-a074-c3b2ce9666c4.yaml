@@ -1,0 +1,13 @@
+contentColumnType: string
+fieldGroup: 770fc847-88dc-471d-918d-d241b9efd400
+handle: factsAndFigures
+instructions: ''
+name: 'Facts and Figures'
+searchable: '1'
+settings:
+  contentTable: '{{%matrixcontent_factsandfigures}}'
+  localizeBlocks: false
+  maxBlocks: ''
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

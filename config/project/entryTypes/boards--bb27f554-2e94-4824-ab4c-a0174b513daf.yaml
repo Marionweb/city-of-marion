@@ -1,0 +1,53 @@
+fieldLayouts:
+  658565ae-06d5-45f9-984c-5e17c9fff21b:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: Title
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: 38158424-1094-4cc9-93ee-2a3175aa348c
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 050e10e5-e506-4904-b55a-8efac89dac16
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 8d58412c-2c37-4da6-892e-69ab4d8a413b
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: ece2df18-646e-4acd-89d3-82a7dd27ad3c
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 30f13517-4937-4314-bcd4-2ce2be7e22ac
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: f686768e-7201-4afa-9e4b-51b154169b9e
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 3bf4a6bc-a0ee-4ff9-ad77-4422fc25aca1
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: b0a0c5f9-dbf0-41ff-b56f-779215f6d54f
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 0b53ea16-35d5-4aef-9b82-e0441fc674c9
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Content
+        sortOrder: '1'
+handle: boards
+hasTitleField: '1'
+name: Boards
+section: 227c8918-3a0f-40ea-9a92-5d4676ed0790
+sortOrder: '1'
+titleFormat: null

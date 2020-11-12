@@ -1,0 +1,34 @@
+{% set memberName = member.personName|trim|replace({'  ': ' '}) %}
+<li id="staff-member-{{ member.id }}" class="block--staff-member">
+  {% cache using key 'staff-member-' ~ member.id %}
+  <a href="{{ member.url }}" title="View contact details for {{ memberName }}">
+    {% if member.staffPhoto | length %}
+      {%- import "macros/_images" as imageFunctions -%}
+      {%- set image = member.staffPhoto.one() -%}
+      <figure itemprop="image">
+        {{ imageFunctions.responsivePicture(image.optimizedImagesSquare, image.alt) }}
+        {% if image.caption %}<figcaption>{{ image.caption }}</figcaption>{% endif %}
+      </figure>
+    {% else %}
+      <figure class="mobile no-image">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+      </figure>
+      <figure class="desktop no-image">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+      </figure>
+    {% endif %}
+    <div class="block--staff-member--name">
+      <h3>{{ memberName | typogrify }}</h3>
+      {% if member.positionTitle %}<h4>{{ member.positionTitle | typogrify }}</h4>{% endif %}
+    </div>
+  </a>
+  {% endcache %}
+  {% if (contactFor is defined) and (contactFor|length) %}
+  <dl>
+    <dt>Contact for: </dt>
+    {% for item in contactFor %}
+    <dd>{{item}}</dd>
+    {% endfor %}
+  </dl>
+  {% endif %}
+</li>

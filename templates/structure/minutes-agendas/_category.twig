@@ -1,0 +1,29 @@
+{#
+    Minutes & Agendas Board Landing Template
+#}
+
+{% extends "layouts/type/_list" %}
+
+{% block listContent %}
+  {% cache %}
+
+{% set slug = craft.app.request.getSegment(3) %}
+{% set landing = craft.entries.section('minutesAgendasLanding').one() %}
+{% set board = craft.entries.section('boards').slug(slug).one() %}
+
+{% set allEntries = craft.entries.section('minutesAgendas').relatedTo(board).orderBy('meetingDate desc').all() %}
+
+<section class="list--content">
+<ul>
+  {% for year, entriesInYear in allEntries | group("meetingDate|date('Y')") %}
+
+  <li><span>{{ year }} - {{ landing }}</span> <a href="{{ board.slug ~ '/' ~ year }}" title="View all Minutes &amp; Agendas for {{ board.title }} in {{ year }}">View</a></li>
+
+  {% endfor %}
+</ul>
+</section>
+
+  {% endcache %}
+{% endblock %}
+
+

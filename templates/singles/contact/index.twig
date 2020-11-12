@@ -1,0 +1,109 @@
+{#
+    Contact Landing Template
+#}
+
+{% extends "layouts/base/_base_parallax" %}
+
+{% set title = entry.title %}
+{% set type = 'landing' %}
+
+{# Get building #}
+{% set building = entry.building.one() %}
+
+
+
+
+{# HEADER IMAGE #}
+{% block parallaxBack %}
+  {% if entry.primaryImage | length %}{% include "modules/content/_header-block" %}{% endif %}
+{% endblock %}
+
+
+{# MAIN COLUMN CONTENT #}
+{% block content %}
+{% cache %}
+<section id="contact--address">
+
+  <div id="contact--address-data" itemscope itemtype="http://schema.org/GovernmentBuilding">
+
+    {% if logo.logoIcon | length %}
+    <figure id="contact--logo-icon">
+      {% set logoUrl = 'https:' ~ logo.logoIcon.one().getUrl() %}
+      {{ craft.inlin.er(logoUrl, true) | raw }}
+    </figure>
+    {% endif %}
+
+    <h4>Address</h4>
+    <span itemprop="name">{{ building.title | typogrify }}</span>
+    <div class="address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+      <span itemprop="streetAddress">{{ building.buildingAddress.addressLine2 }}</span><br>
+      <span itemprop="addressLocality">{{ building.buildingAddress.locality }}</span>,
+      <span itemprop="addressRegion">{{ building.buildingAddress.administrativeArea }}</span>
+      <span itemprop="postalCode">{{ building.buildingAddress.postalCode }}</span>
+    </div>
+
+    <h4>Office Hours</h4>
+    {% for day in entry.hoursOfOperation %}
+    <div class="hours">
+        {% if day.isBlank %}
+            <meta class="hours__hours" itemprop="openingHours"
+              content="{{ day.name }} Closed">
+              Closed {{ day.name }}
+        {% else %}
+          <meta itemprop="openingHours"
+            content="{{ day.name }} {{ day.open|date('H:i') }}-{{ day.close|date('H:i') }}">
+            {{ day.name }}<br>
+            {{ day.open|date('g:ia') }}-{{ day.close|date('g:ia') }}
+        {% endif %}
+    </div>
+    {% endfor %}
+
+    {% if general.tollFreePhoneNumber.rawInput %}
+    <h4>Toll-Free</h4>
+    <div class="phone">
+      <span itemprop="telephone">{{ general.tollFreePhoneNumber.format('national') }}</span>
+    </div>
+    {% endif %}
+
+    {% if entry.phone.rawInput %}
+    <h4>Phone</h4>
+    <div class="phone">
+      <span itemprop="telephone">{{ entry.phone.format('national') }}</span>
+    </div>
+    {% endif %}
+
+    <a href="{{ craft.entries.section('directoryLanding').one().url }}" title="Staff Directory">Staff Directory</a>
+
+  </div>
+
+  <div id="contact--address-map">
+    <div id="map"></div>
+    <a href="{{ building.buildingAddress.mapUrl }}" target="_blank" title="Get Directions to {{ building.title }}">Directions</a>
+  </div>
+
+</section>
+
+{% if entry.publicInformationRequestLink | length %}
+{% set pirButton = entry.publicInformationRequestLink.one() %}
+{% set pirButtonTitle = pirButton.linkTitle ? pirButton.linkTitle : pirButton.title %}
+<section id="contact--info-request">
+  <h1>Public Information Request</h1>
+  <div><a href="{{ pirButton.url }}" target="_blank" title="{{ pirButtonTitle }}">{{ pirButtonTitle }}</a></div>
+</section>
+{% endif %}
+
+{% endcache %}
+
+{% if entry.embedForm | length %}{% include "modules/content/_form" %}{% endif %}
+
+{% endblock %}
+
+{% do view.registerJsFile('//maps.googleapis.com/maps/api/js?key=' ~ craft.app.config.general.googleApiKey ~ '&v=3.exp') %}
+
+{% set mapsJs %}
+document.addEventListener('DOMContentLoaded', function() {
+  google.maps.event.addDomListener(window, 'load', initializeContactMap({{building.buildingAddress.latitude}},{{building.buildingAddress.longitude}}));
+});
+{% endset %}
+
+{% js mapsJs %}

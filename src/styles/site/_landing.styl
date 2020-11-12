@@ -1,0 +1,76 @@
+.page-type--landing #content
+  width 100%
+  +above(m)
+    lost-flex-container: row
+
+  > section
+    padding rem(40px) 0
+    +above(m)
+      &,
+      .inside
+        lost-flex-container: row
+        width 100%
+
+    &#landing--intro
+      .inside
+        padding-left rem(30px)
+        padding-right rem(30px)
+        h1
+          font-family: $sans-serif-headline
+          font-size: rem(36px)
+          font-weight: $font-weight.bold
+          color: $navy
+          text-align: center
+          text-transform: uppercase
+          width: 100%
+        p
+          color $navy
+          font-size rem(18px)
+          line-height $line-height-copy
+        +above(m)
+          lost-column 14/36
+          lost-offset 11/36
+          padding-left 0
+          padding-right 0
+
+    &#landing--quick-links
+      background: linear-gradient(0deg, $background-gray 50%, transparent 50%)
+      .inside
+        +above(m)
+          lost-column 22/36
+          lost-offset 7/36
+          #block--quick-links
+            width 100%
+
+    &#landing--subpages
+      position: relative
+      background: $background-gray
+      overflow: hidden
+      z-index: 0
+      &:after
+        content: ' '
+        display: block
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        z-index: -1
+        opacity: 0.05
+        background-image: embedurl("../images/logo-com-mark-black.svg", "utf8")
+        background-repeat: no-repeat
+        background-position: 50% 0
+        background-size: cover
+        +above(m)
+          background-size: 90% 90%
+
+
+      .inside
+        +above(m)
+          lost-column 32/36
+          lost-offset 2/36
+          lost-flex-container: row
+
+  +above(m)
+    .block--subpage
+      lost-column 12/36 3

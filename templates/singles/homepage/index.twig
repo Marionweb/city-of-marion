@@ -1,0 +1,90 @@
+{#
+    Homepage
+#}
+
+{% extends "layouts/columns/_two_parallax" %}
+
+{% do view.registerLinkTag({href: siteUrl ~ 'news-events/feed', title: 'City of Marion - All News & Events', rel: 'alternate', type: 'application/rss+xml'}) %}
+
+{# PARALLAX HEADER #}
+{% block parallaxBack %}
+
+{% if (entry.primaryImage | length) or entry.headerBackgroundVideo %}
+<div id="header-image" class="jarallax {{entry.section.handle}}" {% if entry.headerBackgroundVideo %} data-jarallax-video="{{entry.headerBackgroundVideo}}"{% endif %}>
+  {%- import "macros/_images" as imageFunctions -%}
+  {%- set image = entry.primaryImage.one() -%}
+
+  {# <div class="jarallax">
+    <picture class="jarallax-img">
+        <source media="..." srcset="<alternative_background_image_url_here>">
+        <img src="<background_image_url_here>" alt="">
+    </picture>
+    Your content here...
+  </div> #}
+
+  {# <div data-jarallax data-speed="0.2" class="jarallax">
+    <figure class="jarallax-img">
+      {{ imageFunctions.responsivePicture(image.optimizedImagesLandingHeader, image.alt) }}
+      {% if image.caption %}<figcaption>{{ image.caption }}</figcaption>{% endif %}
+    </figure>
+  </div> #}
+
+  <figure class="jarallax-img">
+    {{ imageFunctions.responsivePicture(image.optimizedImagesBlockPreview, image.alt) }}
+    {# {{ imageFunctions.responsivePicture(image.optimizedImagesLandingHeader, image.alt) }} #}
+    {% if image.caption %}<figcaption>{{ image.caption }}</figcaption>{% endif %}
+  </figure>
+
+  <h1>Welcome to <span><strong>{{siteName}}</strong></span></h1>
+</div>
+
+{% endif %}
+
+{% endblock %}
+
+
+
+{# MAIN COLUMN CONTENT #}
+{% block main %}
+
+{{ include('modules/content/_block-mayor-welcome') }}
+
+{{ include('modules/content/_block-quick-links') }}
+
+{{ include('modules/content/_block-spotlight', {spotlightType: 'champions'}) }}
+
+{{ include('modules/content/_block-story-share') }}
+
+{% endblock %}
+
+
+{# ASIDE #}
+{% block aside %}
+
+  {{ include('modules/content/_block-weather-tip') }}
+
+  {{ include('modules/content/_block-news-events-home') }}
+
+  {{ include('modules/content/_block-story-share') }}
+
+{% endblock %}
+
+
+
+{# SECONDARY CONTENT #}
+{% block content_two %}
+
+  {{ include('modules/content/_block-home-featured-video') }}
+
+  <section id="block--spotlights-two">
+    {{ include('modules/content/_block-spotlight', {spotlightType: 'business-spotlight'}) }}
+    {{ include('modules/content/_block-spotlight', {spotlightType: 'employee-spotlight'}) }}
+  </section>
+
+  {{ include('modules/content/_block-location') }}
+
+  {{ include('modules/content/_block-process') }}
+
+{% endblock %}
+
+

@@ -1,0 +1,55 @@
+field: b0a0c5f9-dbf0-41ff-b56f-779215f6d54f
+fieldLayouts:
+  cdb5e953-ce09-4d6f-9a3e-bff78b81c2ee:
+    tabs:
+      -
+        fields:
+          cf40a47f-2d09-40c4-ba0b-ccb477344108:
+            required: '0'
+            sortOrder: '1'
+          de6c106a-fb7e-47f0-8e8c-7868c25aed73:
+            required: '0'
+            sortOrder: '2'
+        name: Content
+        sortOrder: '1'
+fields:
+  cf40a47f-2d09-40c4-ba0b-ccb477344108:
+    contentColumnType: string
+    fieldGroup: null
+    handle: person
+    instructions: ''
+    name: Person
+    searchable: '1'
+    settings:
+      limit: '1'
+      localizeRelations: false
+      selectionLabel: 'Select a staff member'
+      source: null
+      sources:
+        - 'section:3c2ea8b9-1453-4aeb-a64a-e58761ce7d70'
+      targetSiteId: null
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+  de6c106a-fb7e-47f0-8e8c-7868c25aed73:
+    contentColumnType: string
+    fieldGroup: null
+    handle: contactFor
+    instructions: 'What should this person be listed as the contact for?'
+    name: 'Contact For'
+    searchable: '1'
+    settings:
+      limit: null
+      localizeRelations: false
+      selectionLabel: ''
+      source: 'taggroup:33182053-d39c-4dcf-bdf3-25370b2c4130'
+      sources: '*'
+      targetSiteId: null
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Tags
+handle: person
+name: Person
+sortOrder: '1'

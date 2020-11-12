@@ -1,0 +1,77 @@
+$landingImageRatio = (4/5)
+$landingImageRatioDesktop = (5/12)
+$standardImageRatio = (4/5)
+$standardImageRatioDesktop = (25/72)
+$newsImageRatio = percentage(1/3)
+
+.parallax__layer--base #page--inner--columns
+  background-color $white
+
+.parallax
+  height: calc(100% + 1px)
+
++above(m)
+  .parallax
+    perspective: 1px
+    height 'calc(%s - %s)' % (100vh $top-menu-height-mobile)
+    // height: 100vh
+    overflow-x: hidden
+    overflow-y: auto
+    +above(l)
+      height 'calc(%s - %s)' % (100vh $top-menu-height-desktop)
+
+    .parallax__layer
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+    .parallax__layer--back
+      transform: translateZ(-1px) scale(2)
+      z-index: -1
+    .parallax__layer--base
+      height 'calc(%s - %s)' % (100vh $top-menu-height-desktop)
+      transform-style: preserve-3d
+      transform: translate3d(0, 0, 0)
+      z-index: 1
+
+  .page-section--homepage
+  .page-type--landing
+    .parallax .parallax__layer--base
+      top: 'calc(100vw * %s)' % $landingImageRatio
+    .jarallax
+      min-height: 'calc(100vw * %s)' % $landingImageRatio
+
+  .page-type--standard
+    .parallax .parallax__layer--base
+      top: 'calc(100vw * %s)' % $standardImageRatio
+
+  .page-section--newsEvents
+    .parallax .parallax__layer--base
+      topMarginNews = $header-image-top-margin-news-desktop + $breadcrumb-total-height-desktop
+      @media (orientation: landscape)
+        top: 'calc(((100vw * (32/36)) / 3) + %s)' % topMarginNews
+      @media (orientation: portrait)
+        top: 'calc(((100vh * (32/36)) / 3) + %s)' % topMarginNews
+
+      min-height: 'calc(((100vmin * (32/36)) / 3) + %s)' % topMarginNews
+      top: 'calc(((100vmax * (32/36)) / 3) + %s)' % topMarginNews
+
++above(l)
+  .page-section--homepage
+  .page-type--landing
+    .parallax .parallax__layer--base
+      top: 'calc(100vw * %s)' % $landingImageRatioDesktop
+    .jarallax
+      min-height: 'calc(100vw * %s)' % $landingImageRatioDesktop
+
+  .page-type--standard
+    .parallax .parallax__layer--base
+      top: 'calc(100vw * %s)' % $standardImageRatioDesktop
+
+  .page-section--departments
+  .page-section--boards
+  .page-section--departmentsContent
+    &.page-type--standard
+      .parallax .parallax__layer--base
+        top: 'calc((%s * %s) + %s)' % (100vw $standardImageRatioDesktop $top-menu-height-desktop)

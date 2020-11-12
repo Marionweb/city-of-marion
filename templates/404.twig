@@ -1,0 +1,22 @@
+{#
+404 Template
+#}
+
+{% extends "layouts/base/_base" %}
+
+{% set title = '404 Not Found' %}
+{% set type = 'landing' %}
+
+
+{# MAIN COLUMN CONTENT #}
+{% block content %}
+<section id="four-oh-four">
+  <div class="shapes"></div>
+  <div id="four-oh-four--content">
+    <h1>404</h1>
+    <h4>Our apologies, it seems something went awry.</h4>
+    <a href="{{ siteUrl }}" title="Homepage">Home Page</a>
+  </div>
+</section>
+{% endblock %}
+

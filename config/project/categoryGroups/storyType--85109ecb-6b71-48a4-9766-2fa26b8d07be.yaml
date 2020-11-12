@@ -1,0 +1,10 @@
+handle: storyType
+name: 'Story Types'
+siteSettings:
+  4a8c06e2-f6c2-4e05-b6d8-9ba159a22cac:
+    hasUrls: '1'
+    template: structure/stories/_category
+    uriFormat: 'news-events/stories/{slug}'
+structure:
+  maxLevels: '1'
+  uid: 4a7ff073-016c-4354-a113-5c7c4cdf2208

@@ -1,0 +1,12 @@
+<footer>
+  <div id="footer--container">
+    {% include 'modules/footer/_logo' %}
+    {% include 'modules/footer/_nav' %}
+    {% include 'modules/footer/_social-media' %}
+  </div>
+
+  <div id="footer--copyright">
+    {% include 'modules/footer/_copyright-nav' %}
+    <p>&copy; {{ now|date('Y') }}, {{ footer.copyrightText }}</p>
+  </div>
+</footer>

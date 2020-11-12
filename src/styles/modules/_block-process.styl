@@ -1,0 +1,76 @@
+#block--process
+  background-color $module-process-background-color
+  padding rem(72px) rem(15px)
+  p
+    color $module-process-text-color
+    font-family $module-process-text-font
+    font-weight $module-process-text-font-weight
+    font-size $module-process-text-size-mobile
+    text-align center
+
+    +above(m)
+      font-size $module-process-text-size-desktop
+
+    a
+      color $module-process-link-color
+      text-decoration $module-process-link-decoration
+      transition: $link-transition
+      display block
+      &:hover
+        color $module-process-link-hover-color
+
+  figure
+    margin 0
+
+    svg
+      width 100%
+      height auto
+      vertical-align: middle
+
+  .collaboration
+    padding-left rem(55px)
+    padding-right rem(55px)
+    margin rem(37.5) 0
+
+    &:last-child
+      margin-bottom 0
+
+    +above(m)
+      padding 0
+      margin 0
+
+    a
+      display block
+      &:hover
+        svg g
+          fill $module-process-logo-hover-color
+    svg g
+      fill $module-process-logo-color
+      transition: fill $transition-timing
+
+  +above(m)
+    display: flex
+    flex-flow: row wrap
+    align-items: stretch
+    justify-content: center
+    padding 0
+
+    p
+    .collaboration
+      flex-grow: 1
+      display inline-block
+      display: flex
+      flex-direction: column
+      justify-content: center
+      height: rem(220px)
+      margin-left rem(38px)
+      margin-right rem(38px)
+
+    p
+      margin-top 0
+      margin-bottom 0
+      max-width rem(240px)
+      text-align right
+
+    .collaboration
+      max-width rem(188px)

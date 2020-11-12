@@ -1,0 +1,18 @@
+contentColumnType: string
+fieldGroup: 770fc847-88dc-471d-918d-d241b9efd400
+handle: publicInformationRequestLink
+instructions: ''
+name: 'Public Information Request Link'
+searchable: '1'
+settings:
+  limit: '1'
+  localizeRelations: false
+  selectionLabel: ''
+  source: null
+  sources:
+    - 'section:3'
+  targetSiteId: null
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: dolphiq\titleentriesfield\fields\TitleEntriesField

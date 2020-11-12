@@ -1,0 +1,1019 @@
+$base-font-size = 16px
+$line-height-base = 1.428571429
+$line-height-computed = floor(($base-font-size * $line-height-base))
+
+rasterise-media-queries ?= false
+rupture-no-conflict ?= false
+
+rupture = {
+  rasterise-media-queries: rasterise-media-queries
+  // mobile-cutoff: 400px
+  mobile-cutoff: 480px
+  // desktop-cutoff: 1050px
+  tablet-cutoff: 980px
+  desktop-cutoff: 1280px
+  // hd-cutoff: 1800px
+  hd-cutoff: 1690px
+  enable-em-breakpoints: false
+  base-font-size: $base-font-size
+  anti-overlap: false
+  density-queries: 'dppx' 'webkit' 'moz' 'dpi'
+  retina-density: 1.5
+  use-device-width: false
+}
+// rupture.scale = 0 (rupture.mobile-cutoff) 600px 800px (rupture.desktop-cutoff) (rupture.hd-cutoff)
+rupture.scale = 0 (rupture.mobile-cutoff) 736px (rupture.tablet-cutoff) (rupture.desktop-cutoff) (rupture.hd-cutoff)
+rupture.scale-names = 'xs' 'sm' 'm' 'l' 'xl' 'hd'
+
+mobile = (rupture.mobile-cutoff)
+tablet-min = 736px
+mobile-max = tablet-min - 1px
+tablet-max = (rupture.tablet-cutoff) - 1px
+desktop-min = (rupture.tablet-cutoff)
+desktop-max = (rupture.desktop-cutoff) - 1px
+
+
+// $sans-serif = -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif
+$sans-serif = 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif
+$sans-serif-headline = 'Montserrat', sans-serif
+// $serif2 = georgia, serif
+$serif = 'Noto Serif', georgia, serif
+$code = consolas, monaco, monospace
+
+$line-height-solid = 1
+$line-height-title = 1.25
+$line-height-copy = 1.5
+
+$font-weight = {
+  thin: 100,
+  extralight: 200,
+  ultralight: 200,
+  light: 300,
+  book: 400,
+  normal: 400,
+  regular: 400,
+  roman: 400,
+  medium: 500,
+  semibold: 600,
+  demibold: 600,
+  bold: 700,
+  extrabold: 800,
+  ultrabold: 800,
+  black: 900,
+  heavy: 900
+}
+
+$black = #000
+$near-black = #111
+// $dark-gray = #333
+// $mid-gray = #555
+$gray = #777
+$silver = #999
+$light-silver = #aaa
+$moon-gray = #ccc
+// $light-gray = #eee
+$near-white = #f4f4f4
+$gray94 = #f0f0f0
+$white = #fff
+
+$transparent = transparent
+
+$black-90 = rgba($black,.9)
+$black-80 = rgba($black,.8)
+$black-70 = rgba($black,.7)
+$black-60 = rgba($black,.6)
+$black-50 = rgba($black,.5)
+$black-40 = rgba($black,.4)
+$black-30 = rgba($black,.3)
+$black-20 = rgba($black,.2)
+$black-15 = rgba($black,.15)
+$black-10 = rgba($black,.1)
+$black-05 = rgba($black,.05)
+$black-025 = rgba($black,.025)
+$black-0125 = rgba($black,.0125)
+$black-00 = rgba($black,0)
+
+$white-90 = rgba($white,.9)
+$white-80 = rgba($white,.8)
+$white-70 = rgba($white,.7)
+$white-60 = rgba($white,.6)
+$white-50 = rgba($white,.5)
+$white-40 = rgba($white,.4)
+$white-30 = rgba($white,.3)
+$white-20 = rgba($white,.2)
+$white-10 = rgba($white,.1)
+$white-05 = rgba($white,.05)
+$white-025 = rgba($white,.025)
+$white-0125 = rgba($white,.0125)
+
+$dark-red = #e7040f
+$red = #ff4136
+$light-red = #ff725c
+$orange = #ff6300
+$gold = #ffb700
+$yellow = #ffd700
+$light-yellow = #fbf1a9
+$purple = #5e2ca5
+$light-purple = #a463f2
+$dark-pink = #d5008f
+$hot-pink = #ff41b4
+$pink = #ff80cc
+$light-pink = #ffa3d7
+$dark-green = #137752
+$green = #19a974
+$light-green = #9eebcf
+$navy = #001b44
+$dark-blue = #00449e
+$blue = #357edd
+// $light-blue = #96ccff
+$lightest-blue = #cdecff
+$washed-blue = #f6fffe
+$washed-green = #e8fdf5
+$washed-yellow = #fffceb
+$washed-red = #ffdfdf
+
+
+
+
+// CITY COLORS:
+$deep-sky-blue = rgb(0, 187, 244) // #00BBF4
+$prussian-blue = rgb(3, 55, 98) // #033762
+$pacific-blue = rgb(0, 145, 196) // #0091C4
+$cerulean = rgb(9, 96, 149) // #096095
+$pelorous = rgb(42, 175, 194) // #2AAFC2
+$snow = rgb(249, 249, 249) // #F9F9F9
+$white-smoke = rgb(239, 239, 239) // #EFEFEF
+$cod-grey = rgb(48, 50, 51) // #303233
+$light-grey = rgb(209, 209, 209) // #D1D1D1
+
+// OTHER COLOR NAMES FOR ABOVE:
+$light-blue = $deep-sky-blue
+$medium-blue = $pacific-blue
+$dark-blue = $cerulean
+$navy = $prussian-blue
+$teal = $pelorous
+$dark-gray = $cod-grey
+$medium-gray = $light-grey
+$light-gray = $white-smoke
+$background-gray = $snow
+
+
+
+// ------------------------------------------------------
+
+$body-font-family = $sans-serif
+$body-background-color = $white
+
+$global-block-box-shadow = 0 0 rem(15px) $black-10
+$global-block-box-shadow-hover = 0 0 rem(30px) $black-15
+$transition-timing = 200ms ease-out
+$link-transition = color $transition-timing
+$button-transition = all $transition-timing
+
+$text-color = $navy
+
+$font-size-large = ceil(($base-font-size * 1.25))
+// ~18px
+$font-size-small = ceil(($base-font-size * 0.85))
+
+$padding-base-vertical = 16px
+$padding-base-horizontal = 22px
+$padding-large-vertical = 10px
+$padding-large-horizontal = 16px
+$padding-small-vertical = 5px
+$padding-small-horizontal = 10px
+$padding-xs-vertical = 1px
+$padding-xs-horizontal = 5px
+$line-height-large = 1.33
+$line-height-small = 1.5
+$border-radius-base = 0
+$border-radius-large = 0
+$border-radius-small = 0
+$border-width-base = rem(2px)
+
+// ------------------------------------------------------
+// ------ TOP MENU
+
+$top-menu-background-color = $white
+$top-menu-toggle-icon-color = $light-blue
+$top-menu-toggle-icon-color-hover = $navy
+$top-menu-font-family = $sans-serif-headline
+$top-menu-main-font-size = rem(14px)
+$top-menu-main-font-weight = $font-weight.bold
+$top-menu-link-color = $navy
+$top-menu-link-hover-color = $light-blue
+$top-menu-bottom-shadow = 0 rem(2px) rem(10px) $black-10
+$top-menu-height-mobile = rem(80px)
+$top-menu-height-desktop = rem(94px)
+
+// ------------------------------------------------------
+// ------ FOOTER
+
+$footer-background-color = $white
+$footer-top-border-color = $light-blue
+$footer-top-border-height = rem(4px)
+$footer-text-color = $navy
+$footer-link-color = $footer-text-color
+$footer-link-hover-color = $light-blue
+$footer-link-font-family = $sans-serif-headline
+$footer-link-font-size = rem(14px)
+$footer-link-font-weight = $font-weight.bold
+
+$footer-copyright-background-color = $background-gray
+$footer-copyright-text-color = $footer-text-color
+$footer-copyright-link-color = $footer-link-color
+$footer-copyright-link-hover-color = $footer-link-hover-color
+$footer-copyright-font-family = $sans-serif
+$footer-copyright-font-size = rem(10px)
+$footer-copyright-font-size-desktop = rem(14px)
+$footer-copyright-font-weight = $font-weight.normal
+
+// ------------------------------------------------------
+// ------ SIDE MENU
+
+$side-menu-width-mobile = 100%
+$side-menu-width-desktop = rem(440px)
+$side-menu-background-color = $navy
+$side-menu-link-color = $white
+$side-menu-link-hover-color = $light-blue
+$side-menu-close-icon-color = $light-blue
+$side-menu-font-family = $sans-serif-headline
+$side-menu-main-font-size = rem(24px)
+$side-menu-main-font-weight = $font-weight.bold
+$side-menu-sub-font-size = rem(14px)
+$side-menu-sub-font-weight = $font-weight.bold
+$side-menu-sub-line-color = $dark-blue
+
+// ------------------------------------------------------
+// ------ BREADCRUMBS
+
+$bread-background-color = $background-gray
+$bread-font-family = $sans-serif-headline
+$bread-font-size-mobile = rem(10px)
+$bread-font-size-desktop = rem(12px)
+$bread-font-weight = $font-weight.bold
+$bread-text-transform = uppercase
+$bread-link-color = $navy
+$bread-current-page-color = $light-blue
+$bread-divider-character = '/'
+$bread-divider-color = $medium-gray
+$bread-divider-width = rem(8px)
+
+$bread-item-pad-top-mobile = rem(23px)
+$bread-item-pad-side-mobile = $bread-divider-width
+$bread-item-pad-bottom-mobile = rem(20px)
+
+$bread-item-pad-top-desktop = rem(27px)
+$bread-item-pad-side-desktop = $bread-divider-width
+$bread-item-pad-bottom-desktop = rem(25px)
+
+$breadcrumb-total-height-mobile = rem(23px + 10px + 20px)
+$breadcrumb-total-height-desktop = rem(27px + 12px + 25px)
+
+// ------------------------------------------------------
+// ------ CONTENT AREA
+
+$content-text-color = $navy
+$content-text-size = rem(18px)
+$content-text-title-line-height = $line-height-title
+$content-text-line-height = $line-height-copy
+
+$content-link-color = $light-blue
+$content-link-decoration = none
+$content-link-weight = $font-weight.bold
+$content-link-hover-color = $medium-blue
+$content-link-hover-decoration = underline
+
+$content-blockquote-quote-color = $light-blue
+$content-blockquote-quote-line-height = $line-height-copy
+$content-blockquote-quote-size = rem(24px)
+
+$content-blockquote-margin = 1em 0 1em rem(30px)
+$content-blockquote-cite-margin-top = 1em
+
+$content-blockquote-cite-color = $navy
+$content-blockquote-cite-size = rem(18px)
+$content-blockquote-cite-weight = $font-weight.bold
+$content-blockquote-cite-style = normal
+$content-blockquote-cite2-color = $navy
+$content-blockquote-cite2-style = italic
+$content-blockquote-cite2-weight = $font-weight.bold
+
+// ------------------------------------------------------
+// ------ HEADERS
+
+$header-text-color = $navy
+$header-text-font = $sans-serif
+$header-text-size = rem(40)
+$header-text-style = normal
+$header-text-weight = $font-weight.bold
+$header-text-line-height = $line-height-title
+
+$header-block-title-color = $white
+$header-block-title-font = $sans-serif-headline
+$header-block-title-size-mobile = rem(26)
+$header-block-title-size-desktop = rem(60)
+$header-block-title-weight = $font-weight.bold
+$header-block-title-transform = uppercase
+
+$header-image-top-margin-news-desktop = rem(40px)
+
+// ------------------------------------------------------
+// ------ PAGE LEAD IN
+
+$module-lead-in-font = $serif
+$module-lead-in-color = $light-blue
+$module-lead-in-size = rem(21px)
+$module-lead-in-line-height = $line-height-title
+$module-lead-in-style = italic
+$module-lead-in-weight = $font-weight.bold
+
+// ------------------------------------------------------
+// ------ PAGE META
+
+$module-meta-font = $sans-serif-headline
+$module-meta-color = $light-blue
+$module-meta-size = rem(14px)
+$module-meta-line-height = $line-height-title
+$module-meta-style = normal
+$module-meta-transform = uppercase
+$module-meta-weight = $font-weight.bold
+
+// ------------------------------------------------------
+// ------ SUB-PAGE BLOCKS (FOR LANDING PAGES)
+
+$module-subpages-box-shadow = $global-block-box-shadow
+$module-subpages-box-shadow-hover = $global-block-box-shadow-hover
+$module-subpages-background-color = $white
+$module-subpages-link-font = $sans-serif-headline
+$module-subpages-link-transform = uppercase
+$module-subpages-link-color = $light-blue
+$module-subpages-link-size = rem(18px)
+$module-subpages-link-decoration = none
+$module-subpages-link-weight = $font-weight.bold
+$module-subpages-arrow-color = $light-blue
+
+// ------------------------------------------------------
+// ------ BLOCK
+// ------ QUICK LINKS
+
+$module-quick-links-box-shadow = $global-block-box-shadow
+$module-quick-links-background-color = $white
+$module-quick-links-top-border = rem(4px) solid $light-blue
+$module-quick-links-title-color = $navy
+$module-quick-links-title-font = $sans-serif-headline
+$module-quick-links-title-size = rem(24px)
+$module-quick-links-title-transform = uppercase
+$module-quick-links-link-color = $light-blue
+$module-quick-links-link-color-active = $navy
+$module-quick-links-left-border-width = rem(4px)
+$module-quick-links-left-border = $module-quick-links-left-border-width solid transparent
+$module-quick-links-left-border-active = $module-quick-links-left-border-width solid $module-quick-links-link-color-active
+$module-quick-links-link-size = rem(16px)
+$module-quick-links-link-decoration = none
+$module-quick-links-link-weight = $font-weight.bold
+$module-quick-links-arrow-color = $light-blue
+
+// ------------------------------------------------------
+// ------ BUTTONS
+
+$button-background = $light-blue
+$button-box-shadow = 0 0 rem(7.5px) $black-10
+$button-hover-box-shadow = 0 0 rem(15px) $black-20
+$button-text-color = $white
+$button-font = $sans-serif-headline
+$button-font-size = rem(14px)
+$button-font-weight = $font-weight.bold
+$button-line-height = $line-height-title
+$button-transform = uppercase
+$button-padding = rem(28.5px)
+$button-hover-background = $medium-blue
+
+
+// ------------------------------------------------------
+// ------ FORMS
+
+$input-border-width = $border-width-base
+$input-border-color = $medium-gray
+$input-border-color-hover = $navy
+$input-border-color-active = $light-blue
+$input-border-color-outline = $input-border-color-active
+
+//== Forms
+//
+//##
+//** `<input>` background color
+$input-bg = rgb(255, 255, 255, 1)
+//** `<input disabled>` background color
+$input-bg-disabled = $background-gray
+//** Text color for `<input>`s
+$input-color = $navy
+$input-font = $sans-serif
+//** `<input>` border color
+$input-border = rgb(204, 204, 204, 1)
+//** `<input>` border radius
+$input-border-radius = $border-radius-base
+//** Border color for inputs on focus
+$input-border-focus = rgb(102, 175, 233, 1)
+//** Placeholder text color
+$input-color-placeholder = $light-silver
+//** Default `.form-control` height
+$input-height-base = (($line-height-computed + ($padding-base-vertical * 2)) + 2)
+//** Large `.form-control` height
+$input-height-large = ((ceil(($font-size-large * $line-height-large)) + ($padding-large-vertical * 2)) + 2)
+//** Small `.form-control` height
+$input-height-small = ((floor(($font-size-small * $line-height-small)) + ($padding-small-vertical * 2)) + 2)
+$legend-color = $dark-gray
+$legend-border-color = rgb(229, 229, 229, 1)
+//** Background color for textual input addons
+$input-group-addon-bg = $background-gray
+//** Border color for textual input addons
+$input-group-addon-border-color = input-border
+//== Dropdowns
+//
+//## Dropdown menu container and contents.
+//** Background for the dropdown menu.
+$dropdown-bg = rgb(255, 255, 255, 1)
+//** Dropdown menu `border-color`.
+$dropdown-border = rgba(0, 0, 0, 0.15)
+//** Dropdown menu `border-color` **for IE8**.
+$dropdown-fallback-border = rgb(204, 204, 204, 1)
+//** Divider color for between dropdown items.
+$dropdown-divider-bg = rgb(229, 229, 229, 1)
+//** Dropdown link text color.
+$dropdown-link-color = $dark-gray
+//** Hover color for dropdown links.
+$dropdown-link-hover-color = darken($dark-gray, 5%)
+//** Hover background for dropdown links.
+$dropdown-link-hover-bg = rgb(245, 245, 245, 1)
+//** Active dropdown menu item text color.
+$dropdown-link-active-color = $white
+//** Active dropdown menu item background color.
+$dropdown-link-active-bg = $light-blue
+//** Disabled dropdown menu item background color.
+$dropdown-link-disabled-color = $light-gray
+//** Text color for headers within dropdown menus.
+$dropdown-header-color = $light-gray
+// Note: Deprecated @dropdown-caret-color as of v3.1.0
+$dropdown-caret-color = rgb(0, 0, 0, 1)
+
+//== Form states and alerts
+//
+//## Define colors for form feedback states and, by default, alerts.
+$state-success-text = rgb(60, 118, 61, 1)
+$state-success-bg = rgb(223, 240, 216, 1)
+$state-success-border = darken(spin($state-success-bg, -10), 5%)
+$state-info-text = rgb(49, 112, 143, 1)
+$state-info-bg = rgb(217, 237, 247, 1)
+$state-info-border = darken(spin($state-info-bg, -10), 7%)
+$state-warning-text = rgb(138, 109, 59, 1)
+$state-warning-bg = rgb(252, 248, 227, 1)
+$state-warning-border = darken(spin($state-warning-bg, -10), 5%)
+$state-danger-text = rgb(169, 68, 66, 1)
+$state-danger-bg = rgb(242, 222, 222, 1)
+$state-danger-border = darken(spin($state-danger-bg, -10), 5%)
+
+
+// ------------------------------------------------------
+// ------ HOMEPAGE
+
+$homepage-header-block-title-color = $white
+$homepage-header-block-title-font = $sans-serif-headline
+$homepage-header-block-title-size-mobile = rem(14)
+$homepage-header-block-title-size-desktop = rem(18)
+$homepage-header-block-title-weight = $font-weight.bold
+$homepage-header-block-title-transform = uppercase
+
+
+// ------------------------------------------------------
+// ------ BLOCK
+// ------ MAYOR'S WELCOME
+
+$module-mayors-welcome-box-shadow = $global-block-box-shadow
+$module-mayors-welcome-background-color = $white
+$module-mayors-welcome-title-font = $sans-serif-headline
+$module-mayors-welcome-title-transform = uppercase
+
+$module-mayors-welcome-name-color = $light-blue
+$module-mayors-welcome-name-size-mobile = rem(14px)
+$module-mayors-welcome-name-size-desktop = rem(14px)
+$module-mayors-welcome-headline-color = $navy
+$module-mayors-welcome-headline-size-mobile = rem(28px)
+$module-mayors-welcome-headline-size-desktop = rem(36px)
+$module-mayors-welcome-text-color = $navy
+$module-mayors-welcome-text-size-mobile = rem(18px)
+$module-mayors-welcome-text-size-desktop = rem(18px)
+
+
+// ------------------------------------------------------
+// ------ BLOCK
+// ------ SPOTLIGHT
+
+$module-spotlight-box-shadow = $global-block-box-shadow
+$module-spotlight-box-shadow-hover = $global-block-box-shadow-hover
+$module-spotlight-background-color = $white
+
+$module-spotlight-name-font = $sans-serif-headline
+$module-spotlight-name-transform = uppercase
+$module-spotlight-name-color = $navy
+$module-spotlight-name-size-mobile = rem(21px)
+$module-spotlight-name-size-desktop = rem(28px)
+
+$module-spotlight-title-font = $serif
+$module-spotlight-title-style = italic
+$module-spotlight-title-color = $light-blue
+$module-spotlight-title-arrow-color = $light-blue
+$module-spotlight-title-size-mobile = rem(18px)
+$module-spotlight-title-size-desktop = rem(24px)
+
+
+// ------------------------------------------------------
+// ------ BLOCK
+// ------ STORY SHARE
+
+$module-story-share-box-shadow = $global-block-box-shadow
+$module-story-share-background-color = $navy
+
+$module-story-share-font = $sans-serif
+$module-story-share-color = $white
+$module-story-share-weight = $font-weight.bold
+$module-story-share-size-mobile = rem(18px)
+$module-story-share-size-desktop = rem(21px)
+
+
+// ------------------------------------------------------
+// ------ BLOCK
+// ------ WEATHER TIP
+$module-weather-tip-background-color = $light-blue
+$module-weather-tip-background-hover-color = $medium-blue
+$module-weather-tip-icon-color = $navy
+$module-weather-tip-icon-hover-color = $white
+$module-weather-tip-text-color = $white
+$module-weather-tip-text-hover-color = $white
+$module-weather-tip-box-shadow = inset 0px rem(-15px) rem(15px) rem(-15px) $black-10
+$module-weather-tip-hover-box-shadow = inset 0px rem(-15px) rem(15px) rem(-15px) $black-00
+
+$module-weather-tip-text-font = $sans-serif-headline
+$module-weather-tip-text-transform = uppercase
+$module-weather-tip-text-size-mobile = rem(12px)
+$module-weather-tip-text-size-desktop = rem(12px)
+
+
+// ------------------------------------------------------
+// ------ BLOCK
+// ------ NEWS/EVENTS ON HOMEPAGE
+
+$module-news-events-home-box-shadow = $global-block-box-shadow
+$module-news-events-home-hover-box-shadow = inset $global-block-box-shadow-hover
+$module-news-events-home-background-color = $white
+$module-news-events-home-background-hover-color = $light-blue
+$module-news-events-home-border-width = $border-width-base
+$module-news-events-home-border-color = $gray94
+
+$module-news-events-home-headline-font = $sans-serif-headline
+$module-news-events-home-headline-transform = uppercase
+$module-news-events-home-headline-color = $navy
+$module-news-events-home-headline-icon-color = $light-blue
+$module-news-events-home-headline-size-mobile = rem(21px)
+$module-news-events-home-headline-size-desktop = rem(24px)
+
+$module-news-events-home-type-font = $sans-serif-headline
+$module-news-events-home-type-transform = uppercase
+$module-news-events-home-type-color = $light-blue
+$module-news-events-home-type-hover-color = $white
+$module-news-events-home-type-size-mobile = rem(12px)
+$module-news-events-home-type-size-desktop = rem(12px)
+
+$module-news-events-home-title-font = $sans-serif
+$module-news-events-home-title-transform = none
+$module-news-events-home-title-color = $navy
+$module-news-events-home-title-hover-color = $white
+$module-news-events-home-title-size-mobile = rem(18px)
+$module-news-events-home-title-size-desktop = rem(21px)
+
+
+// ------------------------------------------------------
+// ------ BLOCK
+// ------ NEWS & EVENTS PREVIEWS
+
+$module-news-events-preview-box-shadow = $global-block-box-shadow
+$module-news-events-preview-box-shadow-hover = $global-block-box-shadow-hover
+$module-news-events-preview-background-color = $white
+
+$module-news-events-preview-title-font = $sans-serif
+$module-news-events-preview-title-color = $navy
+$module-news-events-preview-title-size-mobile = rem(21px)
+$module-news-events-preview-title-size-desktop = rem(24px)
+
+$module-news-events-preview-category-font = $sans-serif-headline
+$module-news-events-preview-category-transform = uppercase
+$module-news-events-preview-category-color = $light-blue
+$module-news-events-preview-category-size-mobile = rem(14px)
+$module-news-events-preview-category-size-desktop = rem(16px)
+
+
+// ------------------------------------------------------
+// ------ BLOCK
+// ------ NEWS & EVENTS FEATURED
+// mostly inherits from BLOCK NEWS & EVENTS PREVIEWS
+
+$module-news-events-featured-preview-title-color = $white
+$module-news-events-featured-preview-title-size-mobile = rem(32px)
+$module-news-events-featured-preview-title-size-desktop = rem(33.4px)
+
+$module-news-events-featured-preview-title-button-background = $light-blue
+$module-news-events-featured-preview-title-button-color = $white
+$module-news-events-featured-preview-title-button-size-mobile = rem(9px)
+$module-news-events-featured-preview-title-button-size-desktop = rem(9.8px)
+$module-news-events-featured-preview-title-button-transform = uppercase
+
+$module-news-events-featured-preview-category-color = $light-blue
+
+
+// ------------------------------------------------------
+// ------ BLOCK
+// ------ VIDEO FEATURE
+$module-video-feature-background-color = $black
+
+$module-video-feature-headline-font = $sans-serif-headline
+$module-video-feature-headline-transform = uppercase
+$module-video-feature-headline-color = $white
+$module-video-feature-headline-size-mobile = rem(36px)
+$module-video-feature-headline-size-desktop = rem(60px)
+
+$module-video-feature-subheadline-font = $serif
+$module-video-feature-subheadline-style = italic
+$module-video-feature-subheadline-color = $white
+$module-video-feature-subheadline-size-mobile = rem(14px)
+$module-video-feature-subheadline-size-desktop = rem(24px)
+
+$module-video-feature-video-font = $sans-serif-headline
+$module-video-feature-video-transform = uppercase
+$module-video-feature-video-font-weight = $font-weight.bold
+$module-video-feature-video-color = $white
+$module-video-feature-video-hover-color = $light-blue
+$module-video-feature-video-font-size = rem(18px)
+
+// ------------------------------------------------------
+// ------ BLOCK
+// ------ LOCATION
+
+$module-location-headline-font = $sans-serif-headline
+$module-location-headline-transform = uppercase
+$module-location-headline-color = $navy
+$module-location-headline-size-mobile = rem(28px)
+$module-location-headline-size-desktop = rem(36px)
+
+$module-location-subheadline-font = $module-location-headline-font
+$module-location-subheadline-transform = uppercase
+$module-location-subheadline-color = $light-blue
+$module-location-subheadline-size-mobile = rem(14px)
+$module-location-subheadline-size-desktop = rem(14px)
+
+$module-location-text-color = $navy
+$module-location-text-size-mobile = rem(18px)
+$module-location-text-size-desktop = $module-location-text-size-mobile
+
+
+// ------------------------------------------------------
+// ------ BLOCK
+// ------ PROCESS
+$module-process-background-color = $navy
+$module-process-logo-color = $white
+$module-process-logo-hover-color = $light-blue
+
+$module-process-text-color = $white
+$module-process-link-color = $light-blue
+$module-process-link-hover-color = $medium-blue
+$module-process-link-decoration = underline
+
+$module-process-text-font = $sans-serif
+$module-process-text-font-weight = $font-weight.semibold
+$module-process-text-size-mobile = rem(14px)
+$module-process-text-size-desktop = rem(14px)
+
+
+// ------------------------------------------------------
+// ------ LAYOUT
+// ------ LIST
+
+$list-intro-headline-font = $sans-serif-headline
+$list-intro-headline-transform = uppercase
+$list-intro-headline-color = $navy
+$list-intro-headline-size-mobile = rem(36px)
+$list-intro-headline-size-desktop = rem(60px)
+
+$list-intro-subheadline-font = $sans-serif
+$list-intro-subheadline-transform = none
+$list-intro-subheadline-color = $light-blue
+$list-intro-subheadline-size-mobile = rem(21px)
+$list-intro-subheadline-size-desktop = rem(32px)
+
+$list-intro-text-size-mobile = rem(18px)
+$list-intro-text-size-desktop = rem(18px)
+$list-intro-text-color = $navy
+
+$list-section-title-color = $light-blue
+$list-section-title-font = $sans-serif-headline
+$list-section-title-mobile = rem(21px)
+$list-section-title-desktop = rem(24px)
+
+$list-content-row-bg-color = $background-gray
+$list-content-row-bg-color-alt = $white
+$list-content-row-text-color = $navy
+$list-content-row-text-weight = $font-weight.bold
+$list-content-row-text-weight-alt = $font-weight.normal
+$list-content-row-text-size-mobile = rem(24px)
+$list-content-row-text-size-mobile-alt = rem(18px)
+$list-content-row-text-size-desktop = rem(24px)
+$list-content-row-text-size-desktop-alt = rem(18px)
+
+$list-content-row-padding-mobile = rem(31px) rem(15px) rem(30px)
+$list-content-row-padding-desktop-sides = 'calc(%s * (-%s/%s * -%s) - (%s - %s * (-%s/%s * -%s)) + %s)' % (99.9% 1 36 1 30px 30px 1 36 1 30px)
+$list-content-row-padding-desktop = rem(14.5px) $list-content-row-padding-desktop-sides
+// calc(99.9% * (-2/36 * -1) - (30px - 30px * (-2/36 * -1)) + 30px)
+
+
+// ------------------------------------------------------
+// ------ ABOUT PAGE
+
+$about-page-about-section-icon-height-mobile = rem(98px)
+$about-page-about-section-icon-height-desktop = rem(107.5px)
+
+$about-page-about-section-headline-size-mobile = rem(32px)
+$about-page-about-section-headline-size-desktop = rem(40px)
+$about-page-about-section-headline-font = $sans-serif-headline
+$about-page-about-section-headline-transform = uppercase
+$about-page-about-section-headline-color = $navy
+
+$about-page-about-section-text-size-mobile = rem(18px)
+$about-page-about-section-text-size-desktop = rem(18px)
+$about-page-about-section-text-color = $navy
+$about-page-about-section-text-font = $sans-serif
+$about-page-about-section-text-transform = none
+
+
+$about-page-mission-section-background = $navy
+$about-page-mission-section-headline-size-mobile = rem(32px)
+$about-page-mission-section-headline-size-desktop = rem(40px)
+$about-page-mission-section-headline-color = $white
+$about-page-mission-section-headline-font = $sans-serif-headline
+$about-page-mission-section-headline-transform = uppercase
+
+$about-page-mission-section-text-size-mobile = rem(18px)
+$about-page-mission-section-text-size-desktop = rem(18px)
+$about-page-mission-section-text-color = $white
+$about-page-mission-section-text-font = $sans-serif
+$about-page-mission-section-text-transform = none
+
+
+$about-page-mayor-section-intro-size-mobile = rem(14px)
+$about-page-mayor-section-intro-size-desktop = rem(14px)
+$about-page-mayor-section-intro-font = $sans-serif-headline
+$about-page-mayor-section-intro-transform = uppercase
+$about-page-mayor-section-intro-color = $light-blue
+
+$about-page-mayor-section-headline-size-mobile = rem(32px)
+$about-page-mayor-section-headline-size-desktop = rem(36px)
+$about-page-mayor-section-headline-font = $sans-serif
+$about-page-mayor-section-headline-transform = none
+$about-page-mayor-section-headline-color = $navy
+
+$about-page-mayor-section-subheadline-size-mobile = rem(18px)
+$about-page-mayor-section-subheadline-size-desktop = rem(21px)
+$about-page-mayor-section-subheadline-font = $serif
+$about-page-mayor-section-subheadline-style = italic
+$about-page-mayor-section-subheadline-transform = none
+$about-page-mayor-section-subheadline-color = $light-blue
+
+$about-page-mayor-section-text-size-mobile = rem(18px)
+$about-page-mayor-section-text-size-desktop = rem(18px)
+$about-page-mayor-section-text-color = $navy
+$about-page-mayor-section-text-font = $sans-serif
+$about-page-mayor-section-text-font-weight = $font-weight.normal
+$about-page-mayor-section-text-transform = none
+
+$about-page-mayor-section-name-size-mobile = rem(18px)
+$about-page-mayor-section-name-size-desktop = rem(18px)
+$about-page-mayor-section-name-color = $navy
+$about-page-mayor-section-name-font = $sans-serif
+$about-page-mayor-section-name-font-weight = $font-weight.bold
+$about-page-mayor-section-name-transform = none
+
+
+$about-page-history-section-background-color = $black
+$about-page-history-section-headline-size-mobile = rem(36px)
+$about-page-history-section-headline-size-desktop = rem(60px)
+$about-page-history-section-headline-color = $white
+$about-page-history-section-headline-font = $sans-serif-headline
+$about-page-history-section-headline-transform = uppercase
+
+$about-page-history-section-text-size-mobile = rem(18px)
+$about-page-history-section-text-size-desktop = rem(18px)
+$about-page-history-section-text-color = $white
+$about-page-history-section-text-font = $sans-serif
+$about-page-history-section-text-font-weight = $font-weight.normal
+$about-page-history-section-text-transform = none
+
+
+$about-page-fact-block-background-color = $white
+$about-page-fact-block-box-shadow = $global-block-box-shadow
+
+$about-page-facts-section-headline-size-mobile = rem(32px)
+$about-page-facts-section-headline-size-desktop = rem(40px)
+$about-page-facts-section-headline-color = $navy
+$about-page-facts-section-headline-font = $sans-serif-headline
+$about-page-facts-section-headline-transform = uppercase
+
+$about-page-fact-block-text-size-mobile = rem(21px)
+$about-page-fact-block-text-size-desktop = rem(24px)
+$about-page-fact-block-text-color = $light-blue
+$about-page-fact-block-text-font = $sans-serif
+$about-page-fact-block-text-font-weight = $font-weight.bold
+$about-page-fact-block-text-transform = none
+
+$about-page-fact-block-reference-size-mobile = rem(14px)
+$about-page-fact-block-reference-size-desktop = rem(16px)
+$about-page-fact-block-reference-color = $navy
+$about-page-fact-block-reference-font = $sans-serif-headline
+$about-page-fact-block-reference-font-weight = $font-weight.bold
+$about-page-fact-block-reference-transform = uppercase
+
+
+// ------------------------------------------------------
+// ------ CONTACT PAGE
+
+$contact-page-address-section-title-size = rem(18px)
+$contact-page-address-section-title-color = $light-blue
+$contact-page-address-section-title-font = $sans-serif-headline
+$contact-page-address-section-title-weight = $font-weight.bold
+$contact-page-address-section-title-transform = uppercase
+
+$contact-page-address-section-size = rem(18px)
+$contact-page-address-section-color = $navy
+$contact-page-address-section-font = $sans-serif
+$contact-page-address-section-transform = none
+
+$contact-page-info-request-section-background = $dark-blue
+$contact-page-info-request-section-color = $white
+$contact-page-info-request-section-h1-font = $sans-serif-headline
+$contact-page-info-request-section-h1-size-mobile = rem(21px)
+$contact-page-info-request-section-h1-size-desktop = rem(24px)
+$contact-page-info-request-section-description-size-mobile = rem(18px)
+$contact-page-info-request-section-description-size-desktop = rem(18px)
+
+
+$contact-page-form-section-background = $background-gray
+$contact-page-form-section-h1-size-mobile = rem(24px)
+$contact-page-form-section-h1-size-desktop = rem(32px)
+$contact-page-form-section-description-size-mobile = rem(18px)
+$contact-page-form-section-description-size-desktop = rem(18px)
+$contact-page-form-section-form-labels-size-mobile = rem(18px)
+$contact-page-form-section-form-labels-size-mobile = rem(18px)
+
+
+// ------------------------------------------------------
+// ------ STAFF DIRECTORY
+
+$directory-department-title-color = $navy
+$directory-department-title-toggle-color = $light-blue
+$directory-department-title-size-mobile = rem(24px)
+$directory-department-title-size-desktop = rem(36px)
+$directory-department-title-controls-color = $light-blue
+$directory-department-title-controls-size-mobile = rem(14px)
+$directory-department-title-controls-size-desktop = rem(14px)
+$directory-department-title-controls-transform = uppercase
+
+$directory-department-description-size-mobile = rem(18px)
+$directory-department-description-size-desktop = rem(18px)
+$directory-department-description-color = $navy
+$directory-department-description-weight = $font-weight.normal
+$directory-department-description-transform = none
+
+
+// ------------------------------------------------------
+// ------ BLOCK
+// ------ STAFF MEMBER
+
+$module-person-shadow = $global-block-box-shadow
+$module-person-shadow-hover = $global-block-box-shadow-hover
+$module-person-image-size-mobile = rem(88.5px)
+$module-person-image-size-desktop = "58%"
+$module-person-name-color = $navy
+$module-person-name-size-mobile = rem(18px)
+$module-person-name-size-desktop = rem(28px)
+
+$module-person-title-font = $serif
+$module-person-title-style = italic
+$module-person-title-color = $light-blue
+$module-person-title-size-mobile = rem(11px)
+$module-person-title-size-desktop = rem(16px)
+
+$module-person-contact-top-border = $border-width-base solid $gray94
+$module-person-contact-person-title-font = $sans-serif
+$module-person-contact-person-title-color = $navy
+$module-person-contact-person-title-size-mobile = rem(18px)
+$module-person-contact-person-title-size-desktop = rem(28px)
+
+$module-person-contact-image-size-mobile = rem(85px)
+$module-person-contact-image-size-desktop = rem(85px)
+$module-person-contact-image-border-width-mobile = rem(7.5px)
+$module-person-contact-image-border-width-desktop = rem(7.5px)
+$module-person-contact-arrow-color = $light-blue
+
+$module-person-contact-list-color = $navy
+$module-person-contact-list-size-mobile = rem(11px)
+$module-person-contact-list-size-desktop = rem(16px)
+$module-person-contact-list-title-weight = $font-weight.bold
+$module-person-contact-list-list-style = italic
+
+// ------------------------------------------------------
+// ------ STAFF DIRECTORY -- PROFILE
+
+$directory-profile-image-block-shadow = $global-block-box-shadow
+$directory-profile-image-size-mobile = rem(200px)
+$directory-profile-image-size-desktop = $module-person-image-size-mobile
+
+$directory-profile-name-color = $navy
+$directory-profile-name-size-mobile = rem(32px)
+$directory-profile-name-size-desktop = rem(36px)
+
+$directory-profile-title-font = $serif
+$directory-profile-title-style = italic
+$directory-profile-title-color = $light-blue
+$directory-profile-title-size-mobile = rem(16px)
+$directory-profile-title-size-desktop = rem(24px)
+
+$directory-profile-department-title-color = $navy
+$directory-profile-department-title-font = $sans-serif-headline
+$directory-profile-department-title-size-mobile = rem(14px)
+$directory-profile-department-title-size-desktop = rem(14px)
+$directory-profile-department-title-transform = uppercase
+
+$directory-profile-bio-top-border-width = $border-width-base
+$directory-profile-bio-top-border-color = $gray94
+
+
+// ------------------------------------------------------
+// ------ ARTICLE DETAIL
+
+$article-related-block-top-border-width = $border-width-base
+$article-related-block-top-border-color = $gray94
+$article-related-block-title-color = $navy
+$article-related-block-title-size-mobile = rem(36px)
+$article-related-block-title-size-desktop = rem(40px)
+
+
+// ------------------------------------------------------
+// ------ LANDING PAGE - NEWS/EVENTS
+// ------ LIST
+
+$news-events-intro-headline-font = $sans-serif-headline
+$news-events-intro-headline-transform = uppercase
+$news-events-intro-headline-color = $navy
+$news-events-intro-headline-size-mobile = rem(36px)
+$news-events-intro-headline-size-desktop = rem(60px)
+
+$news-events-intro-subheadline-font = $sans-serif
+$news-events-intro-subheadline-transform = none
+$news-events-intro-subheadline-color = $light-blue
+$news-events-intro-subheadline-size-mobile = rem(21px)
+$news-events-intro-subheadline-size-desktop = rem(32px)
+
+$news-events-intro-text-size-mobile = rem(18px)
+$news-events-intro-text-size-desktop = rem(18px)
+$news-events-intro-text-color = $navy
+
+
+// ------------------------------------------------------
+// ------ LANDING PAGE - NEWS/EVENTS
+// ------ NAV/FILTER BLOCK
+
+$news-events-filter-background = $background-gray
+$news-events-filter-label-color = $navy
+$news-events-filter-label-font = $sans-serif-headline
+$news-events-filter-label-size-mobile = rem(16px)
+$news-events-filter-label-size-desktop = rem(12.5px)
+$news-events-filter-label-transform = uppercase
+
+
+// ------------------------------------------------------
+// ------ LANDING PAGE - EMPLOYMENT
+// ------ LIST
+
+$employment-instructions-title-font = $sans-serif-headline
+$employment-instructions-title-transform = uppercase
+$employment-instructions-title-color = $navy
+$employment-instructions-title-mobile = rem(21px)
+$employment-instructions-title-desktop = rem(24px)
+
+$employment-instructions-text-font = $sans-serif
+$employment-instructions-text-transform = none
+$employment-instructions-text-color = $navy
+$employment-instructions-text-mobile = rem(16px)
+$employment-instructions-text-desktop = rem(18px)
+
+$employment-instructions-top-border = $border-width-base solid $gray94
+
+
+

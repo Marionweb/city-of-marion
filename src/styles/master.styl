@@ -1,0 +1,62 @@
+// Deprecated in favor of https://speedfont.com
+// @import url(//fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i\|Source\+Sans\+Pro:400,400i,600,600i,700,700i\|Noto\+Serif:400,400i,700,700i)
+
+@require './_vars'
+@require './mixins/*'
+
+@lost flexbox flex
+$fa-font-path = "//netdna.bootstrapcdn.com/font-awesome/4.7.0/fonts"
+@import "font-awesome-stylus"
+
+
+// Import generated SVG sprites
+@import '../../build/sprites/css/sprite'
+
+// Plugins
+@import 'outdated-browser-rework/dist/style.css'
+@import '@fancyapps/fancybox/dist/jquery.fancybox.css'
+@import 'responsive-social-buttons/dist/social-buttons.css'
+@import 'jarallax/dist/jarallax.css'
+
+@import './inc/_box-sizing'
+@import './inc/_touch-action'
+@import './inc/_animations'
+@import './inc/_media'
+@import './inc/_code'
+@import './inc/_forms'
+@import './inc/_hidden'
+@import './inc/_tables'
+@import './inc/_typography'
+@import './inc/_buttons'
+@import './inc/_other'
+@import './inc/_z-index'
+
+@import './modules/_main-menu'
+@import './modules/_side-menu'
+@import './modules/_footer'
+@import './modules/_pagination'
+@import './modules/_block-quick-links'
+@import './modules/_block-subpage'
+@import './modules/_breadcrumb'
+@import './modules/_header-image-block'
+@import './modules/_header-text-only'
+@import './modules/_meta'
+@import './modules/_lead-in'
+@import './modules/_content-files'
+@import './modules/_block-mayor-welcome'
+@import './modules/_block-spotlight'
+@import './modules/_block-news-events-preview'
+@import './modules/_block-process'
+@import './modules/_block-weather-tip'
+@import './modules/_block-news-events-home'
+@import './modules/_block-story-share'
+@import './modules/_block-home-featured-video'
+@import './modules/_block-location'
+@import './modules/_block-staff-member'
+
+@import './site/*'
+
+
+// Hide the honeypot
+input#swampFox
+  display none

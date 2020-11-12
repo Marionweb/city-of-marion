@@ -1,0 +1,21 @@
+{#
+    Departments Landing Template
+#}
+{% set parallax = (entry.primaryImage | length) ? '_parallax' : '' %}
+
+{% extends 'layouts/columns/_one' ~ parallax %}
+
+{% set title = entry.title %}
+{% set type = 'landing' %}
+
+{# HEADER IMAGE #}
+{% block headerBlock %}
+  {% if entry.primaryImage | length %}{% include "modules/content/_header-block" %}{% endif %}
+{% endblock %}
+
+{# HTML #}
+{% block main %}
+  {% set subPages = craft.entries.section('departments').orderBy('title').all() %}
+
+  {% include 'structure/pages/_types/_landing' with { subPages: subPages } %}
+{% endblock %}
