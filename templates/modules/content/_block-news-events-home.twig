@@ -2,7 +2,6 @@
   <h2>News</h2>
   {% set recentNews = craft.entries({
       'section' : 'newsEvents',
-      'type' : 'and, not event, not story',
       'limit' : 6
   }).all() %}
   {% for entry in recentNews %}
