@@ -14,7 +14,7 @@
 
 ## Getting started
 
-1. Clone the repository.
+1. Clone the repository...
 2. This repository already contains all necessary files, simply run `composer install` to get going.
 3. To get the javascript and stylesheets built, you need to make sure that [NodeJS](https://nodejs.org), [NPM](https://www.npmjs.com/) and [Gulp](https://gulpjs.com) are installed first. Even better would be to use [Yarn](https://yarnpkg.com)!
 4. Once those are installed, simply run `npm install` to download everything required to build and `gulp watch` to build the javascript and stylesheets. It will continue to watch the folder for any changes you make too!
