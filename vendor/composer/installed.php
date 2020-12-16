@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '445411333efa430c915f8e76bfadc0435bc7612e',
+    'reference' => '623d9671a9838f4d963aa0282ddb8d513c3381c9',
     'name' => 'craftcms/craft',
   ),
   'versions' => 
@@ -359,7 +359,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '445411333efa430c915f8e76bfadc0435bc7612e',
+      'reference' => '623d9671a9838f4d963aa0282ddb8d513c3381c9',
     ),
     'craftcms/element-api' => 
     array (
