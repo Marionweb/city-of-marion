@@ -1,0 +1,30 @@
+{
+  "name": "barrelstrength/sprout-base-sent-email",
+  "description": "Common sent email libraries for Sprout Plugins for Craft CMS",
+  "version": "1.1.3",
+  "type": "yii-module",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Barrel Strength",
+      "homepage": "https://www.barrelstrengthdesign.com/"
+    }
+  ],
+  "support": {
+    "email": "sprout@barrelstrengthdesign.com",
+    "issues": "https://github.com/barrelstrength/sprout-base-sent-email/issues?state=open",
+    "source": "https://github.com/barrelstrength/sprout-base-sent-email",
+    "docs": "https://sprout.barrelstrengthdesign.com/craft-plugins/sent-email/docs",
+    "rss": "https://github.com/barrelstrength/sprout-base-sent-email/commits/v2.atom"
+  },
+  "require": {
+    "craftcms/cms": "^3.4.0",
+    "barrelstrength/sprout-base": "^6.0.0",
+    "barrelstrength/sprout-base-email": "^1.3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "barrelstrength\\sproutbasesentemail\\": "src/"
+    }
+  }
+}

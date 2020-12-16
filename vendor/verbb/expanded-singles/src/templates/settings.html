@@ -1,0 +1,41 @@
+{% extends 'expanded-singles/_layouts' %}
+{% import '_includes/forms' as forms %}
+{% import 'verbb-base/_macros' as macros %}
+
+{% set crumbs = [
+    { label: 'Expanded Singles' | t('expanded-singles'), url: url('expanded-singles/settings') },
+    { label: 'Settings' | t('app'), url: url('expanded-singles/settings') }
+] %}
+
+{% set selectedTab = 'settings' %}
+{% set fullPageForm = true %}
+
+{% block blockContent %}
+
+<input type="hidden" name="action" value="plugins/save-plugin-settings">
+<input type="hidden" name="pluginHandle" value="expanded-singles">
+
+{% namespace 'settings' %}
+
+{{ forms.lightswitchField({
+    first: true,
+    id: 'expandSingles',
+    name: 'expandSingles',
+    label: 'Expand Singles' | t('expanded-singles'),
+    on: settings.expandSingles,
+    instructions: 'Expands the Singles link on the Entries page to list them like Channels and Structures.' | t('expanded-singles'),
+    warning: macros.configWarning('expandSingles', 'expanded-singles'),
+}) }}
+
+{{ forms.lightswitchField({
+    id: 'redirectToEntry',
+    name: 'redirectToEntry',
+    label: 'Redirect to Entry' | t('expanded-singles'),
+    on: settings.redirectToEntry,
+    instructions: 'Automatically redirects to edit the Single Entry when clicking on the item in the sidebar.' | t('expanded-singles'),
+    warning: macros.configWarning('redirectToEntry', 'expanded-singles'),
+}) }}
+
+{% endnamespace %}
+
+{% endblock %}

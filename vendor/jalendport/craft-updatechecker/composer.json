@@ -1,0 +1,44 @@
+{
+    "name": "jalendport/craft-updatechecker",
+    "description": "Automated update checker that notifies you of any pending updates",
+    "type": "craft-plugin",
+    "version": "1.3.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "update checker"
+    ],
+    "support": {
+        "docs": "https://github.com/jalendport/craft-updatechecker/blob/master/README.md",
+        "issues": "https://github.com/jalendport/craft-updatechecker/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jalen Davenport",
+            "homepage": "https://jalendport.com"
+        },
+        {
+            "name": "Luke Youell",
+            "homepage": "https://github.com/lukeyouell"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+          "jalendport\\updatechecker\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Update Checker",
+        "handle": "update-checker",
+        "hasCpSettings": true,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/jalendport/craft-updatechecker/master/CHANGELOG.md",
+        "class": "jalendport\\updatechecker\\UpdateChecker"
+    }
+}

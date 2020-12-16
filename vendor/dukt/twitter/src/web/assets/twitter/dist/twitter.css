@@ -1,0 +1,20 @@
+/* Components */
+
+/* Tweet */
+
+.tweet { margin-top: 10px; padding-left: 58px; min-height: 48px; }
+
+.tweet .tweet-image { display: block; float: left; margin: 3px 0 0 -58px; border-radius: 100%; width: 48px; height: 48px; background: no-repeat 0 0; background-size: 48px 48px; }
+.tweet .tweet-image img { width: 48px; }
+.tweet .tweet-text { margin-top: -1px; }
+.tweet .tweet-image img { border-radius: 100%; }
+.tweet .tweet-user a.tweet-user-name { color: rgb(41, 50, 61); }
+.tweet .tweet-actions { font-size: 0.9em; opacity: .7; }
+.tweet .tweet-actions li { display: inline; }
+.tweet .tweet-actions li a { color: rgb(143, 152, 163); }
+.tweet .tweet-actions li:not(:last-child):after { content: ' – '; display: inline; }
+
+
+/* Tweet Field */
+
+.tweet-field .spinner { position: absolute; margin-left: -28px; }

@@ -1,0 +1,50 @@
+{
+    "name": "verbb/expanded-singles",
+    "description": "A simple plugin for Craft CMS that alters the Entries Index sidebar to list all Singles, rather than grouping them under a 'Singles' link.",
+    "type": "craft-plugin",
+    "version": "1.1.3",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "expanded singles"
+    ],
+    "support": {
+        "email": "support@verbb.io",
+        "issues": "https://github.com/verbb/expanded-singles/issues?state=open",
+        "source": "https://github.com/verbb/expanded-singles",
+        "docs": "https://github.com/verbb/expanded-singles",
+        "rss": "https://github.com/verbb/expanded-singles/commits/v2.atom"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Verbb",
+            "homepage": "https://verbb.io"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.4.0",
+        "verbb/base": "^1.0.2"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+          "verbb\\expandedsingles\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Expanded Singles",
+        "handle": "expanded-singles",
+        "description": "Alters the Entries Index sidebar to list all Singles, rather than grouping them under a 'Singles' link.",
+        "documentationUrl": "https://github.com/verbb/expanded-singles",
+        "changelogUrl": "https://raw.githubusercontent.com/verbb/expanded-singles/craft-3/CHANGELOG.md",
+        "class": "verbb\\expandedsingles\\ExpandedSingles"
+    }
+}

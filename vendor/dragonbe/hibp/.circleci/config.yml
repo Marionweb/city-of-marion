@@ -1,0 +1,80 @@
+# PHP CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-php/ for more details
+#
+version: 2
+jobs:
+  build:
+    docker:
+      # specify the version you desire here
+      # - image: circleci/php:7.2-zts-stretch-node-browsers
+      - image: circleci/php:7.3-zts-stretch-node-browsers
+
+      # Specify service dependencies here if necessary
+      # CircleCI maintains a library of pre-built images
+      # documented at https://circleci.com/docs/2.0/circleci-images/
+      # - image: circleci/mysql:9.4
+
+    environment:
+      - DB_HOST: ""
+      - DB_USER: ""
+      - DB_PASS: ""
+      - DB_NAME: ""
+      - MAIL_TYPE: "smtp"
+      - MAIL_HOST: ""
+      - MAIL_SSL: "tls"
+      - MAIL_PORT: "587"
+      - MAIL_AUTH: "login"
+      - MAIL_USER: ""
+      - MAIL_PASS: ""
+
+    steps:
+      - checkout
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "composer.json" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+
+      - run:
+          name: Installing Composer
+          command: composer install -n --prefer-dist
+
+      - run:
+          name: Create artifacts directory
+          command: mkdir -p build/logs/coverage/coverage-xml
+
+      - save_cache:
+          paths:
+            - ./vendor
+          key: v1-dependencies-{{ checksum "composer.json" }}
+        
+      # run tests!
+      - run:
+          name: Create a CodeSniffer configuration file
+          command: cp phpcs.xml.dist phpcs.xml
+
+      - run:
+          name: Perform unit tests
+          command: ./vendor/bin/phpunit --configuration=phpunit.xml.dist
+
+      - store_test_results:
+          path: build/logs
+
+      - store_artifacts:
+          path: build/logs
+
+      - run:
+          name: Check coding standards
+          command: ./vendor/bin/phpcs
+
+      # For some reason infection is not executed correctly
+      - run:
+          name: Copying the junit files to coverage for Infection to run
+          command: cp build/logs/logfile.xml build/logs/coverage/phpunit.junit.xml
+
+      - run:
+          name: Execute mutation testing
+          command: ./vendor/bin/infection --configuration=infection.json.dist --coverage=build/logs/coverage --only-covered

@@ -1,0 +1,7 @@
+{% if tweets %}
+    {% for tweet in tweets %}
+        {% include 'twitter/_components/tweet' with { tweet: tweet } %}
+    {% endfor %}
+{% else %}
+    <p class="light">{{ "No tweets"|t('twitter') }}</p>
+{% endif %}

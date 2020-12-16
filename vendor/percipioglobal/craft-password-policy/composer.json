@@ -1,0 +1,44 @@
+{
+    "name": "percipioglobal/craft-password-policy",
+    "description": "Enforce a password policy on your users.",
+    "type": "craft-plugin",
+    "version": "1.0.6",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "strong passwords"
+    ],
+    "support": {
+        "docs": "https://github.com/percipioglobal/craft-password-policy/blob/master/README.md",
+        "issues": "https://github.com/percipioglobal/craft-password-policy/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Percipio Global Ltd.",
+            "homepage": "https://percipio.london"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0",
+        "dragonbe/hibp": "^0.1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "percipioglobal\\passwordpolicy\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Password Policy",
+        "handle": "password-policy",
+        "hasCpSettings": true,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/percipioglobal/craft-password-policy/master/CHANGELOG.md",
+        "components": {
+            "passwordService": "percipioglobal\\passwordpolicy\\services\\PasswordService"
+        },
+        "class": "percipioglobal\\passwordpolicy\\PasswordPolicy"
+    }
+}

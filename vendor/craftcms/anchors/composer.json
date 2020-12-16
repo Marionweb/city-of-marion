@@ -1,0 +1,41 @@
+{
+  "name": "craftcms/anchors",
+  "description": "Add anchor links to headings in your Craft CMS website content.",
+  "version": "2.2.0",
+  "type": "craft-plugin",
+  "keywords": [
+    "html",
+    "cms",
+    "craftcms",
+    "yii2",
+    "anchors"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Pixel & Tonic",
+      "homepage": "https://pixelandtonic.com/"
+    }
+  ],
+  "support": {
+    "email": "support@craftcms.com",
+    "issues": "https://github.com/craftcms/anchors/issues?state=open",
+    "source": "https://github.com/craftcms/anchors",
+    "docs": "https://github.com/craftcms/anchors",
+    "rss": "https://github.com/craftcms/anchors/commits/v2.atom"
+  },
+  "require": {
+    "craftcms/cms": "^3.0.0-beta.27"
+  },
+  "autoload": {
+    "psr-4": {
+      "craft\\anchors\\": "src/"
+    }
+  },
+  "extra": {
+    "name": "Anchors",
+    "handle": "anchors",
+    "changelogUrl": "https://raw.githubusercontent.com/craftcms/anchors/v2/CHANGELOG.md",
+    "downloadUrl": "https://github.com/craftcms/anchors/archive/v2.zip"
+  }
+}

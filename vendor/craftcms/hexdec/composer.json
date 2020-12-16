@@ -1,0 +1,39 @@
+{
+  "name": "craftcms/hexdec",
+  "description":"Adds a new hexdec filter to Craft, which will convert a hexadecimal value to a decimal.",
+  "version": "2.0.2",
+  "type": "craft-plugin",
+  "keywords": [
+    "cms",
+    "craftcms",
+    "yii2"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Pixel & Tonic",
+      "homepage": "https://pixelandtonic.com/"
+    }
+  ],
+  "support": {
+    "email": "support@craftcms.com",
+    "issues": "https://github.com/craftcms/hexdec/issues?state=open",
+    "source": "https://github.com/craftcms/hexdec",
+    "docs": "https://github.com/craftcms/hexdec",
+    "rss": "https://github.com/craftcms/hexdec/commits/master.atom"
+  },
+  "require": {
+    "craftcms/cms": "^3.0.0-beta.27"
+  },
+  "autoload": {
+    "psr-4": {
+      "craft\\hexdec\\": "src/"
+    }
+  },
+  "extra": {
+    "name": "Hexdec",
+    "handle": "hexdec",
+    "changelogUrl": "https://raw.githubusercontent.com/craftcms/hexdec/v2/CHANGELOG.md",
+    "downloadUrl": "https://github.com/craftcms/hexdec/archive/v2.zip"
+  }
+}

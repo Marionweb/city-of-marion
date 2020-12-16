@@ -1,0 +1,60 @@
+{#
+/**
+ * NSM Fields plugin for Craft CMS 3.x
+ *
+ * Address Field Input
+ *
+ * @author    Leevi Graham
+ * @copyright Copyright (c) 2017 Leevi Graham
+ * @link      http://newism.com.au
+ * @package   NsmFields
+ * @since     1.0.0
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+<div class="nsmFields-address">
+
+    <div class="nsmFields-address-container">
+
+        {% if fieldSettings.showAutoComplete %}
+            <div class="nsmfields-address-autoCompleteContainer">
+                <div class="texticon search icon clearable flex-grow">
+                    {{ forms.text({
+                        id: name ~ '-autoComplete'
+                    }) }}
+                </div>
+            </div>
+        {% endif %}
+
+        <div class="nsmFields-address-countryCodeContainer">
+            <div class="flex nsmFields-fieldRow nsmFields-fieldRow-countryCode">
+                {{ countryCodeField | raw }}
+            </div>
+        </div>
+
+        <div class="nsmFields-address-addressFieldsContainer" style="display:{{ countryCode ? 'block' : 'none'}}">
+            {% if addressFields %}
+                {{ addressFields | raw }}
+                <div class="{% if fieldSettings.showPlaceData != true %}hidden{% endif %}">
+                    <div>
+                        <a class="fieldtoggle collapsed" data-target="{{ name }}-advanced">Place Data</a>
+                    </div>
+                    <div id="{{ name }}-advanced" class="hidden">
+                        {{ forms.textarea({
+                            label: 'Place Data',
+                            id: name ~ '-placeData',
+                            name: name ~ '[placeData]',
+                            rows: 20,
+                            value: value ? value.placeData
+                        }) }}
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+
+
+    </div>
+</div>
+

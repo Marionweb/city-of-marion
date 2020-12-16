@@ -1,0 +1,80 @@
+{% extends "_layouts/cp" %}
+
+{% import "_includes/forms" as forms %}
+
+{% set crumbs = [
+    { label: "Settings"|t('facebook'), url: url('settings') },
+    { label: "Plugins"|t('facebook'), url: url('settings/plugins') }
+] %}
+
+{% set title = "Facebook"|t('facebook') %}
+{% set docsUrl = 'https://docs.dukt.net/facebook/v2/' %}
+
+{% set content %}
+
+    <h2 class="first">{{'Account'|t('facebook') }}</h2>
+
+    {% if not error %}
+        {% if account %}
+
+            <p>{{'You are authenticated to Facebook with the following account'|t('facebook') }} :</p>
+
+            {% if account.pictureUrl %}
+                <img src="{{ account.pictureUrl }}" height="46" />
+            {% endif %}
+
+            <ul>
+                <li><strong>{{ 'UID'|t('facebook') }} : </strong> {{ account.id }}</li>
+                <li><strong>{{ 'Name'|t('facebook') }} : </strong> {{ account.name }}</li>
+            </ul>
+
+            <div class="buttons">
+                <a class="btn small" href="{{ actionUrl('facebook/oauth/disconnect') }}">{{'Disconnect'|t('facebook') }}</a>
+                <a class="btn small" href="{{ url('facebook/settings/oauth') }}">{{ 'OAuth Settings'|t('facebook') }}</a>
+            </div>
+
+            <hr>
+
+            <form method="post" accept-charset="UTF-8" data-saveshortcut>
+				{{ csrfInput() }}
+
+                <input type="hidden" name="action" value="plugins/save-plugin-settings">
+                <input type="hidden" name="pluginHandle" value="facebook">
+                <input type="hidden" name="redirect" value="{{ 'facebook/settings'|hash }}">
+
+				{{ forms.textField({
+					label: "Facebook Page ID"|t('facebook'),
+					placeholder: "123456789012345",
+					name: 'settings[facebookInsightsObjectId]',
+					value: settings.facebookInsightsObjectId,
+					size: 20,
+				}) }}
+
+                <div class="buttons">
+                    <input type="submit" class="btn submit force" value="{{'Save'|t('facebook') }}">
+                </div>
+            </form>
+        {% else %}
+
+            <p>{{ 'To connect to a Facebook account, {link} and then click “Connect”.'|t('facebook', {link: '<a href="'~ url('facebook/settings/oauth') ~'">'~'configure OAuth'|t('facebook')~'</a>' })|raw }}</p>
+
+            <div class="buttons">
+                <a class="btn submit" href="{{ actionUrl('facebook/oauth/connect') }}">{{"Connect"|t('facebook') }}</a>
+            </div>
+
+        {% endif %}
+    {% else %}
+
+        <p class="error">{{ error }}</p>
+
+        <div class="buttons">
+			{% if settings.token %}
+                <a class="btn small" href="{{ actionUrl('facebook/oauth/disconnect') }}">{{'Disconnect'|t('facebook') }}</a>
+			{% endif %}
+            <a class="btn small" href="{{ url('facebook/settings/oauth') }}">{{ 'OAuth Settings'|t('facebook') }}</a>
+        </div>
+
+    {% endif %}
+
+{% endset %}
+

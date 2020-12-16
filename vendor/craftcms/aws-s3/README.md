@@ -1,0 +1,101 @@
+<p align="center"><img src="./src/icon.svg" width="100" height="100" alt="Amazon S3 for Craft CMS icon"></p>
+
+<h1 align="center">Amazon S3 for Craft CMS</h1>
+
+This plugin provides an [Amazon S3](https://aws.amazon.com/s3/) integration for [Craft CMS](https://craftcms.com/).
+
+## Requirements
+
+This plugin requires Craft CMS 3.1.5 or later.
+
+## Installation
+
+You can install this plugin from the Plugin Store or with Composer.
+
+#### From the Plugin Store
+
+Go to the Plugin Store in your project’s Control Panel and search for “Amazon S3”. Then click on the “Install” button in its modal window.
+
+#### With Composer
+
+Open your terminal and run the following commands:
+
+```bash
+# go to the project directory
+cd /path/to/my-project.test
+
+# tell Composer to load the plugin
+composer require craftcms/aws-s3
+
+# tell Craft to install the plugin
+./craft install/plugin aws-s3
+```
+
+## Setup
+
+To create a new asset volume for your Amazon S3 bucket, go to Settings → Assets, create a new volume, and set the Volume Type setting to “Amazon S3”.
+
+> **Tip:** The Base URL, Access Key ID, Secret Access Key, Bucket, Region, Subfolder, CloudFront Distribution ID, and CloudFront Path Prefix settings can be set to environment variables. See [Environmental Configuration](https://docs.craftcms.com/v3/config/environments.html) in the Craft docs to learn more about that.
+
+### AWS IAM Permissions
+
+Setting up IAM permissions for use with this plugin differs from what options you want to be available.
+
+Generally, you'll want an IAM policy that grants the following actions on the [resource(s)](https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html) that you'll use:
+* `s3:GetBucketLocation`
+* `s3:ListBucket`
+* `s3:PutObject`
+* `s3:GetObject`
+* `s3:DeleteObject`
+* `s3:GetObjectAcl`
+* `s3:PutObjectAcl`
+
+If you want to allow the site administrator to list and select the bucket to use, you'll also have to add the `s3:ListAllMyBuckets` permission to the `arn:aws:s3:::` resource and the `s3:GetBucketLocation` permission to the specific bucket resource. Please note, that if a bucket lacks the `s3:GetBucketLocation` permission, it will not appear in the bucket selection list.
+
+A typical IAM policy that grants the user to choose a bucket can look like this:
+```
+{
+"Version": "2012-10-17",
+"Statement": [
+    {
+        "Effect": "Allow",
+        "Action": [
+            "s3:ListAllMyBuckets"
+        ],
+        "Resource": "*"
+    },
+    {
+        "Effect": "Allow",
+        "Action": [
+            "s3:GetBucketLocation",
+            "s3:ListBucket",
+            "s3:PutObject",
+            "s3:GetObject",
+            "s3:DeleteObject",
+            "s3:GetObjectAcl",
+            "s3:PutObjectAcl"
+        ],
+        "Resource": [
+            "arn:aws:s3:::bucketname/*"
+        ]
+    },
+    {
+        "Effect": "Allow",
+        "Action": [
+            "s3:GetBucketLocation",
+            "s3:ListBucket"
+        ],
+        "Resource": [
+            "arn:aws:s3:::bucketname"
+        ]
+    }
+]
+}
+```
+### Using the automatic focal point detection
+
+This plugin can use the AWS Rekognition service to detect faces in an image and automatically set the focal point accordingly. This requires the image to be either a jpg or a png file. To enable this feature, just turn it on the volume settings.
+
+:warning: ️Using this will incur extra cost for each upload
+
+:warning: ️Using this requires the <code>rekognition:DetectFaces</code> action to be allowed.

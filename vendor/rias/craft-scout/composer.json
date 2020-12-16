@@ -1,0 +1,58 @@
+{
+    "name": "rias/craft-scout",
+    "description": "Craft Scout provides a simple solution for adding full-text search to your entries. Scout will automatically keep your search indexes in sync with your entries.",
+    "type": "craft-plugin",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "scout"
+    ],
+    "support": {
+        "docs": "https://github.com/riasvdv/craft-scout/blob/master/README.md",
+        "issues": "https://github.com/riasvdv/craft-scout/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rias",
+            "homepage": "https://rias.be"
+        }
+    ],
+    "require": {
+        "php": ">=7.1",
+        "craftcms/cms": "^3.3.0",
+        "algolia/algoliasearch-client-php": "^2.3",
+        "league/fractal": "^0.18|^0.19",
+        "tightenco/collect": "^5.8|^6.0|^7.0"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "require-dev": {
+        "vlucas/phpdotenv": "^4.1.0",
+        "codeception/codeception": "^4.1.1",
+        "codeception/module-asserts": "^1.1.1",
+        "codeception/lib-asserts": "^1.1.0",
+        "codeception/module-yii2": "^1.1.0",
+        "phpunit/phpunit": "^7.5.20"
+    },
+    "autoload": {
+        "psr-4": {
+            "rias\\scout\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Scout",
+        "handle": "scout",
+        "schemaVersion": "0.1.0",
+        "hasCpSettings": true,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/riasvdv/craft-scout/master/CHANGELOG.md",
+        "class": "rias\\scout\\Scout"
+    }
+}

@@ -1,0 +1,127 @@
+{% if name is defined and name %}
+    <input type="hidden" name="{{ name }}" value="">
+{% endif -%}
+
+{% set elements = (elements is defined and elements ? elements : []) -%}
+{% set jsClass = (jsClass is defined and jsClass ? jsClass : 'Craft.TitleElementFieldSelectInput') -%}
+{% set sources = (sources is defined and sources ? sources : null) -%}
+{% set criteria = (criteria is defined and criteria ? criteria : null) -%}
+{% set sourceElementId = (sourceElementId is defined and sourceElementId ? sourceElementId : null) -%}
+{% set storageKey = (storageKey is defined and storageKey ? storageKey : null) -%}
+{% set viewMode = (viewMode is defined ? viewMode : 'list') %}
+
+<div id="{{ id }}" class="elementselect">
+    <div class="elements">
+        {% for element in elements %}
+            {% include "linkfield/input/titleElrementsFieldElement" with {
+                context: 'field',
+                size: (viewMode == 'large' ? 'large' : 'small')
+            } %}
+        {% endfor %}
+    </div>
+
+    <div class="btn add icon dashed">{{ selectionLabel is defined ? selectionLabel : "Choose"|t('app') }}</div>
+</div>
+
+{% set jsSettings = {
+    id: id|namespaceInputId,
+    name: name|namespaceInputName,
+    elementType: elementType,
+    sources: sources,
+    criteria: criteria,
+    sourceElementId: sourceElementId,
+    viewMode: viewMode,
+    limit: limit,
+    modalStorageKey: storageKey
+} %}
+
+{% js %}
+
+Craft.TitleElementFieldSelectInput = Craft.BaseElementSelectInput.extend(
+{
+
+        createNewElement: function(elementInfo) {
+            var $element = elementInfo.$element.clone();
+            Craft.setElementSize($element, (this.settings.viewMode == 'large' ? 'large' : 'small'));
+            $element.addClass('removable');
+
+            var value = JSON.stringify({id: elementInfo.id, linkFieldLabel: null});
+  
+            $element.prepend('<input type="hidden" name="' + this.settings.name + '[]" value="' + value.replace(/"/g, '&quot;') + '">' +
+
+            '<a class="delete icon" title="' + Craft.t('app', 'Remove') + '"></a>');
+            $element.find('.label').append('<span class="linkFieldLabel" style="padding-left: 15px; font-size:0.8em; font-style:italic">&nbsp;</span>' +
+            '<a class="edit icon rename" title="' + Craft.t('app', 'Rename') + '"></a>'
+            );
+           
+            return $element;
+        },
+        addElements: function($elements) {
+            if (this.settings.selectable) {
+                this.elementSelect.addItems($elements);
+            }
+
+            if (this.settings.sortable) {
+                this.elementSort.addItems($elements);
+            }
+
+            if (this.settings.editable) {
+                this._handleShowElementEditor = $.proxy(function(ev) {
+                    var $element = $(ev.currentTarget);
+                    if (Garnish.hasAttr($element, 'data-editable') && !$element.hasClass('disabled') && !$element.hasClass('loading')) {
+                        this.elementEditor = this.createElementEditor($element);
+                    }
+                }, this);
+
+                this.addListener($elements, 'dblclick', this._handleShowElementEditor);
+
+                if ($.isTouchCapable()) {
+                    this.addListener($elements, 'taphold', this._handleShowElementEditor);
+                }
+            }
+
+            $elements.find('.delete').on('click', $.proxy(function(ev) {
+                this.removeElement($(ev.currentTarget).closest('.element'));
+            }, this));
+            $elements.find('.rename').on('click', $.proxy(function(ev) {
+                this.renameLink($(ev.currentTarget).closest('.element'));
+            }, this));
+            this.$elements = this.$elements.add($elements);
+            this.updateAddElementsBtn();
+        },
+        renameLink: function($element) {
+            var oldName = $element.data('label');
+
+            var idField = $element.find('input');
+            var elementId = 0;
+            idField.each(function(){
+              elementId = idField.val();
+              return;
+            });
+                    
+            var value = JSON.parse(idField.val());
+            
+            if(value.linkFieldLabel !== null) {
+              oldName = value.linkFieldLabel;
+            }
+            var newName = prompt(Craft.t('app', 'Rename'), oldName);
+            if (newName !== null) {
+              $element.find('.linkFieldLabel').html(newName.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'));
+              value.linkFieldLabel = newName;
+              idField.val(JSON.stringify(value));
+            }
+        },
+        getDisabledElementIds: function() {
+            var ids = this.getSelectedElementIds();
+
+            if (this.settings.sourceElementId) {
+                // ids.push(this.settings.sourceElementId);
+            }
+
+            return ids;
+        },
+}
+);
+
+    new {{ jsClass }}({{ jsSettings|json_encode|raw }});
+{% endjs %}

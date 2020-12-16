@@ -1,0 +1,56 @@
+{% extends "_layouts/cp" %}
+
+{% set crumbs = [
+    { label: "Settings"|t('twitter'), url: url('settings') },
+    { label: "Plugins"|t('twitter'), url: url('settings/plugins') }
+] %}
+
+{% set title = "Twitter"|t('twitter') %}
+
+{% import "_includes/forms" as forms %}
+
+{% set docsUrl = 'https://docs.dukt.net/twitter/v2/' %}
+
+{% set content %}
+
+    <h2>{{ 'Account'|t('twitter') }}</h2>
+
+    {% if tokenExists %}
+        {% if not error %}
+            {% if resourceOwner.urls.profile_image_url_https is defined %}
+                <img width="36" src="{{ resourceOwner.urls.profile_image_url_https|replace('_normal', '_bigger') }}" />
+            {% endif %}
+
+            <ul>
+                {% if resourceOwner.uid is defined %}
+                    <li><strong>{{ 'UID'|t('twitter') }}:</strong> {{ resourceOwner.uid }}</li>
+                {% endif %}
+
+                {% if resourceOwner.name is defined %}
+                    <li>
+                        <strong>{{ 'Name'|t('twitter') }}:</strong> {{ resourceOwner.name }}
+
+                        {% if resourceOwner.nickname is defined %}
+                            (@{{ resourceOwner.nickname }})
+                        {% endif %}
+                    </li>
+                {% endif %}
+            </ul>
+        {% else %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+
+        <div class="buttons">
+            <a href="{{ actionUrl('twitter/oauth/disconnect') }}" class="btn small">{{ 'Disconnect'|t('twitter') }}</a>
+            <a href="{{ url('twitter/settings/oauth') }}" class="btn small">{{ 'OAuth Settings'|t('twitter') }}</a>
+        </div>
+
+    {% else %}
+        <p>{{ 'To connect to a Twitter account, {link} and then click “Connect”.'|t('twitter', {link: '<a href="'~ url('twitter/settings/oauth') ~'">'~'configure OAuth'|t('twitter')~'</a>' })|raw }}</p>
+
+        <div class="buttons">
+            <a class="btn submit" href="{{ actionUrl('twitter/oauth/connect') }}">{{"Connect"|t('twitter') }}</a>
+        </div>
+    {% endif %}
+
+{% endset %}
